@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 1,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:33:17.877601+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0fbc68bd2fcd5219006a264600b9c081a3b7893a46e2208085",
+    "created_at": 1780893184.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0fbc68bd2fcd5219006a2646019fac81a39e11dbefef259f66",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Aight, listen up. **Dependency Injection** in C# is like this:\n\nYour class is a mob boss. It needs things done \u2014 maybe logging, database work, sending emails, whatever.\n\nBut a smart boss **doesn\u2019t go out and make his own crew**.\n\nBad boss behavior:\n\n```csharp\npublic class OrderService\n{\n    private EmailService _emailService = new EmailService();\n\n    public void PlaceOrder()\n    {\n        _emailService.SendEmail();\n    }\n}\n```\n\nThis class is saying:\n\n> \u201cI\u2019ll hire my own guy.\u201d\n\nThat\u2019s bad business.\n\nWhy? Because now `OrderService` is tightly tied to `EmailService`. If you wanna swap in a different email guy, test with a fake guy, or change how things work, you gotta crack open the boss and mess with his insides.\n\nThat\u2019s how bugs get whacked into production.\n\n---\n\nDependency Injection says:\n\n> \u201cDon\u2019t make your own crew. Let someone else bring the right people to the table.\u201d\n\nBetter:\n\n```csharp\npublic interface IEmailService\n{\n    void SendEmail();\n}\n\npublic class EmailService : IEmailService\n{\n    public void SendEmail()\n    {\n        Console.WriteLine(\"Email sent.\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailService _emailService;\n\n    public OrderService(IEmailService emailService)\n    {\n        _emailService = emailService;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailService.SendEmail();\n    }\n}\n```\n\nNow `OrderService` doesn\u2019t care who the email guy is.\n\nCould be:\n\n```csharp\nEmailService\n```\n\nCould be:\n\n```csharp\nFakeEmailService\n```\n\nCould be:\n\n```csharp\nSendGridEmailService\n```\n\nAs long as they follow the contract \u2014 `IEmailService` \u2014 they\u2019re in the family.\n\n---\n\nIn ASP.NET Core, the container is the consigliere. It knows who gets called when.\n\nYou register services like this:\n\n```csharp\nbuilder.Services.AddScoped<IEmailService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThen when ASP.NET Core needs an `OrderService`, it says:\n\n> \u201cThis guy needs an `IEmailService`. I know a guy.\u201d\n\nAnd it hands one over.\n\n---\n\nThe three common lifetimes:\n\n```csharp\nAddTransient\n```\n\nNew guy every time.\n\n```csharp\nAddScoped\n```\n\nOne guy per request.\n\n```csharp\nAddSingleton\n```\n\nOne guy for the whole operation.\n\nGangster version:\n\n- **Transient**: disposable street soldier, new one every job.\n- **Scoped**: your guy for this specific deal.\n- **Singleton**: the old boss, same dude forever.\n\n---\n\nSo dependency injection means:\n\n**Your class doesn\u2019t create its dependencies. They get handed to it.**\n\nThat gives you:\n\n- cleaner code\n- easier testing\n- less coupling\n- easier swapping of implementations\n- fewer \u201cwhy is this thing impossible to mock?\u201d moments\n\nIn plain gangster terms:\n\n> Don\u2019t let every class recruit its own crew.  \n> Let the family assign the right people for the job.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893197.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 657,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5111
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Aight, listen up. **Dependency Injection** in C# is like this:\n\nYour class is a mob boss. It needs things done \u2014 maybe logging, database work, sending emails, whatever.\n\nBut a smart boss **doesn\u2019t go out and make his own crew**.\n\nBad boss behavior:\n\n```csharp\npublic class OrderService\n{\n    private EmailService _emailService = new EmailService();\n\n    public void PlaceOrder()\n    {\n        _emailService.SendEmail();\n    }\n}\n```\n\nThis class is saying:\n\n> \u201cI\u2019ll hire my own guy.\u201d\n\nThat\u2019s bad business.\n\nWhy? Because now `OrderService` is tightly tied to `EmailService`. If you wanna swap in a different email guy, test with a fake guy, or change how things work, you gotta crack open the boss and mess with his insides.\n\nThat\u2019s how bugs get whacked into production.\n\n---\n\nDependency Injection says:\n\n> \u201cDon\u2019t make your own crew. Let someone else bring the right people to the table.\u201d\n\nBetter:\n\n```csharp\npublic interface IEmailService\n{\n    void SendEmail();\n}\n\npublic class EmailService : IEmailService\n{\n    public void SendEmail()\n    {\n        Console.WriteLine(\"Email sent.\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailService _emailService;\n\n    public OrderService(IEmailService emailService)\n    {\n        _emailService = emailService;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailService.SendEmail();\n    }\n}\n```\n\nNow `OrderService` doesn\u2019t care who the email guy is.\n\nCould be:\n\n```csharp\nEmailService\n```\n\nCould be:\n\n```csharp\nFakeEmailService\n```\n\nCould be:\n\n```csharp\nSendGridEmailService\n```\n\nAs long as they follow the contract \u2014 `IEmailService` \u2014 they\u2019re in the family.\n\n---\n\nIn ASP.NET Core, the container is the consigliere. It knows who gets called when.\n\nYou register services like this:\n\n```csharp\nbuilder.Services.AddScoped<IEmailService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThen when ASP.NET Core needs an `OrderService`, it says:\n\n> \u201cThis guy needs an `IEmailService`. I know a guy.\u201d\n\nAnd it hands one over.\n\n---\n\nThe three common lifetimes:\n\n```csharp\nAddTransient\n```\n\nNew guy every time.\n\n```csharp\nAddScoped\n```\n\nOne guy per request.\n\n```csharp\nAddSingleton\n```\n\nOne guy for the whole operation.\n\nGangster version:\n\n- **Transient**: disposable street soldier, new one every job.\n- **Scoped**: your guy for this specific deal.\n- **Singleton**: the old boss, same dude forever.\n\n---\n\nSo dependency injection means:\n\n**Your class doesn\u2019t create its dependencies. They get handed to it.**\n\nThat gives you:\n\n- cleaner code\n- easier testing\n- less coupling\n- easier swapping of implementations\n- fewer \u201cwhy is this thing impossible to mock?\u201d moments\n\nIn plain gangster terms:\n\n> Don\u2019t let every class recruit its own crew.  \n> Let the family assign the right people for the job.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 657,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5111
+  },
+  "run_profile": "scaleup"
+}

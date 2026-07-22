@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_634fd8ff74ccf265",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T04:21:33.934366+00:00",
+  "query_text": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24f1bd724e98164242071b",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can't actually make restaurant reservations on your behalf, but I can help you find some excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. Here are several options with their reservation information:\n\n## Top Italian Restaurants in Downtown Chicago\n\n### 1. **Monteverde**\n- **Location:** West Loop (near downtown)\n- **Hours:** Friday 11:00am\u201310:30pm\n- **Style:** Modern Italian with hand-crafted pasta\n- **Reservations:** Visit https://monteverdechicago.com/\n\n### 2. **Alla Vita**\n- **Location:** 564 West Randolph St., Chicago IL 60661\n- **Phone:** 312.667.0104\n- **Reservations:** https://www.allavitachicago.com/reservations\n\n### 3. **Labriola**\n- **Location:** Downtown Chicago\n- **Style:** Italian restaurant with pizzas, salads, homemade pastas\n- **Reservations:** Visit https://www.labriolacafe.com/ and click \"Make a Reservation Here\"\n\n### 4. **Eataly Chicago**\n- **Location:** 43 East Ohio Street, Chicago, Illinois 60611\n- **Hours:** Friday\u2013Saturday 7 AM \u2013 11 PM\n- **Phone:** (312) 521-8700\n- **Website:** https://www.eataly.com/us_en/stores/chicago\n\n## How to Make Your Reservation\n\nFor Friday night reservations, I recommend:\n\n1. **Call directly** \u2013 Many restaurants hold tables that don't appear online\n2. **Use OpenTable, Resy, or Tock** \u2013 These are common reservation platforms for Chicago restaurants\n3. **Book as soon as possible** \u2013 Friday nights fill up quickly, especially at popular spots\n4. **Consider dining earlier (5:00\u20136:00 PM) or later (9:00+ PM)** for better availability\n\nWould you like me to search for more specific information about any of these restaurants, such as their menu or current availability?\n\nSources:\n1. https://monteverdechicago.com/\n2. https://www.allavitachicago.com/reservations\n3. https://www.labriolacafe.com/\n4. https://www.eataly.com/us_en/stores/chicago\n5. https://chicago.eater.com/maps/best-italian-restaurants-in-chicago",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780806077,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 500,
+        "prompt_tokens": 1856,
+        "total_tokens": 2356,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24f1bc7898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"e725c0ab6a24f1bc680f160001ebca03\"},\"usage\":{\"total_tokens\":1696}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24f1bc7898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"e725c0ab6a24f1bc680f160001ebca03\"},\"usage\":{\"total_tokens\":1696}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"e725c0ab6a24f1bc680f160001ebca03\"},\"usage\":{\"total_tokens\":1696}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can't actually make restaurant reservations on your behalf, but I can help you find some excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. Here are several options with their reservation information:\n\n## Top Italian Restaurants in Downtown Chicago\n\n### 1. **Monteverde**\n- **Location:** West Loop (near downtown)\n- **Hours:** Friday 11:00am\u201310:30pm\n- **Style:** Modern Italian with hand-crafted pasta\n- **Reservations:** Visit https://monteverdechicago.com/\n\n### 2. **Alla Vita**\n- **Location:** 564 West Randolph St., Chicago IL 60661\n- **Phone:** 312.667.0104\n- **Reservations:** https://www.allavitachicago.com/reservations\n\n### 3. **Labriola**\n- **Location:** Downtown Chicago\n- **Style:** Italian restaurant with pizzas, salads, homemade pastas\n- **Reservations:** Visit https://www.labriolacafe.com/ and click \"Make a Reservation Here\"\n\n### 4. **Eataly Chicago**\n- **Location:** 43 East Ohio Street, Chicago, Illinois 60611\n- **Hours:** Friday\u2013Saturday 7 AM \u2013 11 PM\n- **Phone:** (312) 521-8700\n- **Website:** https://www.eataly.com/us_en/stores/chicago\n\n## How to Make Your Reservation\n\nFor Friday night reservations, I recommend:\n\n1. **Call directly** \u2013 Many restaurants hold tables that don't appear online\n2. **Use OpenTable, Resy, or Tock** \u2013 These are common reservation platforms for Chicago restaurants\n3. **Book as soon as possible** \u2013 Friday nights fill up quickly, especially at popular spots\n4. **Consider dining earlier (5:00\u20136:00 PM) or later (9:00+ PM)** for better availability\n\nWould you like me to search for more specific information about any of these restaurants, such as their menu or current availability?\n\nSources:\n1. https://monteverdechicago.com/\n2. https://www.allavitachicago.com/reservations\n3. https://www.labriolacafe.com/\n4. https://www.eataly.com/us_en/stores/chicago\n5. https://chicago.eater.com/maps/best-italian-restaurants-in-chicago",
+  "usage": {
+    "completion_tokens": 500,
+    "prompt_tokens": 1856,
+    "total_tokens": 2356,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

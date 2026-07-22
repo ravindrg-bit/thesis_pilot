@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_53f81cdbfb306187",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:42:00.175776+00:00",
+  "query_text": "what are opioids derived from",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2504986ddba5886af79f47",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, opioids are derived from three main sources:\n\n## Natural Opioids (Opiates)\n\nNatural opioids, also called **opiates**, are derived directly from the **opium poppy plant (*Papaver somniferum*)**. These include:\n- **Morphine** \u2013 the primary active ingredient in opium, first isolated in 1803\n- **Codeine** \u2013 another naturally occurring alkaloid\n- **Thebaine** \u2013 used to create semi-synthetic opioids\n- **Opium** itself \u2013 the raw sap (latex) collected from the seed pods of the poppy plant\n\n## Semi-Synthetic Opioids\n\nThese are created by chemically modifying natural opiates from the poppy plant:\n- **Heroin** \u2013 derived from morphine\n- **Oxycodone** (OxyContin, Percocet)\n- **Hydrocodone** (Vicodin)\n- **Hydromorphone**\n- **Oxymorphone**\n- **Buprenorphine**\n\n## Synthetic Opioids\n\nThese are entirely human-made in laboratories and do not use any compounds from the poppy plant:\n- **Fentanyl** \u2013 approximately 50-100 times more potent than morphine\n- **Methadone**\n- **Tramadol**\n- **Meperidine**\n- **Carfentanil**\n\n## Summary\n\nThe term **\"opioid\"** is the broader category that includes all substances that act on opioid receptors in the brain, regardless of origin. The term **\"opiate\"** specifically refers only to naturally derived substances from the opium poppy. The opium poppy plant has been cultivated for thousands of years, with historical records dating back to the ancient Sumerians around 3400 BC.\n\nSources:\n1. https://www.cambridge.org/core/books/opioid-epidemic/brief-history-of-opioid-misuse-and-addiction/4202706E8644E521C09DEC9AA79D5A87\n2. https://www.aliyahealthgroup.com/how-long-do-opiates-stay-in-the-body/\n3. https://raisethebottomidaho.com/opiate-vs-opioid-what-is-the-difference/\n4. https://www.arrowpassage.com/opiates-vs-opioids/\n5. https://www.opiates.com/opiates\n6. https://stilldetox.com/opioids/vs-opiates/\n7. https://www.webmd.com/vitamins-supplements/poppy-seed\n8. https://www.aegislabs.com/clinical-update/poppyseeds/\n9. https://discoverrecovery.com/blog/what-are-opiates\n10. https://www.inverse.com/health/eating-poppy-seeds-drug-test-results\n11. https://www.arkbh.com/opioids/homemade-opiates/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780810905,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 602,
+        "prompt_tokens": 9011,
+        "total_tokens": 9613,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what are opioids derived from"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2504977898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"5fe49ecd6a250497680f160001ebe4e3\"},\"usage\":{\"total_tokens\":8864}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2504977898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"5fe49ecd6a250497680f160001ebe4e3\"},\"usage\":{\"total_tokens\":8864}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"5fe49ecd6a250497680f160001ebe4e3\"},\"usage\":{\"total_tokens\":8864}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, opioids are derived from three main sources:\n\n## Natural Opioids (Opiates)\n\nNatural opioids, also called **opiates**, are derived directly from the **opium poppy plant (*Papaver somniferum*)**. These include:\n- **Morphine** \u2013 the primary active ingredient in opium, first isolated in 1803\n- **Codeine** \u2013 another naturally occurring alkaloid\n- **Thebaine** \u2013 used to create semi-synthetic opioids\n- **Opium** itself \u2013 the raw sap (latex) collected from the seed pods of the poppy plant\n\n## Semi-Synthetic Opioids\n\nThese are created by chemically modifying natural opiates from the poppy plant:\n- **Heroin** \u2013 derived from morphine\n- **Oxycodone** (OxyContin, Percocet)\n- **Hydrocodone** (Vicodin)\n- **Hydromorphone**\n- **Oxymorphone**\n- **Buprenorphine**\n\n## Synthetic Opioids\n\nThese are entirely human-made in laboratories and do not use any compounds from the poppy plant:\n- **Fentanyl** \u2013 approximately 50-100 times more potent than morphine\n- **Methadone**\n- **Tramadol**\n- **Meperidine**\n- **Carfentanil**\n\n## Summary\n\nThe term **\"opioid\"** is the broader category that includes all substances that act on opioid receptors in the brain, regardless of origin. The term **\"opiate\"** specifically refers only to naturally derived substances from the opium poppy. The opium poppy plant has been cultivated for thousands of years, with historical records dating back to the ancient Sumerians around 3400 BC.\n\nSources:\n1. https://www.cambridge.org/core/books/opioid-epidemic/brief-history-of-opioid-misuse-and-addiction/4202706E8644E521C09DEC9AA79D5A87\n2. https://www.aliyahealthgroup.com/how-long-do-opiates-stay-in-the-body/\n3. https://raisethebottomidaho.com/opiate-vs-opioid-what-is-the-difference/\n4. https://www.arrowpassage.com/opiates-vs-opioids/\n5. https://www.opiates.com/opiates\n6. https://stilldetox.com/opioids/vs-opiates/\n7. https://www.webmd.com/vitamins-supplements/poppy-seed\n8. https://www.aegislabs.com/clinical-update/poppyseeds/\n9. https://discoverrecovery.com/blog/what-are-opiates\n10. https://www.inverse.com/health/eating-poppy-seeds-drug-test-results\n11. https://www.arkbh.com/opioids/homemade-opiates/",
+  "usage": {
+    "completion_tokens": 602,
+    "prompt_tokens": 9011,
+    "total_tokens": 9613,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b956ca640639b1e9",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:37:22.493217+00:00",
+  "query_text": "Are there any academic fields that don't have enough people trying to teach?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a253bc2b1f351affb7a2c82",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about academic fields that face teaching shortages. Let me search for more specific information about higher education and academia specifically. \n\nThe search results reveal several important points about teaching shortages in academic fields:\n\n## Key Findings\n\n### STEM Fields (Particularly Physics and Computing)\nThe data shows **severe shortages in specific STEM disciplines**. In England, entry into initial teacher training was only **17% of the target number for physics** and **30% for computing**. In the United States, there were over **30,000 vacancies for physics teachers** in 2019 but only about **6,000 physics majors** \u2014 a massive gap between supply and demand.\n\n### Engineering\nAt the community college level, documents from Wayne Community College show that engineering programs often operate with minimal staffing \u2014 sometimes just **a single full-time engineering instructor** serving an entire program. While currently described as \"adequate,\" this leaves no redundancy and limited course expansion capability.\n\n### Mathematics\nMathematics departments face ongoing pressures, particularly with new initiatives like co-requisite courses and developmental education reforms that require more instructional support.\n\n### Specific Subject Areas vs. General Education\nThe Education Progress International analysis distinguishes between two types of shortages:\n- **\"Vacancies but no teachers\"** \u2014 insufficient supply of qualified candidates\n- **\"Teachers but no vacancies\"** \u2014 budget constraints prevent hiring\n\nIn **upper-middle- and high-income countries**, the problem tends to be on the **supply side** \u2014 not enough qualified and interested candidates entering teaching programs. On average, only about **4% of 15-year-olds wanted to become teachers** in 2015, with some countries as low as 1%.\n\n### Broader Trends\n- Many countries are seeing **sharply decreasing numbers of entrants into teaching programs**\n- In Hungary, education entrants fell from 12% (2015) to 7% (2022)\n- In the Netherlands, from 10% to 7%\n- In the UK, from 8% to 5%\n\n## Academic Fields with Notable Teaching Shortages\n\n| Field | Nature of Shortage |\n|-------|-------------------|\n| **Physics** | Severe \u2014 far fewer qualified candidates than positions |\n| **Computing/Computer Science** | Severe \u2014 only 30% of training targets met in some regions |\n| **Engineering** | Moderate \u2014 often understaffed, relies on single instructors |\n| **Mathematics** | Moderate \u2014 strained by reform initiatives and expansion |\n| **Specialized STEM** | Astronomy and other niche sciences often cannot be offered due to staffing |\n\n## Important Caveats\n\nThe search results focus primarily on **K-12 and community college levels**. The dynamics at **research universities** may differ, where:\n- Some fields may have plenty of PhDs but few tenure-track positions (oversupply)\n- Other fields may struggle to find qualified faculty at all\n\nThe shortage is most acute in fields where **industry salaries far exceed academic compensation** (particularly computing, engineering, and some sciences), making it difficult to attract candidates to teaching positions.\n\nSources:\n1. https://www.education-progress.org/focus/35-teachershortage\n2. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n3. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n4. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780825026,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 804,
+        "prompt_tokens": 4199,
+        "total_tokens": 5003,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Are there any academic fields that don't have enough people trying to teach?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a253bc12e25",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"d6ea27a36a253bc1680f160001ec3169\"},\"usage\":{\"total_tokens\":4042}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a253bc12e25",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"d6ea27a36a253bc1680f160001ec3169\"},\"usage\":{\"total_tokens\":4042}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"d6ea27a36a253bc1680f160001ec3169\"},\"usage\":{\"total_tokens\":4042}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about academic fields that face teaching shortages. Let me search for more specific information about higher education and academia specifically. \n\nThe search results reveal several important points about teaching shortages in academic fields:\n\n## Key Findings\n\n### STEM Fields (Particularly Physics and Computing)\nThe data shows **severe shortages in specific STEM disciplines**. In England, entry into initial teacher training was only **17% of the target number for physics** and **30% for computing**. In the United States, there were over **30,000 vacancies for physics teachers** in 2019 but only about **6,000 physics majors** \u2014 a massive gap between supply and demand.\n\n### Engineering\nAt the community college level, documents from Wayne Community College show that engineering programs often operate with minimal staffing \u2014 sometimes just **a single full-time engineering instructor** serving an entire program. While currently described as \"adequate,\" this leaves no redundancy and limited course expansion capability.\n\n### Mathematics\nMathematics departments face ongoing pressures, particularly with new initiatives like co-requisite courses and developmental education reforms that require more instructional support.\n\n### Specific Subject Areas vs. General Education\nThe Education Progress International analysis distinguishes between two types of shortages:\n- **\"Vacancies but no teachers\"** \u2014 insufficient supply of qualified candidates\n- **\"Teachers but no vacancies\"** \u2014 budget constraints prevent hiring\n\nIn **upper-middle- and high-income countries**, the problem tends to be on the **supply side** \u2014 not enough qualified and interested candidates entering teaching programs. On average, only about **4% of 15-year-olds wanted to become teachers** in 2015, with some countries as low as 1%.\n\n### Broader Trends\n- Many countries are seeing **sharply decreasing numbers of entrants into teaching programs**\n- In Hungary, education entrants fell from 12% (2015) to 7% (2022)\n- In the Netherlands, from 10% to 7%\n- In the UK, from 8% to 5%\n\n## Academic Fields with Notable Teaching Shortages\n\n| Field | Nature of Shortage |\n|-------|-------------------|\n| **Physics** | Severe \u2014 far fewer qualified candidates than positions |\n| **Computing/Computer Science** | Severe \u2014 only 30% of training targets met in some regions |\n| **Engineering** | Moderate \u2014 often understaffed, relies on single instructors |\n| **Mathematics** | Moderate \u2014 strained by reform initiatives and expansion |\n| **Specialized STEM** | Astronomy and other niche sciences often cannot be offered due to staffing |\n\n## Important Caveats\n\nThe search results focus primarily on **K-12 and community college levels**. The dynamics at **research universities** may differ, where:\n- Some fields may have plenty of PhDs but few tenure-track positions (oversupply)\n- Other fields may struggle to find qualified faculty at all\n\nThe shortage is most acute in fields where **industry salaries far exceed academic compensation** (particularly computing, engineering, and some sciences), making it difficult to attract candidates to teaching positions.\n\nSources:\n1. https://www.education-progress.org/focus/35-teachershortage\n2. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n3. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n4. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+  "usage": {
+    "completion_tokens": 804,
+    "prompt_tokens": 4199,
+    "total_tokens": 5003,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

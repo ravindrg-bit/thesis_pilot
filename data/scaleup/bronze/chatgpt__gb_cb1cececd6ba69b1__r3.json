@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 3,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:22:47.282912+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0d23a969d2506cb0006a25d30aad04819f88b62177ef505fa4",
+    "created_at": 1780863754.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0d23a969d2506cb0006a25d30b3ddc819f8ffc10ffbcec7341",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the **means of two related measurements**.\n\nIt tests whether the **average difference** between paired observations is significantly different from zero.\n\n## When to use it\n\nUse a paired-samples t-test when the two sets of scores are **not independent**, such as:\n\n- The same people measured **before and after** treatment\n- Matched pairs, such as twins or matched participants\n- The same subjects tested under **two different conditions**\n\n## Example\n\nSuppose 10 students take a test **before** and **after** a study program.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 78 | 8 |\n| 2 | 65 | 72 | 7 |\n| 3 | 80 | 85 | 5 |\n\nThe paired t-test asks:\n\n> Is the mean improvement significantly different from 0?\n\n## Hypotheses\n\nLet \\( d \\) be the difference between each pair.\n\n### Two-tailed test\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\n### One-tailed test\n\nIf testing for an increase:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\nIf testing for a decrease:\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar d}{s_d / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\( \\bar d \\) = mean of the differences\n- \\( s_d \\) = standard deviation of the differences\n- \\( n \\) = number of pairs\n\n## Degrees of freedom\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The dependent variable is continuous.\n2. Observations are paired or matched.\n3. The differences are approximately normally distributed.\n4. Pairs are independent of each other.\n5. There are no extreme outliers in the difference scores.\n\n## Interpretation\n\nIf the **p-value** is less than your significance level, often \\( \\alpha = 0.05 \\), reject \\( H_0 \\).\n\nExample conclusion:\n\n> A paired-samples t-test showed that scores were significantly higher after the program than before, \\( t(9) = 3.21, p = .011 \\).\n\n## Effect size\n\nA common effect size is Cohen\u2019s \\( d_z \\):\n\n\\[\nd_z = \\frac{\\bar d}{s_d}\n\\]\n\nInterpretation is often:\n\n- 0.2 = small effect\n- 0.5 = medium effect\n- 0.8 = large effect\n\n## In simple words\n\nA paired-samples t-test checks whether **the same people or matched units changed significantly from one measurement to another**.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863767.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 641,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5087
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the **means of two related measurements**.\n\nIt tests whether the **average difference** between paired observations is significantly different from zero.\n\n## When to use it\n\nUse a paired-samples t-test when the two sets of scores are **not independent**, such as:\n\n- The same people measured **before and after** treatment\n- Matched pairs, such as twins or matched participants\n- The same subjects tested under **two different conditions**\n\n## Example\n\nSuppose 10 students take a test **before** and **after** a study program.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 78 | 8 |\n| 2 | 65 | 72 | 7 |\n| 3 | 80 | 85 | 5 |\n\nThe paired t-test asks:\n\n> Is the mean improvement significantly different from 0?\n\n## Hypotheses\n\nLet \\( d \\) be the difference between each pair.\n\n### Two-tailed test\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\n### One-tailed test\n\nIf testing for an increase:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\nIf testing for a decrease:\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar d}{s_d / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\( \\bar d \\) = mean of the differences\n- \\( s_d \\) = standard deviation of the differences\n- \\( n \\) = number of pairs\n\n## Degrees of freedom\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The dependent variable is continuous.\n2. Observations are paired or matched.\n3. The differences are approximately normally distributed.\n4. Pairs are independent of each other.\n5. There are no extreme outliers in the difference scores.\n\n## Interpretation\n\nIf the **p-value** is less than your significance level, often \\( \\alpha = 0.05 \\), reject \\( H_0 \\).\n\nExample conclusion:\n\n> A paired-samples t-test showed that scores were significantly higher after the program than before, \\( t(9) = 3.21, p = .011 \\).\n\n## Effect size\n\nA common effect size is Cohen\u2019s \\( d_z \\):\n\n\\[\nd_z = \\frac{\\bar d}{s_d}\n\\]\n\nInterpretation is often:\n\n- 0.2 = small effect\n- 0.5 = medium effect\n- 0.8 = large effect\n\n## In simple words\n\nA paired-samples t-test checks whether **the same people or matched units changed significantly from one measurement to another**.",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 641,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5087
+  },
+  "run_profile": "scaleup"
+}

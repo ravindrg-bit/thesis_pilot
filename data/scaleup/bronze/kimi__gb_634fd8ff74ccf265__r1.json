@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_634fd8ff74ccf265",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T04:21:09.756003+00:00",
+  "query_text": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24f1a31daeb39570bdadc6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can't actually make a reservation for you, as I don't have the ability to book tables or access real-time reservation systems. However, I found several excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. Here's what I recommend:\n\n## Top Italian Restaurants in Downtown Chicago\n\n### 1. **RPM Italian**\n- **Location:** 52 W Illinois St, Chicago, IL 60654 (River North)\n- **Hours Friday:** 3:00 PM - 10:30 PM\n- **Style:** Modern Italian with daily housemade pastas and shareable dishes\n- **Reserve at:** https://www.rpmrestaurants.com/rpm-italian-chicago/reserve/\n\n### 2. **Monteverde**\n- **Location:** 1020 West Madison Street, Chicago, IL 60607 (West Loop)\n- **Phone:** (312) 888-3041\n- **Style:** Italian restaurant with pastificio (fresh pasta making)\n- **Reserve at:** https://monteverdechicago.com/reservations/ (via Resy)\n\n### 3. **Alla Vita**\n- **Style:** Accommodates parties of any size\n- **Reserve at:** https://www.allavitachicago.com/reservations\n\n### 4. **Henrietta**\n- **Location:** 2nd floor hotel restaurant in the Financial District\n- **Style:** Tuscan-inspired contemporary Italian\n- **Dinner Hours:** 4:00 PM - 9:00 PM\n- **Reserve at:** https://henriettachicago.com/\n\n### 5. **Labriola**\n- **Style:** Italian with pizzas, salads, homemade pastas\n- **Reserve at:** https://www.labriolacafe.com/\n\n## How to Make Your Reservation\n\n1. **Visit the restaurant's reservation page** (links above)\n2. **Call directly** - especially for same-week reservations, calling can be more effective\n3. **Use Resy** - Monteverde and many Chicago restaurants use this platform\n4. **Try OpenTable** - many downtown Chicago restaurants are listed there\n\nFor this Friday night, I'd recommend calling or booking online **today** as weekend spots fill up quickly. If your preferred time isn't available, consider dining earlier (5:00-6:00 PM) or later (after 8:30 PM) for better availability.\n\n---\n\n**Sources:**\n1. https://www.rpmrestaurants.com/rpm-italian-chicago/\n2. https://www.rpmrestaurants.com/rpm-italian-chicago/reserve/\n3. https://monteverdechicago.com/reservations/\n4. https://www.allavitachicago.com/reservations\n5. https://henriettachicago.com/\n6. https://www.labriolacafe.com/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780806051,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 590,
+        "prompt_tokens": 2219,
+        "total_tokens": 2809,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24f1a2a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4e1ded4b6a24f1a2680f160001ebc9e6\"},\"usage\":{\"total_tokens\":2055}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24f1a2a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4e1ded4b6a24f1a2680f160001ebc9e6\"},\"usage\":{\"total_tokens\":2055}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4e1ded4b6a24f1a2680f160001ebc9e6\"},\"usage\":{\"total_tokens\":2055}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can't actually make a reservation for you, as I don't have the ability to book tables or access real-time reservation systems. However, I found several excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. Here's what I recommend:\n\n## Top Italian Restaurants in Downtown Chicago\n\n### 1. **RPM Italian**\n- **Location:** 52 W Illinois St, Chicago, IL 60654 (River North)\n- **Hours Friday:** 3:00 PM - 10:30 PM\n- **Style:** Modern Italian with daily housemade pastas and shareable dishes\n- **Reserve at:** https://www.rpmrestaurants.com/rpm-italian-chicago/reserve/\n\n### 2. **Monteverde**\n- **Location:** 1020 West Madison Street, Chicago, IL 60607 (West Loop)\n- **Phone:** (312) 888-3041\n- **Style:** Italian restaurant with pastificio (fresh pasta making)\n- **Reserve at:** https://monteverdechicago.com/reservations/ (via Resy)\n\n### 3. **Alla Vita**\n- **Style:** Accommodates parties of any size\n- **Reserve at:** https://www.allavitachicago.com/reservations\n\n### 4. **Henrietta**\n- **Location:** 2nd floor hotel restaurant in the Financial District\n- **Style:** Tuscan-inspired contemporary Italian\n- **Dinner Hours:** 4:00 PM - 9:00 PM\n- **Reserve at:** https://henriettachicago.com/\n\n### 5. **Labriola**\n- **Style:** Italian with pizzas, salads, homemade pastas\n- **Reserve at:** https://www.labriolacafe.com/\n\n## How to Make Your Reservation\n\n1. **Visit the restaurant's reservation page** (links above)\n2. **Call directly** - especially for same-week reservations, calling can be more effective\n3. **Use Resy** - Monteverde and many Chicago restaurants use this platform\n4. **Try OpenTable** - many downtown Chicago restaurants are listed there\n\nFor this Friday night, I'd recommend calling or booking online **today** as weekend spots fill up quickly. If your preferred time isn't available, consider dining earlier (5:00-6:00 PM) or later (after 8:30 PM) for better availability.\n\n---\n\n**Sources:**\n1. https://www.rpmrestaurants.com/rpm-italian-chicago/\n2. https://www.rpmrestaurants.com/rpm-italian-chicago/reserve/\n3. https://monteverdechicago.com/reservations/\n4. https://www.allavitachicago.com/reservations\n5. https://henriettachicago.com/\n6. https://www.labriolacafe.com/",
+  "usage": {
+    "completion_tokens": 590,
+    "prompt_tokens": 2219,
+    "total_tokens": 2809,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

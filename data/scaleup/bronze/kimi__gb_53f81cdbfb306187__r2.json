@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_53f81cdbfb306187",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:42:26.202722+00:00",
+  "query_text": "what are opioids derived from",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2504b0793904ee1d947e16",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, opioids are derived from multiple sources, which can be categorized into three main types:\n\n## Natural Opioids (Opiates)\n\nNatural opioids are derived directly from the **opium poppy plant (*Papaver somniferum*)**. The milky sap (latex) is extracted from the unripe seed pods of this plant and air-dried to produce opium. This natural substance contains over 20 alkaloids, including:\n\n- **Morphine** \u2013 first isolated from opium by Friedrich Sert\u00fcrner in 1803\n- **Codeine** \u2013 isolated from morphine in 1832\n- **Thebaine**\n\nThese natural compounds are sometimes specifically referred to as \"opiates\" to distinguish them from synthetic versions.\n\n## Semi-Synthetic Opioids\n\nSemi-synthetic opioids are derived from natural opiates through chemical modification in laboratories. Examples include:\n\n- **Heroin (diacetylmorphine)** \u2013 derived from morphine\n- **Oxycodone** (OxyContin\u00ae, Percocet\u00ae)\n- **Hydrocodone** (Vicodin\u00ae)\n- **Hydromorphone**\n- **Oxymorphone**\n- **Buprenorphine**\n\nThese were developed to try to increase potency, adjust duration of action, or reduce unwanted side effects.\n\n## Fully Synthetic Opioids\n\nFully synthetic opioids are created entirely in laboratories and are **not derived from the poppy plant** at all. They are designed to mimic the effects of natural opioids by acting on the same receptors in the brain. Examples include:\n\n- **Fentanyl**\n- **Methadone**\n- **Tramadol**\n- **Meperidine**\n\n## Summary\n\nWhile all opioids share similar effects on the body's opioid receptors, their origins differ significantly. The natural source is exclusively the opium poppy (*Papaver somniferum*), which has been cultivated for approximately 5,000 years since ancient Sumerian civilization. Semi-synthetic opioids start with natural compounds from this plant and modify them chemically, while fully synthetic opioids are completely human-made in laboratories.\n\nSources:\n1. https://www.cambridge.org/core/books/opioid-epidemic/brief-history-of-opioid-misuse-and-addiction/4202706E8644E521C09DEC9AA79D5A87\n2. https://libguides.mskcc.org/publichealth/opioids\n3. https://nida.nih.gov/publications/drugfacts/prescription-opioids\n4. https://www.ncbi.nlm.nih.gov/books/NBK470415/\n5. https://odfree.org/history-of-opioids/\n6. https://www.medicalnewstoday.com/articles/natural-opioids\n7. https://www.britannica.com/science/opioid\n8. https://royalsocietypublishing.org/rsob/article/13/5/220355/91301/Opium-alkaloids-biosynthesis-pharmacology-and\n9. https://www.dea.gov/sites/default/files/2020-06/Synthetic%20Opioids-2020.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780810929,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 662,
+        "prompt_tokens": 8965,
+        "total_tokens": 9627,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what are opioids derived from"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2504aff1ab",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"e03aea646a2504af4f50a50001ed8286\"},\"usage\":{\"total_tokens\":8817}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2504aff1ab",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"e03aea646a2504af4f50a50001ed8286\"},\"usage\":{\"total_tokens\":8817}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"e03aea646a2504af4f50a50001ed8286\"},\"usage\":{\"total_tokens\":8817}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, opioids are derived from multiple sources, which can be categorized into three main types:\n\n## Natural Opioids (Opiates)\n\nNatural opioids are derived directly from the **opium poppy plant (*Papaver somniferum*)**. The milky sap (latex) is extracted from the unripe seed pods of this plant and air-dried to produce opium. This natural substance contains over 20 alkaloids, including:\n\n- **Morphine** \u2013 first isolated from opium by Friedrich Sert\u00fcrner in 1803\n- **Codeine** \u2013 isolated from morphine in 1832\n- **Thebaine**\n\nThese natural compounds are sometimes specifically referred to as \"opiates\" to distinguish them from synthetic versions.\n\n## Semi-Synthetic Opioids\n\nSemi-synthetic opioids are derived from natural opiates through chemical modification in laboratories. Examples include:\n\n- **Heroin (diacetylmorphine)** \u2013 derived from morphine\n- **Oxycodone** (OxyContin\u00ae, Percocet\u00ae)\n- **Hydrocodone** (Vicodin\u00ae)\n- **Hydromorphone**\n- **Oxymorphone**\n- **Buprenorphine**\n\nThese were developed to try to increase potency, adjust duration of action, or reduce unwanted side effects.\n\n## Fully Synthetic Opioids\n\nFully synthetic opioids are created entirely in laboratories and are **not derived from the poppy plant** at all. They are designed to mimic the effects of natural opioids by acting on the same receptors in the brain. Examples include:\n\n- **Fentanyl**\n- **Methadone**\n- **Tramadol**\n- **Meperidine**\n\n## Summary\n\nWhile all opioids share similar effects on the body's opioid receptors, their origins differ significantly. The natural source is exclusively the opium poppy (*Papaver somniferum*), which has been cultivated for approximately 5,000 years since ancient Sumerian civilization. Semi-synthetic opioids start with natural compounds from this plant and modify them chemically, while fully synthetic opioids are completely human-made in laboratories.\n\nSources:\n1. https://www.cambridge.org/core/books/opioid-epidemic/brief-history-of-opioid-misuse-and-addiction/4202706E8644E521C09DEC9AA79D5A87\n2. https://libguides.mskcc.org/publichealth/opioids\n3. https://nida.nih.gov/publications/drugfacts/prescription-opioids\n4. https://www.ncbi.nlm.nih.gov/books/NBK470415/\n5. https://odfree.org/history-of-opioids/\n6. https://www.medicalnewstoday.com/articles/natural-opioids\n7. https://www.britannica.com/science/opioid\n8. https://royalsocietypublishing.org/rsob/article/13/5/220355/91301/Opium-alkaloids-biosynthesis-pharmacology-and\n9. https://www.dea.gov/sites/default/files/2020-06/Synthetic%20Opioids-2020.pdf",
+  "usage": {
+    "completion_tokens": 662,
+    "prompt_tokens": 8965,
+    "total_tokens": 9627,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

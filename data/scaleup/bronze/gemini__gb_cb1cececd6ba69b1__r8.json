@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "gemini",
+  "run_index": 8,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T20:29:20.658264+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 20:29:20 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=14667",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "A **paired samples t-test** (also known as a **dependent t-test**, **repeated measures t-test**, or **matched-pairs t-test**) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is zero. \n\nUnlike an independent samples t-test, which compares two entirely different groups, a paired samples t-test compares the **same group of subjects** under two different conditions or at two different times.\n\n---\n\n### 1. When to Use It\nYou should use a paired samples t-test when you have:\n*   **One dependent variable** that is continuous (measured on an interval or ratio scale).\n*   **One independent variable** that consists of \"related groups\" or \"matched pairs.\"\n\n**Common Scenarios:**\n*   **Before and After (Pre-test/Post-test):** Measuring a group of students\u2019 test scores before and after a training seminar.\n*   **Two different conditions on the same subject:** Measuring reaction times of participants using their dominant hand vs. their non-dominant hand.\n*   **Matched Pairs:** Comparing pairs that are matched based on specific traits (e.g., twin studies, or comparing husbands and wives).\n\n---\n\n### 2. Hypotheses\n*   **Null Hypothesis ($H_0$):** The true mean difference ($\\mu_d$) between the paired measurements is zero. \n    *   *Mathematically:* $H_0: \\mu_d = 0$ (The intervention or difference in condition had no effect).\n*   **Alternative Hypothesis ($H_a$):** The true mean difference is not zero.\n    *   *Mathematically (Two-tailed):* $H_a: \\mu_d \\neq 0$ (There is a significant difference between the two measurements).\n\n---\n\n### 3. Assumptions\nBefore running a paired t-test, your data must meet these key assumptions:\n1.  **Continuous Dependent Variable:** The outcome variable must be interval or ratio (e.g., weight, test scores, blood pressure).\n2.  **Dependent Observations:** The two measurements must come from the same subject (or a matched pair).\n3.  **No Outliers:** There should be no extreme outliers in the *differences* between the paired values.\n4.  **Normality:** The *differences* between the paired values should be approximately normally distributed. *(Note: If your sample size is large, e.g., $n > 30$, the test is robust to violations of normality due to the Central Limit Theorem).*\n\n> *If the normality assumption is severely violated, you should use a non-parametric alternative like the **Wilcoxon Signed-Rank Test**.*\n\n---\n\n### 4. Formula\nThe t-statistic for a paired t-test is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_0}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n*   $\\bar{d}$ = The mean of the differences between the paired observations.\n*   $\\mu_0$ = The hypothesized mean difference (almost always $0$).\n*   $s_d$ = The standard deviation of the differences.\n*   $n$ = The number of pairs.\n*   The **Degrees of Freedom ($df$)** for this test is $n - 1$.\n\n---\n\n### 5. Step-by-Step Example\nLet's say a doctor wants to know if a new blood pressure medication is effective. They measure the systolic blood pressure of 5 patients before and after taking the medication.\n\n| Patient | Blood Pressure Before ($X_1$) | Blood Pressure After ($X_2$) | Difference ($d = X_2 - X_1$) |\n|:---:|:---:|:---:|:---:|\n| 1 | 140 | 135 | -5 |\n| 2 | 135 | 130 | -5 |\n| 3 | 150 | 142 | -8 |\n| 4 | 130 | 132 | +2 |\n| 5 | 145 | 136 | -9 |\n\n#### **Step 1: Calculate the mean difference ($\\bar{d}$)**\n$$\\bar{d} = \\frac{-5 + (-5) + (-8) + 2 + (-9)}{5} = \\frac{-25}{5} = -5$$\nOn average, blood pressure dropped by 5 units.\n\n#### **Step 2: Calculate the standard deviation of the differences ($s_d$)**\n1. Find deviations from the mean ($d - \\bar{d}$):\n   * $-5 - (-5) = 0$\n   * $-5 - (-5) = 0$\n   * $-8 - (-5) = -3$\n   * $2 - (-5) = 7$\n   * $-9 - (-5) = -4$\n2. Square the deviations: $0^2, 0^2, (-3)^2, 7^2, (-4)^2 \\rightarrow 0, 0, 9, 49, 16$\n3. Sum of squared deviations = $0 + 0 + 9 + 49 + 16 = 74$\n4. Variance ($s_d^2$) = $74 / (n - 1) = 74 / 4 = 18.5$\n5. Standard deviation ($s_d$) = $\\sqrt{18.5} \\approx 4.30$\n\n#### **Step 3: Calculate the t-statistic**\n$$t = \\frac{-5}{\\frac{4.30}{\\sqrt{5}}} = \\frac{-5}{\\frac{4.30}{2.236}} = \\frac{-5}{1.923} \\approx -2.60$$\n\n#### **Step 4: Find the critical value and make a decision**\n*   Degrees of freedom: $df = 5 - 1 = 4$\n*   At a 5% significance level ($\\alpha = 0.05$) for a two-tailed test, the critical $t$-value from a standard $t$-distribution table is **$\\pm 2.776$**.\n*   **Conclusion:** Because our calculated $|t| = 2.60$ is *less* than the critical value of $2.776$, we **fail to reject the null hypothesis**. The medication did not result in a statistically significant decrease in blood pressure (though it is very close, and a larger sample size might yield a significant result).\n\n---\n\n### 6. How to Perform a Paired T-Test in Software\n\n*   **R:**\n    ```R\n    t.test(before_scores, after_scores, paired = TRUE)\n    ```\n*   **Python (using SciPy):**\n    ```python\n    from scipy import stats\n    stats.ttest_rel(before_scores, after_scores)\n    ```\n*   **Excel:**\n    Use the formula `=T.TEST(array1, array2, tails, type)`, setting `type` to `1` (for a paired test).",
+              "thought": null,
+              "thought_signature": "EqEmCp4mAQw51sfspNJmo04ai777uQqJ7nRRBbEHuaItLoPzksvIdmvKRzM1H7OHyXxEHbvYtvqX5CrT-s-yD8UuPu6X_VzO3iy4bpj6H9Oxp7GhlTlV80WOIVqT9KQ56WQ_9HZDkRQx4akikjyILsk9vdxCRMN81YyUK28XEOC1KwtQyrxcbeBfnSPJZyw5Ggu09YFSSy8DbkOfEf5z185z--sM-dPemOCjHgbH-NwD2Hix6Q_KgtIh3DiTFhBjkQoJFGBwBD5-40nANck9S4n9DzwUG8kO5yluinNc20y7EcUZty2ncFYbPpms3Y2Dn8C__AckxLIvlXsWEOken22q1ix4mkftfDazGJVxZTjuRyYp7z8JlU5bwlYcf6NNngp8NuL041E9wvxg0gSDHNa7MsGzrQQ4WkYW8Vxy-VO5B7xblWljh32XdI6iYjYqOUbFntM2nTE6qXR-J92cPtUAMPE7lcFmg4jppZ2O_DvdKBZUp6f-xUR0onNoU4EPmBNrX6u1ODtZ4LTplUQzmDgvQ2x02NB4c9H7sjrlspF1byFowmDqW9ryjivotS10YpiLbhyHBx_dvkTyFxXzK4VbxfTrhSxVhBBNIA8Z0jwJxlo1QlCfkY0NQCjQTXPIjCWxQuy5zw6X4rri3-sz3mXkhgYt6H352g3m64DZpzYSb05eBE5ayjgY3audfpEGVwgijWXZJtdO0SVkpOQmxyKQjWwLNl-lCZdK3QYDR95fy5fC1B_xK-s6w04c5hfdN4pM0aDoGNdBPDxo9OVHOuxHG4ziVkzg5HZsFGkI4kenEZTWqCJLHG80OFRffQQKPynQulpZApVhyRrdPA1CxnDXSQP0LzjbPClrq_cvxfewoQS0QSsUVXlfGPHegapukiHTAj20YP_J1zA-P-4lYlWA4ocbxyKaKlyK5LqS3XtIhRaR9WCspAxNzJRVRJgbVZAoKqGujD-t-IvZzcxVEYbAEzFK6Xq3lKAyh14Qr5prFIy0dKGPZrG5zkPX8JJyjWyK4UDq1K6wiWyvEhAnkfaw7ex-DBJO9dSHKWxCBxJMX462yDcXcfHBMVOWDrZyVYAKemLm6uPQGxeaM1XBTfOdDLPXk6MLNah-xITkVzB8CwgJjOeKh61ghPtGlCY3sxgURfC2R4aRtE43yiXfht8GGfaPlZzZDOi6Oi8JK6ojRrzW_dIMpi7g9jVG97wq3AKoZnEhBzLGfso4Og-G_MMAW-8Exi9e3wBfIKWHB2aMdm3t0dRrWp9zOIlHnqhZQ-rXwMpzTWMRU9BBFm2HV2yYU_5AIVmf-ZSxU8STHvSuFkSsgleiBwwLvUXaCv9qQK4UIrnFHzcwqD7V632S6wtYKE8Ilwr7Q6BUmDK3TJE_mf2BGmP-ZdGqjxdrF0C_vx8LtKRwso-Z0DbC1b9N0WwR_WHW9qtUKQxXJefd7jA0Z5ySFZCy6_6L_X5gJenb-n7-6Dgisd7PvtBN8ULRw6uk4462UOSPkOLsT-fiN3jZJIcxR397KPa_7QiIAc6dU2cQb5DFfXmK0lx_u58P40D5rDRnUcWjbJdxLPmFAqaqHmmqfBvyiDoOCiIocsW-PSVspW9rRpodMf_zvzRjjWfWziNWriYoGR1IyG4ieHuEUyH7Uc_MmYgYR-8IoF7Q1G2ZxhJpWYDUK617HyQNGBEgVlCJJdFIq3YwfobrdDg_tITqJqabjT8L6RkaCSyGIt8jM3UCeA1yS3dBgWfC0yhD4UQfX7xag6qmcn-PD9yYeFj7DFekwuV6drbzVopMwk4fdygiZ6RnCAVZopeoju0iBFyK0dS7-5Vyhy-sl4zxbphUKExwd2Qj6KdPt1MWcmTquBgSwlB82Tow1Mn-7xJuR-TZPBEZo0CsjvMs_hChPORI_SvA2te2X0vNSM6OyFSm57JAJrpBcwIvqfj8uMN320oleH3Rv-I3W0Yhwtm2S1sUuET65WBG_Zjnc8gplthe8gFisQ31OfOFQvIpC-_KEHTxhwo8R8qTP0PTEw7lwpUvbqHlNN2gsPsD-edeyqjMNTZ26NILth9t_W3VQdLw55W75-mFq2MNS_BYhq7i8sE-tz73Avb0zBPOkkBoMl1nVTQdWme9rINyoNlUn2m-lxIfjFLQywQRHE8EXZrBb0IOZfQKdoeeVktwAtgg3vB9K6_Hb6qv81SgUhtwP2mfhUDj2T1v4Cw37OIq-cPaMO0ttJJpbnzesiXLWFJ6p7a3J8nOew1I3O_rPwfk4QRl2o7tiw1Oz8c3UXpfV_leKHfG57iZ9l1uvZ0V9VyjlSAAhe6EsZ6NCze9YVZAr9yN3ISJkMIoSq--wc3MgYolSVFo-s8NJAdncH2xcWO-qGzEpuYnYGaC3m787o8HD-wOu8v7Nc14hbMtuqByKN7xV5-SMMWF7k2SFpKeEpSDw7UPBrn-J4jH74JK-kfXWdR-sqknRUDxqrAby-YQRyycUzmyIXEaslHGahMYW9EJbeODhPkxGi4bPuJPxoC6v9JcUYeC2W7f3CRkk74tO5UG4a74aohBYPmKYcuvJu3jVbN16JkbHL0JRqLren3qJ0uPygTASP1jjeCfzHZ5A_QJYMXaPu2DJQ_N0lv7nm3lkw6KCMon-KJXkr_VsviWyWG2NRNcUuRqgPOS81WMNJ_c4ehWMI8RM0ASmG3J1QnuevXP3t4QN6dKqJLVXBBuiDABR6H-Ysp9sDWH0qw_Ya80fUNJhhPpaCrZvm03l9q17k2EONZgWke_CTFPoc4uKVWXi0TVuGoh9F3cyPH4jWXr4FtKtuxaPUomMmwJKpyeJdfmM_kcCu7IvHWx2_uHIbZuLFNKE1vCYu0TAQb7PR1ToUGrOv48QaBmYs1X_rDyFnxONU-hvgbDQjeMt4LTHBxXBFvErlFZcSAdnA8ucen6v2AcV7JqdWn_5dzMdqKoUuEh49zLINbfII4TPc5nL57Dvz6isoA3_VZvTsINEMlcfSh8u5xjIwV9taYUv3NleQ0FLnJfnj_MUEHcIJH0rLBa2smqXoIDPWdVpLSIwmzMgS48fhqwTU095OA3Q0CD34waHiiNAv5H6M1f_TiTPZs1jVR-iVZFSvDB1P-ut9l7K9XhCcxcP2-lZGhoVUtjrlfDRrjO_XzGs1P10MX2d7GbzjZBCiAefiv-itbLUMeQxhurDblpdiNyeWCy6K9JpcflSPr0vD6fapBL-PIiiWZu1USnQbctYA4a4mM0szjqBxNyy3V27aRTe8T0IDtdvIlTjWnEDKeKk2zA0hGcN7PeNmmoXrQQm_qo2_Rg8oR0km-gX7y0o0KFOUewQVwyQmvNtN-QfwqcBXfhMTsvsfcytROiaaFI4C1M2zQ0PY0VEw2vk6TO-LhKATtW7xOCw9wfDEPcrgZ9qNEGJynpazkygXuH-zzGU70wrplceoTH8dFVpqG9NUUzwXyhq8bkNfm8UfWmYx1vK8UvrrEQQU3xJDyH-PtlN5uLRc3rH-FhxOn09Osl_uL3XF_3D_zo_-Ks36d5TjC269S5Wd55U9jQvTEqIVvNRLPToVTZQTT-Yy-0ISUV75xJUxtkKm7N3R0uuvlOuZ3ph4qId8EOFHUTyA_UGsGzq3hrZSRH0WQAP0roQ2I9TmQEKy0rMJ8VIe0B25J_GmSbahLFZl5cQ6JxXWYHvzusBdU2afJQHk1R9gMjNP5QVOQhTBTdyc5OtCy_97VYCTuZPDiDIfe6agcralEjwi5WZb-c0rfK8KvKJIdHDjWPChiKkOxVs-UiP1zuNp5-64cqwWXMRcqJGdIfeGkNhZwkCMNUAZ-4FknEzH-ZhYGrouwuYEfHa0WAKUo3dFTtuMPxIqgL-B8Ji4gMeMxJYvy-tI-qlGlYgPS1qg86Agkd_kfxodG-Z88BJPE4Fi-eh2Uml8u-wDPJp3dQZLYqMs-duIFaXXvjKPKxWPr4YDbroSv-N8zDXKdvLl78cAIDxoywFsd7ZFtWDqRuISmpykePSV5_ZBK6TKzvXoSI-7omMpe6HlpYk_Cxe0PhZEwr3JboeF8_5FLvcdZcrV_ZBtMBplmuwnlMy7-t39aaCQ4F5nRedfMnDSn9t7_9oVq2I0YykkTyjgZL9OwTQrvfIPDTe4XdKw6GmvqkgjDSUwz8uTepDzILOm2uOdMOJJJIhKC7sfIDb3_d3Gr6aknmUFd2QfbAO39PIfSaezyIlUWyN1WsCU3ptCXJ_tG7fV8d9D9ZcILveEytaT2O1r931AOQ-4tI37rFFvGpaaZeoKOKFzT-b-egExlv5At0AwVg0XfeoYHlFXbkLW4OBjISNU6CP4QGPECSYAemhZ4gyDjUCi8R2ZJB3UG-hx9yB7q3jn8IyqxbIdASfVYKhG7gfbC4mqX_ZGoYAN5uaQ1Bv3xEfEplW0gA8Vu6rKpfINyTtrdbbLLJkyBz6tmj0TVvDMop_RfF_uvW0ko4CrPqxPmBHM2hYtjmhX2Lg3J9I7sqJdYY_xO5Osc_iKT2nzqJaY87gp0YjDlt8Wvo5cgEkuZO9nnGsjjGPwaFFoBJMc0kbSqPNXn0Ey1XMpMO0KJly19lJ-CsUEL7u99QjT4A0nuRUe4ox0EE9plNQIN6UI9WbLyyTjrbB83Isy3nBWVc7RTGh3I4yy6Gm9igOLQ4xGurGBzeg9rfG2rvXaH6D7H6oNbbu6kz6cyNcUt5quLb0NKHTtFwUe4j0KZhyVEhQrtMvhLtk8CpnkmpHfufNLtlx6CS3Xf2Xgg9DcIdXC7pnKYsHoIbsqO3tZC86MvIVZZ0Oeu3GSAEnQmpWKrVwE3cBmW02HS7_N6BcIz194CiDs7Cwv1aUYNOIjVqyiBvG9ClxajtOnqlwYNKfW_Zau2JQNKmcEAD2XNlv7_iqi8uoXxOYJRMG3TMdKt1U7BXgserZpyrtfAZijYXa1o-gOhLi6M1vYU3DTu7MvFhkq1-paiLS12bX9BJfUeC63pF84vfAytT4h0xLi8ria8yihZrveEISv2y1wqH5ASf7YRls32b_njr568e4ogsVJsECIwERoN-lNEqDxqB0CJ_CP_QQqeUj9vxwNJt4577v6o3IlbdKvdDWwTc-X0b0UiKutq2AOEn9gPWcXXsXjtmND97Do6T_4z0I_6BAsDZMfTCEjv3NM32TF3ZG3028pMHLao0-YyQLhWM3IWFPZ7hU907_ArpDFg5z_63SoYHlJAwGnu2CV-6vdl4thgHaMLu6gkdqV39HnLY0xsvKgWk00Az_E5WFWiByH2EDnBIL63qOiZ3XwDWo2NPYpHDJIL8Ji2DySAUs9qReoaz0THm31iHAr3xsWTgGovNTDjtiUrBbSpHP7ij2G2VfX6QK6UVdQzqJQnvxijSHfcyfV_rhn5ycdmi4BI2nNPztZV3vVxmgamCnJnRTAWk9yEQ-nMHKGRb_WBQxGPz-wfy3rGt80f1IkYaQljCBZDgbd9Dwra6YC_zKpQYBbAk-IvsmQqcz9B81-_xwCvDaZCdvVLGjoHhy3M9pHeDb4PHXGp3xEi0ucESCtb7M4IlBX4FD6cgMsuHE0pfg3jSAwcETjz9zwrWgKINymXpEY-w-UlI9COzg0IcOjROC6rZ0nJeQcTDH83qHETKKs_IwxdC6ni7DeknzB1ytkjQIJhXN2JhH85RidMjZLPphEZSysW8lk5KWvBJXtJNBpRlAPB3OWjzttnNIllmPrKk_0oe4AJWImrE5swyvsW0YCQqeK5xief0i8bFjjwg2Y60whCS1sQ6XjHIXqAngXa5fI-1x4cO9TfoNHJAr6N624b-JB8BtjjtVNBLNoIH5Ms9tzRt81wkSdAD02Ln9hSdOgVRnJkszU-mExvkx05FQy6jakoy4dq0PIksZHmNeIUwkW7biHlmd98TMaliSlPjw446ezZNjSKFM309gGY8pTpeus44HTa4wAbqoG9dpE40qNBIg2-WaOPTKCIFbh2qa-R2GGKqi1KvaqKdJ9e0wxbCNkR4IbkGVBzhhRN5V0Z3WsnQrKp_nfe5lTN4LKEyTrGHuTZrESkxcOrVHN24FpGrTK2hVxiMUGYs4x4LxBX31toC72CyQIpkeX6Vzf2JI05QJrqQ-umYYeTByv2ApIBzkTcS3iOCCP8lAcaAInDhdQSSphUMRJNrh1yi8LxGNzkcnBXc4LHWW5v8gjPiIiYyLY33UPEugb4DyRX0suBWCY4h1P2VIf4X6FoXtau8rXa3Jt-Hd17l2MGKif4Isf_zeWD3W4YXo6GI6GLsgBdZWriY-VVrmBXWvqzcCiJGjJs7rU99p60wnLZoMBzFL5Vky5oA33anwmWDc8GQZ0tvtNWx1t1UgOhBfX35cfQlJf9G10qik7MDAMDKc3ZNLz_w2I8kq2HzzrG0p0lrzU2O5iYzTKvgqJzLEw5Ps75hYLxqkrEVbZC6CfiAi8Xee_BLrBuvmxcIidY-LDgV9-vQXyqCQ8-YhVGXgO9sTleA-sNjTG9hO6ynI3kErQap8oKeWpewmbpBIWF_oI7ipUxCEo38Aasvtw==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "ktQlapyrAqSH28oPi9ysgAc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1591,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 6,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 6
+        }
+      ],
+      "thoughts_token_count": 1531,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 3128,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "A **paired samples t-test** (also known as a **dependent t-test**, **repeated measures t-test**, or **matched-pairs t-test**) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is zero. \n\nUnlike an independent samples t-test, which compares two entirely different groups, a paired samples t-test compares the **same group of subjects** under two different conditions or at two different times.\n\n---\n\n### 1. When to Use It\nYou should use a paired samples t-test when you have:\n*   **One dependent variable** that is continuous (measured on an interval or ratio scale).\n*   **One independent variable** that consists of \"related groups\" or \"matched pairs.\"\n\n**Common Scenarios:**\n*   **Before and After (Pre-test/Post-test):** Measuring a group of students\u2019 test scores before and after a training seminar.\n*   **Two different conditions on the same subject:** Measuring reaction times of participants using their dominant hand vs. their non-dominant hand.\n*   **Matched Pairs:** Comparing pairs that are matched based on specific traits (e.g., twin studies, or comparing husbands and wives).\n\n---\n\n### 2. Hypotheses\n*   **Null Hypothesis ($H_0$):** The true mean difference ($\\mu_d$) between the paired measurements is zero. \n    *   *Mathematically:* $H_0: \\mu_d = 0$ (The intervention or difference in condition had no effect).\n*   **Alternative Hypothesis ($H_a$):** The true mean difference is not zero.\n    *   *Mathematically (Two-tailed):* $H_a: \\mu_d \\neq 0$ (There is a significant difference between the two measurements).\n\n---\n\n### 3. Assumptions\nBefore running a paired t-test, your data must meet these key assumptions:\n1.  **Continuous Dependent Variable:** The outcome variable must be interval or ratio (e.g., weight, test scores, blood pressure).\n2.  **Dependent Observations:** The two measurements must come from the same subject (or a matched pair).\n3.  **No Outliers:** There should be no extreme outliers in the *differences* between the paired values.\n4.  **Normality:** The *differences* between the paired values should be approximately normally distributed. *(Note: If your sample size is large, e.g., $n > 30$, the test is robust to violations of normality due to the Central Limit Theorem).*\n\n> *If the normality assumption is severely violated, you should use a non-parametric alternative like the **Wilcoxon Signed-Rank Test**.*\n\n---\n\n### 4. Formula\nThe t-statistic for a paired t-test is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_0}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n*   $\\bar{d}$ = The mean of the differences between the paired observations.\n*   $\\mu_0$ = The hypothesized mean difference (almost always $0$).\n*   $s_d$ = The standard deviation of the differences.\n*   $n$ = The number of pairs.\n*   The **Degrees of Freedom ($df$)** for this test is $n - 1$.\n\n---\n\n### 5. Step-by-Step Example\nLet's say a doctor wants to know if a new blood pressure medication is effective. They measure the systolic blood pressure of 5 patients before and after taking the medication.\n\n| Patient | Blood Pressure Before ($X_1$) | Blood Pressure After ($X_2$) | Difference ($d = X_2 - X_1$) |\n|:---:|:---:|:---:|:---:|\n| 1 | 140 | 135 | -5 |\n| 2 | 135 | 130 | -5 |\n| 3 | 150 | 142 | -8 |\n| 4 | 130 | 132 | +2 |\n| 5 | 145 | 136 | -9 |\n\n#### **Step 1: Calculate the mean difference ($\\bar{d}$)**\n$$\\bar{d} = \\frac{-5 + (-5) + (-8) + 2 + (-9)}{5} = \\frac{-25}{5} = -5$$\nOn average, blood pressure dropped by 5 units.\n\n#### **Step 2: Calculate the standard deviation of the differences ($s_d$)**\n1. Find deviations from the mean ($d - \\bar{d}$):\n   * $-5 - (-5) = 0$\n   * $-5 - (-5) = 0$\n   * $-8 - (-5) = -3$\n   * $2 - (-5) = 7$\n   * $-9 - (-5) = -4$\n2. Square the deviations: $0^2, 0^2, (-3)^2, 7^2, (-4)^2 \\rightarrow 0, 0, 9, 49, 16$\n3. Sum of squared deviations = $0 + 0 + 9 + 49 + 16 = 74$\n4. Variance ($s_d^2$) = $74 / (n - 1) = 74 / 4 = 18.5$\n5. Standard deviation ($s_d$) = $\\sqrt{18.5} \\approx 4.30$\n\n#### **Step 3: Calculate the t-statistic**\n$$t = \\frac{-5}{\\frac{4.30}{\\sqrt{5}}} = \\frac{-5}{\\frac{4.30}{2.236}} = \\frac{-5}{1.923} \\approx -2.60$$\n\n#### **Step 4: Find the critical value and make a decision**\n*   Degrees of freedom: $df = 5 - 1 = 4$\n*   At a 5% significance level ($\\alpha = 0.05$) for a two-tailed test, the critical $t$-value from a standard $t$-distribution table is **$\\pm 2.776$**.\n*   **Conclusion:** Because our calculated $|t| = 2.60$ is *less* than the critical value of $2.776$, we **fail to reject the null hypothesis**. The medication did not result in a statistically significant decrease in blood pressure (though it is very close, and a larger sample size might yield a significant result).\n\n---\n\n### 6. How to Perform a Paired T-Test in Software\n\n*   **R:**\n    ```R\n    t.test(before_scores, after_scores, paired = TRUE)\n    ```\n*   **Python (using SciPy):**\n    ```python\n    from scipy import stats\n    stats.ttest_rel(before_scores, after_scores)\n    ```\n*   **Excel:**\n    Use the formula `=T.TEST(array1, array2, tails, type)`, setting `type` to `1` (for a paired test).",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1591,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 6,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 6
+      }
+    ],
+    "thoughts_token_count": 1531,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 3128,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

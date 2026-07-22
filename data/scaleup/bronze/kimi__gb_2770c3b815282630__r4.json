@@ -1,0 +1,81 @@
+{
+  "query_id": "gb_2770c3b815282630",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T10:00:52.803143+00:00",
+  "query_text": "Write a sentence with all words starting with the letter Y to praise me.",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a254151ca9cca8a68788abf",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I don't need to use the web search tool for this creative writing task. Here's a sentence with all words starting with Y to praise you:\n\n\"You, yeomanly, youthful, yielding, yet yawning yonder, yarely yoked your yearning, yielding yearly yields.\"\n\nSources:",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780826449,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 100,
+        "total_tokens": 162,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 100
+        },
+        "cached_tokens": 100
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Write a sentence with all words starting with the letter Y to praise me."
+      }
+    ],
+    "search_calls": [],
+    "n_search_rounds": 0
+  },
+  "answer_text": "I don't need to use the web search tool for this creative writing task. Here's a sentence with all words starting with Y to praise you:\n\n\"You, yeomanly, youthful, yielding, yet yawning yonder, yarely yoked your yearning, yielding yearly yields.\"\n\nSources:",
+  "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 100,
+    "total_tokens": 162,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 100
+    },
+    "cached_tokens": 100
+  },
+  "run_profile": "scaleup"
+}

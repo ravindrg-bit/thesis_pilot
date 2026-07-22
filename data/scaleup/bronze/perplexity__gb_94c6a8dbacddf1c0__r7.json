@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 7,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:43.529695+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "7cbb8a3a-769f-44df-b9d5-b866d55bcc7a",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators usually compute square roots by **iteratively refining an approximation** until the result is as accurate as the device\u2019s number format allows.[1][2] The core idea is that square root is a smooth function, so a good initial guess can be improved very quickly using methods such as **Newton\u2019s method** (also called the Babylonian method in this context).[1][2][4]\n\nA common update rule is:\n\n\\[\nx_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right)\n\\]\n\nwhere \\(S\\) is the number whose square root you want.[1][2] Each step typically doubles the number of correct digits near the solution, so only a few iterations are needed for high precision.[1][2]\n\nHow calculators make this fast and accurate:\n\n- They start with a **rough initial estimate**.[2][4]\n- They repeatedly apply a mathematically derived correction step, often Newton\u2019s method or a close variant.[1][2][4]\n- They stop when the difference between successive estimates is smaller than the device\u2019s precision limit.[2]\n- Internally, many calculators and CPUs use **fixed algorithms** and **binary floating-point arithmetic**, which give consistent results to a set number of digits; the answer is then rounded to what the display can show.[1]\n\nSome implementations also use other tricks, such as **logarithms**, polynomial approximations, or table-based methods, but the underlying goal is the same: rapidly converge on the true value and then round it.[3]\n\nSo the reason square roots can be determined so accurately is not that the machine \u201cknows\u201d the exact irrational value; it computes an approximation that is **far more precise than the display or storage format requires**.[1]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914403,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 370,
+      "prompt_tokens": 15,
+      "total_tokens": 385,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00037,
+        "request_cost": 0.005,
+        "total_cost": 0.00539
+      }
+    },
+    "citations": [
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://blogs.sas.com/content/iml/2016/05/16/babylonian-square-roots.html",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "The Babylonian method for finding square roots by hand - SAS Blogs",
+        "url": "https://blogs.sas.com/content/iml/2016/05/16/babylonian-square-roots.html",
+        "date": "2016-05-16",
+        "last_updated": "2026-06-08",
+        "snippet": "Make an initial guess. Guess any positive number x0. \u00b7 Improve the guess. Apply the formula x1 = (x0 + S / x0) / 2. The number x1 is a better ...",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Estimate Square Roots in Mental Math",
+        "url": "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+        "last_updated": "2026-05-07",
+        "snippet": "This article describes an easier method for quickly estimating the value of a square root, to about 2\u20135 significant figures.",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "An ancient formula is astoundingly accurate. Why didn't we learn this in school? 0:00 history 2:32 calculations 7:22 sqrt 2 10:19 intuition ...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators usually compute square roots by **iteratively refining an approximation** until the result is as accurate as the device\u2019s number format allows.[1][2] The core idea is that square root is a smooth function, so a good initial guess can be improved very quickly using methods such as **Newton\u2019s method** (also called the Babylonian method in this context).[1][2][4]\n\nA common update rule is:\n\n\\[\nx_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right)\n\\]\n\nwhere \\(S\\) is the number whose square root you want.[1][2] Each step typically doubles the number of correct digits near the solution, so only a few iterations are needed for high precision.[1][2]\n\nHow calculators make this fast and accurate:\n\n- They start with a **rough initial estimate**.[2][4]\n- They repeatedly apply a mathematically derived correction step, often Newton\u2019s method or a close variant.[1][2][4]\n- They stop when the difference between successive estimates is smaller than the device\u2019s precision limit.[2]\n- Internally, many calculators and CPUs use **fixed algorithms** and **binary floating-point arithmetic**, which give consistent results to a set number of digits; the answer is then rounded to what the display can show.[1]\n\nSome implementations also use other tricks, such as **logarithms**, polynomial approximations, or table-based methods, but the underlying goal is the same: rapidly converge on the true value and then round it.[3]\n\nSo the reason square roots can be determined so accurately is not that the machine \u201cknows\u201d the exact irrational value; it computes an approximation that is **far more precise than the display or storage format requires**.[1]",
+  "usage": {
+    "completion_tokens": 370,
+    "prompt_tokens": 15,
+    "total_tokens": 385,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00037,
+      "request_cost": 0.005,
+      "total_cost": 0.00539
+    }
+  },
+  "run_profile": "scaleup"
+}

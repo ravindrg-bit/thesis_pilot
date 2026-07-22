@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_588d144b9e0f9869",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T21:07:36.997274+00:00",
+  "query_text": "who sings the christmas song all i want for christmas is you",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a248c0e010d55f717677a36",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The Christmas song \"All I Want for Christmas Is You\" is sung by **Mariah Carey**. She recorded it for her first holiday album, *Merry Christmas*, which was released in 1994. Mariah Carey co-wrote and co-produced the song with Walter Afanasieff. It has since become one of the most popular and best-selling Christmas songs of all time, earning her the unofficial title \"Queen of Christmas.\"\n\nSources:\n1. https://ultimatepopculture.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n2. https://mariahcarey.fandom.com/wiki/All_I_Want_for_Christmas_Is_You_(song)\n3. https://party.alibaba.com/christmas/what-is-the-most-popular-christmas-song\n4. https://party.alibaba.com/christmas/who-wrote-all-i-want-for-christmas\n5. https://party.alibaba.com/christmas/when-did-all-i-want-for-christmas-come-out\n6. https://party.alibaba.com/christmas/what-is-the-best-christmas-song\n7. https://party.alibaba.com/christmas/who-made-all-i-want-for-christmas-is-you\n8. https://www.thestar.com.my/lifestyle/entertainment/2025/12/24/singer-kylie-minogue-beats-wham-and-mariah-carey-for-uk-christmas-no1\n9. https://americansongwriter.com/mariah-carey-celebrates-all-i-want-for-christmas-is-you-breaking-no-1-record/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780780047,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 342,
+        "prompt_tokens": 8773,
+        "total_tokens": 9115,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who sings the christmas song all i want for christmas is you"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a248c0d2e25",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"805696676a248c0d680f160001eb4229\"},\"usage\":{\"total_tokens\":8620}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a248c0d2e25",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"805696676a248c0d680f160001eb4229\"},\"usage\":{\"total_tokens\":8620}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"805696676a248c0d680f160001eb4229\"},\"usage\":{\"total_tokens\":8620}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The Christmas song \"All I Want for Christmas Is You\" is sung by **Mariah Carey**. She recorded it for her first holiday album, *Merry Christmas*, which was released in 1994. Mariah Carey co-wrote and co-produced the song with Walter Afanasieff. It has since become one of the most popular and best-selling Christmas songs of all time, earning her the unofficial title \"Queen of Christmas.\"\n\nSources:\n1. https://ultimatepopculture.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n2. https://mariahcarey.fandom.com/wiki/All_I_Want_for_Christmas_Is_You_(song)\n3. https://party.alibaba.com/christmas/what-is-the-most-popular-christmas-song\n4. https://party.alibaba.com/christmas/who-wrote-all-i-want-for-christmas\n5. https://party.alibaba.com/christmas/when-did-all-i-want-for-christmas-come-out\n6. https://party.alibaba.com/christmas/what-is-the-best-christmas-song\n7. https://party.alibaba.com/christmas/who-made-all-i-want-for-christmas-is-you\n8. https://www.thestar.com.my/lifestyle/entertainment/2025/12/24/singer-kylie-minogue-beats-wham-and-mariah-carey-for-uk-christmas-no1\n9. https://americansongwriter.com/mariah-carey-celebrates-all-i-want-for-christmas-is-you-breaking-no-1-record/",
+  "usage": {
+    "completion_tokens": 342,
+    "prompt_tokens": 8773,
+    "total_tokens": 9115,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_073214b162ffa868",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T21:44:53.862194+00:00",
+  "query_text": "what's the Mom Test",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25e64eee6c7118629e4fe8",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The **Mom Test** is a customer interviewing framework created by entrepreneur **Rob Fitzpatrick** in his 2019 book *The Mom Test: How to Talk to Customers & Learn If Your Business Is a Good Idea When Everyone Is Lying to You*. It teaches founders, product managers, and entrepreneurs how to ask questions that elicit honest, actionable feedback\u2014even from people who care about you and want to protect your feelings (like your mom).\n\n## The Core Problem\n\nWhen you pitch your idea to friends, family, or potential customers, people tend to lie. They give polite, encouraging responses because they don't want to hurt your feelings. This creates **false positives**\u2014you think your idea is validated, but people won't actually use or pay for your product. The Mom Test helps you avoid building something nobody wants.\n\n## The Three Core Rules\n\n1. **Talk about their life, not your idea**  \n   Don't ask \"Do you like my idea?\" Instead ask about their current behaviors, workflows, and problems. Example: Instead of \"Would you use a time-tracking app?\" ask \"How do you currently track your time? Walk me through your process.\"\n\n2. **Ask about specifics in the past, not hypotheticals about the future**  \n   People are terrible at predicting their own behavior. Ask about concrete past experiences rather than future intentions. Example: Instead of \"Would you pay for this?\" ask \"The last time you had this problem, what did you do? Have you ever paid to solve it?\"\n\n3. **Listen more, talk less**  \n   Your job is to learn, not to pitch. Great interviewers spend about 80% of the time listening. If you're talking more than 30% of the conversation, you're doing it wrong.\n\n## Why It Works\n\nBy focusing on **past behavior and current problems**, you uncover:\n- Real pain points and emotional frustrations\n- Workarounds and hacks people already use\n- Actual spending patterns and willingness to pay\n- Whether a problem is urgent enough that people actively try to solve it\n\n## What to Avoid\n\n| \u274c Bad Questions | \u2705 Mom Test Questions |\n|----------------|----------------------|\n| \"Do you think this is a good idea?\" | \"What's the hardest part about [problem area]?\" |\n| \"Would you use this if it existed?\" | \"When was the last time this happened? What did you do?\" |\n| \"Don't you think this feature is cool?\" | \"How are you solving this today?\" |\n| \"We're working on this\u2014do you like it?\" | \"Have you ever paid to solve this problem? How much?\" |\n\nThe Mom Test has become essential reading in startup circles, particularly among indie hackers, Y Combinator founders, and product teams practicing Lean Startup methodology.\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://www.collinsdictionary.com/dictionary/english/mom-test\n3. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n4. https://www.dictionary.com/browse/mom-test\n5. https://blog.uxtweak.com/the-mom-test/\n6. https://readingraphics.com/book-summary-the-mom-test/\n7. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n8. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n9. https://hellopm.co/word/moms-test/\n10. https://dictionary.reverso.net/english-definition/mom+test\n11. https://inkubator.si/wp-content/uploads/2020/05/The-Mom-Test-by-@robfitz.pdf\n12. https://www.momtestbook.com/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780868687,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 793,
+        "prompt_tokens": 7200,
+        "total_tokens": 7993,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what's the Mom Test"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25e64d51ad",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"064bc5256a25e64d680f160001ed23bf\"},\"usage\":{\"total_tokens\":7053}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25e64d51ad",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"064bc5256a25e64d680f160001ed23bf\"},\"usage\":{\"total_tokens\":7053}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"064bc5256a25e64d680f160001ed23bf\"},\"usage\":{\"total_tokens\":7053}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The **Mom Test** is a customer interviewing framework created by entrepreneur **Rob Fitzpatrick** in his 2019 book *The Mom Test: How to Talk to Customers & Learn If Your Business Is a Good Idea When Everyone Is Lying to You*. It teaches founders, product managers, and entrepreneurs how to ask questions that elicit honest, actionable feedback\u2014even from people who care about you and want to protect your feelings (like your mom).\n\n## The Core Problem\n\nWhen you pitch your idea to friends, family, or potential customers, people tend to lie. They give polite, encouraging responses because they don't want to hurt your feelings. This creates **false positives**\u2014you think your idea is validated, but people won't actually use or pay for your product. The Mom Test helps you avoid building something nobody wants.\n\n## The Three Core Rules\n\n1. **Talk about their life, not your idea**  \n   Don't ask \"Do you like my idea?\" Instead ask about their current behaviors, workflows, and problems. Example: Instead of \"Would you use a time-tracking app?\" ask \"How do you currently track your time? Walk me through your process.\"\n\n2. **Ask about specifics in the past, not hypotheticals about the future**  \n   People are terrible at predicting their own behavior. Ask about concrete past experiences rather than future intentions. Example: Instead of \"Would you pay for this?\" ask \"The last time you had this problem, what did you do? Have you ever paid to solve it?\"\n\n3. **Listen more, talk less**  \n   Your job is to learn, not to pitch. Great interviewers spend about 80% of the time listening. If you're talking more than 30% of the conversation, you're doing it wrong.\n\n## Why It Works\n\nBy focusing on **past behavior and current problems**, you uncover:\n- Real pain points and emotional frustrations\n- Workarounds and hacks people already use\n- Actual spending patterns and willingness to pay\n- Whether a problem is urgent enough that people actively try to solve it\n\n## What to Avoid\n\n| \u274c Bad Questions | \u2705 Mom Test Questions |\n|----------------|----------------------|\n| \"Do you think this is a good idea?\" | \"What's the hardest part about [problem area]?\" |\n| \"Would you use this if it existed?\" | \"When was the last time this happened? What did you do?\" |\n| \"Don't you think this feature is cool?\" | \"How are you solving this today?\" |\n| \"We're working on this\u2014do you like it?\" | \"Have you ever paid to solve this problem? How much?\" |\n\nThe Mom Test has become essential reading in startup circles, particularly among indie hackers, Y Combinator founders, and product teams practicing Lean Startup methodology.\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://www.collinsdictionary.com/dictionary/english/mom-test\n3. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n4. https://www.dictionary.com/browse/mom-test\n5. https://blog.uxtweak.com/the-mom-test/\n6. https://readingraphics.com/book-summary-the-mom-test/\n7. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n8. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n9. https://hellopm.co/word/moms-test/\n10. https://dictionary.reverso.net/english-definition/mom+test\n11. https://inkubator.si/wp-content/uploads/2020/05/The-Mom-Test-by-@robfitz.pdf\n12. https://www.momtestbook.com/",
+  "usage": {
+    "completion_tokens": 793,
+    "prompt_tokens": 7200,
+    "total_tokens": 7993,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

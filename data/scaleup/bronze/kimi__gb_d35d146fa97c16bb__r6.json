@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d35d146fa97c16bb",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:04:56.210968+00:00",
+  "query_text": "who sang a whiter shade of pale first",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2596a4a89a3affba32b9b3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, **Procol Harum** was the first to sing \"A Whiter Shade of Pale.\" The song was their debut single, released on **May 12, 1967**. \n\nThe original recording featured:\n- **Gary Brooker** on lead vocals and piano\n- **Matthew Fisher** on Hammond organ\n- **Ray Royer** on guitar\n- **David Knights** on bass\n- Session drummer **Bill Eyden** (the band didn't have a permanent drummer at the time)\n\nThe song was recorded at Olympic Sound Studios in London and became a massive worldwide hit, reaching #1 in the UK and staying there for six weeks. It sold over six million copies and is widely considered to define \"The Summer of Love.\"\n\nGary Brooker was the lead singer who performed the vocals on this original iconic version. The song was written by Gary Brooker, Keith Reid (lyrics), and Matthew Fisher.\n\nSources:\n1. https://www.udiscovermusic.com/stories/procol-harum-a-whiter-shade-of-pale-covers/\n2. https://www.goldradiouk.com/features/song-facts/whiter-shade-pale-procol-harum-song-facts/\n3. https://www.hertfordshiremercury.co.uk/whats-on/whats-on-news/procol-harum-singer-gary-brooker-6703391\n4. https://www.musicgrotto.com/whiter-shade-of-pale-song-meaning-lyrics-explained/\n5. https://songoftheday.ca/2024/12/30/whiter-shade-of-pale/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780848292,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 347,
+        "prompt_tokens": 8714,
+        "total_tokens": 9061,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who sang a whiter shade of pale first"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2596a366c9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"da32842a6a2596a3680f160001ecadff\"},\"usage\":{\"total_tokens\":8562}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2596a366c9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"da32842a6a2596a3680f160001ecadff\"},\"usage\":{\"total_tokens\":8562}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"da32842a6a2596a3680f160001ecadff\"},\"usage\":{\"total_tokens\":8562}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, **Procol Harum** was the first to sing \"A Whiter Shade of Pale.\" The song was their debut single, released on **May 12, 1967**. \n\nThe original recording featured:\n- **Gary Brooker** on lead vocals and piano\n- **Matthew Fisher** on Hammond organ\n- **Ray Royer** on guitar\n- **David Knights** on bass\n- Session drummer **Bill Eyden** (the band didn't have a permanent drummer at the time)\n\nThe song was recorded at Olympic Sound Studios in London and became a massive worldwide hit, reaching #1 in the UK and staying there for six weeks. It sold over six million copies and is widely considered to define \"The Summer of Love.\"\n\nGary Brooker was the lead singer who performed the vocals on this original iconic version. The song was written by Gary Brooker, Keith Reid (lyrics), and Matthew Fisher.\n\nSources:\n1. https://www.udiscovermusic.com/stories/procol-harum-a-whiter-shade-of-pale-covers/\n2. https://www.goldradiouk.com/features/song-facts/whiter-shade-pale-procol-harum-song-facts/\n3. https://www.hertfordshiremercury.co.uk/whats-on/whats-on-news/procol-harum-singer-gary-brooker-6703391\n4. https://www.musicgrotto.com/whiter-shade-of-pale-song-meaning-lyrics-explained/\n5. https://songoftheday.ca/2024/12/30/whiter-shade-of-pale/",
+  "usage": {
+    "completion_tokens": 347,
+    "prompt_tokens": 8714,
+    "total_tokens": 9061,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

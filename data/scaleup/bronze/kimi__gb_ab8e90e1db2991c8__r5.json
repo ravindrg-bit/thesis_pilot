@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_ab8e90e1db2991c8",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:19:52.184596+00:00",
+  "query_text": "Should corporations be required to report their carbon emissions?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2626b207eee87de93217b6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, the question of whether corporations should be required to report their carbon emissions is increasingly being answered in the affirmative by governments and regulators worldwide. Here's what the current landscape looks like:\n\n## The Trend Toward Mandatory Carbon Reporting\n\n**Carbon reporting is already mandatory or becoming mandatory in major economies around the world**, including the United States, European Union, United Kingdom, Australia, China, and others. This represents a significant shift from the previous era of purely voluntary disclosure.\n\n## Key Arguments in Favor of Mandatory Reporting\n\n### 1. **Transparency and Accountability**\nMandatory carbon reporting increases transparency about corporate environmental impact and holds companies accountable for their contributions to climate change. As one source notes, it \"helps increase transparency and accountability in global climate action\" and \"reveals opportunities to reduce emissions and mitigate climate risks.\"\n\n### 2. **Investor Decision-Making**\nRegulators like the U.S. Securities and Exchange Commission (SEC) emphasize that investors need \"consistent, comparable, and decision-useful information\" to assess climate-related risks to their investments. SEC Chair Gary Gensler stated that the rules aim to provide \"consistent, comparable, and reliable [reports] for investors.\"\n\n### 3. **Standardization**\nMandatory requirements create standardized reporting frameworks, making it easier to compare companies and track progress. Without mandates, companies could cherry-pick which standards to use or whether to report at all.\n\n### 4. **Supply Chain Accountability**\nMany regulations now require Scope 3 emissions reporting (supply chain emissions), which pushes accountability beyond a company's direct operations. This creates ripple effects throughout entire value chains.\n\n## Current Regulatory Examples\n\n| Region/Jurisdiction | Requirements |\n|---------------------|-------------|\n| **European Union (CSRD)** | Large companies and listed SMEs must report Scope 1, 2, and 3 emissions with external audit assurance |\n| **United States (SEC)** | Large public companies must disclose GHG emissions, climate risks, and mitigation strategies |\n| **United Kingdom (SECR/TCFD)** | Large companies must report energy use and GHG emissions; TCFD-aligned disclosures mandatory for many |\n| **Australia** | Phased mandatory climate reporting with significant penalties for non-compliance |\n| **Spain** | Companies >250 employees must report emissions and create 5-year decarbonization plans |\n\n## Scope of Reporting\n\nUnder the GHG Protocol (the global standard), corporate carbon reporting typically covers:\n- **Scope 1**: Direct emissions from owned/controlled sources\n- **Scope 2**: Indirect emissions from purchased electricity\n- **Scope 3**: Other indirect emissions from supply chains and product use\n\n## Considerations and Challenges\n\nSome regulators have faced pushback on the burden of reporting, particularly for Scope 3 emissions. The SEC notably excluded Scope 3 from its final rule, deeming it \"overly burdensome,\" while the EU's CSRD maintains this requirement. The EU is currently considering some easing of requirements through its \"Omnibus Package.\"\n\n## Conclusion\n\nGiven the climate crisis and the need for reliable data to drive decarbonization, **the global trend strongly favors mandatory carbon reporting for corporations**, particularly large ones. The question is becoming less *whether* to mandate reporting and more *how* to implement it effectively\u2014balancing comprehensiveness with proportionality, ensuring data quality, and harmonizing standards across jurisdictions.\n\nSources:\n1. https://www.climatezero.app/resource/australias-mandatory-climate-reporting-rollout-what-australian-companies-must-do-now\n2. https://nbs.net/the-shift-to-mandatory-carbon-reporting-6-ways-companies-can-prepare/\n3. https://www.novata.com/esg-regulations/\n4. https://www.carbonchain.com/carbon-reporting\n5. https://ecologi.com/resources/blog/do-you-need-to-disclose-your-carbon-emissions\n6. https://www.econos-esg.com/blogs/is-carbon-footprint-mandatory-for-my-company\n7. https://knowesg.com/articles/spain-makes-carbon-reporting-mandatory-amid-climate-crisis\n8. https://stxgroup.com/strive/blogs/a-quick-guide-to-the-sec-climate-disclosure-rules/\n9. https://www.sweep.net/guides/what-s-the-latest-on-climate-related-disclosures",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780885170,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 893,
+        "prompt_tokens": 7783,
+        "total_tokens": 8676,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Should corporations be required to report their carbon emissions?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2626b1f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bb92043e6a2626b14f50a50001ef7335\"},\"usage\":{\"total_tokens\":7629}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2626b1f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bb92043e6a2626b14f50a50001ef7335\"},\"usage\":{\"total_tokens\":7629}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bb92043e6a2626b14f50a50001ef7335\"},\"usage\":{\"total_tokens\":7629}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, the question of whether corporations should be required to report their carbon emissions is increasingly being answered in the affirmative by governments and regulators worldwide. Here's what the current landscape looks like:\n\n## The Trend Toward Mandatory Carbon Reporting\n\n**Carbon reporting is already mandatory or becoming mandatory in major economies around the world**, including the United States, European Union, United Kingdom, Australia, China, and others. This represents a significant shift from the previous era of purely voluntary disclosure.\n\n## Key Arguments in Favor of Mandatory Reporting\n\n### 1. **Transparency and Accountability**\nMandatory carbon reporting increases transparency about corporate environmental impact and holds companies accountable for their contributions to climate change. As one source notes, it \"helps increase transparency and accountability in global climate action\" and \"reveals opportunities to reduce emissions and mitigate climate risks.\"\n\n### 2. **Investor Decision-Making**\nRegulators like the U.S. Securities and Exchange Commission (SEC) emphasize that investors need \"consistent, comparable, and decision-useful information\" to assess climate-related risks to their investments. SEC Chair Gary Gensler stated that the rules aim to provide \"consistent, comparable, and reliable [reports] for investors.\"\n\n### 3. **Standardization**\nMandatory requirements create standardized reporting frameworks, making it easier to compare companies and track progress. Without mandates, companies could cherry-pick which standards to use or whether to report at all.\n\n### 4. **Supply Chain Accountability**\nMany regulations now require Scope 3 emissions reporting (supply chain emissions), which pushes accountability beyond a company's direct operations. This creates ripple effects throughout entire value chains.\n\n## Current Regulatory Examples\n\n| Region/Jurisdiction | Requirements |\n|---------------------|-------------|\n| **European Union (CSRD)** | Large companies and listed SMEs must report Scope 1, 2, and 3 emissions with external audit assurance |\n| **United States (SEC)** | Large public companies must disclose GHG emissions, climate risks, and mitigation strategies |\n| **United Kingdom (SECR/TCFD)** | Large companies must report energy use and GHG emissions; TCFD-aligned disclosures mandatory for many |\n| **Australia** | Phased mandatory climate reporting with significant penalties for non-compliance |\n| **Spain** | Companies >250 employees must report emissions and create 5-year decarbonization plans |\n\n## Scope of Reporting\n\nUnder the GHG Protocol (the global standard), corporate carbon reporting typically covers:\n- **Scope 1**: Direct emissions from owned/controlled sources\n- **Scope 2**: Indirect emissions from purchased electricity\n- **Scope 3**: Other indirect emissions from supply chains and product use\n\n## Considerations and Challenges\n\nSome regulators have faced pushback on the burden of reporting, particularly for Scope 3 emissions. The SEC notably excluded Scope 3 from its final rule, deeming it \"overly burdensome,\" while the EU's CSRD maintains this requirement. The EU is currently considering some easing of requirements through its \"Omnibus Package.\"\n\n## Conclusion\n\nGiven the climate crisis and the need for reliable data to drive decarbonization, **the global trend strongly favors mandatory carbon reporting for corporations**, particularly large ones. The question is becoming less *whether* to mandate reporting and more *how* to implement it effectively\u2014balancing comprehensiveness with proportionality, ensuring data quality, and harmonizing standards across jurisdictions.\n\nSources:\n1. https://www.climatezero.app/resource/australias-mandatory-climate-reporting-rollout-what-australian-companies-must-do-now\n2. https://nbs.net/the-shift-to-mandatory-carbon-reporting-6-ways-companies-can-prepare/\n3. https://www.novata.com/esg-regulations/\n4. https://www.carbonchain.com/carbon-reporting\n5. https://ecologi.com/resources/blog/do-you-need-to-disclose-your-carbon-emissions\n6. https://www.econos-esg.com/blogs/is-carbon-footprint-mandatory-for-my-company\n7. https://knowesg.com/articles/spain-makes-carbon-reporting-mandatory-amid-climate-crisis\n8. https://stxgroup.com/strive/blogs/a-quick-guide-to-the-sec-climate-disclosure-rules/\n9. https://www.sweep.net/guides/what-s-the-latest-on-climate-related-disclosures",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 7783,
+    "total_tokens": 8676,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

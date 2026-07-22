@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_3002b203ab970192",
+  "engine": "chatgpt",
+  "run_index": 1,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-06T22:19:11.509567+00:00",
+  "query_text": "How do green screens work and why do they choose green or other colors",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_09624a9b42fb70b2006a249ccc15f4819cb81967e80cc1181b",
+    "created_at": 1780784332.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_09624a9b42fb70b2006a249ccd70a4819cbbccd0b85e38ddd2",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Green screens work by **removing (\u201ckeying out\u201d) a specific background color** from a video or image and replacing it with another image, video, or digital environment.\n\n## How green screens work\n\nA subject is filmed in front of a solid-colored backdrop, usually bright green. In editing or live compositing software, the computer looks for pixels matching that green color and makes them transparent. Then another background is placed behind the subject.\n\nThis process is called **chroma keying**:\n\n- **Chroma** = color\n- **Keying** = selecting/removing part of an image based on some property, in this case color\n\nSo if the background is a very consistent green, the software can say:  \n\u201cEverything that is this shade of green should disappear.\u201d\n\nThe result is that the actor, presenter, or object appears to be somewhere else \u2014 a newsroom, alien planet, weather map, virtual set, etc.\n\n## Why green?\n\nGreen is commonly used because it has several advantages:\n\n1. **It is very different from human skin tones**  \n   Human skin contains more red/orange tones, so green usually separates well from people.\n\n2. **Digital cameras capture green very clearly**  \n   Most camera sensors use a Bayer pattern with more green-sensitive pixels than red or blue ones. That means the green channel often has more detail and less noise, making it easier to separate cleanly.\n\n3. **Bright green reflects a strong signal**  \n   A vivid green backdrop is easy for software to detect, especially when evenly lit.\n\n4. **People are less likely to wear bright chroma green**  \n   Compared with common clothing colors like black, white, blue, gray, or red, bright green is relatively unusual \u2014 though not impossible.\n\n## Why not always green?\n\nGreen is not always the best choice. The key rule is:\n\n**Use a background color that is not present in the subject.**\n\nIf someone is wearing green, has green props, or needs green elements visible, a green screen would cause those parts to disappear too. That is why other colors are used.\n\n## Why blue screens are also common\n\nBlue screens were widely used before green became dominant and are still used in many situations.\n\nBlue can be better when:\n\n- The subject has green clothing or green objects\n- The scene involves plants, grass, or green props\n- The production is using film rather than digital video\n- The background needs less light spill than green\n\nBlue is darker than green, so it often creates less reflected color contamination on the subject. However, blue can be noisier on some digital cameras and may be closer to some clothing or eye colors.\n\n## Other colors can be used too\n\nIn theory, almost **any solid color** can be used for chroma keying, as long as it is distinct from the subject. For example:\n\n- **Magenta** may be used if the subject contains lots of green and blue\n- **Red** is rarely used because it overlaps too much with skin tones\n- **Black or white** can be used for different kinds of compositing, but they are usually luma keys rather than chroma keys\n\n## What makes a green screen shot look good?\n\nThe color choice matters, but technique matters even more:\n\n- The screen must be **evenly lit**\n- The subject should stand **far enough away** from the screen\n- Avoid shadows and wrinkles on the backdrop\n- Avoid shiny surfaces that reflect green\n- Avoid clothing or props that match the screen color\n- Use good camera settings to reduce motion blur and compression artifacts\n\n## The main idea\n\nGreen screens work because software can isolate one strong, unusual color and remove it. Green is popular because digital cameras capture it well, it contrasts with skin tones, and it is usually easy to separate from the subject. Blue or other colors are chosen when green would conflict with the subject or scene.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780784351.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4456,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 793,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5249
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Green screens work by **removing (\u201ckeying out\u201d) a specific background color** from a video or image and replacing it with another image, video, or digital environment.\n\n## How green screens work\n\nA subject is filmed in front of a solid-colored backdrop, usually bright green. In editing or live compositing software, the computer looks for pixels matching that green color and makes them transparent. Then another background is placed behind the subject.\n\nThis process is called **chroma keying**:\n\n- **Chroma** = color\n- **Keying** = selecting/removing part of an image based on some property, in this case color\n\nSo if the background is a very consistent green, the software can say:  \n\u201cEverything that is this shade of green should disappear.\u201d\n\nThe result is that the actor, presenter, or object appears to be somewhere else \u2014 a newsroom, alien planet, weather map, virtual set, etc.\n\n## Why green?\n\nGreen is commonly used because it has several advantages:\n\n1. **It is very different from human skin tones**  \n   Human skin contains more red/orange tones, so green usually separates well from people.\n\n2. **Digital cameras capture green very clearly**  \n   Most camera sensors use a Bayer pattern with more green-sensitive pixels than red or blue ones. That means the green channel often has more detail and less noise, making it easier to separate cleanly.\n\n3. **Bright green reflects a strong signal**  \n   A vivid green backdrop is easy for software to detect, especially when evenly lit.\n\n4. **People are less likely to wear bright chroma green**  \n   Compared with common clothing colors like black, white, blue, gray, or red, bright green is relatively unusual \u2014 though not impossible.\n\n## Why not always green?\n\nGreen is not always the best choice. The key rule is:\n\n**Use a background color that is not present in the subject.**\n\nIf someone is wearing green, has green props, or needs green elements visible, a green screen would cause those parts to disappear too. That is why other colors are used.\n\n## Why blue screens are also common\n\nBlue screens were widely used before green became dominant and are still used in many situations.\n\nBlue can be better when:\n\n- The subject has green clothing or green objects\n- The scene involves plants, grass, or green props\n- The production is using film rather than digital video\n- The background needs less light spill than green\n\nBlue is darker than green, so it often creates less reflected color contamination on the subject. However, blue can be noisier on some digital cameras and may be closer to some clothing or eye colors.\n\n## Other colors can be used too\n\nIn theory, almost **any solid color** can be used for chroma keying, as long as it is distinct from the subject. For example:\n\n- **Magenta** may be used if the subject contains lots of green and blue\n- **Red** is rarely used because it overlaps too much with skin tones\n- **Black or white** can be used for different kinds of compositing, but they are usually luma keys rather than chroma keys\n\n## What makes a green screen shot look good?\n\nThe color choice matters, but technique matters even more:\n\n- The screen must be **evenly lit**\n- The subject should stand **far enough away** from the screen\n- Avoid shadows and wrinkles on the backdrop\n- Avoid shiny surfaces that reflect green\n- Avoid clothing or props that match the screen color\n- Use good camera settings to reduce motion blur and compression artifacts\n\n## The main idea\n\nGreen screens work because software can isolate one strong, unusual color and remove it. Green is popular because digital cameras capture it well, it contrasts with skin tones, and it is usually easy to separate from the subject. Blue or other colors are chosen when green would conflict with the subject or scene.",
+  "usage": {
+    "input_tokens": 4456,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 793,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5249
+  },
+  "run_profile": "scaleup"
+}

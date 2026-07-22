@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_fbe04d44c3b52d19",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T01:25:20.216197+00:00",
+  "query_text": "What is biologically happening to your voice when you whisper?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2619e8309a636930a9504c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's what biologically happens to your voice when you whisper:\n\n## The Core Biological Change: Vocal Folds Stop Vibrating\n\nDuring normal speech, your **vocal folds (vocal cords)** come together and vibrate as air from your lungs passes through them. This vibration creates the fundamental frequency (pitch) of your voice. When you whisper, however, the vocal folds are held in a **static, partially open position** and are stretched so tightly that they **cannot vibrate**\u2014this is the key biological difference.\n\n## What Happens Instead\n\nSince the vocal folds don't vibrate during whispering:\n\n1. **Turbulent airflow creates the sound**: Air passes through the narrow gap between the partially open vocal folds, creating turbulent, chaotic airflow. This produces a **broadband, noise-like sound** rather than a periodic tone with clear pitch.\n\n2. **The glottis remains partly open**: Unlike normal speech where the glottis alternates between open and closed during vocal fold vibration, in whispering it stays in a fixed, narrowed configuration\u2014often described as an \"inverted Y\" shape.\n\n3. **Supralaryngeal articulation remains active**: Your tongue, lips, jaw, and other articulators still shape the sound in the vocal tract, which is why whispered speech remains intelligible. The vocal tract acts as a resonator, enhancing certain frequencies (formants) even without a periodic sound source.\n\n## Physiological Consequences\n\n- **Increased airflow**: More air escapes through the open glottis during whispering compared to normal speech\u2014studies suggest about 97cc of air per syllable during whisper versus 67cc during normal speech.\n\n- **Greater muscular effort**: The laryngeal muscles must maintain the vocal folds in this tense, partially open position, which can actually be more strenuous than normal speaking.\n\n- **Drying effect**: The constant airflow across the vocal folds can cause them to dry out more quickly.\n\n- **Loss of pitch information**: Since there's no periodic vibration, whispered speech lacks fundamental frequency, making it difficult to convey or detect pitch variations.\n\n## Variability in Whisper Production\n\nResearch shows considerable individual variation in how people whisper. Some people keep their vocal processes (cartilaginous parts) closer together, while others have more glottal opening. The degree of vocal fold adduction and the loudness of the whisper can vary significantly between individuals and even within the same person.\n\nSources:\n1. https://www.sciencefocus.com/the-human-body/why-do-we-lose-the-sound-of-our-voice-when-we-whisper\n2. https://www.backstage.com/magazine/article/whispering-vocal-damage-advice-75097/\n3. https://www.sciencedirect.com/science/article/abs/pii/S0892199717300280\n4. https://www.sciencedirect.com/science/article/abs/pii/S089219970900006X\n5. https://pubmed.ncbi.nlm.nih.gov/17219333/\n6. https://dr.ntu.edu.sg/server/api/core/bitstreams/f151d850-cf62-427a-955b-1357eca41697/content\n7. https://web.media.mit.edu/~rebklein/downloads/partage/defense/Kleinberger_PHD_thesis.pdf\n8. https://www.isca-archive.org/interspeech_2013/mcloughlin13_interspeech.pdf\n9. https://cyansec.com/files/articles/19CCS-Cafield.pdf\n10. https://www.eecs.umich.edu/courses/eecs206/archive/fall01/lab/lab7.pdf\n11. https://www.phys.unsw.edu.au/jw/reprints/whisper.pdf\n12. https://beverlyhillsspeechtherapy.com/blog/whispering-hoarseness/\n13. https://www.usemogul.com/post/is-whispering-bad-for-your-voice\n14. https://www.whitegatesbedandbreakfast.co.uk/why-whispering-damages-your-voice-more-than-shouting-according-to-speech-therapists/\n15. https://singingsuccess.com/whispering-bad-voice/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780881898,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 882,
+        "prompt_tokens": 9071,
+        "total_tokens": 9953,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What is biologically happening to your voice when you whisper?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2619e79a21",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"88d914956a2619e7680f160001eda95d\"},\"usage\":{\"total_tokens\":8917}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2619e79a21",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"88d914956a2619e7680f160001eda95d\"},\"usage\":{\"total_tokens\":8917}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"88d914956a2619e7680f160001eda95d\"},\"usage\":{\"total_tokens\":8917}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's what biologically happens to your voice when you whisper:\n\n## The Core Biological Change: Vocal Folds Stop Vibrating\n\nDuring normal speech, your **vocal folds (vocal cords)** come together and vibrate as air from your lungs passes through them. This vibration creates the fundamental frequency (pitch) of your voice. When you whisper, however, the vocal folds are held in a **static, partially open position** and are stretched so tightly that they **cannot vibrate**\u2014this is the key biological difference.\n\n## What Happens Instead\n\nSince the vocal folds don't vibrate during whispering:\n\n1. **Turbulent airflow creates the sound**: Air passes through the narrow gap between the partially open vocal folds, creating turbulent, chaotic airflow. This produces a **broadband, noise-like sound** rather than a periodic tone with clear pitch.\n\n2. **The glottis remains partly open**: Unlike normal speech where the glottis alternates between open and closed during vocal fold vibration, in whispering it stays in a fixed, narrowed configuration\u2014often described as an \"inverted Y\" shape.\n\n3. **Supralaryngeal articulation remains active**: Your tongue, lips, jaw, and other articulators still shape the sound in the vocal tract, which is why whispered speech remains intelligible. The vocal tract acts as a resonator, enhancing certain frequencies (formants) even without a periodic sound source.\n\n## Physiological Consequences\n\n- **Increased airflow**: More air escapes through the open glottis during whispering compared to normal speech\u2014studies suggest about 97cc of air per syllable during whisper versus 67cc during normal speech.\n\n- **Greater muscular effort**: The laryngeal muscles must maintain the vocal folds in this tense, partially open position, which can actually be more strenuous than normal speaking.\n\n- **Drying effect**: The constant airflow across the vocal folds can cause them to dry out more quickly.\n\n- **Loss of pitch information**: Since there's no periodic vibration, whispered speech lacks fundamental frequency, making it difficult to convey or detect pitch variations.\n\n## Variability in Whisper Production\n\nResearch shows considerable individual variation in how people whisper. Some people keep their vocal processes (cartilaginous parts) closer together, while others have more glottal opening. The degree of vocal fold adduction and the loudness of the whisper can vary significantly between individuals and even within the same person.\n\nSources:\n1. https://www.sciencefocus.com/the-human-body/why-do-we-lose-the-sound-of-our-voice-when-we-whisper\n2. https://www.backstage.com/magazine/article/whispering-vocal-damage-advice-75097/\n3. https://www.sciencedirect.com/science/article/abs/pii/S0892199717300280\n4. https://www.sciencedirect.com/science/article/abs/pii/S089219970900006X\n5. https://pubmed.ncbi.nlm.nih.gov/17219333/\n6. https://dr.ntu.edu.sg/server/api/core/bitstreams/f151d850-cf62-427a-955b-1357eca41697/content\n7. https://web.media.mit.edu/~rebklein/downloads/partage/defense/Kleinberger_PHD_thesis.pdf\n8. https://www.isca-archive.org/interspeech_2013/mcloughlin13_interspeech.pdf\n9. https://cyansec.com/files/articles/19CCS-Cafield.pdf\n10. https://www.eecs.umich.edu/courses/eecs206/archive/fall01/lab/lab7.pdf\n11. https://www.phys.unsw.edu.au/jw/reprints/whisper.pdf\n12. https://beverlyhillsspeechtherapy.com/blog/whispering-hoarseness/\n13. https://www.usemogul.com/post/is-whispering-bad-for-your-voice\n14. https://www.whitegatesbedandbreakfast.co.uk/why-whispering-damages-your-voice-more-than-shouting-according-to-speech-therapists/\n15. https://singingsuccess.com/whispering-bad-voice/",
+  "usage": {
+    "completion_tokens": 882,
+    "prompt_tokens": 9071,
+    "total_tokens": 9953,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

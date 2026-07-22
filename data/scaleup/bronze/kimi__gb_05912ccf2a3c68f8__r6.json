@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_05912ccf2a3c68f8",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T18:23:16.123822+00:00",
+  "query_text": "Where can I order a birthday cake online?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27088c62ad0c4b18bd2faf",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to order a birthday cake online, depending on your location and needs:\n\n## **Nationwide/International Options**\n\n| Service | Highlights | Delivery |\n|---------|-----------|----------|\n| **Bake Me a Wish** | Gourmet birthday cakes, personalized messages, kosher & gluten-free options, loyalty program | All 50 US states; overnight shipping |\n| **Goldbelly** | Cakes from famous bakeries (Carlo's, Ovenly, etc.), filters for dietary needs (vegan, paleo, gluten-free, kosher) | 48-50 states; shipping times vary |\n| **Milk Bar** | Best-selling vanilla rainbow birthday cake, trendy NYC bakery | Nationwide US |\n| **Caroline's Cakes** | Nut-free bakery, multilayered cakes, \"half cakes\" with two flavors | 48 states |\n| **We Take the Cake** | Beautifully decorated cakes, free shipping, gluten-free options | 48 states; free shipping |\n| **Send A Cake** | Personalized cake explosion boxes with photos, music stands, wind-up butterflies | 48 states |\n\n## **Same-Day/Local Delivery Options**\n\n| Service | Best For | Coverage |\n|---------|----------|----------|\n| **Instacart** | Budget-friendly supermarket cakes (Costco, Target, Kroger) | Thousands of cities across North America |\n| **DoorDash** | Last-minute orders from local restaurants, grocery stores, bakeries | 7,000+ cities in all 50 US states |\n\n## **International/Regional Options**\n\n| Service | Region | Special Features |\n|---------|--------|----------------|\n| **IGP** | India + 100+ countries (Canada, UAE, Germany) | Same-day delivery, photo cakes, pinata cakes, 400+ Indian cities |\n| **Bakingo** | India | Same-day & 2-hour free delivery, 10+ flavors |\n| **FNP (Ferns N Petals)** | India, Malaysia, international | Midnight delivery, 2-hour delivery in 350+ Indian cities |\n| **Flower Chimp** | Philippines | Ube cakes, Red Ribbon cakes, paired with flowers |\n| **Habib Bakery** | Dubai, UAE | Same-day delivery, custom designer cakes, Arabic-inspired flavors |\n| **The Hummingbird Bakery** | London, UK | American-inspired cakes, rainbow pi\u00f1ata cakes, personalization |\n| **Rakuten** | Japan | Hundreds of birthday cake options (Japanese language site) |\n\n## **Tips for Ordering**\n\n- **For dietary restrictions:** Goldbelly and Bake Me a Wish have the best filtering options for vegan, gluten-free, kosher, and nut-free cakes.\n- **For last-minute needs:** Use Instacart or DoorDash for same-day delivery from local stores.\n- **For personalization:** Send A Cake and IGP offer photo cakes and custom messages.\n- **For international delivery:** IGP and FNP deliver to 100+ countries.\n\n---\n\nSources:\n1. https://www.thespruceeats.com/best-birthday-cake-delivery-11753483\n2. https://milkbarstore.com/products/birthday-cake\n3. https://www.igp.com/cakes\n4. https://www.bakingo.com/\n5. https://www.fnp.com/cakes-lp\n6. https://www.flowerchimp.com.ph/collections/cake\n7. https://www.fnp.my/cakes/birthday\n8. https://www.habibbakery.ae/\n9. https://www.olivemagazine.com/reviews/best-online-cake-delivery/\n10. https://www.tripadvisor.com/ShowTopic-g298566-i2803-k7739671-Ordering_a_birthday_cake_for_son_in_Japan-Osaka_Osaka_Prefecture_Kinki.html\n11. https://brezzegifts.com/filipino-cake-traditions-ordering-cakes-online-to-celebrate-cultural-events-in-the-philippines/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780942989,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 844,
+        "prompt_tokens": 8622,
+        "total_tokens": 9466,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I order a birthday cake online?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a27088bb767",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"2773d56f6a27088b680f160001f01b5e\"},\"usage\":{\"total_tokens\":8468}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a27088bb767",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"2773d56f6a27088b680f160001f01b5e\"},\"usage\":{\"total_tokens\":8468}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"2773d56f6a27088b680f160001f01b5e\"},\"usage\":{\"total_tokens\":8468}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to order a birthday cake online, depending on your location and needs:\n\n## **Nationwide/International Options**\n\n| Service | Highlights | Delivery |\n|---------|-----------|----------|\n| **Bake Me a Wish** | Gourmet birthday cakes, personalized messages, kosher & gluten-free options, loyalty program | All 50 US states; overnight shipping |\n| **Goldbelly** | Cakes from famous bakeries (Carlo's, Ovenly, etc.), filters for dietary needs (vegan, paleo, gluten-free, kosher) | 48-50 states; shipping times vary |\n| **Milk Bar** | Best-selling vanilla rainbow birthday cake, trendy NYC bakery | Nationwide US |\n| **Caroline's Cakes** | Nut-free bakery, multilayered cakes, \"half cakes\" with two flavors | 48 states |\n| **We Take the Cake** | Beautifully decorated cakes, free shipping, gluten-free options | 48 states; free shipping |\n| **Send A Cake** | Personalized cake explosion boxes with photos, music stands, wind-up butterflies | 48 states |\n\n## **Same-Day/Local Delivery Options**\n\n| Service | Best For | Coverage |\n|---------|----------|----------|\n| **Instacart** | Budget-friendly supermarket cakes (Costco, Target, Kroger) | Thousands of cities across North America |\n| **DoorDash** | Last-minute orders from local restaurants, grocery stores, bakeries | 7,000+ cities in all 50 US states |\n\n## **International/Regional Options**\n\n| Service | Region | Special Features |\n|---------|--------|----------------|\n| **IGP** | India + 100+ countries (Canada, UAE, Germany) | Same-day delivery, photo cakes, pinata cakes, 400+ Indian cities |\n| **Bakingo** | India | Same-day & 2-hour free delivery, 10+ flavors |\n| **FNP (Ferns N Petals)** | India, Malaysia, international | Midnight delivery, 2-hour delivery in 350+ Indian cities |\n| **Flower Chimp** | Philippines | Ube cakes, Red Ribbon cakes, paired with flowers |\n| **Habib Bakery** | Dubai, UAE | Same-day delivery, custom designer cakes, Arabic-inspired flavors |\n| **The Hummingbird Bakery** | London, UK | American-inspired cakes, rainbow pi\u00f1ata cakes, personalization |\n| **Rakuten** | Japan | Hundreds of birthday cake options (Japanese language site) |\n\n## **Tips for Ordering**\n\n- **For dietary restrictions:** Goldbelly and Bake Me a Wish have the best filtering options for vegan, gluten-free, kosher, and nut-free cakes.\n- **For last-minute needs:** Use Instacart or DoorDash for same-day delivery from local stores.\n- **For personalization:** Send A Cake and IGP offer photo cakes and custom messages.\n- **For international delivery:** IGP and FNP deliver to 100+ countries.\n\n---\n\nSources:\n1. https://www.thespruceeats.com/best-birthday-cake-delivery-11753483\n2. https://milkbarstore.com/products/birthday-cake\n3. https://www.igp.com/cakes\n4. https://www.bakingo.com/\n5. https://www.fnp.com/cakes-lp\n6. https://www.flowerchimp.com.ph/collections/cake\n7. https://www.fnp.my/cakes/birthday\n8. https://www.habibbakery.ae/\n9. https://www.olivemagazine.com/reviews/best-online-cake-delivery/\n10. https://www.tripadvisor.com/ShowTopic-g298566-i2803-k7739671-Ordering_a_birthday_cake_for_son_in_Japan-Osaka_Osaka_Prefecture_Kinki.html\n11. https://brezzegifts.com/filipino-cake-traditions-ordering-cakes-online-to-celebrate-cultural-events-in-the-philippines/",
+  "usage": {
+    "completion_tokens": 844,
+    "prompt_tokens": 8622,
+    "total_tokens": 9466,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

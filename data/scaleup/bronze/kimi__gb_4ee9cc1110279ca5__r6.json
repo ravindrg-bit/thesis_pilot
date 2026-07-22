@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_4ee9cc1110279ca5",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:57:18.851460+00:00",
+  "query_text": "prelicensetraining login",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256aa949ac2b00b285af90",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the login portals for PreLicenseTraining:\n\n## Main Student Login\n**https://prelicensetraining.com/login**\n\nThis is the primary login page for students. You will need to enter your login name and password. (Tip: Your login name may be your email address unless you specified otherwise during registration.)\n\n## Mentor/Recruiter Login\nThere are separate login portals for mentors, recruiters, and company accounts:\n\n- **PSI Online Mentor Login:** https://psionline.prelicensetraining.com/mentor/login\n- **Infinity Schools Mentor Login:** https://infinityschools.prelicensetraining.com/mentor/login\n\n## Password Recovery\nIf you've forgotten your password, you can use the forgot password feature at:\n- **https://psionline.prelicensetraining.com/mentor/forgotPassword**\n\n---\n\n**About PreLicenseTraining.com:** The platform provides insurance pre-licensing and continuing education with online textbooks, audio, streaming video instruction, practice exams, and a virtual testing center called StudyHall. They have helped over 150,000 individuals obtain their insurance licenses.\n\nIf you are a student trying to log in, make sure you're using the main student login at prelicensetraining.com/login rather than the mentor portals.\n\nSources:\n1. https://prelicensetraining.com/login\n2. https://psionline.prelicensetraining.com/mentor/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://psionline.prelicensetraining.com/mentor/forgotPassword",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837033,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 335,
+        "prompt_tokens": 983,
+        "total_tokens": 1318,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "prelicensetraining login"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256aa89a21",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9db2ecbe6a256aa84f50a50001ee0d62\"},\"usage\":{\"total_tokens\":833}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256aa89a21",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9db2ecbe6a256aa84f50a50001ee0d62\"},\"usage\":{\"total_tokens\":833}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9db2ecbe6a256aa84f50a50001ee0d62\"},\"usage\":{\"total_tokens\":833}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the login portals for PreLicenseTraining:\n\n## Main Student Login\n**https://prelicensetraining.com/login**\n\nThis is the primary login page for students. You will need to enter your login name and password. (Tip: Your login name may be your email address unless you specified otherwise during registration.)\n\n## Mentor/Recruiter Login\nThere are separate login portals for mentors, recruiters, and company accounts:\n\n- **PSI Online Mentor Login:** https://psionline.prelicensetraining.com/mentor/login\n- **Infinity Schools Mentor Login:** https://infinityschools.prelicensetraining.com/mentor/login\n\n## Password Recovery\nIf you've forgotten your password, you can use the forgot password feature at:\n- **https://psionline.prelicensetraining.com/mentor/forgotPassword**\n\n---\n\n**About PreLicenseTraining.com:** The platform provides insurance pre-licensing and continuing education with online textbooks, audio, streaming video instruction, practice exams, and a virtual testing center called StudyHall. They have helped over 150,000 individuals obtain their insurance licenses.\n\nIf you are a student trying to log in, make sure you're using the main student login at prelicensetraining.com/login rather than the mentor portals.\n\nSources:\n1. https://prelicensetraining.com/login\n2. https://psionline.prelicensetraining.com/mentor/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://psionline.prelicensetraining.com/mentor/forgotPassword",
+  "usage": {
+    "completion_tokens": 335,
+    "prompt_tokens": 983,
+    "total_tokens": 1318,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

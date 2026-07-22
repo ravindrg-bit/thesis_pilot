@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:06:10.393203+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccceeeea4f6912f34b646",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "You can download the latest version of Python from the **official Python website**:\n\n**https://www.python.org/downloads/**\n\nThis is the primary and most reliable source for Python downloads. The official site provides:\n\n- Installers for **Windows**, **macOS**, and **Linux**\n- Both **32-bit** and **64-bit** versions\n- Various installer formats (executable installers, embeddable zip files, web-based installers)\n- The **latest stable release** as well as **pre-release** versions for testing\n\nTo download:\n1. Visit https://www.python.org/downloads/\n2. Click on the latest Python version number displayed prominently on the page\n3. Select the appropriate installer for your operating system and architecture\n\nFor Windows users specifically, you can also go directly to:\n**https://www.python.org/getit/windows/**\n\nWhen installing on Windows, make sure to check the box **\"Add Python to PATH\"** during installation so you can use Python from the command line.\n\n---\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://www.python.org/getit/windows/\n4. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272367,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 254,
+        "prompt_tokens": 7773,
+        "total_tokens": 8027,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I download the latest version of Python?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cccee3ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"582f100a6a1ccced680f160001d73afa\"},\"usage\":{\"total_tokens\":7621}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cccee3ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"582f100a6a1ccced680f160001d73afa\"},\"usage\":{\"total_tokens\":7621}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"582f100a6a1ccced680f160001d73afa\"},\"usage\":{\"total_tokens\":7621}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "You can download the latest version of Python from the **official Python website**:\n\n**https://www.python.org/downloads/**\n\nThis is the primary and most reliable source for Python downloads. The official site provides:\n\n- Installers for **Windows**, **macOS**, and **Linux**\n- Both **32-bit** and **64-bit** versions\n- Various installer formats (executable installers, embeddable zip files, web-based installers)\n- The **latest stable release** as well as **pre-release** versions for testing\n\nTo download:\n1. Visit https://www.python.org/downloads/\n2. Click on the latest Python version number displayed prominently on the page\n3. Select the appropriate installer for your operating system and architecture\n\nFor Windows users specifically, you can also go directly to:\n**https://www.python.org/getit/windows/**\n\nWhen installing on Windows, make sure to check the box **\"Add Python to PATH\"** during installation so you can use Python from the command line.\n\n---\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://www.python.org/getit/windows/\n4. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/",
+  "usage": {
+    "completion_tokens": 254,
+    "prompt_tokens": 7773,
+    "total_tokens": 8027,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

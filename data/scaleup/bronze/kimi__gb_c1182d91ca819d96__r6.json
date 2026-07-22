@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c1182d91ca819d96",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T18:00:20.934290+00:00",
+  "query_text": "cfa ins",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27032d138b10ddec1c90b6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about **CFA Institute membership** and related fees for 2026.\n\n## CFA Institute Membership Overview\n\nCFA Institute offers different types of membership:\n\n### 1. **Membership Types**\n\n| Membership Type | Requirements | Benefits |\n|----------------|------------|----------|\n| **Regular Membership** | Bachelor's degree + 4,000 hours of relevant work experience (36+ months) + passed Level I CFA Exam | Required for CFA charter; voting rights; full access to research, learning content, member directory, volunteer opportunities |\n| **Affiliate Membership** | Passed Level I CFA Exam only | Access to research, learning content, member directory, volunteer opportunities (no voting rights) |\n\n### 2. **2026 CFA Institute Membership Fees**\n\n| Component | Cost (USD) |\n|-----------|-----------|\n| **Annual Regular/Affiliate Membership Dues** | $299/year |\n| **Professional Leave Membership** | $100/year |\n\n**Important note:** CFA Institute dues are discounted for certain countries, including members residing in India.\n\n### 3. **CFA Society India Membership Fees**\n\n| Component | Cost |\n|-----------|------|\n| **Regular & Affiliate Annual Dues** | INR 5,000 + 18% GST |\n| **Professional Leave** | INR 2,000 + 18% GST |\n\nCFA Society India now collects membership dues in local currency (INR). The membership year runs from **July 1 to June 30**.\n\n### 4. **Key Requirements for CFA Charter**\n\nTo earn and maintain the CFA charter, you must:\n- Pass all three levels of the CFA exam\n- Complete 4,000 hours of investment-related work experience over minimum 36 months\n- Obtain professional references (2 if one is an active regular member of CFA Society India; 3 if none are)\n- Apply for and maintain **Regular Membership** with CFA Institute\n- Join a local CFA Society (required for CFA Institute membership application)\n\n### 5. **2026 CFA Exam Registration Fees (for context)**\n\n| Level | Early Registration | Standard Registration |\n|-------|-------------------|----------------------|\n| Level I & II | $1,140 | $1,490 |\n| Level III | $1,240 | $1,590 |\n\n**Note:** The one-time $350 enrollment fee was abolished starting February 2026.\n\n### 6. **Total Estimated Costs**\n\n| Scenario | Estimated Total Cost |\n|----------|---------------------|\n| Minimum (early registration, no retakes, no prep materials) | ~$3,570-$3,860 |\n| Realistic (includes prep materials, possible retake) | $7,000-$9,500 |\n| Maximum (multiple retakes, premium materials) | $12,000+ |\n\n### 7. **Ongoing Costs After Earning Charter**\n\n- **CFA Institute Annual Membership:** $299/year (required to maintain charter and use CFA designation)\n- **Local Society Dues:** Varies by region (e.g., CFA Society India: INR 5,000 + GST)\n\nIf you stop paying membership dues, your membership lapses and you lose the right to use the CFA designation, though you can reactivate by paying back dues.\n\n---\n\nSources:\n1. https://300hours.com/cfa-exam-cost/\n2. https://capstonelearnings.com/cfa-vs-frm-india/\n3. https://www.zelleducation.com/blog/cfa-membership-fees/\n4. https://cfasocietyindia.org/membership/\n5. https://www.tradingcore.com.br/cfa/cfa-exam-cost-2026\n6. https://corpready.in/resources/articles/146-cfa-course-details-india.html\n7. https://300hours.com/cfa-requirements/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780941614,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 783,
+        "prompt_tokens": 8113,
+        "total_tokens": 8896,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "cfa ins"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a27032c5d50",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"382160876a27032c680f160001f01215\"},\"usage\":{\"total_tokens\":7971}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a27032c5d50",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"382160876a27032c680f160001f01215\"},\"usage\":{\"total_tokens\":7971}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"382160876a27032c680f160001f01215\"},\"usage\":{\"total_tokens\":7971}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about **CFA Institute membership** and related fees for 2026.\n\n## CFA Institute Membership Overview\n\nCFA Institute offers different types of membership:\n\n### 1. **Membership Types**\n\n| Membership Type | Requirements | Benefits |\n|----------------|------------|----------|\n| **Regular Membership** | Bachelor's degree + 4,000 hours of relevant work experience (36+ months) + passed Level I CFA Exam | Required for CFA charter; voting rights; full access to research, learning content, member directory, volunteer opportunities |\n| **Affiliate Membership** | Passed Level I CFA Exam only | Access to research, learning content, member directory, volunteer opportunities (no voting rights) |\n\n### 2. **2026 CFA Institute Membership Fees**\n\n| Component | Cost (USD) |\n|-----------|-----------|\n| **Annual Regular/Affiliate Membership Dues** | $299/year |\n| **Professional Leave Membership** | $100/year |\n\n**Important note:** CFA Institute dues are discounted for certain countries, including members residing in India.\n\n### 3. **CFA Society India Membership Fees**\n\n| Component | Cost |\n|-----------|------|\n| **Regular & Affiliate Annual Dues** | INR 5,000 + 18% GST |\n| **Professional Leave** | INR 2,000 + 18% GST |\n\nCFA Society India now collects membership dues in local currency (INR). The membership year runs from **July 1 to June 30**.\n\n### 4. **Key Requirements for CFA Charter**\n\nTo earn and maintain the CFA charter, you must:\n- Pass all three levels of the CFA exam\n- Complete 4,000 hours of investment-related work experience over minimum 36 months\n- Obtain professional references (2 if one is an active regular member of CFA Society India; 3 if none are)\n- Apply for and maintain **Regular Membership** with CFA Institute\n- Join a local CFA Society (required for CFA Institute membership application)\n\n### 5. **2026 CFA Exam Registration Fees (for context)**\n\n| Level | Early Registration | Standard Registration |\n|-------|-------------------|----------------------|\n| Level I & II | $1,140 | $1,490 |\n| Level III | $1,240 | $1,590 |\n\n**Note:** The one-time $350 enrollment fee was abolished starting February 2026.\n\n### 6. **Total Estimated Costs**\n\n| Scenario | Estimated Total Cost |\n|----------|---------------------|\n| Minimum (early registration, no retakes, no prep materials) | ~$3,570-$3,860 |\n| Realistic (includes prep materials, possible retake) | $7,000-$9,500 |\n| Maximum (multiple retakes, premium materials) | $12,000+ |\n\n### 7. **Ongoing Costs After Earning Charter**\n\n- **CFA Institute Annual Membership:** $299/year (required to maintain charter and use CFA designation)\n- **Local Society Dues:** Varies by region (e.g., CFA Society India: INR 5,000 + GST)\n\nIf you stop paying membership dues, your membership lapses and you lose the right to use the CFA designation, though you can reactivate by paying back dues.\n\n---\n\nSources:\n1. https://300hours.com/cfa-exam-cost/\n2. https://capstonelearnings.com/cfa-vs-frm-india/\n3. https://www.zelleducation.com/blog/cfa-membership-fees/\n4. https://cfasocietyindia.org/membership/\n5. https://www.tradingcore.com.br/cfa/cfa-exam-cost-2026\n6. https://corpready.in/resources/articles/146-cfa-course-details-india.html\n7. https://300hours.com/cfa-requirements/",
+  "usage": {
+    "completion_tokens": 783,
+    "prompt_tokens": 8113,
+    "total_tokens": 8896,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

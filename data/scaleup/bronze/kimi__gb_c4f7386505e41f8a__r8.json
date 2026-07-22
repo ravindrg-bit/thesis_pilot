@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c4f7386505e41f8a",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:13:27.995128+00:00",
+  "query_text": "navy p3",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256e6e7f95460f2b3f6225",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about the **Navy P-3** aircraft.\n\n## Lockheed P-3 Orion\n\nThe **P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft developed for the United States Navy by Lockheed Corporation. It was one of the most successful and longest-serving maritime patrol aircraft in history.\n\n### Key Variants\n\n| Variant | Description |\n|---------|-------------|\n| **P-3A** | Initial production version (1962) |\n| **P-3B** | Improved variant with upgraded engines and avionics |\n| **P-3C** | Major upgrade with digital avionics, improved sensors, and weapons systems |\n| **P-3C AIP** | Anti-Surface Warfare Improvement Program upgrade |\n| **P-3C AIP+** | Further enhanced version with additional capabilities |\n| **EP-3E** | Signals intelligence (SIGINT) variant |\n| **WP-3D** | Weather reconnaissance variant for NOAA |\n| **CP-140 Aurora** | Canadian variant |\n\n### Key Specifications\n\n| Feature | Specification |\n|---------|-------------|\n| Crew | 11-13 (pilot, copilot, flight engineer, navigator, tactical coordinator, sensor operators, etc.) |\n| Length | 116 ft 10 in (35.6 m) |\n| Wingspan | 99 ft 8 in (30.4 m) |\n| Height | 33 ft 8.5 in (10.3 m) |\n| Max Takeoff Weight | ~142,000 lb (64,400 kg) |\n| Powerplant | 4 \u00d7 Allison T56-A-14 turboprops |\n| Max Speed | ~411 knots (473 mph, 761 km/h) |\n| Range | ~2,380 nmi (4,400 km) |\n| Endurance | ~16+ hours (loiter time) |\n\n### Primary Missions\n\n- **Anti-Submarine Warfare (ASW)**\n- **Anti-Surface Warfare (ASuW)**\n- **Intelligence, Surveillance, and Reconnaissance (ISR)**\n- **Maritime Patrol**\n- **Search and Rescue (SAR)**\n\n### Operational History\n\n- **Entered service**: 1962\n- **Primary operator**: U.S. Navy patrol squadrons (VP squadrons)\n- The P-3C remained the primary land-based maritime patrol aircraft for the U.S. Navy until being gradually replaced by the **P-8 Poseidon** (based on the Boeing 737)\n- Many P-3s have been retired to **AMARG** (Aerospace Maintenance and Regeneration Group) at Davis-Monthan Air Force Base, Arizona\n- Several aircraft have been transferred to foreign military sales or other government agencies (NASA, NOAA)\n\n### Notable Features\n\n- The P-3 is based on the **Lockheed L-188 Electra** commercial airliner\n- Features a distinctive ** Magnetic Anomaly Detector (MAD)** boom extending from the tail\n- Can carry a variety of weapons including torpedoes, depth charges, Harpoon anti-ship missiles, and mines in an internal bomb bay and on wing pylons\n- The aircraft has been operated by numerous countries including Australia, Japan, Norway, Spain, Taiwan, and others\n\nThe P-3 Orion has had an exceptionally long service life, with some aircraft serving for over 50 years before retirement.\n\nSources:\n1. https://www.p3orion.nl/ALHR.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837999,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 741,
+        "prompt_tokens": 7713,
+        "total_tokens": 8454,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "navy p3"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256e6e7898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"8a022f866a256e6e4f50a50001ee12fa\"},\"usage\":{\"total_tokens\":7564}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256e6e7898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"8a022f866a256e6e4f50a50001ee12fa\"},\"usage\":{\"total_tokens\":7564}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"8a022f866a256e6e4f50a50001ee12fa\"},\"usage\":{\"total_tokens\":7564}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about the **Navy P-3** aircraft.\n\n## Lockheed P-3 Orion\n\nThe **P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft developed for the United States Navy by Lockheed Corporation. It was one of the most successful and longest-serving maritime patrol aircraft in history.\n\n### Key Variants\n\n| Variant | Description |\n|---------|-------------|\n| **P-3A** | Initial production version (1962) |\n| **P-3B** | Improved variant with upgraded engines and avionics |\n| **P-3C** | Major upgrade with digital avionics, improved sensors, and weapons systems |\n| **P-3C AIP** | Anti-Surface Warfare Improvement Program upgrade |\n| **P-3C AIP+** | Further enhanced version with additional capabilities |\n| **EP-3E** | Signals intelligence (SIGINT) variant |\n| **WP-3D** | Weather reconnaissance variant for NOAA |\n| **CP-140 Aurora** | Canadian variant |\n\n### Key Specifications\n\n| Feature | Specification |\n|---------|-------------|\n| Crew | 11-13 (pilot, copilot, flight engineer, navigator, tactical coordinator, sensor operators, etc.) |\n| Length | 116 ft 10 in (35.6 m) |\n| Wingspan | 99 ft 8 in (30.4 m) |\n| Height | 33 ft 8.5 in (10.3 m) |\n| Max Takeoff Weight | ~142,000 lb (64,400 kg) |\n| Powerplant | 4 \u00d7 Allison T56-A-14 turboprops |\n| Max Speed | ~411 knots (473 mph, 761 km/h) |\n| Range | ~2,380 nmi (4,400 km) |\n| Endurance | ~16+ hours (loiter time) |\n\n### Primary Missions\n\n- **Anti-Submarine Warfare (ASW)**\n- **Anti-Surface Warfare (ASuW)**\n- **Intelligence, Surveillance, and Reconnaissance (ISR)**\n- **Maritime Patrol**\n- **Search and Rescue (SAR)**\n\n### Operational History\n\n- **Entered service**: 1962\n- **Primary operator**: U.S. Navy patrol squadrons (VP squadrons)\n- The P-3C remained the primary land-based maritime patrol aircraft for the U.S. Navy until being gradually replaced by the **P-8 Poseidon** (based on the Boeing 737)\n- Many P-3s have been retired to **AMARG** (Aerospace Maintenance and Regeneration Group) at Davis-Monthan Air Force Base, Arizona\n- Several aircraft have been transferred to foreign military sales or other government agencies (NASA, NOAA)\n\n### Notable Features\n\n- The P-3 is based on the **Lockheed L-188 Electra** commercial airliner\n- Features a distinctive ** Magnetic Anomaly Detector (MAD)** boom extending from the tail\n- Can carry a variety of weapons including torpedoes, depth charges, Harpoon anti-ship missiles, and mines in an internal bomb bay and on wing pylons\n- The aircraft has been operated by numerous countries including Australia, Japan, Norway, Spain, Taiwan, and others\n\nThe P-3 Orion has had an exceptionally long service life, with some aircraft serving for over 50 years before retirement.\n\nSources:\n1. https://www.p3orion.nl/ALHR.pdf",
+  "usage": {
+    "completion_tokens": 741,
+    "prompt_tokens": 7713,
+    "total_tokens": 8454,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

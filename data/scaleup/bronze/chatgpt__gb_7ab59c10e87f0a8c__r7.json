@@ -1,0 +1,145 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "chatgpt",
+  "run_index": 7,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T02:44:37.137292+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_04aa5bc2afdb44eb006a24db11353c81a08f974e189e7530af",
+    "created_at": 1780800273.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "ws_04aa5bc2afdb44eb006a24db12169481a08849bdddc2badd55",
+        "action": {
+          "query": "site:python.org downloads latest Python version",
+          "type": "search",
+          "queries": [
+            "site:python.org downloads latest Python version"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_04aa5bc2afdb44eb006a24db136b8481a09803d35b89d17d3b",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 310,
+                "start_index": 231,
+                "title": "Download Python | Python.org",
+                "type": "url_citation",
+                "url": "https://www.python.org/downloads/?lang=python&utm_source=openai"
+              }
+            ],
+            "text": "You can download the latest version of Python from the official Python website:\n\n**Download Python:** https://www.python.org/downloads/\n\nAs of the latest Python.org listing, the latest stable Python 3 release is **Python 3.14.5**. ([python.org](https://www.python.org/downloads/?lang=python&utm_source=openai))\n\nChoose the installer for your operating system \u2014 Windows, macOS, or source/other platforms.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780800276.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 8596,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 121,
+      "output_tokens_details": {
+        "reasoning_tokens": 31
+      },
+      "total_tokens": 8717
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "You can download the latest version of Python from the official Python website:\n\n**Download Python:** https://www.python.org/downloads/\n\nAs of the latest Python.org listing, the latest stable Python 3 release is **Python 3.14.5**. ([python.org](https://www.python.org/downloads/?lang=python&utm_source=openai))\n\nChoose the installer for your operating system \u2014 Windows, macOS, or source/other platforms.",
+  "usage": {
+    "input_tokens": 8596,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 121,
+    "output_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "total_tokens": 8717
+  },
+  "run_profile": "scaleup"
+}

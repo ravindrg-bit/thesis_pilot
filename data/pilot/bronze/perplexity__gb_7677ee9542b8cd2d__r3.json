@@ -1,0 +1,148 @@
+{
+  "query_id": "gb_7677ee9542b8cd2d",
+  "engine": "perplexity",
+  "run_index": 3,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-05-31T23:32:02.953095+00:00",
+  "query_text": "Given a <span> in HTML I want to change its color on mouse over.",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given a <span> in HTML I want to change its color on mouse over."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "d5a8022f-672b-4975-8e9e-ca5eed70c6c7",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Use CSS `:hover` on the `span` itself. The simplest way is to change the `color` in a hover rule:[5][8]\n\n```html\n<span class=\"my-span\">Hover me</span>\n```\n\n```css\n.my-span {\n  color: black;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf you want the whole `span` to respond cleanly, make sure it is not being overridden by inline styles or higher-specificity rules; inline styling can override stylesheet hover rules unless you remove it or increase specificity.[1][5]\n\nIf you also want a background change on hover, you can do this too:[2][5]\n\n```css\n.my-span:hover {\n  color: red;\n  background-color: yellow;\n}\n```",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780270322,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 159,
+      "prompt_tokens": 18,
+      "total_tokens": 177,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 2e-05,
+        "output_tokens_cost": 0.00016,
+        "request_cost": 0.005,
+        "total_cost": 0.00518
+      }
+    },
+    "citations": [
+      "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+      "https://www.shecodes.io/athena/4822-how-to-add-hovering-effects-in-html",
+      "https://elementor.com/blog/span/",
+      "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+      "https://css-tricks.com/change-color-of-svg-on-hover/",
+      "https://www.youtube.com/watch?v=htGfnF1zN4g",
+      "http://www.w3schools.com/Cssref/sel_hover.php"
+    ],
+    "search_results": [
+      {
+        "title": "Add a hover effect to a span - HTML & CSS - SitePoint",
+        "url": "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+        "date": "2019-06-05",
+        "last_updated": "2026-03-28",
+        "snippet": "I have a div with 2 spans to make the line, when I mouseover the div at the start, the color changes, but how do I make it so the whole div ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Add Hovering Effects in HTML - SheCodes",
+        "url": "https://www.shecodes.io/athena/4822-how-to-add-hovering-effects-in-html",
+        "last_updated": "2026-05-28",
+        "snippet": "Learn how to create a hover effect in HTML using the `:hover` pseudo-class selector and CSS. When the mouse pointer moves over the <div>, the background color ...",
+        "source": "web"
+      },
+      {
+        "title": "HTML Span Tag: Usage, Attributes, CSS, Tips, Tricks & Examples",
+        "url": "https://elementor.com/blog/span/",
+        "date": "2025-12-31",
+        "last_updated": "2026-05-31",
+        "snippet": "Hover Effects: Change text styles, colors, or backgrounds when a user hovers over an element: \u201cThis text <span style=\u201dtext-decoration: underline ...",
+        "source": "web"
+      },
+      {
+        "title": "CSS - hover effect not working with <span></span> | Code Forum",
+        "url": "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+        "date": "2021-01-04",
+        "last_updated": "2026-05-18",
+        "snippet": "I want to make hover effect on my h1 headlines, but it does not work with the <span></span>. It works fine if the header is just wrapped in <h1></h1>.",
+        "source": "web"
+      },
+      {
+        "title": "hover CSS pseudo-class - MDN Web Docs",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+        "date": "2026-04-17",
+        "last_updated": "2026-05-31",
+        "snippet": "To style links appropriately, put the :hover rule after the :link and :visited rules but before the :active one, as defined by the LVHA-order: : ...",
+        "source": "web"
+      },
+      {
+        "title": "Change Color of SVG on Hover - CSS-Tricks",
+        "url": "https://css-tricks.com/change-color-of-svg-on-hover/",
+        "date": "2019-05-13",
+        "snippet": "The way that I like to do it: 1. SVG: Make the SVG black #000000 where you want to control the color on hover. 2. CSS: fill: currentColor; on ...",
+        "source": "web"
+      },
+      {
+        "title": "You Need This Hover Effect On Your Site ASAP (CSS / JS) - YouTube",
+        "url": "https://www.youtube.com/watch?v=htGfnF1zN4g",
+        "date": "2022-05-12",
+        "last_updated": "2026-05-19",
+        "snippet": "tutorial #codepen Watch as I show to how to recreate a sweet hover effect (from linear.app) that can span across multiple cards at the same ...",
+        "source": "web"
+      },
+      {
+        "title": "CSS :hover Pseudo-class - W3Schools",
+        "url": "http://www.w3schools.com/Cssref/sel_hover.php",
+        "snippet": "The CSS :hover pseudo-class is used to select elements when you mouse over them. Tip: The :hover pseudo-class can be used on all elements, not only on links.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Use CSS `:hover` on the `span` itself. The simplest way is to change the `color` in a hover rule:[5][8]\n\n```html\n<span class=\"my-span\">Hover me</span>\n```\n\n```css\n.my-span {\n  color: black;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf you want the whole `span` to respond cleanly, make sure it is not being overridden by inline styles or higher-specificity rules; inline styling can override stylesheet hover rules unless you remove it or increase specificity.[1][5]\n\nIf you also want a background change on hover, you can do this too:[2][5]\n\n```css\n.my-span:hover {\n  color: red;\n  background-color: yellow;\n}\n```",
+  "usage": {
+    "completion_tokens": 159,
+    "prompt_tokens": 18,
+    "total_tokens": 177,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 2e-05,
+      "output_tokens_cost": 0.00016,
+      "request_cost": 0.005,
+      "total_cost": 0.00518
+    }
+  },
+  "run_profile": "pilot"
+}

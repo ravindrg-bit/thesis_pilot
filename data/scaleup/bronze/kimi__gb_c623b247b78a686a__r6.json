@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c623b247b78a686a",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:53:32.698712+00:00",
+  "query_text": "was there cocaine in coca-cola",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2577d5a9a189915c29dae1",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yes, Coca-Cola originally contained cocaine, though the amount was relatively small and it was removed long ago.\n\n## The History\n\nCoca-Cola was invented in 1886 by **Dr. John Stith Pemberton**, an Atlanta pharmacist. He originally created a drink called \"Pemberton's French Wine Coca,\" which was inspired by a European \"coca wine\" called Vin Mariani. When Atlanta passed temperance laws banning alcohol in 1886, Pemberton reformulated the drink as a non-alcoholic soda fountain beverage, keeping the coca leaf extract and adding kola nut (for caffeine), sugar, and caramel coloring.\n\nAt the time, **cocaine was legal and commonly used in patent medicines**. The earliest batches of Coca-Cola reportedly contained about **9mg of cocaine per glass**. The \"Coca\" in Coca-Cola does refer to the coca leaf, while \"Cola\" comes from the kola nut.\n\n## When It Was Removed\n\nThe cocaine content was gradually reduced and eventually eliminated:\n\n- **1903**: The Coca-Cola Company stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves**, which contained only trace amounts of cocaine.\n- **By 1929**: The formula was **completely cocaine-free**.\n\nThe removal was driven by shifting public attitudes toward cocaine, growing regulations, and racial prejudices of the era\u2014cocaine became stigmatized when its recreational use spread in Black neighborhoods, though it had been acceptable among affluent white consumers.\n\n## Today\n\nModern Coca-Cola still uses a **coca leaf extract**, but it is processed by the **Stepan Company** in New Jersey\u2014the only DEA-authorized facility in the U.S. to import coca leaves. They remove all cocaine from the extract before it goes to Coca-Cola. The extracted cocaine is sold to Mallinckrodt, a pharmaceutical company, for approved medical uses.\n\nCoca-Cola officially denies that cocaine was ever an \"added ingredient,\" though most independent historical sources confirm there were at least trace amounts in the original formula.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780840406,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 552,
+        "prompt_tokens": 6459,
+        "total_tokens": 7011,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "was there cocaine in coca-cola"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2577d4b17d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bb8dfe796a2577d4680f160001ec8321\"},\"usage\":{\"total_tokens\":6309}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2577d4b17d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bb8dfe796a2577d4680f160001ec8321\"},\"usage\":{\"total_tokens\":6309}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bb8dfe796a2577d4680f160001ec8321\"},\"usage\":{\"total_tokens\":6309}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yes, Coca-Cola originally contained cocaine, though the amount was relatively small and it was removed long ago.\n\n## The History\n\nCoca-Cola was invented in 1886 by **Dr. John Stith Pemberton**, an Atlanta pharmacist. He originally created a drink called \"Pemberton's French Wine Coca,\" which was inspired by a European \"coca wine\" called Vin Mariani. When Atlanta passed temperance laws banning alcohol in 1886, Pemberton reformulated the drink as a non-alcoholic soda fountain beverage, keeping the coca leaf extract and adding kola nut (for caffeine), sugar, and caramel coloring.\n\nAt the time, **cocaine was legal and commonly used in patent medicines**. The earliest batches of Coca-Cola reportedly contained about **9mg of cocaine per glass**. The \"Coca\" in Coca-Cola does refer to the coca leaf, while \"Cola\" comes from the kola nut.\n\n## When It Was Removed\n\nThe cocaine content was gradually reduced and eventually eliminated:\n\n- **1903**: The Coca-Cola Company stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves**, which contained only trace amounts of cocaine.\n- **By 1929**: The formula was **completely cocaine-free**.\n\nThe removal was driven by shifting public attitudes toward cocaine, growing regulations, and racial prejudices of the era\u2014cocaine became stigmatized when its recreational use spread in Black neighborhoods, though it had been acceptable among affluent white consumers.\n\n## Today\n\nModern Coca-Cola still uses a **coca leaf extract**, but it is processed by the **Stepan Company** in New Jersey\u2014the only DEA-authorized facility in the U.S. to import coca leaves. They remove all cocaine from the extract before it goes to Coca-Cola. The extracted cocaine is sold to Mallinckrodt, a pharmaceutical company, for approved medical uses.\n\nCoca-Cola officially denies that cocaine was ever an \"added ingredient,\" though most independent historical sources confirm there were at least trace amounts in the original formula.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/",
+  "usage": {
+    "completion_tokens": 552,
+    "prompt_tokens": 6459,
+    "total_tokens": 7011,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

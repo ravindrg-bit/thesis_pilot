@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "gemini",
+  "run_index": 8,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T04:41:58.082068+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 04:41:58 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=15732",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Alright, listen up, wise guy. Sit down, pour yourself some anisette, and let me break down this \"Dependency Injection\" (DI) thing for ya. \n\nIn our line of work\u2014and in C#\u2014you don't want things tightly coupled. Tight coupling is like being tied to a stool with cement shoes at the bottom of the East River. It makes you stiff, hard to change, and easy to put out of commission.\n\nLet me explain how we do things the *smart* way.\n\n---\n\n### The Problem: The Amateur Way (Tightly Coupled)\nImagine you got a guy named `Hitman`. Now, this hitman needs to do a job. In the old days, a dumb hitman would go out, buy the steel, smelt the metal, and build his own Tommy gun right inside his apartment before going on a hit.\n\nIn C#, that looks like this:\n\n```csharp\n// THIS IS A LIABILITY. DON'T DO THIS.\npublic class Hitman \n{\n    private TommyGun _gun;\n\n    public Hitman() \n    {\n        // You're building your own piece? What if the cops raid the gun smith? \n        // Now your Hitman class is broken!\n        _gun = new TommyGun(); \n    }\n\n    public void Work(string target) \n    {\n        _gun.Fire(target);\n    }\n}\n```\n\nIf the feds ban `TommyGun`, or if you suddenly need a quiet `SilencedPistol` instead, you gotta rewrite the whole damn `Hitman` class. That\u2019s bad for business. It\u2019s hard to test, and it\u2019s hard to swap parts. \n\n---\n\n### The Solution: Dependency Injection (The Professional Way)\nInstead of the hitman making his own weapon, we use an **Interface**\u2014that's our contract. And we let the **Consigliere** (the DI Container) hand the weapon to the hitman when he gets hired. The hitman doesn't care how the gun was made; he just knows how to pull the trigger.\n\nFirst, we define the contract:\n\n```csharp\npublic interface IWeapon \n{\n    void Whack(string target);\n}\n```\n\nNow we got different tools for different jobs:\n\n```csharp\npublic class TommyGun : IWeapon \n{\n    public void Whack(string target) \n    {\n        Console.WriteLine($\"Ratta-tatt-tatt! {target} is sleeping with the fishes.\");\n    }\n}\n\npublic class IcePick : IWeapon \n{\n    public void Whack(string target) \n    {\n        Console.WriteLine($\"Quiet job on {target}. No mess.\");\n    }\n}\n```\n\nNow, look at our professional `Hitman`. He doesn't \"new up\" nothing. He just demands an `IWeapon` in his constructor. **This is Constructor Injection.**\n\n```csharp\npublic class Hitman \n{\n    private readonly IWeapon _weapon;\n\n    // You hand him the tool at the door. He doesn't ask questions.\n    public Hitman(IWeapon weapon) \n    {\n        _weapon = weapon;\n    }\n\n    public void Work(string target) \n    {\n        _weapon.Whack(target);\n    }\n}\n```\n\n---\n\n### The Consigliere (The DI Container)\nSo, who actually hands the hitman his weapon? That\u2019s the family Consigliere\u2014in ASP.NET Core, we call him the `IServiceCollection`. \n\nWhen the family starts up its operations, you tell the Consigliere how to hand out the goods:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Hey Consigliere, whenever a guy asks for an IWeapon, give him a TommyGun.\nbuilder.Services.AddTransient<IWeapon, TommyGun>();\n\n// And when we need a Hitman, the Consigliere automatically injects that TommyGun into him.\nbuilder.Services.AddTransient<Hitman>();\n```\n\n---\n\n### The Three Rules of \"Lifetime\"\nThe Consigliere has three ways of handing out favors. You gotta know the difference, or you'll end up in a ditch.\n\n1. **Transient (`AddTransient`)** \u2014 *The Burner Phone.*\n   Every single time you ask for it, you get a brand-new one. You use it once, you throw it in the river. Next time you ask, you get a fresh one. Good for quick, cheap operations.\n\n2. **Scoped (`AddScoped`)** \u2014 *The Getaway Car.*\n   You get one car per heist (an HTTP request). Everyone in the crew on *that specific job* shares the same car. But once the heist is done, the car gets crushed at the scrapyard. Next heist, you get a new car.\n\n3. **Singleton (`AddSingleton`)** \u2014 *The Don.*\n   There is only one Don. He\u2019s been there since day one, and he stays until the whole operation shuts down. Everybody, everywhere, talks to the exact same guy. If you mess with his state, you mess with it for the whole family.\n\n---\n\n### Summary\n* **No `new` keywords** inside your business logic classes. That\u2019s amateur hour.\n* **Program to interfaces (`IWeapon`)**, not concrete classes (`TommyGun`).\n* Let the **DI Container** do the heavy lifting of putting things together.\n\nCapisce? Now go refactor your code before I have to send Tony to \"refactor\" your kneecaps.",
+              "thought": null,
+              "thought_signature": "EosuCoguAQw51sfMBmGFLUIFLVm6ZsJiSm8mlaLPSaWkpb0wn7L0mDwqdKIoi9hXnm5lFbd81iBYcJlDak-KI9GJXXwM5urn5j6Wu9MYdClldbQk4bNqL243LFc0v4121G20YzJ56U3ILJc5_w6xBc_WsNPYNWjJPQ_DWekepJHxiIk52s7cZdClEjKYP3EA4kgffjv-UOvMQMTw8bOoiHAq3gBeAy0PloM9cYCCQft5cEpclGAkmKG8pyVl8O4Inu3zcT1E2N1qyGiWpxFwMVkW_n6lstaCJ-WcM2ys3p2gczPb00kUi-iskATLg73t4XBsGCsLN21D9zqE3kvL48hk2Z3U0vFJgDKuJTQbQAjorxfkmN5xgeU3bTIPhoP_1YcQrw8t1exASQ9kW2tkIrVkDBDT7WB3ns2yuUq4P105IOv3cmWUW7BxumWp9mYiEFO2NVdciNgImFjUE_Eru5SOU9qux0vV9HWSxqKsypP1IJ1ZpNvTBhqNmi74uQqkjWDVeVTGXht_DClsSYlhLofl6tb899ksh0vsJo_6MC6hyZifxiGElu6HgArjdxpx3LaY8Ucm1y3zlBHSNBkjfRt8-X0KasdPM0D6MN3MIKfBk_Bmo2UKhcurpv0f9xLD2xBLLx63lJdg1DyeT79LxkAHjCD1r8PT-vVsKAHafbVQMKTMNNBYey5vDUY11fsuGDWf7atBtZJMVe8vdRuL2LIQetkbtJy3Rt_vt5iRuLpW8XfN_O4UtDYew4c3uordhHhqhAxHaLQprE8PSfVSGtCGf4ad4MhEqesdDSi9vQdKFkaPsNEKBfovHUGQNXohGvTah-EuQ0OT5rONEo1dcjzgBnlRU0kWfPvADiotzrT8ShwuasiDuBfFjXFbOCX_Dn0j065zayWbnnhKUIFUq0xmrUTh9rBNzRQkpIGg4Tz90Xc0an5LYRBGxuDZrFl3jZ211LBKxzoCNfX2GVXfAmI2c_C9Wcw8LTm5rJnwIQldhqx0qDy5z0eBAb5fRrZiJaH3HH0TDCW_mWeSV7MTFphvOreMqPPp_5aG16xZ0AjmYLy4Kp23r82E9Oc7Z4XlsxQ4yTidgTqPC3g1FzQauFs4w_loTd_J1ObLj_ivVOBUsdznx8TnC9IRpCH1PGS0-eqw2DXp454e5OO-BU-iwRzkuiNp1YqUJaxLemU7onopZi4aK9ySmc_ihrP224eqZEBEMZnCpq8ekS03G9x5O8b1zAy1M7BVXhEZc6X26_6PjT5oAeBNdSPISz7Z0QGQZXye6cSng2_d31RdX_8D6UuJxDfPyhwYS2kMwCFUWupkogqKjuu603imqL8ZAJpwPr0G2rZwTeQQiS1rwzFWQ3A7Yh6lwiqa-5BSqMMWlw9YYsMsXIBgzQVkdB2dX0SjL02216NOhNUC9GeuzKSv-XFRI5M_YsDrDtd5uQLA1PbmOwsePA-faFQDdkUl9mtuqgI94dUPRaYxXWojhNMz1tKIIjVWTtcbGx2_V517PcMEMJfz2M7I-taDImaNTp5-DrseAXJ4KufqXySbhAzZkttiPWdWqBGb0-fqCDx63S_PSwktNlGtMDitBt-0FWTCztbgYOUB9589xiZsWgCwNs1z99U0-M5SLIDSKx5IRC5oVULrobK_phyyOOWJ2yPp5xn_4VWvXV2MbGCjT6QA9xLLqJFDScwrv_uQ9qKzBM4DaaVNNKBX9bdalXkY5kDEMK0HdkrFqomYN5USYO8fp-bXBcq7QCKfKbqJqcgsYQl-9fWuptXdQI_wen2emz5izKTk-ansrvLe5pYOK7HYQTLivi59oTK6BvNJ4aGFmT5C9upj4h0-0GUPhHPgYRBtjjUseDKmqqTseQOi9WMEz7WNeVsjYxhkZfDSRl7punNzSjbPa7M6eiOz4uRE-492G2Q904_wndNXwByhNGQB7ZpkEv4sxI9rCN7lXNj6HwjNv_7Q1qKNl6A4X2AOi7joLRQkSYeS-HU9B9yAajYUq7UpBFUXQz5nj71ExoDGj_EOhIgUrlQsHROkUL1d5xP77W4J8xQiuP4o-JiaX-5dh1fl3Z7J8OGJUcel_rpfuccpGrL0-2U7HmPV-QJzxaNI3IjEaNXzo3CNaCMvCxibUdoIydZYq_Tg5pkrNBvJ-SIpMrWP4MG8LUQx2fS0v5ZEhMTJKP7h8RWZsJkPjtoQoetWhVOU3bp7GCt-c51-hRM-ZbFDOpwTiP3AcqSqjaKunGbE_YO1eE2V14lW-JVjQe86whx9R9lvz4OaaPL7kaBcG7hkmCn_LqKjLQIcx2SeDTuy6sclxOzmKhe627dIEesfFi6tZMIEH8HNalCLfOomqfst9cWI2jX0sVsG_PyPQBA71RXrTZFQ1IRfsuUBOqe3T73CVfJvr17zVKCFIazT-KynQSKjGvaWGNKzwza0dQxxx3qpI43T4M3vlwRvuLEvK5pVPnDWukQsg5UFuJDUag4P71dtEaNcIIcD0mK7RpfG-nsKtW3HTa1_n6mGRJp6GZpecRKU8UbzttmVbGGYzH57dqP2TfFSSUmmMidWeNiUqC-FN15aNuKuzYvdj00jxfpvj4mxvTbh9aFQiYbW5y7GReHAf_W39JE_U57HAGlBMuGHeSV6JLJeiN6u4bTxrRNTlttnWKC6QwiKa1nIhiT-UGPXPU_K-vbmlKoXmy_b4v6voKsGRlnkF_PTfP-cW3vCR9FP7QlJXqayY0EdEMYV7BCfPPz2TO6o-jlGQYfq8XCbY-PZC2cng93sgyAqSo4joiBVxxi_p9i_SS1ejeqDd_aa4qe06RHSyYb_WhCYQAovYkCzEokSx0cGR6-TyxUJeSdqRuLOTwtMIFm04tYwnPhw9n7GOa22EwcLdWyvP6m7OO_y6rlWvHS32EyEYJuk2eKobuATWKo2ytaelW1IFT5MAlUpExXjzXfNOzlOPk_Z4x4fmszNLEvPZOaH0ArNjU6ffYHhiBYIVP-0uoEQsTrqIJd-tWbc92atJn9tVS7HnoqGWKOddarnR6w1kMAzWMlmn9g4yjb1ze9BD3tUH9E_FF342JjDvWbKDLHeH4xep8Inj07vpvfepHSwnPewGbJfExkdNn5OwDSXylM7hyxambvS0AbMUsTdi_kalTESWmBABK5bH9P_oY7BLatuT1XY6xbpDFhMbFjy0vit0tELoHdrk1vfhfH7zPqdjobXcB125NPRvD1G3SCZEUC2Oso-9TWpu55nP9ghIdeLY9jujso_KYMGVx6MgnrOKtd-pIlKhJjpeB_ujOPWLxouzW-sQGMaiu0Nmv_g8HlO9NRcsbNaWfZOscyAKliiDqSprKB5OTSNfFS_l492bM4fsBw4lJPcgqb4FV_DMFCycVcuuXXyORPXLap1jhYRNSL6CXkp2n_j_qls27kw76BIzs8xNn-x5ZRXdtl3fcnhjpEdPJTgXGuOuG5DN3w9tEnv2b_-n_fRw8gPLBiafY6HD6W5ekabLzPCOY79RmrMVgFM8mVj9cfipmtMf-1n6f3EvdrqzMBbBdgq-n9ztxcth3YEBUydW8YsakRW9yQDEDkNYfyIK4Enr2ADNYLFmrJU34_IxE7AYL1dlYtEpqYT5JjQJNZdJ2LGzLyv8umHtTB0N2LxO4jIxFD1AoGJmka7oEKKMbi--hH15pXrHP_4ii3Yp4BpNTswOMCuGokw4Fvba3zQmOOZ2s_V8JTExlfa6k9eaRmaI45hSe3FIyYJgh0UD40KFBRkX9qctY4cBLRfxuCSR5yi2QAcjT-NaaVgvAuuPEndRS7duYRN3RtUpULEqVgx5gt5mwlzkQK6J42JJhW99CyM9tdoQtt1ZdwmLIxh8KJBBbqR_dTku6rN9EuncEO7wnTTVPxorlz308dGTH4pMemQRnxFEpk14nMkiZp07yUJc3AfX9_z83-UWLyitL3TSQezQJj1YFSRSzm_yqmEYilvpZCpBVhLamHVX-0UdKiIbJpB1yeGX2upsoyO9hJPvwQkoGq6lEtFfyWF0_6cN74_r5ygN6PVm7pXD9Z5vvPasa4sX-QAoONilAuJTGUNNB1cV1A9M0kY00JoYDAy0gnUfKnX15266slmnPrM7grSREmB_my4VcYHL_8-KWak8br4FDNACrWTZVZ_V0XP45X_F1KhwcBRgN9Gp9BesfFhsH6_lH91zjDdJBNdRimSCHKCOLApunAHLBxjnPK3vM3-GY_ih0dZKz9ULj2bad9EpBhMyg9hVWLwLOx_PScmJpggkSEKTpUgWzdifVWKlH0KZZBCq316iTilTrcSadHxrUM2z0rqxOz_1qZVRRmnJgR8YmpN5a4zQHmUCLbuwOQKSoeHhu5zExseKsbco3WYH5nqBh009sjgIkj5dIfay-LGOGjFE8C9-kuf4HXzlUadxxsRu2MNDDXGfUqxUoxFD3C6pe0Ia90LzZqgmY-kSLCNPJiO3pfxYstDdXVu63gmi9Rj_XVSPIqkTZAyvdceL4V7bru2abdN1y50tE6hn-RHRjIRhlvTS1PjWaaVFqy8sZ5jAtObX2eIIgl0PZF6ABzLyWSzOC7biiyMRF9L9YTf01OU9lvop-z9fMLtyxqt3VnS9o1UZMXMEg2OJEdFzYnr7a5rR2DWqXeBG4-iFHEOe1624UskHUodVfPj1Jc3kmZ_pGAm9vtOHavcCg0vGXC-FLN-X0t3TgqFRqnAWqoDzbF9d_eV5tl7TsbYJ54U9AGsTYPR0sYzIzAPFQBRULGYyfO8IFZF_pe7n2WnyOMZQoJX3yP4eBWFb0hAaZYbIIJf9iagDvt1BVskvtANsSGnyT2volo02AArijo0UVcWnl0XT-WbgWV4aRKOpXXuIqA1J1_uoDqYU-HQwJsVUc8oV6j1-1C5r8pV_vnx8PKOt-wIG1z9bLP_C8G1tV25I5RCiBb94ugcx3876UDqiQR-uQ31Bdc9LaY-P8KJf1Z946KN9PBeWZYTKAlyoapnbw36JINNO70KS4nRtaRgn9nQNmsqAl8clw_CydC2IP2-x31vTQwfmLmqGPvcJgrU9STMQw50ZAci0xhmaKNDGYCjnvM-TeK-rVdx9A3Z4sKj8ninMvYWYpSB6FGOWpxyGeVzFHCoroWu6DlFZ6tD-JvlWJPCVXw7vLyRmpBdhbrmEY0-18dWMFuhHprCBeIV6pxdt2a-V5t4_1Z7YldTkFBci9OzCGDJQWMcuaj5EELYB9aQAsjX-6hDOxbZmB2QkM4F4gvr-1-FrJoEul7M0p5A2OxHxx9F_dskV1vR_hAr14e5BTixgWjxffLC_X4ytakFvHkKQP6TxhqVK4pSR93-Vpk0CrWOIlC0x_wA3CnOP5WGsQ5JG2mPi_Mxe_C5cToS2tK63mbhdmoX41K-XIj4G7vCK6N7M8yDCJZpHX-uSj4RE_NBPU6NtIC_AVLZ-E8o1XNOdFrd8qSNxZTe2OnbpUGlmFtr_qa8HOvpGExYtIzh_9cAo8YPieRgX5_eseUHbiwAE6U424Ij5_cVi63nZxV4UnEdP7cJrYvxBrHCFwvNcqvFM9g5cTUDWjbwMzPK1ErNSw2w97y8HQVu43CU5Zqc21lW3c-H4alH3StAnTXwir1zTvLFYFHknqzScOL0wmuB2fWmLDSEeP722DaQpij1UOjTonNbACCPhP0wC-Me-ghYNpvavCttz6OTAYiq_KqGDHRAmsmgbrnEpw6V0zPZ1eFCcBH_9h508cKpVDtNVhvOihYbYrYWPMyqr6EnNn0Qy5clC5Yj25A52-GVpqgmzmHvcJZlriifQrtO-XYLo1TDUKf03VDrPHjUOyrGKohFB3Xyu3YDJdlJO4RcmnREG8ZZB5PbKhIECzWcoaVphDiTEtISHbd1NMt0ka191dQqomVRZECDqmXbdDlqaAELGxX9nmlZ70ntf61WtApusz8CVkrtbryTPd2ZXxe7qj1zrV7zwaMee1-0e24AwfbMP3L_0d4rdqKM6Ne8LmStWBGC5jPEhEejobR4WmIfGbRDgudF6SUf4iGXyZp54jOSWWo3gxaywuME6Tai71I6Cj2400Vkq9KgSZ4q_BZuj2Gr6tFKn_jUF7SFgkYB6cEfJlAAyZkMfwnRTJHNrLSmEI1TjnaI3ZaZdKPV13LGxXi9n1cnlUvC_dzya5DRayywna3yzzvxVi4fon-xVIVrAEnBeeW2v4pRkXMeIxFA1JxnrZisGaB7IpTgW9WtKlC5aDqt3D-Cy-WwL_skUu0_YlS2jdsdBR_YYliLTI1iuX1-mYFgDlMgzDUacVRKBHhOraGc00R-fmZVHIkITJnxJonMTv2Bd5WFeh0ZD12-iwr-EkDthhsKgJZq7vkvtdfgXmxJqfYj-1xG1BYubpwNEM1yJBEWEfgeRNN10QuNeKrSZ2b9cwc54ngB4wmFCOpo_nzvYjVGUgYsyncuIo838xPKu7LtD8RxxOT2C1XjO043qvUfBKe64LQtgQYBF4iP3E6FEa6HonydvUTsIY-SzNyduZuIB4Yg5bOueekxkqiGGV5sNre5o58qRCk2bqwDFl5tLrlabXNfDPQWvFDVsmC_rJcDX5pLFRy_2CBLfrv0_75qxmD_8ORfwUjxau1ugKTopRh6YchtnoUaM5EsGfGoKy8GR_cIpzz0FaCyxdlNtXI_7qyHtXoQANbwPG0Z3ma6hhPV3ijMrDx9Q7DlAUk1ZpMn0SNk77Qc_CK-T9l1RL2xvTg8clJxdB7fK8pYR8aUy1sDZ3vH7FZkL0OxuK9gvtnDdoz45LCWhTxXv5kEsGvpnY-uOEO-DqFTxgo6xZLLwPvYvWyeSW9jfNKbFJ3nkIzdkXHxB3BNUBuC9lPahFSnXBS_V08NfJSXWeFOEXbcuAIxwipn93mHE8_sHFxMGhIIe5nOyRw1_C1CRT4aIEWkvsFV0yli0RzztIuIF_Y4-0FQ6XmUZ4I4niDf97tTxw4TBihmpWUBT8Rn015XGq43ShWJY5A_RNQnYG0yiJI6pmb5_UoFpglwrXlA_aTpAR1EeiryfXO9ZxwaTaJ-ZZFvURq3hpEaADpcRgOA4uT0KNpabSjJS0eiLgVE8cvnAJ2qriK2LbrleB0RNjLNmCYgRKJ6uWQUHSSX-bcbGcAd5XZbR5XpJl98fjEYuXjKNdudmm2aW_5Kv03Ox85LC0hYmG0aZQwb55Fh_PwQamKIpaIiA4l7zqR_4J9uLPyMRE9745lcyt_9e-rRhtgwihOf9FnVCbeG-PIPaWxLs1A2uXoaY_eJeoaDrunM3x0zmdKUPsJrJU3NLZYHdtiPk1jPcToQ3ppVP8_zCbPrJYq5dBypNzeTindKmy6OGbn3xci_Bj5r7mx04bUVpCZzPr5hnqcmdP4MzN4MoDun8baJQnDlyU27FI3dtEtI2lXXY3Rl5XHFW0LFN6BfhMkcNYypmT-95VoM88BbL_8awORv8lAUP-0NQT3GK7FDmCtFlJlCFGoLkMhP_ePbPdo62z9TuE4EkTQA6oECactM-TUBUTx8y0teNxwpGMRsp7FClgfaxBZ43qwtqvPHg02_vkCRfI6fevRuRUjACwQ9ZdvgxxflSjRI_V_Um1915RQpi2QlqwmO0Ga_uKSKtPjc2k5PJ2E9UDDA2E-A_Fg5ltFbVw9X5Grr02_k01aq8ipU1-aqDjR7hMPwQcsKHj4cuX8fb98Q-iTnqwG5CFL61I1FkxcupI4e7dRM-t7WCjXHU4RIsm0r3xFeo7Z4R52g5LREhfIRigJiGlE0iBB-qVLtM32KpOdkbAo5Ug8dmogv0jZ7O1WK4EBF-pIqTyQeZO9jIT5CyaZef9ohOKClaScR4u0Y0zaszWU2f1tjrFXTITo60VrMR_Vsfw==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "BkgmapfpF_zqvdIPrpfscQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1226,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 13,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 13
+        }
+      ],
+      "thoughts_token_count": 1557,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2796,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Alright, listen up, wise guy. Sit down, pour yourself some anisette, and let me break down this \"Dependency Injection\" (DI) thing for ya. \n\nIn our line of work\u2014and in C#\u2014you don't want things tightly coupled. Tight coupling is like being tied to a stool with cement shoes at the bottom of the East River. It makes you stiff, hard to change, and easy to put out of commission.\n\nLet me explain how we do things the *smart* way.\n\n---\n\n### The Problem: The Amateur Way (Tightly Coupled)\nImagine you got a guy named `Hitman`. Now, this hitman needs to do a job. In the old days, a dumb hitman would go out, buy the steel, smelt the metal, and build his own Tommy gun right inside his apartment before going on a hit.\n\nIn C#, that looks like this:\n\n```csharp\n// THIS IS A LIABILITY. DON'T DO THIS.\npublic class Hitman \n{\n    private TommyGun _gun;\n\n    public Hitman() \n    {\n        // You're building your own piece? What if the cops raid the gun smith? \n        // Now your Hitman class is broken!\n        _gun = new TommyGun(); \n    }\n\n    public void Work(string target) \n    {\n        _gun.Fire(target);\n    }\n}\n```\n\nIf the feds ban `TommyGun`, or if you suddenly need a quiet `SilencedPistol` instead, you gotta rewrite the whole damn `Hitman` class. That\u2019s bad for business. It\u2019s hard to test, and it\u2019s hard to swap parts. \n\n---\n\n### The Solution: Dependency Injection (The Professional Way)\nInstead of the hitman making his own weapon, we use an **Interface**\u2014that's our contract. And we let the **Consigliere** (the DI Container) hand the weapon to the hitman when he gets hired. The hitman doesn't care how the gun was made; he just knows how to pull the trigger.\n\nFirst, we define the contract:\n\n```csharp\npublic interface IWeapon \n{\n    void Whack(string target);\n}\n```\n\nNow we got different tools for different jobs:\n\n```csharp\npublic class TommyGun : IWeapon \n{\n    public void Whack(string target) \n    {\n        Console.WriteLine($\"Ratta-tatt-tatt! {target} is sleeping with the fishes.\");\n    }\n}\n\npublic class IcePick : IWeapon \n{\n    public void Whack(string target) \n    {\n        Console.WriteLine($\"Quiet job on {target}. No mess.\");\n    }\n}\n```\n\nNow, look at our professional `Hitman`. He doesn't \"new up\" nothing. He just demands an `IWeapon` in his constructor. **This is Constructor Injection.**\n\n```csharp\npublic class Hitman \n{\n    private readonly IWeapon _weapon;\n\n    // You hand him the tool at the door. He doesn't ask questions.\n    public Hitman(IWeapon weapon) \n    {\n        _weapon = weapon;\n    }\n\n    public void Work(string target) \n    {\n        _weapon.Whack(target);\n    }\n}\n```\n\n---\n\n### The Consigliere (The DI Container)\nSo, who actually hands the hitman his weapon? That\u2019s the family Consigliere\u2014in ASP.NET Core, we call him the `IServiceCollection`. \n\nWhen the family starts up its operations, you tell the Consigliere how to hand out the goods:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Hey Consigliere, whenever a guy asks for an IWeapon, give him a TommyGun.\nbuilder.Services.AddTransient<IWeapon, TommyGun>();\n\n// And when we need a Hitman, the Consigliere automatically injects that TommyGun into him.\nbuilder.Services.AddTransient<Hitman>();\n```\n\n---\n\n### The Three Rules of \"Lifetime\"\nThe Consigliere has three ways of handing out favors. You gotta know the difference, or you'll end up in a ditch.\n\n1. **Transient (`AddTransient`)** \u2014 *The Burner Phone.*\n   Every single time you ask for it, you get a brand-new one. You use it once, you throw it in the river. Next time you ask, you get a fresh one. Good for quick, cheap operations.\n\n2. **Scoped (`AddScoped`)** \u2014 *The Getaway Car.*\n   You get one car per heist (an HTTP request). Everyone in the crew on *that specific job* shares the same car. But once the heist is done, the car gets crushed at the scrapyard. Next heist, you get a new car.\n\n3. **Singleton (`AddSingleton`)** \u2014 *The Don.*\n   There is only one Don. He\u2019s been there since day one, and he stays until the whole operation shuts down. Everybody, everywhere, talks to the exact same guy. If you mess with his state, you mess with it for the whole family.\n\n---\n\n### Summary\n* **No `new` keywords** inside your business logic classes. That\u2019s amateur hour.\n* **Program to interfaces (`IWeapon`)**, not concrete classes (`TommyGun`).\n* Let the **DI Container** do the heavy lifting of putting things together.\n\nCapisce? Now go refactor your code before I have to send Tony to \"refactor\" your kneecaps.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1226,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 13,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 13
+      }
+    ],
+    "thoughts_token_count": 1557,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2796,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

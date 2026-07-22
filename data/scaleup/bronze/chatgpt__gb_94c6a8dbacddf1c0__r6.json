@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "chatgpt",
+  "run_index": 6,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T10:16:58.734002+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0ae304aabaa93c0f006a2696800fa48190b56e9707e080e262",
+    "created_at": 1780913792.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0ae304aabaa93c0f006a269680f84c81908be721ebcac74b10",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Computers and calculators usually **don\u2019t \u201clook up\u201d square roots**. They compute them using algorithms that rapidly refine an approximation until it is accurate enough for the display or the machine\u2019s number format.\n\nA common idea is this:\n\n> To find \u221aN, find a number x such that x\u00b2 = N.\n\nSince directly guessing x is hard, the device starts with an estimate and improves it.\n\n## 1. Newton\u2019s method\n\nOne of the most famous methods is **Newton-Raphson iteration**.\n\nTo compute:\n\n\\[\n\\sqrt{N}\n\\]\n\nyou start with an approximation \\(x\\), then repeatedly update it using:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(x + \\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too large, then \\(N/x\\) is too small, and averaging them gives a better estimate.\n\n### Example: finding \\(\\sqrt{10}\\)\n\nStart with \\(x = 3\\).\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3 + \\frac{10}{3}\\right)\n\\]\n\n\\[\n= \\frac{1}{2}(3 + 3.3333...)\n\\]\n\n\\[\n= 3.1666...\n\\]\n\nNow repeat:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3.1666... + \\frac{10}{3.1666...}\\right)\n\\]\n\n\\[\n\\approx 3.16228\n\\]\n\nRepeat again:\n\n\\[\n\\approx 3.162277660\n\\]\n\nAnd that is already extremely close to the true value:\n\n\\[\n\\sqrt{10} \\approx 3.162277660168379...\n\\]\n\nThe accuracy improves very quickly. Roughly speaking, once the guess is close, **the number of correct digits can nearly double with each iteration**.\n\n---\n\n## 2. Binary representation makes estimation easier\n\nComputers store numbers in binary, not decimal. For floating-point numbers, the computer can split a number into something like:\n\n\\[\nN = m \\times 2^e\n\\]\n\nwhere \\(m\\) is a value in a manageable range and \\(e\\) is an exponent.\n\nThen:\n\n\\[\n\\sqrt{N} = \\sqrt{m \\times 2^e}\n\\]\n\n\\[\n= \\sqrt{m} \\times 2^{e/2}\n\\]\n\nSo the computer can use the exponent to get a very good starting estimate. That means Newton\u2019s method only needs a few steps.\n\n---\n\n## 3. Some calculators use digit-by-digit algorithms\n\nOlder calculators and some hardware circuits may use algorithms similar to long division. These produce square root digits one at a time.\n\nFor example, there is a \u201clonghand\u201d square-root algorithm that works somewhat like long division. It determines each digit of the answer by testing what digit keeps the square below the original number.\n\nThis is slower than Newton\u2019s method but very reliable and easy to implement in simple hardware.\n\n---\n\n## 4. Hardware often has specialized circuits\n\nModern CPUs and calculators may have dedicated instructions or circuits for square roots. For example, a processor may include a floating-point unit that can compute square roots directly.\n\nInside, it may use methods such as:\n\n- Newton-Raphson iteration\n- Goldschmidt\u2019s algorithm\n- digit-recurrence algorithms\n- lookup tables plus refinement steps\n\nA lookup table might provide a rough initial approximation, and then an iterative method improves it.\n\n---\n\n## 5. Why the answer seems \u201cexact\u201d\n\nMost square roots are irrational, meaning their decimal expansions go on forever without repeating.\n\nFor example:\n\n\\[\n\\sqrt{2} = 1.4142135623730950488...\n\\]\n\nA calculator cannot store infinitely many digits. It only computes enough digits to fill its display, perhaps 10 to 15 decimal digits. Computers commonly use floating-point formats such as 64-bit \u201cdouble precision,\u201d which gives around 15 to 17 significant decimal digits.\n\nSo when a calculator shows:\n\n\\[\n\\sqrt{2} = 1.414213562\n\\]\n\nit is not giving the entire exact value. It is giving a very accurate rounded approximation.\n\n---\n\n## 6. How does it know when to stop?\n\nThe device stops when the approximation is accurate enough.\n\nFor example, it may stop when:\n\n\\[\nx^2\n\\]\n\nis close enough to \\(N\\), or when another iteration would no longer change the stored floating-point value.\n\nSo if the calculator can only display 10 digits, there is no need to compute 100 digits unless it is a scientific or symbolic calculator designed to do so.\n\n---\n\n## Short version\n\nComputers and calculators determine square roots by:\n\n1. Making an initial guess.\n2. Improving the guess using a fast algorithm.\n3. Repeating until the result is accurate enough.\n4. Rounding the final value to the number of digits they can store or display.\n\nOne of the simplest powerful formulas is:\n\n\\[\nx_{\\text{new}} = \\frac{x + N/x}{2}\n\\]\n\nThis lets a calculator turn a rough guess into a highly accurate square root in just a few steps.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780913817.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4455,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 1088,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5543
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Computers and calculators usually **don\u2019t \u201clook up\u201d square roots**. They compute them using algorithms that rapidly refine an approximation until it is accurate enough for the display or the machine\u2019s number format.\n\nA common idea is this:\n\n> To find \u221aN, find a number x such that x\u00b2 = N.\n\nSince directly guessing x is hard, the device starts with an estimate and improves it.\n\n## 1. Newton\u2019s method\n\nOne of the most famous methods is **Newton-Raphson iteration**.\n\nTo compute:\n\n\\[\n\\sqrt{N}\n\\]\n\nyou start with an approximation \\(x\\), then repeatedly update it using:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(x + \\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too large, then \\(N/x\\) is too small, and averaging them gives a better estimate.\n\n### Example: finding \\(\\sqrt{10}\\)\n\nStart with \\(x = 3\\).\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3 + \\frac{10}{3}\\right)\n\\]\n\n\\[\n= \\frac{1}{2}(3 + 3.3333...)\n\\]\n\n\\[\n= 3.1666...\n\\]\n\nNow repeat:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3.1666... + \\frac{10}{3.1666...}\\right)\n\\]\n\n\\[\n\\approx 3.16228\n\\]\n\nRepeat again:\n\n\\[\n\\approx 3.162277660\n\\]\n\nAnd that is already extremely close to the true value:\n\n\\[\n\\sqrt{10} \\approx 3.162277660168379...\n\\]\n\nThe accuracy improves very quickly. Roughly speaking, once the guess is close, **the number of correct digits can nearly double with each iteration**.\n\n---\n\n## 2. Binary representation makes estimation easier\n\nComputers store numbers in binary, not decimal. For floating-point numbers, the computer can split a number into something like:\n\n\\[\nN = m \\times 2^e\n\\]\n\nwhere \\(m\\) is a value in a manageable range and \\(e\\) is an exponent.\n\nThen:\n\n\\[\n\\sqrt{N} = \\sqrt{m \\times 2^e}\n\\]\n\n\\[\n= \\sqrt{m} \\times 2^{e/2}\n\\]\n\nSo the computer can use the exponent to get a very good starting estimate. That means Newton\u2019s method only needs a few steps.\n\n---\n\n## 3. Some calculators use digit-by-digit algorithms\n\nOlder calculators and some hardware circuits may use algorithms similar to long division. These produce square root digits one at a time.\n\nFor example, there is a \u201clonghand\u201d square-root algorithm that works somewhat like long division. It determines each digit of the answer by testing what digit keeps the square below the original number.\n\nThis is slower than Newton\u2019s method but very reliable and easy to implement in simple hardware.\n\n---\n\n## 4. Hardware often has specialized circuits\n\nModern CPUs and calculators may have dedicated instructions or circuits for square roots. For example, a processor may include a floating-point unit that can compute square roots directly.\n\nInside, it may use methods such as:\n\n- Newton-Raphson iteration\n- Goldschmidt\u2019s algorithm\n- digit-recurrence algorithms\n- lookup tables plus refinement steps\n\nA lookup table might provide a rough initial approximation, and then an iterative method improves it.\n\n---\n\n## 5. Why the answer seems \u201cexact\u201d\n\nMost square roots are irrational, meaning their decimal expansions go on forever without repeating.\n\nFor example:\n\n\\[\n\\sqrt{2} = 1.4142135623730950488...\n\\]\n\nA calculator cannot store infinitely many digits. It only computes enough digits to fill its display, perhaps 10 to 15 decimal digits. Computers commonly use floating-point formats such as 64-bit \u201cdouble precision,\u201d which gives around 15 to 17 significant decimal digits.\n\nSo when a calculator shows:\n\n\\[\n\\sqrt{2} = 1.414213562\n\\]\n\nit is not giving the entire exact value. It is giving a very accurate rounded approximation.\n\n---\n\n## 6. How does it know when to stop?\n\nThe device stops when the approximation is accurate enough.\n\nFor example, it may stop when:\n\n\\[\nx^2\n\\]\n\nis close enough to \\(N\\), or when another iteration would no longer change the stored floating-point value.\n\nSo if the calculator can only display 10 digits, there is no need to compute 100 digits unless it is a scientific or symbolic calculator designed to do so.\n\n---\n\n## Short version\n\nComputers and calculators determine square roots by:\n\n1. Making an initial guess.\n2. Improving the guess using a fast algorithm.\n3. Repeating until the result is accurate enough.\n4. Rounding the final value to the number of digits they can store or display.\n\nOne of the simplest powerful formulas is:\n\n\\[\nx_{\\text{new}} = \\frac{x + N/x}{2}\n\\]\n\nThis lets a calculator turn a rough guess into a highly accurate square root in just a few steps.",
+  "usage": {
+    "input_tokens": 4455,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 1088,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5543
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 7,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:34:58.829026+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_068d62abe02f9b85006a26465c6a8081a2a406d90513c1cf86",
+    "created_at": 1780893276.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_068d62abe02f9b85006a26465d3b6081a28b815a9cf679f93d",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Aight, so **Dependency Injection in C#** is like this:\n\nYour class is a boss. It needs certain people to get work done \u2014 maybe a database guy, a logger guy, an email guy.\n\nNow, a rookie boss does this:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.Send(\"Order placed!\");\n    }\n}\n```\n\nThat boss is hiring his own crew directly.\n\nProblem is: now `OrderService` is tightly connected to `EmailSender`. If you wanna swap in a different email sender, test it, mock it, or use a fancy new notification system, you gotta crack open the class and mess with the code.\n\nBad business.\n\n---\n\n## Dependency Injection says:\n\n\u201cDon\u2019t build your own crew. Have the crew delivered to you.\u201d\n\nLike this:\n\n```csharp\npublic interface IEmailSender\n{\n    void Send(string message);\n}\n\npublic class EmailSender : IEmailSender\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Sending email: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailSender _emailSender;\n\n    public OrderService(IEmailSender emailSender)\n    {\n        _emailSender = emailSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailSender.Send(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` ain\u2019t makin\u2019 its own `EmailSender`.\n\nIt just says:\n\n> \u201cI need someone who can send emails. I don\u2019t care who. Bring me a guy who implements `IEmailSender`.\u201d\n\nThat\u2019s dependency injection.\n\n---\n\n## The container is the consigliere\n\nIn ASP.NET Core, you usually register your crew in `Program.cs`:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThis tells the DI container:\n\n> \u201cWhenever somebody asks for `IEmailSender`, send `EmailSender`.\u201d\n\nThen when the app needs `OrderService`, the container sees the constructor:\n\n```csharp\npublic OrderService(IEmailSender emailSender)\n```\n\nand goes:\n\n> \u201cNo problem, boss. I know a guy.\u201d\n\nIt creates `EmailSender`, hands it to `OrderService`, and everybody gets paid.\n\n---\n\n## Why use dependency injection?\n\nBecause it keeps your operation clean.\n\n### Without DI:\nYour classes are making their own dependencies.\n\n```csharp\nprivate EmailSender _emailSender = new EmailSender();\n```\n\nThat\u2019s tight coupling. Everybody knows too much. Nobody can disappear quietly.\n\n### With DI:\nYour class only depends on an interface.\n\n```csharp\nprivate readonly IEmailSender _emailSender;\n```\n\nNow you can swap implementations:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, SmsSender>();\n```\n\nBoom. Same `OrderService`, different messenger.\n\nNo drama.\n\n---\n\n## It helps with testing\n\nSay you wanna test `OrderService`.\n\nYou don\u2019t want it sending real emails like some lunatic.\n\nSo you pass in a fake:\n\n```csharp\npublic class FakeEmailSender : IEmailSender\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Fake send: {message}\");\n    }\n}\n```\n\nThen:\n\n```csharp\nvar service = new OrderService(new FakeEmailSender());\nservice.PlaceOrder();\n```\n\nNow you can test the business logic without waking up the whole neighborhood.\n\n---\n\n## Common lifetimes in C#\n\nWhen registering services, you choose how long the object lives.\n\n```csharp\nbuilder.Services.AddTransient<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddSingleton<IEmailSender, EmailSender>();\n```\n\nHere\u2019s the street version:\n\n### `Transient`\nNew guy every time.\n\n```csharp\nAddTransient<IEmailSender, EmailSender>();\n```\n\nEvery time someone asks, the container creates a fresh instance.\n\nGood for lightweight, stateless services.\n\n---\n\n### `Scoped`\nOne guy per job.\n\n```csharp\nAddScoped<IEmailSender, EmailSender>();\n```\n\nIn a web app, usually one instance per HTTP request.\n\nEverybody working on that same request gets the same instance.\n\nGood for things like database contexts.\n\n---\n\n### `Singleton`\nOne guy for the whole empire.\n\n```csharp\nAddSingleton<IEmailSender, EmailSender>();\n```\n\nOne instance for the entire app lifetime.\n\nGood for shared, thread-safe, expensive-to-create services.\n\nBut be careful: if this guy keeps state and multiple people mess with him at once, things get ugly.\n\n---\n\n## Tiny ASP.NET Core example\n\n```csharp\npublic interface IGreetingService\n{\n    string GetGreeting();\n}\n\npublic class GreetingService : IGreetingService\n{\n    public string GetGreeting()\n    {\n        return \"How you doin'?\";\n    }\n}\n```\n\nRegister it:\n\n```csharp\nbuilder.Services.AddScoped<IGreetingService, GreetingService>();\n```\n\nUse it in a controller:\n\n```csharp\npublic class HomeController : Controller\n{\n    private readonly IGreetingService _greetingService;\n\n    public HomeController(IGreetingService greetingService)\n    {\n        _greetingService = greetingService;\n    }\n\n    public IActionResult Index()\n    {\n        return Content(_greetingService.GetGreeting());\n    }\n}\n```\n\nThe controller doesn\u2019t create `GreetingService`.\n\nThe container delivers it.\n\nLike a package. No questions asked.\n\n---\n\n## The core idea\n\nDependency Injection means:\n\n> A class should receive the objects it needs instead of creating them itself.\n\nIn gangster terms:\n\n> Don\u2019t go recruitin\u2019 your own crew in every back alley. Tell the family what you need, and the family sends the right people.\n\nThat\u2019s DI.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893298.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 1190,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5644
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Aight, so **Dependency Injection in C#** is like this:\n\nYour class is a boss. It needs certain people to get work done \u2014 maybe a database guy, a logger guy, an email guy.\n\nNow, a rookie boss does this:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.Send(\"Order placed!\");\n    }\n}\n```\n\nThat boss is hiring his own crew directly.\n\nProblem is: now `OrderService` is tightly connected to `EmailSender`. If you wanna swap in a different email sender, test it, mock it, or use a fancy new notification system, you gotta crack open the class and mess with the code.\n\nBad business.\n\n---\n\n## Dependency Injection says:\n\n\u201cDon\u2019t build your own crew. Have the crew delivered to you.\u201d\n\nLike this:\n\n```csharp\npublic interface IEmailSender\n{\n    void Send(string message);\n}\n\npublic class EmailSender : IEmailSender\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Sending email: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailSender _emailSender;\n\n    public OrderService(IEmailSender emailSender)\n    {\n        _emailSender = emailSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailSender.Send(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` ain\u2019t makin\u2019 its own `EmailSender`.\n\nIt just says:\n\n> \u201cI need someone who can send emails. I don\u2019t care who. Bring me a guy who implements `IEmailSender`.\u201d\n\nThat\u2019s dependency injection.\n\n---\n\n## The container is the consigliere\n\nIn ASP.NET Core, you usually register your crew in `Program.cs`:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThis tells the DI container:\n\n> \u201cWhenever somebody asks for `IEmailSender`, send `EmailSender`.\u201d\n\nThen when the app needs `OrderService`, the container sees the constructor:\n\n```csharp\npublic OrderService(IEmailSender emailSender)\n```\n\nand goes:\n\n> \u201cNo problem, boss. I know a guy.\u201d\n\nIt creates `EmailSender`, hands it to `OrderService`, and everybody gets paid.\n\n---\n\n## Why use dependency injection?\n\nBecause it keeps your operation clean.\n\n### Without DI:\nYour classes are making their own dependencies.\n\n```csharp\nprivate EmailSender _emailSender = new EmailSender();\n```\n\nThat\u2019s tight coupling. Everybody knows too much. Nobody can disappear quietly.\n\n### With DI:\nYour class only depends on an interface.\n\n```csharp\nprivate readonly IEmailSender _emailSender;\n```\n\nNow you can swap implementations:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, SmsSender>();\n```\n\nBoom. Same `OrderService`, different messenger.\n\nNo drama.\n\n---\n\n## It helps with testing\n\nSay you wanna test `OrderService`.\n\nYou don\u2019t want it sending real emails like some lunatic.\n\nSo you pass in a fake:\n\n```csharp\npublic class FakeEmailSender : IEmailSender\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Fake send: {message}\");\n    }\n}\n```\n\nThen:\n\n```csharp\nvar service = new OrderService(new FakeEmailSender());\nservice.PlaceOrder();\n```\n\nNow you can test the business logic without waking up the whole neighborhood.\n\n---\n\n## Common lifetimes in C#\n\nWhen registering services, you choose how long the object lives.\n\n```csharp\nbuilder.Services.AddTransient<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddSingleton<IEmailSender, EmailSender>();\n```\n\nHere\u2019s the street version:\n\n### `Transient`\nNew guy every time.\n\n```csharp\nAddTransient<IEmailSender, EmailSender>();\n```\n\nEvery time someone asks, the container creates a fresh instance.\n\nGood for lightweight, stateless services.\n\n---\n\n### `Scoped`\nOne guy per job.\n\n```csharp\nAddScoped<IEmailSender, EmailSender>();\n```\n\nIn a web app, usually one instance per HTTP request.\n\nEverybody working on that same request gets the same instance.\n\nGood for things like database contexts.\n\n---\n\n### `Singleton`\nOne guy for the whole empire.\n\n```csharp\nAddSingleton<IEmailSender, EmailSender>();\n```\n\nOne instance for the entire app lifetime.\n\nGood for shared, thread-safe, expensive-to-create services.\n\nBut be careful: if this guy keeps state and multiple people mess with him at once, things get ugly.\n\n---\n\n## Tiny ASP.NET Core example\n\n```csharp\npublic interface IGreetingService\n{\n    string GetGreeting();\n}\n\npublic class GreetingService : IGreetingService\n{\n    public string GetGreeting()\n    {\n        return \"How you doin'?\";\n    }\n}\n```\n\nRegister it:\n\n```csharp\nbuilder.Services.AddScoped<IGreetingService, GreetingService>();\n```\n\nUse it in a controller:\n\n```csharp\npublic class HomeController : Controller\n{\n    private readonly IGreetingService _greetingService;\n\n    public HomeController(IGreetingService greetingService)\n    {\n        _greetingService = greetingService;\n    }\n\n    public IActionResult Index()\n    {\n        return Content(_greetingService.GetGreeting());\n    }\n}\n```\n\nThe controller doesn\u2019t create `GreetingService`.\n\nThe container delivers it.\n\nLike a package. No questions asked.\n\n---\n\n## The core idea\n\nDependency Injection means:\n\n> A class should receive the objects it needs instead of creating them itself.\n\nIn gangster terms:\n\n> Don\u2019t go recruitin\u2019 your own crew in every back alley. Tell the family what you need, and the family sends the right people.\n\nThat\u2019s DI.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 1190,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5644
+  },
+  "run_profile": "scaleup"
+}

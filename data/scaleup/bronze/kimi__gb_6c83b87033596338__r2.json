@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_6c83b87033596338",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:57:17.601786+00:00",
+  "query_text": "what county is new york new york in?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a250830aa2b762d5e3d3db3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can answer your question about what county New York, New York is in.\n\n**New York, New York is located in New York County.**\n\nThis is a unique situation in the United States where a city contains counties, rather than the more common arrangement where cities are located within counties. New York City is composed of five boroughs, and each borough corresponds to a county:\n\n| Borough | County |\n|---------|--------|\n| Manhattan | New York County |\n| Brooklyn | Kings County |\n| Queens | Queens County |\n| The Bronx | Bronx County |\n| Staten Island | Richmond County |\n\nSo when you say \"New York, New York,\" you're typically referring to Manhattan, which is New York County. This is different from most other places in the U.S. where counties are larger than cities. As one source notes, \"the five counties in State of New York are subordinate to New York City (a city-level administrative division).\"\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780811825,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 273,
+        "prompt_tokens": 5274,
+        "total_tokens": 5547,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what county is new york new york in?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a250830f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f67c7fc36a250830680f160001ebe8a4\"},\"usage\":{\"total_tokens\":5122}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a250830f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f67c7fc36a250830680f160001ebe8a4\"},\"usage\":{\"total_tokens\":5122}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f67c7fc36a250830680f160001ebe8a4\"},\"usage\":{\"total_tokens\":5122}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can answer your question about what county New York, New York is in.\n\n**New York, New York is located in New York County.**\n\nThis is a unique situation in the United States where a city contains counties, rather than the more common arrangement where cities are located within counties. New York City is composed of five boroughs, and each borough corresponds to a county:\n\n| Borough | County |\n|---------|--------|\n| Manhattan | New York County |\n| Brooklyn | Kings County |\n| Queens | Queens County |\n| The Bronx | Bronx County |\n| Staten Island | Richmond County |\n\nSo when you say \"New York, New York,\" you're typically referring to Manhattan, which is New York County. This is different from most other places in the U.S. where counties are larger than cities. As one source notes, \"the five counties in State of New York are subordinate to New York City (a city-level administrative division).\"\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+  "usage": {
+    "completion_tokens": 273,
+    "prompt_tokens": 5274,
+    "total_tokens": 5547,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

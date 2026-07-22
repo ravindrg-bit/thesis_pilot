@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:27:42.756004+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2563b7e73a29477715fee4",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here is how to log into OneDrive:\n\n## How to Log Into OneDrive\n\n### Method 1: Via Web Browser\n1. Open your web browser (Chrome, Edge, Firefox, etc.)\n2. Go to **https://onedrive.com/sign-in** or **https://onedrive.live.com**\n3. Enter your **Microsoft account email address or phone number**\n4. Click **\"Next\"**\n5. Enter your **password**\n6. Click **\"Sign in\"**\n\n### Method 2: On Windows PC (Desktop App)\n1. Click the **Start Menu** and search for **\"OneDrive\"**\n2. Click on the **OneDrive app** to open it\n3. Enter your **Microsoft account email** when prompted\n4. Enter your **password**\n5. Follow any additional setup prompts\n\n### Method 3: On Mobile Devices (iPhone/Android)\n1. Download the **OneDrive app** from the App Store or Google Play Store\n2. Open the app\n3. Tap **\"Sign in\"**\n4. Enter your **Microsoft account email and password**\n\n---\n\n## Important Notes\n\n- **Your Microsoft account is your OneDrive account** \u2014 they use the same login credentials\n- If you don't have a Microsoft account, you can create one for free at https://signup.live.com\n- If you have **two-factor authentication** enabled, you'll need to complete the additional verification step\n\n---\n\n## Troubleshooting Login Issues\n\nIf you can't log in, try these solutions:\n\n| Problem | Solution |\n|---------|----------|\n| Forgot password | Click **\"Forgot password\"** on the sign-in page to reset it |\n| Error 0x8004de85/0x8004de8a | Check that you're using the correct account type (personal vs. work/school) |\n| Error 0x8004de40 | Enable TLS 1.0, 1.1, and 1.2 in Internet Options (run `inetcpl.cpl`) |\n| App won't sign in | Try unlinking and relinking: Right-click OneDrive icon \u2192 Settings \u2192 Account \u2192 Unlink this PC \u2192 Sign in again |\n| OneDrive stuck spinning | Reset OneDrive: Exit OneDrive, run `%localappdata%\\Microsoft\\OneDrive\\onedrive.exe /reset` in Command Prompt |\n\nSources:\n1. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n2. https://www.xda-developers.com/how-to-sign-into-onedrive/\n3. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n4. https://zhidao.baidu.com/question/2000987832475803467.html\n5. https://strand-co.com/guide-sign-in-onedrive-download/\n6. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/sign-into-onedrive-error-0x8004de85-or-0x8004de8a\n7. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/error-0x8004de40-in-onedrive\n8. https://www.feidaoboke.com/post/fix-onedrive-login-issue-error-code-0x8004de44.html\n9. https://www.elevenforum.com/t/onedrive-suddenly-wont-log-in-and-sync.28940/\n10. https://consumer.huawei.com/cn/support/content/zh-cn00954695/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780835256,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 731,
+        "prompt_tokens": 8686,
+        "total_tokens": 9417,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2563b61700",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bbc968406a2563b6680f160001ec671c\"},\"usage\":{\"total_tokens\":8540}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2563b61700",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bbc968406a2563b6680f160001ec671c\"},\"usage\":{\"total_tokens\":8540}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bbc968406a2563b6680f160001ec671c\"},\"usage\":{\"total_tokens\":8540}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here is how to log into OneDrive:\n\n## How to Log Into OneDrive\n\n### Method 1: Via Web Browser\n1. Open your web browser (Chrome, Edge, Firefox, etc.)\n2. Go to **https://onedrive.com/sign-in** or **https://onedrive.live.com**\n3. Enter your **Microsoft account email address or phone number**\n4. Click **\"Next\"**\n5. Enter your **password**\n6. Click **\"Sign in\"**\n\n### Method 2: On Windows PC (Desktop App)\n1. Click the **Start Menu** and search for **\"OneDrive\"**\n2. Click on the **OneDrive app** to open it\n3. Enter your **Microsoft account email** when prompted\n4. Enter your **password**\n5. Follow any additional setup prompts\n\n### Method 3: On Mobile Devices (iPhone/Android)\n1. Download the **OneDrive app** from the App Store or Google Play Store\n2. Open the app\n3. Tap **\"Sign in\"**\n4. Enter your **Microsoft account email and password**\n\n---\n\n## Important Notes\n\n- **Your Microsoft account is your OneDrive account** \u2014 they use the same login credentials\n- If you don't have a Microsoft account, you can create one for free at https://signup.live.com\n- If you have **two-factor authentication** enabled, you'll need to complete the additional verification step\n\n---\n\n## Troubleshooting Login Issues\n\nIf you can't log in, try these solutions:\n\n| Problem | Solution |\n|---------|----------|\n| Forgot password | Click **\"Forgot password\"** on the sign-in page to reset it |\n| Error 0x8004de85/0x8004de8a | Check that you're using the correct account type (personal vs. work/school) |\n| Error 0x8004de40 | Enable TLS 1.0, 1.1, and 1.2 in Internet Options (run `inetcpl.cpl`) |\n| App won't sign in | Try unlinking and relinking: Right-click OneDrive icon \u2192 Settings \u2192 Account \u2192 Unlink this PC \u2192 Sign in again |\n| OneDrive stuck spinning | Reset OneDrive: Exit OneDrive, run `%localappdata%\\Microsoft\\OneDrive\\onedrive.exe /reset` in Command Prompt |\n\nSources:\n1. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n2. https://www.xda-developers.com/how-to-sign-into-onedrive/\n3. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n4. https://zhidao.baidu.com/question/2000987832475803467.html\n5. https://strand-co.com/guide-sign-in-onedrive-download/\n6. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/sign-into-onedrive-error-0x8004de85-or-0x8004de8a\n7. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/error-0x8004de40-in-onedrive\n8. https://www.feidaoboke.com/post/fix-onedrive-login-issue-error-code-0x8004de44.html\n9. https://www.elevenforum.com/t/onedrive-suddenly-wont-log-in-and-sync.28940/\n10. https://consumer.huawei.com/cn/support/content/zh-cn00954695/",
+  "usage": {
+    "completion_tokens": 731,
+    "prompt_tokens": 8686,
+    "total_tokens": 9417,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_fefbd3dc925cd914",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:54:35.740170+00:00",
+  "query_text": "what temperature can food be accepted at",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25a2451b4f7af185065951",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the key food temperature standards for accepting and handling food safely:\n\n## The Temperature Danger Zone\n\nThe most critical concept is the **\"temperature danger zone\"** \u2014 the range where bacteria multiply rapidly:\n\n- **US standards (FDA/USDA)**: 40\u00b0F to 140\u00b0F (4\u00b0C to 60\u00b0C)\n- **ServSafe**: 41\u00b0F to 135\u00b0F (5\u00b0C to 57\u00b0C)\n- **Australian standards**: 5\u00b0C to 60\u00b0C\n\nFood should **NOT** be left in this zone for extended periods. Bacteria can double every 20 minutes in this range.\n\n## Safe Temperatures for Accepting/Holding Food\n\n| Food Type | Safe Temperature |\n|-----------|----------------|\n| **Cold foods** | 40\u00b0F (4\u00b0C) or below |\n| **Hot foods** | 135\u00b0F (57\u00b0C) or above |\n| **Frozen foods** | 0\u00b0F (-18\u00b0C) or below |\n\n## Receiving/Accepting Food Deliveries\n\nWhen accepting food deliveries, you should verify:\n\n- **Cold foods** arrive at **40\u00b0F (4\u00b0C) or below**\n- **Hot foods** arrive at **135\u00b0F (57\u00b0C) or above** (some standards say 140\u00b0F/60\u00b0C)\n- **Frozen foods** are solid with no signs of thawing\n\n## Safe Cooking/Internal Temperatures\n\n| Food | Minimum Internal Temperature |\n|------|------------------------------|\n| Poultry, stuffing, dishes with cooked TCS food | 165\u00b0F (74\u00b0C) |\n| Ground meat, injected meats, eggs held for service | 155\u00b0F (68\u00b0C) |\n| Seafood, steaks, chops, roast meats | 145\u00b0F (63\u00b0C) |\n| Vegetables, fruits, grains, legumes | 135\u00b0F (57\u00b0C) |\n| Reheated food | 165\u00b0F (74\u00b0C) |\n\n## Time Limits in the Danger Zone\n\n- **Cold food** held without refrigeration: maximum **6 hours** (if starting from 40\u00b0F and not exceeding 70\u00b0F)\n- **Hot food** below 135\u00b0F: discard after **4 hours**\n- **General rule**: Food should not be in the danger zone for more than **2 hours** (or **1 hour** if above 90\u00b0F/32\u00b0C ambient temperature)\n\n## Key Takeaway\n\nFor food acceptance, **reject any delivery** where:\n- Cold foods are above 40\u00b0F (4\u00b0C)\n- Hot foods are below 135\u00b0F (57\u00b0C)\n- Frozen foods show signs of thawing or are above 0\u00b0F (-18\u00b0C)\n\nSources:\n1. https://www.webstaurantstore.com/article/29/following-food-safety-temperatures.html\n2. https://thermolog.com.au/australian-food-safety-standards-a-guide-to-temperature-compliance/\n3. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n4. https://www.tempcontrolpack.com/knowledge/temperature-standards-for-coldchain-logistics/\n5. https://dutyfront.com/legal-standards-for-food-storage-temperature/\n6. https://www.rotomouldedproducts.com/news/what-are-the-key-temperature-requirements-for-safe-food-transportation-according-to-international-st-244097.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780851270,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 693,
+        "prompt_tokens": 8711,
+        "total_tokens": 9404,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what temperature can food be accepted at"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25a2447c50",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"cc06ecbc6a25a244680f160001ecc0a2\"},\"usage\":{\"total_tokens\":8561}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25a2447c50",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"cc06ecbc6a25a244680f160001ecc0a2\"},\"usage\":{\"total_tokens\":8561}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"cc06ecbc6a25a244680f160001ecc0a2\"},\"usage\":{\"total_tokens\":8561}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the key food temperature standards for accepting and handling food safely:\n\n## The Temperature Danger Zone\n\nThe most critical concept is the **\"temperature danger zone\"** \u2014 the range where bacteria multiply rapidly:\n\n- **US standards (FDA/USDA)**: 40\u00b0F to 140\u00b0F (4\u00b0C to 60\u00b0C)\n- **ServSafe**: 41\u00b0F to 135\u00b0F (5\u00b0C to 57\u00b0C)\n- **Australian standards**: 5\u00b0C to 60\u00b0C\n\nFood should **NOT** be left in this zone for extended periods. Bacteria can double every 20 minutes in this range.\n\n## Safe Temperatures for Accepting/Holding Food\n\n| Food Type | Safe Temperature |\n|-----------|----------------|\n| **Cold foods** | 40\u00b0F (4\u00b0C) or below |\n| **Hot foods** | 135\u00b0F (57\u00b0C) or above |\n| **Frozen foods** | 0\u00b0F (-18\u00b0C) or below |\n\n## Receiving/Accepting Food Deliveries\n\nWhen accepting food deliveries, you should verify:\n\n- **Cold foods** arrive at **40\u00b0F (4\u00b0C) or below**\n- **Hot foods** arrive at **135\u00b0F (57\u00b0C) or above** (some standards say 140\u00b0F/60\u00b0C)\n- **Frozen foods** are solid with no signs of thawing\n\n## Safe Cooking/Internal Temperatures\n\n| Food | Minimum Internal Temperature |\n|------|------------------------------|\n| Poultry, stuffing, dishes with cooked TCS food | 165\u00b0F (74\u00b0C) |\n| Ground meat, injected meats, eggs held for service | 155\u00b0F (68\u00b0C) |\n| Seafood, steaks, chops, roast meats | 145\u00b0F (63\u00b0C) |\n| Vegetables, fruits, grains, legumes | 135\u00b0F (57\u00b0C) |\n| Reheated food | 165\u00b0F (74\u00b0C) |\n\n## Time Limits in the Danger Zone\n\n- **Cold food** held without refrigeration: maximum **6 hours** (if starting from 40\u00b0F and not exceeding 70\u00b0F)\n- **Hot food** below 135\u00b0F: discard after **4 hours**\n- **General rule**: Food should not be in the danger zone for more than **2 hours** (or **1 hour** if above 90\u00b0F/32\u00b0C ambient temperature)\n\n## Key Takeaway\n\nFor food acceptance, **reject any delivery** where:\n- Cold foods are above 40\u00b0F (4\u00b0C)\n- Hot foods are below 135\u00b0F (57\u00b0C)\n- Frozen foods show signs of thawing or are above 0\u00b0F (-18\u00b0C)\n\nSources:\n1. https://www.webstaurantstore.com/article/29/following-food-safety-temperatures.html\n2. https://thermolog.com.au/australian-food-safety-standards-a-guide-to-temperature-compliance/\n3. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n4. https://www.tempcontrolpack.com/knowledge/temperature-standards-for-coldchain-logistics/\n5. https://dutyfront.com/legal-standards-for-food-storage-temperature/\n6. https://www.rotomouldedproducts.com/news/what-are-the-key-temperature-requirements-for-safe-food-transportation-according-to-international-st-244097.html",
+  "usage": {
+    "completion_tokens": 693,
+    "prompt_tokens": 8711,
+    "total_tokens": 9404,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

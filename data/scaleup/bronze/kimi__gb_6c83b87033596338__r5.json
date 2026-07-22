@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_6c83b87033596338",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:57:59.566235+00:00",
+  "query_text": "what county is new york new york in?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25085cc884fdfb458c79d3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "\u6839\u636e\u641c\u7d22\u7ed3\u679c\uff0c\"New York, New York\"\uff08\u7ebd\u7ea6\uff0c\u7ebd\u7ea6\uff09\u4f4d\u4e8e**\u7ebd\u7ea6\u90e1\uff08New York County\uff09**\u3002\n\n\u5177\u4f53\u6765\u8bf4\uff1a\n- **\u7ebd\u7ea6\u5e02\uff08New York City\uff09** \u662f\u7f8e\u56fd\u7684\u4e00\u4e2a\u7279\u6b8a\u884c\u653f\u533a\u5212\uff0c\u7531\u4e94\u4e2a\u533a\uff08boroughs\uff09\u7ec4\u6210\n- \u8fd9\u4e94\u4e2a\u533a\u540c\u65f6\u5bf9\u5e94\u4e94\u4e2a\u90e1\uff08counties\uff09\uff0c\u4f46\u4e0e\u7f8e\u56fd\u5176\u4ed6\u5730\u65b9\"\u90e1\u5927\u4e8e\u5e02\"\u7684\u60c5\u51b5\u4e0d\u540c\uff0c\u7ebd\u7ea6\u5e02\u7684\u4e94\u4e2a\u90e1\u662f**\u96b6\u5c5e\u4e8e\u7ebd\u7ea6\u5e02**\u7684\n- **\u66fc\u54c8\u987f\u533a\uff08Manhattan\uff09** \u5bf9\u5e94 **\u7ebd\u7ea6\u90e1\uff08New York County\uff09**\n- \"New York, New York\" \u8fd9\u4e2a\u5730\u5740\u901a\u5e38\u6307\u7684\u662f\u66fc\u54c8\u987f\u533a\uff0c\u4e5f\u5c31\u662f\u7ebd\u7ea6\u90e1\n\n\u6240\u4ee5\uff0c\"New York, New York\" \u6240\u5728\u7684\u90e1\u662f **New York County\uff08\u7ebd\u7ea6\u90e1\uff09**\u3002\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780811869,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 232,
+        "prompt_tokens": 5274,
+        "total_tokens": 5506,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what county is new york new york in?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25085cf913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bc00e72e6a25085c680f160001ebe8dc\"},\"usage\":{\"total_tokens\":5122}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25085cf913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bc00e72e6a25085c680f160001ebe8dc\"},\"usage\":{\"total_tokens\":5122}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bc00e72e6a25085c680f160001ebe8dc\"},\"usage\":{\"total_tokens\":5122}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "\u6839\u636e\u641c\u7d22\u7ed3\u679c\uff0c\"New York, New York\"\uff08\u7ebd\u7ea6\uff0c\u7ebd\u7ea6\uff09\u4f4d\u4e8e**\u7ebd\u7ea6\u90e1\uff08New York County\uff09**\u3002\n\n\u5177\u4f53\u6765\u8bf4\uff1a\n- **\u7ebd\u7ea6\u5e02\uff08New York City\uff09** \u662f\u7f8e\u56fd\u7684\u4e00\u4e2a\u7279\u6b8a\u884c\u653f\u533a\u5212\uff0c\u7531\u4e94\u4e2a\u533a\uff08boroughs\uff09\u7ec4\u6210\n- \u8fd9\u4e94\u4e2a\u533a\u540c\u65f6\u5bf9\u5e94\u4e94\u4e2a\u90e1\uff08counties\uff09\uff0c\u4f46\u4e0e\u7f8e\u56fd\u5176\u4ed6\u5730\u65b9\"\u90e1\u5927\u4e8e\u5e02\"\u7684\u60c5\u51b5\u4e0d\u540c\uff0c\u7ebd\u7ea6\u5e02\u7684\u4e94\u4e2a\u90e1\u662f**\u96b6\u5c5e\u4e8e\u7ebd\u7ea6\u5e02**\u7684\n- **\u66fc\u54c8\u987f\u533a\uff08Manhattan\uff09** \u5bf9\u5e94 **\u7ebd\u7ea6\u90e1\uff08New York County\uff09**\n- \"New York, New York\" \u8fd9\u4e2a\u5730\u5740\u901a\u5e38\u6307\u7684\u662f\u66fc\u54c8\u987f\u533a\uff0c\u4e5f\u5c31\u662f\u7ebd\u7ea6\u90e1\n\n\u6240\u4ee5\uff0c\"New York, New York\" \u6240\u5728\u7684\u90e1\u662f **New York County\uff08\u7ebd\u7ea6\u90e1\uff09**\u3002\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+  "usage": {
+    "completion_tokens": 232,
+    "prompt_tokens": 5274,
+    "total_tokens": 5506,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

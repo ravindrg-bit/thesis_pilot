@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:34:41.046251+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ae7a21e50340ce615232",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Scheduling Process\n\nTV stations operate on a **fixed linear schedule** where programs are broadcast at set times. The process begins in the **traffic department**, which builds a detailed log of all content for a day, week, or longer period. This log includes pre-recorded shows, live programs, commercials, promos, and public service announcements (PSAs).\n\nThe traffic department's schedule is then handed off to an **automation system** that executes the program log by playing back content from video playout servers. A **master control operator** oversees this process, ensuring everything runs on schedule, inserting weather bugs and logos, monitoring signal quality, and manually handling breaking news cut-ins.\n\n## Programming Blocks\n\nTV stations organize content into **programming blocks**\u2014groupings of similar shows aired in succession to keep viewers tuned in longer. For example:\n- **Daytime blocks** (talk shows, game shows)\n- **Primetime blocks** (highest-rated evening programming)\n- **Children's blocks** (Saturday morning cartoons or educational programming)\n- **Late-night blocks** (adult-oriented content)\n\nBlock programming is particularly common on cable TV, where reruns are arranged to fill daytime slots.\n\n## Commercial Integration\n\nCommercials are integrated into programming through **commercial breaks**. In commercial television, the fundamental unit is often the **\"block\"**\u2014the time between two commercial breaks, which may contain several program segments.\n\nTV stations use **bumpers** (short clips, usually under 5 seconds) to transition between programming and advertisements, serving as delimiters that help audiences distinguish between shows and ads. These often include phrases like \"[Show] will be right back after these messages.\"\n\n## Modern Technology\n\nBroadcast scheduling has evolved from manual tape loading to:\n- **Channel-in-a-box** software-based systems\n- **Cloud-based scheduling and playout**, where media organizations upload content to the cloud, create schedules, and distribute via transmitter, cable headend, or internet streaming\n\nModern systems can insert **SCTE markers** to trigger precise ad playout from third-party ad servers.\n\n## Ad Time Purchasing\n\nAdvertisers purchase airtime based on expected viewership of specific programs or time slots. Costs vary by:\n- Time of day (primetime is most expensive)\n- Program popularity\n- Expected audience size and demographics\n\nCommercials typically run 30-60 seconds and air during designated breaks within programming.\n\nSources:\n1. https://www.nyinterconnect.com/discover/news-notes/how-does-traditional-tv-advertising-work/\n2. https://tvtropes.org/pmwiki/pmwiki.php/MediaNotes/BlockProgramming\n3. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n4. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n5. https://sciendo.com/pdf/10.1515/nor-2017-0137\n6. https://files.eric.ed.gov/fulltext/ED375824.pdf\n7. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n8. https://linux-gal.com/wp-content/uploads/2023/11/tropea.pdf\n9. https://jacquelineprasai.files.wordpress.com/2017/10/prasai_imc.pdf\n10. https://www.nickandmore.com/kids-tv-history/broadcast/\n11. https://noggin.fandom.com/wiki/Programming_blocks",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780788860,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 760,
+        "prompt_tokens": 7831,
+        "total_tokens": 8591,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How TV stations air shows and commercials"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ae7af913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"c147ab5f6a24ae7a680f160001eb5e7c\"},\"usage\":{\"total_tokens\":7678}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ae7af913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"c147ab5f6a24ae7a680f160001eb5e7c\"},\"usage\":{\"total_tokens\":7678}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"c147ab5f6a24ae7a680f160001eb5e7c\"},\"usage\":{\"total_tokens\":7678}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Scheduling Process\n\nTV stations operate on a **fixed linear schedule** where programs are broadcast at set times. The process begins in the **traffic department**, which builds a detailed log of all content for a day, week, or longer period. This log includes pre-recorded shows, live programs, commercials, promos, and public service announcements (PSAs).\n\nThe traffic department's schedule is then handed off to an **automation system** that executes the program log by playing back content from video playout servers. A **master control operator** oversees this process, ensuring everything runs on schedule, inserting weather bugs and logos, monitoring signal quality, and manually handling breaking news cut-ins.\n\n## Programming Blocks\n\nTV stations organize content into **programming blocks**\u2014groupings of similar shows aired in succession to keep viewers tuned in longer. For example:\n- **Daytime blocks** (talk shows, game shows)\n- **Primetime blocks** (highest-rated evening programming)\n- **Children's blocks** (Saturday morning cartoons or educational programming)\n- **Late-night blocks** (adult-oriented content)\n\nBlock programming is particularly common on cable TV, where reruns are arranged to fill daytime slots.\n\n## Commercial Integration\n\nCommercials are integrated into programming through **commercial breaks**. In commercial television, the fundamental unit is often the **\"block\"**\u2014the time between two commercial breaks, which may contain several program segments.\n\nTV stations use **bumpers** (short clips, usually under 5 seconds) to transition between programming and advertisements, serving as delimiters that help audiences distinguish between shows and ads. These often include phrases like \"[Show] will be right back after these messages.\"\n\n## Modern Technology\n\nBroadcast scheduling has evolved from manual tape loading to:\n- **Channel-in-a-box** software-based systems\n- **Cloud-based scheduling and playout**, where media organizations upload content to the cloud, create schedules, and distribute via transmitter, cable headend, or internet streaming\n\nModern systems can insert **SCTE markers** to trigger precise ad playout from third-party ad servers.\n\n## Ad Time Purchasing\n\nAdvertisers purchase airtime based on expected viewership of specific programs or time slots. Costs vary by:\n- Time of day (primetime is most expensive)\n- Program popularity\n- Expected audience size and demographics\n\nCommercials typically run 30-60 seconds and air during designated breaks within programming.\n\nSources:\n1. https://www.nyinterconnect.com/discover/news-notes/how-does-traditional-tv-advertising-work/\n2. https://tvtropes.org/pmwiki/pmwiki.php/MediaNotes/BlockProgramming\n3. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n4. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n5. https://sciendo.com/pdf/10.1515/nor-2017-0137\n6. https://files.eric.ed.gov/fulltext/ED375824.pdf\n7. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n8. https://linux-gal.com/wp-content/uploads/2023/11/tropea.pdf\n9. https://jacquelineprasai.files.wordpress.com/2017/10/prasai_imc.pdf\n10. https://www.nickandmore.com/kids-tv-history/broadcast/\n11. https://noggin.fandom.com/wiki/Programming_blocks",
+  "usage": {
+    "completion_tokens": 760,
+    "prompt_tokens": 7831,
+    "total_tokens": 8591,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,140 @@
+{
+  "query_id": "gb_7677ee9542b8cd2d",
+  "engine": "perplexity",
+  "run_index": 8,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T10:19:07.868941+00:00",
+  "query_text": "Given a <span> in HTML I want to change its color on mouse over.",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given a <span> in HTML I want to change its color on mouse over."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "2428027c-4e65-42a6-907b-1bd8ac6e665f",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Use CSS `:hover` on the `span` itself. The `:hover` pseudo-class works on *all elements*, not just links, and it matches when the pointer is over the element.[6][7]\n\n```html\n<span class=\"my-span\">Hover me</span>\n```\n\n```css\n.my-span {\n  color: black;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf you want a smoother change, add a transition:\n\n```css\n.my-span {\n  color: black;\n  transition: color 0.2s ease;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf the `span` contains other styled parts or inline styles are overriding your rule, you may need to increase specificity or remove the inline styling; inline styles can override stylesheet rules unless you change that setup.[1]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780827547,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 174,
+      "prompt_tokens": 18,
+      "total_tokens": 192,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 2e-05,
+        "output_tokens_cost": 0.00017,
+        "request_cost": 0.005,
+        "total_cost": 0.00519
+      }
+    },
+    "citations": [
+      "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+      "https://www.shecodes.io/athena/4822-how-to-add-hovering-effects-in-html",
+      "https://teamtreehouse.com/community/how-do-i-make-an-svg-image-change-color-when-hovering-over-the-object-tag",
+      "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+      "https://www.youtube.com/watch?v=z7hwJvfSuYw",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+      "http://www.w3schools.com/Cssref/sel_hover.php"
+    ],
+    "search_results": [
+      {
+        "title": "Add a hover effect to a span - HTML & CSS - SitePoint",
+        "url": "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+        "date": "2019-06-05",
+        "last_updated": "2026-03-28",
+        "snippet": "I have a div with 2 spans to make the line, when I mouseover the div at the start, the color changes, but how do I make it so the whole div\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How to Add Hovering Effects in HTML - SheCodes",
+        "url": "https://www.shecodes.io/athena/4822-how-to-add-hovering-effects-in-html",
+        "last_updated": "2026-06-04",
+        "snippet": "Learn how to create a hover effect in HTML using the `:hover` pseudo-class selector and CSS. When the mouse pointer moves over the <div>, the background color\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How do I make an SVG image change color when hovering over the ...",
+        "url": "https://teamtreehouse.com/community/how-do-i-make-an-svg-image-change-color-when-hovering-over-the-object-tag",
+        "date": "2013-05-29",
+        "last_updated": "2026-05-19",
+        "snippet": "I want to be able to hover over any part of the icon (including transparent parts, like the screen) and just the current fills change color.",
+        "source": "web"
+      },
+      {
+        "title": "CSS - hover effect not working with <span></span> | Code Forum",
+        "url": "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+        "date": "2021-01-04",
+        "last_updated": "2026-05-18",
+        "snippet": "I want to make hover effect on my h1 headlines, but it does not work with the <span></span>. It works fine if the header is just wrapped in <h1></h1>.",
+        "source": "web"
+      },
+      {
+        "title": "HTML span Element: Styling Text Made Easy for Beginners! - YouTube",
+        "url": "https://www.youtube.com/watch?v=z7hwJvfSuYw",
+        "date": "2025-04-05",
+        "last_updated": "2026-06-06",
+        "snippet": "Learn how to use the HTML `\u227aspan/\u227b` element to style specific parts of text! This beginner-friendly tutorial will guide you through the\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "hover CSS pseudo-class - MDN Web Docs",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+        "date": "2026-04-17",
+        "last_updated": "2026-06-06",
+        "snippet": "To style links appropriately, put the :hover rule after the :link and :visited rules but before the :active one, as defined by the LVHA-order: :\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "CSS :hover Pseudo-class - W3Schools",
+        "url": "http://www.w3schools.com/Cssref/sel_hover.php",
+        "snippet": "The CSS :hover pseudo-class is used to select elements when you mouse over them. Tip: The :hover pseudo-class can be used on all elements, not only on links.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Use CSS `:hover` on the `span` itself. The `:hover` pseudo-class works on *all elements*, not just links, and it matches when the pointer is over the element.[6][7]\n\n```html\n<span class=\"my-span\">Hover me</span>\n```\n\n```css\n.my-span {\n  color: black;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf you want a smoother change, add a transition:\n\n```css\n.my-span {\n  color: black;\n  transition: color 0.2s ease;\n}\n\n.my-span:hover {\n  color: red;\n}\n```\n\nIf the `span` contains other styled parts or inline styles are overriding your rule, you may need to increase specificity or remove the inline styling; inline styles can override stylesheet rules unless you change that setup.[1]",
+  "usage": {
+    "completion_tokens": 174,
+    "prompt_tokens": 18,
+    "total_tokens": 192,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 2e-05,
+      "output_tokens_cost": 0.00017,
+      "request_cost": 0.005,
+      "total_cost": 0.00519
+    }
+  },
+  "run_profile": "scaleup"
+}

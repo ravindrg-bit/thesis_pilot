@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_09220f350cab0300",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:01:45.307926+00:00",
+  "query_text": "I have a glass that I put nothing but water in (filtered water from the fridge). After a week or so, the glass develops a whitish film and I have to clean it. What is that?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24a6c91f7f392db05d1c8d",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can explain what's happening to your glass. That whitish film is almost certainly **hard water deposits** (also called limescale or mineral deposits), even though you're using filtered water from your fridge.\n\n## What It Is\n\nThe whitish film is composed of **calcium and magnesium minerals** that are left behind when water evaporates. Here's why this happens even with \"filtered\" water:\n\n- **Fridge filters don't typically soften water**: Most refrigerator water filters use activated carbon, which reduces chlorine, taste, and odor, and may remove some contaminants\u2014but they do **not** remove dissolved calcium and magnesium that cause water hardness.\n\n- **Slow evaporation concentrates minerals**: When you leave water sitting in a glass for a week, even small amounts of dissolved minerals become concentrated as the water slowly evaporates. Over time, these minerals crystallize and bond to the glass surface, forming that whitish, chalky film.\n\n- **85% of U.S. homes have hard water**: According to the U.S. Geological Survey, the vast majority of American households have hard water to some degree.\n\n## Why It Builds Up Over a Week\n\nEven if your water is only moderately hard, leaving it in a glass for an extended period allows:\n- Gradual evaporation, leaving mineral residue behind\n- The minerals to chemically bond with the microscopic pores in the glass surface\n- Layer upon layer of deposits to accumulate, making the film more noticeable\n\n## How to Confirm\n\nYou can easily test if this is mineral buildup: **wipe the cloudy area with white vinegar**. If the film disappears or noticeably reduces, you've confirmed it's hard water deposits. If it stays unchanged, the glass may be permanently etched (though etching typically takes much longer and harsher conditions).\n\n## Prevention\n\n- **Rinse and dry glasses thoroughly** after use rather than letting water evaporate\n- **Use a water softener** if you want to eliminate the problem at the source\n- **Final rinse with distilled water** if you're particularly concerned about spotting\n\nThe good news is that this buildup is generally harmless to your health and can be cleaned off with acidic solutions like vinegar.\n\n---\n\nSources:\n1. https://crystalquest.com/blogs/health-wellness-home/hard-water-spotty-glassware?srsltid=AfmBOoqaZWrZoKeubaWMFRCHVu6OBUwe5z-jIiVXA_-0gC_A34kVmLSh\n2. https://edscleaning.com/remove-hard-water-stains-from-glass-without-scratching/\n3. https://www.microfiberwholesale.com/blogs/blog/prevent-hard-water-etching-stainless-and-glass\n4. https://www.getmywindowsclean.com/the-science-of-removing-hard-water-stains-from-glass/\n5. https://www.meyerscompaniesinc.com/blog/2023/february/why-does-my-home-s-tap-water-leave-white-residue/\n6. https://www.seattlecommercialcleaners.com/mineral-buildup-on-windows/\n7. https://learnglassblowing.com/removing-hard-water-stains-from-glass-a-comprehensive-guide/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780786890,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 662,
+        "prompt_tokens": 8813,
+        "total_tokens": 9475,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "I have a glass that I put nothing but water in (filtered water from the fridge). After a week or so, the glass develops a whitish film and I have to clean it. What is that?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24a6c8a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4480afa96a24a6c8680f160001eb53b5\"},\"usage\":{\"total_tokens\":8627}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24a6c8a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4480afa96a24a6c8680f160001eb53b5\"},\"usage\":{\"total_tokens\":8627}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4480afa96a24a6c8680f160001eb53b5\"},\"usage\":{\"total_tokens\":8627}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can explain what's happening to your glass. That whitish film is almost certainly **hard water deposits** (also called limescale or mineral deposits), even though you're using filtered water from your fridge.\n\n## What It Is\n\nThe whitish film is composed of **calcium and magnesium minerals** that are left behind when water evaporates. Here's why this happens even with \"filtered\" water:\n\n- **Fridge filters don't typically soften water**: Most refrigerator water filters use activated carbon, which reduces chlorine, taste, and odor, and may remove some contaminants\u2014but they do **not** remove dissolved calcium and magnesium that cause water hardness.\n\n- **Slow evaporation concentrates minerals**: When you leave water sitting in a glass for a week, even small amounts of dissolved minerals become concentrated as the water slowly evaporates. Over time, these minerals crystallize and bond to the glass surface, forming that whitish, chalky film.\n\n- **85% of U.S. homes have hard water**: According to the U.S. Geological Survey, the vast majority of American households have hard water to some degree.\n\n## Why It Builds Up Over a Week\n\nEven if your water is only moderately hard, leaving it in a glass for an extended period allows:\n- Gradual evaporation, leaving mineral residue behind\n- The minerals to chemically bond with the microscopic pores in the glass surface\n- Layer upon layer of deposits to accumulate, making the film more noticeable\n\n## How to Confirm\n\nYou can easily test if this is mineral buildup: **wipe the cloudy area with white vinegar**. If the film disappears or noticeably reduces, you've confirmed it's hard water deposits. If it stays unchanged, the glass may be permanently etched (though etching typically takes much longer and harsher conditions).\n\n## Prevention\n\n- **Rinse and dry glasses thoroughly** after use rather than letting water evaporate\n- **Use a water softener** if you want to eliminate the problem at the source\n- **Final rinse with distilled water** if you're particularly concerned about spotting\n\nThe good news is that this buildup is generally harmless to your health and can be cleaned off with acidic solutions like vinegar.\n\n---\n\nSources:\n1. https://crystalquest.com/blogs/health-wellness-home/hard-water-spotty-glassware?srsltid=AfmBOoqaZWrZoKeubaWMFRCHVu6OBUwe5z-jIiVXA_-0gC_A34kVmLSh\n2. https://edscleaning.com/remove-hard-water-stains-from-glass-without-scratching/\n3. https://www.microfiberwholesale.com/blogs/blog/prevent-hard-water-etching-stainless-and-glass\n4. https://www.getmywindowsclean.com/the-science-of-removing-hard-water-stains-from-glass/\n5. https://www.meyerscompaniesinc.com/blog/2023/february/why-does-my-home-s-tap-water-leave-white-residue/\n6. https://www.seattlecommercialcleaners.com/mineral-buildup-on-windows/\n7. https://learnglassblowing.com/removing-hard-water-stains-from-glass-a-comprehensive-guide/",
+  "usage": {
+    "completion_tokens": 662,
+    "prompt_tokens": 8813,
+    "total_tokens": 9475,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

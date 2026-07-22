@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_73b258264b7984d1",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T19:02:10.381356+00:00",
+  "query_text": "Sign up for a photography course at the community center",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2711ad02f4d3f9001e6948",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found several community centers and organizations offering photography courses with registration information. Here's how to sign up:\n\n## General Steps to Register for a Photography Course at a Community Center\n\n### 1. **Phoenix Center for the Arts** (Phoenix, AZ)\n- **Website:** Browse photography classes at https://phoenixcenterforthearts.org/class/photography/\n- **How to register:** Click the \"Sign Up\" button at the bottom of a class description to register through their Mindbody registration platform\n- **Requirements:** A Mindbody account is required\n- **Contact:** Call (602) 254-3100 or email contacts@phoenixcenterforthearts.org for registration or financial aid questions\n- **Note:** Students must digitally sign a Student Agreement before attending in-person classes\n\n### 2. **UTSA Southwest Community Art** (San Antonio, TX)\n- **Website:** https://www.utsa.edu/pace/community-art/adult/photography.html\n- **How to register:**\n  1. Click the \"Register Now\" button\n  2. Click \"Sign In\" at the top right\n  3. Create an account (username, password, email) if you don't have one\n  4. Navigate to your desired course\n  5. Click \"Add to Cart\"\n  6. Complete payment\n  7. You'll receive a registration confirmation email\n\n### 3. **Center for Community Arts** (Walnut Creek, CA area)\n- **Website:** https://www.communityarts.org/classes/photography-digital-media\n- Browse and register for digital media and photography classes at their Shadelands location\n\n### 4. **Los Angeles Center of Photography**\n- **Website:** https://lacphoto.org/\n- Registration is currently open with a \"Sign Up Here!\" option\n\n### 5. **Online Options**\n- **ed2go through Pitt Community College:** https://www.ed2go.com/pittcc/online-courses/discover-digital-photography/\n  - Fully online digital photography courses\n  - No prerequisites required\n  - Works on PC, Mac, or Chromebook\n\n---\n\n## Tips for Registration:\n- **Create accounts in advance** on the registration platforms (Mindbody, etc.)\n- **Check for financial aid** options if available\n- **Review materials lists** before the first class\n- **Sign required agreements** (like student agreements) before attending\n\nIf you need help with a specific community center, please let me know your location and I can search for more targeted options!\n\nSources:\n1. https://phoenixcenterforthearts.org/class/photography/\n2. https://lacphoto.org/\n3. https://www.utsa.edu/pace/community-art/adult/photography.html\n4. https://www.sfcc.edu/programs/photography/\n5. https://www.ed2go.com/pittcc/online-courses/discover-digital-photography/\n6. https://www.communityarts.org/classes/photography-digital-media",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780945325,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 638,
+        "prompt_tokens": 1363,
+        "total_tokens": 2001,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Sign up for a photography course at the community center"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2711ac98b2",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"919fd6846a2711ac680f160001f02945\"},\"usage\":{\"total_tokens\":1212}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2711ac98b2",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"919fd6846a2711ac680f160001f02945\"},\"usage\":{\"total_tokens\":1212}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"919fd6846a2711ac680f160001f02945\"},\"usage\":{\"total_tokens\":1212}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found several community centers and organizations offering photography courses with registration information. Here's how to sign up:\n\n## General Steps to Register for a Photography Course at a Community Center\n\n### 1. **Phoenix Center for the Arts** (Phoenix, AZ)\n- **Website:** Browse photography classes at https://phoenixcenterforthearts.org/class/photography/\n- **How to register:** Click the \"Sign Up\" button at the bottom of a class description to register through their Mindbody registration platform\n- **Requirements:** A Mindbody account is required\n- **Contact:** Call (602) 254-3100 or email contacts@phoenixcenterforthearts.org for registration or financial aid questions\n- **Note:** Students must digitally sign a Student Agreement before attending in-person classes\n\n### 2. **UTSA Southwest Community Art** (San Antonio, TX)\n- **Website:** https://www.utsa.edu/pace/community-art/adult/photography.html\n- **How to register:**\n  1. Click the \"Register Now\" button\n  2. Click \"Sign In\" at the top right\n  3. Create an account (username, password, email) if you don't have one\n  4. Navigate to your desired course\n  5. Click \"Add to Cart\"\n  6. Complete payment\n  7. You'll receive a registration confirmation email\n\n### 3. **Center for Community Arts** (Walnut Creek, CA area)\n- **Website:** https://www.communityarts.org/classes/photography-digital-media\n- Browse and register for digital media and photography classes at their Shadelands location\n\n### 4. **Los Angeles Center of Photography**\n- **Website:** https://lacphoto.org/\n- Registration is currently open with a \"Sign Up Here!\" option\n\n### 5. **Online Options**\n- **ed2go through Pitt Community College:** https://www.ed2go.com/pittcc/online-courses/discover-digital-photography/\n  - Fully online digital photography courses\n  - No prerequisites required\n  - Works on PC, Mac, or Chromebook\n\n---\n\n## Tips for Registration:\n- **Create accounts in advance** on the registration platforms (Mindbody, etc.)\n- **Check for financial aid** options if available\n- **Review materials lists** before the first class\n- **Sign required agreements** (like student agreements) before attending\n\nIf you need help with a specific community center, please let me know your location and I can search for more targeted options!\n\nSources:\n1. https://phoenixcenterforthearts.org/class/photography/\n2. https://lacphoto.org/\n3. https://www.utsa.edu/pace/community-art/adult/photography.html\n4. https://www.sfcc.edu/programs/photography/\n5. https://www.ed2go.com/pittcc/online-courses/discover-digital-photography/\n6. https://www.communityarts.org/classes/photography-digital-media",
+  "usage": {
+    "completion_tokens": 638,
+    "prompt_tokens": 1363,
+    "total_tokens": 2001,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

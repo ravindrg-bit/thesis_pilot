@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "gemini",
+  "run_index": 1,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T04:39:59.598721+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 04:39:59 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=14999",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Listen up, kid, and listen close. You wanna make it in this C# neighborhood? You gotta stop being an amateur. \n\nI see you writing code where your classes are `new`-ing up their own tools. You got a `Car` class, and inside it, you write `_engine = new V8Engine()`. \n\n*Madone!* That\u2019s a rookie mistake. You just *tightly coupled* your operation. Now, if the cops bust that specific engine, your whole car is going down to the scrapyard. If you wanna swap that V8 for a quiet electric motor to do a stealth job, you gotta rewrite the whole damn car. That\u2019s bad for business.\n\nIn our family, we use **Dependency Injection (DI)**. We don\u2019t make our own tools. We let the Boss hand 'em to us. \n\nHere\u2019s how the syndicate works.\n\n---\n\n### 1. The Contract (The Interface)\nFirst rule of the family: we don\u2019t talk about specific guys; we talk about *roles*. You don't say \"I need Luigi.\" Luigi might be sleeping with the fishes tomorrow. Instead, you say \"I need a *hitman*.\" \n\nIn C#, we call this an **Interface**.\n\n```csharp\n// This is the contract. Anyone who can do this job is in.\npublic interface IWeapon\n{\n    void Use();\n}\n```\n\nNow, we got options. We can have a Tommy Gun, or maybe something quieter like a piano wire. They both fit the contract.\n\n```csharp\npublic class TommyGun : IWeapon\n{\n    public void Use() => Console.WriteLine(\"Ratt-a-tatt-tatt! Fuggetaboutit!\");\n}\n```\n\n---\n\n### 2. The Wise Guy (The Class)\nNow, here\u2019s your enforcer. He doesn't go shopping for guns. He doesn't build guns. He just stands there, opens his coat, and expects the Boss to put a weapon in his hand. This is called **Constructor Injection**.\n\n```csharp\npublic class Enforcer\n{\n    private readonly IWeapon _weapon; // This is the tool\n\n    // The Constructor: \"Hey Boss, hand me the heat.\"\n    public Enforcer(IWeapon weapon)\n    {\n        _weapon = weapon; \n    }\n\n    public void CollectProtectionMoney()\n    {\n        Console.WriteLine(\"We're here for the cash...\");\n        _weapon.Use(); // Boom.\n    }\n}\n```\nSee that? The `Enforcer` doesn't know *what* kind of weapon he\u2019s getting. He just knows it implements `IWeapon`. If the Boss hands him a banana, he's gonna try to shoot you with it. He just does what he\u2019s told.\n\n---\n\n### 3. The Don (The IoC Container)\nSo, who is \"The Boss\" putting this all together? In modern C# (.NET Core/6/8), we got a built-in Boss. He\u2019s the **IoC (Inversion of Control) Container**. He sits in the back of the social club (`Program.cs`) and manages the roster. \n\nYou tell the Boss: *\"Hey, whenever someone asks for an `IWeapon`, give 'em a `TommyGun`.\"*\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Registering the crew with the Boss\nbuilder.Services.AddTransient<IWeapon, TommyGun>();\nbuilder.Services.AddTransient<Enforcer>(); \n\nvar app = builder.Build();\n```\n\nWhen the application runs and someone asks for an `Enforcer`, the Boss sees that `Enforcer` needs an `IWeapon`. The Boss grabs a `TommyGun`, slaps it in the `Enforcer`\u2019s hands, and sends him on his way. You didn't write a single `new` keyword. Clean hands. No fingerprints.\n\n---\n\n### 4. The Lifetimes (How long the guys stick around)\nThe Boss is picky about how he manages his crew. He\u2019s got three ways of handin' out resources. We call these **Service Lifetimes**:\n\n*   **Transient (`AddTransient`)**: *The Burner Phone.* \n    Every time you ask the Boss for one, he gives you a brand-new one. You use it once, you throw it in the river. No two guys ever share the same one.\n*   **Scoped (`AddScoped`)**: *The Getaway Driver.* \n    He stays with you for the duration of a single heist (in web terms, one HTTP request). Everyone working on that specific heist shares this guy. Once the heist is over and the loot is split, he disappears.\n*   **Singleton (`AddSingleton`)**: *The Underboss.* \n    There is only *one*. He is created when the family is formed, and he stays in the office until the feds shut the whole operation down. Everybody talks to the exact same guy.\n\n---\n\n### Why do we do this?\n1.  **Testability (No Snitches):** If you wanna test your `Enforcer` class, you don't want him *actually* firing real bullets in your test room. With DI, you can hand him a `MockWeapon` made of cardboard. He'll shoot the cardboard weapon, nobody gets hurt, and your tests pass.\n2.  **Flexibility:** If the family decides to switch from `TommyGun` to `LaserBlaster` next week, you only change *one line* of code in the Boss's office (`Program.cs`). The `Enforcer` class doesn't change at all.\n3.  **Laziness:** You don't have to manage who needs what. The Boss does all the heavy lifting.\n\nNow go fix your code before I have to send Tony to come look at your repositories. Capisce?",
+              "thought": null,
+              "thought_signature": "EpEkCo4kAQw51seume_UHJhHU72we2Ua6P_dKGjRnaIYxql4jH0mYAU3OZmbweK5anUVa0_skDgvl4DqPFCFsjLu2_Kzi8MN2l76O6Rcf087yrPL9LAxgOOYMohk1IeTI2_FX5bIQwkO6cr1wQW9Q2dIjOkJ54Eq3-7rAI_1WiG9O_xhkXqwClpfsqlB7M4WWgtzS9-dYobBfZwRwUuqQ-QmRx4sT71kTN2C_Tu33qOHyb583bDKb1Yb3R9qQVy4EQmSEzsGQZBIYn1s6g-w1IA1OIsYS2rAjzBpqN9fijsqFNX6IbifiO5fde2k1ETl1QJj8SjvBKEzHVZpSyLKgWC78wGIYEgkhBAMZcry9Qn6-0-OZEsBQVNAi4odbt-NT3lvJjMSulbg9vAhSk-dwsgFkWxP7qvb_Cv2_T9eiQJB1cuQUa0QYdVEPSUy4wYHha7CxoJgyO8GKDaN6hgKIGcDi1MbfZFdVznmddeHGZODU3jfYxqRKwl78DUEJ46Tc9c7bBq3IPdcgFkg5PczfQ3Wg6JaRwi_CbLXSedP8DB0EeprNx9gpBd5fdivAiOVjOcZuqMHtCm8OsBEhy-rzomeWrTgh116aJNMS5u2hQGpfdgfy7YN7i-eRf50pmYpJLSu0jAYk5SdegckFqcQkjKWwFAZpZQ0c1w1XS8zkiiHkbSY-ft1OL6ELDWvJGGdH_MGgMI8im7geP90avLHvIdQ5hnOgXVb5igKPxG-oMS694f61WtKDor6efGmNTTBdyqZoeJJ5QyJSuyNczm2vu7-YYaXrWO1PreR9akw1nvEPmHoi_pNaEeGKyjUlZ3k2A7nQ5pgOBXh0iqbmhErdzf-xIGcxmMvjg-4w8fMNbt-6Mbi5jxtI4m_qW7diwfgnR-FN2WR7xG5ydsYcebgOe-_SWFxpmw3yR89seJDJK8coKq7aK5P6wnwsNdQn5ayX4YI2YY3TQszZ0XSOEGaJPz14_-rjdgyhGETxsCda-T8_YBDjYAYGjhyuibVfg-Rveutx7-uTJKH0tH1HQuR4a-hH4rYZxXVE0luBzqI-dCo8Yzuy8q_Eg1byX5Cg9ZbznDCBTv_8u6KrvuWan5D_EH6PODfrKs_sDnpI7O9bwthMi-PeISXkIH8KgMldC88hvcCaOP2Z75QlNU6DrzWvHp8HP3MScmnpcqamm52ZS9mNoRY41diHRSjzDf2YtNBxWjAjsMN6HJyxdbxyI8_L3n_a1UMKCzru4y4cbf6iYyXWg77X7qBTdELagQW7h2t0AaOXY9-_GO0_Y18eK15wwvQRQVNIYHOGSw2R1iymE-OnbQ3PZAfXoHREawcI_K9owE_VFoy0f-Kkv3QfqemlCw67CTriPe4hKQ5HybbpC6OJ-d3ZwCYe46eErx_nQZgrFBE1i_idLN9g5E4aBNpW9fAaYSFWCXKWgv41tcoqWZ6E29W86azH6szIZktVcM7WHIKnWj02C69gJKreOUht3GCMcb9Ory-1P9eF7HKDrc_6htqnDzeLlRd1jO5ggUtQESWRJQzJMkmhLwfYNTjKu6Kkg5qgNOO5hesgFYQzCh1tCfTU6uafV0S2--iuKT7Y4EWe85c7S7F_MBwwWxfqRq7YKGn-W_L2Bk0irnyLs4ZsLXYK4eHRoPYYhBQCKqe1DeoFbYTqvg0-v44khh6gnM5gN5x1nn_-ygsgPW8lxbGT7Fy6vCm5wSCQuxJG6Rnyj7-Z61pOAG9zSLUNBtwFR4ur--aYItYwF9N2F74zJYbbG4HGYt16Vh-9RcIuSygr0E5TIqxQEaVUgHThOdb-0P72SZZf6PuHuVwS5zi-n5p-FAeHSS0Hex_ZOdSKZWsE37jcHGRglWz49w4kQ0VmEhpe0Fm6bgNt5jVdOqGv1-tban76qbVbZYRHSCUvn6Lrb4jfg_CdInvO4McZ3pIzYpbidoowjdLLeI_MQRtYEuOt-HPdol9CEW5bvntHbp98VgtCmci8v05bSMz4DQketZaHLksDED02NuBwK07DcadPO0ktbebDmzk1J8nFrS7l9EtZ4bpPQifdiUSsZoJ1iBJ_l0jBmzPkCeUAwikTg8AtLBSQZDQwc3NWhN4m03Ix9hkd-eRf_gMXAEecg6QteesKsD-tkf9iEMCmiX_mkJNBTYLdNq_hcb8Lz5d9yA3vEhHwGEe0lQx9SSyDWR1U0iSpBFUIJ1CLnZ2a0b-1e3giRG1XLRPdM24rqeV5z6QPLmu1a9i7UJgq2Iez_CLCSyuDkn4dY4ZaBbXk6mUNRjWErpZhdHWkDfCuwTSNMGw7xO8P-TF304DK56wJgWlVXXq9Ordko3HJX5yuXBFvBT4Y-fyQ83z44_xe368LVMBDycXQX6qkg298gAwuD324Stz_tP5rqRH31MlVccn1Dp9UMk2oa0ACmSFT6u-ig9VTqcBJb266tshIabZXXi_umpFKcDvPMQ7W2uwqJFtCNpfp5w1o714iFOVAnosaMwV2bcIEaZtNlVCpfD-cLwQRWLLDgBoTwQse8U5iTOpghQbEJ7XUBMaljJMvh-3svdbA1cKgFVAE5w9o5DuQTuLBIoqnsXcgESmxrBsW1ZBFs3MB62FoCdid9_-dAbqyvKUz5RLgeTGLjykC_lFaP3vzGDgoBSnhAm4hmQGauIx4JuHgbgBdR8JVcHxe_V8RklaKbaXLT9YabhZxcNxjI3CrZq_9fBo0x45VrxDO7PjdeefA5itTq_N6yKSkFB-mff23LhLHPQk79bv0HNtwBkvAiIOaAFAkPBXqXMO6DtADmy3qiKxmoWbAwAfPi-_8lhiybzRA7DbEz8MadDm8bHQHzk9IXzGJV9JXwCsfPMe_-MA3jgTnCusYXUEIgfRp4pX_UEe6bdGgDh1hJIbF3L0HUlPOM7V3NPckRMMA0WiTzh1bEzS8fcujfMaEWeONqoNjUoi_WNPscFhXYRxiqWukFeJstRNYCtL-0G710m7n5ktf-BwlU_RDypVjEqOc7LnOYp4WMSDS5Li_zWq_lEsAa4nKqBJ38-lfXpDkw064kB656VcmrEMy0kFWUhYpILjm8KC-ZNqaM1747HE7doM7R2KW0zsBU6xSVr0INQ35i9D2ayL98Cvjy7lX8tVOvVujYn3E9pqrYN2ALyN_bXzRCHvTD2CJK_qXq5pnEPW2fKowPlIuifloPUXUp8sYbNnjaxZS7cOzEj-Y_yvwX2iZ9pb_FQtyTleNfYU2r7rQ_-WIgbuWdfUlRMIgAdvoraX_nQ0Bzs0-jrxtR9OXMhFgHaWesrEmNtCi_KL3DwifspuvzBXLmqI5H_YwWoiQ2LkHvq4VVOzddo2saDeNYsLRFm-5BlOxcjU-gvAQMUZD3ibpmOUou_ak4EKVJ73OOXaABNgbW6_wTjz3oJddymGlyZMafUtUzd_41v9r0iwVfvxugPhPltUd5l1U4l3nx93L1fUSyUtEgezKb668PfD2ubScAt5ma10PszwBqr27j53smjFOF0rcM7gVTbH82C99BGWTY3Vw3mtsDGuEXXDciH7dgJnUs_1rjId949jxTDlKY_3syBnNFxHU9ZRewKp8bYWHTquRAZAi8DjlcWH-xEtw62s9GVc7FPs9xWSqvDEAeGIxIQurms7LC3Aka9rTW8LV6fyvl_wAjGnzWUEXsPkQLAM8gUPuuEBsQOgD9Yvo03lkcpax-n8hLiaNIJvovSWuJ6nX21DfcPGkrv2JtLKgCJ3Px54iDE2EcwgsQwzpBHGoeUC0YLVzZu2zb80fYde2_-UGoKeiHACLnGwqrFWqKieV4TyPPJ_GuRzFX4RkYC9r55aEZUWL4GllBRnxb_9cbDUr7qDjc6uZz5D9ecsuKGxsXmNy4hxEcXjocDhrR2SM64cmSr1yLzItWIPOS-F15K8cRFfvePRp2h-2X48QaVP40yAw0lMtEVAUEYioSSohRHZ8xLe5YGKjOXFlmB7FYCIFM29gs6Wq8d5LEYoWJIpt1Blmi0kSSTt4ZfiwX7az4ocN8x-ri1jEdSG8wG2nQC35dXBvp6il6NItqLxn61f6y2KA-Ailb0GohFG3VeK6hafAJi3ChZi093lLsEF4NKTSt0raLGZ6epB7lgSSVwykqTMyHYItaCqnHL8lI3Ys_CURaZPqrTqVapP6tRRmH5ewRlWu0QszcVWY2P_qb10egh2gFgaeVFsdN-BHiZ7dIjzkoVXq_DdQuhBoU4dJzbfxAGAnYPVPJ5a910bwHc8Jod7_XbLk-WFJPoTOlMGAGFZzxTMq41NucrAjUbQOMOYFHQLQq6zIZzE_piHaxxGn92ptPkS0xb3bJNO-eEmlI1OlaNO56SitCMd_RJ8QrVh4cdAGAd1cIwpApgBg8PLqjucS_DznHw30gOoGYTGyBcEncpXLvlJlMDi_XQWXLgn4LGQYfSVscw3zYyq4AHt0ophuTQY_-zyp6quiO_LY0t1GBASJWT8ys3FujA4C3oBNU23-83S-_g1SX5dGA5gYiVsr-iswGICkQSWKXcTnfJvbsYgf73L0CFE4y2RTchOHSORWg1RFW4rPjxCHWRvZNuxrCC9-jcmF3iaVRLj28RYfR5lot_rHuH9lmy2J4yal7jvNM1A_LXXRCTjN-Y1GC0GuhyvAYsdQQuGrf4w2rwHD_BcvHdZRhO6DAXSoqjTZ3CknhIFNETYTVGx4FpBSBS3FYNFoZaDQF3AcyNbAU8r-gcW43pVtjh3M5dmo8Z_SbwU8-yTiFB_xOO43eTSa9nUGr9Y7GMKFnPEYDrbQqidJ3sVw-468wcS7MZW8KkzSgVrcADLXmnsMW4Zzc8_i51Jfv8HN7e6nGLiD5tocVzGLPOMbCfPKQ3W554e7rt8bjxawJyM2XN7rwZwrw3ks3YogE6rFhvOZiZG4mRpAfblC4Pwwij_LMwgGBZY4HrL0IpAMQj_7r7a5sNCPQYWVJK2xVjxiSmm3GBViztk7OixOmgCuqDqwgFTSs95TGWR_hhFhd129yyeN24AxD37yK1fzhj7mMjum_cgSZQbAvCHct63QX-zqQVZU1JTbB1C3G2B8U2Fvmah8wRmpCCAooKB0c-LFebgbuHM4O9wSqAucAYyd8kIGGEtJ1s8Y0kb-KQuH7FEYsDUBtPdS1JTQyUX9uSuv4O5cQVYQ6o6ik_9DZu3TIrtW7hsTGHRsLRjrpMkiS2gW1dAbndd2HexB2rD8hxk8Fu88JgtiI4SbG8k1doqBq4Q44QE7n6hpLYtGuLeYvKPWMvlbYScr8WcGGHWTeZq536GlGdvixjMA5BGC0WRYQNQlvs24hjtLtKGFcHOKlgJHXxHj2omF-6rVhdTtHfJF8YqocupQE83Tj_U7zm7lQEQem8p3_OcXe5kw8VjcK5ur5vQxhZoscgVhi165fSKW7cSo8_GGCdmFqm44qgL99L4UsA5hJ29iLcgO3AlTthVXur25tQVHdnJSSvF-lnOWwph1Qj8jJcanZKbmbbL823lZa1Z6Y2-dsl0SMS6A9AqOBa1wQVdL7TweeCsrrTHkv0SXH14E4xK25OiVP5cRRQ29Rd1ZhsqUurZ2LItGFaZvdbxGCjvVo2WvhM07q3XFYh-eidNJdUuG9luavuH3SsTsv5_JuJMVsZoDEihEgA73HpfpsWWfbnwtSVkTx61afpcW_m6ciSm2wfTmpmfulwU4BLLdoUyuAg6wkAf8fNbdnwmKmjOE27wXRGz-8m853h2Zw2CAhlweV1ahofYvKe6RYYqtFVlS0pyUuitcBEHDphQe1VzEqd8cU2korfVCgKoo3DX3zDtg5_OTIo8CeXTQgGiwqfn9pbGetbkZ3PPOV0qr_Fu5c2tnaYbK7Q8mpENlIe1W6QsteYG_pbDsPTBmikECzXLKufjmRcEMc35AzAT40cOprjnxryNdrZmfFErVzZhii9-M-v-EZi2dfci-teUxhGEitZBXrGtdVyR_oj54ghd37odO9dRIkIAaUDLPbyHW84qsmpFBlJW9zTc_ZYKxCzm9FgD7-bNuCiunhTv6poSzSfB4DKxsltHulAGl73k02dllwVldLvI0-nU0FCZH28mVfXbWWywqXut56ixedV-h2q2B5DG-x8ycxSpjO-mhjQmsnbMKwyV9bAntrziLSmX7xzr7DmCQcVh0_2WDlk13as=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "kEcmav6LKO6MvdIPq8SFgQU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1285,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 13,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 13
+        }
+      ],
+      "thoughts_token_count": 1224,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2522,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Listen up, kid, and listen close. You wanna make it in this C# neighborhood? You gotta stop being an amateur. \n\nI see you writing code where your classes are `new`-ing up their own tools. You got a `Car` class, and inside it, you write `_engine = new V8Engine()`. \n\n*Madone!* That\u2019s a rookie mistake. You just *tightly coupled* your operation. Now, if the cops bust that specific engine, your whole car is going down to the scrapyard. If you wanna swap that V8 for a quiet electric motor to do a stealth job, you gotta rewrite the whole damn car. That\u2019s bad for business.\n\nIn our family, we use **Dependency Injection (DI)**. We don\u2019t make our own tools. We let the Boss hand 'em to us. \n\nHere\u2019s how the syndicate works.\n\n---\n\n### 1. The Contract (The Interface)\nFirst rule of the family: we don\u2019t talk about specific guys; we talk about *roles*. You don't say \"I need Luigi.\" Luigi might be sleeping with the fishes tomorrow. Instead, you say \"I need a *hitman*.\" \n\nIn C#, we call this an **Interface**.\n\n```csharp\n// This is the contract. Anyone who can do this job is in.\npublic interface IWeapon\n{\n    void Use();\n}\n```\n\nNow, we got options. We can have a Tommy Gun, or maybe something quieter like a piano wire. They both fit the contract.\n\n```csharp\npublic class TommyGun : IWeapon\n{\n    public void Use() => Console.WriteLine(\"Ratt-a-tatt-tatt! Fuggetaboutit!\");\n}\n```\n\n---\n\n### 2. The Wise Guy (The Class)\nNow, here\u2019s your enforcer. He doesn't go shopping for guns. He doesn't build guns. He just stands there, opens his coat, and expects the Boss to put a weapon in his hand. This is called **Constructor Injection**.\n\n```csharp\npublic class Enforcer\n{\n    private readonly IWeapon _weapon; // This is the tool\n\n    // The Constructor: \"Hey Boss, hand me the heat.\"\n    public Enforcer(IWeapon weapon)\n    {\n        _weapon = weapon; \n    }\n\n    public void CollectProtectionMoney()\n    {\n        Console.WriteLine(\"We're here for the cash...\");\n        _weapon.Use(); // Boom.\n    }\n}\n```\nSee that? The `Enforcer` doesn't know *what* kind of weapon he\u2019s getting. He just knows it implements `IWeapon`. If the Boss hands him a banana, he's gonna try to shoot you with it. He just does what he\u2019s told.\n\n---\n\n### 3. The Don (The IoC Container)\nSo, who is \"The Boss\" putting this all together? In modern C# (.NET Core/6/8), we got a built-in Boss. He\u2019s the **IoC (Inversion of Control) Container**. He sits in the back of the social club (`Program.cs`) and manages the roster. \n\nYou tell the Boss: *\"Hey, whenever someone asks for an `IWeapon`, give 'em a `TommyGun`.\"*\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Registering the crew with the Boss\nbuilder.Services.AddTransient<IWeapon, TommyGun>();\nbuilder.Services.AddTransient<Enforcer>(); \n\nvar app = builder.Build();\n```\n\nWhen the application runs and someone asks for an `Enforcer`, the Boss sees that `Enforcer` needs an `IWeapon`. The Boss grabs a `TommyGun`, slaps it in the `Enforcer`\u2019s hands, and sends him on his way. You didn't write a single `new` keyword. Clean hands. No fingerprints.\n\n---\n\n### 4. The Lifetimes (How long the guys stick around)\nThe Boss is picky about how he manages his crew. He\u2019s got three ways of handin' out resources. We call these **Service Lifetimes**:\n\n*   **Transient (`AddTransient`)**: *The Burner Phone.* \n    Every time you ask the Boss for one, he gives you a brand-new one. You use it once, you throw it in the river. No two guys ever share the same one.\n*   **Scoped (`AddScoped`)**: *The Getaway Driver.* \n    He stays with you for the duration of a single heist (in web terms, one HTTP request). Everyone working on that specific heist shares this guy. Once the heist is over and the loot is split, he disappears.\n*   **Singleton (`AddSingleton`)**: *The Underboss.* \n    There is only *one*. He is created when the family is formed, and he stays in the office until the feds shut the whole operation down. Everybody talks to the exact same guy.\n\n---\n\n### Why do we do this?\n1.  **Testability (No Snitches):** If you wanna test your `Enforcer` class, you don't want him *actually* firing real bullets in your test room. With DI, you can hand him a `MockWeapon` made of cardboard. He'll shoot the cardboard weapon, nobody gets hurt, and your tests pass.\n2.  **Flexibility:** If the family decides to switch from `TommyGun` to `LaserBlaster` next week, you only change *one line* of code in the Boss's office (`Program.cs`). The `Enforcer` class doesn't change at all.\n3.  **Laziness:** You don't have to manage who needs what. The Boss does all the heavy lifting.\n\nNow go fix your code before I have to send Tony to come look at your repositories. Capisce?",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1285,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 13,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 13
+      }
+    ],
+    "thoughts_token_count": 1224,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2522,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

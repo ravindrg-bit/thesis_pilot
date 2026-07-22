@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_eaab9147ac75176b",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-05-31T23:38:17.950015+00:00",
+  "query_text": "which came first the walking dead comic or show",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cc665440406406104e7f8",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was created by **Robert Kirkman** with art by **Tony Moore** and was first published by **Image Comics in 2003**. The television adaptation didn't premiere until **October 31, 2010** on AMC, meaning the comic predated the show by about **7 years**.\n\nThe comic ran for 193 issues, concluding in July 2019, while the TV series ran for 11 seasons from 2010 to 2022. The show was developed by Frank Darabont and became a massive cultural phenomenon, but it was always an adaptation of the original comic source material.\n\nSources:\n1. https://www.tvtrev.com/the-walking-dead-show-or-comic-which-is-better/\n2. https://pdfs.semanticscholar.org/dfbe/16e3e81dde20f06e02b483f04d6ea98881c0.pdf\n3. https://unglueit-files.s3.amazonaws.com/ebf/6ee294ef8a6246ed9e66778a04bc92a5.pdf\n4. https://escholarship.org/content/qt3cn0c88x/supp/Ta__Blood_Guns_and_Plenty_of_Explosions_2017.pdf\n5. https://research.bangor.ac.uk/portal/files/38093763/2021BuchananEphd.pdf\n6. https://www.repository.cam.ac.uk/bitstreams/aa4996d1-242c-4669-a53a-f618ede0eece/download\n7. https://www.catawiki.com/en/stories/4771-the-walking-dead-comic-vs-the-show-what-s-the-same-and-what-s-different\n8. https://comicvine.gamespot.com/the-walking-dead/4050-18166/forums/walking-dead-hospital-scene-video-571477/\n9. https://www.rguunion.co.uk/news/article/radar/The-Walking-Dead-Comic-Books-vs-TV-Show/\n10. https://e-tip.paacc.com/qtm/977/guideT5mvomTheWalkingDeadComic1\n11. https://whatculture.com/tv/the-walking-dead-the-comic-vs-the-television-show",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780270694,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 493,
+        "prompt_tokens": 9122,
+        "total_tokens": 9615,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "which came first the walking dead comic or show"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cc664bfd7",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9fc166906a1cc6644f50a50001d8f126\"},\"usage\":{\"total_tokens\":8969}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cc664bfd7",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9fc166906a1cc6644f50a50001d8f126\"},\"usage\":{\"total_tokens\":8969}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9fc166906a1cc6644f50a50001d8f126\"},\"usage\":{\"total_tokens\":8969}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was created by **Robert Kirkman** with art by **Tony Moore** and was first published by **Image Comics in 2003**. The television adaptation didn't premiere until **October 31, 2010** on AMC, meaning the comic predated the show by about **7 years**.\n\nThe comic ran for 193 issues, concluding in July 2019, while the TV series ran for 11 seasons from 2010 to 2022. The show was developed by Frank Darabont and became a massive cultural phenomenon, but it was always an adaptation of the original comic source material.\n\nSources:\n1. https://www.tvtrev.com/the-walking-dead-show-or-comic-which-is-better/\n2. https://pdfs.semanticscholar.org/dfbe/16e3e81dde20f06e02b483f04d6ea98881c0.pdf\n3. https://unglueit-files.s3.amazonaws.com/ebf/6ee294ef8a6246ed9e66778a04bc92a5.pdf\n4. https://escholarship.org/content/qt3cn0c88x/supp/Ta__Blood_Guns_and_Plenty_of_Explosions_2017.pdf\n5. https://research.bangor.ac.uk/portal/files/38093763/2021BuchananEphd.pdf\n6. https://www.repository.cam.ac.uk/bitstreams/aa4996d1-242c-4669-a53a-f618ede0eece/download\n7. https://www.catawiki.com/en/stories/4771-the-walking-dead-comic-vs-the-show-what-s-the-same-and-what-s-different\n8. https://comicvine.gamespot.com/the-walking-dead/4050-18166/forums/walking-dead-hospital-scene-video-571477/\n9. https://www.rguunion.co.uk/news/article/radar/The-Walking-Dead-Comic-Books-vs-TV-Show/\n10. https://e-tip.paacc.com/qtm/977/guideT5mvomTheWalkingDeadComic1\n11. https://whatculture.com/tv/the-walking-dead-the-comic-vs-the-television-show",
+  "usage": {
+    "completion_tokens": 493,
+    "prompt_tokens": 9122,
+    "total_tokens": 9615,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

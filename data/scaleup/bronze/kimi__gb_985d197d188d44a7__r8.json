@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:15:40.200493+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2722e593b40cd6f8c33b87",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research into pirate leadership, motivational techniques, and the art of captaincy, here's what I'd say to my crew as a pirate captain to motivate them to search for hidden treasure:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and fine buccaneers!**\n\nNow listen well, for I speak of more than gold and glittering gems this day. I speak of *destiny*.\n\nThey call us outlaws. They call us thieves. But I ask ye\u2014what man among ye signed aboard this vessel to live a life of quiet desperation? To toil till yer bones turn to dust and leave nothin' but a name on a church registry? **NO!** Ye came for the wind in yer face, the salt in yer blood, and the chance to seize what the world hoards for itself!\n\nI hold in my hand a map\u2014aye, a map that men have killed for, that kings have sent whole navies to stop us from findin'. And do ye know why? Because beyond that horizon lies a treasure so vast that Blackbeard himself whispered on his dyin' breath: *'Only the devil and I know the whereabouts of my treasure, and the one of us who lives the longest should take it all.'*\n\nBut here's what the landlubbers don't understand, what the navy captains in their powdered wigs will *never* understand\u2014**the treasure ain't just the gold.** It's the story we'll tell! It's the night we stormed that island, the comrades who stood shoulder-to-shoulder when the cannons roared, the very *freedom* of bein' pirates who answer to no crown, no church, no man but the one standin' before ye now!\n\nSome of ye fear the journey. I say: *'The rougher the seas, the smoother we sail!'* Some of ye doubt yer courage. I say: *'CAN'T YE?'*\u2014for I've seen a clever crew overcome sharks and fog and every devil the deep throws at us!\n\nAnd mark me words\u2014**every man jack of ye will share in the plunder.** No captain keeps it all while his crew starves. That's the code. That's *our* code. The more we haul aboard, the richer *every* mother's son of ye becomes. Rum for all! Gold for all! A life worth livin' for all!\n\nSo I ask ye now\u2014will ye slink back to port with empty pockets and bowed heads? Or will ye hoist the black flag with me, set yer teeth, and take what's *ours* by right of courage?\n\n**WHAT SAY YE, ME HEARTIES?**\n\n*For treasure! For freedom! FOR GLORY!*\"\n\n---\n\n**ARRRRGH!**\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://viviankirkfield.com/category/picture-book-review-2/page/3/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949733,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 650,
+        "prompt_tokens": 4747,
+        "total_tokens": 5397,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2722e49593",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"92af56176a2722e4680f160001f030dc\"},\"usage\":{\"total_tokens\":4584}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2722e49593",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"92af56176a2722e4680f160001f030dc\"},\"usage\":{\"total_tokens\":4584}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"92af56176a2722e4680f160001f030dc\"},\"usage\":{\"total_tokens\":4584}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research into pirate leadership, motivational techniques, and the art of captaincy, here's what I'd say to my crew as a pirate captain to motivate them to search for hidden treasure:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and fine buccaneers!**\n\nNow listen well, for I speak of more than gold and glittering gems this day. I speak of *destiny*.\n\nThey call us outlaws. They call us thieves. But I ask ye\u2014what man among ye signed aboard this vessel to live a life of quiet desperation? To toil till yer bones turn to dust and leave nothin' but a name on a church registry? **NO!** Ye came for the wind in yer face, the salt in yer blood, and the chance to seize what the world hoards for itself!\n\nI hold in my hand a map\u2014aye, a map that men have killed for, that kings have sent whole navies to stop us from findin'. And do ye know why? Because beyond that horizon lies a treasure so vast that Blackbeard himself whispered on his dyin' breath: *'Only the devil and I know the whereabouts of my treasure, and the one of us who lives the longest should take it all.'*\n\nBut here's what the landlubbers don't understand, what the navy captains in their powdered wigs will *never* understand\u2014**the treasure ain't just the gold.** It's the story we'll tell! It's the night we stormed that island, the comrades who stood shoulder-to-shoulder when the cannons roared, the very *freedom* of bein' pirates who answer to no crown, no church, no man but the one standin' before ye now!\n\nSome of ye fear the journey. I say: *'The rougher the seas, the smoother we sail!'* Some of ye doubt yer courage. I say: *'CAN'T YE?'*\u2014for I've seen a clever crew overcome sharks and fog and every devil the deep throws at us!\n\nAnd mark me words\u2014**every man jack of ye will share in the plunder.** No captain keeps it all while his crew starves. That's the code. That's *our* code. The more we haul aboard, the richer *every* mother's son of ye becomes. Rum for all! Gold for all! A life worth livin' for all!\n\nSo I ask ye now\u2014will ye slink back to port with empty pockets and bowed heads? Or will ye hoist the black flag with me, set yer teeth, and take what's *ours* by right of courage?\n\n**WHAT SAY YE, ME HEARTIES?**\n\n*For treasure! For freedom! FOR GLORY!*\"\n\n---\n\n**ARRRRGH!**\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://viviankirkfield.com/category/picture-book-review-2/page/3/",
+  "usage": {
+    "completion_tokens": 650,
+    "prompt_tokens": 4747,
+    "total_tokens": 5397,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_314f7fd2ce040788",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T20:32:16.040982+00:00",
+  "query_text": "who played the oldest brother in 7th heaven",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2483cb18ac51ef7164e734",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **Barry Watson** played Matt Camden, the oldest brother in *7th Heaven*. He portrayed the firstborn son of Eric and Annie Camden throughout the series, which ran from 1996 to 2007.\n\nSources:\n1. https://people.com/7th-heaven-cast-where-are-they-now-11702984\n2. https://ew.com/7th-heaven-cast-where-are-they-now-11702327?srsltid=AfmBOoojXmO-jP5HLmLEQcXWZ69p_nM7fo4nxeU9KL0rJA9uJKDt4XRu",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780777932,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 148,
+        "prompt_tokens": 8367,
+        "total_tokens": 8515,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who played the oldest brother in 7th heaven"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2483ca9a21",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"3d4e87ff6a2483c94f50a50001ecdee2\"},\"usage\":{\"total_tokens\":8211}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2483ca9a21",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"3d4e87ff6a2483c94f50a50001ecdee2\"},\"usage\":{\"total_tokens\":8211}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"3d4e87ff6a2483c94f50a50001ecdee2\"},\"usage\":{\"total_tokens\":8211}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **Barry Watson** played Matt Camden, the oldest brother in *7th Heaven*. He portrayed the firstborn son of Eric and Annie Camden throughout the series, which ran from 1996 to 2007.\n\nSources:\n1. https://people.com/7th-heaven-cast-where-are-they-now-11702984\n2. https://ew.com/7th-heaven-cast-where-are-they-now-11702327?srsltid=AfmBOoojXmO-jP5HLmLEQcXWZ69p_nM7fo4nxeU9KL0rJA9uJKDt4XRu",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 8367,
+    "total_tokens": 8515,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

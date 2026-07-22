@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d11a15fb3622af70",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T04:53:32.813797+00:00",
+  "query_text": "Buy a return train ticket from Boston to New York for next Friday",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24f9368dbcc41d3456cca9",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I need to clarify that I cannot actually purchase train tickets for you - I don't have the ability to make purchases, access payment systems, or book tickets on your behalf. However, I can help you find information about how to book a return train ticket from Boston to New York for next Friday.\n\nLet me search for current train options and booking information: <tool>web_search</tool>\n\nBased on my search, I can provide you with information about booking your return train ticket from Boston to New York:\n\n## How to Book Your Ticket\n\n**Amtrak** is the primary train service between Boston and New York. Here's how to book:\n\n### Online Booking:\n- Visit **Amtrak.com** or use the Amtrak mobile app\n- Enter: Boston, MA (BOS) to New York, NY (NYP)\n- Select your travel date (next Friday) and return date\n- Choose from service options like **Acela** (faster, premium) or **Northeast Regional** (more economical)\n\n### Phone Booking:\n- Call Amtrak at **1-800-USA-RAIL (1-800-872-7245)**\n\n### In-Person:\n- Visit Boston South Station or Back Bay Station ticket counters\n- Use self-service kiosks at the station\n\n## Popular Train Options:\n- **Acela Express**: About 3.5 hours, premium service with reserved seating\n- **Northeast Regional**: About 4-4.5 hours, more frequent departures, lower fares\n\n## Tips for Booking:\n- Book early for better fares - prices increase closer to travel date\n- Check for discounts (AAA, student, senior, military)\n- Consider off-peak times for lower prices\n- Create an Amtrak Guest Rewards account to earn points\n\nTo complete your purchase, you'll need to:\n1. Visit Amtrak's website or app\n2. Select your specific Friday date and preferred return\n3. Choose your train times and fare type\n4. Enter passenger information and payment details\n\nWould you like me to search for more specific information about schedules or fares?\n\nSources:\n1. https://www.amtrak.com/home.html\n2. https://www.amtrak.com/northeast-regional-train\n3. https://www.amtrak.com/acela-train",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780807990,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 470,
+        "prompt_tokens": 167,
+        "total_tokens": 637,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Buy a return train ticket from Boston to New York for next Friday"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24f935fc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"faf229406a24f935680f160001ebd477\"},\"usage\":{\"total_tokens\":16}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24f935fc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"faf229406a24f935680f160001ebd477\"},\"usage\":{\"total_tokens\":16}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"faf229406a24f935680f160001ebd477\"},\"usage\":{\"total_tokens\":16}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I need to clarify that I cannot actually purchase train tickets for you - I don't have the ability to make purchases, access payment systems, or book tickets on your behalf. However, I can help you find information about how to book a return train ticket from Boston to New York for next Friday.\n\nLet me search for current train options and booking information: <tool>web_search</tool>\n\nBased on my search, I can provide you with information about booking your return train ticket from Boston to New York:\n\n## How to Book Your Ticket\n\n**Amtrak** is the primary train service between Boston and New York. Here's how to book:\n\n### Online Booking:\n- Visit **Amtrak.com** or use the Amtrak mobile app\n- Enter: Boston, MA (BOS) to New York, NY (NYP)\n- Select your travel date (next Friday) and return date\n- Choose from service options like **Acela** (faster, premium) or **Northeast Regional** (more economical)\n\n### Phone Booking:\n- Call Amtrak at **1-800-USA-RAIL (1-800-872-7245)**\n\n### In-Person:\n- Visit Boston South Station or Back Bay Station ticket counters\n- Use self-service kiosks at the station\n\n## Popular Train Options:\n- **Acela Express**: About 3.5 hours, premium service with reserved seating\n- **Northeast Regional**: About 4-4.5 hours, more frequent departures, lower fares\n\n## Tips for Booking:\n- Book early for better fares - prices increase closer to travel date\n- Check for discounts (AAA, student, senior, military)\n- Consider off-peak times for lower prices\n- Create an Amtrak Guest Rewards account to earn points\n\nTo complete your purchase, you'll need to:\n1. Visit Amtrak's website or app\n2. Select your specific Friday date and preferred return\n3. Choose your train times and fare type\n4. Enter passenger information and payment details\n\nWould you like me to search for more specific information about schedules or fares?\n\nSources:\n1. https://www.amtrak.com/home.html\n2. https://www.amtrak.com/northeast-regional-train\n3. https://www.amtrak.com/acela-train",
+  "usage": {
+    "completion_tokens": 470,
+    "prompt_tokens": 167,
+    "total_tokens": 637,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,82 @@
+# ==========================================================================
+# .gitignore - thesis-data-pilot
+# Tracked: source code + frozen query registries (inputs) + raw bronze captures.
+# Never tracked: silver/gold derived outputs, secrets, envs, caches.
+# (silver/gold + the multi-GB sources_* parquets are transferred separately, e.g. via scp.)
+# ==========================================================================
+
+# --- Data: never commit bronze/silver/gold OUTPUTS ------------------------
+# Stray data formats anywhere in the tree...
+*.jsonl
+*.parquet
+*.csv
+# ...and the entire data/ tree...
+/data/**
+# ...EXCEPT (a) the version-pinned frozen query registries the pipeline needs from
+# a fresh clone (cfg.QUERY_REGISTRY -> data/*/queries/...) and (b) the raw bronze
+# engine captures (primary data). These re-includes come LAST so they override the
+# *.parquet / *.csv globals above. Silver/gold derived outputs stay ignored.
+!/data/
+!/data/*/
+!/data/*/queries/
+!/data/*/queries/**
+!/data/*/bronze/
+!/data/*/bronze/**
+# sources parquets are 100s of MB — transfer via scp/rsync, never commit
+/data/*/silver/sources_*.parquet
+/data/*/silver/sources_bronze/
+
+# --- Python environment & caches ------------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Notebook artefacts ---------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# --- Secrets (CRITICAL) ---------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+secrets/
+
+# --- Logs & temp outputs --------------------------------------------------
+*.log
+nli_run.log
+nli_run*.log
+/tmp_*
+/tmp/*
+gold_runpod/
+/scratch/
+
+# --- OS & editor cruft ----------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Stale / intentionally untracked (kept on disk, never committed) -------
+scripts/test_attribution_smoke.py
+
+# macOS Finder cruft
+.DS_Store
+
+# Excel lock temps
+~$*.xlsx
+~$*.xls
+
+# Editor backups
+*~

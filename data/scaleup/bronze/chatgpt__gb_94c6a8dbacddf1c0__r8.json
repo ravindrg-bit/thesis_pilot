@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "chatgpt",
+  "run_index": 8,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T10:17:22.329611+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_018f373a72577a8e006a2696a795d881938cac98ce9d2d0978",
+    "created_at": 1780913831.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_018f373a72577a8e006a2696a8a48881938181519977cae828",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Computers and calculators usually **don\u2019t \u201cknow\u201d square roots directly**. They compute them using algorithms that repeatedly improve an approximation until it is accurate enough for the display or data type.\n\nA common method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\nSuppose you want:\n\n\\[\n\\sqrt{N}\n\\]\n\nThat means you want a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nSo define:\n\n\\[\nf(x)=x^2-N\n\\]\n\nNewton\u2019s method gives the update rule:\n\n\\[\nx_{\\text{new}}=\\frac{x+\\frac{N}{x}}{2}\n\\]\n\nThis says:\n\n> Take your current guess \\(x\\), divide \\(N\\) by that guess, then average the two.\n\nThat average is usually a much better guess.\n\nFor example, to find:\n\n\\[\n\\sqrt{10}\n\\]\n\nStart with \\(x=3\\):\n\n\\[\nx_{\\text{new}}=\\frac{3+\\frac{10}{3}}{2}\n=\\frac{3+3.3333}{2}\n=3.1667\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}}=\\frac{3.1667+\\frac{10}{3.1667}}{2}\n\\approx 3.1623\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}}\\approx 3.16227766\n\\]\n\nAnd that is very close to the true value:\n\n\\[\n\\sqrt{10}\\approx 3.162277660168379\n\\]\n\nThe accuracy improves extremely quickly. Roughly speaking, once the guess is close, each step can about **double the number of correct digits**.\n\nCalculators and computers also use other tricks, such as:\n\n- **binary representations** of numbers,\n- **lookup tables** for good starting guesses,\n- **hardware circuits** for fast arithmetic,\n- **special floating-point instructions** in CPUs,\n- and algorithms designed to handle rounding correctly.\n\nFor ordinary calculators, the machine only needs enough digits for the display. For computers, the result is usually rounded to the nearest representable floating-point number, such as a 64-bit `double`.\n\nSo the short answer is:\n\n> They start with an estimate and repeatedly refine it using arithmetic until the result is accurate enough. Newton\u2019s method is one of the classic ways to do this.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780913842.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4455,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 500,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4955
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Computers and calculators usually **don\u2019t \u201cknow\u201d square roots directly**. They compute them using algorithms that repeatedly improve an approximation until it is accurate enough for the display or data type.\n\nA common method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\nSuppose you want:\n\n\\[\n\\sqrt{N}\n\\]\n\nThat means you want a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nSo define:\n\n\\[\nf(x)=x^2-N\n\\]\n\nNewton\u2019s method gives the update rule:\n\n\\[\nx_{\\text{new}}=\\frac{x+\\frac{N}{x}}{2}\n\\]\n\nThis says:\n\n> Take your current guess \\(x\\), divide \\(N\\) by that guess, then average the two.\n\nThat average is usually a much better guess.\n\nFor example, to find:\n\n\\[\n\\sqrt{10}\n\\]\n\nStart with \\(x=3\\):\n\n\\[\nx_{\\text{new}}=\\frac{3+\\frac{10}{3}}{2}\n=\\frac{3+3.3333}{2}\n=3.1667\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}}=\\frac{3.1667+\\frac{10}{3.1667}}{2}\n\\approx 3.1623\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}}\\approx 3.16227766\n\\]\n\nAnd that is very close to the true value:\n\n\\[\n\\sqrt{10}\\approx 3.162277660168379\n\\]\n\nThe accuracy improves extremely quickly. Roughly speaking, once the guess is close, each step can about **double the number of correct digits**.\n\nCalculators and computers also use other tricks, such as:\n\n- **binary representations** of numbers,\n- **lookup tables** for good starting guesses,\n- **hardware circuits** for fast arithmetic,\n- **special floating-point instructions** in CPUs,\n- and algorithms designed to handle rounding correctly.\n\nFor ordinary calculators, the machine only needs enough digits for the display. For computers, the result is usually rounded to the nearest representable floating-point number, such as a 64-bit `double`.\n\nSo the short answer is:\n\n> They start with an estimate and repeatedly refine it using arithmetic until the result is accurate enough. Newton\u2019s method is one of the classic ways to do this.",
+  "usage": {
+    "input_tokens": 4455,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 500,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 4955
+  },
+  "run_profile": "scaleup"
+}

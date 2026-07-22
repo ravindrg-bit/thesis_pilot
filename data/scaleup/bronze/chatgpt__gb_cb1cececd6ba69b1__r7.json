@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 7,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:23:54.860359+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0c6ca65b68357452006a25d349006481a3a1e4ded57be7ed4e",
+    "created_at": 1780863817.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0c6ca65b68357452006a25d349867481a3b879ca7d54c7916c",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nCommon examples:\n\n- Same people measured **before and after** treatment\n- Same students taking **two versions of a test**\n- Matched pairs, such as twins or matched patients\n- Two measurements taken from the same subject under different conditions\n\n---\n\n## When to use a paired-samples t-test\n\nUse it when:\n\n1. You have **two related sets of scores**\n2. The outcome variable is **continuous**\n3. Each observation in one group is paired with one observation in the other group\n4. You want to test whether the **mean difference** between pairs is significantly different from zero\n\n---\n\n## Hypotheses\n\nSuppose each person has two scores:\n\n\\[\nX_1 = \\text{before score}\n\\]\n\n\\[\nX_2 = \\text{after score}\n\\]\n\nDefine the difference:\n\n\\[\nD = X_2 - X_1\n\\]\n\nThe paired t-test tests whether the mean difference is zero.\n\n### Null hypothesis\n\n\\[\nH_0: \\mu_D = 0\n\\]\n\nThere is no average difference between the paired measurements.\n\n### Alternative hypothesis\n\nTwo-tailed:\n\n\\[\nH_a: \\mu_D \\neq 0\n\\]\n\nOne-tailed:\n\n\\[\nH_a: \\mu_D > 0\n\\]\n\nor\n\n\\[\nH_a: \\mu_D < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired-samples t statistic is:\n\n\\[\nt = \\frac{\\bar{D} - 0}{s_D / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{D}\\) = mean of the differences\n- \\(s_D\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nThe degrees of freedom are:\n\n\\[\ndf = n - 1\n\\]\n\n---\n\n## Simple example\n\nSuppose 5 people have scores before and after training:\n\n| Person | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 65 | 68 | 3 |\n| 3 | 80 | 82 | 2 |\n| 4 | 72 | 78 | 6 |\n| 5 | 60 | 64 | 4 |\n\nDifferences:\n\n\\[\n5, 3, 2, 6, 4\n\\]\n\nMean difference:\n\n\\[\n\\bar{D} = 4\n\\]\n\nIf the standard deviation of the differences is about:\n\n\\[\ns_D = 1.58\n\\]\n\nThen:\n\n\\[\nt = \\frac{4}{1.58 / \\sqrt{5}} \\approx 5.66\n\\]\n\nDegrees of freedom:\n\n\\[\ndf = 5 - 1 = 4\n\\]\n\nYou would compare this \\(t\\)-value to a t-distribution with 4 degrees of freedom or calculate a p-value.\n\n---\n\n## Interpretation\n\nIf the p-value is less than your significance level, commonly:\n\n\\[\n\\alpha = 0.05\n\\]\n\nthen you reject the null hypothesis and conclude that there is a statistically significant mean difference between the paired measurements.\n\nExample interpretation:\n\n> A paired-samples t-test showed that scores were significantly higher after training than before training, \\(t(4) = 5.66, p < .05\\).\n\n---\n\n## Assumptions\n\nThe paired-samples t-test assumes:\n\n1. **Pairs are dependent**, but different pairs are independent of each other.\n2. The difference scores are approximately **normally distributed**.\n3. The outcome variable is measured on an interval or ratio scale.\n4. There should be no extreme outliers in the difference scores.\n\nImportant: the normality assumption applies to the **differences**, not necessarily to each original variable separately.\n\n---\n\n## Effect size\n\nA common effect size for a paired t-test is Cohen\u2019s \\(d_z\\):\n\n\\[\nd_z = \\frac{\\bar{D}}{s_D}\n\\]\n\nUsing the example:\n\n\\[\nd_z = \\frac{4}{1.58} \\approx 2.53\n\\]\n\nThis would be a very large effect.\n\n---\n\n## In software\n\n### In R\n\n```r\nt.test(after, before, paired = TRUE)\n```\n\n### In Python\n\n```python\nfrom scipy import stats\n\nstats.ttest_rel(after, before)\n```\n\n### In SPSS\n\nGo to:\n\n**Analyze \u2192 Compare Means \u2192 Paired-Samples T Test**\n\nMove the two related variables into the paired variables box, then run the test.\n\n---\n\n## Key idea\n\nA paired-samples t-test is really just a **one-sample t-test on the difference scores**.\n\nInstead of comparing two independent group means, it asks:\n\n> Is the average within-pair difference significantly different from zero?",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863834.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 1042,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5488
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nCommon examples:\n\n- Same people measured **before and after** treatment\n- Same students taking **two versions of a test**\n- Matched pairs, such as twins or matched patients\n- Two measurements taken from the same subject under different conditions\n\n---\n\n## When to use a paired-samples t-test\n\nUse it when:\n\n1. You have **two related sets of scores**\n2. The outcome variable is **continuous**\n3. Each observation in one group is paired with one observation in the other group\n4. You want to test whether the **mean difference** between pairs is significantly different from zero\n\n---\n\n## Hypotheses\n\nSuppose each person has two scores:\n\n\\[\nX_1 = \\text{before score}\n\\]\n\n\\[\nX_2 = \\text{after score}\n\\]\n\nDefine the difference:\n\n\\[\nD = X_2 - X_1\n\\]\n\nThe paired t-test tests whether the mean difference is zero.\n\n### Null hypothesis\n\n\\[\nH_0: \\mu_D = 0\n\\]\n\nThere is no average difference between the paired measurements.\n\n### Alternative hypothesis\n\nTwo-tailed:\n\n\\[\nH_a: \\mu_D \\neq 0\n\\]\n\nOne-tailed:\n\n\\[\nH_a: \\mu_D > 0\n\\]\n\nor\n\n\\[\nH_a: \\mu_D < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired-samples t statistic is:\n\n\\[\nt = \\frac{\\bar{D} - 0}{s_D / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{D}\\) = mean of the differences\n- \\(s_D\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nThe degrees of freedom are:\n\n\\[\ndf = n - 1\n\\]\n\n---\n\n## Simple example\n\nSuppose 5 people have scores before and after training:\n\n| Person | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 65 | 68 | 3 |\n| 3 | 80 | 82 | 2 |\n| 4 | 72 | 78 | 6 |\n| 5 | 60 | 64 | 4 |\n\nDifferences:\n\n\\[\n5, 3, 2, 6, 4\n\\]\n\nMean difference:\n\n\\[\n\\bar{D} = 4\n\\]\n\nIf the standard deviation of the differences is about:\n\n\\[\ns_D = 1.58\n\\]\n\nThen:\n\n\\[\nt = \\frac{4}{1.58 / \\sqrt{5}} \\approx 5.66\n\\]\n\nDegrees of freedom:\n\n\\[\ndf = 5 - 1 = 4\n\\]\n\nYou would compare this \\(t\\)-value to a t-distribution with 4 degrees of freedom or calculate a p-value.\n\n---\n\n## Interpretation\n\nIf the p-value is less than your significance level, commonly:\n\n\\[\n\\alpha = 0.05\n\\]\n\nthen you reject the null hypothesis and conclude that there is a statistically significant mean difference between the paired measurements.\n\nExample interpretation:\n\n> A paired-samples t-test showed that scores were significantly higher after training than before training, \\(t(4) = 5.66, p < .05\\).\n\n---\n\n## Assumptions\n\nThe paired-samples t-test assumes:\n\n1. **Pairs are dependent**, but different pairs are independent of each other.\n2. The difference scores are approximately **normally distributed**.\n3. The outcome variable is measured on an interval or ratio scale.\n4. There should be no extreme outliers in the difference scores.\n\nImportant: the normality assumption applies to the **differences**, not necessarily to each original variable separately.\n\n---\n\n## Effect size\n\nA common effect size for a paired t-test is Cohen\u2019s \\(d_z\\):\n\n\\[\nd_z = \\frac{\\bar{D}}{s_D}\n\\]\n\nUsing the example:\n\n\\[\nd_z = \\frac{4}{1.58} \\approx 2.53\n\\]\n\nThis would be a very large effect.\n\n---\n\n## In software\n\n### In R\n\n```r\nt.test(after, before, paired = TRUE)\n```\n\n### In Python\n\n```python\nfrom scipy import stats\n\nstats.ttest_rel(after, before)\n```\n\n### In SPSS\n\nGo to:\n\n**Analyze \u2192 Compare Means \u2192 Paired-Samples T Test**\n\nMove the two related variables into the paired variables box, then run the test.\n\n---\n\n## Key idea\n\nA paired-samples t-test is really just a **one-sample t-test on the difference scores**.\n\nInstead of comparing two independent group means, it asks:\n\n> Is the average within-pair difference significantly different from zero?",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 1042,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5488
+  },
+  "run_profile": "scaleup"
+}

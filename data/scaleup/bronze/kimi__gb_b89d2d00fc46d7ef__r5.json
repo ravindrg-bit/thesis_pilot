@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b89d2d00fc46d7ef",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T06:04:30.691404+00:00",
+  "query_text": "what is a kin",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2509d7a5b1c6e7d5e3e860",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here is what **\"kin\"** means:\n\n## Definition\n\n**Kin** refers to **one's family members, relatives, or people related by blood, marriage, or adoption**. It is a collective term for the group of people who share a family connection with someone.\n\n## Key Meanings\n\n| Usage | Explanation |\n|-------|-------------|\n| **Noun (collective)** | A person's relatives collectively; kinfolk; kindred (e.g., \"He's kin to me\") |\n| **Noun (group)** | A group of people descended from a common ancestor; a clan, tribe, or family |\n| **Adjective** | Related by blood or marriage (e.g., \"We are kin\") |\n\n## Common Expressions\n\n- **\"Next of kin\"** \u2013 Your closest living relative(s), typically spouse, child, parent, or sibling; the person who would be notified in case of emergency or who inherits if someone dies without a will\n- **\"Kith and kin\"** \u2013 Friends and family together (\"kith\" = friends, \"kin\" = family)\n- **\"Of kin\"** \u2013 Related by blood (e.g., \"They are of kin\")\n\n## Etymology\n\nThe word **kin** dates back to **Old English** (*cynn*), before the 900s, originally meaning family, race, or people. It is related to similar words in other Germanic languages (Old Norse *kyn*, Gothic *kuni*) and cognate with Latin *genus* and Greek *g\u00e9nos*, all referring to birth, race, or kind.\n\n## Additional Notes\n\n- **-kin** is also a **diminutive suffix** in English, meaning \"small\" or \"little,\" as in *lambkin*, *manikin*, or *catkin*\n- In anthropology, \"kin\" can refer to social relationships based on blood ties, marriage, or adoption that structure family systems\n\nSources:\n1. https://www.definitions.net/definition/kin\n2. https://www.vocabulary.com/dictionary/kin\n3. https://dictionary.cambridge.org/dictionary/english/kin\n4. https://www.dictionary.com/browse/kin\n5. https://www.collinsdictionary.com/dictionary/english/kin\n6. https://www.oed.com/dictionary/kin_n1",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780812249,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 497,
+        "prompt_tokens": 8315,
+        "total_tokens": 8812,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what is a kin"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2509d71700",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"6f41b4aa6a2509d7680f160001ebec35\"},\"usage\":{\"total_tokens\":8166}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2509d71700",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"6f41b4aa6a2509d7680f160001ebec35\"},\"usage\":{\"total_tokens\":8166}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"6f41b4aa6a2509d7680f160001ebec35\"},\"usage\":{\"total_tokens\":8166}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here is what **\"kin\"** means:\n\n## Definition\n\n**Kin** refers to **one's family members, relatives, or people related by blood, marriage, or adoption**. It is a collective term for the group of people who share a family connection with someone.\n\n## Key Meanings\n\n| Usage | Explanation |\n|-------|-------------|\n| **Noun (collective)** | A person's relatives collectively; kinfolk; kindred (e.g., \"He's kin to me\") |\n| **Noun (group)** | A group of people descended from a common ancestor; a clan, tribe, or family |\n| **Adjective** | Related by blood or marriage (e.g., \"We are kin\") |\n\n## Common Expressions\n\n- **\"Next of kin\"** \u2013 Your closest living relative(s), typically spouse, child, parent, or sibling; the person who would be notified in case of emergency or who inherits if someone dies without a will\n- **\"Kith and kin\"** \u2013 Friends and family together (\"kith\" = friends, \"kin\" = family)\n- **\"Of kin\"** \u2013 Related by blood (e.g., \"They are of kin\")\n\n## Etymology\n\nThe word **kin** dates back to **Old English** (*cynn*), before the 900s, originally meaning family, race, or people. It is related to similar words in other Germanic languages (Old Norse *kyn*, Gothic *kuni*) and cognate with Latin *genus* and Greek *g\u00e9nos*, all referring to birth, race, or kind.\n\n## Additional Notes\n\n- **-kin** is also a **diminutive suffix** in English, meaning \"small\" or \"little,\" as in *lambkin*, *manikin*, or *catkin*\n- In anthropology, \"kin\" can refer to social relationships based on blood ties, marriage, or adoption that structure family systems\n\nSources:\n1. https://www.definitions.net/definition/kin\n2. https://www.vocabulary.com/dictionary/kin\n3. https://dictionary.cambridge.org/dictionary/english/kin\n4. https://www.dictionary.com/browse/kin\n5. https://www.collinsdictionary.com/dictionary/english/kin\n6. https://www.oed.com/dictionary/kin_n1",
+  "usage": {
+    "completion_tokens": 497,
+    "prompt_tokens": 8315,
+    "total_tokens": 8812,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

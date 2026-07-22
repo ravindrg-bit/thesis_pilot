@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_8292b32581999fbc",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T02:56:15.693903+00:00",
+  "query_text": "How is chocolate made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ddb713061e07715110c4",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how chocolate is made, from cacao bean to finished bar:\n\n## The Chocolate Making Process\n\n### 1. Harvesting and Fermentation\nChocolate begins with the seeds (beans) of the cacao tree (*Theobroma cacao*), which grows in tropical climates. The beans are harvested from cacao pods and then fermented for several days (typically 2-10 days). This fermentation step is crucial\u2014it develops the beans' flavor, fragrance, and color, transforming them from bitter seeds into something with chocolate potential.\n\n### 2. Drying\nAfter fermentation, the beans are spread out in the sun to dry. This reduces their moisture content and prevents mold growth, which could ruin the flavor.\n\n### 3. Roasting\nThe dried beans are roasted at controlled temperatures. Roasting brings out the rich chocolate flavor and aroma we associate with chocolate. Different chocolate makers use different roasting techniques, which significantly affects the final flavor profile.\n\n### 4. Cracking and Winnowing\nThe roasted beans are cracked open to separate the outer shells from the inner cacao nibs. This process, called winnowing, removes the husks and leaves behind the nibs\u2014the heart of chocolate.\n\n### 5. Grinding\nThe cacao nibs are ground into a paste called **chocolate liquor** or **cocoa mass**. During grinding, the nibs release **cocoa butter**, a natural fat that gives chocolate its smooth texture. This chocolate liquor is the foundation of all chocolate products.\n\n### 6. Refining and Conching\nThe chocolate liquor is further refined to achieve smoothness. **Conching** is a critical step where the chocolate is continuously mixed and aerated in a special machine (called a conche) for hours or even days. This process:\n- Develops the chocolate's flavor\n- Removes unwanted bitterness and volatile compounds\n- Creates a silky, uniform texture\n- Drives off excess moisture\n\n### 7. Mixing with Other Ingredients\nDepending on the type of chocolate being made, different ingredients are added:\n- **Dark chocolate**: Sugar, sometimes flavorings like vanilla\n- **Milk chocolate**: Milk powder (or condensed milk), sugar\n- **White chocolate**: Cocoa butter (no cocoa mass), milk powder, sugar\n\n### 8. Tempering\nThis crucial step involves carefully heating and cooling the chocolate to specific temperatures to stabilize the cocoa butter crystals. Proper tempering gives chocolate its:\n- Glossy finish\n- Satisfying snap when broken\n- Smooth melting properties\n\n### 9. Molding and Cooling\nThe tempered chocolate is poured into molds (bars, shapes, etc.) and cooled gradually. Controlled cooling prevents defects like fat bloom or dull surfaces.\n\n### 10. Packaging\nOnce set, the chocolate is removed from molds and wrapped in protective packaging to maintain freshness.\n\n## Types of Chocolate\n\n| Type | Key Characteristics |\n|------|---------------------|\n| **Dark chocolate** | Higher percentage of cocoa solids, less sugar, more intense flavor |\n| **Milk chocolate** | Contains milk powder, creamier texture, sweeter |\n| **White chocolate** | No cocoa solids, only cocoa butter, milk, and sugar |\n\nSources:\n1. https://www.britannica.com/technology/How-Is-Chocolate-Made\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://chocolatealchemy.com/chocolate-making-at-home-101\n5. https://www.maltachocolatefactory.com/single-post/behind-the-scenes-how-chocolate-bars-are-made\n6. https://chocolatiering.com/how-is-chocolate-made-industrial-process/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/\n8. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780800953,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 807,
+        "prompt_tokens": 8161,
+        "total_tokens": 8968,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is chocolate made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ddb6a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"15c78cc86a24ddb64f50a50001ed4b4e\"},\"usage\":{\"total_tokens\":8011}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ddb6a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"15c78cc86a24ddb64f50a50001ed4b4e\"},\"usage\":{\"total_tokens\":8011}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"15c78cc86a24ddb64f50a50001ed4b4e\"},\"usage\":{\"total_tokens\":8011}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how chocolate is made, from cacao bean to finished bar:\n\n## The Chocolate Making Process\n\n### 1. Harvesting and Fermentation\nChocolate begins with the seeds (beans) of the cacao tree (*Theobroma cacao*), which grows in tropical climates. The beans are harvested from cacao pods and then fermented for several days (typically 2-10 days). This fermentation step is crucial\u2014it develops the beans' flavor, fragrance, and color, transforming them from bitter seeds into something with chocolate potential.\n\n### 2. Drying\nAfter fermentation, the beans are spread out in the sun to dry. This reduces their moisture content and prevents mold growth, which could ruin the flavor.\n\n### 3. Roasting\nThe dried beans are roasted at controlled temperatures. Roasting brings out the rich chocolate flavor and aroma we associate with chocolate. Different chocolate makers use different roasting techniques, which significantly affects the final flavor profile.\n\n### 4. Cracking and Winnowing\nThe roasted beans are cracked open to separate the outer shells from the inner cacao nibs. This process, called winnowing, removes the husks and leaves behind the nibs\u2014the heart of chocolate.\n\n### 5. Grinding\nThe cacao nibs are ground into a paste called **chocolate liquor** or **cocoa mass**. During grinding, the nibs release **cocoa butter**, a natural fat that gives chocolate its smooth texture. This chocolate liquor is the foundation of all chocolate products.\n\n### 6. Refining and Conching\nThe chocolate liquor is further refined to achieve smoothness. **Conching** is a critical step where the chocolate is continuously mixed and aerated in a special machine (called a conche) for hours or even days. This process:\n- Develops the chocolate's flavor\n- Removes unwanted bitterness and volatile compounds\n- Creates a silky, uniform texture\n- Drives off excess moisture\n\n### 7. Mixing with Other Ingredients\nDepending on the type of chocolate being made, different ingredients are added:\n- **Dark chocolate**: Sugar, sometimes flavorings like vanilla\n- **Milk chocolate**: Milk powder (or condensed milk), sugar\n- **White chocolate**: Cocoa butter (no cocoa mass), milk powder, sugar\n\n### 8. Tempering\nThis crucial step involves carefully heating and cooling the chocolate to specific temperatures to stabilize the cocoa butter crystals. Proper tempering gives chocolate its:\n- Glossy finish\n- Satisfying snap when broken\n- Smooth melting properties\n\n### 9. Molding and Cooling\nThe tempered chocolate is poured into molds (bars, shapes, etc.) and cooled gradually. Controlled cooling prevents defects like fat bloom or dull surfaces.\n\n### 10. Packaging\nOnce set, the chocolate is removed from molds and wrapped in protective packaging to maintain freshness.\n\n## Types of Chocolate\n\n| Type | Key Characteristics |\n|------|---------------------|\n| **Dark chocolate** | Higher percentage of cocoa solids, less sugar, more intense flavor |\n| **Milk chocolate** | Contains milk powder, creamier texture, sweeter |\n| **White chocolate** | No cocoa solids, only cocoa butter, milk, and sugar |\n\nSources:\n1. https://www.britannica.com/technology/How-Is-Chocolate-Made\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://chocolatealchemy.com/chocolate-making-at-home-101\n5. https://www.maltachocolatefactory.com/single-post/behind-the-scenes-how-chocolate-bars-are-made\n6. https://chocolatiering.com/how-is-chocolate-made-industrial-process/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/\n8. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/",
+  "usage": {
+    "completion_tokens": 807,
+    "prompt_tokens": 8161,
+    "total_tokens": 8968,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

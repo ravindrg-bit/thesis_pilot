@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_00372fa592bfcd6b",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:42:45.025269+00:00",
+  "query_text": "bmi standard",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a262bfe9128d779c3a901d7",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here is a comprehensive overview of **BMI (Body Mass Index) standards** used worldwide:\n\n---\n\n## What is BMI?\n\nBMI is a screening tool that calculates body weight relative to height using the formula:\n- **BMI = weight (kg) \u00f7 height\u00b2 (m\u00b2)**\n- Or in pounds/inches: **(weight in lbs \u00d7 703) \u00f7 height in inches \u00f7 height in inches again**\n\n---\n\n## Standard BMI Classification (WHO/NIH/CDC - Used for White, Hispanic, and Black populations)\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight | < 18.5 |\n| Normal/Healthy Weight | 18.5 \u2013 24.9 |\n| Overweight | 25.0 \u2013 29.9 |\n| Obesity Class I | 30.0 \u2013 34.9 |\n| Obesity Class II | 35.0 \u2013 39.9 |\n| Obesity Class III (Severe Obesity) | \u2265 40.0 |\n\nThis is the standard classification adopted by the **WHO**, **NIH**, and **CDC** for most adult populations [1][2][5].\n\n---\n\n## Asian-Specific BMI Standards\n\nDue to higher metabolic risk at lower body weights, **WHO and NIH guidelines for Asian populations** use **lower thresholds**:\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight | < 18.5 |\n| Normal | 18.5 \u2013 22.9 |\n| Overweight | 23.0 \u2013 24.9 |\n| Obese | \u2265 25.0 |\n\n- Some Asian guidelines (e.g., Singapore) define **obesity as \u2265 27.5 kg/m\u00b2** [3][5][9].\n\n---\n\n## China's Adult BMI Standards (WS/T 428-2013)\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight (\u4f53\u91cd\u8fc7\u4f4e) | < 18.5 |\n| Normal (\u4f53\u91cd\u6b63\u5e38) | 18.5 \u2013 23.9 |\n| Overweight (\u8d85\u91cd) | 24.0 \u2013 27.9 |\n| Obese (\u80a5\u80d6) | \u2265 28.0 |\n\nChina also uses **waist circumference** to assess central obesity:\n- **Men**: \u2265 90 cm\n- **Women**: \u2265 85 cm [4][6].\n\n---\n\n## Special Populations\n\n### Elderly (80+ years)\n- **Recommended BMI range**: **22.0 \u2013 26.9 kg/m\u00b2** (higher than general adults to account for age-related muscle loss and reduced mortality risk) [4][6].\n\n### Children and Teens\n- BMI is calculated the same way but interpreted using **age- and sex-specific percentiles**, not adult categories [1][5].\n\n---\n\n## Important Limitations of BMI\n\nBMI is a **screening tool, not a diagnostic tool**. It does not:\n- Distinguish between muscle and fat\n- Account for body composition, bone density, or fat distribution\n- Apply accurately to athletes, pregnant women, or those with very muscular builds [1][2][5][7].\n\nFor a more complete health assessment, BMI should be used alongside:\n- **Waist circumference** (measures central/abdominal fat)\n- **Body fat percentage**\n- Other clinical evaluations [5][9].\n\n---\n\n## Clinical and Surgical BMI Thresholds\n\n| Application | BMI Threshold |\n|-------------|---------------|\n| General bariatric surgery eligibility | \u2265 40, or \u2265 35 with comorbidities |\n| Bariatric surgery with metabolic disease (2022 ASMBS/IFSO guidelines) | \u2265 35, or 30\u201334.9 with metabolic disease |\n| Asian patients for metabolic surgery | > 27.5 |\n| Weight-loss medications (e.g., Zepbound) | \u2265 30, or \u2265 27 with weight-related conditions [7][8][10] |\n\n---\n\n## Summary Table: Global BMI Standards Comparison\n\n| Population | Underweight | Normal | Overweight | Obese |\n|------------|-------------|--------|------------|-------|\n| **WHO/CDC Standard** | < 18.5 | 18.5\u201324.9 | 25.0\u201329.9 | \u2265 30.0 |\n| **Asian (WHO/NIH)** | < 18.5 | 18.5\u201322.9 | 23.0\u201324.9 | \u2265 25.0 |\n| **China (WS/T 428-2013)** | < 18.5 | 18.5\u201323.9 | 24.0\u201327.9 | \u2265 28.0 |\n| **Elderly (80+ China)** | \u2014 | 22.0\u201326.9 | \u2014 | \u2014 |\n\n---\n\nSources:\n1. https://my.clevelandclinic.org/health/articles/9464-body-mass-index-bmi\n2. https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults\n3. https://www.myheart.org.sg/tools-resources/bmi-calculator/\n4. http://www.nhc.gov.cn/ylyjs/s3573d/202412/4cf1905d32304c15ac3bc4446ddb83f1/files/f932c5c0004f4959b92613dd1024483c.pdf\n5. https://www.uptodate.com/contents/image?imageKey=OBGYN%2F97661\n6. https://www.chinacdc.cn/jkkp/mxfcrb/lnjk/202408/t20240823_295135.html\n7. https://www.trimbodymd.com/faqs/zepbound-bmi-requirements/\n8. https://www.boltpharmacy.co.uk/guide/low-bmi-gastric-sleeve\n9. https://bmicalculatorweb.com/blog/who-new-bmi-classification-obesity-diagnosis-criteria.html\n10. https://carelyclinic.com/gastric-sleeve-eligibility-criteria/\n11. https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html\n12. https://apps.who.int/nutrition/landscape/help.aspx?menu=0&helpid=420\n13. http://dayi.org.cn/qa/279026",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780886702,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 1349,
+        "prompt_tokens": 8858,
+        "total_tokens": 10207,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "bmi standard"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a262bfefc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"7525baf36a262bfe680f160001ede43e\"},\"usage\":{\"total_tokens\":8713}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a262bfefc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"7525baf36a262bfe680f160001ede43e\"},\"usage\":{\"total_tokens\":8713}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"7525baf36a262bfe680f160001ede43e\"},\"usage\":{\"total_tokens\":8713}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here is a comprehensive overview of **BMI (Body Mass Index) standards** used worldwide:\n\n---\n\n## What is BMI?\n\nBMI is a screening tool that calculates body weight relative to height using the formula:\n- **BMI = weight (kg) \u00f7 height\u00b2 (m\u00b2)**\n- Or in pounds/inches: **(weight in lbs \u00d7 703) \u00f7 height in inches \u00f7 height in inches again**\n\n---\n\n## Standard BMI Classification (WHO/NIH/CDC - Used for White, Hispanic, and Black populations)\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight | < 18.5 |\n| Normal/Healthy Weight | 18.5 \u2013 24.9 |\n| Overweight | 25.0 \u2013 29.9 |\n| Obesity Class I | 30.0 \u2013 34.9 |\n| Obesity Class II | 35.0 \u2013 39.9 |\n| Obesity Class III (Severe Obesity) | \u2265 40.0 |\n\nThis is the standard classification adopted by the **WHO**, **NIH**, and **CDC** for most adult populations [1][2][5].\n\n---\n\n## Asian-Specific BMI Standards\n\nDue to higher metabolic risk at lower body weights, **WHO and NIH guidelines for Asian populations** use **lower thresholds**:\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight | < 18.5 |\n| Normal | 18.5 \u2013 22.9 |\n| Overweight | 23.0 \u2013 24.9 |\n| Obese | \u2265 25.0 |\n\n- Some Asian guidelines (e.g., Singapore) define **obesity as \u2265 27.5 kg/m\u00b2** [3][5][9].\n\n---\n\n## China's Adult BMI Standards (WS/T 428-2013)\n\n| Category | BMI Range (kg/m\u00b2) |\n|----------|-------------------|\n| Underweight (\u4f53\u91cd\u8fc7\u4f4e) | < 18.5 |\n| Normal (\u4f53\u91cd\u6b63\u5e38) | 18.5 \u2013 23.9 |\n| Overweight (\u8d85\u91cd) | 24.0 \u2013 27.9 |\n| Obese (\u80a5\u80d6) | \u2265 28.0 |\n\nChina also uses **waist circumference** to assess central obesity:\n- **Men**: \u2265 90 cm\n- **Women**: \u2265 85 cm [4][6].\n\n---\n\n## Special Populations\n\n### Elderly (80+ years)\n- **Recommended BMI range**: **22.0 \u2013 26.9 kg/m\u00b2** (higher than general adults to account for age-related muscle loss and reduced mortality risk) [4][6].\n\n### Children and Teens\n- BMI is calculated the same way but interpreted using **age- and sex-specific percentiles**, not adult categories [1][5].\n\n---\n\n## Important Limitations of BMI\n\nBMI is a **screening tool, not a diagnostic tool**. It does not:\n- Distinguish between muscle and fat\n- Account for body composition, bone density, or fat distribution\n- Apply accurately to athletes, pregnant women, or those with very muscular builds [1][2][5][7].\n\nFor a more complete health assessment, BMI should be used alongside:\n- **Waist circumference** (measures central/abdominal fat)\n- **Body fat percentage**\n- Other clinical evaluations [5][9].\n\n---\n\n## Clinical and Surgical BMI Thresholds\n\n| Application | BMI Threshold |\n|-------------|---------------|\n| General bariatric surgery eligibility | \u2265 40, or \u2265 35 with comorbidities |\n| Bariatric surgery with metabolic disease (2022 ASMBS/IFSO guidelines) | \u2265 35, or 30\u201334.9 with metabolic disease |\n| Asian patients for metabolic surgery | > 27.5 |\n| Weight-loss medications (e.g., Zepbound) | \u2265 30, or \u2265 27 with weight-related conditions [7][8][10] |\n\n---\n\n## Summary Table: Global BMI Standards Comparison\n\n| Population | Underweight | Normal | Overweight | Obese |\n|------------|-------------|--------|------------|-------|\n| **WHO/CDC Standard** | < 18.5 | 18.5\u201324.9 | 25.0\u201329.9 | \u2265 30.0 |\n| **Asian (WHO/NIH)** | < 18.5 | 18.5\u201322.9 | 23.0\u201324.9 | \u2265 25.0 |\n| **China (WS/T 428-2013)** | < 18.5 | 18.5\u201323.9 | 24.0\u201327.9 | \u2265 28.0 |\n| **Elderly (80+ China)** | \u2014 | 22.0\u201326.9 | \u2014 | \u2014 |\n\n---\n\nSources:\n1. https://my.clevelandclinic.org/health/articles/9464-body-mass-index-bmi\n2. https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults\n3. https://www.myheart.org.sg/tools-resources/bmi-calculator/\n4. http://www.nhc.gov.cn/ylyjs/s3573d/202412/4cf1905d32304c15ac3bc4446ddb83f1/files/f932c5c0004f4959b92613dd1024483c.pdf\n5. https://www.uptodate.com/contents/image?imageKey=OBGYN%2F97661\n6. https://www.chinacdc.cn/jkkp/mxfcrb/lnjk/202408/t20240823_295135.html\n7. https://www.trimbodymd.com/faqs/zepbound-bmi-requirements/\n8. https://www.boltpharmacy.co.uk/guide/low-bmi-gastric-sleeve\n9. https://bmicalculatorweb.com/blog/who-new-bmi-classification-obesity-diagnosis-criteria.html\n10. https://carelyclinic.com/gastric-sleeve-eligibility-criteria/\n11. https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html\n12. https://apps.who.int/nutrition/landscape/help.aspx?menu=0&helpid=420\n13. http://dayi.org.cn/qa/279026",
+  "usage": {
+    "completion_tokens": 1349,
+    "prompt_tokens": 8858,
+    "total_tokens": 10207,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

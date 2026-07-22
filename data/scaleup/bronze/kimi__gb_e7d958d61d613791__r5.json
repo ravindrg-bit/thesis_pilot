@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:57:24.594480+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ec080b754262a29b212f",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official NBA Ticket Sources\n\n### 1. **NBATickets.com** \u2014 The Official NBA Ticket Marketplace\nThis is the NBA's official one-stop shop for all ticket types for all teams:\n- Buy single game tickets directly from the team\n- Browse the official resale marketplace\n- 100% authentic and verified tickets guaranteed\n- Website: https://nbatickets.nba.com/\n\n### 2. **Ticketmaster**\n- The official ticketing partner of the NBA\n- Provides the transactional engine that most NBA teams use\n- When you click \"Buy Tickets\" on NBATickets.com, you'll typically be redirected here\n- Offers verified ticket authentication technology\n\n### 3. **Team Websites**\nEach NBA team has its own official website where you can purchase tickets directly. This ensures you're getting first-issue tickets from the source.\n\n## Other Authorized Options\n\n### 4. **StubHub**\n- A popular third-party resale platform\n- Tickets are plentiful and may be cheaper closer to game time\n- Be sure to understand the ticket transfer process\n\n### 5. **AXS**\n- Official ticket agent for certain NBA events (like NBA Global Games in Europe)\n- Provides ticketing services for specific international games\n\n## Tips for Buying NBA Tickets\n\n- **Avoid scams**: Don't buy from strangers on social media or accept tickets as screenshots/photos\n- **Digital tickets**: Make sure tickets can be officially transferred and added to your mobile wallet (Apple Wallet/Google Wallet)\n- **Buy early**: Popular matchups sell out quickly\n- **Compare prices**: Check both official and resale options\n\n## For NBA Games in China\n\nIf you're looking for NBA games in China (like NBA Global Games), official partners have included:\n- **Damai.cn** (\u5927\u9ea6\u7f51)\n- **NBA Tmall Store** at NBAStore.tmall.com\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://nbatickets.nba.com/tickets/\n4. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n5. https://www.stubhub.com/nba-tickets/grouping/115\n6. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n7. https://www.365lvtu.com/1742780481046548/\n8. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n9. https://nbaevents.nba.com/berlin/en/tickets/faqs\n10. https://www.chinadaily.com.cn/sports/2013-08/07/content_16877616.htm",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780804617,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 597,
+        "prompt_tokens": 8275,
+        "total_tokens": 8872,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ec077898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"760ea20f6a24ec07680f160001ebc0aa\"},\"usage\":{\"total_tokens\":8121}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ec077898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"760ea20f6a24ec07680f160001ebc0aa\"},\"usage\":{\"total_tokens\":8121}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"760ea20f6a24ec07680f160001ebc0aa\"},\"usage\":{\"total_tokens\":8121}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official NBA Ticket Sources\n\n### 1. **NBATickets.com** \u2014 The Official NBA Ticket Marketplace\nThis is the NBA's official one-stop shop for all ticket types for all teams:\n- Buy single game tickets directly from the team\n- Browse the official resale marketplace\n- 100% authentic and verified tickets guaranteed\n- Website: https://nbatickets.nba.com/\n\n### 2. **Ticketmaster**\n- The official ticketing partner of the NBA\n- Provides the transactional engine that most NBA teams use\n- When you click \"Buy Tickets\" on NBATickets.com, you'll typically be redirected here\n- Offers verified ticket authentication technology\n\n### 3. **Team Websites**\nEach NBA team has its own official website where you can purchase tickets directly. This ensures you're getting first-issue tickets from the source.\n\n## Other Authorized Options\n\n### 4. **StubHub**\n- A popular third-party resale platform\n- Tickets are plentiful and may be cheaper closer to game time\n- Be sure to understand the ticket transfer process\n\n### 5. **AXS**\n- Official ticket agent for certain NBA events (like NBA Global Games in Europe)\n- Provides ticketing services for specific international games\n\n## Tips for Buying NBA Tickets\n\n- **Avoid scams**: Don't buy from strangers on social media or accept tickets as screenshots/photos\n- **Digital tickets**: Make sure tickets can be officially transferred and added to your mobile wallet (Apple Wallet/Google Wallet)\n- **Buy early**: Popular matchups sell out quickly\n- **Compare prices**: Check both official and resale options\n\n## For NBA Games in China\n\nIf you're looking for NBA games in China (like NBA Global Games), official partners have included:\n- **Damai.cn** (\u5927\u9ea6\u7f51)\n- **NBA Tmall Store** at NBAStore.tmall.com\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://nbatickets.nba.com/tickets/\n4. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n5. https://www.stubhub.com/nba-tickets/grouping/115\n6. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n7. https://www.365lvtu.com/1742780481046548/\n8. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n9. https://nbaevents.nba.com/berlin/en/tickets/faqs\n10. https://www.chinadaily.com.cn/sports/2013-08/07/content_16877616.htm",
+  "usage": {
+    "completion_tokens": 597,
+    "prompt_tokens": 8275,
+    "total_tokens": 8872,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

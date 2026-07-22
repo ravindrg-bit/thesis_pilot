@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_a61c19b7ea5345d6",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-05-31T23:42:27.051121+00:00",
+  "query_text": "only fools and horses del falls through the bar episode",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cc75ee7020ddf27fd7d51",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The episode where Del Boy falls through the bar is **\"Yuppy Love\"**, the first episode of Series 6 of *Only Fools and Horses*. It originally aired on **8th January 1989** on BBC1.\n\nIn this iconic scene, Del is at a wine bar with Trigger, trying to impress two women who smile at them. Unaware that the barman has lifted up the bar flap, Del tells Trigger to \"play it nice and cool\" as he goes to lean on the bar, only to fall straight through it. Trigger then looks around wondering where Del has gone.\n\nThe scene was reportedly based on a real-life incident where writer John Sullivan saw a man in a pub lean on a bar with the flap open. While the real man managed to catch himself, David Jason suggested that Del should go all the way over for maximum comedic effect. It has since been voted the greatest *Only Fools and Horses* moment of all time in multiple polls.\n\nSources:\n1. https://only-fools-horses-tribute.fandom.com/wiki/Yuppy_Love\n2. https://www.femalefirst.co.uk/tv/news/fools-horses-greatest-ever-moment-revealed-del-boys-bar-fall-1316428.html\n3. https://www.imdb.com/title/tt0666595/\n4. https://www.imdb.com/title/tt0666595/trivia/\n5. https://www.comedy.co.uk/tv/only_fools_and_horses/videos/982/del_boy_falls_through_the_bar/\n6. https://news.stv.tv/entertainment/del-boy-falling-through-bar-voted-top-only-fools-and-horses-moment\n7. https://www.radiox.co.uk/news/tv-film/only-fools-horses-best-scene-bar-poll/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780270943,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 390,
+        "prompt_tokens": 8904,
+        "total_tokens": 9294,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "only fools and horses del falls through the bar episode"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cc75d3ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"26090b786a1cc75d680f160001d7263b\"},\"usage\":{\"total_tokens\":8750}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cc75d3ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"26090b786a1cc75d680f160001d7263b\"},\"usage\":{\"total_tokens\":8750}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"26090b786a1cc75d680f160001d7263b\"},\"usage\":{\"total_tokens\":8750}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The episode where Del Boy falls through the bar is **\"Yuppy Love\"**, the first episode of Series 6 of *Only Fools and Horses*. It originally aired on **8th January 1989** on BBC1.\n\nIn this iconic scene, Del is at a wine bar with Trigger, trying to impress two women who smile at them. Unaware that the barman has lifted up the bar flap, Del tells Trigger to \"play it nice and cool\" as he goes to lean on the bar, only to fall straight through it. Trigger then looks around wondering where Del has gone.\n\nThe scene was reportedly based on a real-life incident where writer John Sullivan saw a man in a pub lean on a bar with the flap open. While the real man managed to catch himself, David Jason suggested that Del should go all the way over for maximum comedic effect. It has since been voted the greatest *Only Fools and Horses* moment of all time in multiple polls.\n\nSources:\n1. https://only-fools-horses-tribute.fandom.com/wiki/Yuppy_Love\n2. https://www.femalefirst.co.uk/tv/news/fools-horses-greatest-ever-moment-revealed-del-boys-bar-fall-1316428.html\n3. https://www.imdb.com/title/tt0666595/\n4. https://www.imdb.com/title/tt0666595/trivia/\n5. https://www.comedy.co.uk/tv/only_fools_and_horses/videos/982/del_boy_falls_through_the_bar/\n6. https://news.stv.tv/entertainment/del-boy-falling-through-bar-voted-top-only-fools-and-horses-moment\n7. https://www.radiox.co.uk/news/tv-film/only-fools-horses-best-scene-bar-poll/",
+  "usage": {
+    "completion_tokens": 390,
+    "prompt_tokens": 8904,
+    "total_tokens": 9294,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

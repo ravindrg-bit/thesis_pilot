@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_31878cf7e84996d8",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:29:01.176959+00:00",
+  "query_text": "how much is too much b12",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26edc6baccb30f6145f727",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the available scientific evidence, there is **no established \"too much\" or Tolerable Upper Intake Level (UL) for vitamin B12**. Here's what the research shows:\n\n## Key Findings\n\n**No Established Upper Limit**\n- The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine has **not established a Tolerable Upper Intake Level (UL)** for vitamin B12 because of its **low potential for toxicity**\n- This is because vitamin B12 is **water-soluble** \u2014 any excess that your body doesn't need is easily flushed out through urine rather than stored in the liver or fat tissue\n\n**Why B12 Is Considered Safe Even at High Doses**\n- The body does not store excess amounts of B12 in a way that causes toxicity\n- When high doses are given orally, only a small percentage can actually be absorbed from the gastrointestinal tract due to the need for intrinsic factor\n- Studies involving periodic injections of 1\u20135 mg (1,000\u20135,000 mcg) to patients with pernicious anemia have shown no adverse effects\n\n**Recommended Daily Amounts**\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg/day |\n| Pregnancy | 2.6 mcg/day |\n| Lactation | 2.8 mcg/day |\n\n**Potential Concerns at Very High Doses**\nWhile generally considered safe, some evidence suggests:\n- Supplements of **25 mcg per day or higher may increase the risk of bone fractures** (Harvard notes this)\n- Some studies suggest a possible association between high-dose **parenteral B12 (0.5\u20135 mg)** and acne formation, though this was primarily linked to hydroxocobalamin rather than cyanocobalamin, and iodine particles in commercial preparations may have been responsible\n- **Cyanocobalamin should be avoided** in individuals with Leber's optic atrophy (a genetic disorder)\n\n**Practical Guidance**\n- Oral doses up to **1,000 mcg/day** to treat deficiency are generally considered safe\n- The 95th percentile of intake from both food and supplements in the U.S. is approximately **27\u201337 mcg/day**\n- Even intakes **more than two orders of magnitude higher** than typical supplemental intakes appear to pose no risks\n\n**Bottom Line:** There is no known toxic dose of vitamin B12. However, it's still wise to consult your doctor before taking high-dose supplements, especially if you have underlying health conditions or take medications that may interact with B12 (such as metformin or gastric acid inhibitors).\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.healthycell.com/blogs/articles/vitamin-b12",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780936135,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 637,
+        "prompt_tokens": 7690,
+        "total_tokens": 8327,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much is too much b12"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26edc59563",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f7ecf62a6a26edc54f50a50001f192e1\"},\"usage\":{\"total_tokens\":7538}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26edc59563",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f7ecf62a6a26edc54f50a50001f192e1\"},\"usage\":{\"total_tokens\":7538}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f7ecf62a6a26edc54f50a50001f192e1\"},\"usage\":{\"total_tokens\":7538}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the available scientific evidence, there is **no established \"too much\" or Tolerable Upper Intake Level (UL) for vitamin B12**. Here's what the research shows:\n\n## Key Findings\n\n**No Established Upper Limit**\n- The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine has **not established a Tolerable Upper Intake Level (UL)** for vitamin B12 because of its **low potential for toxicity**\n- This is because vitamin B12 is **water-soluble** \u2014 any excess that your body doesn't need is easily flushed out through urine rather than stored in the liver or fat tissue\n\n**Why B12 Is Considered Safe Even at High Doses**\n- The body does not store excess amounts of B12 in a way that causes toxicity\n- When high doses are given orally, only a small percentage can actually be absorbed from the gastrointestinal tract due to the need for intrinsic factor\n- Studies involving periodic injections of 1\u20135 mg (1,000\u20135,000 mcg) to patients with pernicious anemia have shown no adverse effects\n\n**Recommended Daily Amounts**\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg/day |\n| Pregnancy | 2.6 mcg/day |\n| Lactation | 2.8 mcg/day |\n\n**Potential Concerns at Very High Doses**\nWhile generally considered safe, some evidence suggests:\n- Supplements of **25 mcg per day or higher may increase the risk of bone fractures** (Harvard notes this)\n- Some studies suggest a possible association between high-dose **parenteral B12 (0.5\u20135 mg)** and acne formation, though this was primarily linked to hydroxocobalamin rather than cyanocobalamin, and iodine particles in commercial preparations may have been responsible\n- **Cyanocobalamin should be avoided** in individuals with Leber's optic atrophy (a genetic disorder)\n\n**Practical Guidance**\n- Oral doses up to **1,000 mcg/day** to treat deficiency are generally considered safe\n- The 95th percentile of intake from both food and supplements in the U.S. is approximately **27\u201337 mcg/day**\n- Even intakes **more than two orders of magnitude higher** than typical supplemental intakes appear to pose no risks\n\n**Bottom Line:** There is no known toxic dose of vitamin B12. However, it's still wise to consult your doctor before taking high-dose supplements, especially if you have underlying health conditions or take medications that may interact with B12 (such as metformin or gastric acid inhibitors).\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.healthycell.com/blogs/articles/vitamin-b12",
+  "usage": {
+    "completion_tokens": 637,
+    "prompt_tokens": 7690,
+    "total_tokens": 8327,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

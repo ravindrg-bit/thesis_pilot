@@ -1,0 +1,189 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "chatgpt",
+  "run_index": 4,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T03:49:25.182623+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0d55b7af47fc5f17006a24ea3ab15881a28fc8fb65927a228f",
+    "created_at": 1780804154.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0d55b7af47fc5f17006a24ea3b67a481a2b775a4451fbbded1",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0d55b7af47fc5f17006a24ea3c23b881a288bf372e9fd874d9",
+        "action": {
+          "query": "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-06-07\",\"num_games\":5}",
+          "type": "search",
+          "queries": [
+            "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-06-07\",\"num_games\":5}"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "rs_0d55b7af47fc5f17006a24ea3d5ed081a2b988eec09b46ac8a",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0d55b7af47fc5f17006a24ea3ddf3c81a2af4f5ee713b05bab",
+        "action": {
+          "query": "NBA tickets official Ticketmaster Knicks Spurs June 8 2026",
+          "type": "search",
+          "queries": [
+            "NBA tickets official Ticketmaster Knicks Spurs June 8 2026",
+            "New York Knicks tickets official Madison Square Garden Ticketmaster"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_0d55b7af47fc5f17006a24ea414ae481a296056d6ff736fee0",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 454,
+                "start_index": 357,
+                "title": "Find tickets for 'new+york+knicks' at Ticketmaster.com",
+                "type": "url_citation",
+                "url": "https://www.ticketmaster.com/search?q=new%2Byork%2Bknicks&utm_source=openai"
+              },
+              {
+                "end_index": 798,
+                "start_index": 653,
+                "title": "New York Knicks Tickets | 2026 NBA Tickets & Schedule | Ticketmaster",
+                "type": "url_citation",
+                "url": "https://www.ticketmaster.com/new-york-knicks-tickets/artist/805988?cmp=NYK_FebGames_232301&venueId=483329&utm_source=openai"
+              },
+              {
+                "end_index": 1083,
+                "start_index": 965,
+                "title": "Madison Square Garden - New York, NY | Tickets, 2026 Event Schedule, Seating Chart",
+                "type": "url_citation",
+                "url": "https://www.ticketmaster.ca/madison-square-garden-tickets-new-york/venue/483329?utm_source=openai"
+              }
+            ],
+            "text": "The **next NBA game** appears to be **Spurs @ Knicks \u2014 Monday, June 8, 2026, 8:30 PM ET / 5:30 PM PT at Madison Square Garden**. \n\nBest places to get tickets:\n\n1. **Ticketmaster** \u2014 the official ticket marketplace for the NBA/Knicks. The listing shown is **\u201cNBA Finals: San Antonio Spurs at New York Knicks Game 3\u201d** at Madison Square Garden on **June 8**. ([ticketmaster.com](https://www.ticketmaster.com/search?q=new%2Byork%2Bknicks&utm_source=openai))  \n2. **New York Knicks official ticket page** \u2014 usually routes to Ticketmaster for official primary/resale tickets. Ticketmaster is listed as the Official Ticket Marketplace of the New York Knicks. ([ticketmaster.com](https://www.ticketmaster.com/new-york-knicks-tickets/artist/805988?cmp=NYK_FebGames_232301&venueId=483329&utm_source=openai))  \n3. **Madison Square Garden box office / MSG site** \u2014 useful if you\u2019re local or need accessibility help; MSG also points buyers to Ticketmaster for online ordering. ([ticketmaster.ca](https://www.ticketmaster.ca/madison-square-garden-tickets-new-york/venue/483329?utm_source=openai))  \n4. **Secondary marketplaces** like SeatGeek, StubHub, or Vivid Seats \u2014 but for a Finals game, watch out for very high prices and make sure tickets are mobile-transfer verified.\n\nIf you tell me your **city/team** or your budget, I can help find the best option for the specific game you want.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780804164.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 10776,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 462,
+      "output_tokens_details": {
+        "reasoning_tokens": 152
+      },
+      "total_tokens": 11238
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "The **next NBA game** appears to be **Spurs @ Knicks \u2014 Monday, June 8, 2026, 8:30 PM ET / 5:30 PM PT at Madison Square Garden**. \n\nBest places to get tickets:\n\n1. **Ticketmaster** \u2014 the official ticket marketplace for the NBA/Knicks. The listing shown is **\u201cNBA Finals: San Antonio Spurs at New York Knicks Game 3\u201d** at Madison Square Garden on **June 8**. ([ticketmaster.com](https://www.ticketmaster.com/search?q=new%2Byork%2Bknicks&utm_source=openai))  \n2. **New York Knicks official ticket page** \u2014 usually routes to Ticketmaster for official primary/resale tickets. Ticketmaster is listed as the Official Ticket Marketplace of the New York Knicks. ([ticketmaster.com](https://www.ticketmaster.com/new-york-knicks-tickets/artist/805988?cmp=NYK_FebGames_232301&venueId=483329&utm_source=openai))  \n3. **Madison Square Garden box office / MSG site** \u2014 useful if you\u2019re local or need accessibility help; MSG also points buyers to Ticketmaster for online ordering. ([ticketmaster.ca](https://www.ticketmaster.ca/madison-square-garden-tickets-new-york/venue/483329?utm_source=openai))  \n4. **Secondary marketplaces** like SeatGeek, StubHub, or Vivid Seats \u2014 but for a Finals game, watch out for very high prices and make sure tickets are mobile-transfer verified.\n\nIf you tell me your **city/team** or your budget, I can help find the best option for the specific game you want.",
+  "usage": {
+    "input_tokens": 10776,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 462,
+    "output_tokens_details": {
+      "reasoning_tokens": 152
+    },
+    "total_tokens": 11238
+  },
+  "run_profile": "scaleup"
+}

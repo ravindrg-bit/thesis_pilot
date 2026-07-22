@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_eaab9147ac75176b",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-05-31T23:37:57.473152+00:00",
+  "query_text": "which came first the walking dead comic or show",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cc6527f31015e6ab1d2b6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was **first published in October 2003** by Image Comics, created by writer Robert Kirkman and artist Tony Moore. The AMC television adaptation premiered **seven years later in October 2010**. The comic ran for 193 issues from 2003 to 2019, while the TV series aired from 2010 to 2022.\n\nSources:\n1. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n2. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n3. https://www.georgiaencyclopedia.org/articles/arts-culture/the-walking-dead/walking-dead-comic-cover_001/\n4. https://www.thepopverse.com/the-walking-dead-read-play-order-comics-graphic-novels-spinoffs-release-chronological-order\n5. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780270675,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 219,
+        "prompt_tokens": 8944,
+        "total_tokens": 9163,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "which came first the walking dead comic or show"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cc6515846",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"914d9ec06a1cc6514f50a50001d8f105\"},\"usage\":{\"total_tokens\":8790}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cc6515846",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"914d9ec06a1cc6514f50a50001d8f105\"},\"usage\":{\"total_tokens\":8790}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"914d9ec06a1cc6514f50a50001d8f105\"},\"usage\":{\"total_tokens\":8790}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was **first published in October 2003** by Image Comics, created by writer Robert Kirkman and artist Tony Moore. The AMC television adaptation premiered **seven years later in October 2010**. The comic ran for 193 issues from 2003 to 2019, while the TV series aired from 2010 to 2022.\n\nSources:\n1. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n2. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n3. https://www.georgiaencyclopedia.org/articles/arts-culture/the-walking-dead/walking-dead-comic-cover_001/\n4. https://www.thepopverse.com/the-walking-dead-read-play-order-comics-graphic-novels-spinoffs-release-chronological-order\n5. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+  "usage": {
+    "completion_tokens": 219,
+    "prompt_tokens": 8944,
+    "total_tokens": 9163,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

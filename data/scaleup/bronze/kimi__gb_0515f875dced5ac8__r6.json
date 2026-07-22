@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_0515f875dced5ac8",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:56:11.912601+00:00",
+  "query_text": "unable to build nests or care for their young",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26304b33e98147f4cc8181",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, the phrase \"unable to build nests or care for their young\" is most commonly associated with **brood parasitic birds**\u2014species that have evolved to rely on other birds to raise their offspring. Here are the key examples:\n\n## Brown-Headed Cowbirds\n\nThe search results specifically highlight **female cowbirds** as animals that are \"unable to build nests or care for their young.\" These birds are obligate brood parasites that:\n- Lay up to 40 eggs per year in the nests of other bird species\n- Target hosts such as warblers, vireos, flycatchers, and thrushes\n- Have completely lost the ability to construct nests or provide any parental care\n\n## Honeyguides\n\n**Honeyguides (Indicatoridae)** are another clear example:\n- They are **brood parasites** that do not build nests and are **unable to raise their own young**\n- Female honeyguides invade the nests of other cavity-nesting birds (such as barbets, woodpeckers, kingfishers, and bee-eaters)\n- They lay their eggs among the host's eggs, sometimes puncturing or removing host eggs\n- When honeyguide chicks hatch, they use their hooked bills and claws to **kill host hatchlings or destroy unhatched host eggs**\n\n## Cuckoo Paper Wasps\n\nAmong insects, there are **three species of Polistes wasps** that are \"social parasites\" and are **entirely unable to build their own nests**. These \"cuckoo paper wasps\" must rely on the nests of other wasp species to raise their young.\n\n## Brood Parasitism as an Evolutionary Strategy\n\nThese examples illustrate an evolutionary trade-off. Brood parasites have lost the instinct and physical capabilities for nest-building and parental care because their reproductive strategy depends entirely on exploiting the parental behaviors of host species. This allows them to produce more offspring than they could raise themselves, but makes them completely dependent on finding suitable host nests.\n\nSources:\n1. https://allurepest.com.au/knowledge-base/paper-wasps/\n2. https://animals.jrank.org/pages/964/Honeyguides-Indicatoridae-BEHAVIOR-REPRODUCTION.html\n3. https://gmat.kmf.com/question/24zi4k/130745.html\n4. https://slowbirding.wordpress.com/2011/03/28/how-a-flycatcher-caught-my-eye/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780887525,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 505,
+        "prompt_tokens": 8470,
+        "total_tokens": 8975,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "unable to build nests or care for their young"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a262f35a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1e1db9f36a262f35680f160001edf0c8\"},\"usage\":{\"total_tokens\":8316}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a262f35a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1e1db9f36a262f35680f160001edf0c8\"},\"usage\":{\"total_tokens\":8316}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1e1db9f36a262f35680f160001edf0c8\"},\"usage\":{\"total_tokens\":8316}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, the phrase \"unable to build nests or care for their young\" is most commonly associated with **brood parasitic birds**\u2014species that have evolved to rely on other birds to raise their offspring. Here are the key examples:\n\n## Brown-Headed Cowbirds\n\nThe search results specifically highlight **female cowbirds** as animals that are \"unable to build nests or care for their young.\" These birds are obligate brood parasites that:\n- Lay up to 40 eggs per year in the nests of other bird species\n- Target hosts such as warblers, vireos, flycatchers, and thrushes\n- Have completely lost the ability to construct nests or provide any parental care\n\n## Honeyguides\n\n**Honeyguides (Indicatoridae)** are another clear example:\n- They are **brood parasites** that do not build nests and are **unable to raise their own young**\n- Female honeyguides invade the nests of other cavity-nesting birds (such as barbets, woodpeckers, kingfishers, and bee-eaters)\n- They lay their eggs among the host's eggs, sometimes puncturing or removing host eggs\n- When honeyguide chicks hatch, they use their hooked bills and claws to **kill host hatchlings or destroy unhatched host eggs**\n\n## Cuckoo Paper Wasps\n\nAmong insects, there are **three species of Polistes wasps** that are \"social parasites\" and are **entirely unable to build their own nests**. These \"cuckoo paper wasps\" must rely on the nests of other wasp species to raise their young.\n\n## Brood Parasitism as an Evolutionary Strategy\n\nThese examples illustrate an evolutionary trade-off. Brood parasites have lost the instinct and physical capabilities for nest-building and parental care because their reproductive strategy depends entirely on exploiting the parental behaviors of host species. This allows them to produce more offspring than they could raise themselves, but makes them completely dependent on finding suitable host nests.\n\nSources:\n1. https://allurepest.com.au/knowledge-base/paper-wasps/\n2. https://animals.jrank.org/pages/964/Honeyguides-Indicatoridae-BEHAVIOR-REPRODUCTION.html\n3. https://gmat.kmf.com/question/24zi4k/130745.html\n4. https://slowbirding.wordpress.com/2011/03/28/how-a-flycatcher-caught-my-eye/",
+  "usage": {
+    "completion_tokens": 505,
+    "prompt_tokens": 8470,
+    "total_tokens": 8975,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_0515f875dced5ac8",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:57:04.664827+00:00",
+  "query_text": "unable to build nests or care for their young",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a263093d2282767c327d9cd",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about birds that are **unable to build nests or care for their young**.\n\n## Birds That Cannot Build Nests or Care for Their Young\n\n### 1. **Cuckoos (\u675c\u9e43)**\nThe most well-known example is the **cuckoo bird**, which is a classic **brood parasite**. Cuckoos:\n- **Never build their own nests**\n- **Do not incubate their own eggs**\n- **Do not raise their own young**\n\nInstead, female cuckoos lay their eggs in the nests of other bird species (such as crows, dunnocks, meadow pipits, and reed warblers). The cuckoo's eggs mimic the host's eggs in pattern and color. Once hatched, the cuckoo chick often pushes the host's eggs or chicks out of the nest, ensuring it receives all the food and care from the foster parents.\n\n### 2. **Cowbirds (\u725b\u9e42)**\nCowbirds are another example of brood parasites. According to the search results:\n- Female cowbirds are **\"unable to build nests or care for their young\"**\n- They **lay up to 40 eggs a year in the nests of other birds**\n- Host species include warblers, vireos, flycatchers, and thrushes\n\n### 3. **Other Nestless Birds (But Still Care for Young)**\nSome birds don't build traditional nests but still care for their offspring:\n- **Emperor Penguins**: Don't build nests; instead, the male incubates the single egg on his feet under a brood pouch\n- **Chuck-will's-widow**: Lays eggs directly on the ground among leaf litter\n\n## Key Difference\nIt's important to distinguish between:\n- **Brood parasites** (cuckoos, cowbirds): Cannot/do not build nests **AND** do not care for their young\n- **Nestless birds** (emperor penguins, nightjars): Don't build nests but **do** care for their young through other means\n\nThe phrase \"unable to build nests or care for their young\" specifically describes **brood parasites** like cuckoos and cowbirds, which have evolved to completely outsource all parental duties to other species.\n\n---\n\nSources:\n1. https://testbook.com/question-answer/which-of-the-following-birds-do-not-make-a-nest--62138ec398401aab149cb651\n2. https://enviroliteracy.org/why-are-pigeons-so-bad-at-making-nests/\n3. https://www.vedantu.com/question-answer/which-of-the-following-does-not-make-a-nest-of-class-11-biology-cbse-5f56631aebfa9d21d6933d8c\n4. https://zhidao.baidu.com/question/1506683142521743419.html\n5. https://www.hummingbirdsplus.org/nature-blog-network/12-examples-of-the-laziest-animals-in-the-world/\n6. https://enviroliteracy.org/what-kind-of-bird-is-lazy/\n7. https://gmat.kmf.com/question/24zi4k/130745.html\n8. https://gmat.kmf.com/question/24zi4k.html\n9. https://zhidao.baidu.com/question/1245468353209169899.html\n10. https://nestwatch.org/blog/no-nest-required/\n11. https://news.qq.com/rain/a/20240919A038TD00",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780887575,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 741,
+        "prompt_tokens": 9110,
+        "total_tokens": 9851,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "unable to build nests or care for their young"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a262f67de91",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f8cedd776a262f67680f160001edf16a\"},\"usage\":{\"total_tokens\":8959}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a262f67de91",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f8cedd776a262f67680f160001edf16a\"},\"usage\":{\"total_tokens\":8959}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f8cedd776a262f67680f160001edf16a\"},\"usage\":{\"total_tokens\":8959}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about birds that are **unable to build nests or care for their young**.\n\n## Birds That Cannot Build Nests or Care for Their Young\n\n### 1. **Cuckoos (\u675c\u9e43)**\nThe most well-known example is the **cuckoo bird**, which is a classic **brood parasite**. Cuckoos:\n- **Never build their own nests**\n- **Do not incubate their own eggs**\n- **Do not raise their own young**\n\nInstead, female cuckoos lay their eggs in the nests of other bird species (such as crows, dunnocks, meadow pipits, and reed warblers). The cuckoo's eggs mimic the host's eggs in pattern and color. Once hatched, the cuckoo chick often pushes the host's eggs or chicks out of the nest, ensuring it receives all the food and care from the foster parents.\n\n### 2. **Cowbirds (\u725b\u9e42)**\nCowbirds are another example of brood parasites. According to the search results:\n- Female cowbirds are **\"unable to build nests or care for their young\"**\n- They **lay up to 40 eggs a year in the nests of other birds**\n- Host species include warblers, vireos, flycatchers, and thrushes\n\n### 3. **Other Nestless Birds (But Still Care for Young)**\nSome birds don't build traditional nests but still care for their offspring:\n- **Emperor Penguins**: Don't build nests; instead, the male incubates the single egg on his feet under a brood pouch\n- **Chuck-will's-widow**: Lays eggs directly on the ground among leaf litter\n\n## Key Difference\nIt's important to distinguish between:\n- **Brood parasites** (cuckoos, cowbirds): Cannot/do not build nests **AND** do not care for their young\n- **Nestless birds** (emperor penguins, nightjars): Don't build nests but **do** care for their young through other means\n\nThe phrase \"unable to build nests or care for their young\" specifically describes **brood parasites** like cuckoos and cowbirds, which have evolved to completely outsource all parental duties to other species.\n\n---\n\nSources:\n1. https://testbook.com/question-answer/which-of-the-following-birds-do-not-make-a-nest--62138ec398401aab149cb651\n2. https://enviroliteracy.org/why-are-pigeons-so-bad-at-making-nests/\n3. https://www.vedantu.com/question-answer/which-of-the-following-does-not-make-a-nest-of-class-11-biology-cbse-5f56631aebfa9d21d6933d8c\n4. https://zhidao.baidu.com/question/1506683142521743419.html\n5. https://www.hummingbirdsplus.org/nature-blog-network/12-examples-of-the-laziest-animals-in-the-world/\n6. https://enviroliteracy.org/what-kind-of-bird-is-lazy/\n7. https://gmat.kmf.com/question/24zi4k/130745.html\n8. https://gmat.kmf.com/question/24zi4k.html\n9. https://zhidao.baidu.com/question/1245468353209169899.html\n10. https://nestwatch.org/blog/no-nest-required/\n11. https://news.qq.com/rain/a/20240919A038TD00",
+  "usage": {
+    "completion_tokens": 741,
+    "prompt_tokens": 9110,
+    "total_tokens": 9851,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

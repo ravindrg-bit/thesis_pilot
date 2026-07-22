@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_31878cf7e84996d8",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:27:58.824472+00:00",
+  "query_text": "how much is too much b12",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26ed8702f4d3f9001e5620",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the available scientific evidence, **there is no established \"too much\" or Tolerable Upper Intake Level (UL) for vitamin B12**. Here's what the research shows:\n\n## Key Points\n\n**No Upper Limit Established**\n- The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine **did not establish a UL for vitamin B12** because of its low potential for toxicity\n- Vitamin B12 is water-soluble, and excess amounts are easily flushed out through urine rather than stored in the body\n\n**Generally Recognized as Safe**\n- The Institute of Medicine states that **\"no adverse effects have been associated with excess vitamin B12 intake from food and supplements in healthy individuals\"**\n- Even at large doses, vitamin B12 is generally considered safe\n\n**Typical Supplement Doses**\n- The RDA for adults is only **2.4 mcg/day**\n- Oral supplements to treat deficiency are commonly **up to 1,000 mcg (1 mg) per day** and considered safe\n- The 95th percentile of intake from both food and supplements was approximately **27-37 mcg/day**\n\n## Potential Concerns\n\nWhile B12 is considered very safe, there are a few considerations:\n\n- **Some evidence suggests** that supplements of **25 mcg per day or higher** may potentially increase the risk of bone fractures (though more research is needed)\n- **High-dose injections** (0.5 to 5 mg) have been rarely associated with acne formation, primarily with hydroxocobalamin rather than cyanocobalamin\n- People with **Leber's optic atrophy** should avoid cyanocobalamin and use hydroxocobalamin instead\n\n## Bottom Line\n\nFor healthy individuals, there doesn't appear to be a toxic level of vitamin B12 from oral supplements or food. However, it's still wise to consult with a healthcare provider before taking high-dose supplements, especially if you have underlying health conditions or take medications that may interact with B12 (such as metformin or gastric acid inhibitors).\n\n---\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.healthycell.com/blogs/articles/vitamin-b12?srsltid=AfmBOopXMdCaCaenM5Zvl7IVezbArDncYDH4O4oIqKj9uEHNTdZN7JR5",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780936072,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 553,
+        "prompt_tokens": 7690,
+        "total_tokens": 8243,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much is too much b12"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26ed860f8f",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bf210c1d6a26ed864f50a50001f1928d\"},\"usage\":{\"total_tokens\":7538}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26ed860f8f",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bf210c1d6a26ed864f50a50001f1928d\"},\"usage\":{\"total_tokens\":7538}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bf210c1d6a26ed864f50a50001f1928d\"},\"usage\":{\"total_tokens\":7538}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the available scientific evidence, **there is no established \"too much\" or Tolerable Upper Intake Level (UL) for vitamin B12**. Here's what the research shows:\n\n## Key Points\n\n**No Upper Limit Established**\n- The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine **did not establish a UL for vitamin B12** because of its low potential for toxicity\n- Vitamin B12 is water-soluble, and excess amounts are easily flushed out through urine rather than stored in the body\n\n**Generally Recognized as Safe**\n- The Institute of Medicine states that **\"no adverse effects have been associated with excess vitamin B12 intake from food and supplements in healthy individuals\"**\n- Even at large doses, vitamin B12 is generally considered safe\n\n**Typical Supplement Doses**\n- The RDA for adults is only **2.4 mcg/day**\n- Oral supplements to treat deficiency are commonly **up to 1,000 mcg (1 mg) per day** and considered safe\n- The 95th percentile of intake from both food and supplements was approximately **27-37 mcg/day**\n\n## Potential Concerns\n\nWhile B12 is considered very safe, there are a few considerations:\n\n- **Some evidence suggests** that supplements of **25 mcg per day or higher** may potentially increase the risk of bone fractures (though more research is needed)\n- **High-dose injections** (0.5 to 5 mg) have been rarely associated with acne formation, primarily with hydroxocobalamin rather than cyanocobalamin\n- People with **Leber's optic atrophy** should avoid cyanocobalamin and use hydroxocobalamin instead\n\n## Bottom Line\n\nFor healthy individuals, there doesn't appear to be a toxic level of vitamin B12 from oral supplements or food. However, it's still wise to consult with a healthcare provider before taking high-dose supplements, especially if you have underlying health conditions or take medications that may interact with B12 (such as metformin or gastric acid inhibitors).\n\n---\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.healthycell.com/blogs/articles/vitamin-b12?srsltid=AfmBOopXMdCaCaenM5Zvl7IVezbArDncYDH4O4oIqKj9uEHNTdZN7JR5",
+  "usage": {
+    "completion_tokens": 553,
+    "prompt_tokens": 7690,
+    "total_tokens": 8243,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

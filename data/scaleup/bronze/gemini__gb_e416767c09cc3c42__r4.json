@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_e416767c09cc3c42",
+  "engine": "gemini",
+  "run_index": 4,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T17:50:46.175981+00:00",
+  "query_text": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 17:50:46 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=11529",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "### Why this happens: Reference vs. Copy\n\nIn Python, variables do not actually \"hold\" data; instead, they are **references** (pointers) to objects in memory. \n\nWhen you write `new_list = my_list`, you are not creating a new list object. You are simply creating a new label (`new_list`) that points to the **exact same list in memory** as `my_list`. \n\nYou can prove this by checking their memory addresses using Python's built-in `id()` function:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list\n\n# Both variables point to the same memory ID\nprint(id(my_list) == id(new_list))  # Output: True\n```\n\nBecause both variables point to the exact same object, any modification you make (like appending an item or changing an index) will be reflected in both variables.\n\n---\n\n### How to solve it\n\nTo prevent this, you need to **clone** or **copy** the list so that `new_list` points to a completely separate object in memory. There are two types of copies depending on what your list contains: **Shallow Copies** and **Deep Copies**.\n\n---\n\n### 1. Shallow Copy (For flat lists)\nIf your list only contains \"simple\" elements (like numbers, strings, or booleans), you should use a **shallow copy**. Here are the three most common ways to do this:\n\n#### Option A: The `.copy()` method (Recommended/Most Readable)\nThis is the built-in, modern Python way to copy a list.\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\nprint(my_list)   # Output: [1, 2, 3]      (Unchanged!)\nprint(new_list)  # Output: [1, 2, 3, 4]   (Modified!)\n```\n\n#### Option B: List Slicing `[:]`\nSlicing a list from start to finish creates a brand-new copy. This is a highly popular, classic Python shorthand.\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list[:]\n```\n\n#### Option C: The `list()` constructor\nYou can pass the old list into the `list()` constructor to build a new one.\n```python\nmy_list = [1, 2, 3]\nnew_list = list(my_list)\n```\n\n---\n\n### 2. Deep Copy (For nested lists)\nIf your list contains **other mutable objects** (like lists inside of lists, or dictionaries inside of lists), a shallow copy is not enough. \n\nIn a shallow copy of a nested list, the *outer* list is copied, but the *inner* nested lists still point to the original memory locations. \n\n```python\n# The Problem with Shallow Copying Nested Lists:\nmy_list = [[1, 2], [3, 4]]\nnew_list = my_list.copy()\n\nnew_list[0].append(99)\nprint(my_list)  # Output: [[1, 2, 99], [3, 4]] -> (The inner list STILL changed!)\n```\n\nTo completely duplicate nested lists, you must use **`copy.deepcopy()`**:\n\n```python\nimport copy\n\nmy_list = [[1, 2], [3, 4]]\n# Creates a brand new outer list AND copies all nested elements recursively\nnew_list = copy.deepcopy(my_list)\n\nnew_list[0].append(99)\nprint(my_list)   # Output: [[1, 2], [3, 4]]      (Completely untouched!)\nprint(new_list)  # Output: [[1, 2, 99], [3, 4]]  (Modified!)\n```",
+              "thought": null,
+              "thought_signature": "EuImCt8mAQw51sdJb8hSOBnypdc-ZdQCPMg8ib7LeFpm_buoU8NwhPc1zp7QG_iGe-2UFttQ085g9bXBD4QeZGBqoj_nu-3Y13e0tpu-CpVK_CwfS-oL8U18g5Bu6SXve8C3FSZl8iY5NzsTZ0bfcCBsFMHXBv2U1blPlitJnyzdGnXb9CcQlaGMkAkogeqLg4q0viJbsKrx53TFHG2dA2vfuQRz_b-6e0uc-_5-Jb5OY9DwtuG0e2HATIyXckBAI4OvSEM9Pc9xmRp37ByAdPfDdluGXSiRYtjcrV2S4HoHSXunLAgVbbl3jFZXqe8xZuisvj-dukqQ-bek4LHoZ0JNOFdDsTcLgLQbOw2QZZxUaP023ew42-io5ysktn40w3AhfKaMAygsHP4aNgp36Tcb1_jrrt9R4SiroqfEALk4kUHS3Yj5Vmj-uB7HBgH9ko6w74722JyJKjSNosbmWAiCpiwvWMo4tsMwkFUhbBockQc41YqWDix0uTF3h-CmZtYIah6qWSmCDcSRPRVOJZYhsLe8gjQe9GzoKKLBsLwgCnyWbGUPV2FfdKQPhb5VQL82_vn7Yvtgdzpz3YchT-juFF2v2TC8FgTRnRUZsO_oy-kQjIkZGAj3cn42sCf0ru5_WhH_0LEjQNhx1TkrtlgL5Yi1ra53-usS0pfSfYB-yhQVcjwRppcXIpHmPCbqaJIfYHaaRhRFOimI842n1j8kgWCssKapx2xIx7THonQzoEX-bn9SRTUfPNJn9bIuyTE_jNZ36HU9nL6S7mbamPlGBUzINF2ZuSaKwiRXKg5wukbD18MyxZrp0rjnjDgtbeK2G0xYF15InefYGjXGIwq1BylOBGxg94-y4pZgueroO3dt1aHLMs1Cowa57z4mCzNo5QQkq8ysuwNiNz6hFcaJkA2-U83r6st9OtzLaHh5B-8t2VuX2P8Mh3hHZXobLz2JHNhFrk940Qu8-Ki4Y-fRP-9pBz6H2hwyPlCP3IaW_eeVbDrmx6Rwg6exJJ9AzPJSVYmNN46zKCHZ4_nD1gMnM7sZU2mZ9TncuZ_p6GVCv6R_BVArgaDjU-K8-wr7ZAkhLRWOzSTPJxjSf3OA-VLYeSq3abuv0q2rPiZaOLuueb03lMdbxMiyHLMh8M9H_pOOcdwcwirMNBpkyQsExtmaNkVRBtHHOUw_Wf2NKFQ_7ro5YwOwULjbdtU0IxetV2MJw96cO08HJ32CorcE8TXICG9gYhOdJPGr0PBXsFJxZ9ojhoC4i1PJGWx2o_j5sXOJF2xcYyZubfRVWp-CVyVl7C8756_aa8xKDUA0Vl9wVmsLpv1LhB8RpHTFaeZVTjomyeufw8LNmXqsdcdvRSVqzGbEv2ttw89bl2I2BBmxEor7ImT8GphM2ydWF23Edo-lxrVHTmp-eNX2q6sF9fL1ne5qjyT-tuKJxxgA_MFHEAYfVev3Hl7rjmSNxpOoTQoQHIMtgMBA1tEPAJfAfSkku0pclhoacthVf-tRc2kFWxUZdABhhArOQmCPRpn8Q8oQ83fD1u4_nBTCTV1Yur8KWcbZFzo_lZXxF4bMv6gw80Df00m-CMzwBY11SiQD4u8RT2Y0ncHRstHZ-QcJ4F_0g1J6uSIO8isnddp55Of9LnVNtLeJPtH952-a24F8u0XGy2vueLnSdA8qIUifHYsMtUjuO6U91dzA_TvZDWCZpGcqsYwYP72OH98P9Idg-VD7aj2JXENJi3Ljibnu6PLV4TO89RF0rTfyugqb270CYuM74NYEga7IZPsqrglzFI9rnj_3fLlWSxkEu4YWgEZ4ROroLcCfhbD26gbvFl8Lx-muiQqx5hYzzQ0JM9Hcj8zmSu5bsq7d1drmUxH-pcI0RtaUeoMOD_SIeeimI6Ia33HSeD-jlIrVQthKMuXHv6alO2dSXj83Ao8a3ZCQfeUvnNBAcmFEX3lSB0qeNdbOlDb9jFjnXu547gg855neJOMz1DGpm9Isik-4m8ARpuhdyu5k4GdZEH-akf4q56XLlLidV5WPGbA_1GRhI0osm872_6VjkSqAzoKivqZE6oPd48nx3tCPnKYj7Zfh4ZXA6KrYmItP4Y-Du_MeoHhuGPTlRRBuLMUtNgLkggNNgZQMMTsClMGMr8Xi2oOgOYEtDImD_VTxZswpdpfFCGKocuHqmZCRCpre5ID8xKhHE2zTaTAttCJK_qSeDsdV2OWUrL81meePhxEP5DWtDAMX21BNKcBJwX6T2lSCLYphFcHZilma3GXtZQPEynbffadsEVN8If5dju50h_bJgP4GWDqMtuSK8Xkgleh_BODlyg5PzaMX1lOflOJ6JxUkb0pJi9Tjj5iTpJiMtX6eyyfYH7Hi76GRWIe4YHT5elJ79ndieJMxv6YXQ_B5CiI9JShZ0Y_I0ctsZPA0JOcWefEtAj8oAkkOVaffjsmGwbpAyXtLnYsOo5DzVyNUMCziZ0X34mFf0qteuKarjQp0xmVu2G6GL5UIIaWCkfaIM-4aTw96SYAyxpTm_V4vsMF7Y0F-obOgrBj42Dar61n6Rsmqx34zG9wopiD7ELtNlQCflxUiKPDnRsxwBoFWeIEU5iUJmNeHH_jDKBwe7Nj_vf3CNfoQBUe1EpjuMKHDST5AiUU7i57rY1bmEeAP0jsMM9538SuLHpkppIh_PRpANt3T0dZjd8D0Yzn0cqKFBrRBJHc8g1A3x5n0hkz1_-LEqlgOKorH4KKBty50gWRsv3D9AfU6R-TCHBzIqcLQO91O-6pIgihe8zWEkXJeiGLDA7tip4w0En-KqIbj4y--BHjrllMu3k6R80OTHmm5PkGr5y6adjQ3KgrYS_BFeVXYQJwv-aWQKrwyHGwdPA7nWzXtvHiBHB03gM1ek3UecWcINVBxt1KqnnmyXvdNAdEmHFDqbEG8sni9BB7O-KZjYvhHRmpj2QqiSZl_00uXp4i4kxcZ3QbkkAPVmtA7R3ux6CHN8R7XszdU8Yaez-7eiLWBhTXXHoNzNM9NSNUs0uWQ029vMD4IutTBhsw5alrDoNYq3_orozQGM8e2ujFnwJG-prZ-hryq4OtHND1leU2Yf_-yJfQDS7HltMbnXv5fVYVwU5F5t9Gm7T86_8fCkNIPCT34qWdCDvRHFN4WutEgVXmpyN4c3VnkSfQ4bSOkGFFy--HGRsZ6gxs3Tusi9yckCu4ySgWy2-V5825YJbu7UOeDEyIJmrKynpi4hLq55EnBRIXhZYthxvBtta3vlKItkeD2LQTaBK5fHU_SqrHV_JAG2fBbAZc7QBBbFAgW_mOUNEYqLvwHnsE3v85iUDg38wGPiUArQlklycZqyaxSeDfvP9o5tJ3BakcHqKYbeibCDVHEokT6BlVs08Lnq7JGFRHkdptb-X6HiwSYHHssIlPz7XFi1ZPkg_TrGPP0-7mQ3Lz9TOaNzyILfAxMHpDzRHujGmXt9Wwhs-fNU9hfifkpL3dYEUb8bVAX0uAUlwq-VgydyksjynvNrqE_jLTUpivQiIMQxBxQ17k20ZuZtLyICBb5AqGuJwiZlioB0-I6qBBjlFgWlJPpcXenkz6V0HHmb9MimSqWBrVJ5fUDOwmTq5AqmPSFMFEcXdI7sH4wHf0o72UoJSlFj9idASAVri6tMDpOqmgI3Kwy2prYO8wMNIRXAhmlrGhRnq79CTZW6h5rAC2XsWZ9jLeStSvdqSPHEkRU3sYmtvG-2FAl1cBsQLNqxAitsnv-zf-71lwpgupi1p8DgWNT99jzhijR2ZyylgJzQohar03CpvVfc1b73B8P9bGDEYcrVAkGd4W1YUAhlveGFXeDrEL5ztPp2LoQTPW-524U75Cv1pEcjjdyeb4yd3-CRFECVsKdVEYF-wIQ5Klxy3gbSgptr7lT1qQfmvTM10JC9-ntUxTerLEHwnxghv40oW7ElVcJ4psghak0lD-QoUWNWNbyc1qA378kJck4n_Smeuq4xWx7H3FkIyMYx1qqtRV9uAih3DZhf4QaC1TSnkqy-tpsqsgQ4Bmji9-imB0RGW0jpVQ9eLDAzCVoQzfcP6NtsL8iEceNNZBrx3SruoGzp8Oj2yv2FLkl8PUt1JWcxJ_9x6kiBITd4U8RW0uXhjJyBeQ67HeO93EEUEWwJwD_6U_J6Lhl6t8cib2C_t0c2o2uqKT5ivw0-ahfJ10aXLUgVLPK52IhqKGIE2MhT2lpsPxN_QnV-tUy6DFU9TRkT8KCq3vQexicmYtQMVp5iH5BfCqaVfDMMWesc9HZQF2ct2molOstjiBFRwnhwJC6oAOhnVp2AdYHg4am5lxQr2mpn3FLCZQh_qlHiXttobhJ5KEF7A78IT2KM3MC32GjaxkRf3--eErNsBCcFBAPCbGOq1dE6mA2CCKS3NTolEioWy_GssKzXi4bd7vOPNOakufMdoK6MT_iQXJ5kdu6RgrhRZyoVRY28cc3_XlwKX9uCtiOCRbr2B5p4Ql1R77LemfsRCzIPEHwD160XzGKwYDzPRmb8KZE_G6ZhNatVHyuEEHgWU3MLo9O1EqwjH94mwkR2YwWPpFTwuJPH9nxypb2tt6sy-qHCMgW7qepQLawq5WahKT9VjZ3veWtnFVu04e3mhA81wYknJmtOineOgVQKGfd4UgQMEW01EYDZit1za7LrzUB--bCHBBJBTbBkf2xgQ_vgb0BHtS_uED-reuXAwIIG9hZPMbzXFppB0d606ziFmjPYQUXn-kcZH_RUOiO_bN3R0UczKXq7xmHrnnJ5IOUEEZ68vfZ7QBcdnj7QCtyuDG5b2ayoxGbQK8wy5iBjXdL-i08TMtG8LmuSnmpVvD16d9tXuRzowsL0wh-GZO-jPIifIc3sTFkyZ3II5YG_ReZJO6AJjOjsf5Bh3EZYsISwIcrovJ9hjFF5XIK0DFP0xwXsMMkvSOv5fObgV_WzWxJQ4FuwmMz_AVUqVW16AjoGhhV5Nz4aSM9mnS_py7D8bLZV4wAde8L1fGn4uip6xPm3KU4pGCUNpk3QRpn-Zj6o6JZU2EECsi6hEfSYTQbQcQpiWoVD5WUaT7XEax6MDe0icSTvWrKF8uBSB8cvBu0A3ZMRW-8SX6tImxGZDpuHVoLxYKCpz-dKwk77t8976txsbuuoH0bqS1vkwZE1cSQHOiJktONiaxbc8rbq9cFQGGiJxL8kRENybAhiNArqtX0d30jhGAltA3VS7nVDsIBCxCvgyxcEbzvJkkALYL7B9R5HfU8xH8aVRkQYCaou4uTtCx9rErzSnxribVQ8kwmSlvDCnee-GXl5KB_MJN8zdMVo3ImvbWefwMK462htzMr_A_2Qxj8DYzxK9Bgo8Bb5PEIBd3uFvyXhUx4ZGoOEXS8r3IzIuliPvCCNzjj5so8qzJq_Qs6OdsmU6yeGJShw55PlO-_SoCCDA6ThLU2VYZO2PXeMS_8VEWQkO7JNtKN2hhPjoJBnboSX1x11PzwLln6uvApkihrTjC5JAyYsabRQJpJfmdNGeM59mkPCNfEa3ty04mRuFV5ypYVp8CCcVzpiVEoZJDhbf-KGpCNwqDJuEW3J_UVSZadl9LoPccCzAkK677z0vhpdYuzNil1IP_7gaYJ2OfzhW_d8pOAgDsGgTSL3QQEXdrehDjtuNmqhxqbendPz77S4n9oGmKLitfJ_LW0yvjyCOUQZYGWJP4WDftbwLJl9YNKpezRWN36B07k8YglFuubLnzWK9PawSl0-xgvX_gjgc5T0aPbuhj19YBmagJt2rVWrwU6UbfcErTw-lF_WkFq0JkDQ8A_7CJLeHbAcrCJJ1GlM7uN26Bev0NNoB0yQrUgS7WkubLNOgae7gdpLe0UIxbCvVsBuAX3MmgnvSS0ZihdOjR4UuTEaUsOUICiX4E-wjpnIOgrON_ZMHRi7L5aLSCvmzoMrFnZrozgKpPV71bbJQMgd5LIZb7Eln_tb3MqLEoOUcavH8O1XTkUgFY2fPCgTc9ELSVlNNePZknjSGkBcP2HCC4ZLGtyZfbhCab_yQ6dNzWYyLCuNhkLApWK_4ZpgQ9mXPhtYAFq0bsSCiejRbJB-ttTOG1NCU4Rup8eDy5uV2Pa0oRJYI3R1Ve7Tb_w2vOldT22GWZiorqdTgkHMAggMHQr7Y-P6odfspM7ksvwBWrvbrVspOmwoPdRpEJeIE3dll58L8qlm-nTmJ5UjM15uvE7ZnRvYhg8O1tmlLL92UZE097SmMIfyeMsOXw6DJaE_hjSLDJPkJ8rQ53M8x_mMlUVMSItnRqPqbLL-XipVenl-CrCtrobm2MuryGkPmdzGJ0VEdCCDPOKv140nPTb-YjvHS6pyiaWkqsV-kcIxd4w9rREQCowDpZxfcj8cMDF1A5EUve44vD1heTT1Z-_uKucb9EzUAK6o9ZPsbBmybzQuinGicJ-FzZtZqVM27dniXSJG9XwSTzA_NHdAb_LJd6jB_no9MkB5pGQECX40WBCv5npCdxiwZRrG_gTCKlrkUcH3mfhH1i_cXxozHYvWm2F8bM3KpIpGWycSM2ES3wBFnHBU-Y75XEk1paKsO36TuDphAXoo4CYxxHyT7sXk4zlfnp5DEo1lmWIXZGkDM5bPowq4ip-",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "aq8lapriK8-9jrEPl6-5-Qc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 879,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 47,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 47
+        }
+      ],
+      "thoughts_token_count": 1325,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2251,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "### Why this happens: Reference vs. Copy\n\nIn Python, variables do not actually \"hold\" data; instead, they are **references** (pointers) to objects in memory. \n\nWhen you write `new_list = my_list`, you are not creating a new list object. You are simply creating a new label (`new_list`) that points to the **exact same list in memory** as `my_list`. \n\nYou can prove this by checking their memory addresses using Python's built-in `id()` function:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list\n\n# Both variables point to the same memory ID\nprint(id(my_list) == id(new_list))  # Output: True\n```\n\nBecause both variables point to the exact same object, any modification you make (like appending an item or changing an index) will be reflected in both variables.\n\n---\n\n### How to solve it\n\nTo prevent this, you need to **clone** or **copy** the list so that `new_list` points to a completely separate object in memory. There are two types of copies depending on what your list contains: **Shallow Copies** and **Deep Copies**.\n\n---\n\n### 1. Shallow Copy (For flat lists)\nIf your list only contains \"simple\" elements (like numbers, strings, or booleans), you should use a **shallow copy**. Here are the three most common ways to do this:\n\n#### Option A: The `.copy()` method (Recommended/Most Readable)\nThis is the built-in, modern Python way to copy a list.\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\nprint(my_list)   # Output: [1, 2, 3]      (Unchanged!)\nprint(new_list)  # Output: [1, 2, 3, 4]   (Modified!)\n```\n\n#### Option B: List Slicing `[:]`\nSlicing a list from start to finish creates a brand-new copy. This is a highly popular, classic Python shorthand.\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list[:]\n```\n\n#### Option C: The `list()` constructor\nYou can pass the old list into the `list()` constructor to build a new one.\n```python\nmy_list = [1, 2, 3]\nnew_list = list(my_list)\n```\n\n---\n\n### 2. Deep Copy (For nested lists)\nIf your list contains **other mutable objects** (like lists inside of lists, or dictionaries inside of lists), a shallow copy is not enough. \n\nIn a shallow copy of a nested list, the *outer* list is copied, but the *inner* nested lists still point to the original memory locations. \n\n```python\n# The Problem with Shallow Copying Nested Lists:\nmy_list = [[1, 2], [3, 4]]\nnew_list = my_list.copy()\n\nnew_list[0].append(99)\nprint(my_list)  # Output: [[1, 2, 99], [3, 4]] -> (The inner list STILL changed!)\n```\n\nTo completely duplicate nested lists, you must use **`copy.deepcopy()`**:\n\n```python\nimport copy\n\nmy_list = [[1, 2], [3, 4]]\n# Creates a brand new outer list AND copies all nested elements recursively\nnew_list = copy.deepcopy(my_list)\n\nnew_list[0].append(99)\nprint(my_list)   # Output: [[1, 2], [3, 4]]      (Completely untouched!)\nprint(new_list)  # Output: [[1, 2, 99], [3, 4]]  (Modified!)\n```",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 879,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 47,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 47
+      }
+    ],
+    "thoughts_token_count": 1325,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2251,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

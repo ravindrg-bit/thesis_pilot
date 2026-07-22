@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:14:50.148646+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2722b3dd489880af8a8cf3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research into pirate leadership, historical pirate practices, and motivational techniques, here's what I would say as a pirate captain to rally my crew for treasure hunting:\n\n---\n\n**\"Listen well, ye scurvy dogs and sea dogs alike!**\n\n**I see the hunger in yer eyes\u2014the same hunger that drove us from the merchant service, from the navy, from the chains of honest living! We chose the black flag, and why? For FREEDOM! And freedom ain't free\u2014it must be TAKEN!**\n\n**Yonder lies a treasure that'd make the King of Spain weep! Gold enough to drown in! Enough to buy every port, every pleasure, every dream ye ever dared whisper in the dark!**\n\n**But hear me now\u2014this treasure won't find itself! The sea guards her secrets fierce. There'll be storms that'd tear the sails from the masts! There'll be rivals who'd sink us for a copper! There'll be times when the rum runs low and the horizon mocks us with empty waves!**\n\n**Yet I stand before ye, not as some powdered lord in a palace, but as YER CAPTAIN! I've bled with ye. I've drunk with ye. I've buried good men who trusted my word! And I tell ye this\u2014*I* believe in this prize, and *I* believe in THIS CREW!**\n\n**The Code is clear: what's taken together, is SHARED together! Every man jack of ye gets his fair cut! No captain's greed, no officer's privilege\u2014EQUAL SHARES! The cabin boy fights, the cabin boy profits! The powder monkey risks his hide, the powder monkey drinks from silver!**\n\n**So I ask ye now\u2014will ye sail with me? Will ye trust yer captain? Will ye chase this dream 'til the sails fall off and the cannons melt?**\n\n**Then RAISE THE BLACK! LET THEM FEAR US! FOR TONIGHT WE SAIL, AND TOMORROW WE COUNT GOLD!**\n\n**NOW WHO'S WITH ME?!**\n\n**YARRRRR!**\"\n\n---\n\nThis speech incorporates several historically accurate and effective pirate leadership principles I found:\n\n1. **Shared wealth/equal shares** \u2014 Pirate ships famously used democratic systems where treasure was divided equally among crew members, unlike the rigid hierarchy of naval vessels. This was their greatest motivator.\n\n2. **Personal connection and credibility** \u2014 Good pirate captains led from the front and built trust through shared hardship, not through fear alone.\n\n3. **Embracing the danger** \u2014 The \"rougher the seas, the smoother we sail\" mentality celebrated resilience as a point of pride.\n\n4. **Freedom as core value** \u2014 Pirates were famously motivated by escape from oppressive systems, not just greed.\n\n5. **The theatrical element** \u2014 Historical accounts suggest pirate captains used dramatic flair, flags, and ritual to build crew identity and morale.\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://quotesanity.com/beidou-quotes/\n5. https://punscope.com/captain-puns/\n6. https://readingroo.ms/5/6/0/5/56058/56058-h/56058-h.htm\n7. https://news.pcci.edu/events/fine-arts-series-treasure-island/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949683,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 732,
+        "prompt_tokens": 4206,
+        "total_tokens": 4938,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2722b2a6d6",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ca91d0266a2722b2680f160001f030bd\"},\"usage\":{\"total_tokens\":4042}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2722b2a6d6",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ca91d0266a2722b2680f160001f030bd\"},\"usage\":{\"total_tokens\":4042}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ca91d0266a2722b2680f160001f030bd\"},\"usage\":{\"total_tokens\":4042}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research into pirate leadership, historical pirate practices, and motivational techniques, here's what I would say as a pirate captain to rally my crew for treasure hunting:\n\n---\n\n**\"Listen well, ye scurvy dogs and sea dogs alike!**\n\n**I see the hunger in yer eyes\u2014the same hunger that drove us from the merchant service, from the navy, from the chains of honest living! We chose the black flag, and why? For FREEDOM! And freedom ain't free\u2014it must be TAKEN!**\n\n**Yonder lies a treasure that'd make the King of Spain weep! Gold enough to drown in! Enough to buy every port, every pleasure, every dream ye ever dared whisper in the dark!**\n\n**But hear me now\u2014this treasure won't find itself! The sea guards her secrets fierce. There'll be storms that'd tear the sails from the masts! There'll be rivals who'd sink us for a copper! There'll be times when the rum runs low and the horizon mocks us with empty waves!**\n\n**Yet I stand before ye, not as some powdered lord in a palace, but as YER CAPTAIN! I've bled with ye. I've drunk with ye. I've buried good men who trusted my word! And I tell ye this\u2014*I* believe in this prize, and *I* believe in THIS CREW!**\n\n**The Code is clear: what's taken together, is SHARED together! Every man jack of ye gets his fair cut! No captain's greed, no officer's privilege\u2014EQUAL SHARES! The cabin boy fights, the cabin boy profits! The powder monkey risks his hide, the powder monkey drinks from silver!**\n\n**So I ask ye now\u2014will ye sail with me? Will ye trust yer captain? Will ye chase this dream 'til the sails fall off and the cannons melt?**\n\n**Then RAISE THE BLACK! LET THEM FEAR US! FOR TONIGHT WE SAIL, AND TOMORROW WE COUNT GOLD!**\n\n**NOW WHO'S WITH ME?!**\n\n**YARRRRR!**\"\n\n---\n\nThis speech incorporates several historically accurate and effective pirate leadership principles I found:\n\n1. **Shared wealth/equal shares** \u2014 Pirate ships famously used democratic systems where treasure was divided equally among crew members, unlike the rigid hierarchy of naval vessels. This was their greatest motivator.\n\n2. **Personal connection and credibility** \u2014 Good pirate captains led from the front and built trust through shared hardship, not through fear alone.\n\n3. **Embracing the danger** \u2014 The \"rougher the seas, the smoother we sail\" mentality celebrated resilience as a point of pride.\n\n4. **Freedom as core value** \u2014 Pirates were famously motivated by escape from oppressive systems, not just greed.\n\n5. **The theatrical element** \u2014 Historical accounts suggest pirate captains used dramatic flair, flags, and ritual to build crew identity and morale.\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://quotesanity.com/beidou-quotes/\n5. https://punscope.com/captain-puns/\n6. https://readingroo.ms/5/6/0/5/56058/56058-h/56058-h.htm\n7. https://news.pcci.edu/events/fine-arts-series-treasure-island/",
+  "usage": {
+    "completion_tokens": 732,
+    "prompt_tokens": 4206,
+    "total_tokens": 4938,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

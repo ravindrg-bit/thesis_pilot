@@ -1,0 +1,67 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "claude",
+  "run_index": 4,
+  "model_requested": "claude-sonnet-4-6",
+  "model_served": "claude-sonnet-4-6",
+  "timestamp_utc": "2026-06-07T20:25:56.316237+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 2048,
+    "tools": [
+      {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 5
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "msg_01HBMzS8U3y3L3mRk4YKYPSi",
+    "container": null,
+    "content": [
+      {
+        "citations": null,
+        "text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical procedure used to determine whether the **mean difference between two sets of paired observations** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n- The **same subjects** are measured **twice** (e.g., before and after a treatment)\n- Two measurements are taken under **different conditions** on the same subject\n- Subjects are **matched/paired** based on relevant characteristics\n- The **two groups are not independent** of each other\n\n---\n\n## Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Paired observations** | Each data point in one group corresponds to exactly one data point in the other |\n| **Continuous data** | The dependent variable is measured on an interval or ratio scale |\n| **Normality** | The *differences* between pairs should be approximately normally distributed |\n| **No significant outliers** | Outliers in the differences can distort results |\n| **Random sampling** | Data should be a random sample from the population |\n\n> \ud83d\udcdd The normality assumption is **robust** with larger sample sizes (n > 30) due to the Central Limit Theorem.\n\n---\n\n## Hypotheses\n\n| | Formula |\n|---|---|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (mean difference = 0) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed) *or* \u03bc_d > 0 / \u03bc_d < 0 (one-tailed) |\n\nWhere **\u03bc_d** is the population mean of the differences.\n\n---\n\n## Formula\n\n### Step 1: Calculate the differences\n$$d_i = X_{1i} - X_{2i}$$\n\n### Step 2: Compute the mean difference\n$$\\bar{d} = \\frac{\\sum d_i}{n}$$\n\n### Step 3: Compute the standard deviation of differences\n$$S_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}}$$\n\n### Step 4: Compute the t-statistic\n$$t = \\frac{\\bar{d}}{S_d / \\sqrt{n}}$$\n\n### Step 5: Degrees of Freedom\n$$df = n - 1$$\n\nWhere **n** = number of pairs.\n\n---\n\n## Decision Rule\n\n- If **|t calculated| > t critical** \u2192 **Reject H\u2080**\n- If **p-value < \u03b1 (e.g., 0.05)** \u2192 **Reject H\u2080**\n\n---\n\n## Example\n\nA researcher tests whether a training program improves test scores. 5 students are tested **before** and **after** training:\n\n| Student | Before (X\u2081) | After (X\u2082) | d = X\u2081 - X\u2082 |\n|---|---|---|---|\n| 1 | 70 | 80 | -10 |\n| 2 | 65 | 75 | -10 |\n| 3 | 80 | 85 | -5 |\n| 4 | 75 | 90 | -15 |\n| 5 | 60 | 70 | -10 |\n\n- **Mean difference (d\u0304)** = \u221210\n- **Sd** \u2248 3.54\n- **t** = \u221210 / (3.54 / \u221a5) = **\u22126.32**\n- **df** = 4\n- **t critical (\u03b1 = 0.05, two-tailed)** \u2248 \u00b12.776\n- **Conclusion:** |\u22126.32| > 2.776 \u2192 **Reject H\u2080** \u2192 Training significantly improved scores.\n\n---\n\n## Effect Size (Cohen's d)\n\nTo measure **practical significance**:\n\n$$d = \\frac{\\bar{d}}{S_d}$$\n\n| Cohen's d | Interpretation |\n|---|---|\n| ~0.2 | Small effect |\n| ~0.5 | Medium effect |\n| ~0.8+ | Large effect |\n\n---\n\n## Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---|---|---|\n| Same subjects? | \u2705 Yes | \u274c No |\n| Controls for individual differences? | \u2705 Yes | \u274c No |\n| Degrees of freedom | n \u2212 1 | n\u2081 + n\u2082 \u2212 2 |\n| More statistical power? | \u2705 Generally | \u274c Less |\n\n---\n\n## Summary\n\nThe paired samples t-test is a **powerful and efficient** test when data is naturally paired, as it **controls for individual variability**, making it easier to detect a true effect. Always verify assumptions before applying it.",
+        "type": "text"
+      }
+    ],
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2219,
+      "output_tokens": 1171,
+      "output_tokens_details": null,
+      "server_tool_use": null,
+      "service_tier": "standard"
+    }
+  },
+  "answer_text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical procedure used to determine whether the **mean difference between two sets of paired observations** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n- The **same subjects** are measured **twice** (e.g., before and after a treatment)\n- Two measurements are taken under **different conditions** on the same subject\n- Subjects are **matched/paired** based on relevant characteristics\n- The **two groups are not independent** of each other\n\n---\n\n## Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Paired observations** | Each data point in one group corresponds to exactly one data point in the other |\n| **Continuous data** | The dependent variable is measured on an interval or ratio scale |\n| **Normality** | The *differences* between pairs should be approximately normally distributed |\n| **No significant outliers** | Outliers in the differences can distort results |\n| **Random sampling** | Data should be a random sample from the population |\n\n> \ud83d\udcdd The normality assumption is **robust** with larger sample sizes (n > 30) due to the Central Limit Theorem.\n\n---\n\n## Hypotheses\n\n| | Formula |\n|---|---|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (mean difference = 0) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed) *or* \u03bc_d > 0 / \u03bc_d < 0 (one-tailed) |\n\nWhere **\u03bc_d** is the population mean of the differences.\n\n---\n\n## Formula\n\n### Step 1: Calculate the differences\n$$d_i = X_{1i} - X_{2i}$$\n\n### Step 2: Compute the mean difference\n$$\\bar{d} = \\frac{\\sum d_i}{n}$$\n\n### Step 3: Compute the standard deviation of differences\n$$S_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}}$$\n\n### Step 4: Compute the t-statistic\n$$t = \\frac{\\bar{d}}{S_d / \\sqrt{n}}$$\n\n### Step 5: Degrees of Freedom\n$$df = n - 1$$\n\nWhere **n** = number of pairs.\n\n---\n\n## Decision Rule\n\n- If **|t calculated| > t critical** \u2192 **Reject H\u2080**\n- If **p-value < \u03b1 (e.g., 0.05)** \u2192 **Reject H\u2080**\n\n---\n\n## Example\n\nA researcher tests whether a training program improves test scores. 5 students are tested **before** and **after** training:\n\n| Student | Before (X\u2081) | After (X\u2082) | d = X\u2081 - X\u2082 |\n|---|---|---|---|\n| 1 | 70 | 80 | -10 |\n| 2 | 65 | 75 | -10 |\n| 3 | 80 | 85 | -5 |\n| 4 | 75 | 90 | -15 |\n| 5 | 60 | 70 | -10 |\n\n- **Mean difference (d\u0304)** = \u221210\n- **Sd** \u2248 3.54\n- **t** = \u221210 / (3.54 / \u221a5) = **\u22126.32**\n- **df** = 4\n- **t critical (\u03b1 = 0.05, two-tailed)** \u2248 \u00b12.776\n- **Conclusion:** |\u22126.32| > 2.776 \u2192 **Reject H\u2080** \u2192 Training significantly improved scores.\n\n---\n\n## Effect Size (Cohen's d)\n\nTo measure **practical significance**:\n\n$$d = \\frac{\\bar{d}}{S_d}$$\n\n| Cohen's d | Interpretation |\n|---|---|\n| ~0.2 | Small effect |\n| ~0.5 | Medium effect |\n| ~0.8+ | Large effect |\n\n---\n\n## Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---|---|---|\n| Same subjects? | \u2705 Yes | \u274c No |\n| Controls for individual differences? | \u2705 Yes | \u274c No |\n| Degrees of freedom | n \u2212 1 | n\u2081 + n\u2082 \u2212 2 |\n| More statistical power? | \u2705 Generally | \u274c Less |\n\n---\n\n## Summary\n\nThe paired samples t-test is a **powerful and efficient** test when data is naturally paired, as it **controls for individual variability**, making it easier to detect a true effect. Always verify assumptions before applying it.",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2219,
+    "output_tokens": 1171,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard"
+  },
+  "run_profile": "scaleup"
+}

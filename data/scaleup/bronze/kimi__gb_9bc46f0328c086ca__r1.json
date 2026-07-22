@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:34:14.118250+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ae6091495f77503011fa",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Basic Workflow\n\nTV stations operate on a **linear schedule**\u2014content airs at fixed times in a continuous back-to-back sequence of programs, commercials, promos, and public service announcements (PSAs). This creates \"appointment TV\" where viewers must tune in at specific times to watch desired content.\n\n## The Scheduling Process\n\n**Traffic Department & Program Logs**\nTraditionally, a station's **traffic department** builds a detailed log of all content for a day, week, or longer. This log includes:\n- Pre-recorded shows\n- Live programs (newscasts, sports)\n- Commercials\n- Promos for upcoming shows\n- Public service announcements\n\n**Automation Systems**\nThe program log is handed off to an **automation system** that executes the schedule by playing back content from video playout servers. A **master control operator** monitors the process, handles quality control, inserts graphics/logos, and manages breaking news cut-ins or live events.\n\n## How Commercials Are Integrated\n\n**Fixed Commercial Breaks**\nCommercials air during designated breaks within programming. Most TV commercials are **30 to 60 seconds** long. Advertisers purchase airtime based on:\n- Time of day (primetime evening slots cost more due to higher viewership)\n- Popularity of the program\n- Expected audience size and demographics\n\n**SCTE Markers**\nModern systems use **SCTE markers** (Society of Cable Telecommunications Engineers standards) to precisely trigger ad insertion at exact times, enabling coordination with third-party ad servers.\n\n## Historical Evolution\n\n- **Early days**: Humans manually fed tapes into players\n- **Robot era**: Pick-and-place robots retrieved video cassettes and loaded them into players\n- **Software-based**: \"Channel-in-a-box\" PC systems for scheduling and playout\n- **Cloud-based**: Current trend toward cloud scheduling and playout with remote access and better redundancy\n\n## Commercial Placement Strategy\n\nNetworks sell advertising slots based on the shows where commercials will air and determine the **exact location within shows** where ads appear. Research shows this scheduling involves complex optimization\u2014one study found that automated scheduling systems improved promotional effectiveness by about 37% compared to manual scheduling.\n\n## Revenue Beyond Traditional Ads\n\nBroadcasters also generate revenue from **commercial references** within programming, including:\n- **Product placement** (paid brand features)\n- **Sponsorship credits** (brands mentioned in show titles or opening/closing)\n- **Advertiser-funded programs** (sponsors involved in production)\n\nRegulatory bodies like Ofcom (UK) and the FCC (US) enforce rules to protect audiences from excessive advertising and ensure viewers can distinguish between programming and advertising.\n\nSources:\n1. https://www.nyinterconnect.com/discover/news-notes/how-does-traditional-tv-advertising-work/\n2. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n3. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n4. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n5. https://pure.uva.nl/ws/files/147072504/IRIS-2023-2-EN.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780788832,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 701,
+        "prompt_tokens": 4717,
+        "total_tokens": 5418,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How TV stations air shows and commercials"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ae5fb17d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"514cad346a24ae5f680f160001eb5e61\"},\"usage\":{\"total_tokens\":4568}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ae5fb17d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"514cad346a24ae5f680f160001eb5e61\"},\"usage\":{\"total_tokens\":4568}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"514cad346a24ae5f680f160001eb5e61\"},\"usage\":{\"total_tokens\":4568}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Basic Workflow\n\nTV stations operate on a **linear schedule**\u2014content airs at fixed times in a continuous back-to-back sequence of programs, commercials, promos, and public service announcements (PSAs). This creates \"appointment TV\" where viewers must tune in at specific times to watch desired content.\n\n## The Scheduling Process\n\n**Traffic Department & Program Logs**\nTraditionally, a station's **traffic department** builds a detailed log of all content for a day, week, or longer. This log includes:\n- Pre-recorded shows\n- Live programs (newscasts, sports)\n- Commercials\n- Promos for upcoming shows\n- Public service announcements\n\n**Automation Systems**\nThe program log is handed off to an **automation system** that executes the schedule by playing back content from video playout servers. A **master control operator** monitors the process, handles quality control, inserts graphics/logos, and manages breaking news cut-ins or live events.\n\n## How Commercials Are Integrated\n\n**Fixed Commercial Breaks**\nCommercials air during designated breaks within programming. Most TV commercials are **30 to 60 seconds** long. Advertisers purchase airtime based on:\n- Time of day (primetime evening slots cost more due to higher viewership)\n- Popularity of the program\n- Expected audience size and demographics\n\n**SCTE Markers**\nModern systems use **SCTE markers** (Society of Cable Telecommunications Engineers standards) to precisely trigger ad insertion at exact times, enabling coordination with third-party ad servers.\n\n## Historical Evolution\n\n- **Early days**: Humans manually fed tapes into players\n- **Robot era**: Pick-and-place robots retrieved video cassettes and loaded them into players\n- **Software-based**: \"Channel-in-a-box\" PC systems for scheduling and playout\n- **Cloud-based**: Current trend toward cloud scheduling and playout with remote access and better redundancy\n\n## Commercial Placement Strategy\n\nNetworks sell advertising slots based on the shows where commercials will air and determine the **exact location within shows** where ads appear. Research shows this scheduling involves complex optimization\u2014one study found that automated scheduling systems improved promotional effectiveness by about 37% compared to manual scheduling.\n\n## Revenue Beyond Traditional Ads\n\nBroadcasters also generate revenue from **commercial references** within programming, including:\n- **Product placement** (paid brand features)\n- **Sponsorship credits** (brands mentioned in show titles or opening/closing)\n- **Advertiser-funded programs** (sponsors involved in production)\n\nRegulatory bodies like Ofcom (UK) and the FCC (US) enforce rules to protect audiences from excessive advertising and ensure viewers can distinguish between programming and advertising.\n\nSources:\n1. https://www.nyinterconnect.com/discover/news-notes/how-does-traditional-tv-advertising-work/\n2. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n3. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n4. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n5. https://pure.uva.nl/ws/files/147072504/IRIS-2023-2-EN.pdf",
+  "usage": {
+    "completion_tokens": 701,
+    "prompt_tokens": 4717,
+    "total_tokens": 5418,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

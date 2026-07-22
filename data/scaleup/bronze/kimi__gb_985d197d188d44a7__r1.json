@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:14:10.881486+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27228d62ad0c4b18bd3bfc",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Arrr, gather 'round me hearties, and lend an ear to yer captain!\n\n*slams tankard on the barrel*\n\nWhat be we doin' out here on these cursed waters, eh? For the salt in our hair? For the scurvy? **NAY!** We be here for the **GOLD**, lads! For the kind of fortune that'd make a king weep into his silk pillows!\n\n*pulls out a weathered map*\n\nI holds in me hand the secret to more riches than ye can spend in ten lifetimes! Hidden treasure, buried deep where only the bold dare seek it! Blackbeard himself said, \"Only the devil and I know the whereabouts of my treasure\" \u2014 well, the devil ain't here, and Blackbeard's feedin' the fishes! So who does that leave, eh?\n\n*points at crew*\n\n**IT LEAVES US!**\n\nYe think the British Navy'd be out here in this squall? Ye think merchant sailors got the stomach for what lies ahead? They be holed up in their cozy ports, shiverin' at the very TALE of what we chase! But WE \u2014 we be **FREE MEN**! We be the ones what takes what the world hides from the weak!\n\n*pounds chest*\n\nBy the sweat of our brows and the strength of our backs and the courage of our hearts, we shall find it! And mark me words \u2014 every man jack of ye shall share in the spoils! A captain what don't share the wealth ain't worth the plank he walks! There'll be rum enough to float the ship, gold enough to fill her hold, and a story that'll be told in every tavern from Tortuga to Singapore!\n\n*draws sword, catching the light*\n\nNow what say ye, me buccaneers? Will ye hoist the colors and follow yer captain to glory? Or will ye be **frightened bilge rats** cowerin' below deck while history passes ye by?\n\n*raises blade high*\n\n**THEN HOIST THE COLORS, LADS! DEAD MEN TELL NO TALES \u2014 BUT LIVING PIRATES TELL LEGENDS!**\n\n*throws back head and laughs*\n\n**YO HO, ME HEARTIES, YO HO!**\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://www.filmsite.org/bestspeeches73.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949646,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 506,
+        "prompt_tokens": 2527,
+        "total_tokens": 3033,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a27228daafc",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"8eaaa1176a27228d4f50a50001f1d3fb\"},\"usage\":{\"total_tokens\":2360}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a27228daafc",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"8eaaa1176a27228d4f50a50001f1d3fb\"},\"usage\":{\"total_tokens\":2360}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"8eaaa1176a27228d4f50a50001f1d3fb\"},\"usage\":{\"total_tokens\":2360}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Arrr, gather 'round me hearties, and lend an ear to yer captain!\n\n*slams tankard on the barrel*\n\nWhat be we doin' out here on these cursed waters, eh? For the salt in our hair? For the scurvy? **NAY!** We be here for the **GOLD**, lads! For the kind of fortune that'd make a king weep into his silk pillows!\n\n*pulls out a weathered map*\n\nI holds in me hand the secret to more riches than ye can spend in ten lifetimes! Hidden treasure, buried deep where only the bold dare seek it! Blackbeard himself said, \"Only the devil and I know the whereabouts of my treasure\" \u2014 well, the devil ain't here, and Blackbeard's feedin' the fishes! So who does that leave, eh?\n\n*points at crew*\n\n**IT LEAVES US!**\n\nYe think the British Navy'd be out here in this squall? Ye think merchant sailors got the stomach for what lies ahead? They be holed up in their cozy ports, shiverin' at the very TALE of what we chase! But WE \u2014 we be **FREE MEN**! We be the ones what takes what the world hides from the weak!\n\n*pounds chest*\n\nBy the sweat of our brows and the strength of our backs and the courage of our hearts, we shall find it! And mark me words \u2014 every man jack of ye shall share in the spoils! A captain what don't share the wealth ain't worth the plank he walks! There'll be rum enough to float the ship, gold enough to fill her hold, and a story that'll be told in every tavern from Tortuga to Singapore!\n\n*draws sword, catching the light*\n\nNow what say ye, me buccaneers? Will ye hoist the colors and follow yer captain to glory? Or will ye be **frightened bilge rats** cowerin' below deck while history passes ye by?\n\n*raises blade high*\n\n**THEN HOIST THE COLORS, LADS! DEAD MEN TELL NO TALES \u2014 BUT LIVING PIRATES TELL LEGENDS!**\n\n*throws back head and laughs*\n\n**YO HO, ME HEARTIES, YO HO!**\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://www.filmsite.org/bestspeeches73.html",
+  "usage": {
+    "completion_tokens": 506,
+    "prompt_tokens": 2527,
+    "total_tokens": 3033,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

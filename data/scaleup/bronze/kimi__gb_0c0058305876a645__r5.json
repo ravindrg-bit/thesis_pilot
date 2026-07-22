@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_0c0058305876a645",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:48:55.022683+00:00",
+  "query_text": "What medicine should I take when I get a cold?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a253e764f7bfd8d6e9ab4a3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on information from health authorities, here are the main options for treating cold symptoms:\n\n## Over-the-Counter Medicines\n\n**For pain, fever, and aches:**\n- **Acetaminophen (Tylenol/paracetamol)** or **ibuprofen (Advil/Motrin)** can help relieve headaches, sore throat, and reduce fever\n\n**For nasal congestion:**\n- **Decongestants** (like pseudoephedrine or phenylephrine) in tablet form or as nasal sprays/drops can help unblock your nose\n- Important: Don't use nasal decongestant sprays for more than 3-5 days to avoid \"rebound congestion\"\n\n**For runny nose/sneezing:**\n- **Antihistamines** may help, though they aren't very effective for cold symptoms specifically\n\n**For cough:**\n- **Cough suppressants** (to reduce coughing) or **expectorants** (to loosen mucus)\n- **Honey** can relieve cough for adults and children over 1 year old\n\n## Important Safety Notes\n\n- **Antibiotics do NOT work for colds** \u2014 colds are caused by viruses, not bacteria\n- There's no cure for the common cold; medicines only relieve symptoms while your body fights the infection\n- Most colds improve on their own within 7-10 days\n- Check with a pharmacist or doctor if you have other health conditions (especially high blood pressure, as decongestants can raise it) or take other medications\n- Avoid giving aspirin to children or teenagers\n\n## Non-Drug Relief\n\n- Rest and plenty of fluids\n- Saline nasal sprays or rinses\n- Humidifier or steam from a hot shower\n- Warm salt water gargling for sore throat\n- Hot lemon and honey drinks\n\n**When to see a doctor:** If symptoms last more than 10 days, fever lasts more than 3-4 days, you have trouble breathing, or symptoms worsen after improving.\n\n---\n\nSources:\n1. https://www.nhs.uk/conditions/common-cold/\n2. https://www.cdc.gov/common-cold/treatment/index.html\n3. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n4. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n5. https://www.webmd.com/cold-and-flu/cold-medicine-treatment-when-what-how",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780825718,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 526,
+        "prompt_tokens": 5225,
+        "total_tokens": 5751,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What medicine should I take when I get a cold?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a253e7576e9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"81da76006a253e75680f160001ec33aa\"},\"usage\":{\"total_tokens\":5073}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a253e7576e9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"81da76006a253e75680f160001ec33aa\"},\"usage\":{\"total_tokens\":5073}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"81da76006a253e75680f160001ec33aa\"},\"usage\":{\"total_tokens\":5073}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on information from health authorities, here are the main options for treating cold symptoms:\n\n## Over-the-Counter Medicines\n\n**For pain, fever, and aches:**\n- **Acetaminophen (Tylenol/paracetamol)** or **ibuprofen (Advil/Motrin)** can help relieve headaches, sore throat, and reduce fever\n\n**For nasal congestion:**\n- **Decongestants** (like pseudoephedrine or phenylephrine) in tablet form or as nasal sprays/drops can help unblock your nose\n- Important: Don't use nasal decongestant sprays for more than 3-5 days to avoid \"rebound congestion\"\n\n**For runny nose/sneezing:**\n- **Antihistamines** may help, though they aren't very effective for cold symptoms specifically\n\n**For cough:**\n- **Cough suppressants** (to reduce coughing) or **expectorants** (to loosen mucus)\n- **Honey** can relieve cough for adults and children over 1 year old\n\n## Important Safety Notes\n\n- **Antibiotics do NOT work for colds** \u2014 colds are caused by viruses, not bacteria\n- There's no cure for the common cold; medicines only relieve symptoms while your body fights the infection\n- Most colds improve on their own within 7-10 days\n- Check with a pharmacist or doctor if you have other health conditions (especially high blood pressure, as decongestants can raise it) or take other medications\n- Avoid giving aspirin to children or teenagers\n\n## Non-Drug Relief\n\n- Rest and plenty of fluids\n- Saline nasal sprays or rinses\n- Humidifier or steam from a hot shower\n- Warm salt water gargling for sore throat\n- Hot lemon and honey drinks\n\n**When to see a doctor:** If symptoms last more than 10 days, fever lasts more than 3-4 days, you have trouble breathing, or symptoms worsen after improving.\n\n---\n\nSources:\n1. https://www.nhs.uk/conditions/common-cold/\n2. https://www.cdc.gov/common-cold/treatment/index.html\n3. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n4. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n5. https://www.webmd.com/cold-and-flu/cold-medicine-treatment-when-what-how",
+  "usage": {
+    "completion_tokens": 526,
+    "prompt_tokens": 5225,
+    "total_tokens": 5751,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

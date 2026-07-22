@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_31878cf7e84996d8",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:29:42.379352+00:00",
+  "query_text": "how much is too much b12",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26edee0e3053689e19c9eb",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here's what you need to know about how much B12 is too much:\n\n## No Established Upper Limit\n\n**Vitamin B12 has no Tolerable Upper Intake Level (UL)**. The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine did not establish a UL for vitamin B12 because of its **low potential for toxicity**. This is because B12 is water-soluble, and excess amounts are easily flushed out through urine rather than stored in the body.\n\n## What the Research Says\n\n- **No adverse effects** have been associated with excess B12 intake from food or supplements in healthy individuals\n- Even at **large doses**, vitamin B12 is generally considered safe\n- Oral doses up to **1,000 mcg (1 mg) per day** to treat deficiency are considered safe\n- Studies involving periodic injections of **1 to 5 mg** to patients with pernicious anemia show no adverse effects\n\n## Potential Concerns at High Doses\n\nWhile B12 is considered very safe, there are a few caveats:\n\n- **Some evidence suggests** that supplements of **25 mcg per day or higher** may increase the risk of bone fractures (though more research is needed)\n- High-dose **parenteral (injected) B12** has been associated with acne formation in some studies, primarily with hydroxocobalamin rather than cyanocobalamin\n- People with **Leber's optic atrophy** (a genetic disorder) should avoid cyanocobalamin and use hydroxocobalamin instead\n\n## Recommended Daily Amounts\n\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg/day |\n| Pregnancy | 2.6 mcg/day |\n| Lactation | 2.8 mcg/day |\n\n## Bottom Line\n\nThere is essentially **no known toxic dose of vitamin B12**. The body excretes what it doesn't need. However, it's still wise to:\n- Consult your doctor before taking high-dose supplements\n- Not mega-dose unnecessarily\n- Address the underlying cause if you're deficient (such as absorption issues or dietary inadequacy)\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/overview-of-vitamins\n5. https://www.healthycell.com/blogs/articles/vitamin-b12?srsltid=AfmBOopXMdCaCaenM5Zvl7IVezbArDncYDH4O4oIqKj9uEHNTdZN7JR5",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780936174,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 618,
+        "prompt_tokens": 7685,
+        "total_tokens": 8303,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much is too much b12"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26edede7ed",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1a0bef016a26eded680f160001eff500\"},\"usage\":{\"total_tokens\":7538}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26edede7ed",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1a0bef016a26eded680f160001eff500\"},\"usage\":{\"total_tokens\":7538}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1a0bef016a26eded680f160001eff500\"},\"usage\":{\"total_tokens\":7538}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here's what you need to know about how much B12 is too much:\n\n## No Established Upper Limit\n\n**Vitamin B12 has no Tolerable Upper Intake Level (UL)**. The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine did not establish a UL for vitamin B12 because of its **low potential for toxicity**. This is because B12 is water-soluble, and excess amounts are easily flushed out through urine rather than stored in the body.\n\n## What the Research Says\n\n- **No adverse effects** have been associated with excess B12 intake from food or supplements in healthy individuals\n- Even at **large doses**, vitamin B12 is generally considered safe\n- Oral doses up to **1,000 mcg (1 mg) per day** to treat deficiency are considered safe\n- Studies involving periodic injections of **1 to 5 mg** to patients with pernicious anemia show no adverse effects\n\n## Potential Concerns at High Doses\n\nWhile B12 is considered very safe, there are a few caveats:\n\n- **Some evidence suggests** that supplements of **25 mcg per day or higher** may increase the risk of bone fractures (though more research is needed)\n- High-dose **parenteral (injected) B12** has been associated with acne formation in some studies, primarily with hydroxocobalamin rather than cyanocobalamin\n- People with **Leber's optic atrophy** (a genetic disorder) should avoid cyanocobalamin and use hydroxocobalamin instead\n\n## Recommended Daily Amounts\n\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg/day |\n| Pregnancy | 2.6 mcg/day |\n| Lactation | 2.8 mcg/day |\n\n## Bottom Line\n\nThere is essentially **no known toxic dose of vitamin B12**. The body excretes what it doesn't need. However, it's still wise to:\n- Consult your doctor before taking high-dose supplements\n- Not mega-dose unnecessarily\n- Address the underlying cause if you're deficient (such as absorption issues or dietary inadequacy)\n\nSources:\n1. https://ods.od.nih.gov/factsheets/Vitaminb12-HealthProfessional/\n2. https://www.ncbi.nlm.nih.gov/books/NBK114302/\n3. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n4. https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/overview-of-vitamins\n5. https://www.healthycell.com/blogs/articles/vitamin-b12?srsltid=AfmBOopXMdCaCaenM5Zvl7IVezbArDncYDH4O4oIqKj9uEHNTdZN7JR5",
+  "usage": {
+    "completion_tokens": 618,
+    "prompt_tokens": 7685,
+    "total_tokens": 8303,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "gemini",
+  "run_index": 3,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-05-31T21:16:19.065252+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 31 May 2026 21:16:19 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=12903",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "The process of airing TV shows and commercials is a highly coordinated, automated, and precisely timed operation. Every second of a broadcast day is planned, scheduled, and executed down to the millisecond. \n\nHere is a step-by-step breakdown of how TV stations transition seamlessly from a television show to a commercial break, and back again.\n\n---\n\n### 1. The Blueprint: The \"Traffic\" Department\nBefore anything can go on the air, it must be scheduled. This is the job of the **Traffic Department** (which handles business and scheduling, not cars). \n\n* **The Log:** Traffic logs are the master schedules for a 24-hour broadcast day. Using specialized software (like WideOrbit or standard traffic databases), traffic coordinators build a \"log.\" This log lists exactly what will play, in what order, and at what exact microsecond.\n* **Placing Ads:** Advertisers buy \"spots\" (usually 15, 30, or 60 seconds). The Traffic Department places these ads into designated commercial breaks (called \"pods\") within or between shows. \n* **Regulatory Compliance:** The traffic software ensures that competing brands (e.g., Coke and Pepsi) are not scheduled in the same commercial break, and that children's programming doesn't exceed legal limits for advertising.\n\n### 2. Ingest: Getting Content into the System\nTV stations no longer use physical tapes. Shows, movies, syndicated programs, and commercials are delivered digitally as high-definition video files.\n\n* **Digital Delivery:** Syndicated shows are often delivered via satellite (using services like PitchBlue) or cloud servers. Commercials are sent by ad agencies via delivery networks (like Extreme Reach or Comcast AdDelivery).\n* **Ingesting & QC:** When a file arrives, a technician \"ingests\" (uploads) it into the station\u2019s local storage servers. The file goes through **Quality Control (QC)** to ensure the audio levels, video resolution, and aspect ratios meet strict broadcast standards.\n* **ID Codes:** Every commercial is assigned a unique tracking code (traditionally called an **ISCI code**, now more commonly an **Ad-ID**). This ensures the correct commercial is played.\n\n### 3. Master Control: The Nerve Center\nThe **Master Control Room (MCR)** is where the actual broadcasting happens. In the past, Master Control operators manually pushed buttons and switched tapes. Today, the process is highly computerized.\n\n* **Automation Systems:** Master Control relies on automation software (such as Crispin, Florical, or Grass Valley). This software reads the daily Traffic Log and takes command of the station's **video servers**.\n* **Frame-Accurate Execution:** The automation system looks at the schedule, fetches the digital file of a TV show, plays it, and then instantly transitions to the first commercial in the log at the exact frame required. There is no \"gap\" or black screen because the system seamlessly cuts from one file to another.\n* **Graphics Overlay:** Master Control is also responsible for overlaying digital on-screen graphics, such as the station's logo (the \"bug\" in the bottom corner), emergency weather alerts, or \"Up Next\" promotional banners.\n\n### 4. Network vs. Local (How Affiliates Work)\nIf you are watching a local station (like a local NBC, CBS, or Fox affiliate), the workflow involves a mix of national and local feeds.\n\n* **The Network Feed:** During prime-time shows or national sports, the local station passes through a live satellite or fiber feed directly from the network headquarters in New York or Los Angeles.\n* **Splitting the Ad Time:** In a 1-hour national show, some commercial spots belong to the national network (national ads), while others are reserved for the local station to sell (local ads, like local car dealerships or regional grocery stores).\n* **Cue Tones & Triggering:** To tell the local station exactly when to insert local commercials, the network feed embeds invisible digital triggers called **SCTE-35** signals (historically, these were audible \"DTMF\" tones, similar to telephone keypad sounds). \n* When the local station\u2019s automation system detects this trigger, it temporarily \"un-switches\" from the network feed, plays the local commercials from its local servers, and then switches back to the network feed just as the show resumes.\n\n### 5. Transmission: Reaching Your TV\nOnce Master Control has assembled the final, combined stream of shows, graphics, and commercials, it is ready to be sent to viewers.\n\n* **The Encoder:** The raw video stream is compressed using an encoder into a standard digital format (like MPEG-2 or MPEG-4).\n* **Distribution:** This signal is sent to multiple places simultaneously:\n  * To the station's physical transmitter tower for **Over-the-Air (OTA)** broadcast via digital antenna.\n  * To local **cable and satellite providers** via dedicated fiber-optic lines.\n  * To streaming providers (like YouTube TV or Hulu + Live TV) and the station's own mobile apps, often using **Dynamic Ad Insertion (DAI)** to swap out traditional TV commercials with personalized internet ads.\n\n### 6. Reconciliation: Getting Paid\nOnce a commercial has successfully aired, the system must prove it to the advertiser.\n\n* **The \"As-Run\" Log:** As the automation system plays out the day, it writes an \"As-Run\" log. This is an undeniable, time-stamped record of exactly what played and when.\n* **Billing:** At the end of the day, the As-Run log is sent back to the Traffic/Billing Department. The station cross-references this with the original schedule. If a commercial aired correctly, an invoice is generated and sent to the advertiser. If a technical glitch occurred and the ad didn't air (or aired with bad audio/video), the station must offer a \"make-good\" (a free ad spot later on) to compensate the advertiser.",
+              "thought": null,
+              "thought_signature": "EqMkCqAkAQw51sfwqypOrpJI67lpjW-E_6xUe49cU5k65kuamAzJaAAnnefUcjteaa2Dn1ehdNuCiiaynGwhUiH1wRDSnqmPQ65va4zE1hSjf3LlBaPEU3Mqk7ZlLW_aqlXahM5fKfwCfo2KAmdRb9pE-vYMvKtl-ktZR4_287-YCU8w-EoML2BccV_ts9el0CMP3UQLKMvIkoGxzrSIUVMqt6oTM-Ca3LG__lhxce-jwcnUp9BaDm2U4R3fV9QILcQ4Zf45TbkIMnazO-0Xbd1-JSM1zhzAIMZTrpnhYDOgd_Iy62l6CjkE2YaG_4BBllAyEipc_yjAGUNAgdFs9fuzzwau2cvcXZJ2uC3hgq25I5qoIWC41zJtlM0Hf2V4v8WoR4dxZXbML1yP8CKZDYD6P_ISHvFOqQhJ0Buq07vGlcAlUFh4PcWXNGQDp7WSZ9LLxcnIAEnDo7xUvWOJtCHV2XmzSPxCN9q4cjy34bzulwUn8U-nV9kDKFRiqABCKJ9y7bu4jcrrZ0nMYw0tvkBTMIduKhxt8nFuyx9J7reYqz0L3TfYJiv2RW0T_7B5DvCzdJ4-7Ii3IWlAgT9VECNb52lE8AAu_Rmn1hAx4Q_efoE0UagBNCnRh8tR2UA8GIkLfDBeJ7wGc_o0RPK07qVM4ZUbh2Y9MW5ngdBUl1S5pDCGcHxUVh8UIjOLvmtvahrLbYIAsJIcNrtyWopqHs6zhMJbfGxM9nuOWKG8OUgcLUlLUArCJvYK3_ScBOxYccXVOr7u4DLJdWZcI6OUvIuSK0PEjRzfMA2PSHRC1gSyLY9aFtaWxNKfbHZrFySeYCNF1kloTMtEQ9P5MKF9GaHWi_jD3p43aRGX_stZ4HdJH-gulM1xECnPewrk4giAugeBwKsSxbF7o_eiWUVjbOUODQ9HauAtthefWy7vbpzBTb0fGwGAlkX_prtzgKYZTQ7HAE8_OHWtAV2OYIn1OIxXLj3s2KeSSn2jf8mBQq87eTTy7s95Q_w2AcS3j7EshJVswBI4YsAszwMDdzWVLRo10avPjoOy1sVclZ30-GjOOlJr3XrfDHyAuM7p7vGhHFSNq6sLZqr_7aaTnfDp6yTpHkAwYDq9Nbh1yhEPukYYuknXzBDLtWDse_WrxGItvmq3GyRvcDX0HprtdIopzXoLQD03AyZ74CkzARLTTGCenUj2t3GSj67SM_jOhKQqlev0GrFw8KzD-zScJHk0PDnz_-uj5zds0ubbFMa9LE8qb0WUG_kgjSiNIkkc9ai9yde_WFyy2-O8kRZ-VnncDVY_4JhFg4GCwkyY14sLVUA19R8Dv8fRT05uPYm0PpxKydcsu-ksTc4CyheiGFCHg5G8ojayo1z86yqf7-M3OFl3Cb61LZW7AjpTtRxY-cj-_uWFNZ7O79tgGFlKaI1AUtH112YQhkX-hl-UcHnhkxkr-asOcwnxiWIOfoacAvfU6hGLa-cNYeMNNcOnA7J0yfvumiw749RC4aPkEcQVNek8gRyC9zUHiuI3cC9Zrghfv34w-LA8G0vl9md7_GO8aSqPixwaAgOcM_7L6K1W76E9BoTYypAHI9aOh8-IYy1uRxBQz1DCLlxXnp2tVYGJHdGShTQ3H2i2hSzFbsso23zliI2aZPY801X0Ndwvas-zmTHlhOsV0_Y6mFeeDvOodsyR_rQgN5culTD6Z_3DLvzPVZIRmsjmSVunHkgvClSIl9xSOD1m9a5DeSwFiLUYiTf17B9Nd1GRsaMwFbXqoWMkSdl-uAfKDTGlu93rngCPpiE1wDJ5sxYMTsqepAsGBUPt3zYkmwXZeu6Iv-NeHIZl1fnGMFEI2PCutBEAqFYE_zhVEmu1qghMujYO-1r5jGHouGshKzT_dUpBEbmgaAPXFrnnsvGdh5xkxy6FJQ2sV0Jl8TulEBTOTrWxqgA2lss6L-hC3F6tKIrIZA92iMpFcf5N7vrPg_fTJW0ZBcDKbtuNvoBdXnwTPutKUfLBORr7Azyqfr0nYxjv80swjrmP2FrFagOVheEKIJjgoI1NKEmhQ-419zZZa7G7FWCaTHJ6kDPJfCuDNfAt1JVekf2DJqswo0TobTBCcEhr5HhlH1b7WaQPjU9ADOXtOd69awqm2kUK8LShZP5tfS34D0N5EE9Og3nuVdjoesqNXMdsXddIQuFo0cZjAgCc8kB3YXMSonHgJFzBc5LsRrg0qXNEvICpsQVPNSKDWbIl-inJ9Fkp_W9W4VvOoqFRxB6m0_6eAvngaCy48y0PcL5WCBptSP3hif2VJ9lh3NZRnDDUtprXo86gUK3HU81keX1n8WZMLG7A4CGKz0_6jboMNNl-rqvTGTTNXeiv4z1HlWE9cfog9H_s3ohjsweGtnn4zLIAFFfUPOtCZWsC8A4U7FQCWtX3GWTB2AcWw4IK0BqHOQ81618k0_QlV0ulUr0PmimrvKYVX4TwYOJOXlRaPkdxoosEZlLUIAn7KjkhpJQo4_UzRpNslMaOL7qPOuxRaV4cUftudMeUf2e7PxGV37n4xW2nsyivpUvGR_Ji_6SF9DMj6JkphvfxQcZxbdGVt2ow_TTjXiiK77s7Y_CS2APIj8M4wya3OxtftovoG58QaLPtPmsapokQkWK424IW0HuBBvubdzFmzAuf2DcYwm0JFxe338KCGPYVRTNryRKv5OQm3tbbgsyL9W8IJIBpz5ehwIVOf4TtetiDh_uqhJ8bK8c1_9xzY1K4l3ERzH9srXrQnagimAImnBpVSfLo1N5UzGeKa9MLZormHiICRPKaM8wd2bTpXk8Pin6V2J1cRRK9yPwzX6LxRfuphUNJTJPcO9vcZGj9GZIznclZo4SEkyhHyM-KeOBfa6Lm3cd75Kpj1hthoHyUgrL7P4wx_5Qv1AXHabsWhC9Yfsy9f6hxLf_ZSeAAODVQvqZ0NUr687XFE-0KcTIoRv4K8YcHYADCQ9VDEIW-Xs9ohG-Ar9LDu8s5_am4gg0WFt2j68qAMwirFNnbt4iz1zkpYc7Y5vY71xGZxfiIJ96xrHqvD2D2BeVVGdXORpessOIeJC7WsbJwrhAVbV9ANemn1SzWLjq1N4n_QksvXXDR4KZBA_g10M6bVwvTnJPvRucnOO8UbuWJVsoY3cqZzDjr4mtx_3WLgQW4lgt2b6Soq3g0JovQO5ZW1cPS1yYaBAsTUsx4HKEipbgTC0RfKrUVbtSi463ymYwprudi1K8IeOmP59RprYYDqPTdQR7Sl3ZWZBnlnTyRzbp8qJkGOVuYqpO3oFN1ezCVJsOeg3WXkS6Ub9Zr0DMNkKvcKHvZCP2LegA4Jp8DHxkeSJWWJxhv4dhE2Uh7aibQwlQEs-zWv6fpvj0UYtXe3QpSOWhLv3nxZeXQElztT4PTm8xJioYu1RR0C8N7-vblZ56ImI0Hc6X7KD_RHrvzcljxTyj_T8G1_qqkfd2pWLZVq8Tc7pPVIaWFsl9_1gXCPoDv0xzmjElkN0d6K9cSjKUe0kwkV14Mjfp6HMFVwbD_l2w8FuKje6V8aMr62cvZbxvsHdE7cV1Cqhd_gzGNQResG1JmjbFUDP8ExQDtjppiFFNH_DrSVjZzc073A20t98F0yLvP7qpQ11SlgrgZfc-4ugyOckdGR9g0SeZ2AOakv5BF1qLZrpn1POjkGVUHDykbCGVE1Xj_Xqy1QXCHcBrI_yIeHjLeoo2NeuBRdTq362B4W-hgfQW8F0gSnXilvuZNN41eOINy_MvaP41QgxSsqLhJHv9zhqtKIikGjrZXjprFU0S3vSOKqZStY76XVUXoHR6BCH9gxj3ZTitDIbp7W7J8O6P7MbF0ek2LP7WkOKyLP8RmOYpb_FeZB3QudYlg6XopwyUy1bdEU9IkglSm93lU0eHyHqYvvWsJNTDiiVNEK0wo2nzJwQWzfDCWv5c0ERDJhr89_-AQilsrjb3SmxuS8wd9-GvqMyih-vFxYqWNfntEEXm_eovxxqs5e4pzt1RQJCG4oVBAswik1zAseEnE9mg27UvxMufzmDweZq3CXJq20rKEHM_rFJUWesDtk7caswqMH_8sDcpZAIlLVQLghT90THWwJqSbn9QzGDk89FGLh5-tVzs-GcHoRuj6lKa24qSzyofJfMUzVVR6O0fmGti8XFKwr1HWakIsDoUYOQvcWijN2sDPfnXIwTsDueE4nM9ifeDFrt94qfr1huUVgs0Y5BmYuLgozV7Oow0veDTY0D7TztD8-dKSTBtcKsWNqUNbtqBsV1p_ZzrRvRvusPtQNzHAkZwIAY5FIIOaJmZtV0e2pPF1pU8uyuN2I1AqsRCm_sH1pF7TTxovxPVb9wnG67_Pls8_qTqrC2uWyDiHVB_hq5fd1Cx9E5KPpgsb4xcGku_TQqKVY_oNtPzCg7aCMhpAVG0GPyt8oj4_W8XYAjv5duw3dswMZR_KduNZemK4uldFEU9UkQHMNph8PRuuOsr_IDtBVm1krgg5GlQI_BVe3-jFTM1Dn_7TTQDLQOpYuvGVon74AjLgXrDoHb2FPgyLFycreVMD5wkJ4fSMmI8i5Yfj0rWeeopFPjMWAOV413TZoKRpPMEW4qHHiAjeh3_be9ZH5aSFBe-pW6-0x0GjoJ755XHY8g8G-8-3lzP7Ve5xLX80OoGnXOtTn6XpfNbcVkmMAtiH0qe8M1XmdZJRnPMaqnH-5qWCr1lOy3Kg4DiVlrt6VBOV6PwMF6eNbQK_IYA4YnYx0z36vZwUU8fow4HzqxJwBjQ5nocKVX5HQeyXQ-Tv8Exrk2BDbOAqnVxPJVE-fCJ4LBgoe-zJqNMBulSQ3_NL7Rn9az3-FMvbCaBfiAcSFz-m8-qa-D3nMDtqFCYWS5H0V9Zb025Ecbru-NHfB6DQiUC4r-UJW1SsC_dgl6oeYq8qAtcRcDEy-QD-tHGUlgaMUfDzooHafen71pEBxNVyTHVdos5OmYyriOe02tvm1AEGMiYEykymEU_mkF_Gd2SGCCt5AcJf3h2mxqKnUumrm0MDYhpPUSy5MZW8vipjkEuvinbHr-HbIhPeKNgWOmYugYTzfpG-zmde5Z-vOp7ZGsXWUAnCQuTQyo-2JSr9scdZh5ZZNc46gEfOzrskEGKNUOGjLvBMRHhCBO8zdrHaKlA9WU6NVSAaQYgSRnxZ1VVr4lm2pAUGzrgoOZBF0Dvf5dB025465cHGqKBDAVAx6h6UKewmc4kxXvAyAU5ISj0Eo68ix0W3GgE882100kkDLpJAn1MYbpU3OmQXVnmNkrMlnxDVyMAzCxvwgRnE9JI5NmlZyxufp0xo1FPX2zmTGCuM2W1PGzGYYRqyN0bbuwCvY8FJxWvXWWip9a2rDbv7_Pr5A3QqajET8aZ-IS7dm7PyZOr_0C_znWkiOOmbELrt-yGPGfx7tpl3-Ziuqidj19RETzUFXzoYoTbFiVR7fBak1wteqNeF5I9o3TJGdGnXzkCyAF-O7bfsux_Vesg1YGTK1IIxjjUwogp-KuOiTegWctjNZ5eWPY0tIZQUWZ94LqN4AZkVjAoeHd26-XwjerZIpSg-ry5qfbhDvShhaG8S2pS_AYp8bDt0LFqU8h3P5DSsqF0LBhqLdNtijY3jQqBlt38g3snpZqlNccSIZvEYE1ABqDV-QbJG5M9pIHSiVzS3sZRmryByPXZHTjNdcpxG34vLYIxTfjpPrVg4Z1OmULC2_Ktgah7u70QpODFsr_NKXxYG4TeP8lyc6yq1XnzDmEOIu8Hr7K8LFuTdIaidPnbEQLHyks17HtkFho9VuqX_qP4a0pbB5JDQ_GOEqsDyyRyAYl4JV4FWkdDKQTYuqys8lesW9nY8DUHQuy7PcXv6sgIHr3Igp6JoU1EliMOrFL5ycOslAPbfU_vCrCAa4ggMoDBXfDA2reJS4JyxhMAItJRmZisx9CKwOq5gf74JJyGTXnVSwdvJsa6c4H4OHW3BD4cWMYEC9A5kzSMZ6pp33Au8tQl7BgU08hJOraR52fpJlFvKogVUVWjq6N0_-qRaN9-dSudcfoC0QBx_TndvHNg2c7kIazHeLF86tsFCT7TKb8uxey0juQtg4ntAFSBJ7bODdYNU1ph3lomP_r_mlxvzbAlJSAcXmWaFknrcbzxgRo7D-PQY0wo7XpfnhrI7tiB5uIc4l3nFok6IuYbuciTGlN-gytYe8EE=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "FqUcarn1KKqknsEPmtjygQE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1261,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 8,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 8
+        }
+      ],
+      "thoughts_token_count": 1070,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2339,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "The process of airing TV shows and commercials is a highly coordinated, automated, and precisely timed operation. Every second of a broadcast day is planned, scheduled, and executed down to the millisecond. \n\nHere is a step-by-step breakdown of how TV stations transition seamlessly from a television show to a commercial break, and back again.\n\n---\n\n### 1. The Blueprint: The \"Traffic\" Department\nBefore anything can go on the air, it must be scheduled. This is the job of the **Traffic Department** (which handles business and scheduling, not cars). \n\n* **The Log:** Traffic logs are the master schedules for a 24-hour broadcast day. Using specialized software (like WideOrbit or standard traffic databases), traffic coordinators build a \"log.\" This log lists exactly what will play, in what order, and at what exact microsecond.\n* **Placing Ads:** Advertisers buy \"spots\" (usually 15, 30, or 60 seconds). The Traffic Department places these ads into designated commercial breaks (called \"pods\") within or between shows. \n* **Regulatory Compliance:** The traffic software ensures that competing brands (e.g., Coke and Pepsi) are not scheduled in the same commercial break, and that children's programming doesn't exceed legal limits for advertising.\n\n### 2. Ingest: Getting Content into the System\nTV stations no longer use physical tapes. Shows, movies, syndicated programs, and commercials are delivered digitally as high-definition video files.\n\n* **Digital Delivery:** Syndicated shows are often delivered via satellite (using services like PitchBlue) or cloud servers. Commercials are sent by ad agencies via delivery networks (like Extreme Reach or Comcast AdDelivery).\n* **Ingesting & QC:** When a file arrives, a technician \"ingests\" (uploads) it into the station\u2019s local storage servers. The file goes through **Quality Control (QC)** to ensure the audio levels, video resolution, and aspect ratios meet strict broadcast standards.\n* **ID Codes:** Every commercial is assigned a unique tracking code (traditionally called an **ISCI code**, now more commonly an **Ad-ID**). This ensures the correct commercial is played.\n\n### 3. Master Control: The Nerve Center\nThe **Master Control Room (MCR)** is where the actual broadcasting happens. In the past, Master Control operators manually pushed buttons and switched tapes. Today, the process is highly computerized.\n\n* **Automation Systems:** Master Control relies on automation software (such as Crispin, Florical, or Grass Valley). This software reads the daily Traffic Log and takes command of the station's **video servers**.\n* **Frame-Accurate Execution:** The automation system looks at the schedule, fetches the digital file of a TV show, plays it, and then instantly transitions to the first commercial in the log at the exact frame required. There is no \"gap\" or black screen because the system seamlessly cuts from one file to another.\n* **Graphics Overlay:** Master Control is also responsible for overlaying digital on-screen graphics, such as the station's logo (the \"bug\" in the bottom corner), emergency weather alerts, or \"Up Next\" promotional banners.\n\n### 4. Network vs. Local (How Affiliates Work)\nIf you are watching a local station (like a local NBC, CBS, or Fox affiliate), the workflow involves a mix of national and local feeds.\n\n* **The Network Feed:** During prime-time shows or national sports, the local station passes through a live satellite or fiber feed directly from the network headquarters in New York or Los Angeles.\n* **Splitting the Ad Time:** In a 1-hour national show, some commercial spots belong to the national network (national ads), while others are reserved for the local station to sell (local ads, like local car dealerships or regional grocery stores).\n* **Cue Tones & Triggering:** To tell the local station exactly when to insert local commercials, the network feed embeds invisible digital triggers called **SCTE-35** signals (historically, these were audible \"DTMF\" tones, similar to telephone keypad sounds). \n* When the local station\u2019s automation system detects this trigger, it temporarily \"un-switches\" from the network feed, plays the local commercials from its local servers, and then switches back to the network feed just as the show resumes.\n\n### 5. Transmission: Reaching Your TV\nOnce Master Control has assembled the final, combined stream of shows, graphics, and commercials, it is ready to be sent to viewers.\n\n* **The Encoder:** The raw video stream is compressed using an encoder into a standard digital format (like MPEG-2 or MPEG-4).\n* **Distribution:** This signal is sent to multiple places simultaneously:\n  * To the station's physical transmitter tower for **Over-the-Air (OTA)** broadcast via digital antenna.\n  * To local **cable and satellite providers** via dedicated fiber-optic lines.\n  * To streaming providers (like YouTube TV or Hulu + Live TV) and the station's own mobile apps, often using **Dynamic Ad Insertion (DAI)** to swap out traditional TV commercials with personalized internet ads.\n\n### 6. Reconciliation: Getting Paid\nOnce a commercial has successfully aired, the system must prove it to the advertiser.\n\n* **The \"As-Run\" Log:** As the automation system plays out the day, it writes an \"As-Run\" log. This is an undeniable, time-stamped record of exactly what played and when.\n* **Billing:** At the end of the day, the As-Run log is sent back to the Traffic/Billing Department. The station cross-references this with the original schedule. If a commercial aired correctly, an invoice is generated and sent to the advertiser. If a technical glitch occurred and the ad didn't air (or aired with bad audio/video), the station must offer a \"make-good\" (a free ad spot later on) to compensate the advertiser.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1261,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 8,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 8
+      }
+    ],
+    "thoughts_token_count": 1070,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2339,
+    "traffic_type": null
+  },
+  "run_profile": "pilot"
+}

@@ -1,0 +1,190 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "chatgpt",
+  "run_index": 1,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-31T18:21:42.500824+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0aced67c91050636006a1c7c2cdd088196b81647e901ff7a36",
+    "created_at": 1780251692.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0aced67c91050636006a1c7c2da4788196a059a9302c6771b0",
+        "summary": [],
+        "type": "reasoning",
+        "content": null,
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0aced67c91050636006a1c7c2ec76c81969c6dd83111bc125b",
+        "action": {
+          "query": "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-05-31\",\"num_games\":5}",
+          "type": "search",
+          "queries": [
+            "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-05-31\",\"num_games\":5}"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "rs_0aced67c91050636006a1c7c2fd9508196be954ab422e67b6c",
+        "summary": [],
+        "type": "reasoning",
+        "content": null,
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0aced67c91050636006a1c7c30577081968e2b0d38d072169f",
+        "action": {
+          "query": "NBA tickets official Ticketmaster NBA Finals 2026 Knicks Spurs tickets",
+          "type": "search",
+          "queries": [
+            "NBA tickets official Ticketmaster NBA Finals 2026 Knicks Spurs tickets",
+            "San Antonio Spurs official tickets Ticketmaster",
+            "New York Knicks official tickets Ticketmaster"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_0aced67c91050636006a1c7c3215d08196ad09c8793b6a9f33",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 426,
+                "start_index": 283,
+                "title": "NBA - National Basketball Association \u2013 Ticketmaster Help",
+                "type": "url_citation",
+                "url": "https://help.ticketmaster.com/hc/en-us/articles/27533401409041-NBA-National-Basketball-Association?utm_source=openai"
+              },
+              {
+                "end_index": 610,
+                "start_index": 541,
+                "title": "",
+                "type": "url_citation",
+                "url": "https://www.nba.com/spurs/where-to-buy?utm_source=openai"
+              },
+              {
+                "end_index": 1095,
+                "start_index": 958,
+                "title": "Outrageous NBA Finals Spurs ticket prices spark backlash - here's how much they cost",
+                "type": "url_citation",
+                "url": "https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai"
+              }
+            ],
+            "text": "The **next NBA game** appears to be **Knicks @ Spurs \u2014 Wednesday, June 3, 2026 at 8:30 PM ET / 5:30 PM PT**, at **Frost Bank Center in San Antonio**. \n\nBest places to get tickets:\n\n1. **Ticketmaster** \u2014 official NBA ticketing partner, and the official marketplace for Spurs tickets. ([help.ticketmaster.com](https://help.ticketmaster.com/hc/en-us/articles/27533401409041-NBA-National-Basketball-Association?utm_source=openai))  \n2. **Spurs official ticket page** \u2014 Spurs say official tickets can be purchased via **Spurs.com/Ticketmaster**. ([nba.com](https://www.nba.com/spurs/where-to-buy?utm_source=openai))  \n3. **Verified resale marketplaces** \u2014 StubHub, SeatGeek, Gametime, TickPick, etc. can be options, but compare **total price including fees** and make sure tickets are mobile-transfer/verified. A local report says Game 1 tickets are very expensive, with Ticketmaster entry prices reported around **$1,265+** and some resale sites slightly lower. ([mysanantonio.com](https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai))\n\nIf you mean the next game **near you** or for a specific team, tell me your city/team and budget and I can narrow it down.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780251702.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 8722,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 459,
+      "output_tokens_details": {
+        "reasoning_tokens": 177
+      },
+      "total_tokens": 9181
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "The **next NBA game** appears to be **Knicks @ Spurs \u2014 Wednesday, June 3, 2026 at 8:30 PM ET / 5:30 PM PT**, at **Frost Bank Center in San Antonio**. \n\nBest places to get tickets:\n\n1. **Ticketmaster** \u2014 official NBA ticketing partner, and the official marketplace for Spurs tickets. ([help.ticketmaster.com](https://help.ticketmaster.com/hc/en-us/articles/27533401409041-NBA-National-Basketball-Association?utm_source=openai))  \n2. **Spurs official ticket page** \u2014 Spurs say official tickets can be purchased via **Spurs.com/Ticketmaster**. ([nba.com](https://www.nba.com/spurs/where-to-buy?utm_source=openai))  \n3. **Verified resale marketplaces** \u2014 StubHub, SeatGeek, Gametime, TickPick, etc. can be options, but compare **total price including fees** and make sure tickets are mobile-transfer/verified. A local report says Game 1 tickets are very expensive, with Ticketmaster entry prices reported around **$1,265+** and some resale sites slightly lower. ([mysanantonio.com](https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai))\n\nIf you mean the next game **near you** or for a specific team, tell me your city/team and budget and I can narrow it down.",
+  "usage": {
+    "input_tokens": 8722,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 459,
+    "output_tokens_details": {
+      "reasoning_tokens": 177
+    },
+    "total_tokens": 9181
+  },
+  "run_profile": "pilot"
+}

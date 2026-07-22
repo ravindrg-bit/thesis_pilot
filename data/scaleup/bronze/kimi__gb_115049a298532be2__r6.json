@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_115049a298532be2",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T19:52:23.668235+00:00",
+  "query_text": "What is the capital of France?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25cbf4e0d430e24820baf9",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The capital of France is **Paris**.\n\nParis has been the capital of France since 508 A.D. under King Clovis, and it remains the country's political, cultural, and economic center today. It is located in northern France along the Seine River and is home to iconic landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.\n\nSources:\n1. https://www.parisdigest.com/paris/paris-facts.htm\n2. https://worldinparis.com/where-is-paris\n3. https://capital-cities.org/paris/\n4. https://world-capitals.org/en/capitals-capital_france\n5. http://relocate.global/moving_to/france/tpost/ltgpes7tj1-capital-of-france\n6. https://study.com/academy/lesson/facts-about-france-location-population-history.html\n7. http://maps-france.com/capital-of-france-map\n8. https://home.adelphi.edu/~ca19535/page%204.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780861941,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 224,
+        "prompt_tokens": 8457,
+        "total_tokens": 8681,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What is the capital of France?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25cbf47898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"b0169afd6a25cbf3680f160001ecfec4\"},\"usage\":{\"total_tokens\":8308}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25cbf47898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"b0169afd6a25cbf3680f160001ecfec4\"},\"usage\":{\"total_tokens\":8308}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"b0169afd6a25cbf3680f160001ecfec4\"},\"usage\":{\"total_tokens\":8308}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The capital of France is **Paris**.\n\nParis has been the capital of France since 508 A.D. under King Clovis, and it remains the country's political, cultural, and economic center today. It is located in northern France along the Seine River and is home to iconic landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.\n\nSources:\n1. https://www.parisdigest.com/paris/paris-facts.htm\n2. https://worldinparis.com/where-is-paris\n3. https://capital-cities.org/paris/\n4. https://world-capitals.org/en/capitals-capital_france\n5. http://relocate.global/moving_to/france/tpost/ltgpes7tj1-capital-of-france\n6. https://study.com/academy/lesson/facts-about-france-location-population-history.html\n7. http://maps-france.com/capital-of-france-map\n8. https://home.adelphi.edu/~ca19535/page%204.html",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 8457,
+    "total_tokens": 8681,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

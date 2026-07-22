@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d35d146fa97c16bb",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:04:41.344073+00:00",
+  "query_text": "who sang a whiter shade of pale first",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a259694a63d40921e288905",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **Procol Harum** was the first to sing \"A Whiter Shade of Pale.\" The song was their debut single, released on **May 12, 1967**, with **Gary Brooker** as the lead vocalist. It became one of the defining songs of the 1967 \"Summer of Love\" and reached number one in the UK charts in just two weeks.\n\nThe original recording featured:\n- **Gary Brooker** \u2013 piano and lead vocals\n- **Matthew Fisher** \u2013 Hammond organ (playing the famous Bach-inspired organ line)\n- **David Knights** \u2013 bass\n- **Ray Royer** \u2013 guitar\n- **Bill Eyden** \u2013 session drums\n\nThe first cover version by a well-known artist came later in **August 1967**, when **the Everly Brothers** recorded it for their album *The Everly Brothers Sing*.\n\nSources:\n1. https://www.udiscovermusic.com/stories/procol-harum-a-whiter-shade-of-pale-covers/\n2. https://dev.bestclassicbands.com/procol-harum-whiter-shade-5-28-177/\n3. https://www.procolharum.com/phalbum1a.htm\n4. https://www.rudolfdethu.com/a-whiter-shade-of-pale/\n5. https://www.hertfordshiremercury.co.uk/whats-on/whats-on-news/procol-harum-singer-gary-brooker-6703391\n6. https://www.uncut.co.uk/news/procol-harum-singer-wins-back-royalties-for-a-whiter-shade-of-pale-51019/\n7. https://songoftheday.ca/2024/12/30/whiter-shade-of-pale/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780848277,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 374,
+        "prompt_tokens": 8576,
+        "total_tokens": 8950,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who sang a whiter shade of pale first"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a259694a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bd9262676a259694680f160001ecade6\"},\"usage\":{\"total_tokens\":8427}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a259694a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bd9262676a259694680f160001ecade6\"},\"usage\":{\"total_tokens\":8427}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bd9262676a259694680f160001ecade6\"},\"usage\":{\"total_tokens\":8427}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **Procol Harum** was the first to sing \"A Whiter Shade of Pale.\" The song was their debut single, released on **May 12, 1967**, with **Gary Brooker** as the lead vocalist. It became one of the defining songs of the 1967 \"Summer of Love\" and reached number one in the UK charts in just two weeks.\n\nThe original recording featured:\n- **Gary Brooker** \u2013 piano and lead vocals\n- **Matthew Fisher** \u2013 Hammond organ (playing the famous Bach-inspired organ line)\n- **David Knights** \u2013 bass\n- **Ray Royer** \u2013 guitar\n- **Bill Eyden** \u2013 session drums\n\nThe first cover version by a well-known artist came later in **August 1967**, when **the Everly Brothers** recorded it for their album *The Everly Brothers Sing*.\n\nSources:\n1. https://www.udiscovermusic.com/stories/procol-harum-a-whiter-shade-of-pale-covers/\n2. https://dev.bestclassicbands.com/procol-harum-whiter-shade-5-28-177/\n3. https://www.procolharum.com/phalbum1a.htm\n4. https://www.rudolfdethu.com/a-whiter-shade-of-pale/\n5. https://www.hertfordshiremercury.co.uk/whats-on/whats-on-news/procol-harum-singer-gary-brooker-6703391\n6. https://www.uncut.co.uk/news/procol-harum-singer-wins-back-royalties-for-a-whiter-shade-of-pale-51019/\n7. https://songoftheday.ca/2024/12/30/whiter-shade-of-pale/",
+  "usage": {
+    "completion_tokens": 374,
+    "prompt_tokens": 8576,
+    "total_tokens": 8950,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

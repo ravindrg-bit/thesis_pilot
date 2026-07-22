@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_0515f875dced5ac8",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:56:36.776116+00:00",
+  "query_text": "unable to build nests or care for their young",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a262f4ede6bb7ca6e8f031f",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, the phrase \"unable to build nests or care for their young\" most famously describes **cowbirds**, which are well-known brood parasites. Here's what I found:\n\n## Cowbirds\n\n**Brown-headed cowbirds** are the classic example of birds that are unable to build nests or care for their young. These birds are obligate brood parasites, meaning they have completely abandoned nest-building and parental care behaviors. Female cowbirds lay up to 40 eggs per year in the nests of other bird species, including warblers, vireos, flycatchers, and thrushes. The host birds then unknowingly raise the cowbird chicks as their own.\n\nThis reproductive strategy evolved because cowbirds historically followed herds of bison across the North American plains, making it impossible to stay in one place long enough to build nests and raise young.\n\n## Other Examples\n\nThe search also revealed several other animals that cannot build nests or care for their young:\n\n### Honeyguides\nAll honeyguides are **brood parasites**. They do not build nests and are unable to raise their own young. Female honeyguides lay their eggs in the nests of other cavity-nesting birds such as barbets, tinkerbirds, kingfishers, bee-eaters, hoopoes, and woodpeckers. When honeyguide chicks hatch, they use their hooked bills to destroy the host's eggs or kill the host's hatchlings.\n\n### Cuckoo Paper Wasps\nThree species of *Polistes* wasps are **social parasites** that are entirely unable to build their own nests. These \"cuckoo paper wasps\" must rely on the nests of other wasp species to raise their young.\n\n### Bats\nWhile bats don't technically \"build nests,\" they do find secure roosting sites like caves or trees to raise their young. However, unlike birds, they do not construct nests and their pups are born blind and helpless, entirely dependent on their mothers for care and protection.\n\n## Contrast: Animals with Minimal Nest Building\n\nSome animals build very rudimentary nests or none at all but still provide parental care:\n- **Common Murres** lay eggs directly on rocky ledges without building nests, but both parents actively incubate and protect the egg\n- **White Terns** lay eggs in tree branch depressions without constructing nests, yet they still care for their young\n- **Pigeons** build very simple, flimsy nests but do care for their offspring\n\nSources:\n1. https://gmat.kmf.com/question/24zi4k/130745.html\n2. https://gmat.kmf.com/question/24zi4k.html\n3. https://animals.jrank.org/pages/964/Honeyguides-Indicatoridae-BEHAVIOR-REPRODUCTION.html\n4. https://allurepest.com.au/knowledge-base/paper-wasps/\n5. https://knowanimals.com/are-bats-born-in-nests/\n6. https://slowbirding.wordpress.com/2011/03/28/how-a-flycatcher-caught-my-eye/\n7. https://nestwatch.org/blog/no-nest-required/\n8. https://enviroliteracy.org/why-are-pigeons-so-bad-at-making-nests/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780887549,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 672,
+        "prompt_tokens": 8392,
+        "total_tokens": 9064,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "unable to build nests or care for their young"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a262f4dfc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"b7e057696a262f4d4f50a50001ef8f40\"},\"usage\":{\"total_tokens\":8237}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a262f4dfc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"b7e057696a262f4d4f50a50001ef8f40\"},\"usage\":{\"total_tokens\":8237}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"b7e057696a262f4d4f50a50001ef8f40\"},\"usage\":{\"total_tokens\":8237}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, the phrase \"unable to build nests or care for their young\" most famously describes **cowbirds**, which are well-known brood parasites. Here's what I found:\n\n## Cowbirds\n\n**Brown-headed cowbirds** are the classic example of birds that are unable to build nests or care for their young. These birds are obligate brood parasites, meaning they have completely abandoned nest-building and parental care behaviors. Female cowbirds lay up to 40 eggs per year in the nests of other bird species, including warblers, vireos, flycatchers, and thrushes. The host birds then unknowingly raise the cowbird chicks as their own.\n\nThis reproductive strategy evolved because cowbirds historically followed herds of bison across the North American plains, making it impossible to stay in one place long enough to build nests and raise young.\n\n## Other Examples\n\nThe search also revealed several other animals that cannot build nests or care for their young:\n\n### Honeyguides\nAll honeyguides are **brood parasites**. They do not build nests and are unable to raise their own young. Female honeyguides lay their eggs in the nests of other cavity-nesting birds such as barbets, tinkerbirds, kingfishers, bee-eaters, hoopoes, and woodpeckers. When honeyguide chicks hatch, they use their hooked bills to destroy the host's eggs or kill the host's hatchlings.\n\n### Cuckoo Paper Wasps\nThree species of *Polistes* wasps are **social parasites** that are entirely unable to build their own nests. These \"cuckoo paper wasps\" must rely on the nests of other wasp species to raise their young.\n\n### Bats\nWhile bats don't technically \"build nests,\" they do find secure roosting sites like caves or trees to raise their young. However, unlike birds, they do not construct nests and their pups are born blind and helpless, entirely dependent on their mothers for care and protection.\n\n## Contrast: Animals with Minimal Nest Building\n\nSome animals build very rudimentary nests or none at all but still provide parental care:\n- **Common Murres** lay eggs directly on rocky ledges without building nests, but both parents actively incubate and protect the egg\n- **White Terns** lay eggs in tree branch depressions without constructing nests, yet they still care for their young\n- **Pigeons** build very simple, flimsy nests but do care for their offspring\n\nSources:\n1. https://gmat.kmf.com/question/24zi4k/130745.html\n2. https://gmat.kmf.com/question/24zi4k.html\n3. https://animals.jrank.org/pages/964/Honeyguides-Indicatoridae-BEHAVIOR-REPRODUCTION.html\n4. https://allurepest.com.au/knowledge-base/paper-wasps/\n5. https://knowanimals.com/are-bats-born-in-nests/\n6. https://slowbirding.wordpress.com/2011/03/28/how-a-flycatcher-caught-my-eye/\n7. https://nestwatch.org/blog/no-nest-required/\n8. https://enviroliteracy.org/why-are-pigeons-so-bad-at-making-nests/",
+  "usage": {
+    "completion_tokens": 672,
+    "prompt_tokens": 8392,
+    "total_tokens": 9064,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c4f7386505e41f8a",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T01:24:17.101925+00:00",
+  "query_text": "navy p3",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cdf1c29ea316d54c26b99",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, \"Navy P-3\" refers to the **Lockheed P-3 Orion**, a legendary maritime patrol aircraft that served as the U.S. Navy's primary anti-submarine warfare (ASW) and maritime surveillance platform for over five decades.\n\n## Overview\n\nThe P-3 Orion is a four-engine turboprop aircraft derived from Lockheed's L-188 Electra commercial airliner. It first flew in November 1959 and entered Navy service in 1962. The aircraft became one of the most enduring and versatile platforms in U.S. naval aviation history, with production continuing for nearly 40 years and a total of 757 aircraft built.\n\n## Primary Missions\n\n- **Anti-submarine warfare (ASW)** - core mission using sonobuoys, magnetic anomaly detection (MAD), and torpedoes\n- **Anti-surface warfare (ASuW)** - capable of carrying Harpoon missiles and other anti-ship weapons\n- **Maritime surveillance and reconnaissance**\n- **Intelligence collection and electronic warfare**\n- **Search and rescue**\n\n## Key Specifications (P-3C Orion)\n\n| Feature | Specification |\n|---------|-------------|\n| **Crew** | 11 (aircrew and sensor operators) |\n| **Length** | 116.7 ft (35.57 m) |\n| **Wingspan** | 99.6 ft (30.38 m) |\n| **Height** | 33.7 ft (10.27 m) |\n| **Maximum Takeoff Weight** | 139,760 lb (63,394 kg) |\n| **Engines** | Four Allison T56-A-14 turboprops (4,600 hp each) |\n| **Maximum Speed** | ~405 knots (466 mph / 750 km/h) |\n| **Range** | Over 4,400 nautical miles (8,150 km) |\n| **Endurance** | Up to 12+ hours on station |\n| **Service Ceiling** | 28,300 ft (8,626 m) |\n\n## Notable Operational History\n\n- **Cuban Missile Crisis (1962)** - P-3As helped enforce the naval blockade\n- **Vietnam War** - Operation Market Time coastal patrol missions (1964-1973)\n- **Cold War** - Constant patrols tracking Soviet submarines worldwide\n- **Gulf War (1990-1991)** - Maritime surveillance and targeting support\n- **Hainan Island Incident (2001)** - EP-3E variant collision with Chinese fighter\n- **Mayaguez Incident (1975)** - P-3s located seized U.S. merchant vessel\n\n## Retirement and Legacy\n\nThe U.S. Navy retired the P-3 from active-duty patrol squadrons in **2019**, replacing it with the Boeing **P-8A Poseidon** jet aircraft. Some P-3s continue in specialized Navy roles, and the aircraft remains in service with several international operators. NASA and NOAA also operate modified P-3s for scientific research, including hurricane hunting missions.\n\nThe P-3 Orion is widely credited as a key asset in winning the Cold War, with Soviet Marshal Sergey Akhromeyev reportedly stating: \"I always know where my submarines are. I look at where the P-3s are flying\u2014that's where my submarines are.\"\n\n---\n\nSources:\n1. https://www.vp4association.com/aircraft-information-2/32-2/\n2. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n3. https://airbornescience.nasa.gov/sites/default/files/P-3B%20Experimenter%20Handbook%20548-HDBK-0001.pdf\n4. https://thedefensepost.com/2026/02/04/p3-orion-guide/\n5. http://www.flugzeuginfo.net/acdata_php/acdata_p3_en.php\n6. https://sofrep.com/navy/us-navy-p3-orion-aircraft/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780277021,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 853,
+        "prompt_tokens": 8506,
+        "total_tokens": 9359,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "navy p3"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cdf1bb9ab",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"88601ec56a1cdf1b4f50a50001d95312\"},\"usage\":{\"total_tokens\":8358}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cdf1bb9ab",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"88601ec56a1cdf1b4f50a50001d95312\"},\"usage\":{\"total_tokens\":8358}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"88601ec56a1cdf1b4f50a50001d95312\"},\"usage\":{\"total_tokens\":8358}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, \"Navy P-3\" refers to the **Lockheed P-3 Orion**, a legendary maritime patrol aircraft that served as the U.S. Navy's primary anti-submarine warfare (ASW) and maritime surveillance platform for over five decades.\n\n## Overview\n\nThe P-3 Orion is a four-engine turboprop aircraft derived from Lockheed's L-188 Electra commercial airliner. It first flew in November 1959 and entered Navy service in 1962. The aircraft became one of the most enduring and versatile platforms in U.S. naval aviation history, with production continuing for nearly 40 years and a total of 757 aircraft built.\n\n## Primary Missions\n\n- **Anti-submarine warfare (ASW)** - core mission using sonobuoys, magnetic anomaly detection (MAD), and torpedoes\n- **Anti-surface warfare (ASuW)** - capable of carrying Harpoon missiles and other anti-ship weapons\n- **Maritime surveillance and reconnaissance**\n- **Intelligence collection and electronic warfare**\n- **Search and rescue**\n\n## Key Specifications (P-3C Orion)\n\n| Feature | Specification |\n|---------|-------------|\n| **Crew** | 11 (aircrew and sensor operators) |\n| **Length** | 116.7 ft (35.57 m) |\n| **Wingspan** | 99.6 ft (30.38 m) |\n| **Height** | 33.7 ft (10.27 m) |\n| **Maximum Takeoff Weight** | 139,760 lb (63,394 kg) |\n| **Engines** | Four Allison T56-A-14 turboprops (4,600 hp each) |\n| **Maximum Speed** | ~405 knots (466 mph / 750 km/h) |\n| **Range** | Over 4,400 nautical miles (8,150 km) |\n| **Endurance** | Up to 12+ hours on station |\n| **Service Ceiling** | 28,300 ft (8,626 m) |\n\n## Notable Operational History\n\n- **Cuban Missile Crisis (1962)** - P-3As helped enforce the naval blockade\n- **Vietnam War** - Operation Market Time coastal patrol missions (1964-1973)\n- **Cold War** - Constant patrols tracking Soviet submarines worldwide\n- **Gulf War (1990-1991)** - Maritime surveillance and targeting support\n- **Hainan Island Incident (2001)** - EP-3E variant collision with Chinese fighter\n- **Mayaguez Incident (1975)** - P-3s located seized U.S. merchant vessel\n\n## Retirement and Legacy\n\nThe U.S. Navy retired the P-3 from active-duty patrol squadrons in **2019**, replacing it with the Boeing **P-8A Poseidon** jet aircraft. Some P-3s continue in specialized Navy roles, and the aircraft remains in service with several international operators. NASA and NOAA also operate modified P-3s for scientific research, including hurricane hunting missions.\n\nThe P-3 Orion is widely credited as a key asset in winning the Cold War, with Soviet Marshal Sergey Akhromeyev reportedly stating: \"I always know where my submarines are. I look at where the P-3s are flying\u2014that's where my submarines are.\"\n\n---\n\nSources:\n1. https://www.vp4association.com/aircraft-information-2/32-2/\n2. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n3. https://airbornescience.nasa.gov/sites/default/files/P-3B%20Experimenter%20Handbook%20548-HDBK-0001.pdf\n4. https://thedefensepost.com/2026/02/04/p3-orion-guide/\n5. http://www.flugzeuginfo.net/acdata_php/acdata_p3_en.php\n6. https://sofrep.com/navy/us-navy-p3-orion-aircraft/",
+  "usage": {
+    "completion_tokens": 853,
+    "prompt_tokens": 8506,
+    "total_tokens": 9359,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

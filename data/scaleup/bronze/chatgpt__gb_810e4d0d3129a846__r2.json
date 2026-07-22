@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 2,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:33:32.207865+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_08ca3263719051ac006a26460e7bf081a2a62be7b03160c2d3",
+    "created_at": 1780893198.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_08ca3263719051ac006a26460fe98c81a2b58d45a11d9b0c0e",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Yo, listen up.\n\n**Dependency Injection in C#** is when your class stops going out on the street to get its own stuff, and instead, somebody hands it what it needs.\n\n### Without dependency injection\n\nYour class is acting like a lone wolf:\n\n```csharp\npublic class OrderService\n{\n    private readonly EmailService _emailService;\n\n    public OrderService()\n    {\n        _emailService = new EmailService();\n    }\n\n    public void PlaceOrder()\n    {\n        // order logic\n        _emailService.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThis class is saying:\n\n> \u201cI don\u2019t need nobody. I\u2019ll make my own EmailService.\u201d\n\nProblem is, now `OrderService` is tightly tied to `EmailService`. You wanna swap in a text message service? A fake service for testing? Too bad. It\u2019s locked in.\n\nThat\u2019s bad business.\n\n---\n\n## With dependency injection\n\nNow we do it like a proper organized operation:\n\n```csharp\npublic interface INotificationService\n{\n    void Send(string message);\n}\n\npublic class EmailService : INotificationService\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly INotificationService _notificationService;\n\n    public OrderService(INotificationService notificationService)\n    {\n        _notificationService = notificationService;\n    }\n\n    public void PlaceOrder()\n    {\n        // order logic\n        _notificationService.Send(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` ain\u2019t making its own notification guy. It just says:\n\n> \u201cI need someone who can send messages.\u201d\n\nAnd the outside world says:\n\n> \u201cNo problem, boss. Here\u2019s an `EmailService`.\u201d\n\nThat\u2019s **dependency injection**.\n\n---\n\n## The setup in ASP.NET Core\n\nYou register the crew:\n\n```csharp\nbuilder.Services.AddScoped<INotificationService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nNow when the app needs an `OrderService`, the DI container is like:\n\n> \u201cHold up, this guy needs an `INotificationService`. I know a guy.\u201d\n\nThen it builds everything for you.\n\n---\n\n## Why it matters\n\nDependency injection helps you:\n\n- **Avoid tight coupling**  \n  Your class doesn\u2019t depend on one specific concrete class.\n\n- **Make testing easier**  \n  You can inject a fake service.\n\n- **Swap implementations easily**  \n  Email today, SMS tomorrow, carrier pigeon next week.\n\n- **Keep your code cleaner**  \n  Classes focus on their own job instead of creating all their helpers.\n\n---\n\n## Testing example\n\nYou can slide in a fake notification service:\n\n```csharp\npublic class FakeNotificationService : INotificationService\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Fake send: {message}\");\n    }\n}\n```\n\nThen test like this:\n\n```csharp\nvar fakeService = new FakeNotificationService();\nvar orderService = new OrderService(fakeService);\n\norderService.PlaceOrder();\n```\n\nNo real email gets sent. No mess. No heat.\n\n---\n\n## The gangster summary\n\nWithout DI:\n\n> \u201cI make my own connections.\u201d\n\nWith DI:\n\n> \u201cMy connections get brought to me.\u201d\n\nDependency injection is basically:\n\n> **Don\u2019t let your classes build their own crew. Hand them the crew they need.**\n\nClean. Flexible. Testable.\n\nThat\u2019s the business.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893211.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 710,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5164
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Yo, listen up.\n\n**Dependency Injection in C#** is when your class stops going out on the street to get its own stuff, and instead, somebody hands it what it needs.\n\n### Without dependency injection\n\nYour class is acting like a lone wolf:\n\n```csharp\npublic class OrderService\n{\n    private readonly EmailService _emailService;\n\n    public OrderService()\n    {\n        _emailService = new EmailService();\n    }\n\n    public void PlaceOrder()\n    {\n        // order logic\n        _emailService.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThis class is saying:\n\n> \u201cI don\u2019t need nobody. I\u2019ll make my own EmailService.\u201d\n\nProblem is, now `OrderService` is tightly tied to `EmailService`. You wanna swap in a text message service? A fake service for testing? Too bad. It\u2019s locked in.\n\nThat\u2019s bad business.\n\n---\n\n## With dependency injection\n\nNow we do it like a proper organized operation:\n\n```csharp\npublic interface INotificationService\n{\n    void Send(string message);\n}\n\npublic class EmailService : INotificationService\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly INotificationService _notificationService;\n\n    public OrderService(INotificationService notificationService)\n    {\n        _notificationService = notificationService;\n    }\n\n    public void PlaceOrder()\n    {\n        // order logic\n        _notificationService.Send(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` ain\u2019t making its own notification guy. It just says:\n\n> \u201cI need someone who can send messages.\u201d\n\nAnd the outside world says:\n\n> \u201cNo problem, boss. Here\u2019s an `EmailService`.\u201d\n\nThat\u2019s **dependency injection**.\n\n---\n\n## The setup in ASP.NET Core\n\nYou register the crew:\n\n```csharp\nbuilder.Services.AddScoped<INotificationService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nNow when the app needs an `OrderService`, the DI container is like:\n\n> \u201cHold up, this guy needs an `INotificationService`. I know a guy.\u201d\n\nThen it builds everything for you.\n\n---\n\n## Why it matters\n\nDependency injection helps you:\n\n- **Avoid tight coupling**  \n  Your class doesn\u2019t depend on one specific concrete class.\n\n- **Make testing easier**  \n  You can inject a fake service.\n\n- **Swap implementations easily**  \n  Email today, SMS tomorrow, carrier pigeon next week.\n\n- **Keep your code cleaner**  \n  Classes focus on their own job instead of creating all their helpers.\n\n---\n\n## Testing example\n\nYou can slide in a fake notification service:\n\n```csharp\npublic class FakeNotificationService : INotificationService\n{\n    public void Send(string message)\n    {\n        Console.WriteLine($\"Fake send: {message}\");\n    }\n}\n```\n\nThen test like this:\n\n```csharp\nvar fakeService = new FakeNotificationService();\nvar orderService = new OrderService(fakeService);\n\norderService.PlaceOrder();\n```\n\nNo real email gets sent. No mess. No heat.\n\n---\n\n## The gangster summary\n\nWithout DI:\n\n> \u201cI make my own connections.\u201d\n\nWith DI:\n\n> \u201cMy connections get brought to me.\u201d\n\nDependency injection is basically:\n\n> **Don\u2019t let your classes build their own crew. Hand them the crew they need.**\n\nClean. Flexible. Testable.\n\nThat\u2019s the business.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 710,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5164
+  },
+  "run_profile": "scaleup"
+}

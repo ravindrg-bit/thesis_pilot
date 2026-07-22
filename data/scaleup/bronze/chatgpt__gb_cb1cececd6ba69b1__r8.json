@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 8,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:24:12.443066+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0250ae34b5eafaee006a25d35b764c819290756f90e0fae540",
+    "created_at": 1780863835.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0250ae34b5eafaee006a25d35c56308192be4255345fe0cc86",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to test whether the **mean difference between two related measurements** is statistically different from zero.\n\n## When to use it\n\nUse a paired samples t-test when the two sets of scores are **linked**, such as:\n\n- The same people measured **before and after** an intervention\n- Matched pairs, such as twins or matched participants\n- Two measurements taken from the same subject under different conditions\n\nExamples:\n\n- Blood pressure **before vs. after** medication\n- Test scores **before vs. after** tutoring\n- Reaction time under **Condition A vs. Condition B**\n\n---\n\n## Hypotheses\n\nLet \\(D = X_1 - X_2\\), where \\(D\\) is the difference between paired observations.\n\n### Null hypothesis\n\n\\[\nH_0: \\mu_D = 0\n\\]\n\nThere is no average difference between the paired measurements.\n\n### Alternative hypothesis\n\nTwo-tailed:\n\n\\[\nH_a: \\mu_D \\neq 0\n\\]\n\nOne-tailed:\n\n\\[\nH_a: \\mu_D > 0\n\\]\n\nor\n\n\\[\nH_a: \\mu_D < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired samples t-test is calculated as:\n\n\\[\nt = \\frac{\\bar{D} - 0}{s_D / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{D}\\) = mean of the paired differences\n- \\(s_D\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n---\n\n## Assumptions\n\nThe paired samples t-test assumes:\n\n1. **Pairs are dependent**, but different pairs are independent of each other.\n2. The dependent variable is continuous or approximately continuous.\n3. The **differences** between paired observations are approximately normally distributed.\n4. There are no extreme outliers in the difference scores.\n\nImportant: the normality assumption applies to the **difference scores**, not necessarily to each original variable separately.\n\n---\n\n## Small example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference \\(After - Before\\) |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 68 | 72 | 4 |\n| 3 | 80 | 84 | 4 |\n| 4 | 75 | 78 | 3 |\n| 5 | 72 | 77 | 5 |\n\nMean difference:\n\n\\[\n\\bar{D} = 4.2\n\\]\n\nIf the standard deviation of differences is \\(s_D = 0.84\\), then:\n\n\\[\nt = \\frac{4.2}{0.84/\\sqrt{5}} = 11.18\n\\]\n\nDegrees of freedom:\n\n\\[\ndf = 5 - 1 = 4\n\\]\n\nA large positive t-value suggests the after scores are significantly higher than the before scores.\n\n---\n\n## Reporting format\n\nA paired samples t-test can be reported like this:\n\n> A paired samples t-test showed that scores were significantly higher after tutoring than before tutoring, \\(t(4) = 11.18\\), \\(p < .001\\).\n\nIf reporting descriptive statistics:\n\n> Students scored higher after tutoring, \\(M = 77.2, SD = 4.55\\), than before tutoring, \\(M = 73.0, SD = 4.74\\). A paired samples t-test showed this difference was significant, \\(t(4) = 11.18\\), \\(p < .001\\).\n\n---\n\n## Effect size\n\nA common effect size for a paired samples t-test is Cohen\u2019s \\(d_z\\):\n\n\\[\nd_z = \\frac{\\bar{D}}{s_D}\n\\]\n\nUsing the example:\n\n\\[\nd_z = \\frac{4.2}{0.84} = 5.00\n\\]\n\nThis indicates a very large effect in the example.\n\n---\n\n## In software\n\n### R\n\n```r\nt.test(after, before, paired = TRUE)\n```\n\n### Python\n\n```python\nfrom scipy.stats import ttest_rel\n\nttest_rel(after, before)\n```\n\n### SPSS\n\nAnalyze \u2192 Compare Means \u2192 Paired-Samples T Test\n\n---\n\nIn short, a **paired samples t-test** compares two related means by analyzing the **differences within each pair**.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863852.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 955,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5401
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to test whether the **mean difference between two related measurements** is statistically different from zero.\n\n## When to use it\n\nUse a paired samples t-test when the two sets of scores are **linked**, such as:\n\n- The same people measured **before and after** an intervention\n- Matched pairs, such as twins or matched participants\n- Two measurements taken from the same subject under different conditions\n\nExamples:\n\n- Blood pressure **before vs. after** medication\n- Test scores **before vs. after** tutoring\n- Reaction time under **Condition A vs. Condition B**\n\n---\n\n## Hypotheses\n\nLet \\(D = X_1 - X_2\\), where \\(D\\) is the difference between paired observations.\n\n### Null hypothesis\n\n\\[\nH_0: \\mu_D = 0\n\\]\n\nThere is no average difference between the paired measurements.\n\n### Alternative hypothesis\n\nTwo-tailed:\n\n\\[\nH_a: \\mu_D \\neq 0\n\\]\n\nOne-tailed:\n\n\\[\nH_a: \\mu_D > 0\n\\]\n\nor\n\n\\[\nH_a: \\mu_D < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired samples t-test is calculated as:\n\n\\[\nt = \\frac{\\bar{D} - 0}{s_D / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{D}\\) = mean of the paired differences\n- \\(s_D\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n---\n\n## Assumptions\n\nThe paired samples t-test assumes:\n\n1. **Pairs are dependent**, but different pairs are independent of each other.\n2. The dependent variable is continuous or approximately continuous.\n3. The **differences** between paired observations are approximately normally distributed.\n4. There are no extreme outliers in the difference scores.\n\nImportant: the normality assumption applies to the **difference scores**, not necessarily to each original variable separately.\n\n---\n\n## Small example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference \\(After - Before\\) |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 68 | 72 | 4 |\n| 3 | 80 | 84 | 4 |\n| 4 | 75 | 78 | 3 |\n| 5 | 72 | 77 | 5 |\n\nMean difference:\n\n\\[\n\\bar{D} = 4.2\n\\]\n\nIf the standard deviation of differences is \\(s_D = 0.84\\), then:\n\n\\[\nt = \\frac{4.2}{0.84/\\sqrt{5}} = 11.18\n\\]\n\nDegrees of freedom:\n\n\\[\ndf = 5 - 1 = 4\n\\]\n\nA large positive t-value suggests the after scores are significantly higher than the before scores.\n\n---\n\n## Reporting format\n\nA paired samples t-test can be reported like this:\n\n> A paired samples t-test showed that scores were significantly higher after tutoring than before tutoring, \\(t(4) = 11.18\\), \\(p < .001\\).\n\nIf reporting descriptive statistics:\n\n> Students scored higher after tutoring, \\(M = 77.2, SD = 4.55\\), than before tutoring, \\(M = 73.0, SD = 4.74\\). A paired samples t-test showed this difference was significant, \\(t(4) = 11.18\\), \\(p < .001\\).\n\n---\n\n## Effect size\n\nA common effect size for a paired samples t-test is Cohen\u2019s \\(d_z\\):\n\n\\[\nd_z = \\frac{\\bar{D}}{s_D}\n\\]\n\nUsing the example:\n\n\\[\nd_z = \\frac{4.2}{0.84} = 5.00\n\\]\n\nThis indicates a very large effect in the example.\n\n---\n\n## In software\n\n### R\n\n```r\nt.test(after, before, paired = TRUE)\n```\n\n### Python\n\n```python\nfrom scipy.stats import ttest_rel\n\nttest_rel(after, before)\n```\n\n### SPSS\n\nAnalyze \u2192 Compare Means \u2192 Paired-Samples T Test\n\n---\n\nIn short, a **paired samples t-test** compares two related means by analyzing the **differences within each pair**.",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 955,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5401
+  },
+  "run_profile": "scaleup"
+}

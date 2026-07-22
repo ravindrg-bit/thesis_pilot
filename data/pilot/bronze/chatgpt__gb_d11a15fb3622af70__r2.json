@@ -1,0 +1,160 @@
+{
+  "query_id": "gb_d11a15fb3622af70",
+  "engine": "chatgpt",
+  "run_index": 2,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-31T18:24:26.145736+00:00",
+  "query_text": "Buy a return train ticket from Boston to New York for next Friday",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0eb56b14d90ab32b006a1c7cd0849081a2b6c8dbe816902ea2",
+    "created_at": 1780251856.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0eb56b14d90ab32b006a1c7cd11d0481a28dbbc5f96340d0f9",
+        "summary": [],
+        "type": "reasoning",
+        "content": null,
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0eb56b14d90ab32b006a1c7cd2d28881a2acfc60a83731caad",
+        "action": {
+          "query": "Amtrak Boston to New York June 5 2026 train tickets",
+          "type": "search",
+          "queries": [
+            "Amtrak Boston to New York June 5 2026 train tickets"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_0eb56b14d90ab32b006a1c7cd42b0081a2aea8506e1d6be44e",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 555,
+                "start_index": 456,
+                "title": "Boston to New York Train - Amtrak Tickets $22 | Wanderu",
+                "type": "url_citation",
+                "url": "https://www.wanderu.com/en-us/train/us-ma/boston/us-ny/new-york/?utm_source=openai"
+              },
+              {
+                "end_index": 1402,
+                "start_index": 1267,
+                "title": "Fire near NY's Penn Station causes Amtrak train delays, cancellations in Connecticut",
+                "type": "url_citation",
+                "url": "https://www.ctinsider.com/news/article/amtrak-train-ct-cancellations-delays-penn-fire-22282249.php?utm_source=openai"
+              }
+            ],
+            "text": "I can\u2019t purchase the ticket for you directly or enter payment details, but I can help you book it.\n\n**\u201cNext Friday\u201d is Friday, June 5, 2026.** For Boston \u2192 New York, you\u2019ll likely want **Amtrak** from **Boston South Station** or **Back Bay** to **NY Moynihan Train Hall at Penn Station**. This route has direct **Northeast Regional** and faster **Acela** options; recent listings show many daily trains, with prices varying heavily by time and fare class. ([wanderu.com](https://www.wanderu.com/en-us/train/us-ma/boston/us-ny/new-york/?utm_source=openai))\n\nBefore you book, you\u2019ll need to choose:\n\n1. **Return date/time** \u2014 same day, Sunday, or another date?\n2. **Departure station in Boston** \u2014 South Station or Back Bay?\n3. **Preferred time** \u2014 morning, afternoon, evening?\n4. **Train type** \u2014 cheaper Northeast Regional or faster Acela?\n5. **Passenger details/payment** \u2014 handled directly on Amtrak\u2019s site/app.\n\nTo buy: go to **Amtrak**, search **Boston, MA \u2192 New York, NY**, select **Round Trip**, set outbound to **June 5, 2026**, choose your return date, then pick the trains and pay.\n\nOne note: there were recent Northeast Corridor disruptions near New York Penn Station reported on May 29, 2026, so check Amtrak\u2019s live status/travel alerts before finalizing. ([ctinsider.com](https://www.ctinsider.com/news/article/amtrak-train-ct-cancellations-delays-penn-fire-22282249.php?utm_source=openai))",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780251866.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 8418,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 420,
+      "output_tokens_details": {
+        "reasoning_tokens": 101
+      },
+      "total_tokens": 8838
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "I can\u2019t purchase the ticket for you directly or enter payment details, but I can help you book it.\n\n**\u201cNext Friday\u201d is Friday, June 5, 2026.** For Boston \u2192 New York, you\u2019ll likely want **Amtrak** from **Boston South Station** or **Back Bay** to **NY Moynihan Train Hall at Penn Station**. This route has direct **Northeast Regional** and faster **Acela** options; recent listings show many daily trains, with prices varying heavily by time and fare class. ([wanderu.com](https://www.wanderu.com/en-us/train/us-ma/boston/us-ny/new-york/?utm_source=openai))\n\nBefore you book, you\u2019ll need to choose:\n\n1. **Return date/time** \u2014 same day, Sunday, or another date?\n2. **Departure station in Boston** \u2014 South Station or Back Bay?\n3. **Preferred time** \u2014 morning, afternoon, evening?\n4. **Train type** \u2014 cheaper Northeast Regional or faster Acela?\n5. **Passenger details/payment** \u2014 handled directly on Amtrak\u2019s site/app.\n\nTo buy: go to **Amtrak**, search **Boston, MA \u2192 New York, NY**, select **Round Trip**, set outbound to **June 5, 2026**, choose your return date, then pick the trains and pay.\n\nOne note: there were recent Northeast Corridor disruptions near New York Penn Station reported on May 29, 2026, so check Amtrak\u2019s live status/travel alerts before finalizing. ([ctinsider.com](https://www.ctinsider.com/news/article/amtrak-train-ct-cancellations-delays-penn-fire-22282249.php?utm_source=openai))",
+  "usage": {
+    "input_tokens": 8418,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 420,
+    "output_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "total_tokens": 8838
+  },
+  "run_profile": "pilot"
+}

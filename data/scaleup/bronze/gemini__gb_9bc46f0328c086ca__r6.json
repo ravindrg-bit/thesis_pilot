@@ -1,0 +1,769 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "gemini",
+  "run_index": 6,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-06T23:32:52.784884+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 06 Jun 2026 23:32:52 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=20135",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "The journey of a TV show or commercial from a video file to your living room screen is governed by a highly automated technical pipeline known as the **\"air chain.\"** \n\nHistorically, TV stations relied on physical videotapes, manual switchers, and operators physically pushing buttons to transition between programs and commercials. Today, television playout is entirely digital, data-driven, and automated. \n\nThe process is divided into several key departments and technologies:\n\n---\n\n### 1. The Traffic Department (The Blueprint)\nBefore anything can air, there must be a plan. This is the job of the **Traffic Department**. \n* **The Log:** Traffic coordinators use specialized software (such as WideOrbit or Imagine Communications) to build a **traffic log**. This log is a frame-accurate, second-by-second playlist of the entire 24-hour broadcast day. \n* **Selling and Placement:** The traffic team schedules the TV shows, inserts promotions (promos), and places commercials. They make sure competing ads (like McDonald's and Burger King) do not play in the same commercial break.\n* **Generating IDs:** Every individual piece of video\u2014whether it is a 30-minute syndicated show, a 5-second channel ID, or a 30-second commercial\u2014is assigned a unique, standardized code (traditionally called an ISCI or Ad-ID code).\n\n### 2. Ingest & Media Management (Getting the Content)\nTV stations do not keep movies and shows on DVD or tape. Everything is stored as digital files on massive high-speed storage servers (known as a SAN, or Storage Area Network).\n* **Syndicated Shows:** Shows like *Wheel of Fortune* or *Jeopardy!* are delivered electronically to the station via secure internet file transfer or satellite feeds.\n* **Commercials:** Local and national ad agencies deliver commercials digitally through distribution services (like Extreme Reach or Comcast AdDelivery).\n* **Ingestion and Quality Control (QC):** When a file arrives, a media ingestion specialist checks it to ensure it meets the station's broadcast standards (correct audio levels, clear video, working closed captioning, and correct frame rate). Once approved, the file is loaded onto the playout server.\n\n### 3. Master Control & Playout Automation (The Conductor)\nThe heart of any TV station is **Master Control (MCR)**. Master Control acts as the ultimate checkpoint before the signal is broadcast to the public.\n\nThe unsung hero of modern television is **automation software** (such as Florical, Crispin, or Imagine ADC). \n1. **Reading the Log:** The automation software imports the daily log created by the Traffic Department.\n2. **Capping and Pre-rolling:** The software continuously looks ahead. If the log says a commercial for a local car dealership is supposed to air at exactly 7:14:30 PM, the automation software tells the video server to prep that specific video file a few seconds in advance.\n3. **Execution:** At precisely 7:14:30 PM, the automation system commands the Master Control switcher to transition from the TV show to the video server playing the commercial. \n\nBecause of automation, a single human **Master Control Operator** can monitor multiple channels at once, only stepping in if a technical error occurs, a live sporting event runs over its scheduled time, or a breaking news/weather alert must preempt the scheduled programming.\n\n---\n\n### How TV Stations Handle Different Source Feeds\n\nA typical broadcast day switches between three main types of content:\n\n#### A. Network Programming (e.g., Live NFL Games, Primetime Shows)\nFor network affiliates (such as local NBC, CBS, ABC, or Fox stations), a major portion of the day comes live from the national network via satellite or fiber optic lines. \n* **SCTE Triggers:** When a live football game goes to a commercial break, the national network doesn't rely on the local station operator to press a button. Instead, the network injects invisible digital markers called **SCTE-35** (or SCTE-104) signals into the broadcast stream.\n* **Automated Splicing:** The local station\u2019s automation system detects these SCTE triggers and instantly switches away from the network feed to play local commercials (local car dealerships, regional lawyers, etc.). When the local break is over, another trigger switches the feed back to the network.\n\n#### B. Local News and Live Broadcasts\nWhen the local news begins, Master Control hands control of the video and audio over to the **Production Control Room (PCR)**, where a technical director switches between studio cameras, weather graphics, and field reporters. Once the news ends, Master Control takes back the feed to resume automated playout.\n\n#### C. Syndicated and Pre-Recorded Content\nFor daytime talk shows, sitcom reruns, or paid programming, the automation system plays the program files directly from the local server. These files are usually pre-cut by the distributor into specific \"segments\" (e.g., Segment 1, Segment 2) with built-in gaps so the automation system can easily insert the scheduled local commercial blocks in between.\n\n---\n\n### The Modern Shift: Centralcasting & The Cloud\nIn the past, every local TV station had its own physical Master Control room and its own operators. Today, media conglomerates (like Nexstar, Sinclair, or Tegna) use a model called **Centralcasting**. \n\nUnder centralcasting, one giant hub facility in a major city might house the master control operations and automation servers for 30 or 40 different stations across the country. Operators at the hub monitor the streams remotely, while the actual video files are played out from servers located either at the local stations or directly from cloud infrastructure (like AWS). \n\n### Final Stop: Transmission\nOnce the automation system has perfectly spliced the TV show, commercials, channel logos (watermarks), and emergency alert crawls together, the finished, combined audio/video feed is compressed. \n\nThis final signal is sent to:\n1. **The Station's Transmitter:** To broadcast over-the-air (OTA) to antennas.\n2. **Cable/Satellite Providers:** Delivered via fiber or satellite.\n3. **Streaming/OTT Services:** (like YouTube TV or Hulu + Live TV) using digital dynamic ad insertion to target specific ads directly to streaming users.",
+              "thought": null,
+              "thought_signature": "EusaCugaAQw51sfYQHhU6QpC33LDlFBFkXtZPleMsMKjn53SCvCmqAA_IKOCOrj3LMsstogQTx723NhEK7OkBewHYbSRrKzX_KCxgZczYqMXXfbJEyAhPfgfajbRC9SvRCeZcks_Zx6qkg6TWYAitVSZ4xKPbsH8YVX22rE3vG-eakiqluPqcD04tnHDP-_J7eLHJ3bbteADEQF8WJEVsd31OkHv-B6kA6PpYCe2JzDVpVInTi9fT7dlw4wPe1Anz0K-_madkerfMdJoCyQkErbGRzYpt4QU5PFn2qm6G3S5D_rjEKiHnZ98yFrcJxq3kh1iOsUI54OTMd-fYfzKFHfgfA74hueFjrpoPt-8uIlSAxzEMpjwYqufB8eJe7uooqKC5Q9xjbJbjBAl_BteIut5ytX24-41FP54G720Mh_74rLkBrImfx72hdgUpSzWdfSuzTjVITzduot6sto6Reg1Qxrf9-vHkfHNsoKMA98BYchGWuTB4a9pAuwH3Jeb-PNbwBIirDQg07j2MGL9HL6w-B9J04edP0kJDUpFFsv3JBHRnBqA25C1RU5IEz1sUxk4DXJ-uFpFJKxrQG35fauS5wf97rfNDS9TwpPT5ZVgzbegMHWy4ocxtseAFVEBP7uvbrWNd89HPnajBDX6Dtt0jzPxAtev-Mz5ge8sdsrA6E9j7Nnu6g0szoT6WpNm41GhcKT63VG2kDiH-TyO7kV0wNrJp_1fXL8d6JyGUDAUBXF3e6U3akLbEeqMkfkwWEBkVqEQqkmTTkx7En_BtM0Mdwrhhk7u4ZBvVjsO3vFMcOXkLvVjydgeHFvwWH_4CGkkCQepoNteuZYmOvc0eLm8ViKq9O7aF6zsY34F_cSoAsOcfLhO2sdjHu1q5S7EvnTEza4HMSq_jkQtg3zxHs1n4jOHPO8wBzUOfscD3q3Z-blIQ3oM6RTCTw207FMvDsDSmPNeRUj5CWKZyPt-lHNrCW3055gsqrRI2WAhjbFMq-Iby6c607MCCtyM4P-SEONO7_5d1z5F0BY-GYCxNGa6FSQVexw23NBqZf7ODJ2KUp2DTl1SgXcbO7JCkxOOBk_2Xlo0nJ7Sq0CT9n7jSJ4D3EmagTMyFp8MGHYPWn30Lj5MHbXS5VA4TTLdMN4DtUoEe1fXooVVNilAlP6VI4wUcx8tn_YOh_HVgvtEtSe5ROgiqDTU7_7P5-1SgTe3r2T2jqxgeWWAE3zEw2Hatsz9ZQpVmES-2fkAN37pU2P2XkB2-giJqiKUE6HvwprIEDCAKr3t8_iOVtmy2VHXLCsGnXW_AhsVmCGEIIPP575ENtYbu3iFKb3llD1i5jT1TAfz5_2k2QWNYQqD5NbkHu-uOlm5kHBym7m7SnxWTzv3YyRqcuXpS5ZpV8xXnToXJ8SQmJ2fA55GsmOVybTwpfJGC4LnTpGP5IVHvjAjBlsVPuAcdJ0pwmpyf1WV1J8Vg7oZQbmvMWHsxvMr2jsZPMTcxM3e23d4TS_aklUAfAqYk6oW-1aUENVZJ9ypXxODNfjHqAsR8sjAo3UVomzMI8P7iN5bJqg1Eh45_dwwMJTlLzZKHRyJPoPdUWLef0-UeWL5DaUonWgPN2hMKWYHXegeVFEijUKRhIPG7GZP0lzbDncJYojTX-THDjwVmmT5J-Kf_qwUJBvLeST_itHCoSrZjJ8lrjH4Ywl_jwOkMkEekK4gX9VoCpzY6o_9ET_YLeSVEfOThmyW0VdmNTk17ldz6aI5FupD4CA9zAWKXy3bAFM-_dbHj0lbSfFPIEIgGTWXp6kUQvsf6MLPDKh6_8JHKAtHKk_Uu3VpqPdIcDeN3xnA5X1rDxc_HdOpjIkBpqkQhinTgdVWPD17TXL0ATHewXLSZRhfbowI24Us3e21Tglf6WM0Ylhlz7RkCf9uS-1YX25mPyYxwJZrGhW79-JKMc6GWu8bCgmA7iWUIsdheyKosau51NNJgUIMjolB6oKxgEf2-hyfKql4HppDYpOzlhzpB28OPz4jXNtI-0xbCxVXm_JvanaWJOx6bni2ZsUGuWkD-B1by34Z9EM_i2NX34zqO98rxyItQJVaLERBVHF0kiKUmIRPGgVV7BYkMZFyDMvGnQaROBdiCZu_glhZRf4heOz4QthqCGA5NGY_j-J6yna3oiaimFk_qVSWiGNDiQSdbwQxG46tJ2v9jF5S1eVcNmN28nnNfpMofSUr6383jg9myRmVPPxC-knuxXj2-3bA9QI-Ev0tJCv2ouRp5SwM05OGIptwEhjuFOLThBosoeARS0jIsN79NJM7AfknrqKXj_igVscMHJgPDyUFCV45AZZwYtPy_pGTgELQ6KqXL4yUzztBzff1jMLOhtz9k2lyl6tUdfa_BMo03uAyDuuBZDBp_mHWC-N0PnXDtXM6GgqLVpD2f7AEEkJ4N0sLxSaEZtroz6yWUehZqWjUYH1MfQGgBH3yYC7zgeVNzoB1naCWq8DRpMUhCLS1Z9CLdIRdL35lpaiwAoeayFWMY0XgOCRa2AekFVMPLABJrBCeF0swW3JaHNf6q69sG59fs6sbRH8_f4YT_owtr8ANEehYPn37D1jlcMFKIkC6wi92xKzIuOBlVuTV8Ar3BLrNYi0cPFzgYKIiZjSIkyXnxifQqA0q4QI8tJonKQltWZHv22_8WJtxGAnuyrpiZrZ6SqAEnEfV5c8NgjmZySmU-1pmALDs2tdhq4c6I6XAx6vFODuabGVVszUYUo41tTf-UZx--rR1ajTPLWGBvAz7r8_HwpSfEpg6Y8LYDGPnbweG8HWybi9-1zzKsip89JsAFXX4XDu2-ifsSB5EhNwXrmjiUDvNrxko3bf9VilgVpZmwsMrAr-qNV7t8KoKMp6IwMJwUpgdawovu_ZUU9vTSlvhIZxFfwhPzNPQ3kZF9nB_kiLbUSEJaL-BlW4bSXm4EWogicf-gan354cp5qdVHXoMmGF5Hm0wlxyw0hC8lQjcurC9SsT1xSggqt7U-cjqrTNGpBr4AvoiSXQ8JTvm2BqUSHxHY1Sqqtqu4pWSbghssFr65GKAlZAM9kO45fj2PlQKk4O2OX5120882nrdJaNyRf13rnjRg62X8BGpM7RvpzbAekJ51szryTVAWURZAB2ltzN6JCnitDa-93dSeJooHXYk25BIY5fnyHw-zQwHFkmH_gVFVc65xQT_1UkhEqWGvmjAitgHoNZdfMcSnilMeMkg47UYiM6nj7Gaae8zLVtTSU8_vf0jdHBpPQlB4uj4jYLzj-Rk-2IXVUbzc3CR1b7uPsMUWPStzTolRS0bi5NQagRvhVeGoWTazXyV5CkAWV2R3JivussJrS3f9CoDdZ1_jhemUL53Kn4FnV0AO4D_u1YiZG6fAQZJT1USWZUfWjDgFIA92gLtPiWD3-CSmAv47k0YKJ-WbCJafcVlL9Wfm0uyhbpc8YkSDuKABko32xkFo-CZXuT70r0txjRkc_d0hDME9E1ce9zKTlkY4iDWlY9_0NuZjn_m6oqz4pAHeedwsEjLZ24ANSmK4jXPePsUkDnJ4_MxiZqeKrpV00bR_W75eURoVjrp9bqpz84ypqyyPAk4NWKrlHZHg3AbaRzNuBGO1yylYcYliG7fBWu8sMLXGXJHiFDU0s43HKl7xetK8BlVYmHvxrg3fH3gFAXTW_WkNdwjHMk33cytqqaNcMp0FBP88Vaw1cpIHAa9PJIdQbt7ABnGQB_W9A4Tnnj7sS3NfXjhHpPa0rhTpSWUHHOSJqzXfmAakAJI0JrfDjANuRyT510U09iY6zQOtfUXOb0bK-edCw9Lxl3BiV3zEIwE5JOpNge0Y6j7l5Gse-RncAGBvz0z2Zzn7MXVR-qLoqggxkVyQv4DCbLurj8QDKPAAk9B4RhK0XzfznQiRaZxulWRiEQMdyGY-SFejxdcJhpiY3GBhgpu4vhazUdLm1_oj5-Xcw3TBlGeH1uGOv6HSneMe0KbCVCnul0zrk-Ro39VaFwDBUAq5tsorimYcrhWeoAEkJCauzkyB3ZXd73bzcmf4WJqj5DMinzO6LJlptMxwWJRpk8B2R5UKCvlkZ04DI2yXYyQlDATWj2kA1FIfYxwo76xDAsr4TE8PXLWVIgZCoIp73xH3l5DT7m1CmdmAB1-zJ-LvTJNgftI-E5_izfemZCA9LsIatDO09G5v8C2PHUbL26dNc5LWmKIfzF49ycw2YxLXcSCpvmJ3K36m9mV7Z5mXY1wdUENREc7LhV5045agJRKHFzTmoD3gxZcCLX31yc_H4ojWhHad4ICCUQWgB7YnvohKBR2x827sAI3SAF9UJY9iJcimareDVILy6DBBvgmX6MMorA60sNZNvF53JgLdhViZDGDWnM5Z4jNWY4Cg0ABAvmRoMLMPVDSHLzt4KvpGqms9d-ja5f-9h3oYhyYu8bHTv5CPFxRjt02mKcWyS_kTwxrgqe3B3iOppaYnSIqTS9WXw28MjtyiGyUs9yK6OcCjkoC5Uz-4sE4H6yzHXKywI0xepxQbawv2rPZLhLNFZ4K50LChj37FKCQY-aI4cWEfd2YyIKv8gMcE_Ur",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrp4Rc5SokxJWs9GB2NblGk0BzBeGKmX2L0mf_PS7-LfEv2yKWVIBx-attqRnWuQ5r3qfBtvSc7HDMRJVhaNv3M1_YYX2viod-qK8bdKTdQm0J5DEeFM3vkWOmSPAv-1G75eMBfNnln-WhnVv9lua3FDRwlH0-hTJ6sxvNj3ZDUUL0F3hLhnuZaT-2mXiXiA780YK-AGI9"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "tvtechnology.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIBYjTrOHO1_z9snSig3Q-7U1wSjhaB5vLsgyOkUwPgFH1MbjmGXZUaPKVmnz8JHnm9wjknz0J6UDqFZIB078V_G6xXvRCIVchnCaA03Cu-_3dZkmIOWPr4F2WcHtPvO2SURSgj8vhFKF-7Jx-cxXUaq3zPzEO9Tl3lQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "tvtechnology.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu-QqmHyNadzX3OZ_IWMvt5EwXvgEKHOcL_JZmFBvt8Ft7U2ZofiEu_CofB-jRia2sCGoE7ZDZV7m9KdWJ2bDEAGqlhTxTE-mEIJkFqK_x7_kx2uHjFYYkzEd4eO8EfhgkRJ5zT9KW6vWZ99q3NMScgys="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEidoRYaQWXYXQVUy5p1DLwrdaX03JYqn226glgDI0sbQ3sHOOddJRfjZ9KyJmoWaJNjAx_Pum2VQB2bAhgvUqYkLm3l4DSeWL_h18DyOPfToLa6SIcLFkBN-t-xadpI46v2YBMwmhwew=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "imaginecommunications.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGDiMbMDzSF51iajQRaUTUwXEifWbSYU21Zh_4UfqwNVPlU4ioLL6bAnDWrOSIBzurYmwRKD2o_ii5uAcWJa4AIIR4r2i28TguzesnOJwBa6CwWD07R--q2py8BQDHy2Xj_UVH_1qbIedNbJ9Gumy_eUpmeqA_SBK1"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "icareus.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwSbY1jnvbGZqta7GY8HBZnDg7F5UqljF0EyCOigbcCq55X_RHgAVXrcuHGUGZAYV4MP87miM3Dn_gRWQOWEQA1iKfY7sYzqCYcof7qSZVHUY_fq-BT4gTmAP5YQT8Dr3ZG0XgaVZgZcYgTw=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "thebroadcastbridge.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJok3fK3V1pI6gd8WeOj4HuXltLQDjJckgWTlqQiZst7G6lJPAXWc_DEfS4e03tQhWVaw96EKJoJJKlVneuTj1hqw3VIE7jIPAoC-F9j9jU3YaBwhkIiEPE0p7-PVL5z6VLBycBc0CMHvrXul0CD29gUAoD0OUdnXfUGIhzlsMzm6XOKboHyuSHzhN8kxL8kgoODvwhamv8zckbtNRnpqKXHom6mL2uQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBzNb7tT4qdoxR_5uhG6-fjruiyXMeRVmdyyTZfcGNQzrJTjG6V1EnvtWCsxFHVm92tk1ayW1IOtm8K2bl7UZ9pypRsLphLiMcJLtCLWBQggu4JgmPKB9oiYAgN7sTSLXHPA=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "thebroadcastbridge.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJok3fK3V1pI6gd8WeOj4HuXltLQDjJckgWTlqQiZst7G6lJPAXWc_DEfS4e03tQhWVaw96EKJoJJKlVneuTj1hqw3VIE7jIPAoC-F9j9jU3YaBwhkIiEPE0p7-PVL5z6VLBycBc0CMHvrXul0CD29gUAoD0OUdnXfUGIhzlsMzm6XOKboHyuSHzhN8kxL8kgoODvwhamv8zckbtNRnpqKXHom6mL2uQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "broadcastmgmt.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlFMPz3FA1R3TK_ThqMCM4pBdhubCmBJdTWDc9y5Stoh0i1RkwfCVSN4x0DB4dHcnzJU_3e62i9arQiWClK4RXieV0DWPFu24ycHYDsQOnwCJj6RkJpvG2aB1BwUnmEDVDkYZh-NdUK6dZIEsEM6JaxQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "grokipedia.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2zBoWkx4CKxCj4BHqrWjcr8saw_46q19oQm3JZBLCybtbIZc19tlP8ta5wJBaMVX-9khIxrrItRTGUuzKpBEYhcs4mwu1LcD78vcw3sE4W-S5x-rXWsj9yzDsMQW5Bf4="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "dc.gov",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJz3nuKcwFpZ-G_HfV1o7U2YU6AAIQngTENGIpVA-B5NiIEOGHoBSMCxl_8LehaJ9wNk8xbsOXU6NhQD5qP1xthjiGstA94PmAqNNdDi5wL7yoc60EzmBeSjJJdUkle_m1HqTyN2I="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "qvest.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfDAsXLs02xrx3iYEazwu-5sM10CGCn0Act58Hc9H64aCBAs8KDxicW2XAiq17Vxx1CCXXuK5d_vJFUnLVeLRiQ9-oXAZpVR5DBCqVr9jpSgL6wlEo8gJcg_OYXnkGf34Q_hgIXGHX17yvazWrR6tupDZVdLSY9YO9Mnmu-Y5Cvi5KDehkNwxvyyC5LP7KHcsoozx8DNw="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "samimgroup.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE76z6-c6D5GJuqEQez86kHzhEquRxwiFPChh0oorVDHqX94LqHiKl5Pbe0ysixtSgBmPtmPHuvkaPwWD5Hr2jTuTWPicD-_2RIpjlf1lWbloYg1U-ijqAfiS5zK1nvJZYBQUpqRSuQjJ_I7nUjFthUugbszWbLRA=="
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                1,
+                2
+              ],
+              "segment": {
+                "start_index": 169,
+                "end_index": 331,
+                "part_index": null,
+                "text": "Historically, TV stations relied on physical videotapes, manual switchers, and operators physically pushing buttons to transition between programs and commercials"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                3
+              ],
+              "segment": {
+                "start_index": 333,
+                "end_index": 406,
+                "part_index": null,
+                "text": "Today, television playout is entirely digital, data-driven, and automated"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 579,
+                "end_index": 624,
+                "part_index": null,
+                "text": "This is the job of the **Traffic Department**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                4
+              ],
+              "segment": {
+                "start_index": 627,
+                "end_index": 760,
+                "part_index": null,
+                "text": "* **The Log:** Traffic coordinators use specialized software (such as WideOrbit or Imagine Communications) to build a **traffic log**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                5
+              ],
+              "segment": {
+                "start_index": 762,
+                "end_index": 853,
+                "part_index": null,
+                "text": "This log is a frame-accurate, second-by-second playlist of the entire 24-hour broadcast day"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1,
+                4
+              ],
+              "segment": {
+                "start_index": 856,
+                "end_index": 977,
+                "part_index": null,
+                "text": "* **Selling and Placement:** The traffic team schedules the TV shows, inserts promotions (promos), and places commercials"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                5
+              ],
+              "segment": {
+                "start_index": 979,
+                "end_index": 1082,
+                "part_index": null,
+                "text": "They make sure competing ads (like McDonald's and Burger King) do not play in the same commercial break"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6
+              ],
+              "segment": {
+                "start_index": 1084,
+                "end_index": 1318,
+                "part_index": null,
+                "text": "* **Generating IDs:** Every individual piece of video\u2014whether it is a 30-minute syndicated show, a 5-second channel ID, or a 30-second commercial\u2014is assigned a unique, standardized code (traditionally called an ISCI or Ad-ID code)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                7
+              ],
+              "segment": {
+                "start_index": 1433,
+                "end_index": 1550,
+                "part_index": null,
+                "text": "Everything is stored as digital files on massive high-speed storage servers (known as a SAN, or Storage Area Network)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                0
+              ],
+              "segment": {
+                "start_index": 1619,
+                "end_index": 1717,
+                "part_index": null,
+                "text": "* are delivered electronically to the station via secure internet file transfer or satellite feeds"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 1719,
+                "end_index": 1871,
+                "part_index": null,
+                "text": "* **Commercials:** Local and national ad agencies deliver commercials digitally through distribution services (like Extreme Reach or Comcast AdDelivery)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 1873,
+                "end_index": 2114,
+                "part_index": null,
+                "text": "* **Ingestion and Quality Control (QC):** When a file arrives, a media ingestion specialist checks it to ensure it meets the station's broadcast standards (correct audio levels, clear video, working closed captioning, and correct frame rate)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 2116,
+                "end_index": 2173,
+                "part_index": null,
+                "text": "Once approved, the file is loaded onto the playout server"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                7,
+                10
+              ],
+              "segment": {
+                "start_index": 2183,
+                "end_index": 2290,
+                "part_index": null,
+                "text": "Master Control & Playout Automation (The Conductor)\nThe heart of any TV station is **Master Control (MCR)**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                7,
+                10
+              ],
+              "segment": {
+                "start_index": 2292,
+                "end_index": 2383,
+                "part_index": null,
+                "text": "Master Control acts as the ultimate checkpoint before the signal is broadcast to the public"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                11,
+                1
+              ],
+              "segment": {
+                "start_index": 2386,
+                "end_index": 2493,
+                "part_index": null,
+                "text": "The unsung hero of modern television is **automation software** (such as Florical, Crispin, or Imagine ADC)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 2499,
+                "end_index": 2599,
+                "part_index": null,
+                "text": "**Reading the Log:** The automation software imports the daily log created by the Traffic Department"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 2672,
+                "end_index": 2874,
+                "part_index": null,
+                "text": "If the log says a commercial for a local car dealership is supposed to air at exactly 7:14:30 PM, the automation software tells the video server to prep that specific video file a few seconds in advance"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 2879,
+                "end_index": 3051,
+                "part_index": null,
+                "text": "**Execution:** At precisely 7:14:30 PM, the automation system commands the Master Control switcher to transition from the TV show to the video server playing the commercial"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                0,
+                7
+              ],
+              "segment": {
+                "start_index": 3055,
+                "end_index": 3329,
+                "part_index": null,
+                "text": "Because of automation, a single human **Master Control Operator** can monitor multiple channels at once, only stepping in if a technical error occurs, a live sporting event runs over its scheduled time, or a breaking news/weather alert must preempt the scheduled programming"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 3467,
+                "end_index": 3696,
+                "part_index": null,
+                "text": "Network Programming (e.g., Live NFL Games, Primetime Shows)\nFor network affiliates (such as local NBC, CBS, ABC, or Fox stations), a major portion of the day comes live from the national network via satellite or fiber optic lines"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9,
+                12
+              ],
+              "segment": {
+                "start_index": 3857,
+                "end_index": 3978,
+                "part_index": null,
+                "text": "Instead, the network injects invisible digital markers called **SCTE-35** (or SCTE-104) signals into the broadcast stream"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                9
+              ],
+              "segment": {
+                "start_index": 3980,
+                "end_index": 4197,
+                "part_index": null,
+                "text": "* **Automated Splicing:** The local station\u2019s automation system detects these SCTE triggers and instantly switches away from the network feed to play local commercials (local car dealerships, regional lawyers, etc.)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 4199,
+                "end_index": 4282,
+                "part_index": null,
+                "text": "When the local break is over, another trigger switches the feed back to the network"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                7,
+                13
+              ],
+              "segment": {
+                "start_index": 4293,
+                "end_index": 4548,
+                "part_index": null,
+                "text": "Local News and Live Broadcasts\nWhen the local news begins, Master Control hands control of the video and audio over to the **Production Control Room (PCR)**, where a technical director switches between studio cameras, weather graphics, and field reporters"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                13
+              ],
+              "segment": {
+                "start_index": 4550,
+                "end_index": 4632,
+                "part_index": null,
+                "text": "Once the news ends, Master Control takes back the feed to resume automated playout"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                0
+              ],
+              "segment": {
+                "start_index": 4643,
+                "end_index": 4815,
+                "part_index": null,
+                "text": "Syndicated and Pre-Recorded Content\nFor daytime talk shows, sitcom reruns, or paid programming, the automation system plays the program files directly from the local server"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8
+              ],
+              "segment": {
+                "start_index": 4817,
+                "end_index": 5032,
+                "part_index": null,
+                "text": "These files are usually pre-cut by the distributor into specific \"segments\" (e.g., Segment 1, Segment 2) with built-in gaps so the automation system can easily insert the scheduled local commercial blocks in between"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                6
+              ],
+              "segment": {
+                "start_index": 5040,
+                "end_index": 5187,
+                "part_index": null,
+                "text": "### The Modern Shift: Centralcasting & The Cloud\nIn the past, every local TV station had its own physical Master Control room and its own operators"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                7
+              ],
+              "segment": {
+                "start_index": 5189,
+                "end_index": 5288,
+                "part_index": null,
+                "text": "Today, media conglomerates (like Nexstar, Sinclair, or Tegna) use a model called **Centralcasting**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                0,
+                7
+              ],
+              "segment": {
+                "start_index": 5292,
+                "end_index": 5468,
+                "part_index": null,
+                "text": "Under centralcasting, one giant hub facility in a major city might house the master control operations and automation servers for 30 or 40 different stations across the country"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                0,
+                9
+              ],
+              "segment": {
+                "start_index": 5470,
+                "end_index": 5663,
+                "part_index": null,
+                "text": "Operators at the hub monitor the streams remotely, while the actual video files are played out from servers located either at the local stations or directly from cloud infrastructure (like AWS)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                11,
+                9,
+                10
+              ],
+              "segment": {
+                "start_index": 5667,
+                "end_index": 5889,
+                "part_index": null,
+                "text": "### Final Stop: Transmission\nOnce the automation system has perfectly spliced the TV show, commercials, channel logos (watermarks), and emergency alert crawls together, the finished, combined audio/video feed is compressed"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                7,
+                10
+              ],
+              "segment": {
+                "start_index": 5926,
+                "end_index": 6000,
+                "part_index": null,
+                "text": "**The Station's Transmitter:** To broadcast over-the-air (OTA) to antennas"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                7
+              ],
+              "segment": {
+                "start_index": 6005,
+                "end_index": 6068,
+                "part_index": null,
+                "text": "**Cable/Satellite Providers:** Delivered via fiber or satellite"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                10,
+                12
+              ],
+              "segment": {
+                "start_index": 6073,
+                "end_index": 6222,
+                "part_index": null,
+                "text": "**Streaming/OTT Services:** (like YouTube TV or Hulu + Live TV) using digital dynamic ad insertion to target specific ads directly to streaming users"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=tv+station+master+control+traffic+workflow&client=app-vertex-grounding&safesearch=active\">tv station master control traffic workflow</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=how+tv+stations+play+out+programs+and+commercials+master+control+automation&client=app-vertex-grounding&safesearch=active\">how tv stations play out programs and commercials master control automation</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "tv station master control traffic workflow",
+            "how tv stations play out programs and commercials master control automation"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "EK4kapq4Ld6d_uMPn9aE8QY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1768,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 8,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 8
+        }
+      ],
+      "thoughts_token_count": 1334,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 3110,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "The journey of a TV show or commercial from a video file to your living room screen is governed by a highly automated technical pipeline known as the **\"air chain.\"** \n\nHistorically, TV stations relied on physical videotapes, manual switchers, and operators physically pushing buttons to transition between programs and commercials. Today, television playout is entirely digital, data-driven, and automated. \n\nThe process is divided into several key departments and technologies:\n\n---\n\n### 1. The Traffic Department (The Blueprint)\nBefore anything can air, there must be a plan. This is the job of the **Traffic Department**. \n* **The Log:** Traffic coordinators use specialized software (such as WideOrbit or Imagine Communications) to build a **traffic log**. This log is a frame-accurate, second-by-second playlist of the entire 24-hour broadcast day. \n* **Selling and Placement:** The traffic team schedules the TV shows, inserts promotions (promos), and places commercials. They make sure competing ads (like McDonald's and Burger King) do not play in the same commercial break.\n* **Generating IDs:** Every individual piece of video\u2014whether it is a 30-minute syndicated show, a 5-second channel ID, or a 30-second commercial\u2014is assigned a unique, standardized code (traditionally called an ISCI or Ad-ID code).\n\n### 2. Ingest & Media Management (Getting the Content)\nTV stations do not keep movies and shows on DVD or tape. Everything is stored as digital files on massive high-speed storage servers (known as a SAN, or Storage Area Network).\n* **Syndicated Shows:** Shows like *Wheel of Fortune* or *Jeopardy!* are delivered electronically to the station via secure internet file transfer or satellite feeds.\n* **Commercials:** Local and national ad agencies deliver commercials digitally through distribution services (like Extreme Reach or Comcast AdDelivery).\n* **Ingestion and Quality Control (QC):** When a file arrives, a media ingestion specialist checks it to ensure it meets the station's broadcast standards (correct audio levels, clear video, working closed captioning, and correct frame rate). Once approved, the file is loaded onto the playout server.\n\n### 3. Master Control & Playout Automation (The Conductor)\nThe heart of any TV station is **Master Control (MCR)**. Master Control acts as the ultimate checkpoint before the signal is broadcast to the public.\n\nThe unsung hero of modern television is **automation software** (such as Florical, Crispin, or Imagine ADC). \n1. **Reading the Log:** The automation software imports the daily log created by the Traffic Department.\n2. **Capping and Pre-rolling:** The software continuously looks ahead. If the log says a commercial for a local car dealership is supposed to air at exactly 7:14:30 PM, the automation software tells the video server to prep that specific video file a few seconds in advance.\n3. **Execution:** At precisely 7:14:30 PM, the automation system commands the Master Control switcher to transition from the TV show to the video server playing the commercial. \n\nBecause of automation, a single human **Master Control Operator** can monitor multiple channels at once, only stepping in if a technical error occurs, a live sporting event runs over its scheduled time, or a breaking news/weather alert must preempt the scheduled programming.\n\n---\n\n### How TV Stations Handle Different Source Feeds\n\nA typical broadcast day switches between three main types of content:\n\n#### A. Network Programming (e.g., Live NFL Games, Primetime Shows)\nFor network affiliates (such as local NBC, CBS, ABC, or Fox stations), a major portion of the day comes live from the national network via satellite or fiber optic lines. \n* **SCTE Triggers:** When a live football game goes to a commercial break, the national network doesn't rely on the local station operator to press a button. Instead, the network injects invisible digital markers called **SCTE-35** (or SCTE-104) signals into the broadcast stream.\n* **Automated Splicing:** The local station\u2019s automation system detects these SCTE triggers and instantly switches away from the network feed to play local commercials (local car dealerships, regional lawyers, etc.). When the local break is over, another trigger switches the feed back to the network.\n\n#### B. Local News and Live Broadcasts\nWhen the local news begins, Master Control hands control of the video and audio over to the **Production Control Room (PCR)**, where a technical director switches between studio cameras, weather graphics, and field reporters. Once the news ends, Master Control takes back the feed to resume automated playout.\n\n#### C. Syndicated and Pre-Recorded Content\nFor daytime talk shows, sitcom reruns, or paid programming, the automation system plays the program files directly from the local server. These files are usually pre-cut by the distributor into specific \"segments\" (e.g., Segment 1, Segment 2) with built-in gaps so the automation system can easily insert the scheduled local commercial blocks in between.\n\n---\n\n### The Modern Shift: Centralcasting & The Cloud\nIn the past, every local TV station had its own physical Master Control room and its own operators. Today, media conglomerates (like Nexstar, Sinclair, or Tegna) use a model called **Centralcasting**. \n\nUnder centralcasting, one giant hub facility in a major city might house the master control operations and automation servers for 30 or 40 different stations across the country. Operators at the hub monitor the streams remotely, while the actual video files are played out from servers located either at the local stations or directly from cloud infrastructure (like AWS). \n\n### Final Stop: Transmission\nOnce the automation system has perfectly spliced the TV show, commercials, channel logos (watermarks), and emergency alert crawls together, the finished, combined audio/video feed is compressed. \n\nThis final signal is sent to:\n1. **The Station's Transmitter:** To broadcast over-the-air (OTA) to antennas.\n2. **Cable/Satellite Providers:** Delivered via fiber or satellite.\n3. **Streaming/OTT Services:** (like YouTube TV or Hulu + Live TV) using digital dynamic ad insertion to target specific ads directly to streaming users.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1768,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 8,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 8
+      }
+    ],
+    "thoughts_token_count": 1334,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 3110,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b956ca640639b1e9",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:41:42.894747+00:00",
+  "query_text": "Are there any academic fields that don't have enough people trying to teach?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cd52f41886ccf76e2d96a",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about academic fields that face shortages of qualified teachers. The evidence shows that certain disciplines consistently struggle to attract enough teaching candidates.\n\n## Fields with Teacher Shortages\n\n### STEM Fields (Science, Technology, Engineering, Mathematics)\nThere are persistent shortages of teachers in STEM disciplines. According to research from the Center for American Progress, there has been a **22 percent decline** in people completing teacher preparation programs in STEM fields (biology, chemistry, computer science, earth science, mathematics, physics, and general science) from 2012 to 2018. This shortage exists partly because individuals with these credentials often have higher-paying options in other employment sectors.\n\n**Specific STEM subjects facing shortages:**\n- **Mathematics** \u2013 described as grappling with a \"severe shortage of qualified teachers\"\n- **Physics** \u2013 at Wayne Community College, having only a single physics instructor meant they were unable to offer Astronomy for several years\n- **Computer science** \u2013 included in the declining STEM teacher preparation index\n\n### Special Education\nSpecial education consistently faces teacher shortages. The data shows a 14 percent decline in students completing preparation to become special education teachers from 2012 to 2018. States have reported shortages in special education since 1998.\n\n### English as a Second Language (ESL) / Bilingual Education\nWhile schools have long struggled to find enough bilingual teachers to meet their needs, there is some positive news: there was a **30 percent increase** in teachers preparing to teach ESL or bilingual education from 2012 to 2018. However, many states still consistently report shortages of ESL teachers.\n\n### Engineering\nAt the community college level, some institutions have very limited engineering faculty. Wayne Community College had only one full-time engineering instructor who also supported math initiatives.\n\n### Health and Physical Education (HEA/PED)\nAt some institutions, these programs have become understaffed as student demand shifted toward other general education courses.\n\n## Important Context\n\nIt's worth noting that the overall number of students completing teacher preparation programs declined by **27 percent** from 2012 to 2018. While elementary education saw an even steeper decline (29 percent), researchers suggest this may represent a \"right-sizing\" since historically more graduates were produced than needed.\n\nThe teacher shortage is also exacerbated by:\n- Many career-long teachers reaching retirement age\n- Expanding classroom sizes\n- Schools needing specialized staff for mental health, technology, and diverse learning needs\n- A mismatch between the types of education degrees earned and where vacancies actually exist\n\nSources:\n1. https://www.americanprogress.org/article/make-declining-enrollment-teacher-preparation-programs/\n2. https://mathtrack.co/rethinking-the-teacher-applicant-pool-a-guide-to-filling-math-teacher-vacancies-with-uncertified-candidates\n3. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n4. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n8. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780274480,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 730,
+        "prompt_tokens": 4142,
+        "total_tokens": 4872,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Are there any academic fields that don't have enough people trying to teach?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cd52f3ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1f7c836c6a1cd52f4f50a50001d9249d\"},\"usage\":{\"total_tokens\":3980}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cd52f3ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1f7c836c6a1cd52f4f50a50001d9249d\"},\"usage\":{\"total_tokens\":3980}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1f7c836c6a1cd52f4f50a50001d9249d\"},\"usage\":{\"total_tokens\":3980}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about academic fields that face shortages of qualified teachers. The evidence shows that certain disciplines consistently struggle to attract enough teaching candidates.\n\n## Fields with Teacher Shortages\n\n### STEM Fields (Science, Technology, Engineering, Mathematics)\nThere are persistent shortages of teachers in STEM disciplines. According to research from the Center for American Progress, there has been a **22 percent decline** in people completing teacher preparation programs in STEM fields (biology, chemistry, computer science, earth science, mathematics, physics, and general science) from 2012 to 2018. This shortage exists partly because individuals with these credentials often have higher-paying options in other employment sectors.\n\n**Specific STEM subjects facing shortages:**\n- **Mathematics** \u2013 described as grappling with a \"severe shortage of qualified teachers\"\n- **Physics** \u2013 at Wayne Community College, having only a single physics instructor meant they were unable to offer Astronomy for several years\n- **Computer science** \u2013 included in the declining STEM teacher preparation index\n\n### Special Education\nSpecial education consistently faces teacher shortages. The data shows a 14 percent decline in students completing preparation to become special education teachers from 2012 to 2018. States have reported shortages in special education since 1998.\n\n### English as a Second Language (ESL) / Bilingual Education\nWhile schools have long struggled to find enough bilingual teachers to meet their needs, there is some positive news: there was a **30 percent increase** in teachers preparing to teach ESL or bilingual education from 2012 to 2018. However, many states still consistently report shortages of ESL teachers.\n\n### Engineering\nAt the community college level, some institutions have very limited engineering faculty. Wayne Community College had only one full-time engineering instructor who also supported math initiatives.\n\n### Health and Physical Education (HEA/PED)\nAt some institutions, these programs have become understaffed as student demand shifted toward other general education courses.\n\n## Important Context\n\nIt's worth noting that the overall number of students completing teacher preparation programs declined by **27 percent** from 2012 to 2018. While elementary education saw an even steeper decline (29 percent), researchers suggest this may represent a \"right-sizing\" since historically more graduates were produced than needed.\n\nThe teacher shortage is also exacerbated by:\n- Many career-long teachers reaching retirement age\n- Expanding classroom sizes\n- Schools needing specialized staff for mental health, technology, and diverse learning needs\n- A mismatch between the types of education degrees earned and where vacancies actually exist\n\nSources:\n1. https://www.americanprogress.org/article/make-declining-enrollment-teacher-preparation-programs/\n2. https://mathtrack.co/rethinking-the-teacher-applicant-pool-a-guide-to-filling-math-teacher-vacancies-with-uncertified-candidates\n3. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n4. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n8. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+  "usage": {
+    "completion_tokens": 730,
+    "prompt_tokens": 4142,
+    "total_tokens": 4872,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

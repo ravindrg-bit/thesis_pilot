@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c623b247b78a686a",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T01:30:18.805035+00:00",
+  "query_text": "was there cocaine in coca-cola",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ce0953bc0071a2af902a9",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yes, the original Coca-Cola formula did contain cocaine, though it was removed over a century ago.\n\n## The History\n\nWhen Dr. John Stith Pemberton invented Coca-Cola in 1886, he included coca leaf extract as one of the key ingredients. At that time, cocaine was legal and commonly used in patent medicines and tonics. Pemberton, a Civil War veteran who had become addicted to morphine due to war injuries, was inspired by coca wines like Vin Mariani and believed in the supposed medicinal properties of cocaine.\n\nThe drink's name itself reflects these origins: \"Coca\" refers to the coca leaf (source of cocaine), and \"Cola\" refers to the kola nut (a source of caffeine).\n\n## When It Was Removed\n\nThe active cocaine was removed from the formula in **1903** (some sources say 1904). The Coca-Cola Company switched to using \"spent\" or de-cocainized coca leaves, which allowed them to maintain the flavor profile without the drug. This change came as public perception shifted and regulations tightened around cocaine use.\n\n## Today\n\nModern Coca-Cola still uses coca leaves for flavoring, but these are specially processed to remove all cocaine. The extracted cocaine is reportedly used for medical and research purposes under DEA supervision. The current formula contains only carbonated water, sugar (or high fructose corn syrup), caramel color, phosphoric acid, natural flavors, and caffeine.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://vocal.media/fyi/the-history-of-cocaine-from-coca-cola-to-toothaches\n3. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n4. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/\n5. https://arxiv.org/pdf/2602.17560\n6. https://the-soda.fandom.com/wiki/Coca-Cola's_secret_formula\n7. https://coca-cola.fandom.com/wiki/The_Coca-Cola_formula",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780277398,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 462,
+        "prompt_tokens": 8199,
+        "total_tokens": 8661,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "was there cocaine in coca-cola"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ce094841a",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"499efee36a1ce0944f50a50001d95653\"},\"usage\":{\"total_tokens\":8048}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ce094841a",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"499efee36a1ce0944f50a50001d95653\"},\"usage\":{\"total_tokens\":8048}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"499efee36a1ce0944f50a50001d95653\"},\"usage\":{\"total_tokens\":8048}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yes, the original Coca-Cola formula did contain cocaine, though it was removed over a century ago.\n\n## The History\n\nWhen Dr. John Stith Pemberton invented Coca-Cola in 1886, he included coca leaf extract as one of the key ingredients. At that time, cocaine was legal and commonly used in patent medicines and tonics. Pemberton, a Civil War veteran who had become addicted to morphine due to war injuries, was inspired by coca wines like Vin Mariani and believed in the supposed medicinal properties of cocaine.\n\nThe drink's name itself reflects these origins: \"Coca\" refers to the coca leaf (source of cocaine), and \"Cola\" refers to the kola nut (a source of caffeine).\n\n## When It Was Removed\n\nThe active cocaine was removed from the formula in **1903** (some sources say 1904). The Coca-Cola Company switched to using \"spent\" or de-cocainized coca leaves, which allowed them to maintain the flavor profile without the drug. This change came as public perception shifted and regulations tightened around cocaine use.\n\n## Today\n\nModern Coca-Cola still uses coca leaves for flavoring, but these are specially processed to remove all cocaine. The extracted cocaine is reportedly used for medical and research purposes under DEA supervision. The current formula contains only carbonated water, sugar (or high fructose corn syrup), caramel color, phosphoric acid, natural flavors, and caffeine.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://vocal.media/fyi/the-history-of-cocaine-from-coca-cola-to-toothaches\n3. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n4. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/\n5. https://arxiv.org/pdf/2602.17560\n6. https://the-soda.fandom.com/wiki/Coca-Cola's_secret_formula\n7. https://coca-cola.fandom.com/wiki/The_Coca-Cola_formula",
+  "usage": {
+    "completion_tokens": 462,
+    "prompt_tokens": 8199,
+    "total_tokens": 8661,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

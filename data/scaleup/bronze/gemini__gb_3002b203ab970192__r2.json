@@ -1,0 +1,652 @@
+{
+  "query_id": "gb_3002b203ab970192",
+  "engine": "gemini",
+  "run_index": 2,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-06T22:27:39.256315+00:00",
+  "query_text": "How do green screens work and why do they choose green or other colors",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sat, 06 Jun 2026 22:27:39 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=18304",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "The process behind \"green screens\" is officially called **chroma keying** (or color keying). It is a visual effects technique where a specific color in a video or photo is made transparent, allowing editors to insert any background they want behind the subject. \n\nThe science of how this works and the reasons behind the choice of color involve human biology, digital camera technology, and physics.\n\n---\n\n### How Green Screens Work\n\nThe process of chroma keying involves three main steps:\n\n1. **Production (Shooting):** An actor or object is filmed standing in front of a completely solid, evenly lit backdrop. The golden rule here is that **nothing the subject is wearing or holding can match the color of the screen**.\n2. **Post-Production (Keying):** Inside editing software (like Premiere, After Effects, or DaVinci Resolve), the editor uses a \"keyer\" tool to select the exact hue of the screen. The software isolates this specific color range and converts it into an alpha channel (transparency), making it act like a digital cutout.\n3. **Compositing (Layering):** The editor places the subject (now with a transparent background) on top of a new video or image layer. Since the original background color is gone, the subject seamlessly appears to be in the new environment.\n\n---\n\n### Why Green is the Standard Color\n\nWhile you can technically key out almost any solid color, **neon green** (specifically \"chroma key green\") is the absolute favorite of modern filmmakers for several reasons:\n\n#### 1. Human Skin Tones Contain No Green\nThe most important rule of keying is that the background color must not match the subject. Human skin tones\u2014regardless of race or ethnicity\u2014are entirely made up of red, pink, yellow, and brown undertones. Because green sits on the opposite side of the color spectrum, it provides the maximum contrast against human skin. This ensures the camera doesn't accidentally make an actor's face transparent.\n\n#### 2. Digital Camera Sensors Love Green\nMost modern digital video cameras use a **Bayer filter** over their image sensors to capture color. \n* This filter is designed to mimic human vision, which is highly sensitive to green light. \n* Because of this, a Bayer sensor contains **twice as many green-detecting pixels** as it does red or blue (in an RGGB pattern).\n* With double the pixel data in the green channel, digital cameras capture much sharper details, higher resolution, and less \"noise\" in green areas. This makes it incredibly easy for editing software to trace clean, sharp edges around the subject.\n\n#### 3. It Requires Less Lighting\nGreen is highly luminous (bright). It reflects a lot of light compared to darker colors like blue or red. Because of this, studios require less heavy, expensive lighting gear to illuminate a green screen evenly, making it highly efficient for low-budget productions.\n\n---\n\n### Why Other Colors (Like Blue) Are Used\n\nWhile green is the digital king, **blue screens** are still widely used. In fact, blue was the original industry standard during the physical film era because the blue emulsion layer on actual celluloid film had the finest grain. \n\nToday, filmmakers will switch to a blue screen (or occasionally magenta or red) for specific reasons:\n\n#### 1. Wardrobe and Prop Conflicts\nIf a character has green eyes, is wearing green clothes (e.g., military uniforms, Peter Pan), or needs to hold a green prop, you *must* use a blue screen to avoid the character or object turning transparent. (This is why Kermit the Frog is filmed in front of a blue screen).\n\n#### 2. Managing \"Color Spill\"\nBecause green is so bright, light bouncing off the screen can easily reflect onto the subject, a problem known as **\"color spill\"**. \n* Green spill is notorious for clinging to blonde hair, translucent fabrics, and highly reflective or metallic surfaces, which makes editing them out difficult.\n* Blue reflects less light (lower luminosity). This significantly reduces color spill, making blue screens the superior choice for actors with blonde hair, shiny costumes, or glass props.\n\n#### 3. Night and Dark Scenes\nBecause blue screens are darker and reflect less ambient light, they are perfect for compositing actors into night or dark scenes. The subtle blue cast reflecting onto the actors blends much more naturally into a dark background than a bright green glow would.",
+              "thought": null,
+              "thought_signature": "EuMfCuAfAQw51sfJ4Ui6PclRKn2LOAq2h7ZovzWwylLJw4XhgrXhHil1W_220wRDJ5XbSwhwVaAJ3HhLH-7EF6PUR409s3bbUvslc48RF6_jQs5BXnbSMwHebip7-l8ULbhuK9qS4Lb3YG3KO5tVneFcpqFTY-ykmd2Rxdckhaa9M5GTy7MZp7ExY8AV99d4kxHsRONkbY1Uaey8qe2h0TtJ5BSgbr0dSJ0z6IJ74b6EGXhcpHeoTdsYhfGm2QAW2IB1UyX0Gh0jDs2k008sHsp4lMcT7H4okQGmvpg1cMYui6UbsSfOwhLe07UHwfYNpIeHNeEsV16GtiIw0x-kPT6AB6qtzidwr2LWdQcjGMGUap88D4Dz7SW-hTtHqh0LM7XZ0WRqCqiIpYiVN9C3Fu2YYQP3B7yQtWYExE_cOnjdEpgImTXWAHIFdhZUIVWEyC88xjdGN1VLY_S5pbU4TQVe_Q0DZkLZtBCyMSVuytRgKCBxyq-heFHWUxh4J6OXli5GfzYir7tXTM6AfftvBLof9E6RW4IUy9pQC7X_FRIaFrkVo4e7V3uxyAI7wG0hdO_421QD1-cJwrGG_To6SCH9U4lUM_NrSoInjr2uaeeAiwltTzTell8eysRzrSEHZwNvcnDRBU4zKAo_vhq058tUxy3hZVfjfNgdRMkA45Ul1GJTYIVK53uPEiVx20JeD9NlvvGTtXQ0GLmMRNFYfgMnCf2oC52cVchpZBQbGAL06FKwuK6svEO3U6sW0KggR-bP-DHi2SYVhqQaGlooiO1HgmpvBfn3REO1quLS9PlnNjNiEdSjOBsUOnLRr56rHyl4Vap--QSkHXg4na2GqWCmeMXska45jH7jMAATPLO1TDjTVrsDozmazF3BsKq9S9Cb6K3vRSdGpGQ3BN9cMm9hhpasLUNPN8vZ2PVDw-UpusRBhPTlZfmwl5kkdsN7oxA0QweG0ueHZNZd58Ds_DqB7BPF230DxhUTNZYP12AP1UVglFfSUEPZpgSOG2g0W52lwcIse4BABwYb4QpjruYMAPcN_awXg2-ltjrtyza1Bw9Wl1TXZotWB-janqLk4DQqDWicvcjvDX67FJ86tdheDR1kmhEOHWXDIrBls6o6hSoxBr5pPVsgalP5mCaTY16FJRQcG6Q_SXW3ixw4rSFD_H48CAxJbE4A7QhNNbAlePQ8ak9FoMKJH0eZIfNe4f6jVyWDvY7hDUjLUoA4TqOlbV8ZL2m9xSK-HVOVfan7K51_8r2luyAZDkAC8A6LZwqFBqx6WkihJQofNXqDepaBNz_VAwvtJlYyheT6r-dbQyeSbz-B3Qphqs9tYsTlDyhJna__m4X1SanXYdrs6OLDVBAHn7pvV9uMENpKL8vc3LEA6oP2uFIYClXsSHnQICQJvmVFW21ZnWlbDWG8B7r1S0X0FoYfudBCd9mjAS0Mw9sXyvHUyM00Ums0tm7UjvQfP-xzkHiYkea0PKjBta8au7cPh5LyjC9kOMKpYpi6O1hximJ_UVdZJkEtAEX7GmP38oTb0JVeqVI_n0kaYMdA0QqDM7KY8ZsiOiyqrXWj_qVHrtjIm3yaWYtDR4pZrkWlOveoLi4CQC_lFkQ9BKXdL_m5mQabxFhWRiBsgag-vLfAqf7Sxa8ZSqpRI_zpWdww3ysYNjngp9Z5yS4Ap_GIzZEPj0rTppZbaDtr8BbzKqWXNlIc3KaLeEJvcaoRt8DCs1iYwV9f_pYYQyiZBqkz-fvumxOpJ0mHEifkw3v99YjW0zGuHrOdtw3z6-YmtC8HTBjdBQyREZ1-9eGFjpRevecT0CqRxYc8bSfWFqCqus74OOqhCQRe-XbeGrpGOEYNQx6Z9QWb-IJIUE3oLDY9LhTYexgatr_djo62YWvhdGOx4Ga42VFdih6KwtibbSZPyj58dDxxEmctijrWpj3a6EPMQYZNwWTPxn1RsVUvCqKK-lLppAXPQ5Dm2s28kzxFoX5I0I1R4Y74JxUQR6t0tCjklKxjpERTJtBUgF2IKtbtrvx7PtHz8Zn4a8CS1LRbxiLegXk5UaxLcziEXwKGEROdeWBqTrPWCMRSXGGFViXgwt33AM4bI6klq4erZXBeE_XoAWFj1pV97iEmWW-7oEL-ywIuqhQGh5nj8GEKkzzWSAKTeUaqXbuUP-jEek87o6BYDUkkND2c6DPXePZsQ6rDvXSiIYcJ9u2p41jv78b0H6liHmOYAM-ioQ9Ei0S-_a-e-bDT85kZWNMkNvrbipULl2mHIQgsrsYinMkjo-fBGkN5m1ll-w9OC5OzTAYNqvURfA5w-8mHTRGYIWR6XQ2VbY7c0zGu98Vqn7u0oIEmfFzHOGH0G__KkAuuPvkr-FQvxxR2f61U7t0KueMe_V2RNlSrcHqSPaK6x3q-p74v9SJtgtAagUIuej503WtouUWmiStRymvTaz9-110Rf2JjrE8H2oKhR8QTRMdTGsiQx5pzmGe0Kn47xWlu05UP_Uk_OvZaSkPJaADqIeiVgAeIE20t5ln5PV9HGGLaAI_CC7AS4daL5sQ7qsex78DBecQ53wNamzGR0bl-9pm0VznoVtpLIiYwZLqNl4UQXGtIVe3jSf4MrEWHUglmPHspiuZ7lHDZxbt8Ufye7_iww9QpulmLDlYHen0t48EDKI8cPQ12ugQW70s84TW_i7cYT49IFcw9Tb7W98L9OOXs5-DtYGtg4EXp0rI9LJaEtZmvh0_UgxX6LLOgCJhLHRrXb30VcglmlysM5FdVzB2MxbEL1TFK29-VNoZwz4nEFwFJ35GUq28HESA-5mvGkHEaGW6psspAdVYeExREa9Ep-kkpsSP-XX3cD9uUgH1NTrF4gK-EOKdWvafikoTBB9jDOwrkeLy4vgbj21v7SLJrZ3pyJZ_ERcu9g7gd0qMXpnQjxF9IO2QzKXPfuOOlXdZqsByzp8Bv4gYBukZ3pHWAZeS9dhIkylJOjUuRC7YoTqJqPW7md0T_n7RXvch7XqevBOSiQsIPw2vBmktiAK08ilWyMIQGo5VJnYME-EL3RNrKCgqPmzrvUArBg9WvnzZMGTT6LknaDf1b_UO7g-dFcE9bta2FyJ_xu8O84R0zvl5oAB6--CPCNUgoKOIGijmk0jD5QrrmxZodrjJC3doxCNOE8aVDk3HTFR-yunlGJJWDGryrIoKAIwkgWfhbuwZI5VNkYUCbHtZsFE1GK55Rb3Z7IEjWiOtUeXDDpHtVcfPARcKyekWZG7FDkk5kn0l3Lu6KJdqHrAy-G674FM-6uePCb2Oea9wjYIa7Xo-l6XAcPiNzg_-Cl9QA9JOrTOqShZzoYVhh48rj0KNCWrQ_36wrAAR-CQOLrf9MJ4CRoIt6GKVxlKMpt96Tujle4A-FWOrCWdmqzPR1CkmJ0pw5L6GVcYJsMUpNQI8AJ1QThAQN-Y3ZCzoaPAKSTl55DnqVcA1lDzZTGZ7gRbvrDA9UkjiFTzJesjvh4Jl1gU44rI0rvKAAvmM-5WEJcow8rc4msVAuLGBYmhRSK7nvqc60W7ZhH7tTuifjDXL_-N26Jv-bLkHXXrGx3Q1f6CjPAMteeFSR-D4tHC_xuozXV3gRL5vStH1bweuUfg8Dq2lQX0vzTkOSlgvUWFQQR9D1BnbJx0P3phzgMtVvk5hLvrOYLw-djwc9A7358KGmYJJc_p4nVjLFJ2Rvf-NTnDluKsh8m9XRPnqUx9d6PIiYch0456e_nEV-m2cIqzxVQGrjjEbYhtxTVRfFPMstk8luWkxlHkLBhto8uiQbIVgEBZ0T9rZiTwmAh9PlqnWJLAUq4rLPCw0PiYDmWXfUbCzXAdbQfKT4qrHNabiFrdcxnmw2KF2fxFOYzx8lOxqo6bqRpooUQa-tK2ZUuBX2kWj3CVuWVdkDembQgA8twsaRMKJ5_pjRq93Ml4npsUzP5ccPVky1eIRTDtFgpFNYmX-myNUehovmvRmjllHazv-UzP8lPmrAcy96lHiGa9D2L_9GzSYdNWHEGrtQSacr9rGBziji0UzPASgtwkB8JrnJ0pIOM2o_NDFYNVhvsp4Z71u_AFnGopHvJB1lXbMlDNcN5pEkolSovGGXQgj3Njz9Xnt7z_alAh-sy5ObYsAOZYffRCTQcoMfxNbWenTA7zen4CMvlVsYUyzxkl3GVtK9BnufKDb61Ct8w7LSbVEdToDPurN-TmBrC3J4aqKV-O5r882MzcwGZZkMg1ae6TAuW1d7afjsNE0WiEcgi9sbCIN_vztb9Owu5bFyXEUr0PgjwJg4m5rRwElkDZl8Qu3-GXZNWAI1yXQYtBOXsrw8lpvcV2ZEpK7ExONuuPuOCd9VYMFJiYYVRGzrZXdJUA8Ndmxxt10fZsPA0M2P6ZznB7FXBz9N615Ky_-s8vrHrKaQS9BzzWa1zffzhe9mSal9rQANSSboju8yf_cyHwaYVcJa6jCb1r8TXl1_bgLLhPWiCy_8dl9-9Qw83lIf7zr5D4Fl3beexrN3LMESDrrVvi6ohT2_q3tCtMZ_hGxs73ro8WCApcpBY4xMuHbYvIKjfOtp2Q1ePb6DkD24RbmJoWhqMw2U9PdGhWhD0MMyoq9xoxlS_1MJ7vpQrHcaNOOmjru9eGyVwh8OgdxLLCEHNvlt5T1kLMaon25esjlQINItU45XO927g6riUzHOP9NBuodsDa7JkrYRcfe1aMLtIgUyWdKFinRBL85tIi3q04hRsVvZCPx_QuFvB_HWpWLb7X5TsEp1gHNWpAopZ4MsojRtxv8sUXRkv9x1j4rqu3Xy9O_Vd9axraEt76AgmW9XwYSjfTEbg2i-CAR5s9VUWFrWUL-ta73hmDGtjaqhVKXZCY3rfPQAmU5XEpQXbkx6YpWlDaQubmwz_2n1-CH6Kf_XpZfGFmPXS3PxoLIdYHsnXWe0t5AZwHgUO_01sj5a3ibxLqTlXL_SKCv98b8JzTDjHYrl2IHB0X11qXVimj21-IbCoZydAv4zq59xScxcIceADAqWjFEkachRlVg7hnLfkfugW4mM4MUiFIZIhjbRObivbogsFJZD5pivStpROz3wtflewZJ_3x82-z17R_EGBRzm17dC0JYVR16F-OEqKXd7MAvIeOrV-Wa_QAnJP5j1V6G6ww5dlct30aqLhSY7CejVMrn6zKquwS6qFkyuoq5FNI93joqQVtDSJfdon0pce1y1CNAi-bEPPT_6RH-9OtAGhaZUnsqA6oEa6gWO2gisnP54RTDMskMYxvmZoU4KVo6l7ZXwju2kuOmoNyVG59FK2u1gK5bRCcB9Qhj8UrKmonRmrCBBQ_FkoPP2LBhiE4u6KSGwsYsfWqo8rVvHeG0N_YASUjiKMyTwW5EahqwT4VXYRqk9tfmwTbWs5-KE8X3u7e7SPGm7s5e_YUqkhjFMTcQ=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "borisfx.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpT0o2VOlk82z_mWXhPu5r4-ZQ3J-zwROyqOPbP5eVK6el0N2s-4VzyR1Kav524TsWzaWzbySP-KAy6YwDQBPstz1jt1ugWzX3BoV0hDoHCNWnsU7_qqRi5P0HVvUJwZIqz8lzIn5x8Y4y2I-mRdksn2Yhf42tnqTXkP0="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjwb2G7lt4J1l1xvH72WihUBkxWPPdx4tGNxN0IxyX6mcBGME1hbRLZEfg-8PlUIdhtwouzFP-RMgG9mN6-dtpSo4EwksHMif3s7eFfollK9fFEYVCJcnZLU2NGOg="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "gerriets.us",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyaCiu6Twp5QbJKhHzDblrLZ8DKtEk15OKroBS7rDaxhziR9ikxGKu2a9LlSP_Jjep0QA1tRCWxjToJBCQgC8SChtrEwMJ818arENyKbXQi8jWSsHrdlCxQzOBXUEewNkvy9TqaClc9fFczKLoQwmeXmoux8ioK0WoCMaXsQBKtY_gHEy2ZQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7VsmmKD92BnPhaa6C-i5lwBNQCD_C3i3t6q84GJBGEhzHsoEiPfQtiA1-2KPoOhmNCa3u2ehHg5yhgfvghU3rhrJc7jGizLtdvFzOTz0Op-ZQ_BuK3NwcBXTX1RXWxA=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfOO9ykrZV_vqkdPw4pg7sGhZAqDhn_6AjlXGOouAEY3GQ0_rBAFcsMPMiPMEENql03fCaPbfwvPB2rUYXMRQ8qyZnwM1S1Z3-pnN2aWXHNE6dsmuhUD_wcawRrGRb7A=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "tomkeller.net",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcwLbJ3DsOsNNV7nxMoUn-4ZjTrxHkGqMJ_GFcqS-W4uJ4vFdypQ5MJ8Ha7JF4sjR-d-cqeZXvmS5I6DTLkIhqULcLLEK_dOG7txEerB6zLr0BD6l3wlfp71pphbHCLHmNzyZ4GIt_wgC9GFFZIgw="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "spotlightfx.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1rD4Isv2Ztqwhftzf0dt5GNf4H93F6_AzItt7UkTSVPJ00W0C2O18phhHAEgpnot5Ws7PYiO-H68qJeqn449r6ztQAmE4CqxmdvY26JXJ29VeLIl9oRfjURXEA589kt4JyiXEXfVU0GYIMtJes6xL1WCfdp3kYfVvGe-4lN0JY9f6lmxBBLN_l5EgAQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "red.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_ofVx5wQb0MVcgemBdNAIuS4_TWhe7OknpXZgcb5WZfTYmINBw1TLCJE61ZQ-rRRtNxl13tbAXcLFSpA1jF7C3dsXxhknSA17b6tfA8Zjm4bGZIUbx7Gi8woowp8osTBr4wz4Kyg="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "connorwhitemedia.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSRoC5Ms0Eibit5n58Rb7aZrXByPFD-S9vG5UEw1aN5rkFWl35r31oiNK3bsqHRbR3JVmvO17vWRmOWDvtgysgugT-Q-LrtLm_QKT2xRPEa1hDdb46vQkc2OHzQJEwQZ4Eg7pR-LRkyJXF2TfwdCIZHmDyH6qAicmO8dN9B2LASJAiEatG_Gf7cM8HvYa5buL7erni0dr1La1GLY-Yf4HYv4wsTP0="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "masterclass.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-GKjdX0J7oWoins76qjqTvoWR7jUMzgfy6vU-s7fnOOJaivewiaG1QeOznI6tkifS-2Y0KgygYFELw34q3N3C96cT-2S3GTOETLKBWZFb_TlXJSOHmaNvGEDTRq9LZg8UxP19u5ZOQ4h1trcUlfNuMczwALs="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0gpYlIlJ-Zo3BbdPKclr77BE9CKFmMs8kBBC3EvZTj1Ga3yCenzBJbaPpeQFDzVsXYEYALtyh4QziXJt0t6Ed72WZ0-rq2BslPrNE8OQVknCoE4wwaQmsB5raRHK40z1nxqeD2ycOC9xat8NmUjAgw8_F8XINLZdEOsZszvgQrrktbJUX9twZFVjAYlUo1tM3i6JKrb73KFbVC95iMSo="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "broadley.tv",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlhcV7r417bmfOEQ7OKUT6eYFK5ilzZ5uhZFs5dwancXjMXVlMXCoOXKYdoR-S7akOEOdT14Tb6IQnnmV-GW-oFfxS0fW4EnUsjHNJPVMpcebOy5HYQrWd207eBtW1iAm0sKs0OFyBJWo="
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                1
+              ],
+              "segment": {
+                "start_index": null,
+                "end_index": 91,
+                "part_index": null,
+                "text": "The process behind \"green screens\" is officially called **chroma keying** (or color keying)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 93,
+                "end_index": 260,
+                "part_index": null,
+                "text": "It is a visual effects technique where a specific color in a video or photo is made transparent, allowing editors to insert any background they want behind the subject"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 494,
+                "end_index": 610,
+                "part_index": null,
+                "text": "**Production (Shooting):** An actor or object is filmed standing in front of a completely solid, evenly lit backdrop"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 612,
+                "end_index": 720,
+                "part_index": null,
+                "text": "The golden rule here is that **nothing the subject is wearing or holding can match the color of the screen**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3,
+                0
+              ],
+              "segment": {
+                "start_index": 725,
+                "end_index": 899,
+                "part_index": null,
+                "text": "**Post-Production (Keying):** Inside editing software (like Premiere, After Effects, or DaVinci Resolve), the editor uses a \"keyer\" tool to select the exact hue of the screen"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 901,
+                "end_index": 1038,
+                "part_index": null,
+                "text": "The software isolates this specific color range and converts it into an alpha channel (transparency), making it act like a digital cutout"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 1043,
+                "end_index": 1173,
+                "part_index": null,
+                "text": "**Compositing (Layering):** The editor places the subject (now with a transparent background) on top of a new video or image layer"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 1175,
+                "end_index": 1279,
+                "part_index": null,
+                "text": "Since the original background color is gone, the subject seamlessly appears to be in the new environment"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2,
+                1
+              ],
+              "segment": {
+                "start_index": 1324,
+                "end_index": 1380,
+                "part_index": null,
+                "text": "While you can technically key out almost any solid color"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 1324,
+                "end_index": 1496,
+                "part_index": null,
+                "text": "While you can technically key out almost any solid color, **neon green** (specifically \"chroma key green\") is the absolute favorite of modern filmmakers for several reasons"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 1632,
+                "end_index": 1748,
+                "part_index": null,
+                "text": "Human skin tones\u2014regardless of race or ethnicity\u2014are entirely made up of red, pink, yellow, and brown undertones"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 1750,
+                "end_index": 1864,
+                "part_index": null,
+                "text": "Because green sits on the opposite side of the color spectrum, it provides the maximum contrast against human skin"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 1866,
+                "end_index": 1943,
+                "part_index": null,
+                "text": "This ensures the camera doesn't accidentally make an actor's face transparent"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4,
+                5
+              ],
+              "segment": {
+                "start_index": 1954,
+                "end_index": 2086,
+                "part_index": null,
+                "text": "Digital Camera Sensors Love Green\nMost modern digital video cameras use a **Bayer filter** over their image sensors to capture color"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6,
+                7
+              ],
+              "segment": {
+                "start_index": 2089,
+                "end_index": 2178,
+                "part_index": null,
+                "text": "* This filter is designed to mimic human vision, which is highly sensitive to green light"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                4
+              ],
+              "segment": {
+                "start_index": 2181,
+                "end_index": 2308,
+                "part_index": null,
+                "text": "* Because of this, a Bayer sensor contains **twice as many green-detecting pixels** as it does red or blue (in an RGGB pattern)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6
+              ],
+              "segment": {
+                "start_index": 2310,
+                "end_index": 2457,
+                "part_index": null,
+                "text": "* With double the pixel data in the green channel, digital cameras capture much sharper details, higher resolution, and less \"noise\" in green areas"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6
+              ],
+              "segment": {
+                "start_index": 2459,
+                "end_index": 2556,
+                "part_index": null,
+                "text": "This makes it incredibly easy for editing software to trace clean, sharp edges around the subject"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 2567,
+                "end_index": 2626,
+                "part_index": null,
+                "text": "It Requires Less Lighting\nGreen is highly luminous (bright)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6,
+                9
+              ],
+              "segment": {
+                "start_index": 2628,
+                "end_index": 2697,
+                "part_index": null,
+                "text": "It reflects a lot of light compared to darker colors like blue or red"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 2699,
+                "end_index": 2858,
+                "part_index": null,
+                "text": "Because of this, studios require less heavy, expensive lighting gear to illuminate a green screen evenly, making it highly efficient for low-budget productions"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 2909,
+                "end_index": 2980,
+                "part_index": null,
+                "text": "While green is the digital king, **blue screens** are still widely used"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                10
+              ],
+              "segment": {
+                "start_index": 2982,
+                "end_index": 3137,
+                "part_index": null,
+                "text": "In fact, blue was the original industry standard during the physical film era because the blue emulsion layer on actual celluloid film had the finest grain"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 3252,
+                "end_index": 3486,
+                "part_index": null,
+                "text": "Wardrobe and Prop Conflicts\nIf a character has green eyes, is wearing green clothes (e.g., military uniforms, Peter Pan), or needs to hold a green prop, you *must* use a blue screen to avoid the character or object turning transparent"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                11,
+                9
+              ],
+              "segment": {
+                "start_index": 3564,
+                "end_index": 3718,
+                "part_index": null,
+                "text": "Managing \"Color Spill\"\nBecause green is so bright, light bouncing off the screen can easily reflect onto the subject, a problem known as **\"color spill\"**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 3721,
+                "end_index": 3880,
+                "part_index": null,
+                "text": "* Green spill is notorious for clinging to blonde hair, translucent fabrics, and highly reflective or metallic surfaces, which makes editing them out difficult"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 3882,
+                "end_index": 3927,
+                "part_index": null,
+                "text": "* Blue reflects less light (lower luminosity)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9
+              ],
+              "segment": {
+                "start_index": 3929,
+                "end_index": 4068,
+                "part_index": null,
+                "text": "This significantly reduces color spill, making blue screens the superior choice for actors with blonde hair, shiny costumes, or glass props"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3,
+                9
+              ],
+              "segment": {
+                "start_index": 4079,
+                "end_index": 4230,
+                "part_index": null,
+                "text": "Night and Dark Scenes\nBecause blue screens are darker and reflect less ambient light, they are perfect for compositing actors into night or dark scenes"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3,
+                9
+              ],
+              "segment": {
+                "start_index": 4232,
+                "end_index": 4360,
+                "part_index": null,
+                "text": "The subtle blue cast reflecting onto the actors blends much more naturally into a dark background than a bright green glow would"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=chroma+key+green+vs+blue+screen+spill+bayer+filter&client=app-vertex-grounding&safesearch=active\">chroma key green vs blue screen spill bayer filter</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=why+green+screen+bayer+filter+digital+camera&client=app-vertex-grounding&safesearch=active\">why green screen bayer filter digital camera</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "chroma key green vs blue screen spill bayer filter",
+            "why green screen bayer filter digital camera"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "yZ4kaoOnAp_NjrEPjanxmQM",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1182,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 15,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 15
+        }
+      ],
+      "thoughts_token_count": 1736,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2933,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "The process behind \"green screens\" is officially called **chroma keying** (or color keying). It is a visual effects technique where a specific color in a video or photo is made transparent, allowing editors to insert any background they want behind the subject. \n\nThe science of how this works and the reasons behind the choice of color involve human biology, digital camera technology, and physics.\n\n---\n\n### How Green Screens Work\n\nThe process of chroma keying involves three main steps:\n\n1. **Production (Shooting):** An actor or object is filmed standing in front of a completely solid, evenly lit backdrop. The golden rule here is that **nothing the subject is wearing or holding can match the color of the screen**.\n2. **Post-Production (Keying):** Inside editing software (like Premiere, After Effects, or DaVinci Resolve), the editor uses a \"keyer\" tool to select the exact hue of the screen. The software isolates this specific color range and converts it into an alpha channel (transparency), making it act like a digital cutout.\n3. **Compositing (Layering):** The editor places the subject (now with a transparent background) on top of a new video or image layer. Since the original background color is gone, the subject seamlessly appears to be in the new environment.\n\n---\n\n### Why Green is the Standard Color\n\nWhile you can technically key out almost any solid color, **neon green** (specifically \"chroma key green\") is the absolute favorite of modern filmmakers for several reasons:\n\n#### 1. Human Skin Tones Contain No Green\nThe most important rule of keying is that the background color must not match the subject. Human skin tones\u2014regardless of race or ethnicity\u2014are entirely made up of red, pink, yellow, and brown undertones. Because green sits on the opposite side of the color spectrum, it provides the maximum contrast against human skin. This ensures the camera doesn't accidentally make an actor's face transparent.\n\n#### 2. Digital Camera Sensors Love Green\nMost modern digital video cameras use a **Bayer filter** over their image sensors to capture color. \n* This filter is designed to mimic human vision, which is highly sensitive to green light. \n* Because of this, a Bayer sensor contains **twice as many green-detecting pixels** as it does red or blue (in an RGGB pattern).\n* With double the pixel data in the green channel, digital cameras capture much sharper details, higher resolution, and less \"noise\" in green areas. This makes it incredibly easy for editing software to trace clean, sharp edges around the subject.\n\n#### 3. It Requires Less Lighting\nGreen is highly luminous (bright). It reflects a lot of light compared to darker colors like blue or red. Because of this, studios require less heavy, expensive lighting gear to illuminate a green screen evenly, making it highly efficient for low-budget productions.\n\n---\n\n### Why Other Colors (Like Blue) Are Used\n\nWhile green is the digital king, **blue screens** are still widely used. In fact, blue was the original industry standard during the physical film era because the blue emulsion layer on actual celluloid film had the finest grain. \n\nToday, filmmakers will switch to a blue screen (or occasionally magenta or red) for specific reasons:\n\n#### 1. Wardrobe and Prop Conflicts\nIf a character has green eyes, is wearing green clothes (e.g., military uniforms, Peter Pan), or needs to hold a green prop, you *must* use a blue screen to avoid the character or object turning transparent. (This is why Kermit the Frog is filmed in front of a blue screen).\n\n#### 2. Managing \"Color Spill\"\nBecause green is so bright, light bouncing off the screen can easily reflect onto the subject, a problem known as **\"color spill\"**. \n* Green spill is notorious for clinging to blonde hair, translucent fabrics, and highly reflective or metallic surfaces, which makes editing them out difficult.\n* Blue reflects less light (lower luminosity). This significantly reduces color spill, making blue screens the superior choice for actors with blonde hair, shiny costumes, or glass props.\n\n#### 3. Night and Dark Scenes\nBecause blue screens are darker and reflect less ambient light, they are perfect for compositing actors into night or dark scenes. The subtle blue cast reflecting onto the actors blends much more naturally into a dark background than a bright green glow would.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1182,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 15,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 15
+      }
+    ],
+    "thoughts_token_count": 1736,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2933,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

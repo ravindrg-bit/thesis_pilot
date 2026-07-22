@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_bb365aa4d917e369",
+  "engine": "gemini",
+  "run_index": 2,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T11:27:10.989853+00:00",
+  "query_text": "how is bios installed on a motherboard?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 11:27:10 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=13240",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "When we talk about how BIOS (or its modern successor, **UEFI**) is \"installed\" on a motherboard, we have to look at it from two different perspectives: **how the manufacturer installs it at the factory (hardware level)** and **how a user updates or reinstalls it (software/firmware level)**. \n\nHere is a breakdown of how BIOS is installed in both scenarios.\n\n---\n\n### Part 1: How the Manufacturer Installs BIOS (The Factory Level)\n\nAt the hardware level, BIOS is not installed on a hard drive or SSD. Instead, it is written onto a dedicated microchip on the motherboard called the **EEPROM** (Electrically Erasable Programmable Read-Only Memory) or, more modernly, an **SPI Flash Memory chip** (typically an 8-pin or 16-pin chip).\n\nManufacturers install the BIOS onto this chip using one of two methods:\n\n#### 1. Pre-Programming (Before Soldering)\nBefore the motherboard is even assembled, the blank flash memory chips are placed into high-speed industrial **IC programmers**. \n* The machine loads the raw BIOS binary file (`.bin` or `.rom`) onto hundreds of chips at once.\n* Once programmed, robotic arms solder these pre-loaded chips directly onto the motherboard's circuit board (PCB).\n\n#### 2. In-Circuit Serial Programming (ICSP) (After Soldering)\nSometimes, the motherboard is fully assembled with a blank flash chip first. \n* To install the BIOS, the manufacturer connects a programming probe to a set of tiny pin-pads on the motherboard (often labeled **JSPI1** or similar).\n* An external computer pumps the BIOS firmware directly into the soldered chip through this interface. This method is also used to load the very first \"bootloader\" or testing software during quality control.\n\n---\n\n### Part 2: How a User Installs/Updates BIOS (The Consumer Level)\n\nIf you are building a PC or upgrading your CPU, you might need to \"install\" a new version of the BIOS. This process is called **flashing**. Because the BIOS chip is rewriteable, you can overwrite the existing BIOS with a newer version.\n\nThere are three main ways a user can do this:\n\n#### Method 1: Motherboard BIOS Flash Utility (The Safest Way)\nMost modern motherboards have a built-in flashing utility inside the BIOS menu itself (e.g., ASUS EZ Flash, Gigabyte Q-Flash, MSI M-Flash).\n1. **Download:** You go to the motherboard manufacturer\u2019s website, find your exact motherboard model, and download the latest BIOS file.\n2. **Format:** You put that file onto a USB flash drive (which must be formatted to **FAT32**).\n3. **Flash:** You restart your PC, enter the BIOS menu (usually by pressing `Delete` or `F2` during startup), open the flash utility, select the file on your USB drive, and let the system write the new BIOS over the old one.\n\n#### Method 2: USB BIOS Flashback (For Unbootable PCs)\nIf you install a brand-new CPU that the motherboard doesn't recognize yet, the PC won't even boot into the BIOS menu. Many mid-to-high-end motherboards have a feature called **BIOS Flashback** to solve this.\n1. Download the BIOS file, rename it according to the manufacturer\u2019s instructions, and save it to a FAT32 USB drive.\n2. Plug the USB drive into a specifically marked USB port on the back of the motherboard.\n3. With the power supply turned on (but the PC turned **off**), press the physical **BIOS Flashback button** on the back of the motherboard.\n4. An onboard dedicated microchip will read the USB and install the BIOS to the main chip without needing a CPU, RAM, or graphics card installed.\n\n#### Method 3: Windows-Based Installers (Not Recommended)\nSome manufacturers offer Windows applications (like ASUS Armoury Crate or MSI Center) that allow you to update the BIOS from inside the operating system.\n* **How it works:** The software downloads the update, prepares the system, and prompts a reboot to apply the write process.\n* *Why it is risky:* If Windows crashes, encounters a blue screen, or hangs during the preparation phase, it can permanently corrupt the BIOS chip. \n\n---\n\n### Part 3: What if the BIOS Chip is Physically Broken or Corrupted? (Hardware Repair)\n\nIf a BIOS update fails (e.g., the power goes out mid-update), the chip becomes \"bricked\" (unbootable). To \"reinstall\" BIOS on a bricked board, hardware enthusiasts or repair shops do one of the following:\n\n1. **Using a CH341A Programmer:** A technician clips a specialized test clip (a SOIC8 clip) directly onto the motherboard's BIOS chip, plugs the clip into a USB programmer attached to a second, working computer, and manually forces the BIOS file onto the chip.\n2. **Desoldering/Replacing:** On some boards, the chip is desoldered using a hot-air rework station, and a brand-new, pre-programmed BIOS chip bought online is soldered back in its place. (On very old motherboards, these chips were socketed, meaning you could simply pull the old chip out with tweezers and pop a new one in).",
+              "thought": null,
+              "thought_signature": "EpUgCpIgAQw51seq4Ye499OyLtV2V5SYp_jkK6Fcv-pqyZHKY1jbXR3c4FlH0ER_7UCFmH5bUaHFXfX1xHuxoA_utBWoeXGHdm1vyNMyRHxjOPv0jSp2m_KBiDaLJqiMq7E8B1YVIvyJn0eHz7qTHgmm41-WG7Is4Tr1LeQqLdsKXz2AxYXH8t0djhHQm2kDcsF6m0UZZc-LE-u1VE03K5uhjHguLIdC9EcDVZQy-EgllSy2hLebor-mDi-f8Or9Wccvo4ot_lxrff1t-Rs35gWaeShg1P56c1P1JRMKihBX0IVfSPSiYi8k46FyLCFeI4OtTRP2xOpPPoCbWNijvuohHtuJjZdFVwfT41N_jQe-7E59g22yfVXCWcf0cnWHP0Y9cDRVyheE6SZ7hrPa4_AvaI3hohhZkpn3iLYUdZ3RqiHbPQ0_IzIYKtiVVs8CxHRA89FFqpwLog6Rh1-vQvzGFzTD_L0PNlv_qGxRj_yNKazUCA5lJ5r8iN_nIE8bnQhZCJAY7Eqnj9jEw-GeTtXidyMWlm89xbLtFro8pklrzDzn4NC7s7jNNFkYk5LlgDCuhGpc1KcWjyxJlF6AG2Qy-kcMesYion5fJYlIO3Us3Q28ASVLiOLOGpkypH4hQuYSg8Fu5tIQvEy79RgK81MM-nYrLL6a17me1dDSdP4QPP2E6i982QqwvG_ygNjCf-CsorvspS962p7v3ASOiBOSyyk1QraJlUqgruGjTvS4mBRJb6HC3cy9Mxo1okutYGndZ0v0pqzFG_KA7LfDlmcE0P948M5uVqy_iKxog08O6AufXJNotTE8g8ZV9cAzqNdYoulZppmnbQPryXzEwQ_1_W3R9bWdgPylkzoz3ksf_ZH6EXXtogdwmC6Ah125K6IoFnBOIG9J2fzQJLU4jSa2QrciVyNQHDaQowMf87ZmDqFQacO-LkbJrp8nCvZzPfDCoGldOtYGWicYNM0z3iOKPyPyiBZvmr4S72OYZcN9e7JGfLYJAjsbO1vxYO7R3AuOZTnD1Zseexbb5x5RMu31V5Gj3258gxBUTZaDR4BabSAcGac_JKI5_TBJpv7UgMIDkL6xyXSSMH6xkumSMkIZjonDkn1Ae-yC2nllZp1dzkkfzo72G8FT2PVeBKWpox55-oRN2qPNp8q3cwpGDLChkCOxLP-6-9Q8x8ZxMhhonrz-C1nDwD-RslFCysHw8H8MD-bTDuu2Ztnn7dz91Dz7Ri2nQpTRAIbUnhKYlew59jTQcWw-4c04Ahe2JK4Y08ofLTwwCC3Ze3SdAxi6zWkYX9CCHgyeJ7F5BJyWZuxLdz5BYH2hBE4OXVKPdnY2yIVO9Qld_2e7tb4LUWO61VpMAS3s8VOxJAFSquogl3ElrIGmQhC1GvfDLNn5irg97y1LhgIaaHmDveO9Jg-J0cM793wtE0m-Kbxi-GBlzUrK8zpma8a5eODWkFuKOwAreII7aokKslJK9CVrRMoNfzzD_gZHdubWp2Mabd26LDd81-AhPUxdT1debsf6WOznrsV9cPyA90Gdp5EDVKSCxdSkTfSgd4PqrjNFF7XYDs_k8v41XarYuvEDs5uOz0Gs26UQz-4UyUoIYKBq1hZgkIOudxBlayYthjSx8QXXoNBvdpMiiD4V93jG3ihkxyt_A2jjFEzSAdRDuwqZDlfxRZyLnnyJc6HnGzYJQvXRZ5LWcZH95CWMCxF2LV7rBOxFq6mGb6TO14_iyS3BzbEXb9iirPlOVDlZRvAPk5IUUdP2EFQPbAASK-bX1O-JGYQOpOFtd4goqs6XeYqTDKAPHPGQY4lteAFiOGaKgie-nAYO6lYU99sudRCXzWLN8YRYvJvTCznSdekH5T_CdnK-LqwqtwsZJARRpF-jn54Miq4pw61qRNgYPr93g7YTORmPFd4fTYmkFoH40RoFu5pXvUnYUv_vR2UOcDuFD3BF7JwJ0SW6JWGW0rsIvHF90m6Pc9HEorSDhKLyWUH8q08oHCbMb53_850XG60PrM6dq-65tyUNFpUvz_7-sPT_xCKxGcgQlqZ22GcviZSF7rhEuaKlRM8e0n15XTD7ifrOMCL0sJh0Tlboa8aw46zOk-M1syJlOlwYZmXE4zskrYSABJeZHL2tWJKBf0ruDeLdpq8Zeg8WN2z4uLHvCg25uyM2S4DKwpnOuB9FS56GnKLlsHxDCWwrmrx_1nBE-1Y6p_zcHRHu1qUtZ1H-MtR5vT7niK5JccBmP5Esl351nV_jiBYCRJp8SnMUcIw9lxZ8uZJQwSi5OkwwsgipNGLRVao55o6wDptc6jlBgMXPmaOOeqDnA2UI31wN9yXhD_6ZR_9H67xHU4tf_cM4wpBOw2jP_8XC69vddc-Th12yWVgd2usKLJQS2VRiXCjV4RBsb8wjv75NOh23W5WRhA0zhJk0Jez5uFlAJyzhlU2cbVkTtsy6j7MIwQAFbrvq2VAUgu1UOVB-oWALAm17Ho0Zdgm0_81eIgH-s6ir97nPQYW98qZ_4Yd4c2MrLPFbDlvk8mPxv-e1XQTACAkKJGJ_NN4i6AmOKjMZv57u8pX6tgsJNgKucd_lg7ObcD2FOkucQ2kTfn0TsXPnDYjS8iYGbg8QMZZeSvv1oMIv-eTWSbx9NhF2YFbQv2sTcstx4w1MCpcAA2MubojDq59UarLHYqdKU7OPug8n_ghJ-Ri12NIJkpIcZrwWBiI7hTOsR4tVhG5TeP9uyFxc628vFfLgXXWq0gMiG69PsOnA86p5A4GsUfXKgzt09J8Qp_uihfdRMrx9Px5pzcMrlBTbvkzdYhuWJ7QsTnEo_dh-cDMH03xV_ZMY323Z_VIYyX3URZsYZSXEdXpaWoyhUR5jKMnNNM-ai4MjGGxQ9BnfagDbKcbSL3TZs1v6ubnUV80dulM7Sw1K9qjQ8Aq4xtGG_DhkYlIrKID24P0NjWD4oSXkBTAJl3nIyiR2PAjMMyi1ssUP3f176RfvI85rMXGDIdP_WUFtQrnXvUbyVs-RcChmyLrIjAi3Jmo1De2Yx-shapoAxcZrkyzz_kjU438dNikH2YN0XZa8Cw8gVGb827MbW7hKrXm3UYHlnhTHjkSvcYhzC2HMzKontWRhyItCJkogTA2KZbq64wn9vj532bKmSztPS5S77A2sO7CmNaJWnAQbS1vrozXHkroISn2J_kg620nIjnj-x-4Lfjc0ZYcaofokGGLOY9w0hgTl3xN9rMKrzPRhw2mfN2YU8RDRUbrfnMU_HpBNOTdQVvc-28RUtDxH7lA7mJt1b9bgS83-4FbnLXfmPkt63a_jROj5_3E6gzbwnWWmAdYFwNL68NDXzUa-bpuFWNSxlVCCVPXacB9OpFKTR48I4tINx-AxVdHu7-cV0CEiepwLEWl1-82UbDXxWvWYYNhZAE7Uf5Mou43GBM6YAN3yk1nAk8GLj6dhjyAC0gYf2x9p__AMm6Q9vETeJ37Ha-n4J6i283EWZIYA6-mOA1k2UnEpUuj1yBOF8RkEXl47CRdVUm0AyRFEhNejnZ34UJfjTA8-yDac4E0ODX_VstXa0l2TrDcTzuj_gvUvLEs1m3MRdt7nddGKc2hu7gxLsW6wCb2z9IRNjLWWz1vqa95DNM4xulUNB1GXLULbQMDsU6sLi6Nwer7M75SYb4TK-1rJl0Rc5zdFoEui1pjF-vJW-uygmBS0-vHVZxKCjb32FBMV4AgHQpbV6cZmqlC3rV1srSA5fl2rbTxuuVcmgufWhUQqHecn5-fBylj_uB05lU9eN56J5enJdSbr9FEpU7Tjv_xeqtwkid_Ob1G0Xw7rMdGmwrLaM-4E3BDQcAm1Miaw-UtSHgbb2EapcxxpRufdwFDxRibX72RdnPehdrSEamTgS24rM-eAPamy522wP1YJzaEiYxK--wa27-ofEgSp6Mu4APu13-WS4aNmNPaNo4sy8W46QI8jDs2JazIrhEtpAdgY8132d9qN27DyvjUxUalNcDvt_LJOh3mWKbTaDi2cCf3pJxQgEm9Qi6vnV8--dPOgd0bnhqWJ27CLsqTxxvDBd0uSV9Qe6OM6_mdHWgYri2s3D09kDKVP8QE7zUa7V40j05RQIRNRnNTgT0MPbsO0JhWUI55K5Mv_VIJR8RMRGAMu9yL5oNAQkTOJzMFAQKrDK_aR7NcRiWf6uJiu8WAbYb-1GYizcdbisTFgEergOAgngw3Pya_4ZkY1fvP4N_yxKiU8r_Mf3Kb6VJPngQjmA0BRq70pl1G4upaSLkIO3ZLyj80AkouJGL3pqCo9BLTMsewr8_K4uMCPLzzNVyR59I6RffKqGwFybFSWLcCHWxiA_yeYyQwxj239qhigREBeTyhBqODRdRAikZy0gMKtgsAJpcuxgMCIrcC5q8nfQLg-ZGLHVHqrUY9Jxm-09l2xLh_opfQ4dsnIv6BXADiyapS5diKoD17uT8ylpmXB3aoIm0yw_LXV89vSfVfTsgjZSkxKZNLjwDTKx_VDbhwbbo2eP4g5XN6LcTT9SdpsrcbpYk1qBzd93QWjktXDZ0Me89PMmezzt5DSW9TMGJbWwgKHQw-rwnMWonu3SprcGGcICbNvEwd-eQMxJdsohLo7Md3wUa-A-7AvWaKe_rsVp-_xd_vMGejnFeod5Dm7J70ukCfwueleZkj4mLTI3bb5HWxd856IzrFMRAADm4ju5U80pCNdxAx4I_7NOeaU-eV6dh56jjthC8A8o4WVFyCCMgLArcUuCZA3bRpdcaUne0DNAbPCOsbAnFC79KupTVJFvGorXUobbOEIYFr-CSgGooNaHZyND2q3HrHS3sv4lgPZuxhRFe4b7-Oj1OCv0BP6x_4Lk2M1h7LH66DsxJPYfZ8YS9f__QXmsEznFCaSoQX9cRCVxIoP8suCp0carbXo8pxS5KLuI624a4x6crVSh76kX0FPwNOpJY10c2jSEMusFpRe6-j2fY4Yb_ZqzvPUxFFwwPEjxyDbqrpe_XYYP2-TOER6iO0QJSRlC6ZTgUuJhpflH3g9UpUK5lnExZ9-Snm5StuqURoSDOV9i1LKTN2KlH3v5-hP0SkwA4F6L7JGIR1V--j0TcLTNl2Z6bWoanRceCP4aDciGh-FC4KW2DmhFYjg3Bb6Wmyh-YjrsDvUIarVm0uFXYi1a00wCFd2UNhPzFh2AG9Qrwl_OVQYoNPpA36Q5cVqour8sYDF9kGE08a2FIfxDK1JFYm2mclqobfu2on3ZK4FJQDJN38E1kceGfB0MAR-Xp0dOTkhccxDWoHE2DgznxBjD7HXtosQW68WAiy3rsjz7KK9e-ENe_XXmwbQto7DBsAK0mqpn6FFXD357OKMnVYopw-8bWZsWgpNkm9iFAhMXGpcn9O6ZX314fK803gqA53Cp6XSzLb6CeYaQKd4sxv2KWAS6zysJYjls34okWkYMPtg6OXutd7grQj2Jb_AP0bdCQ1fXwXrmrDtM0ZkvHGLqkUxAA==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "Aacmav-kMd-6xN8P0KHY2AQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1146,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 9,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 9
+        }
+      ],
+      "thoughts_token_count": 1004,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2159,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "When we talk about how BIOS (or its modern successor, **UEFI**) is \"installed\" on a motherboard, we have to look at it from two different perspectives: **how the manufacturer installs it at the factory (hardware level)** and **how a user updates or reinstalls it (software/firmware level)**. \n\nHere is a breakdown of how BIOS is installed in both scenarios.\n\n---\n\n### Part 1: How the Manufacturer Installs BIOS (The Factory Level)\n\nAt the hardware level, BIOS is not installed on a hard drive or SSD. Instead, it is written onto a dedicated microchip on the motherboard called the **EEPROM** (Electrically Erasable Programmable Read-Only Memory) or, more modernly, an **SPI Flash Memory chip** (typically an 8-pin or 16-pin chip).\n\nManufacturers install the BIOS onto this chip using one of two methods:\n\n#### 1. Pre-Programming (Before Soldering)\nBefore the motherboard is even assembled, the blank flash memory chips are placed into high-speed industrial **IC programmers**. \n* The machine loads the raw BIOS binary file (`.bin` or `.rom`) onto hundreds of chips at once.\n* Once programmed, robotic arms solder these pre-loaded chips directly onto the motherboard's circuit board (PCB).\n\n#### 2. In-Circuit Serial Programming (ICSP) (After Soldering)\nSometimes, the motherboard is fully assembled with a blank flash chip first. \n* To install the BIOS, the manufacturer connects a programming probe to a set of tiny pin-pads on the motherboard (often labeled **JSPI1** or similar).\n* An external computer pumps the BIOS firmware directly into the soldered chip through this interface. This method is also used to load the very first \"bootloader\" or testing software during quality control.\n\n---\n\n### Part 2: How a User Installs/Updates BIOS (The Consumer Level)\n\nIf you are building a PC or upgrading your CPU, you might need to \"install\" a new version of the BIOS. This process is called **flashing**. Because the BIOS chip is rewriteable, you can overwrite the existing BIOS with a newer version.\n\nThere are three main ways a user can do this:\n\n#### Method 1: Motherboard BIOS Flash Utility (The Safest Way)\nMost modern motherboards have a built-in flashing utility inside the BIOS menu itself (e.g., ASUS EZ Flash, Gigabyte Q-Flash, MSI M-Flash).\n1. **Download:** You go to the motherboard manufacturer\u2019s website, find your exact motherboard model, and download the latest BIOS file.\n2. **Format:** You put that file onto a USB flash drive (which must be formatted to **FAT32**).\n3. **Flash:** You restart your PC, enter the BIOS menu (usually by pressing `Delete` or `F2` during startup), open the flash utility, select the file on your USB drive, and let the system write the new BIOS over the old one.\n\n#### Method 2: USB BIOS Flashback (For Unbootable PCs)\nIf you install a brand-new CPU that the motherboard doesn't recognize yet, the PC won't even boot into the BIOS menu. Many mid-to-high-end motherboards have a feature called **BIOS Flashback** to solve this.\n1. Download the BIOS file, rename it according to the manufacturer\u2019s instructions, and save it to a FAT32 USB drive.\n2. Plug the USB drive into a specifically marked USB port on the back of the motherboard.\n3. With the power supply turned on (but the PC turned **off**), press the physical **BIOS Flashback button** on the back of the motherboard.\n4. An onboard dedicated microchip will read the USB and install the BIOS to the main chip without needing a CPU, RAM, or graphics card installed.\n\n#### Method 3: Windows-Based Installers (Not Recommended)\nSome manufacturers offer Windows applications (like ASUS Armoury Crate or MSI Center) that allow you to update the BIOS from inside the operating system.\n* **How it works:** The software downloads the update, prepares the system, and prompts a reboot to apply the write process.\n* *Why it is risky:* If Windows crashes, encounters a blue screen, or hangs during the preparation phase, it can permanently corrupt the BIOS chip. \n\n---\n\n### Part 3: What if the BIOS Chip is Physically Broken or Corrupted? (Hardware Repair)\n\nIf a BIOS update fails (e.g., the power goes out mid-update), the chip becomes \"bricked\" (unbootable). To \"reinstall\" BIOS on a bricked board, hardware enthusiasts or repair shops do one of the following:\n\n1. **Using a CH341A Programmer:** A technician clips a specialized test clip (a SOIC8 clip) directly onto the motherboard's BIOS chip, plugs the clip into a USB programmer attached to a second, working computer, and manually forces the BIOS file onto the chip.\n2. **Desoldering/Replacing:** On some boards, the chip is desoldered using a hot-air rework station, and a brand-new, pre-programmed BIOS chip bought online is soldered back in its place. (On very old motherboards, these chips were socketed, meaning you could simply pull the old chip out with tweezers and pop a new one in).",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1146,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 9,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 9
+      }
+    ],
+    "thoughts_token_count": 1004,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2159,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

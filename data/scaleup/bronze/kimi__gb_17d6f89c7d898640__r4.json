@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_17d6f89c7d898640",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T21:10:35.962283+00:00",
+  "query_text": "when did gaurdians of the galaxy 2 come out",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a248cc524e50fb475a0aa4a",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "*Guardians of the Galaxy Vol. 2* was released in **2017**. The film had its world premiere on **April 19, 2017**, and was released internationally starting on **April 25, 2017**. The United States release date was **May 5, 2017**.\n\nSources:\n1. https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2/Release_Dates\n2. https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2\n3. https://www.heyuguys.com/guardians-of-the-galaxy-2-release-date-announced/\n4. https://movies.mxdwn.com/news/guardians-of-the-galaxy-2-gets-new-release-date/\n5. https://www.tuppencemagazine.co.uk/guardians-of-the-galaxy-2-uk/\n6. https://abc7.com/post/guardians-of-the-galaxy-vol-2-premieres-with-some-new-but-familiar-faces/1894648/\n7. https://video.disney.com/watch/marvel-studios-guardians-of-the-galaxy-vol-2-big-game-spot-547d0caf396f65f09a0fb097",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780780231,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 276,
+        "prompt_tokens": 8014,
+        "total_tokens": 8290,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "when did gaurdians of the galaxy 2 come out"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a248cc51413",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"713041856a248cc54f50a50001ece66d\"},\"usage\":{\"total_tokens\":7860}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a248cc51413",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"713041856a248cc54f50a50001ece66d\"},\"usage\":{\"total_tokens\":7860}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"713041856a248cc54f50a50001ece66d\"},\"usage\":{\"total_tokens\":7860}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "*Guardians of the Galaxy Vol. 2* was released in **2017**. The film had its world premiere on **April 19, 2017**, and was released internationally starting on **April 25, 2017**. The United States release date was **May 5, 2017**.\n\nSources:\n1. https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2/Release_Dates\n2. https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2\n3. https://www.heyuguys.com/guardians-of-the-galaxy-2-release-date-announced/\n4. https://movies.mxdwn.com/news/guardians-of-the-galaxy-2-gets-new-release-date/\n5. https://www.tuppencemagazine.co.uk/guardians-of-the-galaxy-2-uk/\n6. https://abc7.com/post/guardians-of-the-galaxy-vol-2-premieres-with-some-new-but-familiar-faces/1894648/\n7. https://video.disney.com/watch/marvel-studios-guardians-of-the-galaxy-vol-2-big-game-spot-547d0caf396f65f09a0fb097",
+  "usage": {
+    "completion_tokens": 276,
+    "prompt_tokens": 8014,
+    "total_tokens": 8290,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

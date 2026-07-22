@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "gemini",
+  "run_index": 3,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T20:28:19.377367+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 20:28:19 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=15648",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "A **paired samples t-test** (also known as a *dependent t-test*, *repeated measures t-test*, or *matched-pairs t-test*) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is statistically significant. \n\nUnlike an independent samples t-test, which compares two entirely separate groups, the paired t-test compares the **same subjects** (or closely matched subjects) measured under two different conditions.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one group of participants** and you measure them twice, or when you have **pairs of participants** who are linked. Common scenarios include:\n\n*   **Before-and-After (Pre-test/Post-test):** Measuring a variable before and after an intervention (e.g., checking patient blood pressure *before* taking a medication and *after* taking it).\n*   **Two Conditions:** Measuring the same subjects under two different conditions (e.g., testing reaction times *with* caffeine and *without* caffeine).\n*   **Matched Pairs:** Evaluating pairs of subjects that are matched on key characteristics like age, gender, or genetic background (e.g., testing IQ scores on pairs of identical twins where Twin A receives a special tutoring program and Twin B does not).\n\n---\n\n### 2. Hypotheses\nThe paired samples t-test analyzes the **differences ($d$)** between the paired values.\n*   **Null Hypothesis ($H_0$):** The true mean difference between the paired groups is equal to zero ($\\mu_d = 0$). *In other words, the intervention or condition had no effect.*\n*   **Alternative Hypothesis ($H_a$):** The true mean difference is not equal to zero ($\\mu_d \\neq 0$) for a two-tailed test, or is greater/less than zero for a one-tailed test.\n\n---\n\n### 3. Assumptions\nFor the results of a paired t-test to be valid, your data must meet the following assumptions:\n1.  **Continuous Dependent Variable:** The data must be interval or ratio scale (e.g., height, weight, test scores, time).\n2.  **Related Pairs:** The subjects in both groups must be paired or matched in some logical way.\n3.  **Independence of Pairs:** The pairs themselves must be independent of one another (e.g., Participant A's scores do not influence Participant B's scores).\n4.  **No Significant Outliers:** There should be no extreme outliers in the *differences* between the pairs.\n5.  **Normality:** The *differences* between the paired values should be approximately normally distributed. *(Note: This assumption is flexible if your sample size is large, typically $n > 30$, due to the Central Limit Theorem).*\n\n---\n\n### 4. Formula\nThe paired t-test simplifies the two sets of data into a single set of difference scores ($d_i = x_{1,i} - x_{2,i}$). The test statistic $t$ is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_d}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n*   **$\\bar{d}$** = The mean of the differences.\n*   **$\\mu_d$** = The hypothesized mean difference (usually assumed to be $0$ under $H_0$).\n*   **$s_d$** = The standard deviation of the differences.\n*   **$n$** = The number of pairs.\n*   **$\\frac{s_d}{\\sqrt{n}}$** = The standard error of the mean difference.\n*   **Degrees of freedom ($df$)** = $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nSuppose a trainer wants to see if a 4-week fitness program increases vertical jump height. He measures the jump height (in inches) of **5 athletes** before and after the program.\n\n| Athlete | Pre-test ($X_1$) | Post-test ($X_2$) | Difference ($d = X_2 - X_1$) | Deviation from mean ($d - \\bar{d}$) | Squared Deviation $(d - \\bar{d})^2$ |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| 1 | 20 | 22 | +2 | -1 | 1 |\n| 2 | 18 | 22 | +4 | +1 | 1 |\n| 3 | 25 | 26 | +1 | -2 | 4 |\n| 4 | 22 | 27 | +5 | +2 | 4 |\n| 5 | 21 | 24 | +3 | 0 | 0 |\n| **Sum** | | | **15** | | **10** |\n\n#### Step 1: Calculate the Mean Difference ($\\bar{d}$)\n$$\\bar{d} = \\frac{\\sum d}{n} = \\frac{15}{5} = 3 \\text{ inches}$$\n\n#### Step 2: Calculate the Standard Deviation of the Differences ($s_d$)\nFirst, find the variance:\n$$s_d^2 = \\frac{\\sum (d - \\bar{d})^2}{n - 1} = \\frac{10}{5 - 1} = 2.5$$\nNow, take the square root to get $s_d$:\n$$s_d = \\sqrt{2.5} \\approx 1.581$$\n\n#### Step 3: Calculate the Test Statistic ($t$)\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}} = \\frac{3}{1.581 / \\sqrt{5}} = \\frac{3}{1.581 / 2.236} = \\frac{3}{0.707} \\approx 4.24$$\n\n#### Step 4: Find the Critical Value and Interpret\n*   **$df = n - 1 = 4$**\n*   Using a t-table for a two-tailed test with $\\alpha = 0.05$ and $df = 4$, the critical value is **$2.776$**.\n*   **Decision:** Since our calculated $t$-value ($4.24$) is greater than the critical value ($2.776$), we **reject the null hypothesis**. \n*   **Conclusion:** The 4-week fitness program statistically significantly increased the athletes' vertical jump height.\n\n---\n\n### What to do if assumptions are violated?\nIf your data is skewed or contains major outliers (violating the normality assumption), you should not use a paired t-test. Instead, use its non-parametric equivalent: the **Wilcoxon Signed-Rank Test**.",
+              "thought": null,
+              "thought_signature": "ErMsCrAsAQw51sfmLJkmi1dZq_Uz2lNYbtulSYrT7wscoJ-uAkmcQliDZpt8v-PNmwTnwB1DQZhYbjDT-4MAxHiuVUvYerJXdOajHQnvYj0mQZ5T9AE626HvPxYbmRLuR7tZIrvmc-x1wIcubkRMyzBmCrYj6y4DbZgke5g0r1zo9GXRnEeXgRgmzBZ73VPRPo_y0j-GyVrNxDllHZalMY3c7ys0sE1csIkvLOMqwccULN6Ov4wTbYDDO_rovmpGjHUVSicFoV5YYEgw2yhrcS2ID8bS4-zag6l08IpPPnqcQz2rvTGzP35ROhcPPxyv4jb_UWkgyWsf7xUS5kj2ZOdgFv9oQkjDCSy243q04pTPtjiw8pmZKmq_kx2fwkZwCHo05SEvjPbNlcr2sNEeSOyhFFa4VTEwrOsx1jvsvQFmgJuZiCunWrPYZdYrV5xT2wgKWL4EYPEf2yrpATK_ydtU6pvgEM1IWWBGfTsplponjIv2E0U8MjRHIvsI1pg-i-CGcMJQAqS2VqFgvl2XYtKsFeY0M-AReiKwZJs4rZFhrq2BF89VZ8mhBtrp37cTKu0AzIB8gxBKaaDlKFOMpQOX2HKFGREoXZemFISv8WtZ-_5DZqkYQMgKBeiW37nvhVRRXKMNY_69ZkmkFG91UbmCk4MIsMqMmGvj_2IHEj-_XIhaoD-H1kR3cXFNQQYS0vNEc882FsZ0o6ApEcnxxV8t4LZhIAKQNgaKcij72LqR_LXjkAK1JRnETUTeAGW5Z7A_QHROuJg27kseI-mh1XOwcfXHKsCmGi3QB7wZjjdYHPjc2FS0d-KmxgLTL3Rsi74b3fG1gq0FWqgKkSRHsyMbqx6XFZBe7FdwkhW4Mlw03EWk8wsAvLJl9oeymm0wpT442y7_-AtzVeTNwjCRGZjE8X8fwIof8TV-d_gmbUreA7SzkOj5C_UVAv_qq6KmbCrCTxPAN2uBupcclcbk9ClR8nhWOIxRhsvIi3vrXoUXnwLqo7_fZ-lQKrrIqnmZYp0QdMwP2hTJ95Gy1t-tJ45d1zxMu1s9jq2-FmH_vSdluQp-eseeJh4eXsj8UjbIK1Q6mTZQhR_mXRK6xviknVed5CeDR3srxcQ_0VqmHTUlRyw98PEfSei73pwCMLNpZXGvhzsQaqkIKxQh2jomkkASk2LweESZTHHhQQgifiIH6V-RwUEqJ6yzo-_tsFLv1NqCVFBUG6OryPJROxHYLK6zrD72yNIqVs5QvBZP2E8O7rQuh0AQuBBWC8y0xEHcIbKi_IQukxR39JDZ18aSRdtLT0mCuUD393Rg8Gb-BHhb6AmczpOc1X79-L--p6o6Tb-IfPiL8mpIMAzy5KrRvYbhwFjdXXadQ0_hiq4mQh0IkwSEo4Sedh4vkfA4df5B4aalhwbiqDqm-x-pmir0UmxxV4Uva2LCLa_NDDlOpRz2qNxiziKLY0_zuTrXgnGuhf1rs9wFD0UhIvKSEBqN2TMr6Oh3m6cCDhyl1GsWtiEuJ8KUo7dhW3em8kV6FpktQM7eugWELipboO2YJaDoByO9_n4h9_D_tKhvaM_YeGwiQuYAZ-iev-Ll4vw7ow3c9gKIt5CMXqHjKQMocRVq5RIPNrHHTt5r6fVFkeI8tQSYwBrSZ-7QhZcICkDO99a-qXRWkSwLAFHED5jFSuSVksUG6zFhAceVlCCVFrex6j_ibJKf_PVNRjlHk2-HAKVyd6pBc3RrhJuPvqxuI56iRarG94QfPi7l4GY1ZeQbMrLtlRcCNLM8tkDhdh0GnAvmFe7M89Iqvutv0eDLic0LG_hGvCpQ_1VJCLi3TYhJImUJPnickdzBR4KKFTgzsTXQBHNpKHTtutmNONdRgjKsCnIGywmEQJLEH2H_lWjfrUpH3sjXR8nSw6OrsLuUtCelNjohCCuZ-Ot3Al8xJo2Se05rKdmZGWCiZGYRAVor6YPQLRF798Xq3Xip_xpHlAnXGNheoPKS24vOjVbUfqYpxOypmS5ktNOkZHS4Y-WCOd9vJ_6uemS3CJq4nRabKF0c9-VO41Ehf6zmT9hc4L3CK0sDos42FdQzeI1POsuxtZytlTc1zqV7p_h8sEZdTfXWAvouR6ZNg4OLUGLd097LHbdlGqkvx7wdtoUTFRF0-NQzyX8QqACPB6jNC_mUOu5_biSyLI5VZEZPJdAKzMYqXVZmTaNhLBxWZJ3_H1YvCqJo_fs94vtEQ-SUOv__sQ9Avy67SijexhKBuryumySEZXG121tuTCzsS0qL_9hymp6SXlP7XPSNiCY9EtvGlTlZp8SzLeoXMNVCM3MA8pDsSDWPZlDU2gX3gCLPPxx2sRc5Y0xd2bliHwtA136p-Cuj34TJros_vjZLerIPexCy2OI6YXNrdWZ91NU8NKKImrupv70cgOiqMGfXHuP5qthuj2jgo7UloW3DteG2TRJSU2xJYuZv2ozRTfa5IEhj86wi2SGc8ocfx4lmI4NtAG5-MAALd5UjRjuQVSiGx405DPyN4rOJa5pms5jRY5E0bXj9V6Fh0mwYcyQ8M-ZZfPTNtu9cxQS5_WL7xweYmDGf38lBfMq2989py6xkRvsDPDztgbyN4UgJnWdMf5k-OVd9J85AP8O_JmPiGODrng-H10iEldBQ3PhZxUV8S1GZH08uHsLdwFVctu0m1TuVi2jqhdty2sK7QWp5q2VeswIC6LXOa2kTJZ2dZ9-YN8aMyhocFPXoLuMxDFbyfwONM6tATpg_mE-mik5nrbrX9r4gaeQmT3aVLBCbElflBZI3WpJLaS9mCOKeWAAg5QgJxyoc8dLNeWj85EBGrievBedd9dhbXsGzGBZevPEGfy4raKwCTvFVGHbTLN327l1UDoIZ4T7IPKmfKCC89Zn2qT3XIYXcarXbRr5TADSIIrpNoN54F3YEDL5unMm1pcCyamkIVlsAFcyqiEr5l84_MEPW9h5jEVNwyWrd1kkSC42zKwWOwiNITz1IwcO3WN3FGWj2SfGsL2lc6iWyX23C5b0P1IyOONcG0VrhxpsKulaXAhKfNtUOoGWhE3fF0vYhygM9b_vzz2tjLEiCASyTTDl_XQM4-WGeVUgT3qIffwow-o9IxfiB7BI4y86cvbpBNqTlPvXaFnXy-ZYVJiCVfBitV0flCXVZKjkrdi-5vHnzrH1EeB1BZAjuof2qxP2_7j3jvcsfItTXOvvbJhypnTb9M72KrFXaw32q2pjW7jVW_-MteZFEcIHpoSVB16fn5quMst8zwsk-vpVX6UtytQ6UUwDjIPXDBqTAMTlognURuNQLbUloPVHYdc8p1f7Pr1_PQDEBa0NBvoqThTxjXdJ-0qiQ6KA_mo8EiYbf-Ox5fkCsan04mJGIKRkY4qJFKIlbluiuMTIct-G7LjTD53ZFglEaJaIM6h5Go10VI2W24z_-T5BLLcAwpf0PHxBYFUF5NAKx63D2lgaOLAzTdMuQLE7y4TFDAFqKgDhcU9-rd_6I2dfJ3-PiSyKFk7b5KsLXNe9JgwkwvzsIlzJlUH7TLMCOgjNLEELLOUzg_oKblzjrudWqgnpWPbxXsXa-J_UYbp5abcjdWBij6w1E-du-gJeJTkImxesdfQZWJBn8YNlgoOyTQxqFVoXusJ5w7Ue3q1PStRiWNq6raXG7ekymq8Tx0l35Cd7owrvdBKs6ENdfh0fFMNPUuXcuyL2Tv7RZOTblMxv362NBP_M0AF3FQLcfRf42g_SkB8HcW7I0DKuJ4wLNdlhS9-FEw1zaP94k9Q7lJyePL6NqLPMHe9go7WLayHKaeR-b9xRlZqBGcq4SBhhysKK01Jl_hoHvqgGU_QD8ucms2fduoVKFFHU-FMrYfHSh89M2QnHS8z5pJrC28ce77bqprzWWXr5Eh81wZeBq0_hM0wMj06jQd-_rVLiqd0L3vPixYbnKpQLV0W51Tn0UKIe8w1s92XJ7NSd6aZsyBNuT8QiPvjadMHfe9uxFjBYMhndHpZIdGlqb4KrVRUrOy7aMcQJaasGykBbZxjv3uBnlyR3JCYqQ2dgJRUlBauLhmp_8Ul4ob6flo4UqCxItWDmMXNT4dC1qoDlArH3wtezT3dwTCVuf3tmezWRzatf66qFoMllLpxp68JyjNPD1O7OOsb5SOtZbz3ISTeIKEJMGs_AXBP4_LnRpmD5cLvIYNqVRc22bI2-r1y2Dyrl9rxcRKfmDKL9nw65L5HFWFUqcr6-F08HCHvxqA6zUVq7-Go9wu4FSzAXeU6QEx7z2USXGGKovnfbBmflyRAYvH_p_aNlD_eYPZSR-XMUP-osUHRzufctsNbhELT7jCcbPCp_mHms4RRbeRkslVEGtgJdfmgrOVE_LOUrmtY0Qzdul0UMiAi2OcQSsIeYN51wwzI0vHFgjLwK6RDzgbuce9a6XKfag5kEgg1TDWWyd5G2JHcac1YjiDmOUG_nSvJTS4_ib990T4oDTyZodilYA7WVri0fNQY85NXNFZglQLwuX-bsD322OTxQp-ykhsmNpwf0AvF0S7F3PSieewyTTNpZrp7mx5nsMncAsrLClaY-NUSYx1qiMxQClrbCv5sGDX6_DFco4gjVOdCAVVfUgxL22npjheRqqNqNJxDjQoLpXx85arPGMUrXSYrNkyb8-snZjHZUaqTgzc934ui8Arl6m5QLhf_h3NT8b_LQfb7DY4uS879ekpZdKoWqf_UiOa__j1oy9RrZNUzhWuvCcF_Odmj8gLXx7pbQnaq2P2o6SSEZ4jiqAGPsSgzqdByKTQLNS53e2hpUHCwL6zZCPiNtxxlqg_nTO-XP5284kwGYL4y0wpeNjRfVnOxh_M69kwYsZYRwRMBjc3QbbkCkppWhgrM6ceMYV_PRe1XChkRuipKCwimfFNkQeJUVQhDPLqvIyUbaPras5pSNM_ERc4JgKcC5MmvOgcAneQ4Ug9h1s_gVAd18IvZ3jd9QJYQwk0YHc9QkXsiOIGSsmMmIntsI8PdSaYPqPPuAMSQK6pxGmg6JLnFAz0VJuZ-MTHV-UWg6MehltUs86RI6p24EM_B7xNNCzZ-Oxr1s9JTD8gv-wbuip1TBn9x014BeHs3QDpAqunpnE0WJcVBQu5uORtkPj1RSb-akq-Yoxd2pNWQVPXATNE5tnC1_Cpx-S0qgsXfWQODqV3nEwe4V3Gi7FVJhXKpsgS8ZbA2nsP0kY6-CGvoQwB4GiDfqL9vXb8ceRsZQv2PBvaIWmqI6FNToMsvFPXDM6WbQLusXjzbzGKgDc8ZTi7RPYI6iEecEW_7TASwbPp0qwG6p9QAtZyqrTyIJ_UxaPEpZrOjUYhSskR6zfA9K0Je1e4y-7hO48h_Spv5Mei7bkj0fFz9amJtwFsQUw63sq1Z2g3rcVyl2oqbS3RNLP1fMhM3-5PZWOoGVgOHC2qzDMdWwGTX3NeaosP0d3CM-GnMiNtdIw0fBi2Fr8qL47VHm2GgiKoCRj2Ln4MyaVOp1O3QkCU614psmMm_kEw2GScFParNSkVBVL5vswTkhRSQIa-gxQ4L7ezNwEkcBMduZ_Omt0DcL5VBn7MJxTjjzOGpRYVM76j2NZ2wh9qhYMYNTX18iPYAb1CDPfAW1LhdHBbvc6EOeQsahYmJsOY25YnRcpPOW_rbtAHx-z_xJ9t2_9H1SJ5M8n6WkFTLq-8_JT2ugjw4LIbdN9B2qES_a4RAP_C8WADUMB6VrqpkdgQGBPiotEEUfr-7Aymlec4kKAoTkM9AhGRzOMwdCYzLgSlv7XvGdDtUHof7zFGLgKWqzPkAMNAs0x-9ElzprHj_HN0UeWm4za-dhxA4iincjYkpXSfZxmgE7CsfSnboNoj8b5GeBL0z_NaOc4a4WZKJGK8KIVkWZpdpesyq7FXF9s2CnTQ4nRAIUAM450WM184nWOeFvsWJfE0E0qjPfRDDLDKyFxK9OOidUqFjEMEgqgLE2a_du4y-UCkNPN5dp1JS9FzyFxFsY5WQsDSvYc5tt-JsAXKAupkNNgJ_rDdNCQhd6rLzU0zuwyGLMG4SHdrytv91mOQ8iDxkaWMyTkKPsRmkbF-mHq7Z5evBU_uzIOPz-fiOxhZi468S5RkZG8SrBKL7_pca9PCfHbMk5HWAr0AUYPbGaKp4uGvY829gRDhdaniVnS-q3aj8JGwHeAMW5CQEn6VUd0Fq--qJi_qQI-U8JNBcExCZRYfIRY-vvDgFZbPUNn5IICQwzuj140zpa-MLQlvwQrV96J14NqpwNGDkljpOdSMqKkWI7NPlYHnB8Yv1msUSEmUGd34-n-MFBX-7LA6GXOdnoPRSdJcIZUriAd4rVmXKm0mrfh8ZkBNBSGrk__x6UeZQH2eveQgDDgIyjU5jlPenvTHKJjHsSo4nuIx85ogQRfTDp3ZrMI4zqMHOTKQHodqOdwFixA4u1W3zPmYzQJVuTmlUPWQhV6mSPYBMHwYeaTbldcVYiaeHFAXQY3nmBfUhMEZCnBNfNMrGb5BTYQEjcOXyKfKHCCVAjvH3Y_TSuqpM9hCZG_3_Ai-zayXq4G8NnbEkvurXJECvzV3stXK7cay4Fk_yXU8_NW3m08pni--ZYm40LeiD7vHwa-7WRypWCGA-9qAXTR4vxnleAvtBvaL3XX7qVpbySA-ZIzwtxFSFk_r6zEqxe_XA1wbwqEzD5kncD5SwHhYd6t-V7EGjC-zzLA4F_CPB-QIUbnfFUl-LPmiuN7n3xr3v_feIkVuZLiM4yCYJLfGrsVMi8ODA-Bu1WZcMCZ2JVXrvu1Rj8GYf1mu3H9fh8OZMPRU3hIEiUlzC6f0NsV5gf7vLDx8hHouiKK7WRY1Wi5Q87NMo_LhRtBmrwmTCLLjMIgchoR4bMGUaom3vx7CLZ4EzjLrDS2eB-DqVd5VLOW_Qt03TeqO-ys_swIZArp97WhWRwBQf9TAjycD8U-CWnEwHvLdD7OMKpKZGWuunDU5H1YLmucqV-fFWUA8efzkg8WvqdPEDAEAgU42Cc4Hs9id-MVbf47cHrhugIoj8fwMkDgxGjIWQc6m1LH1-o-qjJLenjZL6RsHZGC_lXvUqAHjtH_tgatSfEJ3fKP2BCWUvfUmFAVaOukT4PcTYauVjYIItoS1cv5Tv4ezZF7_mr4t9MHOnRKbO5w5OVEMvCKB_jBx_Nhu8HD-6BGCGrcNCc60s_OIHm7do4MCnie1M5FQkHMBg0CJzuz_nLQBbFRakDrjGriq7m9rydimsyGTEXv8wD9RnrSENyX4248NbJyU315fQ5YGI_z3Jg2bsnkSm7SL8CV5xaCTU-qym2GSxG_NHzaa-CAkf2Rbit6DlyulW3_qPUEmv7nhdTYImdVkD0hAUQcek8n0WCfAevFigkf_8UaMRcAaynVTNIfhX-0Xu632CD8Z-xJ9nQLzGPnPjQmE9raEWNGlqOApKMEPpVBAHEKp5ZPKl3QCIPqUL8SYw5ilpl-EtvKAXVUco3SZE550Fx8vj-q2e-kDUYtQM2jxBf6gOHLb37p9EcKr1MK7oFcuR3Tt8njWwGbLWIFMf4Sodap0hhdMjf0QuvgO1VgWJsw9PJoFw==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "U9Qlao7-L6PWvdIPlfr-0AM",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1522,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 6,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 6
+        }
+      ],
+      "thoughts_token_count": 1670,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 3198,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "A **paired samples t-test** (also known as a *dependent t-test*, *repeated measures t-test*, or *matched-pairs t-test*) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is statistically significant. \n\nUnlike an independent samples t-test, which compares two entirely separate groups, the paired t-test compares the **same subjects** (or closely matched subjects) measured under two different conditions.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one group of participants** and you measure them twice, or when you have **pairs of participants** who are linked. Common scenarios include:\n\n*   **Before-and-After (Pre-test/Post-test):** Measuring a variable before and after an intervention (e.g., checking patient blood pressure *before* taking a medication and *after* taking it).\n*   **Two Conditions:** Measuring the same subjects under two different conditions (e.g., testing reaction times *with* caffeine and *without* caffeine).\n*   **Matched Pairs:** Evaluating pairs of subjects that are matched on key characteristics like age, gender, or genetic background (e.g., testing IQ scores on pairs of identical twins where Twin A receives a special tutoring program and Twin B does not).\n\n---\n\n### 2. Hypotheses\nThe paired samples t-test analyzes the **differences ($d$)** between the paired values.\n*   **Null Hypothesis ($H_0$):** The true mean difference between the paired groups is equal to zero ($\\mu_d = 0$). *In other words, the intervention or condition had no effect.*\n*   **Alternative Hypothesis ($H_a$):** The true mean difference is not equal to zero ($\\mu_d \\neq 0$) for a two-tailed test, or is greater/less than zero for a one-tailed test.\n\n---\n\n### 3. Assumptions\nFor the results of a paired t-test to be valid, your data must meet the following assumptions:\n1.  **Continuous Dependent Variable:** The data must be interval or ratio scale (e.g., height, weight, test scores, time).\n2.  **Related Pairs:** The subjects in both groups must be paired or matched in some logical way.\n3.  **Independence of Pairs:** The pairs themselves must be independent of one another (e.g., Participant A's scores do not influence Participant B's scores).\n4.  **No Significant Outliers:** There should be no extreme outliers in the *differences* between the pairs.\n5.  **Normality:** The *differences* between the paired values should be approximately normally distributed. *(Note: This assumption is flexible if your sample size is large, typically $n > 30$, due to the Central Limit Theorem).*\n\n---\n\n### 4. Formula\nThe paired t-test simplifies the two sets of data into a single set of difference scores ($d_i = x_{1,i} - x_{2,i}$). The test statistic $t$ is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_d}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n*   **$\\bar{d}$** = The mean of the differences.\n*   **$\\mu_d$** = The hypothesized mean difference (usually assumed to be $0$ under $H_0$).\n*   **$s_d$** = The standard deviation of the differences.\n*   **$n$** = The number of pairs.\n*   **$\\frac{s_d}{\\sqrt{n}}$** = The standard error of the mean difference.\n*   **Degrees of freedom ($df$)** = $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nSuppose a trainer wants to see if a 4-week fitness program increases vertical jump height. He measures the jump height (in inches) of **5 athletes** before and after the program.\n\n| Athlete | Pre-test ($X_1$) | Post-test ($X_2$) | Difference ($d = X_2 - X_1$) | Deviation from mean ($d - \\bar{d}$) | Squared Deviation $(d - \\bar{d})^2$ |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| 1 | 20 | 22 | +2 | -1 | 1 |\n| 2 | 18 | 22 | +4 | +1 | 1 |\n| 3 | 25 | 26 | +1 | -2 | 4 |\n| 4 | 22 | 27 | +5 | +2 | 4 |\n| 5 | 21 | 24 | +3 | 0 | 0 |\n| **Sum** | | | **15** | | **10** |\n\n#### Step 1: Calculate the Mean Difference ($\\bar{d}$)\n$$\\bar{d} = \\frac{\\sum d}{n} = \\frac{15}{5} = 3 \\text{ inches}$$\n\n#### Step 2: Calculate the Standard Deviation of the Differences ($s_d$)\nFirst, find the variance:\n$$s_d^2 = \\frac{\\sum (d - \\bar{d})^2}{n - 1} = \\frac{10}{5 - 1} = 2.5$$\nNow, take the square root to get $s_d$:\n$$s_d = \\sqrt{2.5} \\approx 1.581$$\n\n#### Step 3: Calculate the Test Statistic ($t$)\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}} = \\frac{3}{1.581 / \\sqrt{5}} = \\frac{3}{1.581 / 2.236} = \\frac{3}{0.707} \\approx 4.24$$\n\n#### Step 4: Find the Critical Value and Interpret\n*   **$df = n - 1 = 4$**\n*   Using a t-table for a two-tailed test with $\\alpha = 0.05$ and $df = 4$, the critical value is **$2.776$**.\n*   **Decision:** Since our calculated $t$-value ($4.24$) is greater than the critical value ($2.776$), we **reject the null hypothesis**. \n*   **Conclusion:** The 4-week fitness program statistically significantly increased the athletes' vertical jump height.\n\n---\n\n### What to do if assumptions are violated?\nIf your data is skewed or contains major outliers (violating the normality assumption), you should not use a paired t-test. Instead, use its non-parametric equivalent: the **Wilcoxon Signed-Rank Test**.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1522,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 6,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 6
+      }
+    ],
+    "thoughts_token_count": 1670,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 3198,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "gemini",
+  "run_index": 6,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T20:28:54.724743+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 20:28:54 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=11172",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "A **paired samples t-test** (also known as a dependent t-test, matched-pairs t-test, or repeated-measures t-test) is a statistical procedure used to determine whether the mean difference between two sets of linked observations is statistically significant. \n\nUnlike an independent samples t-test, which compares two unrelated groups, the paired t-test compares **two measurements taken on the same subjects** or **matched pairs of subjects**.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one continuous dependent variable** and **one categorical independent variable with two related groups**. Common scenarios include:\n\n* **Before-and-After Studies (Repeated Measures):** Measuring the same subjects at two different times.\n  * *Example:* Measuring patients' blood pressure *before* starting a medication and *after* taking it for a month.\n* **Matched Pairs:** Comparing two different subjects that have been paired based on specific criteria (e.g., age, gender, IQ).\n  * *Example:* Comparing the test scores of twins where one twin received tutoring and the other did not.\n* **Two Different Conditions/Treatments:** Subjecting the same participant to two different tests or conditions.\n  * *Example:* Testing a person\u2019s reaction time using their left hand vs. their right hand.\n\n---\n\n### 2. Hypotheses\nThe paired samples t-test actually converts two sets of data into a single set of **differences** ($d = x_1 - x_2$) and tests whether the mean of these differences ($\\mu_d$) is significantly different from zero.\n\n* **Null Hypothesis ($H_0$):** The mean difference between the paired observations is equal to zero. \n  $$\\mu_d = 0$$ *(The treatment/time had no effect).*\n* **Alternative Hypothesis ($H_a$):** The mean difference between the paired observations is not equal to zero.\n  $$\\mu_d \\neq 0$$ *(The treatment/time did have an effect).*\n\n---\n\n### 3. Assumptions of the Test\nBefore running a paired t-test, your data must meet the following assumptions:\n\n1. **Dependent Variable:** Must be continuous (interval or ratio scale, e.g., height, weight, test scores).\n2. **Paired Observations:** The data must consist of matched pairs (each subject or pair has exactly two measurements).\n3. **Independence of Pairs:** The pairs themselves must be independent of each other (e.g., Patient A's results do not affect Patient B's results).\n4. **No Significant Outliers:** There should be no extreme outliers in the *differences* between the two groups.\n5. **Normality:** The *differences* between the paired values should be approximately normally distributed. (This is especially important for small sample sizes, typically $n < 30$).\n\n---\n\n### 4. Formula\nThe t-statistic is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_0}{s_d / \\sqrt{n}}$$\n\nWhere:\n* $\\bar{d}$ = The mean of the differences between the paired observations.\n* $\\mu_0$ = The hypothesized mean difference (almost always $0$).\n* $s_d$ = The standard deviation of the differences.\n* $n$ = The number of pairs.\n* $\\sqrt{n}$ = The square root of the number of pairs.\n* **Degrees of Freedom ($df$):** $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nImagine a school wants to test if a new reading program improves scores. They test 5 students before and after the program.\n\n| Student | Score Before ($X_1$) | Score After ($X_2$) | Difference ($d = X_2 - X_1$) |\n| :--- | :---: | :---: | :---: |\n| 1 | 70 | 75 | +5 |\n| 2 | 65 | 72 | +7 |\n| 3 | 80 | 80 | 0 |\n| 4 | 90 | 95 | +5 |\n| 5 | 75 | 83 | +8 |\n\n1. **Calculate the mean difference ($\\bar{d}$):** \n   $$\\bar{d} = \\frac{5 + 7 + 0 + 5 + 8}{5} = \\frac{25}{5} = 5$$\n2. **Calculate the standard deviation of differences ($s_d$):**\n   Using the standard deviation formula for the differences $(5, 7, 0, 5, 8)$, we get $s_d \\approx 3.16$.\n3. **Calculate the Standard Error:**\n   $$SE = \\frac{s_d}{\\sqrt{n}} = \\frac{3.16}{\\sqrt{5}} \\approx 1.41$$\n4. **Calculate the $t$-statistic:**\n   $$t = \\frac{5 - 0}{1.41} \\approx 3.55$$\n5. **Determine Significance:**\n   With $df = 5 - 1 = 4$, we look up the critical $t$-value in a t-table for a two-tailed test at $\\alpha = 0.05$. The critical value is **2.776**. \n   Because our calculated $t$ ($3.55$) is greater than the critical value ($2.776$), we **reject the null hypothesis**. \n\n**Conclusion:** There is a statistically significant increase in reading scores after the program.\n\n---\n\n### 6. How to Report the Results\nWhen writing up the results (e.g., in APA format), you should include the t-statistic, degrees of freedom, the p-value, and the means/standard deviations:\n\n> *\"A paired-samples t-test was conducted to evaluate the impact of the reading program on students' scores. There was a statistically significant increase in scores from before the program ($M = 76.0$, $SD = 9.6$) to after the program ($M = 81.0$, $SD = 8.9$), $t(4) = 3.55$, $p < .025$.\"*",
+              "thought": null,
+              "thought_signature": "EuQaCuEaAQw51scxEC6SdMuQ5k2lf_ky5e-wmKTHhN6m-PmyKWlLYHjka4BEPa_mcWRUDLI2gMl4gKjw2uIglNXPTEvSopSmdnWG9pXn-flvmUdIQPf-Bc6w6WAuBgSLkusbUjya43R0V1UiQd6gtJ3h-6Lph0XaJLz3Ecz2ofghtdjMBua3LDPjIOYCuVaYxDQDd_ygH2SenUEfvZ0Z6oMASKsKl9VIvEbhcXgMAg8vpa-Lo3_f-a75uwFLpQKDpYlIPIPjIPO9RZpd0K_et9SQ-hGNFfsd55UuWENky1RbOJOIWIC4A_hfMZ6EhOPC4FqJtMe1hXD0C_4jK3Ix9JeW2a6YPFG0O16IOhWAAageZeG0gnvGnK33g_u1eoriQft2LVeMh5iENKeJ1Cqfc3-56i_ll8J33WGFyS1uaY9fQJUwqNNIOyr3x0onCxMXBtbvNJTY0vFStnv80RUiwW-45vehkQYhDaHNw6gAJoVlElctzQS2YGYbC_FrZ1Svy2FsmzD1fa1NWtIEeqhuLqxlC2hb5vL0IJK4KNXVjnDNUYyPZwZjYxoiNAZOAgAfovQHeJ-8zRkJUhuESuiQAbnSRSzqmjfwz-irCr9Bz2iUY88qdlD8eaYq2R44bOr5nlJynvhDT8B_megtk-dcICjobawTVlBzq_U_eNGk-7JuSQY54YnEd9zF57qwIHm_qBnXA3DoALY96ImGMBHPQjx8Rv_rrNLN06tj3SusY6DyHy8sKt5piEKDnpvRzSR98tC_CtVHZWBlJZDonUYDk_hpM8W0xFmLmMQS0YLDLKxMuJXshADVvUh11LdcNSLjRWugfiFOUWng5TyM_AHEngAzSDOnCShwcwQKXQKc_foMJRwVsXgjJhA0n4HfTV7wBAYA_M6JbhipOz_gAlasAk10W_2JYi5Lu3KXxYXHBXlS1Ht8hm880hbrg46KK2WiGXXEorCJcw_niWt6hMsBNIwz2fEQkByA5byiaZZz4VxVXEeLEm4WyAQ0SjXjnfF1oEioeI2qqHCQJFy-azqiOhRVoyxNTeyQiQVCT4NG9iLLf8Fg52VtE4VXi8V4NPhaa6BU70IkKAF9jtoKbID8jEaDX06ikYUbKzB2LnWp2iuOe46iNYCXBWWLyBmTeYv-x_hlLr52KY8wLRI7NfwH6XzPdu_uniBItIVGP_IdhvphQ4XJOHpx9n0UVpjpSQoKbcWaFGpDROMLcLQyWSsjfx4V6OhV-ryW2KLgF6RgYWCtROioExqo_HSnetr_XV-nio_xarnr_MB5-rMsGrOw87eaOYkwyIRcoeVXDks5vcydmxblp35z853f1vNNQxm5KRrU_mmz9v45gLMl0fyQ_u-khdiW4d4lqaMGDJcFudH17qyeRhc6OqMDafAFxUyN9Ec1-847zRYg4Q1pbW49Zb1glfDiUT-6vN_XYappA7cJghe85zw4yicQQaR32TwRZhRssHDenyd-jN76QaNl0IvWu71OJvL513vNI4yymOdhuZBoZYC4NDW2tzCCTToJSyHpDks-7gCqvTpB2V1Pvw2K3T6QFUdTD3gQ4di3Ok7ADKR_pPSeKXMgcJbeknuxoZ1vAahAlLeREw_lM-6WYUQnaRwu4h1Xigs7an0RaOUDpadWlFWfoURD3-4ktqVkyqmPwC9qRM7u2czGCSAgE1gEpUf8G2Mhk0M1Sd-qZ-90tpY-0_EO_A4FFjm8LtIAmGh345aYKN2GLYa0fmQVHu_LLRTUj_KIGK3vl5bqDo8744zxp65UX7hxZ_cUt0dQeltaJDz5dTdG7SmgxuCO8NqG9khLILChlWDLRrbw1c2HEgFo19j9CPxEqxLVMG5dbAokEmQMMtSw8kWiLHUHzjZivje8oCoBpWlYfQD11jYoLCV5yqyDgPh4HJOgEeDNHsMtsJjfkdiVNet6vCxx_bHrmnnXih-onO9T0_vBwylWymbhxYj-btorLevrtyVfeQdk_zMWuO2ZKXENTbaBGDCZ5ui3i6yERMfqyGEZNYIfaMWkxCvilm7XmKhWg7CoEKkVx32zsdyP3SkalctU8q2CQOXy0Q9cWJLTzGAUxlBd0O1GwF4ZrpNzTPPy1wT_7ioDGEFAIealgRXRI_TuV-4TZQzAdk0YO60MJ-SNFIiTdbHBxXlFuU7f4lTnB-9lZQO24LrjtcqSs5HK_34yXfcp6XgVhtD84QjJOCO245hPMWRZxbpPNEFibj98hdQgNWdAKhIupjcRyIHlqtFSxlt-UQlwKokmQ28hcEzEtID57mRB_3XMuX91QWVD_G533JJ2wcZnfzAKO46tIi0OMfSHGIyxOOuZsZa1IQtIVGZaiUfqrToP5GFB9wdvPpjyEbL2Lv2z0atEVI67w7JxZcaLQ8w3LjlM6Meh4bd9MtQ-PC0c0bifaD3akPZC7BitD_IJ60v3z19viXXMGl8NPnb64lRzFMWHvXDG1PICvP3UVvQYt5cYGWJ2MFl2IUYFYexGjmFQCj1YQCtjj-rv_XwvkRLfJlbOxgrPHt5LdQZR_jUbKT4oscmsodQpVdhtaz_v_NUh4ESmnU4DcPfMaZIl12FT_E5s6Kp_a0I6G7-YPqjwzeAvMCJohK_ba6vn7P70827JDrNIz3UZN7FT-9JF__JhCfPZOzWz8DAuqrcfelqaDXXCipes0T_QHzCytLv585pDI2AjJHi3o74DXhdVHO_EnBrscqCfBlDpzcfxJCo1TQorqX5O8EIuu8WYHuyYq_0mL1pFKLvhmpdlA_0s5rmB1KJc3FxB7i0mHaByEwgIoa_Hfzf_4Cpn8vk-4v4ZDZZpxpgmC1SBYDgfon-ZaPpEQVi5H4xcb-Uvj1VCZy8jp8o3Zzo2WTvN2Q5R9WN_KHWllLJ9A18Frz4KVUyShboeZTMxHtW3SOmsA5haH7qciguhnEBnNpZUDytA1R1a_RrD6dc0-DgHrCUKZ4D6FPiwBn9BpcLNyJbAc80x9ug1RTidGdRYMUHeDbV8c66BqXphfThFrWlusTAjn_fdA5C37a_HO2pFrNB0cSaMF78Yn81CdmC-h1jBpZBukpAFpVKiV8QK5OJaym0LIUwmHhn-2Q32xIxL4bw9m5D7JZaknqStUcDi66sBUtvMKT8R0l_3IvrKcbSmPC3CvBWm_YDwliln-limgaxj1bQHETmMdb1X3rYwhVfWDH9K31IBkvaxNFlwmaiQVP8QD8VQVbEzha3EmEnRD_xP49GmNm0KRbITp1XLWz5K2mmEEkSjJRiOSMp_o09-CGh3hZe-5bHN1F4tp0SiXNcrLP6-3tdW5nI02wzrDECB8JH4zKq6Ah1wlsFQ6C0NlQxXP6WVzVMzIiHYBnvInzPZ9aVeD_tUk-esHEuQRfUrq-Vc8-xusEVfahHSH9OQlhaKXmMQmq_YK_EPY2_TfmYHEGWeO5FUMhekNri7S9SeTUKfGzi7QjaRnXL9y9j3Ly0vO1QK04N1_w1lxjfMsr5weRIzS6VzAskMpqReiZ79ntg6G0m8qCHUag6efkRHb3R45cw_4cRNUDsaMD13nxGaydeM9bX0-vuWTw1zhbIlWeRcYKRdDAHbw6cxo9EjNlaeSpSVve3667ylm57CggFHwqyfZgOGSG5aAcQjuhgcwnGTnB_q-GHfG0SZBCJIkwZoI6JG_uWArui70-_l7pIR-0Y4Oybhth8kwfDtL4koFKQcmbFxiSwPXUGSNzgTIy1Y-iJfuCaCpMyr8YgLpGL7pz4gxy3_QGeukTZ-QYn4zkqwSs9Px2Ep8k3LOeoaJVomSBHFEy_dv990YDi27DsL9bImLMD0R7rKT6eLpalRQLQX1C5znlgKBDN5iu_t5fTLIxserQmdGgFrsGLsBOQwbXRUSA40gH1Khag-gUJ-7z_UbaBSQ98HBzqrLanXSxCDtu542fpFP_5c-WK_pM1bDMKHDJjwe6_ajxEXLHiOFAdKrUGHaARZL7Sp2ejD11JKm95aMaG3u8TeX0v3hp43jJ4o9rYTPdTSaPBeM7wNpfWmpdZ7MKaePNwIJTtF45TCrF3nVHgrL5_nAZCKemXsEjvjVt15mMOrc53v7ox2ipSrzEe2d9aVAqHXG5G93txTGgwb74sYQ98DmWeKa_RXjJyplyEBerei5a5kdW77ceBaDqmQzaTXGMWsBLgOdO23tsf4qbz0w97TgyYFb9tM_git-7YzyywOsrr3F91cQTNBtRMfFOw_9C5gGyfhnRN1S1nOg3GAVNzv5XLpN-5VXBH2W6iZtTLoQN8za-tcJGLX1yveOqSjGLj-Saj2A6qFiyaU6amkDkw5VO9zbKt4AzO2OXXFol8yJ7I79zlE5iBEPa3jq-Bf7QmN2_pDRu-ugfAyN9ADoHEpjAxUsP0BizHHeLCA8jUwPLVKTWIB_CsgD4-3oYu8BLp0F9A_DSz8a-gVTtNyXLxbjSB7sgNrCfYMUnmYXXQwsanJaOv2XRSWbq_MmM5OHmaUGN04HGCMpCGiNFkG9D3XXm_bvtInfLUEzEL7mR0taa5ojDNlP9WzQDF6ECmigx6fzcuj5X8wFOs-aZwRnsw=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "e9QlaoWlJcKVxN8P6uCr8QU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1391,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 6,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 6
+        }
+      ],
+      "thoughts_token_count": 854,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2251,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "A **paired samples t-test** (also known as a dependent t-test, matched-pairs t-test, or repeated-measures t-test) is a statistical procedure used to determine whether the mean difference between two sets of linked observations is statistically significant. \n\nUnlike an independent samples t-test, which compares two unrelated groups, the paired t-test compares **two measurements taken on the same subjects** or **matched pairs of subjects**.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one continuous dependent variable** and **one categorical independent variable with two related groups**. Common scenarios include:\n\n* **Before-and-After Studies (Repeated Measures):** Measuring the same subjects at two different times.\n  * *Example:* Measuring patients' blood pressure *before* starting a medication and *after* taking it for a month.\n* **Matched Pairs:** Comparing two different subjects that have been paired based on specific criteria (e.g., age, gender, IQ).\n  * *Example:* Comparing the test scores of twins where one twin received tutoring and the other did not.\n* **Two Different Conditions/Treatments:** Subjecting the same participant to two different tests or conditions.\n  * *Example:* Testing a person\u2019s reaction time using their left hand vs. their right hand.\n\n---\n\n### 2. Hypotheses\nThe paired samples t-test actually converts two sets of data into a single set of **differences** ($d = x_1 - x_2$) and tests whether the mean of these differences ($\\mu_d$) is significantly different from zero.\n\n* **Null Hypothesis ($H_0$):** The mean difference between the paired observations is equal to zero. \n  $$\\mu_d = 0$$ *(The treatment/time had no effect).*\n* **Alternative Hypothesis ($H_a$):** The mean difference between the paired observations is not equal to zero.\n  $$\\mu_d \\neq 0$$ *(The treatment/time did have an effect).*\n\n---\n\n### 3. Assumptions of the Test\nBefore running a paired t-test, your data must meet the following assumptions:\n\n1. **Dependent Variable:** Must be continuous (interval or ratio scale, e.g., height, weight, test scores).\n2. **Paired Observations:** The data must consist of matched pairs (each subject or pair has exactly two measurements).\n3. **Independence of Pairs:** The pairs themselves must be independent of each other (e.g., Patient A's results do not affect Patient B's results).\n4. **No Significant Outliers:** There should be no extreme outliers in the *differences* between the two groups.\n5. **Normality:** The *differences* between the paired values should be approximately normally distributed. (This is especially important for small sample sizes, typically $n < 30$).\n\n---\n\n### 4. Formula\nThe t-statistic is calculated as:\n\n$$t = \\frac{\\bar{d} - \\mu_0}{s_d / \\sqrt{n}}$$\n\nWhere:\n* $\\bar{d}$ = The mean of the differences between the paired observations.\n* $\\mu_0$ = The hypothesized mean difference (almost always $0$).\n* $s_d$ = The standard deviation of the differences.\n* $n$ = The number of pairs.\n* $\\sqrt{n}$ = The square root of the number of pairs.\n* **Degrees of Freedom ($df$):** $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nImagine a school wants to test if a new reading program improves scores. They test 5 students before and after the program.\n\n| Student | Score Before ($X_1$) | Score After ($X_2$) | Difference ($d = X_2 - X_1$) |\n| :--- | :---: | :---: | :---: |\n| 1 | 70 | 75 | +5 |\n| 2 | 65 | 72 | +7 |\n| 3 | 80 | 80 | 0 |\n| 4 | 90 | 95 | +5 |\n| 5 | 75 | 83 | +8 |\n\n1. **Calculate the mean difference ($\\bar{d}$):** \n   $$\\bar{d} = \\frac{5 + 7 + 0 + 5 + 8}{5} = \\frac{25}{5} = 5$$\n2. **Calculate the standard deviation of differences ($s_d$):**\n   Using the standard deviation formula for the differences $(5, 7, 0, 5, 8)$, we get $s_d \\approx 3.16$.\n3. **Calculate the Standard Error:**\n   $$SE = \\frac{s_d}{\\sqrt{n}} = \\frac{3.16}{\\sqrt{5}} \\approx 1.41$$\n4. **Calculate the $t$-statistic:**\n   $$t = \\frac{5 - 0}{1.41} \\approx 3.55$$\n5. **Determine Significance:**\n   With $df = 5 - 1 = 4$, we look up the critical $t$-value in a t-table for a two-tailed test at $\\alpha = 0.05$. The critical value is **2.776**. \n   Because our calculated $t$ ($3.55$) is greater than the critical value ($2.776$), we **reject the null hypothesis**. \n\n**Conclusion:** There is a statistically significant increase in reading scores after the program.\n\n---\n\n### 6. How to Report the Results\nWhen writing up the results (e.g., in APA format), you should include the t-statistic, degrees of freedom, the p-value, and the means/standard deviations:\n\n> *\"A paired-samples t-test was conducted to evaluate the impact of the reading program on students' scores. There was a statistically significant increase in scores from before the program ($M = 76.0$, $SD = 9.6$) to after the program ($M = 81.0$, $SD = 8.9$), $t(4) = 3.55$, $p < .025$.\"*",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1391,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 6,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 6
+      }
+    ],
+    "thoughts_token_count": 854,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2251,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

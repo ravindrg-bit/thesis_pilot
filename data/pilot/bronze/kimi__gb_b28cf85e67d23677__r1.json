@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b28cf85e67d23677",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:37:47.001974+00:00",
+  "query_text": "How do I make poached eggs at home?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cd44ea89a3affba2c9946",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Making poached eggs at home is easier than you think! Here's a step-by-step guide based on professional techniques:\n\n## What You'll Need\n- Fresh eggs (the fresher, the better \u2013 they hold their shape better)\n- A medium saucepan or pot\n- White vinegar (optional but helpful)\n- A slotted spoon\n- Small bowls or ramekins for cracking eggs\n- Paper towels\n\n## Basic Method\n\n**1. Prepare the water**\nFill your pot with about 3 inches of water. Heat until it reaches a **gentle simmer** \u2013 tiny bubbles should form at the bottom, but it shouldn't be boiling vigorously. Ideal temperature is 180-190\u00b0F (82-88\u00b0C). Add 1 tablespoon of white vinegar to help the egg whites coagulate.\n\n**2. Prep your egg**\nCrack a cold egg into a small bowl or ramekin. This lets you check that the yolk is intact and remove any shell pieces.\n\n**3. Create a vortex (for single eggs)**\nStir the water in a circular motion with a spoon to create a gentle whirlpool. This helps the egg white wrap around the yolk for a neater shape.\n\n**4. Cook the egg**\nGently slide the egg from the bowl into the center of the vortex. Cook undisturbed for **3 minutes** for runny yolks, or **4 minutes** for slightly firmer yolks.\n\n**5. Remove and drain**\nLift the egg out with a slotted spoon, letting excess water drip off. Place on a paper towel-lined plate briefly to absorb water, then serve immediately.\n\n## Pro Tips for Best Results\n\n- **Use the freshest eggs possible** \u2013 older eggs have runnier whites that spread more\n- **Strain the egg first** for restaurant-quality results: crack the egg into a fine-mesh sieve to remove the thin, watery part of the white before poaching\n- **Don't add salt** to the water \u2013 it actually makes whites spread more\n- **For multiple eggs**: Skip the vortex, use a larger pan, and leave space between eggs. You can cook several at once\n- **Make ahead**: Poach eggs up to 2 days ahead, store in cold water in the fridge, then reheat in hot water for 20-30 seconds before serving\n\nSources:\n1. https://www.allrecipes.com/article/how-to-poach-an-egg-and-make-perfect-eggs-benedict/\n2. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n3. https://preppykitchen.com/how-to-poach-an-egg/\n4. https://downshiftology.com/recipes/poached-eggs/\n5. https://spice.alibaba.com/spice-basics/how-do-you-cook-poached-eggs\n6. https://www.seriouseats.com/foolproof-poached-eggs-food-lab-recipe",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780274255,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 614,
+        "prompt_tokens": 8374,
+        "total_tokens": 8988,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How do I make poached eggs at home?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cd44d841a",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ef6cd21d6a1cd44d680f160001d75592\"},\"usage\":{\"total_tokens\":8220}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cd44d841a",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ef6cd21d6a1cd44d680f160001d75592\"},\"usage\":{\"total_tokens\":8220}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ef6cd21d6a1cd44d680f160001d75592\"},\"usage\":{\"total_tokens\":8220}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Making poached eggs at home is easier than you think! Here's a step-by-step guide based on professional techniques:\n\n## What You'll Need\n- Fresh eggs (the fresher, the better \u2013 they hold their shape better)\n- A medium saucepan or pot\n- White vinegar (optional but helpful)\n- A slotted spoon\n- Small bowls or ramekins for cracking eggs\n- Paper towels\n\n## Basic Method\n\n**1. Prepare the water**\nFill your pot with about 3 inches of water. Heat until it reaches a **gentle simmer** \u2013 tiny bubbles should form at the bottom, but it shouldn't be boiling vigorously. Ideal temperature is 180-190\u00b0F (82-88\u00b0C). Add 1 tablespoon of white vinegar to help the egg whites coagulate.\n\n**2. Prep your egg**\nCrack a cold egg into a small bowl or ramekin. This lets you check that the yolk is intact and remove any shell pieces.\n\n**3. Create a vortex (for single eggs)**\nStir the water in a circular motion with a spoon to create a gentle whirlpool. This helps the egg white wrap around the yolk for a neater shape.\n\n**4. Cook the egg**\nGently slide the egg from the bowl into the center of the vortex. Cook undisturbed for **3 minutes** for runny yolks, or **4 minutes** for slightly firmer yolks.\n\n**5. Remove and drain**\nLift the egg out with a slotted spoon, letting excess water drip off. Place on a paper towel-lined plate briefly to absorb water, then serve immediately.\n\n## Pro Tips for Best Results\n\n- **Use the freshest eggs possible** \u2013 older eggs have runnier whites that spread more\n- **Strain the egg first** for restaurant-quality results: crack the egg into a fine-mesh sieve to remove the thin, watery part of the white before poaching\n- **Don't add salt** to the water \u2013 it actually makes whites spread more\n- **For multiple eggs**: Skip the vortex, use a larger pan, and leave space between eggs. You can cook several at once\n- **Make ahead**: Poach eggs up to 2 days ahead, store in cold water in the fridge, then reheat in hot water for 20-30 seconds before serving\n\nSources:\n1. https://www.allrecipes.com/article/how-to-poach-an-egg-and-make-perfect-eggs-benedict/\n2. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n3. https://preppykitchen.com/how-to-poach-an-egg/\n4. https://downshiftology.com/recipes/poached-eggs/\n5. https://spice.alibaba.com/spice-basics/how-do-you-cook-poached-eggs\n6. https://www.seriouseats.com/foolproof-poached-eggs-food-lab-recipe",
+  "usage": {
+    "completion_tokens": 614,
+    "prompt_tokens": 8374,
+    "total_tokens": 8988,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_597c3f628cb0ec89",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T14:59:19.254657+00:00",
+  "query_text": "If a recreational drug is legalised do those in prison convicted of charges relating to that drug still have to serve their time?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25873eeed681b12ff04498",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I need to clarify an important legal principle: **legalisation does not automatically mean prisoners are released**. Here's what happens in practice:\n\n## The General Rule: No Automatic Release\n\nIn most jurisdictions, when a drug is legalised, those already in prison for offences related to that drug **typically still have to serve their time**. This is due to a fundamental legal principle: **laws are not usually applied retroactively**. If an act was illegal at the time it was committed, the conviction generally stands even if the law later changes.\n\n## Why This Happens\n\n1. **Non-retroactivity principle**: Criminal laws generally cannot be applied retroactively to benefit defendants unless explicitly stated in the legislation\n2. **The offence was still a crime when committed**: The person violated the law as it existed at that time\n3. **Separation of powers**: Changing the law (legislative function) is different from overturning convictions (judicial/executive function)\n\n## What Can Happen Instead\n\nCountries that have legalised drugs have sometimes taken **additional measures** to address existing prisoners:\n\n- **Amnesty or pardon programs**: Some jurisdictions have explicitly included provisions for releasing or resentencing those convicted under the old law\n- **Expungement schemes**: Clearing criminal records for past offences\n- **Case-by-case review**: Allowing prisoners to petition for release or sentence reduction\n\n## Real-World Examples\n\nFrom my search, I found information about various European approaches to drug policy, but specific examples of mass prisoner releases following legalisation are limited in the results. However, historical examples exist:\n\n- **Portugal's decriminalisation (2001)**: Portugal decriminalised personal possession of all drugs but did not fully legalise them. Those already serving sentences did not automatically benefit.\n- **US state legalisations**: When US states like Colorado and Washington legalised cannabis, existing prisoners generally remained incarcerated unless specifically addressed by separate legislation or executive action.\n\n## Important Caveat\n\nThe specific outcome depends entirely on **how the legalisation law is drafted**. Legislators *can* include retroactive provisions or companion bills to address existing prisoners, but this requires explicit action\u2014it does not happen automatically.\n\nSources:\n1. https://questions-statements.parliament.uk/written-questions/detail/2025-03-11/37293/\n2. https://www.euda.europa.eu/publications/topic-overviews/content/drug-law-penalties-at-a-glance_en\n3. https://releaf.co.uk/education/cannabis-101/history/an-historical-overview-of-cannabis-legality-in-the-uk\n4. https://bdoc.ofdt.fr/doc_num.php?explnum_id=8607\n5. https://legalizebelarus.org/en/media/belarusdigest-cannabis-reform-in-belarus/\n6. https://www.alibongo.co.uk/en/blog/explained/will-weed-be-legal-in-the-uk",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780844351,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 612,
+        "prompt_tokens": 8611,
+        "total_tokens": 9223,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "If a recreational drug is legalised do those in prison convicted of charges relating to that drug still have to serve their time?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25873e7c50",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1fe8388c6a25873d4f50a50001ee3738\"},\"usage\":{\"total_tokens\":8441}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25873e7c50",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1fe8388c6a25873d4f50a50001ee3738\"},\"usage\":{\"total_tokens\":8441}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1fe8388c6a25873d4f50a50001ee3738\"},\"usage\":{\"total_tokens\":8441}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I need to clarify an important legal principle: **legalisation does not automatically mean prisoners are released**. Here's what happens in practice:\n\n## The General Rule: No Automatic Release\n\nIn most jurisdictions, when a drug is legalised, those already in prison for offences related to that drug **typically still have to serve their time**. This is due to a fundamental legal principle: **laws are not usually applied retroactively**. If an act was illegal at the time it was committed, the conviction generally stands even if the law later changes.\n\n## Why This Happens\n\n1. **Non-retroactivity principle**: Criminal laws generally cannot be applied retroactively to benefit defendants unless explicitly stated in the legislation\n2. **The offence was still a crime when committed**: The person violated the law as it existed at that time\n3. **Separation of powers**: Changing the law (legislative function) is different from overturning convictions (judicial/executive function)\n\n## What Can Happen Instead\n\nCountries that have legalised drugs have sometimes taken **additional measures** to address existing prisoners:\n\n- **Amnesty or pardon programs**: Some jurisdictions have explicitly included provisions for releasing or resentencing those convicted under the old law\n- **Expungement schemes**: Clearing criminal records for past offences\n- **Case-by-case review**: Allowing prisoners to petition for release or sentence reduction\n\n## Real-World Examples\n\nFrom my search, I found information about various European approaches to drug policy, but specific examples of mass prisoner releases following legalisation are limited in the results. However, historical examples exist:\n\n- **Portugal's decriminalisation (2001)**: Portugal decriminalised personal possession of all drugs but did not fully legalise them. Those already serving sentences did not automatically benefit.\n- **US state legalisations**: When US states like Colorado and Washington legalised cannabis, existing prisoners generally remained incarcerated unless specifically addressed by separate legislation or executive action.\n\n## Important Caveat\n\nThe specific outcome depends entirely on **how the legalisation law is drafted**. Legislators *can* include retroactive provisions or companion bills to address existing prisoners, but this requires explicit action\u2014it does not happen automatically.\n\nSources:\n1. https://questions-statements.parliament.uk/written-questions/detail/2025-03-11/37293/\n2. https://www.euda.europa.eu/publications/topic-overviews/content/drug-law-penalties-at-a-glance_en\n3. https://releaf.co.uk/education/cannabis-101/history/an-historical-overview-of-cannabis-legality-in-the-uk\n4. https://bdoc.ofdt.fr/doc_num.php?explnum_id=8607\n5. https://legalizebelarus.org/en/media/belarusdigest-cannabis-reform-in-belarus/\n6. https://www.alibongo.co.uk/en/blog/explained/will-weed-be-legal-in-the-uk",
+  "usage": {
+    "completion_tokens": 612,
+    "prompt_tokens": 8611,
+    "total_tokens": 9223,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

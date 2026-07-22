@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_53f81cdbfb306187",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:18:04.792109+00:00",
+  "query_text": "what are opioids derived from",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccfb5383a8d3394114cff",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, I can explain what opioids are derived from. The answer varies depending on the type of opioid:\n\n## Natural Opiates (Derived from Plants)\n\n**Natural opiates are derived directly from the opium poppy plant (*Papaver somniferum*)**. Specifically, they come from the resin of the plant's seed pods. The oldest historical evidence of poppy cultivation dates back approximately 5,000 years to ancient Mesopotamia, where the Sumerians referred to it as the \"joy plant.\"\n\nExamples of natural opiates include:\n- **Morphine** - the primary active alkaloid in opium, discovered by Friedrich Sert\u00fcrner in the early 19th century\n- **Codeine**\n- **Raw opium** - the dried exudate from the poppy seed capsule\n\n## Semi-Synthetic Opioids\n\nThese are **chemically modified versions of natural opiates** that originate from the opium poppy but are altered in laboratories. Examples include:\n- **Heroin** - made from morphine through acetylation\n- **Oxycodone** - derived from thebaine (another opium alkaloid)\n- **Hydrocodone**\n- **Hydromorphone**\n- **Oxymorphone**\n\n## Synthetic Opioids\n\nThese are **completely man-made in laboratories** and do not come from natural plant sources at all. They are designed to mimic the chemical structure and effects of natural opiates. Examples include:\n- **Fentanyl**\n- **Methadone**\n- **Tramadol**\n- **Buprenorphine**\n\n## Summary\n\n| Type | Source |\n|------|--------|\n| Natural opiates | Directly from opium poppy plant |\n| Semi-synthetic opioids | Chemically modified natural opiates (ultimately from poppy) |\n| Synthetic opioids | Completely lab-created, no plant origin |\n\nIt's worth noting that the term \"opioid\" is now commonly used as an umbrella term that encompasses all three categories\u2014natural, semi-synthetic, and synthetic\u2014while \"opiate\" specifically refers only to the naturally derived substances from the opium poppy.\n\nSources:\n1. https://libguides.mskcc.org/publichealth/opioids\n2. https://recoverycentersofamerica.com/blogs/opiate-withdrawal-symptoms-guide/\n3. https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsrelatedtodrugpoisoninginenglandandwales/2024registrations\n4. https://www.cdc.gov/overdose-prevention/glossary/?utm_campaign=Bundle&utm_medium=referral&utm_source=Bundle\n5. https://shareok.org/server/api/core/bitstreams/6e68b627-744e-4cda-bfec-483594125a4a/content\n6. https://theses.hal.science/tel-04204627v1/file/GUERRERO_MORENO_Adrian_these_2022.pdf\n7. https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/opiate\n8. https://mountainvalleyrecovery.com/opiate-vs-opioid-what-is-the-difference/\n9. https://www.townsendla.com/blog/opioids-vs-opiates\n10. https://www.goodrx.com/classes/opioids/opiates-vs-opioids?srsltid=AfmBOoqZwypiBVtOX1ouqdJDqwHJZgsanLJz27XTB-o2r_AaxU0ycBjc",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780273078,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 760,
+        "prompt_tokens": 9094,
+        "total_tokens": 9854,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what are opioids derived from"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccfb43ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ceedf2766a1ccfb44f50a50001d90eeb\"},\"usage\":{\"total_tokens\":8946}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccfb43ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ceedf2766a1ccfb44f50a50001d90eeb\"},\"usage\":{\"total_tokens\":8946}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ceedf2766a1ccfb44f50a50001d90eeb\"},\"usage\":{\"total_tokens\":8946}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, I can explain what opioids are derived from. The answer varies depending on the type of opioid:\n\n## Natural Opiates (Derived from Plants)\n\n**Natural opiates are derived directly from the opium poppy plant (*Papaver somniferum*)**. Specifically, they come from the resin of the plant's seed pods. The oldest historical evidence of poppy cultivation dates back approximately 5,000 years to ancient Mesopotamia, where the Sumerians referred to it as the \"joy plant.\"\n\nExamples of natural opiates include:\n- **Morphine** - the primary active alkaloid in opium, discovered by Friedrich Sert\u00fcrner in the early 19th century\n- **Codeine**\n- **Raw opium** - the dried exudate from the poppy seed capsule\n\n## Semi-Synthetic Opioids\n\nThese are **chemically modified versions of natural opiates** that originate from the opium poppy but are altered in laboratories. Examples include:\n- **Heroin** - made from morphine through acetylation\n- **Oxycodone** - derived from thebaine (another opium alkaloid)\n- **Hydrocodone**\n- **Hydromorphone**\n- **Oxymorphone**\n\n## Synthetic Opioids\n\nThese are **completely man-made in laboratories** and do not come from natural plant sources at all. They are designed to mimic the chemical structure and effects of natural opiates. Examples include:\n- **Fentanyl**\n- **Methadone**\n- **Tramadol**\n- **Buprenorphine**\n\n## Summary\n\n| Type | Source |\n|------|--------|\n| Natural opiates | Directly from opium poppy plant |\n| Semi-synthetic opioids | Chemically modified natural opiates (ultimately from poppy) |\n| Synthetic opioids | Completely lab-created, no plant origin |\n\nIt's worth noting that the term \"opioid\" is now commonly used as an umbrella term that encompasses all three categories\u2014natural, semi-synthetic, and synthetic\u2014while \"opiate\" specifically refers only to the naturally derived substances from the opium poppy.\n\nSources:\n1. https://libguides.mskcc.org/publichealth/opioids\n2. https://recoverycentersofamerica.com/blogs/opiate-withdrawal-symptoms-guide/\n3. https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsrelatedtodrugpoisoninginenglandandwales/2024registrations\n4. https://www.cdc.gov/overdose-prevention/glossary/?utm_campaign=Bundle&utm_medium=referral&utm_source=Bundle\n5. https://shareok.org/server/api/core/bitstreams/6e68b627-744e-4cda-bfec-483594125a4a/content\n6. https://theses.hal.science/tel-04204627v1/file/GUERRERO_MORENO_Adrian_these_2022.pdf\n7. https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/opiate\n8. https://mountainvalleyrecovery.com/opiate-vs-opioid-what-is-the-difference/\n9. https://www.townsendla.com/blog/opioids-vs-opiates\n10. https://www.goodrx.com/classes/opioids/opiates-vs-opioids?srsltid=AfmBOoqZwypiBVtOX1ouqdJDqwHJZgsanLJz27XTB-o2r_AaxU0ycBjc",
+  "usage": {
+    "completion_tokens": 760,
+    "prompt_tokens": 9094,
+    "total_tokens": 9854,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

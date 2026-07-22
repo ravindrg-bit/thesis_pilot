@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_6c83b87033596338",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:19:31.972819+00:00",
+  "query_text": "what county is new york new york in?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cd010eb5d21bc5243d583",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "New York, New York (meaning New York City) is located in **New York County**, which is the borough of **Manhattan**.\n\nNew York City is unique in that it consists of five boroughs, and each borough is also a county:\n\n- **Manhattan** = New York County\n- **Brooklyn** = Kings County\n- **Queens** = Queens County\n- **The Bronx** = Bronx County\n- **Staten Island** = Richmond County\n\nSo when someone refers to \"New York, New York\" (the city), the primary county associated with it is New York County (Manhattan), though the city as a whole spans five counties.\n\nSources:\n1. https://guides.newman.baruch.cuny.edu/nyc_data\n2. https://gisgeography.com/new-york-county-map/\n3. https://getworldmap.com/new-york-county-map/\n4. https://geology.com/county-map/new-york.shtml\n5. https://portal.311.nyc.gov/article/?kanumber=KA-02877",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780273169,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 224,
+        "prompt_tokens": 8493,
+        "total_tokens": 8717,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what county is new york new york in?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cd00f379d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"2eb8535e6a1cd00f4f50a50001d90f8b\"},\"usage\":{\"total_tokens\":8336}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cd00f379d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"2eb8535e6a1cd00f4f50a50001d90f8b\"},\"usage\":{\"total_tokens\":8336}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"2eb8535e6a1cd00f4f50a50001d90f8b\"},\"usage\":{\"total_tokens\":8336}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "New York, New York (meaning New York City) is located in **New York County**, which is the borough of **Manhattan**.\n\nNew York City is unique in that it consists of five boroughs, and each borough is also a county:\n\n- **Manhattan** = New York County\n- **Brooklyn** = Kings County\n- **Queens** = Queens County\n- **The Bronx** = Bronx County\n- **Staten Island** = Richmond County\n\nSo when someone refers to \"New York, New York\" (the city), the primary county associated with it is New York County (Manhattan), though the city as a whole spans five counties.\n\nSources:\n1. https://guides.newman.baruch.cuny.edu/nyc_data\n2. https://gisgeography.com/new-york-county-map/\n3. https://getworldmap.com/new-york-county-map/\n4. https://geology.com/county-map/new-york.shtml\n5. https://portal.311.nyc.gov/article/?kanumber=KA-02877",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 8493,
+    "total_tokens": 8717,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

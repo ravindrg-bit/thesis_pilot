@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 2,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:23.327025+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "ae01e96e-b7c9-46d4-bd17-5a864eb97af9",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators get square roots by using **iterative numerical methods** that quickly refine an initial guess until the answer is accurate to the device\u2019s precision.[1][2][3] They do not usually \u201cdiscover\u201d an exact infinite decimal; instead, they compute a very close approximation and round it to the number of digits they can store.[1][2]\n\nThe main idea is:\n\n- Start with a **rough estimate**.\n- Repeatedly improve it using an algebraic rule.\n- Stop when the remaining error is smaller than the machine\u2019s precision.[1][2][5]\n\nTwo common approaches are:\n\n- **Newton-Raphson / Babylonian method**: if you want \\( \\sqrt{S} \\), start with a guess \\(x\\) and replace it with something like \\( \\frac{x + S/x}{2} \\). Each iteration usually makes the result much more accurate, often doubling the number of correct digits near the solution.[2][5]\n- **Digit-by-digit methods**: these work a lot like long division, building the square root one digit at a time by grouping the original number into pairs of digits and choosing each next digit so the partial square stays as close as possible to the target.[1][3]\n\nModern hardware often uses even faster implementations based on **polynomial approximations** plus Newton-Raphson refinement, or methods related to logarithms and exponentials on some processors.[2][4] For example, a processor may first get a rough estimate from a table or polynomial, then use one or more refinement steps to make it highly accurate.[2][4]\n\nWhy this works so well:\n\n- The square-root function is smooth, so nearby guesses can be corrected efficiently.\n- Iterative methods have **fast convergence**, meaning the error shrinks very quickly.[2][5]\n- Floating-point hardware has a fixed precision, so once the result is accurate enough, the device can stop.[1][2]\n\nIn short, computers are accurate because they combine a **good initial guess** with a mathematically efficient **refinement algorithm** and then round the result to the limits of their number system.[1][2][5]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914383,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 440,
+      "prompt_tokens": 15,
+      "total_tokens": 455,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00044,
+        "request_cost": 0.005,
+        "total_cost": 0.00545
+      }
+    },
+    "citations": [
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://aiichironakano.github.io/cs596/Sqrt.pdf",
+      "https://www.cantorsparadise.com/the-square-root-algorithm-f97ab5c29d6d",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "[PDF] How Computers Calculate Square Root?",
+        "url": "https://aiichironakano.github.io/cs596/Sqrt.pdf",
+        "last_updated": "2025-12-18",
+        "snippet": "How Computers Calculate. Square Root? Aiichiro Nakano. Collaboratory for Advanced Computing & Simulations. Department of Computer Science. Department of Physics\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "The Square Root Algorithm - Cantor's Paradise",
+        "url": "https://www.cantorsparadise.com/the-square-root-algorithm-f97ab5c29d6d",
+        "date": "2021-08-20",
+        "last_updated": "2025-03-29",
+        "snippet": "Steps \u00b7 Pairing: Starting from the right, group the digits of the given number in pairs of two. \u00b7 Initial guess: Start with the leftmost group.",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "How To Calculate Any Square Root. An Ancient Method That Powers Modern Computers. 2M views \u00b7 1 year ago ...more\u00a0...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators get square roots by using **iterative numerical methods** that quickly refine an initial guess until the answer is accurate to the device\u2019s precision.[1][2][3] They do not usually \u201cdiscover\u201d an exact infinite decimal; instead, they compute a very close approximation and round it to the number of digits they can store.[1][2]\n\nThe main idea is:\n\n- Start with a **rough estimate**.\n- Repeatedly improve it using an algebraic rule.\n- Stop when the remaining error is smaller than the machine\u2019s precision.[1][2][5]\n\nTwo common approaches are:\n\n- **Newton-Raphson / Babylonian method**: if you want \\( \\sqrt{S} \\), start with a guess \\(x\\) and replace it with something like \\( \\frac{x + S/x}{2} \\). Each iteration usually makes the result much more accurate, often doubling the number of correct digits near the solution.[2][5]\n- **Digit-by-digit methods**: these work a lot like long division, building the square root one digit at a time by grouping the original number into pairs of digits and choosing each next digit so the partial square stays as close as possible to the target.[1][3]\n\nModern hardware often uses even faster implementations based on **polynomial approximations** plus Newton-Raphson refinement, or methods related to logarithms and exponentials on some processors.[2][4] For example, a processor may first get a rough estimate from a table or polynomial, then use one or more refinement steps to make it highly accurate.[2][4]\n\nWhy this works so well:\n\n- The square-root function is smooth, so nearby guesses can be corrected efficiently.\n- Iterative methods have **fast convergence**, meaning the error shrinks very quickly.[2][5]\n- Floating-point hardware has a fixed precision, so once the result is accurate enough, the device can stop.[1][2]\n\nIn short, computers are accurate because they combine a **good initial guess** with a mathematically efficient **refinement algorithm** and then round the result to the limits of their number system.[1][2][5]",
+  "usage": {
+    "completion_tokens": 440,
+    "prompt_tokens": 15,
+    "total_tokens": 455,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00044,
+      "request_cost": 0.005,
+      "total_cost": 0.00545
+    }
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,195 @@
+{
+  "artifact": "scaleup_query_registry",
+  "version": "v2",
+  "frozen": true,
+  "created_utc": "2026-06-06T15:11:40.807516+00:00",
+  "total_queries": 250,
+  "composition": {
+    "pilot_carryover": 100,
+    "fresh_draw_20260606": 150
+  },
+  "carryover_seed": 20260530,
+  "fresh_draw_seed": 20260606,
+  "geobench": {
+    "repo": "GEO-Optim/geo-bench",
+    "config": "test",
+    "split": "test",
+    "total_rows": 1000,
+    "fingerprint": "7528bc01bd253b4f",
+    "datasets_lib_version": "4.8.5",
+    "duplicates_removed": 11,
+    "candidate_pool_size": 889
+  },
+  "intent_distribution": {
+    "informational": {
+      "count": 200,
+      "pct": 80.0
+    },
+    "navigational": {
+      "count": 25,
+      "pct": 10.0
+    },
+    "transactional": {
+      "count": 25,
+      "pct": 10.0
+    },
+    "abstain": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "other": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "domain_distribution": {
+    "science": {
+      "count": 29,
+      "pct": 11.6
+    },
+    "arts and entertainment": {
+      "count": 26,
+      "pct": 10.4
+    },
+    "health": {
+      "count": 20,
+      "pct": 8.0
+    },
+    "jobs and education": {
+      "count": 12,
+      "pct": 4.8
+    },
+    "people and society": {
+      "count": 11,
+      "pct": 4.4
+    },
+    "food and drink": {
+      "count": 11,
+      "pct": 4.4
+    },
+    "computers and electronics": {
+      "count": 11,
+      "pct": 4.4
+    },
+    "history": {
+      "count": 9,
+      "pct": 3.6
+    },
+    "law and government": {
+      "count": 9,
+      "pct": 3.6
+    },
+    "business and industrial": {
+      "count": 7,
+      "pct": 2.8
+    },
+    "politics": {
+      "count": 7,
+      "pct": 2.8
+    },
+    "finance": {
+      "count": 7,
+      "pct": 2.8
+    },
+    "sports": {
+      "count": 6,
+      "pct": 2.4
+    },
+    "books and literature": {
+      "count": 5,
+      "pct": 2.0
+    },
+    "physics": {
+      "count": 5,
+      "pct": 2.0
+    },
+    "environment": {
+      "count": 4,
+      "pct": 1.6
+    },
+    "biology": {
+      "count": 4,
+      "pct": 1.6
+    },
+    "internet and telecom": {
+      "count": 3,
+      "pct": 1.2
+    },
+    "technology": {
+      "count": 3,
+      "pct": 1.2
+    },
+    "travel": {
+      "count": 3,
+      "pct": 1.2
+    },
+    "geography": {
+      "count": 3,
+      "pct": 1.2
+    },
+    "law": {
+      "count": 3,
+      "pct": 1.2
+    },
+    "pets and animals": {
+      "count": 2,
+      "pct": 0.8
+    },
+    "automotive": {
+      "count": 2,
+      "pct": 0.8
+    },
+    "philosophy": {
+      "count": 1,
+      "pct": 0.4
+    },
+    "religion": {
+      "count": 1,
+      "pct": 0.4
+    },
+    "engineering": {
+      "count": 1,
+      "pct": 0.4
+    },
+    "games": {
+      "count": 1,
+      "pct": 0.4
+    },
+    "language": {
+      "count": 1,
+      "pct": 0.4
+    },
+    "military": {
+      "count": 1,
+      "pct": 0.4
+    }
+  },
+  "exclusions": {
+    "duplicates_removed_from_geobench_pool": 11,
+    "other_exclusions": 0,
+    "notes": "No queries excluded for fetch failures or malformed text; GEO-Bench test split is pre-cleaned."
+  },
+  "stratification": {
+    "primary_intent_rule": "informational > navigational > transactional > abstain > instrumental",
+    "pilot_intent_counts": {
+      "informational": 75,
+      "navigational": 12,
+      "transactional": 13
+    },
+    "fresh_draw_quotas": {
+      "informational": 125,
+      "navigational": 13,
+      "transactional": 12
+    },
+    "combined_target": {
+      "informational": 200,
+      "navigational": 25,
+      "transactional": 25
+    }
+  },
+  "sha256": "c05877855eaa3ceb81d9d229b0def66e0fbd5d488b1a7312ae09646d9dd4aa2b",
+  "pilot_registry_source": "data/pilot/queries/pilot_queries_v2.parquet",
+  "query_id_scheme": "sha256(query_text.strip())[:16], prefix 'gb_'",
+  "registry_file": "data/scaleup/queries/scaleup_queries_v2.parquet",
+  "preview_file": "data/scaleup/queries/scaleup_queries_v2_preview.md"
+}

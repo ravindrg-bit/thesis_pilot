@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:15:15.156849+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2722cea63d40921e296347",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can craft an authentic pirate captain's motivational speech for you. Here's what I'd say to rally my crew:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and fine buccaneers!**\n\nListen well, for I speak of gold enough to sink the *Flying Dutchman* herself! Yonder map in my hold bears the mark of Captain Kidd's own hand\u2014aye, the very devil who fooled the gallows and took his secret to the grave. Only I\u2014and perhaps the devil himself\u2014know where that treasure lies, and I mean to dig it up while I still draw breath!\n\nNow hear me true: **every man jack among you shall share in the spoils!** No navy captain offers such fortune\u2014no merchantman ever split his profits fair. But *this* crew, *my* crew, shall count their coins by the chestful! The penalty for cowardice is the plank, but the reward for courage? More rum than ye can swim in, more gold than ye can spend, and a name that'll echo across the seven seas!\n\nThe voyage be long, the waters rough, and the Spanish dogs may try our mettle\u2014but what of it? **Calm seas don't make skilled captains,** and easy plunder never made a pirate rich! We've laughed through storms before, we've danced with the noose and lived to tell it. The next island holds something amazing\u2014I feel it in me bones, as sure as I feel the deck beneath me boots!\n\nSo raise your tankards, check your pistols, and look lively! **Keep your compass steady and your cutlasses ready, mateys!** For tonight we sail toward destiny, and may Davy Jones himself try to stop us!\n\n**Now... WHO'S WITH ME?!**\"\n\n---\n\n*Then I'd slam my rum down, let loose a mighty \"ARRRR!\", and watch the crew cheer themselves hoarse.*\n\n---\n\n**Sources:**\n1. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y\n2. https://generalleadership.com/pirate/\n3. https://piratesofcharleston.com/our-crew/\n4. https://punscope.com/captain-puns/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949710,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 502,
+        "prompt_tokens": 2649,
+        "total_tokens": 3151,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2722cd98b2",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9594ed6f6a2722cd680f160001f030cb\"},\"usage\":{\"total_tokens\":2485}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2722cd98b2",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9594ed6f6a2722cd680f160001f030cb\"},\"usage\":{\"total_tokens\":2485}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9594ed6f6a2722cd680f160001f030cb\"},\"usage\":{\"total_tokens\":2485}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can craft an authentic pirate captain's motivational speech for you. Here's what I'd say to rally my crew:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and fine buccaneers!**\n\nListen well, for I speak of gold enough to sink the *Flying Dutchman* herself! Yonder map in my hold bears the mark of Captain Kidd's own hand\u2014aye, the very devil who fooled the gallows and took his secret to the grave. Only I\u2014and perhaps the devil himself\u2014know where that treasure lies, and I mean to dig it up while I still draw breath!\n\nNow hear me true: **every man jack among you shall share in the spoils!** No navy captain offers such fortune\u2014no merchantman ever split his profits fair. But *this* crew, *my* crew, shall count their coins by the chestful! The penalty for cowardice is the plank, but the reward for courage? More rum than ye can swim in, more gold than ye can spend, and a name that'll echo across the seven seas!\n\nThe voyage be long, the waters rough, and the Spanish dogs may try our mettle\u2014but what of it? **Calm seas don't make skilled captains,** and easy plunder never made a pirate rich! We've laughed through storms before, we've danced with the noose and lived to tell it. The next island holds something amazing\u2014I feel it in me bones, as sure as I feel the deck beneath me boots!\n\nSo raise your tankards, check your pistols, and look lively! **Keep your compass steady and your cutlasses ready, mateys!** For tonight we sail toward destiny, and may Davy Jones himself try to stop us!\n\n**Now... WHO'S WITH ME?!**\"\n\n---\n\n*Then I'd slam my rum down, let loose a mighty \"ARRRR!\", and watch the crew cheer themselves hoarse.*\n\n---\n\n**Sources:**\n1. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y\n2. https://generalleadership.com/pirate/\n3. https://piratesofcharleston.com/our-crew/\n4. https://punscope.com/captain-puns/",
+  "usage": {
+    "completion_tokens": 502,
+    "prompt_tokens": 2649,
+    "total_tokens": 3151,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

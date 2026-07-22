@@ -1,0 +1,134 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "perplexity",
+  "run_index": 5,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T04:42:17.842780+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you explain dependency injection in C# like a gangster?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "7c83e3a7-4163-4146-8a9b-3bb7f47b2c94",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Dependency injection in C# is basically when your class *doesn\u2019t go out and recruit its own muscle*\u2014it gets the stuff it needs handed to it from the outside. In practice, that usually means your class depends on an **interface**, and a DI container gives it the concrete implementation at runtime.[1][5][6]\n\nHere\u2019s the gangster version:\n\n- Your class is the **boss**.\n- Its helpers are **dependencies**.\n- Instead of the boss *creating* those helpers itself, somebody else **supplies** them.[2][6]\n- That keeps the boss from being tied to one specific helper, which makes the code easier to change and test.[2][5][6]\n\nA simple C# example:\n\n```csharp\npublic interface ILogger\n{\n    void Log(string message);\n}\n\npublic class ConsoleLogger : ILogger\n{\n    public void Log(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class OrderService\n{\n    private readonly ILogger _logger;\n\n    public OrderService(ILogger logger)\n    {\n        _logger = logger;\n    }\n\n    public void PlaceOrder()\n    {\n        _logger.Log(\"Order placed.\");\n    }\n}\n```\n\nIn that setup, `OrderService` is not making a `ConsoleLogger` itself. It just says, \u201cI need an `ILogger`,\u201d and something else hands it one.[1][2][6]\n\nThe usual flow in C# is:\n\n- define an **interface** for the dependency\n- create a **concrete implementation**\n- inject it through the **constructor**\n- register it in the **DI container**\n- let the container resolve it when needed[1][5][6]\n\nConstructor injection is the most common and recommended style in .NET, because the dependency is explicit and the class can\u2019t be created without it.[2][5][6] Property or setter injection exists too, but it\u2019s used less often and is generally less favored in ASP.NET Core because dependencies become less obvious.[1][2][5]\n\nIf you want, I can also give you:\n- a **full ASP.NET Core example**\n- a **super-short streetwise explanation**\n- or a **\u201cDI vs IoC\u201d breakdown** in the same gangster style",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780893737,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 458,
+      "prompt_tokens": 14,
+      "total_tokens": 472,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00046,
+        "request_cost": 0.005,
+        "total_cost": 0.00547
+      }
+    },
+    "citations": [
+      "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+      "https://builtin.com/articles/dependency-injection",
+      "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+      "https://www.youtube.com/watch?v=s6EVfmUgX60",
+      "https://codewithmukesh.com/blog/dependency-injection-in-aspnet-core-explained/",
+      "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview"
+    ],
+    "search_results": [
+      {
+        "title": "What is Dependency Injection in C# With Example (Guide)",
+        "url": "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+        "date": "2025-09-16",
+        "last_updated": "2026-06-07",
+        "snippet": "Dependency Injection is a key concept in C#'s object-oriented programming. Unlike hard-coding them inside, it allows you to inject dependencies into a class.",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection: A Guide With Examples | Built In",
+        "url": "https://builtin.com/articles/dependency-injection",
+        "date": "2024-06-10",
+        "last_updated": "2025-12-17",
+        "snippet": "Dependency injection is a technique in which you make the interactions between objects as minimal as possible through specific dependencies.",
+        "source": "web"
+      },
+      {
+        "title": "Learn Dependency Injection in less than 20 minutes! - C# DI",
+        "url": "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+        "date": "2024-06-11",
+        "last_updated": "2026-06-06",
+        "snippet": "In less than 30 minutes you will master C# Dependency Injection, from constructor injection, to setter and interface injection,\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection in C# .NET - YouTube",
+        "url": "https://www.youtube.com/watch?v=s6EVfmUgX60",
+        "date": "2021-05-12",
+        "last_updated": "2025-08-04",
+        "snippet": "Comments \u00b7 Dependency Injection in . \u00b7 Dependency Injection \u00b7 C# Dependency Injection Explanation in . \u00b7 Learn Dependency Injection in less than 20\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection in ASP.NET Core Explained - codewithmukesh",
+        "url": "https://codewithmukesh.com/blog/dependency-injection-in-aspnet-core-explained/",
+        "date": "2025-03-30",
+        "last_updated": "2026-06-06",
+        "snippet": "Dependency Injection (DI) is a design pattern that helps you build software that's easier to manage, test, and scale.",
+        "source": "web"
+      },
+      {
+        "title": "Dependency injection - .NET - Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview",
+        "date": "2026-01-28",
+        "last_updated": "2026-06-04",
+        "snippet": "Learn how to use dependency injection within your .NET apps. Discover how to define service lifetimes and express dependencies in C#.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Dependency injection in C# is basically when your class *doesn\u2019t go out and recruit its own muscle*\u2014it gets the stuff it needs handed to it from the outside. In practice, that usually means your class depends on an **interface**, and a DI container gives it the concrete implementation at runtime.[1][5][6]\n\nHere\u2019s the gangster version:\n\n- Your class is the **boss**.\n- Its helpers are **dependencies**.\n- Instead of the boss *creating* those helpers itself, somebody else **supplies** them.[2][6]\n- That keeps the boss from being tied to one specific helper, which makes the code easier to change and test.[2][5][6]\n\nA simple C# example:\n\n```csharp\npublic interface ILogger\n{\n    void Log(string message);\n}\n\npublic class ConsoleLogger : ILogger\n{\n    public void Log(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class OrderService\n{\n    private readonly ILogger _logger;\n\n    public OrderService(ILogger logger)\n    {\n        _logger = logger;\n    }\n\n    public void PlaceOrder()\n    {\n        _logger.Log(\"Order placed.\");\n    }\n}\n```\n\nIn that setup, `OrderService` is not making a `ConsoleLogger` itself. It just says, \u201cI need an `ILogger`,\u201d and something else hands it one.[1][2][6]\n\nThe usual flow in C# is:\n\n- define an **interface** for the dependency\n- create a **concrete implementation**\n- inject it through the **constructor**\n- register it in the **DI container**\n- let the container resolve it when needed[1][5][6]\n\nConstructor injection is the most common and recommended style in .NET, because the dependency is explicit and the class can\u2019t be created without it.[2][5][6] Property or setter injection exists too, but it\u2019s used less often and is generally less favored in ASP.NET Core because dependencies become less obvious.[1][2][5]\n\nIf you want, I can also give you:\n- a **full ASP.NET Core example**\n- a **super-short streetwise explanation**\n- or a **\u201cDI vs IoC\u201d breakdown** in the same gangster style",
+  "usage": {
+    "completion_tokens": 458,
+    "prompt_tokens": 14,
+    "total_tokens": 472,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00046,
+      "request_cost": 0.005,
+      "total_cost": 0.00547
+    }
+  },
+  "run_profile": "scaleup"
+}

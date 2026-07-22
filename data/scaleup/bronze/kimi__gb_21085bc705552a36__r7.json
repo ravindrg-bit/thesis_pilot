@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_21085bc705552a36",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T06:43:12.476533+00:00",
+  "query_text": "Have any new literary genres emerged in this century?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26644b9938ec220006e3fa",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yes, several new literary genres and subgenres have emerged in the 21st century, driven largely by digital technology, globalization, and changing social values. Here are the key ones:\n\n## Digital and Technology-Driven Genres\n\n**Cyber Literature / Digital Literature** \u2014 This encompasses works exploring technology, virtual reality, and digital cultures. Narratives often unfold within digital spaces like online forums or MMORPGs, reflecting contemporary anxieties and possibilities about our increasingly digital lives.\n\n**Hypertext Fiction** \u2014 A form of electronic literature where readers navigate through linked text segments non-linearly, creating multiple reading paths and outcomes. This transforms the reader from passive receiver to active participant.\n\n**Interactive Storytelling** \u2014 Combining traditional narrative with reader participation, often through video games, apps, and multimedia formats. This genre creates immersive experiences where audiences influence story outcomes, bridging literature and technology.\n\n**Flash Fiction / Micro Fiction** \u2014 While very short stories existed before, this form has gained prominence as a distinct genre in the 21st century, typically under 1,000 words (some definitions say under 1,500). It emphasizes brevity, immediacy, and dense prose with poetic intensity, well-suited to digital consumption and modern attention spans.\n\n## Expanded Traditional Forms\n\n**Slam Poetry / Spoken Word** \u2014 Competitive performance poetry that combines writing, performance, audience participation, and competition. It has evolved into a recognized art form with live audience engagement, distinct from traditional page poetry.\n\n**Visual Poetry and Multimedia Poetry** \u2014 Poetry that breaks from classical meter and rhyme, incorporating spatial organization, graphic structure, video, and audio elements. Readers perceive meaning not only from words but from their visual and spatial arrangement.\n\n**Autofiction** \u2014 A blending of autobiography and fiction where authors incorporate real-life experiences into fictionalized narratives, blurring the boundaries between reality and imagination.\n\n## Thematic and Hybrid Genres\n\n**Eco-literature / Climate Fiction (Cli-Fi)** \u2014 Literature addressing environmental concerns, climate change, and ecological crises. This has emerged as a distinct thematic genre reflecting urgent global concerns.\n\n**Speculative Fiction** \u2014 While science fiction and fantasy have long histories, \"speculative fiction\" has emerged as a broader umbrella term encompassing alternative realities, near-future scenarios, and explorations of societal issues through imaginative lenses.\n\n**Young Adult (YA) Literature** \u2014 Though not entirely new, YA has exploded as a distinct commercial and artistic category in the 21st century, with its own conventions, themes (identity, mental health, social inequality), and dedicated readership spanning all ages.\n\n**Network Literature / Web Fiction** \u2014 Particularly prominent in China and other countries, this refers to literature created specifically for online platforms, often serialized and incorporating reader feedback into the creative process.\n\n## Key Drivers of Genre Evolution\n\nThe emergence of these genres reflects several 21st-century developments:\n- **Digital platforms and e-books** enabling new forms of publication and reader interaction\n- **Social media and online literary platforms** allowing instant global connectivity between authors and readers\n- **Globalization and multiculturalism** facilitating cross-cultural exchanges and hybrid forms\n- **Postmodern and post-postmodern experimental approaches** that break down linear narratives and classical genre boundaries\n\nSources:\n1. https://prezi.com/p/cyvzydne6yac/global-21st-century-literary-genres/\n2. https://nor-ijournal.com/wp-content/uploads/2025/11/NJD_168-66-69.pdf\n3. https://dir.upsc.md/handle/123456789/7756/Burdujan_Radu-literature_English.pdf\n4. https://ejerp.id-sre.org/index.php/pjer/article/download/58/36/310\n5. https://brainly.in/question/24981328\n6. https://www.chinawriter.com.cn/n1/2017/0904/c405175-29512070.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780901131,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 805,
+        "prompt_tokens": 8667,
+        "total_tokens": 9472,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Have any new literary genres emerged in this century?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26645bf913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"3510cbfa6a26645a4f50a50001f02bb0\"},\"usage\":{\"total_tokens\":8512}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26645bf913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"3510cbfa6a26645a4f50a50001f02bb0\"},\"usage\":{\"total_tokens\":8512}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"3510cbfa6a26645a4f50a50001f02bb0\"},\"usage\":{\"total_tokens\":8512}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yes, several new literary genres and subgenres have emerged in the 21st century, driven largely by digital technology, globalization, and changing social values. Here are the key ones:\n\n## Digital and Technology-Driven Genres\n\n**Cyber Literature / Digital Literature** \u2014 This encompasses works exploring technology, virtual reality, and digital cultures. Narratives often unfold within digital spaces like online forums or MMORPGs, reflecting contemporary anxieties and possibilities about our increasingly digital lives.\n\n**Hypertext Fiction** \u2014 A form of electronic literature where readers navigate through linked text segments non-linearly, creating multiple reading paths and outcomes. This transforms the reader from passive receiver to active participant.\n\n**Interactive Storytelling** \u2014 Combining traditional narrative with reader participation, often through video games, apps, and multimedia formats. This genre creates immersive experiences where audiences influence story outcomes, bridging literature and technology.\n\n**Flash Fiction / Micro Fiction** \u2014 While very short stories existed before, this form has gained prominence as a distinct genre in the 21st century, typically under 1,000 words (some definitions say under 1,500). It emphasizes brevity, immediacy, and dense prose with poetic intensity, well-suited to digital consumption and modern attention spans.\n\n## Expanded Traditional Forms\n\n**Slam Poetry / Spoken Word** \u2014 Competitive performance poetry that combines writing, performance, audience participation, and competition. It has evolved into a recognized art form with live audience engagement, distinct from traditional page poetry.\n\n**Visual Poetry and Multimedia Poetry** \u2014 Poetry that breaks from classical meter and rhyme, incorporating spatial organization, graphic structure, video, and audio elements. Readers perceive meaning not only from words but from their visual and spatial arrangement.\n\n**Autofiction** \u2014 A blending of autobiography and fiction where authors incorporate real-life experiences into fictionalized narratives, blurring the boundaries between reality and imagination.\n\n## Thematic and Hybrid Genres\n\n**Eco-literature / Climate Fiction (Cli-Fi)** \u2014 Literature addressing environmental concerns, climate change, and ecological crises. This has emerged as a distinct thematic genre reflecting urgent global concerns.\n\n**Speculative Fiction** \u2014 While science fiction and fantasy have long histories, \"speculative fiction\" has emerged as a broader umbrella term encompassing alternative realities, near-future scenarios, and explorations of societal issues through imaginative lenses.\n\n**Young Adult (YA) Literature** \u2014 Though not entirely new, YA has exploded as a distinct commercial and artistic category in the 21st century, with its own conventions, themes (identity, mental health, social inequality), and dedicated readership spanning all ages.\n\n**Network Literature / Web Fiction** \u2014 Particularly prominent in China and other countries, this refers to literature created specifically for online platforms, often serialized and incorporating reader feedback into the creative process.\n\n## Key Drivers of Genre Evolution\n\nThe emergence of these genres reflects several 21st-century developments:\n- **Digital platforms and e-books** enabling new forms of publication and reader interaction\n- **Social media and online literary platforms** allowing instant global connectivity between authors and readers\n- **Globalization and multiculturalism** facilitating cross-cultural exchanges and hybrid forms\n- **Postmodern and post-postmodern experimental approaches** that break down linear narratives and classical genre boundaries\n\nSources:\n1. https://prezi.com/p/cyvzydne6yac/global-21st-century-literary-genres/\n2. https://nor-ijournal.com/wp-content/uploads/2025/11/NJD_168-66-69.pdf\n3. https://dir.upsc.md/handle/123456789/7756/Burdujan_Radu-literature_English.pdf\n4. https://ejerp.id-sre.org/index.php/pjer/article/download/58/36/310\n5. https://brainly.in/question/24981328\n6. https://www.chinawriter.com.cn/n1/2017/0904/c405175-29512070.html",
+  "usage": {
+    "completion_tokens": 805,
+    "prompt_tokens": 8667,
+    "total_tokens": 9472,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

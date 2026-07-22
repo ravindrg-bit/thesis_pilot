@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b99af0c2c38c09a0",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:03:31.935867+00:00",
+  "query_text": "Book a taxi for a pickup at the airport",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a272002baccb30f6146053a",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can't actually book a taxi for you directly, but I can guide you on how to book an airport taxi pickup based on the available services. Here are the main options:\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms**\n\nMost airport taxi services allow you to book online through their websites. The general process is:\n\n1. **Enter your trip details** - pickup location (airport), destination, date, and time\n2. **Choose your vehicle** - select from standard cars, premium vehicles, or minibuses based on your needs\n3. **Get a fixed fare quote** - prices are calculated instantly based on distance and vehicle class\n4. **Book and pay online** - secure your reservation with credit/debit card or PayPal\n5. **Receive confirmation** - you'll get email/SMS confirmation with driver details\n\n### 2. **What Information You'll Need**\n\nWhen booking, have these details ready:\n- **Flight number** (essential for flight monitoring)\n- **Expected arrival time**\n- **Number of passengers**\n- **Amount of luggage**\n- **Destination address**\n- **Contact phone number**\n\n### 3. **Airport Pickup Process**\n\nAfter booking, here's what typically happens:\n- Your driver will **meet you at the arrivals area exit** (after passport control and baggage claim)\n- They'll hold a **nameplate** with your name\n- Many services include **flight monitoring** - if your flight is delayed, they adjust pickup time automatically at no extra charge\n- The driver will assist with luggage\n\n### 4. **Booking Timing Recommendations**\n\n- **Standard vehicles**: Book at least 16 hours in advance\n- **Premium vehicles/large minibuses**: Book at least 24 hours in advance\n- **Urgent transfers**: Some services accept last-minute bookings, but availability isn't guaranteed\n\n### 5. **Alternative Options**\n\n- **Ride-hailing apps** (Uber, Careem, Bolt) - available at most major airports with designated pickup zones\n- **Official airport taxis** - available 24/7 at taxi ranks outside arrivals\n- **Phone booking** - call local taxi companies directly\n\n### 6. **Tips for a Smooth Experience**\n\n- Pre-booking avoids scams, overcharging, and waiting in taxi queues\n- Fixed fare bookings mean no surprises regardless of traffic\n- Avoid leaving the airport with unlicensed local taxis if you've pre-booked, as you typically won't get refunds\n\n---\n\n**To proceed with booking, I need to know:**\n- Which **airport** are you arriving at?\n- What is your **destination**?\n- How many **passengers** and how much **luggage**?\n- What **date and time** do you need pickup?\n\nWith these details, I can help you find the most suitable booking option for your specific location.\n\n---\n\nSources:\n1. https://kiwitaxi.com/en/china\n2. https://kiwitaxi.com/en/madagascar\n3. https://kiwitaxi.com/en/tunisia\n4. https://taxiserviceinvaranasi.com/airport-taxi/\n5. https://kiwitaxi.com/en/latvia\n6. https://www.booktaxisevilla.com/book-online\n7. https://smart-moov.com/en/biarritz-airport-transfers/\n8. https://airporttaxis.com/\n9. https://umrahpathtaxi.com/jeddah-to-madinah/\n10. https://kiwitaxi.com/en/indonesia\n11. https://kiwitaxi.com/en/spain\n12. https://kiwitaxi.com/en/thailand\n13. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n14. https://ktaxi.net/\n15. https://taksi.ch/en/blog/flughafen-zuerich-taxi/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780948995,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 816,
+        "prompt_tokens": 8817,
+        "total_tokens": 9633,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Book a taxi for a pickup at the airport"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a272002efe8",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"77d7e1326a2720014f50a50001f1d20a\"},\"usage\":{\"total_tokens\":8662}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a272002efe8",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"77d7e1326a2720014f50a50001f1d20a\"},\"usage\":{\"total_tokens\":8662}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"77d7e1326a2720014f50a50001f1d20a\"},\"usage\":{\"total_tokens\":8662}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can't actually book a taxi for you directly, but I can guide you on how to book an airport taxi pickup based on the available services. Here are the main options:\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms**\n\nMost airport taxi services allow you to book online through their websites. The general process is:\n\n1. **Enter your trip details** - pickup location (airport), destination, date, and time\n2. **Choose your vehicle** - select from standard cars, premium vehicles, or minibuses based on your needs\n3. **Get a fixed fare quote** - prices are calculated instantly based on distance and vehicle class\n4. **Book and pay online** - secure your reservation with credit/debit card or PayPal\n5. **Receive confirmation** - you'll get email/SMS confirmation with driver details\n\n### 2. **What Information You'll Need**\n\nWhen booking, have these details ready:\n- **Flight number** (essential for flight monitoring)\n- **Expected arrival time**\n- **Number of passengers**\n- **Amount of luggage**\n- **Destination address**\n- **Contact phone number**\n\n### 3. **Airport Pickup Process**\n\nAfter booking, here's what typically happens:\n- Your driver will **meet you at the arrivals area exit** (after passport control and baggage claim)\n- They'll hold a **nameplate** with your name\n- Many services include **flight monitoring** - if your flight is delayed, they adjust pickup time automatically at no extra charge\n- The driver will assist with luggage\n\n### 4. **Booking Timing Recommendations**\n\n- **Standard vehicles**: Book at least 16 hours in advance\n- **Premium vehicles/large minibuses**: Book at least 24 hours in advance\n- **Urgent transfers**: Some services accept last-minute bookings, but availability isn't guaranteed\n\n### 5. **Alternative Options**\n\n- **Ride-hailing apps** (Uber, Careem, Bolt) - available at most major airports with designated pickup zones\n- **Official airport taxis** - available 24/7 at taxi ranks outside arrivals\n- **Phone booking** - call local taxi companies directly\n\n### 6. **Tips for a Smooth Experience**\n\n- Pre-booking avoids scams, overcharging, and waiting in taxi queues\n- Fixed fare bookings mean no surprises regardless of traffic\n- Avoid leaving the airport with unlicensed local taxis if you've pre-booked, as you typically won't get refunds\n\n---\n\n**To proceed with booking, I need to know:**\n- Which **airport** are you arriving at?\n- What is your **destination**?\n- How many **passengers** and how much **luggage**?\n- What **date and time** do you need pickup?\n\nWith these details, I can help you find the most suitable booking option for your specific location.\n\n---\n\nSources:\n1. https://kiwitaxi.com/en/china\n2. https://kiwitaxi.com/en/madagascar\n3. https://kiwitaxi.com/en/tunisia\n4. https://taxiserviceinvaranasi.com/airport-taxi/\n5. https://kiwitaxi.com/en/latvia\n6. https://www.booktaxisevilla.com/book-online\n7. https://smart-moov.com/en/biarritz-airport-transfers/\n8. https://airporttaxis.com/\n9. https://umrahpathtaxi.com/jeddah-to-madinah/\n10. https://kiwitaxi.com/en/indonesia\n11. https://kiwitaxi.com/en/spain\n12. https://kiwitaxi.com/en/thailand\n13. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n14. https://ktaxi.net/\n15. https://taksi.ch/en/blog/flughafen-zuerich-taxi/",
+  "usage": {
+    "completion_tokens": 816,
+    "prompt_tokens": 8817,
+    "total_tokens": 9633,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

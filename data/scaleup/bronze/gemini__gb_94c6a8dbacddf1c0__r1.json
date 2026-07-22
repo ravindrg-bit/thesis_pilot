@@ -1,0 +1,311 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "gemini",
+  "run_index": 1,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T10:22:34.716121+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 10:22:34 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=27052",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Computers and calculators do not have massive lookup tables with the square roots of every possible number stored in their memory. Instead, they rely on a combination of **clever calculus, binary representation tricks, and dedicated hardware circuits** to calculate square roots to near-perfect accuracy in a fraction of a microsecond. \n\nDepending on whether you are using a modern computer processor, an older handheld calculator, or high-performance software, different methods are used.\n\n---\n\n### 1. The Mathematical Engine: Newton\u2019s Method\nThe most common way software calculates square roots is an iterative algorithm called the **Newton-Raphson Method** (historically known as the Babylonian method). \n\nInstead of guessing blindly, this formula takes a rough guess and refines it. If you want to find the square root of a number $S$, and your current guess is $x_n$, the formula to get a much better guess ($x_{n+1}$) is:\n\n$$x_{n+1} = \\frac{1}{2} \\left(x_n + \\frac{S}{x_n}\\right)$$\n\nThis formula has a property called **quadratic convergence**, meaning **the number of correct decimal places roughly doubles with every single step**.\n\n#### An Example: Finding $\\sqrt{25}$\nLet's say we want to find the square root of 25, and we start with a terrible first guess of **1**:\n*   **Step 1:** $\\frac{1}{2} \\left(1 + \\frac{25}{1}\\right) = \\mathbf{13}$\n*   **Step 2:** $\\frac{1}{2} \\left(13 + \\frac{25}{13}\\right) \\approx \\mathbf{7.46}$\n*   **Step 3:** $\\frac{1}{2} \\left(7.46 + \\frac{25}{7.46}\\right) \\approx \\mathbf{5.41}$\n*   **Step 4:** $\\frac{1}{2} \\left(5.41 + \\frac{25}{5.41}\\right) \\approx \\mathbf{5.015}$\n*   **Step 5:** $\\frac{1}{2} \\left(5.015 + \\frac{25}{5.015}\\right) \\approx \\mathbf{5.00002}$\n\nWith a starting guess as bad as $1$, we reached $99.999\\%$ accuracy in just 5 steps. If we had started with a sensible guess (like $4$ or $6$), it would have taken only 2 or 3 steps.\n\n---\n\n### 2. The Computer's Shortcut: \"The Starting Guess\" Trick\nTo make Newton's method run instantly, computers need a highly accurate starting guess. They get this by exploiting how numbers are stored in binary.\n\nComputers store decimal numbers in a scientific format (called **IEEE 754 floating-point format**). Under this system, any number is represented as:\n$$\\text{Mantissa} \\times 2^{\\text{Exponent}}$$\n\nMathematically, the square root of this is:\n$$\\sqrt{\\text{Mantissa}} \\times 2^{\\frac{\\text{Exponent}}{2}}$$\n\nDividing the exponent by 2 in binary is incredibly easy. A computer can do this instantly by performing a **bit-shift** (literally sliding the binary digits one slot to the right). \n\nBy doing a bit-shift on the raw binary data of the number and applying a minor mathematical correction, the computer can instantly generate a starting guess that is already **over 99% accurate**. Because the starting guess is so close, the computer only needs to run Newton's method **once or twice** to reach 16 decimal places of precision. \n\n*(This trick is the basis of the famous \"Fast Inverse Square Root\" algorithm utilized in 1990s 3D video games like Quake III to calculate lighting physics at lightning speed).*\n\n---\n\n### 3. How Handheld Calculators Do It: CORDIC\nPocket calculators (especially older ones from the 1970s through the 1990s) run on highly restricted, low-power microchips. Unlike computers, these chips historically did not have hardware dedicated to multiplication or division, which made Newton's method too computationally expensive.\n\nInstead, they used **CORDIC** (Coordinate Rotation Digital Computer). \nCORDIC is an algorithm that can calculate square roots, sines, cosines, and logarithms using only three basic operations:\n1.  **Addition**\n2.  **Subtraction**\n3.  **Bit-shifting** (halving or doubling binary numbers)\n\nCORDIC works by using vector geometry, taking a coordinate and \"rotating\" it step-by-step using a small, pre-programmed lookup table of angles. By incrementally rotating the vector until it aligns with the axis, the calculator extracts the square root. Because it only requires addition and bit-shifts, it is incredibly efficient and cheap to build into hardware.\n\n---\n\n### 4. Inside Modern CPUs: Direct Hardware Circuits\nIn modern computers, smartphones, and gaming consoles, you don't even need software to run these loops. The CPU's physical silicon has a dedicated section called the **Floating-Point Unit (FPU)** with specialized circuits designed to calculate square roots in hardware (using assembly instructions like `FSQRT` or `SQRTSS`).\n\nThese hardware circuits typically use:\n*   **SRT Division/Square Root:** An electronic circuit layout that calculates the square root digit-by-digit (very similar to how you would do long division by hand, but optimized for base-2 binary).\n*   **Goldschmidt\u2019s Algorithm:** A variation of Newton\u2019s method that can perform multiple multiplications in parallel. Since modern CPU hardware is incredibly fast at parallel multiplication, Goldschmidt's algorithm allows the chip to calculate a highly precise square root in just a few clock cycles.\n\n### Summary\nComputers and calculators achieve such high accuracy because:\n1.  **They use binary formatting** to instantly find a near-perfect starting guess.\n2.  **They apply iterative math (Newton's Method)** where accuracy exponentially doubles with every step.\n3.  **They use dedicated silicon hardware (FPUs)** designed specifically to run these mathematical steps in fractions of a nanosecond.",
+              "thought": null,
+              "thought_signature": "EqApCp0pAQw51sf6OFzi6nAqWsoikQDgD19MR2ZKhYei-JKITwa5VtY7mHJNBZwvNzC_4HZkkiCFHKQ9MzwNkQozW7Dza37qtjl1Tmb01wgCSGO3iW7w0IwkM0BWYtaAzgGFnzv7OgHxKf6SeIPC-pob9TUVGR_mks69dFz3TWj53D1Zt77DaiJq2-4ZUcFAEmfCVfapa2DUJNESo_Mrert86AhFhm47WE22daBQt6y9tKSnPEcoaNaOeS9dxykKI9r9kqechMqoeUFOl71K8UNXVHKDV6Q8-m_BVJ4XCeymFBPYnqA4YnUehFPTrUb2y61hUgXN_8jhdBEaoaaWyIKS1nRTDj9fu35_vHv5qFfM8zajzN0OhWoktqSZVNojRw07TUkYzknZx5_4N1UkgSPPQ4_gebt9xCM9Ox71PkPwxDUYehbvplYu0rCnbow85RU3ynbcpZq3DMVmaGiDMysLmuQw8eTqt2QMvJ2PhXgc1JsJYhcv-SiF74foGskqVWVm6c1lukrziR891pyoaDEV-Pgr76OESoQuX3wa8aNTE7j7WuMGQ25nlLyDPiSwXsYi8cdHtfqCPYpZdSX-AwnawH2GgQdC324mGFhIT2KXJ96XjNwvTtIoW1blUuTcLQbBP2M69r12Sfd1T23TrhE5SXfM3Jr6dg1ANyjxB2zpY0HU4W_rovOVB5U57tc-qpKMKpJfdUNNlQQGIEIIXE_k4m0qHCPOas3FgUS0GIh_sk8pKzTEnvAISvniwx1Q_QpYLjPNje5-qS41tZIDz-B6WHYm3peRIXajavaP3M8ZevcQah8RXXkgDUrlMLuwyBXeK7lQU8kUUrq2Z8FwLOCL68Q6OYAYtZ2Xh6xW5imhOlJN8XKfQ31qYII04DJprnZghhyN95_2eBXrkvTey1L_Pmoy18vy10oMSLvEeLdVgXnwzrG1lfh6b8uV_x-zei23-cktLRk0oC731X6pvgJWS7RH_4qD8d0Daq5JKIeDyHRsPs5ukoH4ATEUgFcbL8HEjeytBKR9IdOMwj3XnMorjcDMK4h8OKN4stGw9whmAn0N3kECJCMrPVyAcSurQoXR5dZqaTVRqnyVab1rNxF1MMaKpY4dR7iBoG1I3Fa5lW7OybG_hQdGrQ5hd3PZeP8pK0XEcQDJ6B5q9XamhBTC9lEolJrRyoE4cV_uGVaFXiBWBtSS9auuK1Ssm5sjd2gk8H7imbJjvS___jUulFoGU_gNjVFR8ryFeKduCtvTYXBd89GNXYpPOIDqXDWkf5E_n4GgtIMvHFgjHTCLPjt1W3bu0Z7qSiRLjBHEwcfPJuhZqP2PMPACa68464sTSKkAmWd-xykmSZjeb-up1RvOv3TTbJr7YFJRZLlracXhCa8nLtG8Ho9YjdzyBjSyZKn7NS42VWW4I9TWvc0axMywmCp7G53tTMLAkm46PJSTCq2ScmXPintxBRzr0RZxVUpoFRY0LQ0F19LEnPg3LZpothTWhFTjdTOz8DStE7fO_hCk-xz8tGvRNY561qw-7zi1fK2qV7Fws5K0YHO9yRLipxySVJeta2ZZOmZz6jHhXmxcCfkn6O-omhOiGsyrCCtuxLfzRS_mkmB1lMMzi7_wxzn8vpSIS1WWnwut42WlN__ohLsGXhHncQtAcyejaOoZkzXueCH77IFrC7WHKWAsE6goog9omEYiyjWpyfSlqFCCbxmUwzlKOYgLh2jP2Cg84lVYBhFF8IKTrHM9pxL7H-8u-bDtP_iURAlO6o7UxdUKKf2ci6srQtgOq7LjikImqHu7su1wahgLynQ6SbINQRv2Cm1xMRNtmtVsGOSGrvsq5ysmF0l5JuOxSWt52Iql2LzZYhfcfX_Nd5l_QkdH6kZrRI1TG-d34seY9EEj4l7IR6TBX-2Xxa8xXIpWYfcfChApia6NBsCjLGwt9eFNcb43hDB0llnY9fiZYwRv3tG81rgoTig-LkC9wjyINSJaasYKXAao5xgKjqitCM5m8rrTY--k0njJOU09oan2d88lXiVCa3Hs35yqd-i_HIBrY0xxTI8O2HQjE94e9Gf7xFFf8FcuSJ31T7EP_1qJ35yyJcOjPRBUUeI63bJbUftzcmqEPeZ-Bc9Vxuh8LpP2cz8H5D-uRFRtmZNxDvxn7dwhh_B87RND6_T-zjhVQwcDN0TUQvluAy6T-5O9YwPu-jWQOE1mXNW_I3Jw6sG9YOZMByTgLaFKMDDxL6nTiakQU1oWxn3aXUpbqajzc2URlev1n4RbkQDagn7n8Mv6Mjt11K1oNK01t5X2yy3NFC8aYIptW-qkDuh-lUDHMm0GIpqvrYP-UB0jSjT_HLZly-jhFh91iXxzBfGI1TaEI_qxyygEY12eW705PFEPI7jloVcn8zCLWh8K2Pu4e49y7IxQjBUW7fZ53tiWnQzdvUhalUdTPKNgqQgZxqktLXagUUJvADyHe5h-xKIC91MfP0rHEdGEbgfr2LrmIwNUxsqiUVEetKaR4LsyahCkn88c4CMGk6laswiR4sIGot01jwJU5LRQgIfJ_7O29OmCUnW_si88GtZeApr5EU9yvZMMsPjRSH8dcPDC0svyQCyMIu0qRbBVFl3JAPkKIzSWsNCtCVrulZN4xBIFwG_CyBeIQsdBdGy4oxYSlumktGoJij69aioYWxokHWjzI2ISPmmnAGjuJDRFOS9siGMhoVwFT4Btf1T2OpxQTaPXKmhQYxGNzRZGSBbvtGb3sohxH_Z54JgFCaT9__0RUdhXicoskKGeXm5mncBWYmi42kLXI7cLWdyQ6ntIGW8yiGfrAZDrkXAroUcfpdzodItS2XxdESkae_oUgq7uwuuqhbvMcXbTrYrLObG-rARrMLAzhgG8m3RImr260MPRUXIalU9_ARKByn3_cVOJv6gEHIiDlUNaaT7oSGNhrJXigBoNeONHcCIN3WP3D-zT_WcVY8Z6t13YEjYquZvhBMYE2mFJxLwFTDuYQa-NKntUBB5mUx5okDmR_bIFzvQFGXWrJ42PD8m6IpFrfbv-aAY2tyJcdLxkzhoPFZKSDwIrQxP_SGMiaVif0WHGb2wJM-QuqiyiTomdWxtx91XldFSKTpZw6p6r8oz8xkMPbomzA5bq9RJxSN8HxanXOTT5RcOEUtZGOCOsTO4B-TJ-n7hf-i-WsVnOjOJ-fzOsccI84YKadIrjW-stW1P98I88ToIe7FOFz1xMiPRNpE_NHM040U2cRgjS7fUz25oaolDWL4UOhpPMMfS17XHmjl0Mogfa6Eht1cIljahz7ytuSi4cGU9RW5g6CVsqu7_ovb2r0PSyN-Vvs_aUt4oXIjrvFp0AEY8phTvSREwxYHJQLSUOnQw7j555r4rEolbkbtxfcIbKQzRTq--ZBlGOzrRLMyT2dMu5QUIgti2ceVtezkfquxBJrEsGzWe2MBeCyhC1F59_akcVCP2FrEDpw1FIiv_vedSSLjqqw2T33lmbD5NBKlMP9T72aWJimWVKlKSybVr_qS-FLohmvhgxTDfjmXn1MA_8xEXwBvru2vUrMt-EuGQ3I-xIDkbpZEvpBKhf-4pBzGL1s28aPsRiXu1B6s2UkjAjLhI9Jkga_OCBawq-HZO2qrMv-vNIe0S0lgGREjTXlcnr9ypcV-GM_CGYWaVUfcz1fnxpAzUKSTWteQChPiWUcrW1RlNXCvJrzADUkHIk0JlOcJa84AvU2od4x-N54IcOQX1CRGvVrJFcYQrm-_oVA8ynK-z5mkU4QNafwZ1CHRRtTM37DNb2tHsbCCQHphkkRoGL0U_NvIR8j3n1ulLUQBjTOcONSWx845eYnQe-jeLYowNKJHa7Yl_PwdMk37S4C35umcxs02Uj-D4L59I6Ssv3GbsGZcPEk1epcQ7N9V4AB7QPXOsIgBxHa6_EkXyOx5JD4Kv4SyQtOBhdLWr__mhFMXtS3reluxVc5fFXN11PC3hg_t7UPLsg2vvVbWx9lmO7YVzDrsAXhvFzn9eVNt7A9rCsQ5ldqPZaINstduPVu3ss0d5piToV6tLlnkkZY9-Jx4Hb2qR4lNe3lT4oXxbU-1yGQJ2S-VEJNcrRXkaDPcksfphukV5FJH8T7tNnlHvOfG6QK5Td_j4R6gWb-WnZDzmr4StSFCUPNOGEn6_1GFoesxkqQ7iGyonWAkIZoUsh3TjTCxQ65GxeSw_J7NA0_HQdsOqLZjC-kVEkq_eJZAujNxT17FZfPK-7G0BDnZNILVYZ6NgDUmb9K3lxzh6o7_sqZc5glnL9Xeql3BSJfJocUdjrdg_DekhpwxGbwdqI5OQTL2s96X5Gm-81to1TOdQltzit6DnKoDQESHQzOW18fQWTQeVdf3X0Lh9xEKpc_-1Fj_TzlZSkPscpUKrV8GEodb3OiHiu3S5kJ8Aw-lpM4qbcN1CiRgxhvRR4BD8Z4luHlh7TkDxLQxzv2od9NkSpGo0eFtdAUkXF2DrrZsIBiC3vJVnrnRKCBB3FVcKQ7ua-a8vrmP-GnLrv15ByAENQz2dy8EhYi4PwW3GD-veCqz5R-J1lveeDUnugcBVDGQfE4IdHftcGdlNB75YAsgDUqRjFFEDZX-m86i71HKCXyLhMmTAx8WyEgrcri0TGDe6Lp2QIX7j2wbrd5C1EhRpUgMOm60wGDIooCRZTAU3mCE6IOUx-qylVEqeKxmiFgpzxfIdqxWwggSnuAjzxM6UEU7HT2hXdw1B58J7OgRcIjdu58FfLHvaxVv58ab3LDLHKXiLm47OJAlLBDE6Z6ihPe-MvM5poa-pW2_9XHvu0uxesHsavrDQmQ6DQeZ49sjywmR25JdnHV5BktuAItXyvleCGKxtAcX0XKP_029bzKWfMvQPHh9deL24L6bfw9Qr1Xy3Bsg-R64RKxRs2i1lQ1m7LaU1sSGjKWYjgzSfOwDAqW5d-g2OzQgqfQOFTK9PTssFQI99-UmdLVIJry4ZIi0F3_pkKo7u6H6SZ8gUi7Xn6IS5ertEiHm8sBQ9woTEU2y_MjwKkUX2DWJ-VB6CrqQoXfFxHxRMW85Sv6uuvsNEsa_ixJ4Q0aKSXhprBtK56tNddiXQ0JL7NwiZ-lOzY42ymJIiG7wByIF_n70qS_skRAj6Yng_ta3dYiSImx3rFXf5S8aOWX5YBASoYl55Dt7Rj1ART4ry7Rbqr0sBOsAeqdHn10-DvmvcIAyyjuE0dIturrsFqKaJ8E9-tlX2NsfXH8d9Uw5SX7jZlSNgYsmE0yg3dQs_mMjj0BwmgaYUStWel5752OZ7pqmEgmPybTJuMAK4ocpAr8gnq-J28021NzWB4NHtoWJxPU-Wx66y9HV8GB_aPk01Ash-SlURTrKLWelDxd9Mz2RMbC794ly_8HdwtwS5mk1VW7qCXe5vtU-MsXD58LHqqVWm9g6azecRTWPKVmDKnEjsTULbkKzxkVVUOm-HBN3WGxeaMhJQizLpT_NuI1I1BFcF2p6Luu1eK1mI5d2XykijQ8A6zaI36PR-BkllqgPrBl_uCeHr1b0ofjkIwXFtqhFadnZAxGonHWUYsdSYV2lQKdyE8Wjvv07oQ-U1R3VboJ2rVT89uS0vkl2nyyR2qdw8HUpSsErZzU_duI4HtTdjE_q7hHwn3WKri6xyVBBlg1-TpcvzYtOHNSsepMbx_XOk88LoQVyWUsMKF_evmMhsQHF_GiaugLN9JfIJrbJSwF9QAi5YLRYFTlkuzEgvpo1li7U46yW3CD2FfQ-aFKRsk1oMNZsJEda-3asKiC3zARrRghbedY-L4zU20d-jYR_Pm8eeLdk2PO9Txc0FGwx8n-3Fyn1UMM90Uf3eEAK2OMWLBSZaPO-m0NF9Fi9Wfyfzo00Na9M-LtPH-qdqGCPgukck4Vm3wHnESbleYpFYFRp7jCinFw3i0_U_8DBLcLLsPGoJixnKU8hy2k8F0_ftdqZGstM9llJC_GyXPd7GcvutPxBXsisklLeDDsnGhNeblY8OLa4Wl3yt05suX-B8kRYvLmEHlbjmJluD9P9CKjd_6sGQxG1SJuWG8uQNpQh66pzWMcXOY3mFf55MNAMOSNIQb019st0wT_TVwoyhADEbH19kA3xkAgWPaXNcHTtmZfZWrYmwL-jSbh_1EF5IJ89PwKXzArdz3hUNS00aYRfd5L-PNaeRD3VVq-Bdyl1DDxV9gyF7tBJhmtI2ito-Qv7nvrTYVvjYe6iCM7C-n3YCn3auE5BY0eUw1l1olifP0MRDaX-rFgjPoPhusAPHYVCAVaEc_27ozvSm9yQ6UEVuXjdNHOe5AALpV9IlNfTIw1Rq265zAuxZ_bhKGPWb3JK3bQLNEWR5KtrlkTr1KyG8Hmxxylxg7-DMKCAhBHCys0o-yRUFVCBaLD5ovdODXSEsTt1aHlJ5S57hZj-ri3u2qO6EYYhFDACe1_oa21s-Z68uYg9Pqi10-ejwEkaeM0PV6qyMTF4R0LP0H9pOAa7F6gXE4zZUKVIYIz_HbiXjp17Z-VnR2nNBziVCj4tjmpTLGesrpMQFiuYbPP2l0_EIgdUzlPWlWgXJQNc4uRpq7-UUJFdQJbKZlJ6i1FMwuxxV_8EHRBe2byOtH14vSoC-L-89T8GodFrTOyvDVqeLyb72A3WCMyHgRdIC_te4Lz_CiJnvFBzytmRLrbxy9n_Os6tS4aoapZ6vrqSmpLnoJPMWZCr8yrrcCE6MpblvUmCXzN7duPgIpAYvN83Qx3vWW2p0XRFqi5WL_dUsDjoStuRAWGaCXvWUEaqIrmkGIY-Lnh57NSDyFicX1HZgUyP7ZmKdTn2gZhINGIGXPptAS4_KzXEAPEnYbudXJgkrpIJUxPyg__vWx4txGRFslplKIE38Tmh_3JGhh8_WqGhNQV5KVnFWtnPAjN4XOfY-1Yvz1HRX2Tk1BMO0O35BGqYsLr6fe6dDrQKyONGH1edwBnyyb5doRYOxoLuR4PMLpNi2QUVeOMfQYQ-iW2iIAlLW4d4eS7DkA1h98XczZEpFSOetrrI9yFKsEar1Qybqb",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "androidcalculator.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuDc00TC-UeoT5ZLH15hbnZxLYZsvlM5douVC8mfvZ9rgiNwuknuz7bE-s_ui57eG1znnwG8h1ZGoS6znPWxtcWmXeC5QDgla3j9sHGahy_vykuvrifnCA3do445LU_0SshB8oV6QYEOsLZCUqTpAe2eBisiiLYtgDEwVvP6bGtQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrJnnjYPsm7PhdxXJSuz7sIg52zhWhfgFDdVM8YDG5jrPHCsY3auAZnBgXWDLmoZSspNq9B90-MPsvwH7o_F1ilLKoavM0RWTMQ8IRO9BKJCu_shrJ4kZ8dZbGOwGI9KpdmdEQ1Gr8Vt0W"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFta9fdTVDJBfBSAycN9fLHppTAL9UxUi10lnSTGQoYNZbfT_5HX5PyQh_NpxmlQM2WJ7orfjg-KAnB4yNHcjZGEN0uX6T-yS3sbJQLeKm6HXq1yGAvgVQIEoDg21CwXQq76DxvSK5gDRHDsF8="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "mdpi.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz0iT0xPNJ6TfFBSnYjt2LfBBElqCPC3cGjKKpCA98RFe-y18WtX8NhcQN7kvBckHsRtkRq3rQU4HwAsvzv0fXhci9Bln3GZ-Iv1Dy7MOmeuhsB3LRgAqW_gmTSN894A=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEVsFsf1m0D7Xk02wUCrPZV4Um9lBPPnAWmEaCyLFzSiB2uYXz02sJ9d4CEA1cH7YCtvQf0VSNMOLoUoIZNv0pB3G3l9b2iVz9bZrP8vAZtHM5_REYad2XLMtN43SUrwp97zt9rfO9SPDkOiyOBCWX4yvgcsGAXloAJCsTcTmxlbokz8U-lXY7i_lx4EQlvdjwikgKT7iuzkND"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "quora.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFLjQDWo3L-NR-d-EgwROifRmk4pzY8c7tMZ6gcos-wXu32qlg-SbDJJMsxHDHH42fejc8LiJmFG7WcIix9FmvLe0dIGB_gRgPDn_LbKVBOA2pmCeeMnzJtewo-oImcLgDmXGCLcvNLVsdru49PCBUlJoeTmrh0zOez54wVOdq0IegpgHcwdt-3p7D43okgGiY4DZxqDY="
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                1
+              ],
+              "segment": {
+                "start_index": 503,
+                "end_index": 707,
+                "part_index": null,
+                "text": "The Mathematical Engine: Newton\u2019s Method\nThe most common way software calculates square roots is an iterative algorithm called the **Newton-Raphson Method** (historically known as the Babylonian method)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 991,
+                "end_index": 1140,
+                "part_index": null,
+                "text": "This formula has a property called **quadratic convergence**, meaning **the number of correct decimal places roughly doubles with every single step**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 2108,
+                "end_index": 2206,
+                "part_index": null,
+                "text": "Computers store decimal numbers in a scientific format (called **IEEE 754 floating-point format**)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 2471,
+                "end_index": 2593,
+                "part_index": null,
+                "text": "A computer can do this instantly by performing a **bit-shift** (literally sliding the binary digits one slot to the right)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 2941,
+                "end_index": 3114,
+                "part_index": null,
+                "text": "*(This trick is the basis of the famous \"Fast Inverse Square Root\" algorithm utilized in 1990s 3D video games like Quake III to calculate lighting physics at lightning speed"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 3459,
+                "end_index": 3527,
+                "part_index": null,
+                "text": "Instead, they used **CORDIC** (Coordinate Rotation Digital Computer)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4,
+                5
+              ],
+              "segment": {
+                "start_index": 4274,
+                "end_index": 4493,
+                "part_index": null,
+                "text": "The CPU's physical silicon has a dedicated section called the **Floating-Point Unit (FPU)** with specialized circuits designed to calculate square roots in hardware (using assembly instructions like `FSQRT` or `SQRTSS`)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 4496,
+                "end_index": 4734,
+                "part_index": null,
+                "text": "These hardware circuits typically use:\n*   **SRT Division/Square Root:** An electronic circuit layout that calculates the square root digit-by-digit (very similar to how you would do long division by hand, but optimized for base-2 binary)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                5
+              ],
+              "segment": {
+                "start_index": 5311,
+                "end_index": 5440,
+                "part_index": null,
+                "text": "**They use dedicated silicon hardware (FPUs)** designed specifically to run these mathematical steps in fractions of a nanosecond"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=how+do+modern+calculators+calculate+square+roots&client=app-vertex-grounding&safesearch=active\">how do modern calculators calculate square roots</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=modern+CPU+square+root+algorithm+hardware&client=app-vertex-grounding&safesearch=active\">modern CPU square root algorithm hardware</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "how do modern calculators calculate square roots",
+            "modern CPU square root algorithm hardware"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "z5cmapjpLL6NvdIPht-kgAE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1451,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 14,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 14
+        }
+      ],
+      "thoughts_token_count": 2647,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 4112,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Computers and calculators do not have massive lookup tables with the square roots of every possible number stored in their memory. Instead, they rely on a combination of **clever calculus, binary representation tricks, and dedicated hardware circuits** to calculate square roots to near-perfect accuracy in a fraction of a microsecond. \n\nDepending on whether you are using a modern computer processor, an older handheld calculator, or high-performance software, different methods are used.\n\n---\n\n### 1. The Mathematical Engine: Newton\u2019s Method\nThe most common way software calculates square roots is an iterative algorithm called the **Newton-Raphson Method** (historically known as the Babylonian method). \n\nInstead of guessing blindly, this formula takes a rough guess and refines it. If you want to find the square root of a number $S$, and your current guess is $x_n$, the formula to get a much better guess ($x_{n+1}$) is:\n\n$$x_{n+1} = \\frac{1}{2} \\left(x_n + \\frac{S}{x_n}\\right)$$\n\nThis formula has a property called **quadratic convergence**, meaning **the number of correct decimal places roughly doubles with every single step**.\n\n#### An Example: Finding $\\sqrt{25}$\nLet's say we want to find the square root of 25, and we start with a terrible first guess of **1**:\n*   **Step 1:** $\\frac{1}{2} \\left(1 + \\frac{25}{1}\\right) = \\mathbf{13}$\n*   **Step 2:** $\\frac{1}{2} \\left(13 + \\frac{25}{13}\\right) \\approx \\mathbf{7.46}$\n*   **Step 3:** $\\frac{1}{2} \\left(7.46 + \\frac{25}{7.46}\\right) \\approx \\mathbf{5.41}$\n*   **Step 4:** $\\frac{1}{2} \\left(5.41 + \\frac{25}{5.41}\\right) \\approx \\mathbf{5.015}$\n*   **Step 5:** $\\frac{1}{2} \\left(5.015 + \\frac{25}{5.015}\\right) \\approx \\mathbf{5.00002}$\n\nWith a starting guess as bad as $1$, we reached $99.999\\%$ accuracy in just 5 steps. If we had started with a sensible guess (like $4$ or $6$), it would have taken only 2 or 3 steps.\n\n---\n\n### 2. The Computer's Shortcut: \"The Starting Guess\" Trick\nTo make Newton's method run instantly, computers need a highly accurate starting guess. They get this by exploiting how numbers are stored in binary.\n\nComputers store decimal numbers in a scientific format (called **IEEE 754 floating-point format**). Under this system, any number is represented as:\n$$\\text{Mantissa} \\times 2^{\\text{Exponent}}$$\n\nMathematically, the square root of this is:\n$$\\sqrt{\\text{Mantissa}} \\times 2^{\\frac{\\text{Exponent}}{2}}$$\n\nDividing the exponent by 2 in binary is incredibly easy. A computer can do this instantly by performing a **bit-shift** (literally sliding the binary digits one slot to the right). \n\nBy doing a bit-shift on the raw binary data of the number and applying a minor mathematical correction, the computer can instantly generate a starting guess that is already **over 99% accurate**. Because the starting guess is so close, the computer only needs to run Newton's method **once or twice** to reach 16 decimal places of precision. \n\n*(This trick is the basis of the famous \"Fast Inverse Square Root\" algorithm utilized in 1990s 3D video games like Quake III to calculate lighting physics at lightning speed).*\n\n---\n\n### 3. How Handheld Calculators Do It: CORDIC\nPocket calculators (especially older ones from the 1970s through the 1990s) run on highly restricted, low-power microchips. Unlike computers, these chips historically did not have hardware dedicated to multiplication or division, which made Newton's method too computationally expensive.\n\nInstead, they used **CORDIC** (Coordinate Rotation Digital Computer). \nCORDIC is an algorithm that can calculate square roots, sines, cosines, and logarithms using only three basic operations:\n1.  **Addition**\n2.  **Subtraction**\n3.  **Bit-shifting** (halving or doubling binary numbers)\n\nCORDIC works by using vector geometry, taking a coordinate and \"rotating\" it step-by-step using a small, pre-programmed lookup table of angles. By incrementally rotating the vector until it aligns with the axis, the calculator extracts the square root. Because it only requires addition and bit-shifts, it is incredibly efficient and cheap to build into hardware.\n\n---\n\n### 4. Inside Modern CPUs: Direct Hardware Circuits\nIn modern computers, smartphones, and gaming consoles, you don't even need software to run these loops. The CPU's physical silicon has a dedicated section called the **Floating-Point Unit (FPU)** with specialized circuits designed to calculate square roots in hardware (using assembly instructions like `FSQRT` or `SQRTSS`).\n\nThese hardware circuits typically use:\n*   **SRT Division/Square Root:** An electronic circuit layout that calculates the square root digit-by-digit (very similar to how you would do long division by hand, but optimized for base-2 binary).\n*   **Goldschmidt\u2019s Algorithm:** A variation of Newton\u2019s method that can perform multiple multiplications in parallel. Since modern CPU hardware is incredibly fast at parallel multiplication, Goldschmidt's algorithm allows the chip to calculate a highly precise square root in just a few clock cycles.\n\n### Summary\nComputers and calculators achieve such high accuracy because:\n1.  **They use binary formatting** to instantly find a near-perfect starting guess.\n2.  **They apply iterative math (Newton's Method)** where accuracy exponentially doubles with every step.\n3.  **They use dedicated silicon hardware (FPUs)** designed specifically to run these mathematical steps in fractions of a nanosecond.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1451,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 14,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 14
+      }
+    ],
+    "thoughts_token_count": 2647,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 4112,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

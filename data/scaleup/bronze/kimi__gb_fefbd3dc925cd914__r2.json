@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_fefbd3dc925cd914",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:53:45.271027+00:00",
+  "query_text": "what temperature can food be accepted at",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25a2127f31015e6ab8048c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with the temperature standards for accepting food deliveries. The specific temperatures depend on the type of food being received:\n\n## Cold/Chilled Food Acceptance Temperature\n\n**At or below 40\u00b0F (4\u00b0C)** - In the US, perishable cold foods should be accepted at 40\u00b0F or below. The FDA Food Code specifies that cold TCS (Time/Temperature Control for Safety) foods must be received at **41\u00b0F or below** (5\u00b0C or below).\n\nIn the UK and Australia, the standard is **8\u00b0C (46\u00b0F) or below** for chilled food deliveries, though many businesses use stricter internal limits of **5\u00b0C or below** for better food safety control.\n\n## Frozen Food Acceptance Temperature\n\n**At or below 0\u00b0F (-18\u00b0C)** - Frozen foods must arrive in a **solidly frozen state**. The FDA Food Code requires that frozen foods arrive frozen solid, and you should reject any products showing evidence of having been thawed and refrozen (such as large ice crystals, discoloration, or liquid accumulation in packaging).\n\n## Hot Food Acceptance Temperature\n\n**At or above 135\u00b0F (57\u00b0C)** - Hot foods should be accepted at 135\u00b0F or above (140\u00b0F/60\u00b0C in some jurisdictions like Australia).\n\n## Key Points for Food Acceptance\n\n| Food Type | Acceptance Temperature | Action if Not Met |\n|-----------|----------------------|-------------------|\n| Cold TCS food | \u2264 41\u00b0F (5\u00b0C) | **Reject** |\n| Frozen food | Solidly frozen (\u2264 0\u00b0F/-18\u00b0C) | **Reject** |\n| Hot food | \u2265 135\u00b0F (57\u00b0C) | **Reject** |\n\n## Important Receiving Practices\n\n- **Always use a calibrated thermometer** to check temperatures upon delivery - don't rely on touch or appearance\n- Check temperatures **between packages** using a between-pack probe for more accurate readings\n- **Reject any food** that shows evidence of temperature abuse (thawed and refrozen products, condensation, off-odors, or damaged packaging)\n- Document receiving temperatures as part of your HACCP/food safety records\n- Minimize the time food spends in the \"danger zone\" (41\u00b0F-135\u00b0F / 5\u00b0C-57\u00b0C) during receiving and transfer to storage\n\nSources:\n1. https://www.meetmarcell.com/compliance-standards-food-safety/?srsltid=AfmBOoroiXT7Aprm1JQXGFZOipxlblVT_DTzzKkebdkY9Jci7LPpk0mX\n2. https://mmoww.net/food/library/freezer-storage-temperature-standards/en/\n3. https://www.tcrentalsolutions.com/blog/temperature-in-food-safety\n4. https://thermometer.co.uk/content/310-food-storage-temperatures?srsltid=AfmBOoqcPXW-Vi3lm4pIRTonWpYcm6n0VY_gxb_3nuIXgYWr4iXyTLEB\n5. https://www.health.state.mn.us/communities/environment/food/docs/fs/tcsfoodfs.pdf\n6. https://www.foodauthority.nsw.gov.au/media/3431\n7. https://www.fooddocs.com/post/food-safety-temperatures\n8. https://alwaysfoodsafe.com/en/cooking-temperature-guide\n9. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n10. https://accreditedshortcourses.com.au/safe-zone-temperatures-for-food-storage-cooking-safety-standards/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780851219,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 757,
+        "prompt_tokens": 8472,
+        "total_tokens": 9229,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what temperature can food be accepted at"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25a2117898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4f3f07146a25a2114f50a50001ee6113\"},\"usage\":{\"total_tokens\":8320}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25a2117898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4f3f07146a25a2114f50a50001ee6113\"},\"usage\":{\"total_tokens\":8320}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4f3f07146a25a2114f50a50001ee6113\"},\"usage\":{\"total_tokens\":8320}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with the temperature standards for accepting food deliveries. The specific temperatures depend on the type of food being received:\n\n## Cold/Chilled Food Acceptance Temperature\n\n**At or below 40\u00b0F (4\u00b0C)** - In the US, perishable cold foods should be accepted at 40\u00b0F or below. The FDA Food Code specifies that cold TCS (Time/Temperature Control for Safety) foods must be received at **41\u00b0F or below** (5\u00b0C or below).\n\nIn the UK and Australia, the standard is **8\u00b0C (46\u00b0F) or below** for chilled food deliveries, though many businesses use stricter internal limits of **5\u00b0C or below** for better food safety control.\n\n## Frozen Food Acceptance Temperature\n\n**At or below 0\u00b0F (-18\u00b0C)** - Frozen foods must arrive in a **solidly frozen state**. The FDA Food Code requires that frozen foods arrive frozen solid, and you should reject any products showing evidence of having been thawed and refrozen (such as large ice crystals, discoloration, or liquid accumulation in packaging).\n\n## Hot Food Acceptance Temperature\n\n**At or above 135\u00b0F (57\u00b0C)** - Hot foods should be accepted at 135\u00b0F or above (140\u00b0F/60\u00b0C in some jurisdictions like Australia).\n\n## Key Points for Food Acceptance\n\n| Food Type | Acceptance Temperature | Action if Not Met |\n|-----------|----------------------|-------------------|\n| Cold TCS food | \u2264 41\u00b0F (5\u00b0C) | **Reject** |\n| Frozen food | Solidly frozen (\u2264 0\u00b0F/-18\u00b0C) | **Reject** |\n| Hot food | \u2265 135\u00b0F (57\u00b0C) | **Reject** |\n\n## Important Receiving Practices\n\n- **Always use a calibrated thermometer** to check temperatures upon delivery - don't rely on touch or appearance\n- Check temperatures **between packages** using a between-pack probe for more accurate readings\n- **Reject any food** that shows evidence of temperature abuse (thawed and refrozen products, condensation, off-odors, or damaged packaging)\n- Document receiving temperatures as part of your HACCP/food safety records\n- Minimize the time food spends in the \"danger zone\" (41\u00b0F-135\u00b0F / 5\u00b0C-57\u00b0C) during receiving and transfer to storage\n\nSources:\n1. https://www.meetmarcell.com/compliance-standards-food-safety/?srsltid=AfmBOoroiXT7Aprm1JQXGFZOipxlblVT_DTzzKkebdkY9Jci7LPpk0mX\n2. https://mmoww.net/food/library/freezer-storage-temperature-standards/en/\n3. https://www.tcrentalsolutions.com/blog/temperature-in-food-safety\n4. https://thermometer.co.uk/content/310-food-storage-temperatures?srsltid=AfmBOoqcPXW-Vi3lm4pIRTonWpYcm6n0VY_gxb_3nuIXgYWr4iXyTLEB\n5. https://www.health.state.mn.us/communities/environment/food/docs/fs/tcsfoodfs.pdf\n6. https://www.foodauthority.nsw.gov.au/media/3431\n7. https://www.fooddocs.com/post/food-safety-temperatures\n8. https://alwaysfoodsafe.com/en/cooking-temperature-guide\n9. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n10. https://accreditedshortcourses.com.au/safe-zone-temperatures-for-food-storage-cooking-safety-standards/",
+  "usage": {
+    "completion_tokens": 757,
+    "prompt_tokens": 8472,
+    "total_tokens": 9229,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

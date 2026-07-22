@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c8288561bc264152",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T02:41:58.837469+00:00",
+  "query_text": "Where can I find the latest news about the stock market?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24da6b3f2d1aac9a756d25",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to find the latest stock market news:\n\n## Top Financial News Websites\n\n**Bloomberg** - One of the most established financial media platforms offering real-time market data, news, and analysis. It also provides professional investment tools via Bloomberg Terminal.\n\n**CNBC** - A leading business news network delivering real-time financial news, analysis, and data across TV, digital platforms, and mobile apps.\n\n**MarketWatch** - A Dow Jones subsidiary focusing on stock market news, investment insights, personal finance, and featuring customizable stock tracking and alerts.\n\n**The Wall Street Journal (WSJ)** - A highly reputable news platform with in-depth coverage of business, finance, and geopolitical news, available digitally and in print.\n\n**Financial Times (FT)** - A UK-based publication recognized globally for covering domestic and international markets, business news, economics, and finance.\n\n**Yahoo Finance** - One of the most widely used free financial platforms providing stock quotes, market news, personal finance advice, and investment tools.\n\n**Seeking Alpha** - A crowd-sourced financial research platform where investors and analysts share insights, featuring Quant Ratings for market analysis.\n\n**FINVIZ** - A stock market tool that delivers financial data, market analytics, and news coverage with comprehensive screening options.\n\n## Free News Aggregators\n\n**Zerodha Pulse** - Aggregates latest market news from sources like Economic Times, NDTV Business, The Hindu Business, and more.\n\n**BizToc** - A free financial and business news aggregator compiling articles and market insights from various sources in a customizable interface.\n\n## Specialized Market Analysis\n\n**Briefing.com** - For 34 years, a trusted source of professional stock market analysis, live coverage of earnings, upgrades/downgrades, and pre/post-market movers.\n\n**MarketBeat** - Provides real-time analyst ratings, dividend information, earnings results, financials, and headlines.\n\n## Official Market Sources\n\n- **NSE India** (https://www.nseindia.com) - National Stock Exchange of India\n- **BSE India** (https://www.bseindia.com) - Bombay Stock Exchange\n\n## Key Current Topics (May 2026)\n\nBased on recent news, markets are currently focused on:\n- US-Iran tensions and their impact on oil prices and global supply chains\n- Foreign Portfolio Investor (FPI) outflows from Indian markets\n- Federal Reserve policy decisions\n- Tech earnings (Apple, etc.)\n- Geopolitical risks affecting market volatility\n\n---\n\nSources:\n1. https://finbold.com/guide/top-10-stock-market-news-websites/\n2. https://stockanalysis.com/article/stock-research-websites/\n3. https://pulse.zerodha.com/?c=ZMPCDF%2F1000\n4. https://www.briefing.com/\n5. https://www.marketwatch.com/?eafs_enabled=false\n6. https://www.marketbeat.com/\n7. https://www.collegesimplified.in/post/stock-market-latest-news-2026-market-crash-nifty-outlook-global-trends-what-investors-should-kn\n8. http://ainvest.com/chat/share/where-can-i-get-the-most-up-to-date-premarket-for-the-us-stocks-8d1b6f",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780800108,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 678,
+        "prompt_tokens": 8649,
+        "total_tokens": 9327,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I find the latest news about the stock market?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24da6baa01",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"63b336906a24da6a4f50a50001ed4782\"},\"usage\":{\"total_tokens\":8493}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24da6baa01",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"63b336906a24da6a4f50a50001ed4782\"},\"usage\":{\"total_tokens\":8493}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"63b336906a24da6a4f50a50001ed4782\"},\"usage\":{\"total_tokens\":8493}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to find the latest stock market news:\n\n## Top Financial News Websites\n\n**Bloomberg** - One of the most established financial media platforms offering real-time market data, news, and analysis. It also provides professional investment tools via Bloomberg Terminal.\n\n**CNBC** - A leading business news network delivering real-time financial news, analysis, and data across TV, digital platforms, and mobile apps.\n\n**MarketWatch** - A Dow Jones subsidiary focusing on stock market news, investment insights, personal finance, and featuring customizable stock tracking and alerts.\n\n**The Wall Street Journal (WSJ)** - A highly reputable news platform with in-depth coverage of business, finance, and geopolitical news, available digitally and in print.\n\n**Financial Times (FT)** - A UK-based publication recognized globally for covering domestic and international markets, business news, economics, and finance.\n\n**Yahoo Finance** - One of the most widely used free financial platforms providing stock quotes, market news, personal finance advice, and investment tools.\n\n**Seeking Alpha** - A crowd-sourced financial research platform where investors and analysts share insights, featuring Quant Ratings for market analysis.\n\n**FINVIZ** - A stock market tool that delivers financial data, market analytics, and news coverage with comprehensive screening options.\n\n## Free News Aggregators\n\n**Zerodha Pulse** - Aggregates latest market news from sources like Economic Times, NDTV Business, The Hindu Business, and more.\n\n**BizToc** - A free financial and business news aggregator compiling articles and market insights from various sources in a customizable interface.\n\n## Specialized Market Analysis\n\n**Briefing.com** - For 34 years, a trusted source of professional stock market analysis, live coverage of earnings, upgrades/downgrades, and pre/post-market movers.\n\n**MarketBeat** - Provides real-time analyst ratings, dividend information, earnings results, financials, and headlines.\n\n## Official Market Sources\n\n- **NSE India** (https://www.nseindia.com) - National Stock Exchange of India\n- **BSE India** (https://www.bseindia.com) - Bombay Stock Exchange\n\n## Key Current Topics (May 2026)\n\nBased on recent news, markets are currently focused on:\n- US-Iran tensions and their impact on oil prices and global supply chains\n- Foreign Portfolio Investor (FPI) outflows from Indian markets\n- Federal Reserve policy decisions\n- Tech earnings (Apple, etc.)\n- Geopolitical risks affecting market volatility\n\n---\n\nSources:\n1. https://finbold.com/guide/top-10-stock-market-news-websites/\n2. https://stockanalysis.com/article/stock-research-websites/\n3. https://pulse.zerodha.com/?c=ZMPCDF%2F1000\n4. https://www.briefing.com/\n5. https://www.marketwatch.com/?eafs_enabled=false\n6. https://www.marketbeat.com/\n7. https://www.collegesimplified.in/post/stock-market-latest-news-2026-market-crash-nifty-outlook-global-trends-what-investors-should-kn\n8. http://ainvest.com/chat/share/where-can-i-get-the-most-up-to-date-premarket-for-the-us-stocks-8d1b6f",
+  "usage": {
+    "completion_tokens": 678,
+    "prompt_tokens": 8649,
+    "total_tokens": 9327,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

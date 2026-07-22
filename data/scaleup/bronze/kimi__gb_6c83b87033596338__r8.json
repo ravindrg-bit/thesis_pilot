@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_6c83b87033596338",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:58:43.932752+00:00",
+  "query_text": "what county is new york new york in?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2508873bc0071a2afd4b17",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, I can now answer your question.\n\n**New York, New York** refers to New York City, specifically Manhattan. It is located in **New York County** (\u7ebd\u7ea6\u90e1).\n\nThis is a unique situation in the United States where, unlike most places where cities are subordinate to counties, the five counties in New York City are actually subordinate to the city itself. The five boroughs of New York City each correspond to a county:\n\n| Borough | County |\n|---------|--------|\n| Manhattan | New York County |\n| Brooklyn | Kings County |\n| Queens | Queens County |\n| The Bronx | Bronx County |\n| Staten Island | Richmond County |\n\nSo when you see \"New York, NY\" as an address, it refers to Manhattan, which is coterminous with New York County. The name \"New York\" appears twice because it's both the city name and the county name.\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780811912,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 264,
+        "prompt_tokens": 5271,
+        "total_tokens": 5535,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what county is new york new york in?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a250886f1ab",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f15ed4216a250886680f160001ebe913\"},\"usage\":{\"total_tokens\":5122}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a250886f1ab",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f15ed4216a250886680f160001ebe913\"},\"usage\":{\"total_tokens\":5122}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f15ed4216a250886680f160001ebe913\"},\"usage\":{\"total_tokens\":5122}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, I can now answer your question.\n\n**New York, New York** refers to New York City, specifically Manhattan. It is located in **New York County** (\u7ebd\u7ea6\u90e1).\n\nThis is a unique situation in the United States where, unlike most places where cities are subordinate to counties, the five counties in New York City are actually subordinate to the city itself. The five boroughs of New York City each correspond to a county:\n\n| Borough | County |\n|---------|--------|\n| Manhattan | New York County |\n| Brooklyn | Kings County |\n| Queens | Queens County |\n| The Bronx | Bronx County |\n| Staten Island | Richmond County |\n\nSo when you see \"New York, NY\" as an address, it refers to Manhattan, which is coterminous with New York County. The name \"New York\" appears twice because it's both the city name and the county name.\n\nSources:\n1. https://zhidao.baidu.com/question/536153698.html\n2. https://zhidao.baidu.com/question/921475845801339219.html\n3. https://baike.baidu.com/en/item/The%20Administrative%20Division%20of%20the%20United%20States%20of%20America/1448209",
+  "usage": {
+    "completion_tokens": 264,
+    "prompt_tokens": 5271,
+    "total_tokens": 5535,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

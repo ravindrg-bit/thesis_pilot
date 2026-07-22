@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_149984d4005b7ec8",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T14:04:30.834922+00:00",
+  "query_text": "Should employers be required to provide paid leave?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26cbdbd64dc79da5df752f",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, whether employers should be required to provide paid leave is a complex policy question with significant variation across jurisdictions. Here's what the current landscape shows:\n\n## Current Legal Requirements\n\n**United States - No Federal Mandate**\nThe U.S. does not have a federal paid family leave program. The Family and Medical Leave Act (FMLA) guarantees eligible workers up to 12 weeks of **unpaid** leave only. As stated by the Bipartisan Policy Foundation, \"The federal Family and Medical Leave Act (FMLA) guarantees eligible workers up to 12 weeks of unpaid leave, but provides no wage replacement.\"\n\nHowever, some federal requirements have existed in limited forms:\n- Federal contractors have been required to offer at least 7 days of paid sick leave since 2017 (affecting ~300,000 workers)\n- The Families First Coronavirus Response Act temporarily required paid sick leave in 2020, but this expired\n\n**State-Level Variation**\nIndividual states have increasingly implemented their own mandates:\n- **California**: Requires paid sick leave accrual (1 hour per 30 hours worked) with specific wage statement reporting requirements\n- **Maine**: Requires paid leave for any reason for employers with 11+ employees\n- **Maryland**: Has comprehensive paid family and medical leave, plus paid sick leave\n- **Minnesota**: New program effective January 2026 providing paid family and medical leave funded through employer/employee premiums\n- **Washington State**: Has paid family and medical leave with job protection requirements, where \"Failure to comply with Paid Leave obligations is considered to be an Unlawful Act\"\n\n**International Comparison**\nMany other countries have stronger requirements:\n- **Hong Kong**: Mandates annual leave pay calculated based on average daily wages, with specific rules about consecutive days\n- **UAE**: Requires paid annual leave, paid sick leave (up to 90 days with varying pay levels), and maternity leave (60 days)\n- **Serbia**: Mandates paid leave for specific circumstances including marriage, childbirth, and serious illness of family members\n\n## Arguments For Mandatory Paid Leave\n\nProponents cite research showing benefits including:\n- Reducing financial burdens on workers\n- Preventing spread of illnesses\n- Increased use of preventive healthcare\n- Reduced on-the-job injuries\n- Fewer inappropriate emergency room visits\n\nThe KFF notes that while 79% of workers had access to paid sick leave in 2021, \"workers in certain occupations, part-time workers, and lower-wage workers are less likely to have access.\"\n\n## Arguments Against or For Caution\n\nOpponents generally argue:\n- Many employers already provide these benefits voluntarily\n- Financial implications particularly burden smaller businesses\n- Potential wage reductions to offset costs\n- Should remain a voluntary benefit rather than mandate\n\n## Practical Implementation\n\nWhere mandates exist, they typically involve:\n- Social insurance models (state-run funds with payroll deductions)\n- Employer-funded models\n- Hybrid approaches with premium splitting between employers and employees\n\n---\n\n**Conclusion**: Whether employers *should* be required to provide paid leave involves weighing worker wellbeing and public health benefits against business costs and flexibility. The trend in the U.S. has been toward more state-level mandates, while the U.S. remains an outlier among developed nations in lacking federal paid leave requirements. The answer depends significantly on one's policy priorities regarding economic security, public health, and business competitiveness.\n\nSources:\n1. https://www.brightmine.com/us/resources/hr-compliance/employee-leaves/leave-laws-by-state-chart/\n2. https://www.claconnect.com/en/resources/articles/25/minnesota-employers-paid-leave\n3. https://bipartisanpolicy.org/explainer/state-paid-family-leave-laws-across-the-u-s/\n4. https://www.labour.gov.hk/eng/faq/cap57i_whole.htm\n5. https://tmconsulting.co.rs/paid-leave-rights-what-are-the-employee-entitlements/\n6. https://paidleave.wa.gov/job-protection-requirements-for-employers/\n7. https://peoplerockhr.com/california-paid-sick-leave-accrual-wage-statement/\n8. https://www.kff.org/womens-health-policy/fact-sheet/paid-leave-in-u-s/\n9. https://dahhanbiz.com/overview-of-uae-paid-leave-entitlements/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780927452,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 897,
+        "prompt_tokens": 8462,
+        "total_tokens": 9359,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Should employers be required to provide paid leave?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26cbdaefe8",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"af03a3666a26cbda680f160001efc677\"},\"usage\":{\"total_tokens\":8312}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26cbdaefe8",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"af03a3666a26cbda680f160001efc677\"},\"usage\":{\"total_tokens\":8312}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"af03a3666a26cbda680f160001efc677\"},\"usage\":{\"total_tokens\":8312}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, whether employers should be required to provide paid leave is a complex policy question with significant variation across jurisdictions. Here's what the current landscape shows:\n\n## Current Legal Requirements\n\n**United States - No Federal Mandate**\nThe U.S. does not have a federal paid family leave program. The Family and Medical Leave Act (FMLA) guarantees eligible workers up to 12 weeks of **unpaid** leave only. As stated by the Bipartisan Policy Foundation, \"The federal Family and Medical Leave Act (FMLA) guarantees eligible workers up to 12 weeks of unpaid leave, but provides no wage replacement.\"\n\nHowever, some federal requirements have existed in limited forms:\n- Federal contractors have been required to offer at least 7 days of paid sick leave since 2017 (affecting ~300,000 workers)\n- The Families First Coronavirus Response Act temporarily required paid sick leave in 2020, but this expired\n\n**State-Level Variation**\nIndividual states have increasingly implemented their own mandates:\n- **California**: Requires paid sick leave accrual (1 hour per 30 hours worked) with specific wage statement reporting requirements\n- **Maine**: Requires paid leave for any reason for employers with 11+ employees\n- **Maryland**: Has comprehensive paid family and medical leave, plus paid sick leave\n- **Minnesota**: New program effective January 2026 providing paid family and medical leave funded through employer/employee premiums\n- **Washington State**: Has paid family and medical leave with job protection requirements, where \"Failure to comply with Paid Leave obligations is considered to be an Unlawful Act\"\n\n**International Comparison**\nMany other countries have stronger requirements:\n- **Hong Kong**: Mandates annual leave pay calculated based on average daily wages, with specific rules about consecutive days\n- **UAE**: Requires paid annual leave, paid sick leave (up to 90 days with varying pay levels), and maternity leave (60 days)\n- **Serbia**: Mandates paid leave for specific circumstances including marriage, childbirth, and serious illness of family members\n\n## Arguments For Mandatory Paid Leave\n\nProponents cite research showing benefits including:\n- Reducing financial burdens on workers\n- Preventing spread of illnesses\n- Increased use of preventive healthcare\n- Reduced on-the-job injuries\n- Fewer inappropriate emergency room visits\n\nThe KFF notes that while 79% of workers had access to paid sick leave in 2021, \"workers in certain occupations, part-time workers, and lower-wage workers are less likely to have access.\"\n\n## Arguments Against or For Caution\n\nOpponents generally argue:\n- Many employers already provide these benefits voluntarily\n- Financial implications particularly burden smaller businesses\n- Potential wage reductions to offset costs\n- Should remain a voluntary benefit rather than mandate\n\n## Practical Implementation\n\nWhere mandates exist, they typically involve:\n- Social insurance models (state-run funds with payroll deductions)\n- Employer-funded models\n- Hybrid approaches with premium splitting between employers and employees\n\n---\n\n**Conclusion**: Whether employers *should* be required to provide paid leave involves weighing worker wellbeing and public health benefits against business costs and flexibility. The trend in the U.S. has been toward more state-level mandates, while the U.S. remains an outlier among developed nations in lacking federal paid leave requirements. The answer depends significantly on one's policy priorities regarding economic security, public health, and business competitiveness.\n\nSources:\n1. https://www.brightmine.com/us/resources/hr-compliance/employee-leaves/leave-laws-by-state-chart/\n2. https://www.claconnect.com/en/resources/articles/25/minnesota-employers-paid-leave\n3. https://bipartisanpolicy.org/explainer/state-paid-family-leave-laws-across-the-u-s/\n4. https://www.labour.gov.hk/eng/faq/cap57i_whole.htm\n5. https://tmconsulting.co.rs/paid-leave-rights-what-are-the-employee-entitlements/\n6. https://paidleave.wa.gov/job-protection-requirements-for-employers/\n7. https://peoplerockhr.com/california-paid-sick-leave-accrual-wage-statement/\n8. https://www.kff.org/womens-health-policy/fact-sheet/paid-leave-in-u-s/\n9. https://dahhanbiz.com/overview-of-uae-paid-leave-entitlements/",
+  "usage": {
+    "completion_tokens": 897,
+    "prompt_tokens": 8462,
+    "total_tokens": 9359,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

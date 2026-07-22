@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_dc7ef1dbbd81090d",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:32:35.664903+00:00",
+  "query_text": "How is cheese made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24e62f45cc1879364cf6ad",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Cheese making is the process of transforming milk into cheese through a series of carefully controlled steps involving fermentation, coagulation, and aging. Here's how it works:\n\n## Basic Ingredients\n\nCheese production requires four fundamental ingredients: **milk**, **microorganisms** (starter cultures), **rennet**, and **salt** (Britannica). Different types of milk can be used, including cow, goat, sheep, and buffalo milk.\n\n## The Main Steps\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It is then **pasteurized** (heated to kill harmful bacteria) and **standardized** to adjust the fat-to-protein ratio (U.S. Dairy). Some cheesemakers use raw or lightly heat-treated milk for more extensive ripening.\n\n### 2. Acidification\n**Starter cultures**\u2014specific bacteria strains\u2014are added to the milk. These bacteria ferment lactose (milk sugar) into **lactic acid**, lowering the pH and developing flavor (Wisconsin Cheese). The type of culture varies: mesophilic cultures for soft cheeses, thermophilic cultures for harder cheeses like Parmesan.\n\n### 3. Coagulation (Curdling)\n**Rennet**, an enzyme traditionally derived from calf stomachs (now often microbial or vegetable-based), is added to the acidified milk. Rennet causes the milk protein **casein** to coagulate, forming a solid, gel-like mass called **curd** that traps fat, bacteria, and minerals. The remaining liquid is **whey** (Britannica; Cheese For Thought).\n\nSome fresh cheeses like ricotta and paneer use **acid coagulation alone** with lemon juice, vinegar, or citric acid instead of rennet.\n\n### 4. Cutting and Cooking the Curd\nThe curd is cut into small cubes with wire knives. The size matters:\n- **Smaller curds** \u2192 more whey released \u2192 drier, firmer cheeses (like Parmesan)\n- **Larger curds** \u2192 more moisture retained \u2192 softer cheeses (like Brie)\n\nThe curds are gently heated and stirred, causing them to shrink and expel more whey (U.S. Dairy).\n\n### 5. Draining and Pressing\nWhey is drained off (and can be used for whey cheeses like ricotta or processed into whey protein). The curds are then:\n- **Salted** (for flavor and preservation)\n- **Pressed into molds** to shape the cheese and remove remaining whey\n\n### 6. Aging (Ripening)\nMost cheeses are aged under controlled temperature and humidity to develop complex flavors and textures. During aging, enzymes from three sources act on the cheese:\n- Rennet or other enzymes added during coagulation\n- Microorganisms growing inside or on the cheese surface\n- Natural enzymes from the milk itself (Britannica)\n\nAging can range from a few weeks to over a year. For example:\n- **Brie**: ~1 month with *Penicillium camemberti* mold forming the white rind\n- **Cheddar**: Several months to years for sharper flavor\n- **Swiss**: 4\u201312 months, with *Propionibacterium* bacteria producing carbon dioxide gas that creates the characteristic holes (eyes)\n- **Blue cheese**: Pierced with needles to allow air in, enabling *Penicillium roqueforti* mold to grow blue veins\n\n## Fresh vs. Aged Cheeses\n\nNot all cheeses are aged. **Fresh cheeses** like cottage cheese, cream cheese, ricotta, and most mozzarella are ready to eat immediately after production and have mild, delicate flavors (Britannica).\n\n## Processed Cheese\n\nSome natural cheese is made into **pasteurized process cheese**, where grinding, mixing with emulsifiers and other ingredients, and heating to at least 65.5\u00b0C (150\u00b0F) creates a homogeneous product with extended shelf life and smooth melting properties (Britannica).\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.wisconsincheese.com/the-cheese-life/article/227/how-is-cheese-made-a-comprehensive-guide\n4. https://cheeseforthought.com/advanced-curd-cutting-techniques/\n5. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n6. https://www.researchgate.net/publication/329661953_Effect_of_Coagulants_in_Curd_forming_in_Cheese_Making\n7. https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1196879/full\n8. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n9. https://cycheese.com/article/how-cheese-is-made-article\n10. https://www.sciencedirect.com/science/article/pii/S0958694624002218",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780803119,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 1055,
+        "prompt_tokens": 8305,
+        "total_tokens": 9360,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is cheese made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24e62e51ad",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"83181c666a24e62e680f160001ebb6b6\"},\"usage\":{\"total_tokens\":8157}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24e62e51ad",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"83181c666a24e62e680f160001ebb6b6\"},\"usage\":{\"total_tokens\":8157}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"83181c666a24e62e680f160001ebb6b6\"},\"usage\":{\"total_tokens\":8157}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Cheese making is the process of transforming milk into cheese through a series of carefully controlled steps involving fermentation, coagulation, and aging. Here's how it works:\n\n## Basic Ingredients\n\nCheese production requires four fundamental ingredients: **milk**, **microorganisms** (starter cultures), **rennet**, and **salt** (Britannica). Different types of milk can be used, including cow, goat, sheep, and buffalo milk.\n\n## The Main Steps\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It is then **pasteurized** (heated to kill harmful bacteria) and **standardized** to adjust the fat-to-protein ratio (U.S. Dairy). Some cheesemakers use raw or lightly heat-treated milk for more extensive ripening.\n\n### 2. Acidification\n**Starter cultures**\u2014specific bacteria strains\u2014are added to the milk. These bacteria ferment lactose (milk sugar) into **lactic acid**, lowering the pH and developing flavor (Wisconsin Cheese). The type of culture varies: mesophilic cultures for soft cheeses, thermophilic cultures for harder cheeses like Parmesan.\n\n### 3. Coagulation (Curdling)\n**Rennet**, an enzyme traditionally derived from calf stomachs (now often microbial or vegetable-based), is added to the acidified milk. Rennet causes the milk protein **casein** to coagulate, forming a solid, gel-like mass called **curd** that traps fat, bacteria, and minerals. The remaining liquid is **whey** (Britannica; Cheese For Thought).\n\nSome fresh cheeses like ricotta and paneer use **acid coagulation alone** with lemon juice, vinegar, or citric acid instead of rennet.\n\n### 4. Cutting and Cooking the Curd\nThe curd is cut into small cubes with wire knives. The size matters:\n- **Smaller curds** \u2192 more whey released \u2192 drier, firmer cheeses (like Parmesan)\n- **Larger curds** \u2192 more moisture retained \u2192 softer cheeses (like Brie)\n\nThe curds are gently heated and stirred, causing them to shrink and expel more whey (U.S. Dairy).\n\n### 5. Draining and Pressing\nWhey is drained off (and can be used for whey cheeses like ricotta or processed into whey protein). The curds are then:\n- **Salted** (for flavor and preservation)\n- **Pressed into molds** to shape the cheese and remove remaining whey\n\n### 6. Aging (Ripening)\nMost cheeses are aged under controlled temperature and humidity to develop complex flavors and textures. During aging, enzymes from three sources act on the cheese:\n- Rennet or other enzymes added during coagulation\n- Microorganisms growing inside or on the cheese surface\n- Natural enzymes from the milk itself (Britannica)\n\nAging can range from a few weeks to over a year. For example:\n- **Brie**: ~1 month with *Penicillium camemberti* mold forming the white rind\n- **Cheddar**: Several months to years for sharper flavor\n- **Swiss**: 4\u201312 months, with *Propionibacterium* bacteria producing carbon dioxide gas that creates the characteristic holes (eyes)\n- **Blue cheese**: Pierced with needles to allow air in, enabling *Penicillium roqueforti* mold to grow blue veins\n\n## Fresh vs. Aged Cheeses\n\nNot all cheeses are aged. **Fresh cheeses** like cottage cheese, cream cheese, ricotta, and most mozzarella are ready to eat immediately after production and have mild, delicate flavors (Britannica).\n\n## Processed Cheese\n\nSome natural cheese is made into **pasteurized process cheese**, where grinding, mixing with emulsifiers and other ingredients, and heating to at least 65.5\u00b0C (150\u00b0F) creates a homogeneous product with extended shelf life and smooth melting properties (Britannica).\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.wisconsincheese.com/the-cheese-life/article/227/how-is-cheese-made-a-comprehensive-guide\n4. https://cheeseforthought.com/advanced-curd-cutting-techniques/\n5. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n6. https://www.researchgate.net/publication/329661953_Effect_of_Coagulants_in_Curd_forming_in_Cheese_Making\n7. https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1196879/full\n8. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n9. https://cycheese.com/article/how-cheese-is-made-article\n10. https://www.sciencedirect.com/science/article/pii/S0958694624002218",
+  "usage": {
+    "completion_tokens": 1055,
+    "prompt_tokens": 8305,
+    "total_tokens": 9360,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

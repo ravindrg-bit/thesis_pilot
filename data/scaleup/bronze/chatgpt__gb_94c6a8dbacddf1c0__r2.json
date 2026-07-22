@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "chatgpt",
+  "run_index": 2,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T10:15:31.665508+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_02b89d2e9b0930ff006a2696376d088195a532eac11b95d4ef",
+    "created_at": 1780913719.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_02b89d2e9b0930ff006a26963873c481958c06aa850e024386",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Computers and calculators usually **don\u2019t \u201cknow\u201d square roots directly**. They compute them using **algorithms**: repeated arithmetic steps that quickly converge to the right answer.\n\nA classic method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\nSuppose you want:\n\n\\[\n\\sqrt{N}\n\\]\n\nThat means finding a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nor equivalently:\n\n\\[\nx^2 - N = 0\n\\]\n\nNewton\u2019s method starts with a guess \\(x\\), then repeatedly improves it using:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(x + \\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too high, then \\(\\frac{N}{x}\\) is too low, and averaging them gives a better estimate.\n\nFor example, to approximate:\n\n\\[\n\\sqrt{10}\n\\]\n\nStart with \\(x=3\\):\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3+\\frac{10}{3}\\right)\n= \\frac{1}{2}(3+3.3333...)\n= 3.1666...\n\\]\n\nDo it again:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3.1666...+\\frac{10}{3.1666...}\\right)\n\\approx 3.16228\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}} \\approx 3.162277660\n\\]\n\nAnd indeed:\n\n\\[\n\\sqrt{10} \\approx 3.162277660\n\\]\n\nEach repetition can roughly **double the number of correct digits**, so it becomes accurate very quickly.\n\nCalculators and computers also use other tricks, such as:\n\n- **Good initial guesses**, often from the number\u2019s binary representation\n- **Lookup tables** for starting values\n- **Hardware circuits** optimized for square roots\n- **Floating-point arithmetic**, which stores numbers in a scientific-notation-like binary format\n- **Rounding rules** to produce the nearest representable result\n\nFor many ordinary calculations, the machine doesn\u2019t compute infinitely many digits. It computes enough bits to return the correctly rounded answer for its number format, such as a 64-bit floating-point number.\n\nSo the short answer is:\n\n**They make an educated guess, repeatedly improve it using arithmetic, and stop once the answer is accurate enough for the calculator or computer\u2019s number format.**",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780913731.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4455,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 534,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4989
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Computers and calculators usually **don\u2019t \u201cknow\u201d square roots directly**. They compute them using **algorithms**: repeated arithmetic steps that quickly converge to the right answer.\n\nA classic method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\nSuppose you want:\n\n\\[\n\\sqrt{N}\n\\]\n\nThat means finding a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nor equivalently:\n\n\\[\nx^2 - N = 0\n\\]\n\nNewton\u2019s method starts with a guess \\(x\\), then repeatedly improves it using:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(x + \\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too high, then \\(\\frac{N}{x}\\) is too low, and averaging them gives a better estimate.\n\nFor example, to approximate:\n\n\\[\n\\sqrt{10}\n\\]\n\nStart with \\(x=3\\):\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3+\\frac{10}{3}\\right)\n= \\frac{1}{2}(3+3.3333...)\n= 3.1666...\n\\]\n\nDo it again:\n\n\\[\nx_{\\text{new}} = \\frac{1}{2}\\left(3.1666...+\\frac{10}{3.1666...}\\right)\n\\approx 3.16228\n\\]\n\nAgain:\n\n\\[\nx_{\\text{new}} \\approx 3.162277660\n\\]\n\nAnd indeed:\n\n\\[\n\\sqrt{10} \\approx 3.162277660\n\\]\n\nEach repetition can roughly **double the number of correct digits**, so it becomes accurate very quickly.\n\nCalculators and computers also use other tricks, such as:\n\n- **Good initial guesses**, often from the number\u2019s binary representation\n- **Lookup tables** for starting values\n- **Hardware circuits** optimized for square roots\n- **Floating-point arithmetic**, which stores numbers in a scientific-notation-like binary format\n- **Rounding rules** to produce the nearest representable result\n\nFor many ordinary calculations, the machine doesn\u2019t compute infinitely many digits. It computes enough bits to return the correctly rounded answer for its number format, such as a 64-bit floating-point number.\n\nSo the short answer is:\n\n**They make an educated guess, repeatedly improve it using arithmetic, and stop once the answer is accurate enough for the calculator or computer\u2019s number format.**",
+  "usage": {
+    "input_tokens": 4455,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 534,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 4989
+  },
+  "run_profile": "scaleup"
+}

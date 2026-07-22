@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:06:24.394535+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cccfaff15dd04f6f8a08c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "You can download the latest version of Python from the **official Python website**. Here are the key details:\n\n## Official Download Source\n\nThe primary and most reliable source is:\n- **https://www.python.org/downloads/**\n\nThis page automatically detects your operating system and provides the appropriate installer. As of the latest information, Python 3.14.5 is the current stable release, with Python 3.15.0 in beta.\n\n## Platform-Specific Options\n\n### Windows\n- Visit **https://www.python.org/downloads/windows/** for Windows-specific releases\n- You can download the traditional installer (executable .exe file) or use the **Python Install Manager** from the Microsoft Store for automatic updates\n- Choose between 32-bit, 64-bit, or ARM64 installers based on your system\n\n### macOS\n- Visit **https://www.python.org/downloads/macos/** for macOS-specific releases\n- Download the `.pkg` installer (look for the \"universal2\" installer which supports both Intel and Apple Silicon Macs)\n\n### Linux\n- Most Linux distributions include Python in their package managers\n- Alternatively, you can download the source code from the official downloads page and build from source\n\n## Alternative Sources Mentioned\n\n- **Microsoft Store** (Windows): Search for \"Python Install Manager\" for integrated Windows app management with automatic updates\n- **Package managers**: Homebrew (macOS), apt/dnf/pacman (Linux)\n\n## Important Tips\n\n- Always use the official **python.org** installer for maximum reliability and security\n- Make sure to check \"Add Python to PATH\" during Windows installation\n- The traditional Windows installer is deprecated since Python 3.14 and will not be produced for Python 3.16 or later\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://wiki.python.org/moin/BeginnersGuide/Download\n4. https://realpython.com/installing-python/\n5. https://www.python.org/getit/windows/\n6. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272379,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 435,
+        "prompt_tokens": 8973,
+        "total_tokens": 9408,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I download the latest version of Python?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cccf93ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"259debdb6a1cccf94f50a50001d907cb\"},\"usage\":{\"total_tokens\":8820}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cccf93ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"259debdb6a1cccf94f50a50001d907cb\"},\"usage\":{\"total_tokens\":8820}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"259debdb6a1cccf94f50a50001d907cb\"},\"usage\":{\"total_tokens\":8820}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "You can download the latest version of Python from the **official Python website**. Here are the key details:\n\n## Official Download Source\n\nThe primary and most reliable source is:\n- **https://www.python.org/downloads/**\n\nThis page automatically detects your operating system and provides the appropriate installer. As of the latest information, Python 3.14.5 is the current stable release, with Python 3.15.0 in beta.\n\n## Platform-Specific Options\n\n### Windows\n- Visit **https://www.python.org/downloads/windows/** for Windows-specific releases\n- You can download the traditional installer (executable .exe file) or use the **Python Install Manager** from the Microsoft Store for automatic updates\n- Choose between 32-bit, 64-bit, or ARM64 installers based on your system\n\n### macOS\n- Visit **https://www.python.org/downloads/macos/** for macOS-specific releases\n- Download the `.pkg` installer (look for the \"universal2\" installer which supports both Intel and Apple Silicon Macs)\n\n### Linux\n- Most Linux distributions include Python in their package managers\n- Alternatively, you can download the source code from the official downloads page and build from source\n\n## Alternative Sources Mentioned\n\n- **Microsoft Store** (Windows): Search for \"Python Install Manager\" for integrated Windows app management with automatic updates\n- **Package managers**: Homebrew (macOS), apt/dnf/pacman (Linux)\n\n## Important Tips\n\n- Always use the official **python.org** installer for maximum reliability and security\n- Make sure to check \"Add Python to PATH\" during Windows installation\n- The traditional Windows installer is deprecated since Python 3.14 and will not be produced for Python 3.16 or later\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://wiki.python.org/moin/BeginnersGuide/Download\n4. https://realpython.com/installing-python/\n5. https://www.python.org/getit/windows/\n6. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/",
+  "usage": {
+    "completion_tokens": 435,
+    "prompt_tokens": 8973,
+    "total_tokens": 9408,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

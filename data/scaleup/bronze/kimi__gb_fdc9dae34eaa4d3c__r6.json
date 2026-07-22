@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_fdc9dae34eaa4d3c",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T03:48:36.077869+00:00",
+  "query_text": "What allowed humans to safely drink water before purification was invented?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a263b83c449b846a260334d",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, humans relied on several natural and early methods to safely drink water before modern purification technologies were invented:\n\n## Natural Water Sources\n\n**Clean groundwater from wells** - Wells were among humanity's earliest \"water purification\" systems. By digging deep into the ground, people could access groundwater that had been naturally filtered through soil and rock layers. Archaeological evidence shows wells dating back approximately 6,000 years in places like China's Hemudu culture and the ancient city of Mohenjo-daro in the Indus Valley civilization. The soil itself acted as a natural filter, removing many contaminants.\n\n**Springs and fountains** - Many cultures, such as the Zulu people, specifically used springs and fountains for drinking water while using rivers only for washing and bathing. They believed that water from these sources was naturally purified by passing through soil and rock. Springs provided water that had undergone natural underground filtration.\n\n**Strategic settlement locations** - Early human civilizations formed near reliable water sources like rivers, lakes, and areas with accessible groundwater. During hunter-gatherer periods, people used river water directly, though they eventually learned to distinguish between cleaner and more contaminated sources.\n\n## Early Simple Treatment Methods\n\nEven before understanding germ theory, people developed basic water improvement techniques:\n\n- **Boiling water over fire** - Documented in ancient Sanskrit writings from around 1500 B.C.\n- **Sunlight exposure** - Heating water under the sun to reduce contaminants\n- **Basic filtration** - Using gravel, sand, charcoal, and cloth to strain water (the \"Hippocrates Sleeve\" was a cloth bag for straining water developed in ancient Greece)\n- **Settling** - Allowing water to sit so particles could settle out\n- **Natural materials** - Using seeds, stones, or alum to help clarify water\n\n## Natural Immunity and Adaptation\n\nHumans also developed some immunity to local waterborne pathogens through repeated exposure. Additionally, many waterborne illnesses cause symptoms (like diarrhea) that, while unpleasant, were not always fatal to healthy adults, allowing populations to persist even with imperfect water sources.\n\nThe key insight is that **natural filtration through soil and rock** provided the primary protection for early humans, combined with selecting the cleanest available natural sources and simple physical treatments like boiling and basic filtration.\n\nSources:\n1. https://www.apecwater.com/blogs/news/resource-history-of-clean-drinking-water?srsltid=AfmBOopmS2gIZeu_InG8AC1JIaKlQJePwJlzRH6T6m_9MlWBThoZL6Et\n2. https://www.roundmountainwsdco.gov/the-history-of-drinking-water\n3. https://wisa.org.za/wp-content/uploads/2018/12/WISA2008-P061.pdf\n4. https://archive.epa.gov/water/archive/web/pdf/2001_11_15_consumer_hist.pdf\n5. http://iwh.cssn.cn/xscg/zmsyzts/202104/t20210419_5327544.shtml\n6. https://repository.ias.ac.in/27268/1/27268.pdf\n7. https://engineering.rowan.edu/_docs/civilenvironmental/environmental-engineering-lecture.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780890499,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 669,
+        "prompt_tokens": 4049,
+        "total_tokens": 4718,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What allowed humans to safely drink water before purification was invented?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a263b8271e6",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4be588096a263b824f50a50001efbbb4\"},\"usage\":{\"total_tokens\":3895}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a263b8271e6",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4be588096a263b824f50a50001efbbb4\"},\"usage\":{\"total_tokens\":3895}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4be588096a263b824f50a50001efbbb4\"},\"usage\":{\"total_tokens\":3895}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, humans relied on several natural and early methods to safely drink water before modern purification technologies were invented:\n\n## Natural Water Sources\n\n**Clean groundwater from wells** - Wells were among humanity's earliest \"water purification\" systems. By digging deep into the ground, people could access groundwater that had been naturally filtered through soil and rock layers. Archaeological evidence shows wells dating back approximately 6,000 years in places like China's Hemudu culture and the ancient city of Mohenjo-daro in the Indus Valley civilization. The soil itself acted as a natural filter, removing many contaminants.\n\n**Springs and fountains** - Many cultures, such as the Zulu people, specifically used springs and fountains for drinking water while using rivers only for washing and bathing. They believed that water from these sources was naturally purified by passing through soil and rock. Springs provided water that had undergone natural underground filtration.\n\n**Strategic settlement locations** - Early human civilizations formed near reliable water sources like rivers, lakes, and areas with accessible groundwater. During hunter-gatherer periods, people used river water directly, though they eventually learned to distinguish between cleaner and more contaminated sources.\n\n## Early Simple Treatment Methods\n\nEven before understanding germ theory, people developed basic water improvement techniques:\n\n- **Boiling water over fire** - Documented in ancient Sanskrit writings from around 1500 B.C.\n- **Sunlight exposure** - Heating water under the sun to reduce contaminants\n- **Basic filtration** - Using gravel, sand, charcoal, and cloth to strain water (the \"Hippocrates Sleeve\" was a cloth bag for straining water developed in ancient Greece)\n- **Settling** - Allowing water to sit so particles could settle out\n- **Natural materials** - Using seeds, stones, or alum to help clarify water\n\n## Natural Immunity and Adaptation\n\nHumans also developed some immunity to local waterborne pathogens through repeated exposure. Additionally, many waterborne illnesses cause symptoms (like diarrhea) that, while unpleasant, were not always fatal to healthy adults, allowing populations to persist even with imperfect water sources.\n\nThe key insight is that **natural filtration through soil and rock** provided the primary protection for early humans, combined with selecting the cleanest available natural sources and simple physical treatments like boiling and basic filtration.\n\nSources:\n1. https://www.apecwater.com/blogs/news/resource-history-of-clean-drinking-water?srsltid=AfmBOopmS2gIZeu_InG8AC1JIaKlQJePwJlzRH6T6m_9MlWBThoZL6Et\n2. https://www.roundmountainwsdco.gov/the-history-of-drinking-water\n3. https://wisa.org.za/wp-content/uploads/2018/12/WISA2008-P061.pdf\n4. https://archive.epa.gov/water/archive/web/pdf/2001_11_15_consumer_hist.pdf\n5. http://iwh.cssn.cn/xscg/zmsyzts/202104/t20210419_5327544.shtml\n6. https://repository.ias.ac.in/27268/1/27268.pdf\n7. https://engineering.rowan.edu/_docs/civilenvironmental/environmental-engineering-lecture.pdf",
+  "usage": {
+    "completion_tokens": 669,
+    "prompt_tokens": 4049,
+    "total_tokens": 4718,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

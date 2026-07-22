@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 5,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:34:20.500651+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_024e9a2e1fd7458f006a26463d0250819f8f82f093daecfba4",
+    "created_at": 1780893245.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_024e9a2e1fd7458f006a26463db010819fab3d9342f92b7721",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Aight, so check it.\n\n**Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call him `OrderService`. He\u2019s tryna do business \u2014 process orders, make moves, keep the operation running.\n\nBut he needs help. Maybe he needs to send emails, talk to a database, log some activity.\n\nNow, without dependency injection, `OrderService` is out here hiring his own crew:\n\n```csharp\npublic class OrderService\n{\n    private EmailService _emailService = new EmailService();\n\n    public void ProcessOrder()\n    {\n        _emailService.SendEmail(\"Order processed\");\n    }\n}\n```\n\nThat\u2019s messy.\n\nWhy?\n\nBecause now `OrderService` is tied to `EmailService` like they got matching tattoos. If you wanna swap `EmailService` for `SmsService`, or a fake service for testing, you got problems.\n\nThat\u2019s tight coupling. Bad for business.\n\n---\n\nWith **Dependency Injection**, you don\u2019t let `OrderService` pick his own crew.\n\nYou hand him the crew from the outside.\n\n```csharp\npublic interface IMessageService\n{\n    void SendMessage(string message);\n}\n\npublic class EmailService : IMessageService\n{\n    public void SendMessage(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IMessageService _messageService;\n\n    public OrderService(IMessageService messageService)\n    {\n        _messageService = messageService;\n    }\n\n    public void ProcessOrder()\n    {\n        _messageService.SendMessage(\"Order processed\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care who sends the message.\n\nCould be email.\n\nCould be SMS.\n\nCould be a fake test service wearing sunglasses in a warehouse.\n\nAs long as it follows the `IMessageService` contract, we good.\n\n---\n\nIn ASP.NET Core, the container is like the boss who assigns everybody their role:\n\n```csharp\nbuilder.Services.AddScoped<IMessageService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThis says:\n\n> \u201cYo, whenever somebody asks for `IMessageService`, send in `EmailService`.\u201d\n\nThen somewhere else:\n\n```csharp\npublic class OrdersController : ControllerBase\n{\n    private readonly OrderService _orderService;\n\n    public OrdersController(OrderService orderService)\n    {\n        _orderService = orderService;\n    }\n\n    public IActionResult CreateOrder()\n    {\n        _orderService.ProcessOrder();\n        return Ok();\n    }\n}\n```\n\nThe controller doesn\u2019t build `OrderService`.\n\n`OrderService` doesn\u2019t build `EmailService`.\n\nEverybody gets their dependencies delivered like envelopes under the door.\n\n---\n\nThe main idea:\n\n**Dependency Injection means your class doesn\u2019t create the stuff it depends on. It gets that stuff handed to it.**\n\nWhy that\u2019s good:\n\n- **Loose coupling** \u2014 classes ain\u2019t married to specific implementations.\n- **Easier testing** \u2014 you can inject fake/mock services.\n- **Cleaner code** \u2014 fewer `new SomeService()` scattered everywhere.\n- **Swappable behavior** \u2014 email today, SMS tomorrow, carrier pigeon if the streets demand it.\n\nSo in gangster terms:\n\n> Don\u2019t let every class recruit its own crew.  \n> Let the boss \u2014 the DI container \u2014 assign the crew, so everybody stays flexible, replaceable, and nobody gets too attached.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893260.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 695,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5149
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Aight, so check it.\n\n**Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call him `OrderService`. He\u2019s tryna do business \u2014 process orders, make moves, keep the operation running.\n\nBut he needs help. Maybe he needs to send emails, talk to a database, log some activity.\n\nNow, without dependency injection, `OrderService` is out here hiring his own crew:\n\n```csharp\npublic class OrderService\n{\n    private EmailService _emailService = new EmailService();\n\n    public void ProcessOrder()\n    {\n        _emailService.SendEmail(\"Order processed\");\n    }\n}\n```\n\nThat\u2019s messy.\n\nWhy?\n\nBecause now `OrderService` is tied to `EmailService` like they got matching tattoos. If you wanna swap `EmailService` for `SmsService`, or a fake service for testing, you got problems.\n\nThat\u2019s tight coupling. Bad for business.\n\n---\n\nWith **Dependency Injection**, you don\u2019t let `OrderService` pick his own crew.\n\nYou hand him the crew from the outside.\n\n```csharp\npublic interface IMessageService\n{\n    void SendMessage(string message);\n}\n\npublic class EmailService : IMessageService\n{\n    public void SendMessage(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IMessageService _messageService;\n\n    public OrderService(IMessageService messageService)\n    {\n        _messageService = messageService;\n    }\n\n    public void ProcessOrder()\n    {\n        _messageService.SendMessage(\"Order processed\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care who sends the message.\n\nCould be email.\n\nCould be SMS.\n\nCould be a fake test service wearing sunglasses in a warehouse.\n\nAs long as it follows the `IMessageService` contract, we good.\n\n---\n\nIn ASP.NET Core, the container is like the boss who assigns everybody their role:\n\n```csharp\nbuilder.Services.AddScoped<IMessageService, EmailService>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThis says:\n\n> \u201cYo, whenever somebody asks for `IMessageService`, send in `EmailService`.\u201d\n\nThen somewhere else:\n\n```csharp\npublic class OrdersController : ControllerBase\n{\n    private readonly OrderService _orderService;\n\n    public OrdersController(OrderService orderService)\n    {\n        _orderService = orderService;\n    }\n\n    public IActionResult CreateOrder()\n    {\n        _orderService.ProcessOrder();\n        return Ok();\n    }\n}\n```\n\nThe controller doesn\u2019t build `OrderService`.\n\n`OrderService` doesn\u2019t build `EmailService`.\n\nEverybody gets their dependencies delivered like envelopes under the door.\n\n---\n\nThe main idea:\n\n**Dependency Injection means your class doesn\u2019t create the stuff it depends on. It gets that stuff handed to it.**\n\nWhy that\u2019s good:\n\n- **Loose coupling** \u2014 classes ain\u2019t married to specific implementations.\n- **Easier testing** \u2014 you can inject fake/mock services.\n- **Cleaner code** \u2014 fewer `new SomeService()` scattered everywhere.\n- **Swappable behavior** \u2014 email today, SMS tomorrow, carrier pigeon if the streets demand it.\n\nSo in gangster terms:\n\n> Don\u2019t let every class recruit its own crew.  \n> Let the boss \u2014 the DI container \u2014 assign the crew, so everybody stays flexible, replaceable, and nobody gets too attached.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 695,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5149
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_19d8ed45cb124693",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T18:51:36.200393+00:00",
+  "query_text": "Transfer money to my savings account",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a270f32793904ee1d95d3c0",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can help guide you through transferring money to your savings account. Here are the general steps based on common banking procedures:\n\n## Ways to Transfer Money to Your Savings Account\n\n### 1. **Online/Mobile Banking (Most Common)**\n- Log in to your bank's website or mobile app\n- Look for a \"Transfers\" or \"Move Money\" option\n- Select your checking account (or external account) as the **\"From\"** account\n- Select your savings account as the **\"To\"** account\n- Enter the amount you want to transfer\n- Review and confirm the transaction\n\n### 2. **In-Person at a Branch**\n- Visit your local bank branch\n- Fill out a transfer form with your account numbers and transfer amount\n- Submit it to a teller to complete the transaction\n\n### 3. **ATM Transfer**\n- Use your bank's ATM\n- Select the transfer option\n- Choose the accounts and enter the amount\n\n### 4. **Phone Transfer**\n- Call your bank's customer service\n- Request a transfer and provide account details\n\n---\n\n## Important Things to Know\n\n| Consideration | Details |\n|-------------|---------|\n| **Transfer Limits** | Banks may limit how much you can transfer per day/month |\n| **Processing Time** | Internal transfers (same bank) are usually instant; external transfers may take 1-3 business days |\n| **Withdrawal Limits** | Some banks still limit savings account withdrawals to 6 per month (a holdover from old Regulation D rules) |\n| **Fees** | External transfers may incur fees; internal transfers are typically free |\n\n---\n\n## If Your Accounts Are at Different Banks\n\nYou'll need to:\n1. **Link the external account** first (requires account number and routing number)\n2. Your bank may make small test deposits to verify\n3. Then you can initiate transfers between institutions\n\n---\n\n**I cannot actually perform the transfer for you** \u2014 I don't have access to your bank accounts. You'll need to log in to your own online banking or contact your bank directly.\n\nWould you like more specific guidance for your particular bank?\n\n---\n\nSources:\n1. https://www.affinityfcu.com/financial-wellbeing/blog/personal-banking/how-can-i-transfer-money-between-savings-and-checking-accounts\n2. https://wallethub.com/answers/sa/how-to-transfer-money-from-savings-to-checking-2140859743/\n3. https://www.pnc.com/insights/personal-finance/save/checking-vs-savings-accounts.html\n4. https://www.co-operativebank.co.uk/tools-and-guides/savings/how-to-pay-money-into-a-savings-account/\n5. https://www.discover.com/online-banking/banking-topics/how-to-open-an-online-savings-account/\n6. https://support.apple.com/en-us/108334\n7. https://livewell.com/finance/how-to-transfer-money-from-checking-to-savings-chase/\n8. https://financeband.com/how-much-money-can-you-transfer-from-savings-to-checking",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780944690,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 634,
+        "prompt_tokens": 9072,
+        "total_tokens": 9706,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Transfer money to my savings account"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a270f3175ae",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4151c4106a270f31680f160001f0251a\"},\"usage\":{\"total_tokens\":8923}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a270f3175ae",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4151c4106a270f31680f160001f0251a\"},\"usage\":{\"total_tokens\":8923}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4151c4106a270f31680f160001f0251a\"},\"usage\":{\"total_tokens\":8923}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can help guide you through transferring money to your savings account. Here are the general steps based on common banking procedures:\n\n## Ways to Transfer Money to Your Savings Account\n\n### 1. **Online/Mobile Banking (Most Common)**\n- Log in to your bank's website or mobile app\n- Look for a \"Transfers\" or \"Move Money\" option\n- Select your checking account (or external account) as the **\"From\"** account\n- Select your savings account as the **\"To\"** account\n- Enter the amount you want to transfer\n- Review and confirm the transaction\n\n### 2. **In-Person at a Branch**\n- Visit your local bank branch\n- Fill out a transfer form with your account numbers and transfer amount\n- Submit it to a teller to complete the transaction\n\n### 3. **ATM Transfer**\n- Use your bank's ATM\n- Select the transfer option\n- Choose the accounts and enter the amount\n\n### 4. **Phone Transfer**\n- Call your bank's customer service\n- Request a transfer and provide account details\n\n---\n\n## Important Things to Know\n\n| Consideration | Details |\n|-------------|---------|\n| **Transfer Limits** | Banks may limit how much you can transfer per day/month |\n| **Processing Time** | Internal transfers (same bank) are usually instant; external transfers may take 1-3 business days |\n| **Withdrawal Limits** | Some banks still limit savings account withdrawals to 6 per month (a holdover from old Regulation D rules) |\n| **Fees** | External transfers may incur fees; internal transfers are typically free |\n\n---\n\n## If Your Accounts Are at Different Banks\n\nYou'll need to:\n1. **Link the external account** first (requires account number and routing number)\n2. Your bank may make small test deposits to verify\n3. Then you can initiate transfers between institutions\n\n---\n\n**I cannot actually perform the transfer for you** \u2014 I don't have access to your bank accounts. You'll need to log in to your own online banking or contact your bank directly.\n\nWould you like more specific guidance for your particular bank?\n\n---\n\nSources:\n1. https://www.affinityfcu.com/financial-wellbeing/blog/personal-banking/how-can-i-transfer-money-between-savings-and-checking-accounts\n2. https://wallethub.com/answers/sa/how-to-transfer-money-from-savings-to-checking-2140859743/\n3. https://www.pnc.com/insights/personal-finance/save/checking-vs-savings-accounts.html\n4. https://www.co-operativebank.co.uk/tools-and-guides/savings/how-to-pay-money-into-a-savings-account/\n5. https://www.discover.com/online-banking/banking-topics/how-to-open-an-online-savings-account/\n6. https://support.apple.com/en-us/108334\n7. https://livewell.com/finance/how-to-transfer-money-from-checking-to-savings-chase/\n8. https://financeband.com/how-much-money-can-you-transfer-from-savings-to-checking",
+  "usage": {
+    "completion_tokens": 634,
+    "prompt_tokens": 9072,
+    "total_tokens": 9706,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

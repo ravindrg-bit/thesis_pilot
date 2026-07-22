@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c41b7daa9be388d7",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T19:38:57.166413+00:00",
+  "query_text": "what is the max amount you can collect for unemployment in mass",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25c8cc7f95460f2b3f9a36",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here is the information about the maximum unemployment benefits in Massachusetts:\n\n## Maximum Weekly Benefit Amount\n\nAs of **October 5, 2025**, the maximum weekly unemployment benefit in Massachusetts is **$1,105 per week** for the basic benefit. This increased from $1,051 due to a rise in the state's average weekly wage.\n\n## With Dependent Allowances\n\nMassachusetts also provides additional dependent allowances:\n- **$25 per dependent child per week**\n- Up to a maximum of **50% of your weekly benefit amount** in dependent allowances\n\nThis means with dependents, you could potentially receive more than the base $1,105 maximum. Some sources indicate the total maximum with dependency allowances can reach approximately **$1,105 or slightly higher** depending on how the dependent cap is calculated.\n\n## Maximum Duration\n\nMassachusetts offers:\n- **Up to 26 weeks** of benefits under normal conditions\n- **Up to 30 weeks** when the unemployment rate in any Massachusetts metropolitan area exceeds 5.1% (this extension was triggered in April 2025)\n\n## Maximum Total Payout\n\nWith the 30-week maximum duration and highest weekly benefit, the total maximum payout can reach approximately **$33,150** (30 weeks \u00d7 $1,105).\n\nMassachusetts has the highest or among the highest unemployment benefits in the nation, with the longest duration (30 weeks during high unemployment periods) and one of the highest weekly maximums.\n\n---\n\nSources:\n1. https://www.capecodtimes.com/story/news/state/2025/10/14/mass-average-weekly-wage-state-benefits-unemployment-paid-leave-workers-comp/86670082007/\n2. https://www.nolo.com/legal-encyclopedia/collecting-unemployment-benefits-massachusetts.html\n3. https://remotelaws.com/unemployment/us-states/massachusetts/\n4. https://hrlogics.com/blog/rising-state-ui-benefits-rising-employer-costs\n5. https://beancount.io/blog/2026/01/25/unemployment-benefits-state-by-state-complete-guide\n6. https://indeedflex.com/career-hub/unemployment-benefits\n7. https://usbenefitguide.com/unemployment-benefits-2026/\n8. https://remotelaws.com/unemployment/us-states/\n9. https://bonvillelaw.com/how-much-is-massachusetts-unemployment/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780861133,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 510,
+        "prompt_tokens": 8441,
+        "total_tokens": 8951,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what is the max amount you can collect for unemployment in mass"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25c8cba946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ca55eb346a25c8cb680f160001ecf745\"},\"usage\":{\"total_tokens\":8288}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25c8cba946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ca55eb346a25c8cb680f160001ecf745\"},\"usage\":{\"total_tokens\":8288}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ca55eb346a25c8cb680f160001ecf745\"},\"usage\":{\"total_tokens\":8288}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here is the information about the maximum unemployment benefits in Massachusetts:\n\n## Maximum Weekly Benefit Amount\n\nAs of **October 5, 2025**, the maximum weekly unemployment benefit in Massachusetts is **$1,105 per week** for the basic benefit. This increased from $1,051 due to a rise in the state's average weekly wage.\n\n## With Dependent Allowances\n\nMassachusetts also provides additional dependent allowances:\n- **$25 per dependent child per week**\n- Up to a maximum of **50% of your weekly benefit amount** in dependent allowances\n\nThis means with dependents, you could potentially receive more than the base $1,105 maximum. Some sources indicate the total maximum with dependency allowances can reach approximately **$1,105 or slightly higher** depending on how the dependent cap is calculated.\n\n## Maximum Duration\n\nMassachusetts offers:\n- **Up to 26 weeks** of benefits under normal conditions\n- **Up to 30 weeks** when the unemployment rate in any Massachusetts metropolitan area exceeds 5.1% (this extension was triggered in April 2025)\n\n## Maximum Total Payout\n\nWith the 30-week maximum duration and highest weekly benefit, the total maximum payout can reach approximately **$33,150** (30 weeks \u00d7 $1,105).\n\nMassachusetts has the highest or among the highest unemployment benefits in the nation, with the longest duration (30 weeks during high unemployment periods) and one of the highest weekly maximums.\n\n---\n\nSources:\n1. https://www.capecodtimes.com/story/news/state/2025/10/14/mass-average-weekly-wage-state-benefits-unemployment-paid-leave-workers-comp/86670082007/\n2. https://www.nolo.com/legal-encyclopedia/collecting-unemployment-benefits-massachusetts.html\n3. https://remotelaws.com/unemployment/us-states/massachusetts/\n4. https://hrlogics.com/blog/rising-state-ui-benefits-rising-employer-costs\n5. https://beancount.io/blog/2026/01/25/unemployment-benefits-state-by-state-complete-guide\n6. https://indeedflex.com/career-hub/unemployment-benefits\n7. https://usbenefitguide.com/unemployment-benefits-2026/\n8. https://remotelaws.com/unemployment/us-states/\n9. https://bonvillelaw.com/how-much-is-massachusetts-unemployment/",
+  "usage": {
+    "completion_tokens": 510,
+    "prompt_tokens": 8441,
+    "total_tokens": 8951,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

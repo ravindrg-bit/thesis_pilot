@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c623b247b78a686a",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:53:42.570257+00:00",
+  "query_text": "was there cocaine in coca-cola",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2577dfbacfd5f180bef225",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yes, the original Coca-Cola formula did contain cocaine, though in relatively small amounts.\n\n## The History\n\nCoca-Cola was invented in **1886** by Dr. John Stith Pemberton, a pharmacist in Atlanta, Georgia. He was inspired by \"coca wines\" like Vin Mariani and created a tonic that included **coca leaf extract** and kola nuts (for caffeine). The name \"Coca-Cola\" literally derives from these two main ingredients: **coca** leaf and **kola** nut.\n\nAt the time, cocaine was legal and commonly used in patent medicines and tonics. Pemberton himself was a Civil War veteran who had become addicted to morphine for pain relief and was interested in alternative stimulants and pain relievers.\n\n## How Much Cocaine Was in It?\n\nThe earliest batches from Pemberton's time reportedly contained about **9mg of cocaine per glass**. When Asa Griggs Candler bought the company and founded The Coca-Cola Company in 1892, the amount was reduced to roughly a tenth of that.\n\n## When Was It Removed?\n\nThe timeline for complete removal varies slightly by source:\n- **1903**: Coca-Cola stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves**, which contained only trace amounts of cocaine\n- **1904**: Often cited as the year cocaine was fully removed from the formula\n- **1929**: Some sources state Coca-Cola was completely cocaine-free by this year, after public pressure mounted to remove all traces of the substance\n\n## Coca-Cola's Current Position\n\nToday, Coca-Cola is completely cocaine-free. The company still uses coca leaf extract, but only from de-cocainized leaves that have been processed to remove all cocaine alkaloids. The modern ingredients are: carbonated water, sugar (or high fructose corn syrup), caramel color, phosphoric acid, natural flavors, and caffeine.\n\nCoca-Cola has at times denied that cocaine was ever an \"added ingredient,\" though most independent historical sources confirm that trace amounts were present in the early formula due to the use of coca leaf extract.\n\n---\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://shiftychevre.com/was-cocaine-in-coca-cola/\n5. https://pharmchoices.com/the-secret-coca-cola-formula/\n6. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/\n7. https://arxiv.org/pdf/2602.17560",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780840416,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 614,
+        "prompt_tokens": 7731,
+        "total_tokens": 8345,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "was there cocaine in coca-cola"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2577de71e6",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"b5225f546a2577de4f50a50001ee210e\"},\"usage\":{\"total_tokens\":7579}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2577de71e6",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"b5225f546a2577de4f50a50001ee210e\"},\"usage\":{\"total_tokens\":7579}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"b5225f546a2577de4f50a50001ee210e\"},\"usage\":{\"total_tokens\":7579}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yes, the original Coca-Cola formula did contain cocaine, though in relatively small amounts.\n\n## The History\n\nCoca-Cola was invented in **1886** by Dr. John Stith Pemberton, a pharmacist in Atlanta, Georgia. He was inspired by \"coca wines\" like Vin Mariani and created a tonic that included **coca leaf extract** and kola nuts (for caffeine). The name \"Coca-Cola\" literally derives from these two main ingredients: **coca** leaf and **kola** nut.\n\nAt the time, cocaine was legal and commonly used in patent medicines and tonics. Pemberton himself was a Civil War veteran who had become addicted to morphine for pain relief and was interested in alternative stimulants and pain relievers.\n\n## How Much Cocaine Was in It?\n\nThe earliest batches from Pemberton's time reportedly contained about **9mg of cocaine per glass**. When Asa Griggs Candler bought the company and founded The Coca-Cola Company in 1892, the amount was reduced to roughly a tenth of that.\n\n## When Was It Removed?\n\nThe timeline for complete removal varies slightly by source:\n- **1903**: Coca-Cola stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves**, which contained only trace amounts of cocaine\n- **1904**: Often cited as the year cocaine was fully removed from the formula\n- **1929**: Some sources state Coca-Cola was completely cocaine-free by this year, after public pressure mounted to remove all traces of the substance\n\n## Coca-Cola's Current Position\n\nToday, Coca-Cola is completely cocaine-free. The company still uses coca leaf extract, but only from de-cocainized leaves that have been processed to remove all cocaine alkaloids. The modern ingredients are: carbonated water, sugar (or high fructose corn syrup), caramel color, phosphoric acid, natural flavors, and caffeine.\n\nCoca-Cola has at times denied that cocaine was ever an \"added ingredient,\" though most independent historical sources confirm that trace amounts were present in the early formula due to the use of coca leaf extract.\n\n---\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://shiftychevre.com/was-cocaine-in-coca-cola/\n5. https://pharmchoices.com/the-secret-coca-cola-formula/\n6. https://thetraininggyms.com/blog/coca-cola-is-worse-than-cocaine/\n7. https://arxiv.org/pdf/2602.17560",
+  "usage": {
+    "completion_tokens": 614,
+    "prompt_tokens": 7731,
+    "total_tokens": 8345,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_20c102f16ffb9676",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T20:54:52.717887+00:00",
+  "query_text": "list five types of public lands in the united states",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25da96e61077a828578d4c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are five major types of public lands in the United States:\n\n## 1. National Parks\nNational parks are large areas of land that protect natural and historic features. They can only be created by Congress and are managed by the National Park Service (NPS). The first national park was Yellowstone National Park, established in 1872. National parks strive to keep landscapes unimpaired for future generations while offering recreation opportunities, though with stricter rules than other public lands (hunting, off-leash pets, and drone use are generally prohibited).\n\n## 2. National Forests and Grasslands\nManaged by the U.S. Forest Service (USFS) within the Department of Agriculture, national forests cover 193 million acres across 155 national forests and 20 grasslands. These lands operate under a multi-use mandate that includes recreation, timber harvesting, grazing, wildlife management, and more. About 35% of forested land within national forests is used for timber harvest, while 65% is protected for wilderness or recreation.\n\n## 3. National Wildlife Refuges\nThe National Wildlife Refuge System was established in 1903 by President Theodore Roosevelt with Pelican Island National Wildlife Refuge in Florida. Managed by the U.S. Fish and Wildlife Service (USFWS), this system now includes more than 560 sites with at least one refuge in every state and U.S. territory. The primary goal is to conserve fish, wildlife, and plants, though over 500 refuges also offer recreational activities like hiking, hunting, fishing, and wildlife viewing.\n\n## 4. Bureau of Land Management (BLM) Lands\nThe BLM is the largest land manager in the country, overseeing more than one-tenth of all U.S. land, primarily in the West (particularly Nevada, Alaska, and Utah). Under the Federal Land Policy and Management Act of 1976, BLM lands are managed for multiple uses including renewable energy development, conventional energy development, livestock grazing, mining, timber harvesting, and outdoor recreation. This includes National Conservation Areas and some National Monuments.\n\n## 5. Wilderness Areas\nDesignated by Congress under the Wilderness Act of 1964, wilderness areas represent the highest level of protection for federally managed public lands. These areas are kept in a pristine, natural state free from human development. There are more than 800 wilderness areas protecting over 110 million acres in 44 states. Motorized and mechanized travel (including bikes, cars, and chainsaws) is prohibited. Wilderness areas can exist within national parks, national forests, national wildlife refuges, or BLM lands.\n\n---\n\nSources:\n1. https://www.americantrails.org/resources/what-are-public-lands\n2. https://www.onxmaps.com/blog/federal-public-land-guide\n3. https://www.outdoors.org/resources/amc-outdoors/conservation-and-climate/public-land-types-what-they-are-and-how-to-protect-them/\n4. https://www.publiclands.com/blog/a/public-lands-in-the-united-states?srsltid=AfmBOorXR7m4S2qM9HcE4T8GnHIJHQxVPBPue_fPtReBmwTyuYOhzq_Y\n5. https://www.oars.com/blog/types-of-public-lands-explained/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780865687,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 688,
+        "prompt_tokens": 8486,
+        "total_tokens": 9174,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "list five types of public lands in the united states"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25da959a21",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9555bf996a25da95680f160001ed137b\"},\"usage\":{\"total_tokens\":8335}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25da959a21",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9555bf996a25da95680f160001ed137b\"},\"usage\":{\"total_tokens\":8335}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9555bf996a25da95680f160001ed137b\"},\"usage\":{\"total_tokens\":8335}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are five major types of public lands in the United States:\n\n## 1. National Parks\nNational parks are large areas of land that protect natural and historic features. They can only be created by Congress and are managed by the National Park Service (NPS). The first national park was Yellowstone National Park, established in 1872. National parks strive to keep landscapes unimpaired for future generations while offering recreation opportunities, though with stricter rules than other public lands (hunting, off-leash pets, and drone use are generally prohibited).\n\n## 2. National Forests and Grasslands\nManaged by the U.S. Forest Service (USFS) within the Department of Agriculture, national forests cover 193 million acres across 155 national forests and 20 grasslands. These lands operate under a multi-use mandate that includes recreation, timber harvesting, grazing, wildlife management, and more. About 35% of forested land within national forests is used for timber harvest, while 65% is protected for wilderness or recreation.\n\n## 3. National Wildlife Refuges\nThe National Wildlife Refuge System was established in 1903 by President Theodore Roosevelt with Pelican Island National Wildlife Refuge in Florida. Managed by the U.S. Fish and Wildlife Service (USFWS), this system now includes more than 560 sites with at least one refuge in every state and U.S. territory. The primary goal is to conserve fish, wildlife, and plants, though over 500 refuges also offer recreational activities like hiking, hunting, fishing, and wildlife viewing.\n\n## 4. Bureau of Land Management (BLM) Lands\nThe BLM is the largest land manager in the country, overseeing more than one-tenth of all U.S. land, primarily in the West (particularly Nevada, Alaska, and Utah). Under the Federal Land Policy and Management Act of 1976, BLM lands are managed for multiple uses including renewable energy development, conventional energy development, livestock grazing, mining, timber harvesting, and outdoor recreation. This includes National Conservation Areas and some National Monuments.\n\n## 5. Wilderness Areas\nDesignated by Congress under the Wilderness Act of 1964, wilderness areas represent the highest level of protection for federally managed public lands. These areas are kept in a pristine, natural state free from human development. There are more than 800 wilderness areas protecting over 110 million acres in 44 states. Motorized and mechanized travel (including bikes, cars, and chainsaws) is prohibited. Wilderness areas can exist within national parks, national forests, national wildlife refuges, or BLM lands.\n\n---\n\nSources:\n1. https://www.americantrails.org/resources/what-are-public-lands\n2. https://www.onxmaps.com/blog/federal-public-land-guide\n3. https://www.outdoors.org/resources/amc-outdoors/conservation-and-climate/public-land-types-what-they-are-and-how-to-protect-them/\n4. https://www.publiclands.com/blog/a/public-lands-in-the-united-states?srsltid=AfmBOorXR7m4S2qM9HcE4T8GnHIJHQxVPBPue_fPtReBmwTyuYOhzq_Y\n5. https://www.oars.com/blog/types-of-public-lands-explained/",
+  "usage": {
+    "completion_tokens": 688,
+    "prompt_tokens": 8486,
+    "total_tokens": 9174,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

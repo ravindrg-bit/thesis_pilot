@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c623b247b78a686a",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:52:45.617561+00:00",
+  "query_text": "was there cocaine in coca-cola",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2577a77f31015e6ab7e98d",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yes, the original Coca-Cola formula did contain cocaine, though in very small amounts.\n\n## The History\n\nWhen pharmacist **John Stith Pemberton** invented Coca-Cola in **1886**, the original recipe included **coca leaf extract**, which naturally contained trace amounts of cocaine. At that time, cocaine was legal and commonly used in patent medicines and tonics for its perceived pain-relieving and stimulant properties. Pemberton himself was a Civil War veteran who had become addicted to morphine and was interested in alternative pain remedies.\n\nThe drink's name actually reflects two of its original key ingredients:\n- **\"Coca\"** \u2013 from the coca leaf\n- **\"Cola\"** \u2013 from the kola nut, which provided caffeine\n\n## When It Was Removed\n\nThe cocaine content was gradually phased out:\n- **1903**: Coca-Cola stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves** that contained only trace amounts of cocaine\n- **By 1929**: The formula was completely cocaine-free\n\nThe removal was driven by changing public attitudes toward cocaine, increasing regulation (including the Pure Food and Drug Act of 1906), and growing social concerns about the drug's effects.\n\n## Today\n\nModern Coca-Cola still uses a **coca leaf extract**, but it is specially processed to remove all cocaine. The only facility in the U.S. authorized to import coca leaves and produce this cocaine-free extract is the **Stepan Company** in New Jersey. The extracted cocaine is sold for licensed medical purposes, while the de-cocainized extract goes to Coca-Cola for flavoring.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://shiftychevre.com/was-cocaine-in-coca-cola/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780840360,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 462,
+        "prompt_tokens": 6802,
+        "total_tokens": 7264,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "was there cocaine in coca-cola"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2577a6f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"26f05e796a2577a6680f160001ec82f7\"},\"usage\":{\"total_tokens\":6650}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2577a6f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"26f05e796a2577a6680f160001ec82f7\"},\"usage\":{\"total_tokens\":6650}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"26f05e796a2577a6680f160001ec82f7\"},\"usage\":{\"total_tokens\":6650}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yes, the original Coca-Cola formula did contain cocaine, though in very small amounts.\n\n## The History\n\nWhen pharmacist **John Stith Pemberton** invented Coca-Cola in **1886**, the original recipe included **coca leaf extract**, which naturally contained trace amounts of cocaine. At that time, cocaine was legal and commonly used in patent medicines and tonics for its perceived pain-relieving and stimulant properties. Pemberton himself was a Civil War veteran who had become addicted to morphine and was interested in alternative pain remedies.\n\nThe drink's name actually reflects two of its original key ingredients:\n- **\"Coca\"** \u2013 from the coca leaf\n- **\"Cola\"** \u2013 from the kola nut, which provided caffeine\n\n## When It Was Removed\n\nThe cocaine content was gradually phased out:\n- **1903**: Coca-Cola stopped using fresh coca leaves and switched to \"spent\" or **de-cocainized coca leaves** that contained only trace amounts of cocaine\n- **By 1929**: The formula was completely cocaine-free\n\nThe removal was driven by changing public attitudes toward cocaine, increasing regulation (including the Pure Food and Drug Act of 1906), and growing social concerns about the drug's effects.\n\n## Today\n\nModern Coca-Cola still uses a **coca leaf extract**, but it is specially processed to remove all cocaine. The only facility in the U.S. authorized to import coca leaves and produce this cocaine-free extract is the **Stepan Company** in New Jersey. The extracted cocaine is sold for licensed medical purposes, while the de-cocainized extract goes to Coca-Cola for flavoring.\n\nSources:\n1. https://oboe.com/learn/the-secret-coca-cola-formula-cf0ias/evolution-of-the-formula-the-secret-coca-cola-formula-1\n2. https://www.thetakeout.com/1788713/why-coca-cola-had-cocaine/\n3. https://www.avenuesrecovery.com/understanding-addiction/cocaine-and-crack-addiction/was-there-cocaine-in-coca-cola/\n4. https://shiftychevre.com/was-cocaine-in-coca-cola/",
+  "usage": {
+    "completion_tokens": 462,
+    "prompt_tokens": 6802,
+    "total_tokens": 7264,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:56:17.304956+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ebc04d7822d35a1ef770",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official NBA Ticket Sources\n\n**1. NBA Official Ticketing Website (NBATickets.com)**\n- The NBA's official ticketing website is **https://nbatickets.nba.com/**\n- This is the only official ticket marketplace authorized by the NBA\n- When you click \"Buy Tickets,\" it redirects to Ticketmaster, which is the NBA's officially authorized ticketing platform\n- All tickets purchased here are verified authentic by Ticketmaster's barcode authentication technology\n- You can search for single game tickets, season ticket packages, group tickets, and special offers\n\n**2. Ticketmaster**\n- Website: **https://www.ticketmaster.com/**\n- The official ticketing partner of the NBA\n- Offers full-price original tickets and verified fan resale tickets\n- All tickets are verified authentic\n- Provides electronic delivery so you can print tickets within minutes or use mobile entry\n\n## Secondary/Resale Marketplaces\n\n**3. StubHub**\n- Website: **https://www.stubhub.com/nba-tickets/grouping/115**\n- One of the largest third-party resale platforms\n- Tickets are plentiful and may be cheaper closer to game time\n- Sellers resell and price tickets themselves\n\n**4. SeatGeek**\n- Website: **https://seatgeek.com/**\n- Popular ticket aggregator platform\n- Offers tickets for NBA, NFL, NHL, MLB, and more\n- Has a feature that alerts users to ticket sales and discounts\n\n**5. Vivid Seats / Viagogo**\n- Website: **https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA**\n- Another option for secondary market tickets\n\n## Important Tips\n\n- **Beware of scams**: Don't buy from private sellers on social media or forums unless you know them personally\n- **Don't accept screenshot tickets**: Digital tickets must be officially transferred through the platform\n- **Verify ticket transfer**: Make sure tickets can be added to your mobile wallet (Apple Wallet/Google Wallet)\n- **Use secure payment methods**: Pay with credit card or PayPal for protection\n- **Prices fluctuate**: Secondary market ticket prices often drop closer to game time\n\nFor the safest experience, I recommend starting with **https://nbatickets.nba.com/** or **https://www.ticketmaster.com/** for official tickets.\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://www.ticketmaster.com/\n3. https://www.stubhub.com/nba-tickets/grouping/115\n4. https://seatgeek.com/\n5. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n6. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n7. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n8. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n9. https://www.extrabux.cn/chs/guide/8473057\n10. https://nbaevents.nba.com/berlin/en/tickets/faqs",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780804545,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 717,
+        "prompt_tokens": 8886,
+        "total_tokens": 9603,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ebbf76e9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9bd8f2246a24ebbf680f160001ebc05a\"},\"usage\":{\"total_tokens\":8731}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ebbf76e9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9bd8f2246a24ebbf680f160001ebc05a\"},\"usage\":{\"total_tokens\":8731}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9bd8f2246a24ebbf680f160001ebc05a\"},\"usage\":{\"total_tokens\":8731}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official NBA Ticket Sources\n\n**1. NBA Official Ticketing Website (NBATickets.com)**\n- The NBA's official ticketing website is **https://nbatickets.nba.com/**\n- This is the only official ticket marketplace authorized by the NBA\n- When you click \"Buy Tickets,\" it redirects to Ticketmaster, which is the NBA's officially authorized ticketing platform\n- All tickets purchased here are verified authentic by Ticketmaster's barcode authentication technology\n- You can search for single game tickets, season ticket packages, group tickets, and special offers\n\n**2. Ticketmaster**\n- Website: **https://www.ticketmaster.com/**\n- The official ticketing partner of the NBA\n- Offers full-price original tickets and verified fan resale tickets\n- All tickets are verified authentic\n- Provides electronic delivery so you can print tickets within minutes or use mobile entry\n\n## Secondary/Resale Marketplaces\n\n**3. StubHub**\n- Website: **https://www.stubhub.com/nba-tickets/grouping/115**\n- One of the largest third-party resale platforms\n- Tickets are plentiful and may be cheaper closer to game time\n- Sellers resell and price tickets themselves\n\n**4. SeatGeek**\n- Website: **https://seatgeek.com/**\n- Popular ticket aggregator platform\n- Offers tickets for NBA, NFL, NHL, MLB, and more\n- Has a feature that alerts users to ticket sales and discounts\n\n**5. Vivid Seats / Viagogo**\n- Website: **https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA**\n- Another option for secondary market tickets\n\n## Important Tips\n\n- **Beware of scams**: Don't buy from private sellers on social media or forums unless you know them personally\n- **Don't accept screenshot tickets**: Digital tickets must be officially transferred through the platform\n- **Verify ticket transfer**: Make sure tickets can be added to your mobile wallet (Apple Wallet/Google Wallet)\n- **Use secure payment methods**: Pay with credit card or PayPal for protection\n- **Prices fluctuate**: Secondary market ticket prices often drop closer to game time\n\nFor the safest experience, I recommend starting with **https://nbatickets.nba.com/** or **https://www.ticketmaster.com/** for official tickets.\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://www.ticketmaster.com/\n3. https://www.stubhub.com/nba-tickets/grouping/115\n4. https://seatgeek.com/\n5. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n6. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n7. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n8. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n9. https://www.extrabux.cn/chs/guide/8473057\n10. https://nbaevents.nba.com/berlin/en/tickets/faqs",
+  "usage": {
+    "completion_tokens": 717,
+    "prompt_tokens": 8886,
+    "total_tokens": 9603,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

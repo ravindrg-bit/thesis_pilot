@@ -1,0 +1,102 @@
+RQ1 — Source Prominence: "Am I showing up, and where?"
+Q1. Which engine gives sources the most visibility, measured by mean PAWC_norm across all 250 queries?
+
+Visual: Horizontal bar chart, one bar per engine, sorted by mean PAWC_norm.
+
+Why included: Shows which engine gives your content the most prominent placement.
+Q2. Conditional on the engine actually searching, does the cross-engine PAWC_norm ranking change?
+
+Visual: Paired bar chart, unconditional mean beside conditional mean per engine.
+
+Why included: Separates engines that ignore your content from those that use it poorly.
+Q3. How many sources does each engine cite per response, and does citing more sources raise or lower per-source prominence?
+
+Visual: Scatter plot, x = mean sources cited, y = mean PAWC_norm, one point per engine.
+
+Why included: Tells you whether more citations means each source gets less attention.
+Q4. What proportion of queries produce a PAWC_norm of zero on each engine?
+
+Visual: Stacked bar chart per engine, zero versus non-zero cells.
+
+Why included: Shows how often each engine completely ignores external sources.
+Q5. Does query intent (informational, navigational, transactional) predict source prominence, and does the effect differ by engine?
+
+Visual: Grouped box plot, x = engine, colour = intent category, y = PAWC_norm.
+
+Why included: Tells you which query types your content strategy should target per engine.
+
+RQ2 — Reproducibility: "Can I trust this number?"
+Q6. What is the median PAWC_norm CV and AIS CV per engine, and which engines produce stable readings?
+
+Visual: Dot plot, two dots per engine (one for PAWC_norm CV, one for AIS CV).
+
+Why included: Shows which engine's visibility score you can actually rely on.
+Q7. What share of query-engine cells produce a CV above 0.50 on each engine?
+
+Visual: Stacked bar chart per engine, cells below 0.50 versus at or above.
+
+Why included: Tells you how often the measurement is too unstable to act on.
+Q8. Is the instability driven by the engine intermittently not searching, or by genuine retrieval variation when it does search?
+
+Visual: Faceted box plot, x = search-rate band (0–25%, 25–75%, 75–100%), y = PAWC_norm CV, faceted by engine.
+
+Why included: Distinguishes engines that wobble from engines that sometimes just switch off.
+Q9. Do all five engines agree on whether a given source is visible for a given query?
+
+Visual: Heatmap, rows = queries (clustered), columns = engines, cell colour = PAWC_norm.
+
+Why included: Shows whether optimising for one engine means anything on another.
+Q10. How sensitive is the PAWC_norm engine ranking to the NLI entailment threshold, and does AIS remain stable across the full τ sweep?
+
+Visual: Bump chart (line chart of engine rank by τ), one panel for PAWC_norm and one for AIS.
+
+Why included: Tests whether the ranking holds or flips depending on a single setting.
+Q11. At k = 8, what proportion of cells still sit on a mechanical CV ceiling, and what does this imply for the minimum viable run count?
+
+Visual: Bar chart per engine, proportion of ceiling-hitting cells at k = 8 versus k = 3 (pilot comparison).
+
+Why included: Tells practitioners the bare minimum number of checks before trusting a score.
+
+RQ3 — Citation Accuracy: "When I show up, is the engine telling the truth?"
+Q12. What is each engine's AIS rate?
+
+Visual: Horizontal bar chart, one bar per engine, sorted by mean AIS.
+
+Why included: Shows which engine most faithfully represents your content when citing it.
+Q13. What proportion of sentence-source pairs fall in the indecisive NLI band (0.30–0.50)?
+
+Visual: Stacked histogram of entailment scores, bands coloured (contradiction, indecisive, entailment), one panel per engine.
+
+Why included: Reveals how many citations are borderline, not clearly right or wrong.
+Q14. Do engines that cite more sources also cite more accurately, or is there a volume-accuracy trade-off?
+
+Visual: Scatter plot, x = mean sources cited, y = mean AIS, one point per engine with error bars.
+
+Why included: Tests whether engines that cite heavily are also citing honestly.
+Q15. Are source prominence and citation accuracy correlated within each engine?
+
+Visual: Faceted scatter plot, one panel per engine, x = PAWC_norm, y = AIS, with Spearman ρ annotated.
+
+Why included: Shows whether high visibility also means accurate representation, or the opposite.
+Q16. Does query intent affect citation accuracy, and do engines that perform well on informational queries also perform well on transactional queries?
+
+Visual: Grouped box plot, x = engine, colour = intent category, y = AIS.
+
+Why included: Tells you whether citation quality depends on what the user is asking about.
+
+Cross-cutting: "Which engine should I care about, and how should I measure it?"
+Q17. If the five engines are ranked separately on PAWC_norm, AIS, and CV, does any engine rank consistently at the top or bottom?
+
+Visual: Radar chart, one polygon per engine, three axes (PAWC_norm, AIS, inverse CV).
+
+Why included: Shows whether any single engine wins on everything, or every engine trades off.
+Q18. How large is the gap between a single-run measurement and the k = 8 mean on each engine?
+
+Visual: Error bar plot, x = engine, point = k = 8 mean, whiskers = range of individual run values.
+
+Why included: Shows the cost of relying on one measurement instead of eight.
+Q19. What is the non-claim segmentation artefact rate per engine, and does correcting for it change the cross-engine ranking?
+
+Visual: Paired bar chart, raw versus cleaned PAWC_norm ranking per engine.
+
+Why included: Tests whether engine output formatting tricks distort the visibility score.

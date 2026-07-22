@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "gemini",
+  "run_index": 7,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T10:25:44.316552+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 10:25:44 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=16919",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Computers and calculators don\u2019t have a giant \"cheat sheet\" (lookup table) containing the square roots of every possible number. Instead, they use highly optimized mathematical recipes called **algorithms**. \n\nBecause computers work in binary (1s and 0s) and have different hardware constraints than human brains, they use a few different clever techniques depending on whether they are a simple pocket calculator or a high-performance computer chip.\n\nHere is how they do it, ranging from classic mathematical tricks to modern hardware engineering.\n\n---\n\n### 1. The Babylonian Method (Newton-Raphson)\nThe most famous and widely used method for finding square roots is the **Babylonian Method** (a specific case of the **Newton-Raphson method** in calculus). \n\nThis is an *iterative* method, meaning it starts with a rough guess and repeatedly refines it. Each iteration brings the guess vastly closer to the true value. \n\nThe formula to find the square root of a number $S$ is:\n$$x_{\\text{next}} = \\frac{1}{2} \\left(x_{\\text{current}} + \\frac{S}{x_{\\text{current}}}\\right)$$\n\n**How it works in practice:**\nLet\u2019s say you want to find the square root of $10$ ($S = 10$).\n1. **Make a rough guess ($x_0$):** Let's guess $3$ (since $3^2 = 9$, which is close to 10).\n2. **First Iteration ($x_1$):** \n   $$x_1 = \\frac{1}{2} \\left(3 + \\frac{10}{3}\\right) = \\frac{1}{2} (3 + 3.3333) = \\mathbf{3.1666...}$$\n3. **Second Iteration ($x_2$):** Use $3.1666$ as your new guess.\n   $$x_2 = \\frac{1}{2} \\left(3.1666 + \\frac{10}{3.1666}\\right) \\approx \\mathbf{3.16228...}$$\n\nThe actual square root of 10 is **$3.16227766...$** \nIn just **two steps**, starting with a basic guess, the algorithm got the answer correct to four decimal places. This algorithm features **quadratic convergence**, meaning the number of correct decimal places roughly *doubles* with every single step. For a computer, getting 16 decimal places of accuracy (standard 64-bit precision) takes only 4 or 5 quick steps.\n\n---\n\n### 2. The CORDIC Algorithm (The Pocket Calculator\u2019s Choice)\nIf you disassemble a pocket calculator, you won't find a powerful CPU. You will find a very cheap, low-power microchip. These chips are historically bad at doing multiplication and division, which are required for Newton's method. \n\nInstead, calculators use **CORDIC** (Coordinate Rotation Digital Computer). \n* **The Problem:** In binary, multiplication and division are \"expensive\" (they require a lot of transistors and power). However, **addition, subtraction, and bit-shifting** (moving binary digits left or right, which is the binary equivalent of multiplying/dividing by 2) are incredibly fast and \"cheap.\"\n* **The Solution:** CORDIC uses a clever set of trigonometric identities. By breaking the number down into a series of rotations on a coordinate plane, CORDIC can calculate square roots, sines, cosines, and logarithms using **only addition, subtraction, and bit-shifts**. \n\nIt takes a few more steps than Newton\u2019s method, but because each step is incredibly simple for a basic microchip to perform, it is the perfect fit for handheld calculators.\n\n---\n\n### 3. How Modern Computer CPUs Do It (Hardware Pipelines)\nModern computer processors (Intel, AMD, ARM) have dedicated, hard-wired instructions for square roots (such as the `sqrt` instruction in assembly language). They don't run a software loop; they solve it directly in the silicon of the **FPU (Floating Point Unit)**.\n\nThey achieve extreme speed and accuracy using a hybrid approach:\n\n1. **The \"Seed\" (Lookup Table):** When you ask for $\\sqrt{x}$, the CPU first looks at the binary representation of the number. Floating-point numbers are stored in scientific notation (e.g., $1.1011 \\times 2^{e}$). The CPU uses a tiny, hard-coded ROM table on the silicon to instantly look up a highly accurate \"first guess\" for the mantissa.\n2. **Goldschmidt\u2019s Algorithm:** Instead of Newton-Raphson (which requires division), modern CPUs often use Goldschmidt\u2019s algorithm. This algorithm uses only *multiplications*, which modern CPUs can perform in parallel in a single clock cycle. \n3. **Extreme Precision and IEEE 754 Rounding:** To ensure absolute accuracy, the hardware actually calculates the square root to several extra binary digits (called \"guard bits,\" \"round bits,\" and \"sticky bits\") beyond what the user sees. The CPU then applies the **IEEE 754 standard** rules to round this ultra-precise internal number to the nearest representable floating-point number. This guarantees that the computer\u2019s answer is mathematically as close to the true square root as physically possible within digital limits.\n\n---\n\n### Summary: A Triumph of Math and Engineering\nComputers are accurate not because they \"know\" the answers, but because:\n* **Newton's Method** converges on the correct answer at a blindingly fast, doubling rate.\n* **CORDIC** allows simple hardware (like calculators) to bypass complex multiplication entirely.\n* **Modern CPUs** combine tiny on-chip \"seed\" tables with dedicated multiplication hardware to calculate square roots in a fraction of a nanosecond, rounded to perfect, standardized precision.",
+              "thought": null,
+              "thought_signature": "EsUwCsIwAQw51sf4KayJlsMSJc2T0d4oilOTTcpzOQpnaLyj0xO9Ll27qIznUp-tarCmDwHw8wm12LW3A75zA_hPtO7wN95b4a_rHRpQj5htt0JxS2qeNfQFEAW7nCKcOo1wg6nCmWjNv1HRWnvdmX1AIfHcPFD05Z5WGgIUWeKT0ExI3FBDFnS_qdixzqSlMxGP7NDHXUesBChJvhwFCFvv0KqXC8O1Bjbda_y09BpKnf8FAV7oXY8vnvIWa2TJ6qC7dWS0CjRgdXvD7w5sq8Sl9GyWxOfKiqLUK_ZcuuOCxkPF1wOzhfVMSpYLTgqNNY8WAmgU_ucB_ySwqM9ummLG4bY1JAd94W6Za4oGsbcsxsCunRq4G_RV2e0jHphv54Y_CACc9DwtUFPdsOxpnTSn9y_ekjYhAQO0KnkWyaVU2GEnj24KHkIoCug1GCkUgeV2OcGADtfMwepgmGQNSAqv5TLFMWF9zEd-GaVHzY7zaUl8SOY4G3h7KO23QNu7V9e_ONaf8rsBovC8tu552Zdjng2zqJ1NTt1Ry12sKjR0wGMchX-GmyU3OYp1qOXSkkur05t_WrPxjFYrEB0GJ0nX3qKCWGCITzm608tsK3chMFP1cU-9TSi_YP6TqGAQcvzQ3But9dQFKp6gtyGGEwmwDwY7PgfBUykzMyqvLxJz6dZUjM3JCgGNbYcg1rx11rhJomUafDSx0oWTGBCq_wQiqd9K-P12DuXGPlwuzCcSBJVSSyrf6r3AXoamXZIT2iG14QTthiH4L_VU3zgPD2aU4tfiL7P37abrT0AqLb36M6IVrgkKvSK8gX335mxwaiOIsTNIAkBHKtwmTEpijaIF6I1nmkWB-EIU5oi6IAX5Hl5jdsQOnTsrrxrxJxyTulaUcBuusTEyl0o-4qFqr1WoWwtEpz5VNn7ml-H6Gl4L9Q6uJrlDZIj0apmKMzzgwMAJ2ZsNvAHBndofNuejeBEByJtvkUr8KBtKHTMn8RSE6W6EPSVw4hcjYKoXGYYAF2MrW7Oyywc0TGTWLL4oMFiPT9RRFDMHxLS8U1QkiZL9OjvQB50ELYnf_d77RJe5So6KhiPJ34JGoCOMvUQCvQXSIttETJOxlVYthrQlRcPnQ8MSERWEQ-6xqkhv5VMW-6RYel3zmJoOZN7RFLvxRSNmvTIFYEFqp8CizMX6KLSpxLbWx5sJmafm6RPL6TnqxCWsMvxdUfK8NTF6Aph1y7P8zpojHt6AF1ELpeCFbtcAYAl1Dbjmn3xxJLv6gUxLP2ZSz5R0qtZ07D2uR22fuC_Ts4jDjKmwDnr9Hup4wepXlKZHY6l_yFzwAPWE8U_6Wmh_t-acWmX06kL0oA5BusugH4_lgOyafRXKzAyqpW5AeBnrAc-rItixCAuWD1NSEVXXspeh6ndLLHQOaHopPdOZYX26f_yAXlmMrM1TbcxZ3FjncnYF5vpVD4y2ib8Pj5i41jfrGMwu-wISGWKUfar_gb-KqflVLElTEcA8CXP6XgPQKqsszt--AW4hBx7KFIx9bIHGrlxURzIDnNH8p0NfqdwbopkEtFdimFsYlXkynDaRC8Mzz1Ji4n__lV8YQ8ILGQlmWd1d2pXZqEr3dPjiMk8aey9A-0oiiE9YffJoY0O_jtRR8ug8LPPMZ9KBFcOVMoYr6CBUvlGz5m9luOwEmppHw_RghS3gudNaCT8FScYF2yAVGG1pqn-nksgLze1L1AeWTrbn4lYVlDObTFs1W5Vd34GxsQcjFlzKUgTvaTQNh2Ooz9Muve3OS11gFhd9kbN2DAtaGg0l2oNakjHQ9k-dqxj6b6Z39ekxYWj-4t9LH2kMe6UMD9oAhWMucgkXOh96EmtbDOVRjlMeBiehAEqwKc08Du1JHhL3-PC1VxE-mOWwNYo_6o33irOkGbpSwTjD7lv9H8PUijPRQ66AXgWpW14AMG7n-lRRZUzG4Uz1wTX9gy5I2XNK_MDgTTsFQKXvwquhNq7lOXHr64qYqL7M4GbZ6HCdfpMeh-7JJ1ZE3H2yJptKgPw1SF9MupPn8G2yTv9-LrkoeSw0QJ8xpQ0LVsPAXInPDAdev6RJ66jdhpdJmL0rrtUInRWWjhHi_I4eQL1kN_qI2iLuJT7bHDQwASc4EmqhXoZrifA_pWJAFGUuQICVDcJwLxCLPG0V0wutwDL989TwXJzwyCOUuF_W-m1euoWvZzVE1nQMaLcDBxsyU3jumuCTHAYI-06PoixzPrP9k9yfqCBOoD7dlyNjDTGUuny512NSA2V7aHrtzn_nVGYaJFwvoacFYFyZQILKj8_FA_WLJzdHS-8gH-fa9PN2KmnOO_Ji8hLIrGY90BgZnSnDaj9waB7M4hBgapnYm5-a0_TYZ7BK4lIJJMjoM12yHCBR9nAPEP5sHd2cugHsSRn3_gquS16yjquvyG4MfHLQwoQNv_8tQwgWm0umd3ZPqEBlELCO2lcHlOMd7yCAWnO3hM3T0n7F4LG__GCGuvMjocssXgeApkoAUPh9tj-B4uMknSI8yb9mEs-I85L0bBUoZgBm4kFfuPee6Y54pmG0rjwrZ5k60Mgk6ZsATwuI-lCFlTJ-hbzNfCHcpX3OvCmsMxqhTuioud4xBHdaUHcbgKJ_Uz2nJ2K1bJIjTXrWFTqRTM7tCuI8N3uUPOoCd1qVrOdgea8hREHPQDchMhKt_b8sqKLCN2mQJ7mlQfqBT4vUlooTGMOWSyKGCv4lXQu6rqIZubzFeoa9UjacUTw-s5QZAJhkKJTBlGgHuaOUA-RTh8wglv-0Cmgft4212Gx8r0FB_25GInZofu2EgaT1CvOokh3gZ-FnsertOGnE2gyyDg4UpNaZe18GNypbQS5pOXhc-gqmXyHBJMhsG5hCsaJVk01rN4ZY9c2mRKU8az9vQA1Z42NfwEGmfzEa50Fbu2v5nYm2E9fxJcgNaPl8MZFuEsT_rkahTcP9qXPobOxsUNZcnC-nCP9p02MuBYf9UGwDq7nFVbOobp8wgH5Wu7dLDilylThgGRd8sU7L-bMDehqq_B0d9Tox7pPU4gyampb_kuhBvla2JGoiK4I_B1sLsc67rHY8ZOZ5VTZ6S8tFVTo3TZvTvobIO2bW1t84ZVrVdLoCvrnL9M4MnDcE4oxS9U8QjTC45ItZoV4RmMAYK2c7NjMcBYGkXV6bbri_yyyjVjhINu4dnDfF-5Nl_r8Lsmq3bwk50egmecvErXfJ07f8RU3zhKWpWrGMn45cY1HCIf_PcMgBrUNAF5Cu8xf-2ue-4XmpqPTWTmnDZHlFhJySbfBo-0IUCRZphA7ZEdqRjbdahhvTNCcJix_EuiN1ji5p1mXqKKSyOYqargPat1exCeYMp4EITRKLeL9dRGL6HfbvtfXwCKzmb4qgwAkcSWTo4p1UUSFijYUz-uALo1j0ev0krdvB95c594WZQih6yQMvGHmw61pEXz-a9zc2kD2nUAdmzgP7-A0p1EO-A7vNLQsJCwYg5CumKEfXnR5hEu-Sz3pHSB5vtBt9vqZt7X2CXXXbmwKcQZN0l8_2aDmHHrI-QOU_fLbVy1hmZJbijwK5D_BtUQ8Bu1NYzlr_XNtVzYnesQmgVeaIVC0yAj-FDV6Xrihc2xE70lJatbQbnwziLeZ33geSgY7VMurIt-dGAzYBqtgTyT1QfKwfvYc1IRYgT8SrH2pK6S3Qy5KsHhX6tNm_lVeM0Wf8IYN9EUbqL7-v7z6hILOUqMLr9UM1CGeoIyV6lIoKuiUnKAQyiiIniK0Cr8TDM_lG4E8oqXnUjnEFEF9Dty0neY-i7Ea8irzdndC6DvNppCp0UHjl0mQ5YfP_F1FDr9svqNXz-jI0k9kU8dSKpY5Y5iYKL1paUgnH-1UFQTQpZxOjWtmHFF7SdMT1ibYlTeIBdzAKlfwe9cfezR9RPpfK4mu-LEXkIJN5NhqcVnAorvpU1Ofho39uuNzClYFKHxqEodTCfmF3QpFeBVVuxJ5ZXexLghYG87Pp5yAvQEBx-4IEkhlRnEsxmqddQnYg7S-z2aFVkE_5pRKUxh9Bw9rA7ALkHT7LXhjD0xlVe5w_3Vx2MEPMcmUtXSO1eUjOFExpm6qpb-7ph-Xm7ECDmXFLMEpOqzl7xIh-of-2RKvACR_NTwbCW4r0N_C4xGY0tAcG3XMfOTF7FMSWspjREVMmeP8xJoU8_b1-I4MLHN5YSNpgqGjIu_xEs-tuj6qDMy81fDBHY1za6J3KSC2tnRCEnevR1BW4uQ-fG4sZj7iF1QnuTdc7CfvUVi-TDE5hJUM7vprXzu7NE2puAbe5WMM509AqgknU-GxzdCzjY0n6bRH2R0f-jEC28gJe8iQLzpQycSDP36GxNaPZnYJIpemibHCfyDUhl5_d3c8COMYgYF4c6bfz7PxdN0ZkHURkJ1zT79SnmYWNpiXonGdXgZOQ6RxVd8op-87FRs_9gF9Bdhn-AxUFbrK8wyJwztL9t0Qqxir9_isq6tLOyyQSAoF1BJc49qk4khPYpaH4nAnIAKShh2IYhfskkuQtxn8jESo2_tYlFad-bnX38BTNEFU0DyeRU07IkLboNOYnW9_QUQeEk4JF5bjwP5vFGIZWshwHF7r4RYyXz7R2Q5iXBjk8NiujERB5lbFtxeGYya97wQkOo6vNzYJjfdK44kDjSd0Rb6ueX35aOpUXjht-R4sQ94R08sGy7C2ZhAWaX48hOTgM_B_XPVZ_wvhtFrKwYVjf7c7Wh9_hFWbMNwMaVV_22Tvj0bh5SE8j20xZbNglbY4JW88xj_ebkW0FMQumB6jE5ATQW9UydGhje7BN8plGSG5XNjoWmJTPkYKfjfiCmbumBWbDi6WpblsfctZQncNYzHAxHryyArUiZrgrmMBgWIFRfIc9b1ZhSuVpCb_dnPR5NtCz3FBneSE0Wg7n0ImWRpdpUnhUdSRwoWg7tYPQr9knK7D76B8P1Uf4TgnsDntUAPARyYKlaxgxPD4HK4pKa3lsBHvZUNozRK7y-aZ95Y_p7s88ybgdulU6CUk_mVVEdOHvk-5O961KCJEExoENAsyUE4FXvz3NkEwCjJK7F3c_NDCyN-CFtBgpZOJePgSVG5PqfPBPWFmjX0-pcthVClr2SAsOO43TpY9OZHGBn_t_PE_qzAq4BiSepOMhCjsWu83JMQVc8f9nWc-wNh1E8chwNH0yX--UHg3DDpX2GKacHv_j4A_C8i4LERi51GzPUXUrGNauVdPJ15NA55ma4f64wr6fpU_dfGx7lRHDiLAQaWkElF2f33WZBiSadukOSGkPdB5M0p6f0yH9X0Zvy2elL_6QNv0wDOXR1UQO0gKi1MLTWL5CgDSLughtvXjRuEiWjZPQ-vs6mSzz7-ACZJKJg6dvG2Pc5McTzg5gZUwR_lIeqYmAMLqeECDukIkiYFIZJffUryM572KtcAnQ2xWg2XQvhizD9CI_lBGFDTvRoelngRhaZeTJsHMzDGick96-xIviJr6ij4G1WojDWqXtJxfpYuw2XyWUUJa8xD9bT8S2d73ymoJAHU_hGd5ba8QgvmMwaS70vrdHQc9EM07uKt7po_IkHFt8JJvXRxJjsMn-zgZvOVRquCWORu-4c-0rncs3ejAxbxCRpzfJNSEbgc5V3ucg7OguxkiKP2y2YTa5alstEUj8YlTJNf4Rjn-VEn0mPQU2NVdaJQ5Lp7de8_BD0LE8Dt6NKGvQIuy00vB6Qaq6PEqqfoksBeE-YFQZyWzOgRasYU1CbAVvpyXlm6uDrogsPA-CblfZx7JSzbgrJlAPMFlU2quNVi-raGdl94vK7KFpKEbhOhoIi5TlA8Q_W0Xl2Oo6p09saG75_QTAKWcRbzUzDu599kySgejabNHXU5htHEB37YNlMPVQCYBOmKUsITCcLcUCv6ctj8gC2gaxgfu82IiMUusQgfFlEEndGTU66Sr1zlBOYgfoPUSI_8KUUrgORx3XTZaEzEMkkqcbmwIXtv5U3EJ4p0Z-8Q2LRfBWlWqjydwPfrUFSlyK8jRVIfy7JL3oi4pnbTFhvAmAGLBTSXgaFAJLZEWEO97yjp4GL2Fu1hpYRkd87DqDB1E1vY-ClGMlr5XijHF-tiq2-0kskY_DMJcCXFQqRXcdwFi0iBL4ZCbeZ26kV5kTT49cGpqM84dxWfFdKK32DeqcHxJZ-3TrHoA75xMRn1viG6quMK1XS5JRQnPsHm7buL2uJkwedxb77n_XyFQcKhr2wmKj9nI1pj1Pbj6Cu0soVyqgEUa1eDbvy9IzZhY5FLctW038CdHn0-EZgwEKw-qDDR4OQjmEs4280vdmksAR_N7JyTIO5AiaBOsooKfSxRMCNXjAIPd99YCuKupPp8xgUJR9gv390FNWQ_VPJOjkXFIG1Y-1b3AI465n3MoUutkqFdY_wcv3NbGBIXx81oNFPXK7Sc5VT3LSJeiyW79c92b7BmmCtzM65kPuQy8dYKVlP2d4lbhQFaVIxveyarq4c7fQQfh_unmYM-W8IXUrohEGIbJniZveYHkbm6MZxn1mBk_D6Pi6InxCFbBw37BsLn_yxbWlSL3V57_ze2YN6qEm5wnSFDMaTP_0sVc2sXXMgSrwVYSrVLdCs0OFIVqjT4JdZtlbo8gbpGiE0Hm5-JnFY247YFLjnnTHdo98pNQOrSPL-QjmU1ugpMb2IX8g0CPACx1yucLWgXLJBxp_MbZHNDFGFuhLtEtvXEPKuENkNW5L7ZkhFEEkleY69hHn0xh2qttu0FGpuQvFW3vOgKBTw-VJg4-1KzfSD9Bzj0H0pn22CyjiQEp5Hvu912Fp4MeVeURrZHRnLuanI4jZuiEgv-74GY5o1OPo97A7X6iY8YFU6e7qrAmHmDlaxdk8AH6jcsomLkHqSMylw5uEofNHUKCbFkj29kG29EO1S3mmAvjqlGV6mBZHwDiXeRZz6BXFJQw3mxMva6jSVJM6XlaFdpN_I2Og1A5EMnvfOT4r7lKzrnbhOaOhwhx-NNVx6VDdZ76pgDoKSLpFsDiZ-bvYBPlk1Do0_SMmxn5nJQ4x5JHduQblfsKA9dO1yQ0huprfVFBsaR35KGU2dUclB1IlPHoRO3vvBOUk6Lh88QmwmXKsx7d-Lb6o--JmMQn8VSJBcC83CKeO8awb6sWdlKIu4yp1tNEUwsMzl6Hg21T939PyCqMNvdwlBOXMJU5H9eUC-_2gmUHgGL16j10VKDL111UeCRUKGTM9T8pB5JdctEjx4cA-uCTOsy9T-htjyWHMLTRlCLHiHV1KlsUnj9IT6HLjO4V0P18KMRn9rRNCoy0gMOZHkY-JqG66hMNNnNHyAQDQGpI_VWAn7FAjnd8tUOxisx5x2xkLxl6Iw2NxOGz5Sq91Sfvb4IxxLHD9raS_G1OdA5LuHwDKCI5sWB6BHCPTChJ-ZguMV1TPwJMlfyEVgbyECN_Qr7KY1ErYbycmQUgXOtyOCqTYodoEn8bacrpvQe-6o-bInDtWk_yRcALGJqwgUsIUPn2ka_35oScSmOE2trWnB-X9n2xj1ExvtuXfJP60fpw0TKOdWi89f08MJ8rcnPXs8RgqQdApXct86xDQ0aqP5ApEWZnLH0o92mM-TeUDXnuEjfxhC14rS1-WkmLrUalLYUdT3NiiXjQUn3qV33wANHXrRkrGpDAZfz1m_SfE4i3VnY69VzyPNy57sQhGHZfHcQefhg9c8GyqWJ1ElUwrKvSkfx3GnAM2zsYPlXHsnty2sKr2-59tdCmQxcRSDDP-H0nMbOXJhq2lmmSoIV5Q16ZB0vLZdzWcSGSJtiJ0hAWvqJ9VDuxufiFyQubnWZtvXzup1cyWz66xzMI_cfHU75i1xYbAOeD2nz0EmmDvLs62TSLb89yMWJWSAUebJxdRbFN7TQu9bmv3lYCDmie8uBAm3FpLMO28LoRdVLFeX4xCon8wBFT6cSRLVJZBSxU11xkxWqMqw28__4d3-kg2d7Qlk99MRvgcKvDijHB9RRtoXXkGZGvPDxZsIBI3-AiRObNr1KQsPq_6QweS4VjcB8I4rhF_odpZ4IFxfzIQS3Y2lBcDXBLkEPsoL5AfCPcacfWcBZjlaMn0QDe426TqWke461a3rc3L6xoN4KlPv43qbvgDYVVZoviwJ-rzOsNPlKYh74o2P10hjSzKDANl1BbvxEiYBE1LoNBKh-Sa9eR015QOWeSBFQOvSpRlq6vv-k8Ybe37HwYIJgQD4sey5HhnFoeAnwxg4a_xWNd4u2ktARIktzvEvbf_3KQO",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "l5gmar-1HMjhvdIP77P7kAo",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1290,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 14,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 14
+        }
+      ],
+      "thoughts_token_count": 1593,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2897,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Computers and calculators don\u2019t have a giant \"cheat sheet\" (lookup table) containing the square roots of every possible number. Instead, they use highly optimized mathematical recipes called **algorithms**. \n\nBecause computers work in binary (1s and 0s) and have different hardware constraints than human brains, they use a few different clever techniques depending on whether they are a simple pocket calculator or a high-performance computer chip.\n\nHere is how they do it, ranging from classic mathematical tricks to modern hardware engineering.\n\n---\n\n### 1. The Babylonian Method (Newton-Raphson)\nThe most famous and widely used method for finding square roots is the **Babylonian Method** (a specific case of the **Newton-Raphson method** in calculus). \n\nThis is an *iterative* method, meaning it starts with a rough guess and repeatedly refines it. Each iteration brings the guess vastly closer to the true value. \n\nThe formula to find the square root of a number $S$ is:\n$$x_{\\text{next}} = \\frac{1}{2} \\left(x_{\\text{current}} + \\frac{S}{x_{\\text{current}}}\\right)$$\n\n**How it works in practice:**\nLet\u2019s say you want to find the square root of $10$ ($S = 10$).\n1. **Make a rough guess ($x_0$):** Let's guess $3$ (since $3^2 = 9$, which is close to 10).\n2. **First Iteration ($x_1$):** \n   $$x_1 = \\frac{1}{2} \\left(3 + \\frac{10}{3}\\right) = \\frac{1}{2} (3 + 3.3333) = \\mathbf{3.1666...}$$\n3. **Second Iteration ($x_2$):** Use $3.1666$ as your new guess.\n   $$x_2 = \\frac{1}{2} \\left(3.1666 + \\frac{10}{3.1666}\\right) \\approx \\mathbf{3.16228...}$$\n\nThe actual square root of 10 is **$3.16227766...$** \nIn just **two steps**, starting with a basic guess, the algorithm got the answer correct to four decimal places. This algorithm features **quadratic convergence**, meaning the number of correct decimal places roughly *doubles* with every single step. For a computer, getting 16 decimal places of accuracy (standard 64-bit precision) takes only 4 or 5 quick steps.\n\n---\n\n### 2. The CORDIC Algorithm (The Pocket Calculator\u2019s Choice)\nIf you disassemble a pocket calculator, you won't find a powerful CPU. You will find a very cheap, low-power microchip. These chips are historically bad at doing multiplication and division, which are required for Newton's method. \n\nInstead, calculators use **CORDIC** (Coordinate Rotation Digital Computer). \n* **The Problem:** In binary, multiplication and division are \"expensive\" (they require a lot of transistors and power). However, **addition, subtraction, and bit-shifting** (moving binary digits left or right, which is the binary equivalent of multiplying/dividing by 2) are incredibly fast and \"cheap.\"\n* **The Solution:** CORDIC uses a clever set of trigonometric identities. By breaking the number down into a series of rotations on a coordinate plane, CORDIC can calculate square roots, sines, cosines, and logarithms using **only addition, subtraction, and bit-shifts**. \n\nIt takes a few more steps than Newton\u2019s method, but because each step is incredibly simple for a basic microchip to perform, it is the perfect fit for handheld calculators.\n\n---\n\n### 3. How Modern Computer CPUs Do It (Hardware Pipelines)\nModern computer processors (Intel, AMD, ARM) have dedicated, hard-wired instructions for square roots (such as the `sqrt` instruction in assembly language). They don't run a software loop; they solve it directly in the silicon of the **FPU (Floating Point Unit)**.\n\nThey achieve extreme speed and accuracy using a hybrid approach:\n\n1. **The \"Seed\" (Lookup Table):** When you ask for $\\sqrt{x}$, the CPU first looks at the binary representation of the number. Floating-point numbers are stored in scientific notation (e.g., $1.1011 \\times 2^{e}$). The CPU uses a tiny, hard-coded ROM table on the silicon to instantly look up a highly accurate \"first guess\" for the mantissa.\n2. **Goldschmidt\u2019s Algorithm:** Instead of Newton-Raphson (which requires division), modern CPUs often use Goldschmidt\u2019s algorithm. This algorithm uses only *multiplications*, which modern CPUs can perform in parallel in a single clock cycle. \n3. **Extreme Precision and IEEE 754 Rounding:** To ensure absolute accuracy, the hardware actually calculates the square root to several extra binary digits (called \"guard bits,\" \"round bits,\" and \"sticky bits\") beyond what the user sees. The CPU then applies the **IEEE 754 standard** rules to round this ultra-precise internal number to the nearest representable floating-point number. This guarantees that the computer\u2019s answer is mathematically as close to the true square root as physically possible within digital limits.\n\n---\n\n### Summary: A Triumph of Math and Engineering\nComputers are accurate not because they \"know\" the answers, but because:\n* **Newton's Method** converges on the correct answer at a blindingly fast, doubling rate.\n* **CORDIC** allows simple hardware (like calculators) to bypass complex multiplication entirely.\n* **Modern CPUs** combine tiny on-chip \"seed\" tables with dedicated multiplication hardware to calculate square roots in a fraction of a nanosecond, rounded to perfect, standardized precision.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1290,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 14,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 14
+      }
+    ],
+    "thoughts_token_count": 1593,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2897,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

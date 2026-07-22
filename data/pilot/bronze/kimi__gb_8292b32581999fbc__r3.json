@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_8292b32581999fbc",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:07:20.904172+00:00",
+  "query_text": "How is chocolate made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccd2f1b4f7af185004145",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Chocolate is made through a fascinating multi-step process that transforms cacao beans into the delicious treat we all know. Here's how it works:\n\n## From Tree to Bean\n\n**1. Cacao Cultivation**\nChocolate begins with the cacao tree (*Theobroma cacao*), which grows within 20\u00b0 north and south of the Equator in hot, rainy climates. The tree produces oval pods (5\u201312 inches long) containing 30\u201350 seeds, known as cacao beans.\n\n**2. Harvesting**\nWhen pods turn vibrant yellow/orange, they're harvested\u2014typically twice per year. Workers split the pods open and remove the seeds, which are surrounded by a sweet white pulp called \"baba.\"\n\n**3. Fermentation**\nThe beans (with pulp still attached) are fermented for 2\u20139 days, either heaped in piles on the ground (common in Africa) or in cascading boxes (preferred in Latin America). They're covered with banana leaves. This crucial step develops the beans' color and characteristic chocolate flavors.\n\n**4. Drying & Shipping**\nFermented beans are sun-dried on wooden boards or bamboo mats for 7\u201314 days, being regularly turned. Once dried and graded, they're packed into sacks and shipped to chocolate makers worldwide.\n\n## From Bean to Chocolate\n\n**5. Roasting & Winnowing**\nBeans are cleaned and roasted at low temperatures to develop flavor. Then they're cracked open and the outer shells are removed through winnowing, leaving behind the \"nibs\"\u2014the meat of the bean.\n\n**6. Grinding into Cocoa Mass**\nNibs are finely ground into cocoa mass (also called cocoa liquor), which is solid at room temperature. Under high pressure, this paste separates into **cocoa powder** and **cocoa butter**.\n\n**7. Mixing & Refining**\nTo make chocolate, cocoa mass is combined with additional cocoa butter and sweetener. The ingredients depend on the chocolate type:\n- **Dark chocolate**: cocoa mass, cocoa butter, and sugar\n- **Milk chocolate**: adds milk powder\n- **White chocolate**: cocoa butter, sugar, and milk powder (no cocoa mass)\n\nThe mixture is ground and refined until smooth, reducing particle size to around 20 microns or less.\n\n**8. Conching**\nThe chocolate undergoes conching\u2014a process of rolling, kneading, heating, and aerating for hours (sometimes days). This removes unwanted bitterness, drives off moisture and volatile compounds, and develops the final aroma and flavor. Soy lecithin and extra cocoa butter may be added for fluidity.\n\n**9. Tempering**\nThe chocolate is carefully heated and cooled to specific temperatures to stabilize the cocoa butter crystals. Proper tempering gives chocolate its glossy appearance, satisfying \"snap,\" and smooth texture while preventing \"bloom\" (that grayish, waxy coating).\n\n**10. Molding & Packaging**\nFinally, the tempered chocolate is poured into molds, cooled in temperature-controlled tunnels, removed from the molds, and packaged for sale.\n\n---\n\n**Sources:**\n1. https://www.lakechamplainchocolates.com/making-chocolate/\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://www.webstaurantstore.com/blog/2362/chocolate-candy-making.html?srsltid=AfmBOoqUsGy0R1C3hFs5Tg-12mOye6I-dXtMEW2rgw-hyOEk7S9h-ghu\n5. https://vegiglow.com/the-weekend-chocolatier-exploring-the-art-of-chocolate-making-molding/\n6. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272431,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 801,
+        "prompt_tokens": 8589,
+        "total_tokens": 9390,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is chocolate made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccd2e651d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bf7af2cf6a1ccd2e680f160001d73c2e\"},\"usage\":{\"total_tokens\":8438}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccd2e651d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bf7af2cf6a1ccd2e680f160001d73c2e\"},\"usage\":{\"total_tokens\":8438}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bf7af2cf6a1ccd2e680f160001d73c2e\"},\"usage\":{\"total_tokens\":8438}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Chocolate is made through a fascinating multi-step process that transforms cacao beans into the delicious treat we all know. Here's how it works:\n\n## From Tree to Bean\n\n**1. Cacao Cultivation**\nChocolate begins with the cacao tree (*Theobroma cacao*), which grows within 20\u00b0 north and south of the Equator in hot, rainy climates. The tree produces oval pods (5\u201312 inches long) containing 30\u201350 seeds, known as cacao beans.\n\n**2. Harvesting**\nWhen pods turn vibrant yellow/orange, they're harvested\u2014typically twice per year. Workers split the pods open and remove the seeds, which are surrounded by a sweet white pulp called \"baba.\"\n\n**3. Fermentation**\nThe beans (with pulp still attached) are fermented for 2\u20139 days, either heaped in piles on the ground (common in Africa) or in cascading boxes (preferred in Latin America). They're covered with banana leaves. This crucial step develops the beans' color and characteristic chocolate flavors.\n\n**4. Drying & Shipping**\nFermented beans are sun-dried on wooden boards or bamboo mats for 7\u201314 days, being regularly turned. Once dried and graded, they're packed into sacks and shipped to chocolate makers worldwide.\n\n## From Bean to Chocolate\n\n**5. Roasting & Winnowing**\nBeans are cleaned and roasted at low temperatures to develop flavor. Then they're cracked open and the outer shells are removed through winnowing, leaving behind the \"nibs\"\u2014the meat of the bean.\n\n**6. Grinding into Cocoa Mass**\nNibs are finely ground into cocoa mass (also called cocoa liquor), which is solid at room temperature. Under high pressure, this paste separates into **cocoa powder** and **cocoa butter**.\n\n**7. Mixing & Refining**\nTo make chocolate, cocoa mass is combined with additional cocoa butter and sweetener. The ingredients depend on the chocolate type:\n- **Dark chocolate**: cocoa mass, cocoa butter, and sugar\n- **Milk chocolate**: adds milk powder\n- **White chocolate**: cocoa butter, sugar, and milk powder (no cocoa mass)\n\nThe mixture is ground and refined until smooth, reducing particle size to around 20 microns or less.\n\n**8. Conching**\nThe chocolate undergoes conching\u2014a process of rolling, kneading, heating, and aerating for hours (sometimes days). This removes unwanted bitterness, drives off moisture and volatile compounds, and develops the final aroma and flavor. Soy lecithin and extra cocoa butter may be added for fluidity.\n\n**9. Tempering**\nThe chocolate is carefully heated and cooled to specific temperatures to stabilize the cocoa butter crystals. Proper tempering gives chocolate its glossy appearance, satisfying \"snap,\" and smooth texture while preventing \"bloom\" (that grayish, waxy coating).\n\n**10. Molding & Packaging**\nFinally, the tempered chocolate is poured into molds, cooled in temperature-controlled tunnels, removed from the molds, and packaged for sale.\n\n---\n\n**Sources:**\n1. https://www.lakechamplainchocolates.com/making-chocolate/\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://www.webstaurantstore.com/blog/2362/chocolate-candy-making.html?srsltid=AfmBOoqUsGy0R1C3hFs5Tg-12mOye6I-dXtMEW2rgw-hyOEk7S9h-ghu\n5. https://vegiglow.com/the-weekend-chocolatier-exploring-the-art-of-chocolate-making-molding/\n6. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/",
+  "usage": {
+    "completion_tokens": 801,
+    "prompt_tokens": 8589,
+    "total_tokens": 9390,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

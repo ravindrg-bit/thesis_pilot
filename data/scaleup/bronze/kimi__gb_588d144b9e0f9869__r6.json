@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_588d144b9e0f9869",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T21:07:13.369836+00:00",
+  "query_text": "who sings the christmas song all i want for christmas is you",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a248bf930cfd178e9af4c5b",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "\"All I Want for Christmas Is You\" was originally recorded by **Mariah Carey** for her first Christmas album, *Merry Christmas*, released on October 29, 1994. The song was co-written and co-produced by Mariah Carey and Walter Afanasieff. It has since become one of the most popular and commercially successful Christmas songs of all time, topping charts worldwide and earning billions of streams.\n\nThe song has also been covered by numerous artists over the years, including Justin Bieber (who recorded a version with Mariah Carey called \"All I Want for Christmas Is You (SuperFestive!)\" in 2011), Michael Bubl\u00e9, Fifth Harmony, Big Time Rush, and many others.\n\nSources:\n1. https://mariahcarey.fandom.com/wiki/All_I_Want_for_Christmas_Is_You_(song)\n2. https://ultimatepopculture.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n3. https://christmas.fandom.com/wiki/All_I_Want_For_Christmas_Is_You\n4. https://musicvideo.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n5. https://fifthharmony.fandom.com/wiki/All_I_Want_For_Christmas_Is_You",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780780027,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 275,
+        "prompt_tokens": 8660,
+        "total_tokens": 8935,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who sings the christmas song all i want for christmas is you"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a248bf866c9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"538002716a248bf84f50a50001ece584\"},\"usage\":{\"total_tokens\":8508}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a248bf866c9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"538002716a248bf84f50a50001ece584\"},\"usage\":{\"total_tokens\":8508}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"538002716a248bf84f50a50001ece584\"},\"usage\":{\"total_tokens\":8508}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "\"All I Want for Christmas Is You\" was originally recorded by **Mariah Carey** for her first Christmas album, *Merry Christmas*, released on October 29, 1994. The song was co-written and co-produced by Mariah Carey and Walter Afanasieff. It has since become one of the most popular and commercially successful Christmas songs of all time, topping charts worldwide and earning billions of streams.\n\nThe song has also been covered by numerous artists over the years, including Justin Bieber (who recorded a version with Mariah Carey called \"All I Want for Christmas Is You (SuperFestive!)\" in 2011), Michael Bubl\u00e9, Fifth Harmony, Big Time Rush, and many others.\n\nSources:\n1. https://mariahcarey.fandom.com/wiki/All_I_Want_for_Christmas_Is_You_(song)\n2. https://ultimatepopculture.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n3. https://christmas.fandom.com/wiki/All_I_Want_For_Christmas_Is_You\n4. https://musicvideo.fandom.com/wiki/All_I_Want_for_Christmas_Is_You\n5. https://fifthharmony.fandom.com/wiki/All_I_Want_For_Christmas_Is_You",
+  "usage": {
+    "completion_tokens": 275,
+    "prompt_tokens": 8660,
+    "total_tokens": 8935,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

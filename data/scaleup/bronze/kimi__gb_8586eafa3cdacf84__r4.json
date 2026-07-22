@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_8586eafa3cdacf84",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:33:02.210695+00:00",
+  "query_text": "pregnancy test results",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a257303e0d430e248207b7f",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here's comprehensive information about pregnancy test results:\n\n## How Pregnancy Tests Work\n\nPregnancy tests detect **human chorionic gonadotropin (hCG)**, a hormone produced during pregnancy after a fertilized egg implants in the uterus (about 6-12 days after conception). hCG levels double every couple of days in early pregnancy.\n\n## Types of Pregnancy Tests\n\n### At-Home Urine Tests\n- **Non-digital tests**: Show results as lines, plus/minus signs, or color changes\n- **Digital tests**: Display \"pregnant\" or \"not pregnant\" on a screen\n- About **99% accurate** when used correctly on or after the day of your expected period\n\n### Blood Tests (done at doctor's office)\n- **Qualitative**: Gives positive/negative result\n- **Quantitative**: Measures exact hCG levels\n- Can detect pregnancy slightly earlier than urine tests\n\n## How to Read Results\n\n| Result | What It Means |\n|--------|---------------|\n| **Positive** | Two lines, a plus sign, color change, or \"pregnant\" \u2014 indicates hCG detected |\n| **Negative** | One line, minus sign, or \"not pregnant\" \u2014 no hCG detected |\n| **Faint line** | Usually still means positive; hCG levels may still be building |\n| **Evaporation line** | Colorless streak appearing after the test dries; not a true positive |\n\n## Tips for Accurate Results\n\n1. **Best time to test**: First thing in the morning when urine is most concentrated\n2. **When to test**: Wait until the first day of your missed period for most accurate results\n3. **Avoid**: Drinking excessive fluids before testing (can dilute hCG)\n4. **Always**: Check expiration dates and follow instructions exactly\n5. **Read results** within the recommended time window (usually 2-10 minutes)\n\n## False Results\n\n| False Positive (rare) | False Negative (more common) |\n|-----------------------|------------------------------|\n| Recent miscarriage or birth | Testing too early |\n| Fertility medications containing hCG | Over-hydration/diluted urine |\n| Expired or faulty test | Not following instructions |\n| Ovarian tumor | Testing late in the day |\n\n## When to See a Doctor\n\n- If you get a **positive result** \u2014 contact your healthcare provider to confirm and begin prenatal care\n- If you get **conflicting results** from multiple tests\n- If you have a **negative test but still no period** after a week \u2014 retest or see your doctor\n- If you experience **severe cramping, bleeding, or other concerning symptoms**\n\n## Special Considerations\n\n- **Early detection tests**: Can work 3-5 days before a missed period but are more prone to false negatives\n- **The \"hook effect\"**: Very rarely, extremely high hCG levels can cause a false negative; doctors can dilute the sample for accurate results\n- **Chemical pregnancy**: Early miscarriage shortly after implantation can cause a positive test followed by a negative one\n\nSources:\n1. https://www.parents.com/pregnancy-test-at-night-8779240\n2. https://www.webmd.com/baby/pregnancy-tests\n3. https://www.webmd.com/what-to-know-about-pregnancy-tests\n4. https://www.webmd.com/baby/what-to-know-about-pregnancy-tests\n5. https://my.clevelandclinic.org/health/diagnostics/9703-pregnancy-tests\n6. https://www.parents.com/pregnancy-test-delayed-second-line-8594630\n7. https://www.webmd.com/baby/bleach-pregnancy-test-what-to-know\n8. https://www.parents.com/pregnancy/signs/test/how-to-take-a-pregnancy-test/\n9. https://www.parents.com/pregnancy-hgc-blood-tests-accuracy-benefits-risks-8601571\n10. https://www.parents.com/what-to-do-after-positive-pregnancy-test-8648086\n11. https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/in-depth/home-pregnancy-tests/art-20047940\n12. https://www.parents.com/early-pregnancy-tests-8602278\n13. https://www.webmd.com/parenting/bleach-pregnancy-test-what-to-know",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780839172,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 917,
+        "prompt_tokens": 7556,
+        "total_tokens": 8473,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "pregnancy test results"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a257302f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1cad9c546a2573024f50a50001ee1919\"},\"usage\":{\"total_tokens\":7409}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a257302f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1cad9c546a2573024f50a50001ee1919\"},\"usage\":{\"total_tokens\":7409}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1cad9c546a2573024f50a50001ee1919\"},\"usage\":{\"total_tokens\":7409}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here's comprehensive information about pregnancy test results:\n\n## How Pregnancy Tests Work\n\nPregnancy tests detect **human chorionic gonadotropin (hCG)**, a hormone produced during pregnancy after a fertilized egg implants in the uterus (about 6-12 days after conception). hCG levels double every couple of days in early pregnancy.\n\n## Types of Pregnancy Tests\n\n### At-Home Urine Tests\n- **Non-digital tests**: Show results as lines, plus/minus signs, or color changes\n- **Digital tests**: Display \"pregnant\" or \"not pregnant\" on a screen\n- About **99% accurate** when used correctly on or after the day of your expected period\n\n### Blood Tests (done at doctor's office)\n- **Qualitative**: Gives positive/negative result\n- **Quantitative**: Measures exact hCG levels\n- Can detect pregnancy slightly earlier than urine tests\n\n## How to Read Results\n\n| Result | What It Means |\n|--------|---------------|\n| **Positive** | Two lines, a plus sign, color change, or \"pregnant\" \u2014 indicates hCG detected |\n| **Negative** | One line, minus sign, or \"not pregnant\" \u2014 no hCG detected |\n| **Faint line** | Usually still means positive; hCG levels may still be building |\n| **Evaporation line** | Colorless streak appearing after the test dries; not a true positive |\n\n## Tips for Accurate Results\n\n1. **Best time to test**: First thing in the morning when urine is most concentrated\n2. **When to test**: Wait until the first day of your missed period for most accurate results\n3. **Avoid**: Drinking excessive fluids before testing (can dilute hCG)\n4. **Always**: Check expiration dates and follow instructions exactly\n5. **Read results** within the recommended time window (usually 2-10 minutes)\n\n## False Results\n\n| False Positive (rare) | False Negative (more common) |\n|-----------------------|------------------------------|\n| Recent miscarriage or birth | Testing too early |\n| Fertility medications containing hCG | Over-hydration/diluted urine |\n| Expired or faulty test | Not following instructions |\n| Ovarian tumor | Testing late in the day |\n\n## When to See a Doctor\n\n- If you get a **positive result** \u2014 contact your healthcare provider to confirm and begin prenatal care\n- If you get **conflicting results** from multiple tests\n- If you have a **negative test but still no period** after a week \u2014 retest or see your doctor\n- If you experience **severe cramping, bleeding, or other concerning symptoms**\n\n## Special Considerations\n\n- **Early detection tests**: Can work 3-5 days before a missed period but are more prone to false negatives\n- **The \"hook effect\"**: Very rarely, extremely high hCG levels can cause a false negative; doctors can dilute the sample for accurate results\n- **Chemical pregnancy**: Early miscarriage shortly after implantation can cause a positive test followed by a negative one\n\nSources:\n1. https://www.parents.com/pregnancy-test-at-night-8779240\n2. https://www.webmd.com/baby/pregnancy-tests\n3. https://www.webmd.com/what-to-know-about-pregnancy-tests\n4. https://www.webmd.com/baby/what-to-know-about-pregnancy-tests\n5. https://my.clevelandclinic.org/health/diagnostics/9703-pregnancy-tests\n6. https://www.parents.com/pregnancy-test-delayed-second-line-8594630\n7. https://www.webmd.com/baby/bleach-pregnancy-test-what-to-know\n8. https://www.parents.com/pregnancy/signs/test/how-to-take-a-pregnancy-test/\n9. https://www.parents.com/pregnancy-hgc-blood-tests-accuracy-benefits-risks-8601571\n10. https://www.parents.com/what-to-do-after-positive-pregnancy-test-8648086\n11. https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/in-depth/home-pregnancy-tests/art-20047940\n12. https://www.parents.com/early-pregnancy-tests-8602278\n13. https://www.webmd.com/parenting/bleach-pregnancy-test-what-to-know",
+  "usage": {
+    "completion_tokens": 917,
+    "prompt_tokens": 7556,
+    "total_tokens": 8473,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

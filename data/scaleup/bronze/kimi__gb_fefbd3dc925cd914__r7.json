@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_fefbd3dc925cd914",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:54:49.140408+00:00",
+  "query_text": "what temperature can food be accepted at",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25a252e73a294777162f35",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with comprehensive information about food acceptance temperatures. The term \"food acceptance temperature\" typically refers to the temperatures at which food should be received/accepted during delivery, as well as safe temperatures for consuming food.\n\n## Food Receiving/Acceptance Temperatures\n\nWhen accepting food deliveries, certain temperature requirements must be met:\n\n### Cold Foods\n- **Cold TCS (Time/Temperature Control for Safety) foods** must be received at **41\u00b0F (5\u00b0C) or below**\n- **Frozen foods** must be received frozen solid (typically **32\u00b0F/0\u00b0C or lower**, ideally at **0\u00b0F/-18\u00b0C**)\n\n### Hot Foods\n- **Hot TCS foods** must be received at **135\u00b0F (57\u00b0C) or above**\n\nAccording to Minnesota Department of Health guidelines: *\"If food temperatures do not meet requirements or if TCS food shows evidence of previous temperature abuse, do not accept the food, or discard the products.\"*\n\n## Safe Food Temperature Zones\n\n| Category | Temperature | Notes |\n|----------|-------------|-------|\n| **Temperature Danger Zone** | 40\u00b0F - 140\u00b0F (4\u00b0C - 60\u00b0C) | Bacteria multiply rapidly; food should not be in this zone for more than 2 hours (1 hour if above 90\u00b0F/32\u00b0C ambient) |\n| **Cold Holding** | 41\u00b0F (5\u00b0C) or below | For refrigerated foods |\n| **Hot Holding** | 135\u00b0F (57\u00b0C) or above | For cooked foods being kept warm |\n| **Safe Serving Temperature (Hot)** | 140\u00b0F - 165\u00b0F (60\u00b0C - 74\u00b0C) | Minimum safe temperatures for consumption |\n\n## Safe Minimum Internal Cooking Temperatures for Consumption\n\n| Food Type | Minimum Internal Temperature |\n|-----------|------------------------------|\n| Poultry (all types) | 165\u00b0F (74\u00b0C) |\n| Ground meats (beef, pork, lamb) | 160\u00b0F (71\u00b0C) |\n| Whole cuts of beef, pork, lamb, veal | 145\u00b0F (63\u00b0C) + 3 min rest |\n| Fish and seafood | 145\u00b0F (63\u00b0C) |\n| Egg dishes | 160\u00b0F (71\u00b0C) |\n| Leftovers and reheated foods | 165\u00b0F (74\u00b0C) |\n| Cooked vegetables | 135\u00b0F (57\u00b0C) |\n\n## Key Points for Food Acceptance\n\n1. **Always use a thermometer** - Never rely on appearance alone\n2. **Reject deliveries** that don't meet temperature requirements\n3. **Check frozen foods** - They should be solid with no signs of thawing\n4. **Document temperatures** at receiving for food safety records\n5. **Move quickly** - Get perishable foods into proper storage within 2 hours\n\nSources:\n1. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n2. https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures\n3. https://foodblogga.com/food-safety/safe-temperature-range-for-storing-food/\n4. https://alwaysfoodsafe.com/es/proper-food-temperatures\n5. https://www.health.state.mn.us/communities/environment/food/docs/fs/tcsfoodfs.pdf\n6. https://www.tcrentalsolutions.com/blog/temperature-in-food-safety\n7. https://essentialfoodhygiene.co.uk/the-correct-temperature-to-serve-hot-foods-explained/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780851283,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 732,
+        "prompt_tokens": 7996,
+        "total_tokens": 8728,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what temperature can food be accepted at"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25a251f1ab",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"cf564a0a6a25a251680f160001ecc0af\"},\"usage\":{\"total_tokens\":7846}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25a251f1ab",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"cf564a0a6a25a251680f160001ecc0af\"},\"usage\":{\"total_tokens\":7846}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"cf564a0a6a25a251680f160001ecc0af\"},\"usage\":{\"total_tokens\":7846}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with comprehensive information about food acceptance temperatures. The term \"food acceptance temperature\" typically refers to the temperatures at which food should be received/accepted during delivery, as well as safe temperatures for consuming food.\n\n## Food Receiving/Acceptance Temperatures\n\nWhen accepting food deliveries, certain temperature requirements must be met:\n\n### Cold Foods\n- **Cold TCS (Time/Temperature Control for Safety) foods** must be received at **41\u00b0F (5\u00b0C) or below**\n- **Frozen foods** must be received frozen solid (typically **32\u00b0F/0\u00b0C or lower**, ideally at **0\u00b0F/-18\u00b0C**)\n\n### Hot Foods\n- **Hot TCS foods** must be received at **135\u00b0F (57\u00b0C) or above**\n\nAccording to Minnesota Department of Health guidelines: *\"If food temperatures do not meet requirements or if TCS food shows evidence of previous temperature abuse, do not accept the food, or discard the products.\"*\n\n## Safe Food Temperature Zones\n\n| Category | Temperature | Notes |\n|----------|-------------|-------|\n| **Temperature Danger Zone** | 40\u00b0F - 140\u00b0F (4\u00b0C - 60\u00b0C) | Bacteria multiply rapidly; food should not be in this zone for more than 2 hours (1 hour if above 90\u00b0F/32\u00b0C ambient) |\n| **Cold Holding** | 41\u00b0F (5\u00b0C) or below | For refrigerated foods |\n| **Hot Holding** | 135\u00b0F (57\u00b0C) or above | For cooked foods being kept warm |\n| **Safe Serving Temperature (Hot)** | 140\u00b0F - 165\u00b0F (60\u00b0C - 74\u00b0C) | Minimum safe temperatures for consumption |\n\n## Safe Minimum Internal Cooking Temperatures for Consumption\n\n| Food Type | Minimum Internal Temperature |\n|-----------|------------------------------|\n| Poultry (all types) | 165\u00b0F (74\u00b0C) |\n| Ground meats (beef, pork, lamb) | 160\u00b0F (71\u00b0C) |\n| Whole cuts of beef, pork, lamb, veal | 145\u00b0F (63\u00b0C) + 3 min rest |\n| Fish and seafood | 145\u00b0F (63\u00b0C) |\n| Egg dishes | 160\u00b0F (71\u00b0C) |\n| Leftovers and reheated foods | 165\u00b0F (74\u00b0C) |\n| Cooked vegetables | 135\u00b0F (57\u00b0C) |\n\n## Key Points for Food Acceptance\n\n1. **Always use a thermometer** - Never rely on appearance alone\n2. **Reject deliveries** that don't meet temperature requirements\n3. **Check frozen foods** - They should be solid with no signs of thawing\n4. **Document temperatures** at receiving for food safety records\n5. **Move quickly** - Get perishable foods into proper storage within 2 hours\n\nSources:\n1. https://ladle.com/resources/blog/safe-food-temperatures-protect-public-health-and-your-bottom-line/\n2. https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures\n3. https://foodblogga.com/food-safety/safe-temperature-range-for-storing-food/\n4. https://alwaysfoodsafe.com/es/proper-food-temperatures\n5. https://www.health.state.mn.us/communities/environment/food/docs/fs/tcsfoodfs.pdf\n6. https://www.tcrentalsolutions.com/blog/temperature-in-food-safety\n7. https://essentialfoodhygiene.co.uk/the-correct-temperature-to-serve-hot-foods-explained/",
+  "usage": {
+    "completion_tokens": 732,
+    "prompt_tokens": 7996,
+    "total_tokens": 8728,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

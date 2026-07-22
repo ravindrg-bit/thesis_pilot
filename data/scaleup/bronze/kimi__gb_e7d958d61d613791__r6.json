@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:58:03.567630+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ec2c36cdc9a5a37c54ea",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the main places where you can get tickets for the next NBA game:\n\n## Official Sources\n\n**1. NBATickets.com (Official NBA Ticket Marketplace)**\n- The NBA's official one-stop shop for all ticket types for all teams\n- You can buy single game tickets directly from the team\n- Browse the official resale marketplace for tickets being sold by other ticket holders\n- 100% authentic tickets guaranteed\n- Website: http://nbatickets.nba.com\n\n**2. Team Official Websites / Ticketmaster**\n- Each NBA team sells tickets through their official website\n- Most teams' official ticketing partner is Ticketmaster\n- Buying directly from the team ensures first-issue tickets (not resold)\n- You can find group tickets, season tickets, and special promotions\n\n## Authorized Resale Platforms\n\n**3. StubHub**\n- One of the largest ticket resale platforms\n- Offers tickets for all NBA teams and games\n- Often has competitive prices, especially closer to game time\n\n**4. SeatGeek**\n- Popular resale site with price comparison features\n- Good for finding deals on tickets\n\n**5. VividSeats / Viagogo**\n- Additional resale options for popular/hot games\n\n## Tips for Getting the Best Tickets\n\n- **Buy early**: NBA tickets typically go on sale in mid-August for the upcoming season and popular games sell out quickly\n- **Compare prices**: Check multiple resale sites as prices can vary significantly\n- **Avoid scams**: Only buy from official or well-known platforms. Avoid buying from forums, individuals directly, or websites with prices that seem too good to be true\n- **Last-minute deals**: On resale platforms, prices sometimes drop the day before the game\n\nFor international buyers (especially in Asia), platforms like **KKday** and **WAUG** also offer NBA tickets for popular teams like the Lakers, Knicks, Heat, and Clippers.\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n4. https://www.stubhub.com/nba-tickets/grouping/115\n5. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n6. https://www.silive.com/sports/event-tickets/2025/05/knicks-vs-celtics-2025-playoff-tickets-that-you-can-actually-afford-are-on-resale-sites-now.html\n7. https://capturetheatlas.com/nba-basketball-game-tickets-nyc/\n8. https://www.waug.com/en/activities/142629\n9. https://www.waug.com/en/magazines/1724\n10. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780804654,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 668,
+        "prompt_tokens": 8956,
+        "total_tokens": 9624,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ec2b2e25",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"cfc5f8ce6a24ec2b680f160001ebc0c3\"},\"usage\":{\"total_tokens\":8799}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ec2b2e25",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"cfc5f8ce6a24ec2b680f160001ebc0c3\"},\"usage\":{\"total_tokens\":8799}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"cfc5f8ce6a24ec2b680f160001ebc0c3\"},\"usage\":{\"total_tokens\":8799}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the main places where you can get tickets for the next NBA game:\n\n## Official Sources\n\n**1. NBATickets.com (Official NBA Ticket Marketplace)**\n- The NBA's official one-stop shop for all ticket types for all teams\n- You can buy single game tickets directly from the team\n- Browse the official resale marketplace for tickets being sold by other ticket holders\n- 100% authentic tickets guaranteed\n- Website: http://nbatickets.nba.com\n\n**2. Team Official Websites / Ticketmaster**\n- Each NBA team sells tickets through their official website\n- Most teams' official ticketing partner is Ticketmaster\n- Buying directly from the team ensures first-issue tickets (not resold)\n- You can find group tickets, season tickets, and special promotions\n\n## Authorized Resale Platforms\n\n**3. StubHub**\n- One of the largest ticket resale platforms\n- Offers tickets for all NBA teams and games\n- Often has competitive prices, especially closer to game time\n\n**4. SeatGeek**\n- Popular resale site with price comparison features\n- Good for finding deals on tickets\n\n**5. VividSeats / Viagogo**\n- Additional resale options for popular/hot games\n\n## Tips for Getting the Best Tickets\n\n- **Buy early**: NBA tickets typically go on sale in mid-August for the upcoming season and popular games sell out quickly\n- **Compare prices**: Check multiple resale sites as prices can vary significantly\n- **Avoid scams**: Only buy from official or well-known platforms. Avoid buying from forums, individuals directly, or websites with prices that seem too good to be true\n- **Last-minute deals**: On resale platforms, prices sometimes drop the day before the game\n\nFor international buyers (especially in Asia), platforms like **KKday** and **WAUG** also offer NBA tickets for popular teams like the Lakers, Knicks, Heat, and Clippers.\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n4. https://www.stubhub.com/nba-tickets/grouping/115\n5. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n6. https://www.silive.com/sports/event-tickets/2025/05/knicks-vs-celtics-2025-playoff-tickets-that-you-can-actually-afford-are-on-resale-sites-now.html\n7. https://capturetheatlas.com/nba-basketball-game-tickets-nyc/\n8. https://www.waug.com/en/activities/142629\n9. https://www.waug.com/en/magazines/1724\n10. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html",
+  "usage": {
+    "completion_tokens": 668,
+    "prompt_tokens": 8956,
+    "total_tokens": 9624,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

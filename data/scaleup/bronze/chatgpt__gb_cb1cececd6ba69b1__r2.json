@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 2,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:22:33.997448+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0fb61573616a7e94006a25d2ff643081a1b93207810954128b",
+    "created_at": 1780863743.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0fb61573616a7e94006a25d3000b6881a1a0750be02ddee003",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the **means of two related measurements**.\n\nCommon situations:\n\n- The **same people** measured twice  \n  - Example: blood pressure **before vs. after** treatment\n- Matched pairs  \n  - Example: twins, matched patients, or paired observations\n- Repeated measures under two conditions  \n  - Example: test scores after studying with **method A vs. method B**\n\n## Main idea\n\nInstead of comparing two separate groups, the paired t-test looks at the **difference within each pair**.\n\nFor each subject/pair:\n\n\\[\nd_i = X_{1i} - X_{2i}\n\\]\n\nThen it tests whether the **mean difference** is significantly different from 0.\n\n## Hypotheses\n\nFor a two-tailed paired t-test:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\nWhere:\n\n- \\(\\mu_d\\) = population mean of the paired differences\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar d}{s_d / \\sqrt{n}}\n\\]\n\nWhere:\n\n- \\(\\bar d\\) = sample mean of the differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The dependent variable is continuous.\n2. Observations are paired or matched.\n3. The differences are approximately normally distributed.\n4. The pairs are independent of each other.\n\n## Example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 68 | 74 | 6 |\n| 3 | 80 | 83 | 3 |\n| 4 | 72 | 78 | 6 |\n| 5 | 75 | 81 | 6 |\n\nThe test checks whether the **average improvement** is significantly different from 0.\n\n## Interpretation\n\nIf the p-value is less than your significance level, usually \\(0.05\\), you reject the null hypothesis.\n\nExample conclusion:\n\n> There was a statistically significant difference between scores before and after tutoring.\n\nIf the p-value is greater than \\(0.05\\), you fail to reject the null hypothesis.\n\n> There was not enough evidence to conclude that the scores changed after tutoring.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863753.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 563,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5009
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the **means of two related measurements**.\n\nCommon situations:\n\n- The **same people** measured twice  \n  - Example: blood pressure **before vs. after** treatment\n- Matched pairs  \n  - Example: twins, matched patients, or paired observations\n- Repeated measures under two conditions  \n  - Example: test scores after studying with **method A vs. method B**\n\n## Main idea\n\nInstead of comparing two separate groups, the paired t-test looks at the **difference within each pair**.\n\nFor each subject/pair:\n\n\\[\nd_i = X_{1i} - X_{2i}\n\\]\n\nThen it tests whether the **mean difference** is significantly different from 0.\n\n## Hypotheses\n\nFor a two-tailed paired t-test:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\nWhere:\n\n- \\(\\mu_d\\) = population mean of the paired differences\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar d}{s_d / \\sqrt{n}}\n\\]\n\nWhere:\n\n- \\(\\bar d\\) = sample mean of the differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The dependent variable is continuous.\n2. Observations are paired or matched.\n3. The differences are approximately normally distributed.\n4. The pairs are independent of each other.\n\n## Example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 75 | 5 |\n| 2 | 68 | 74 | 6 |\n| 3 | 80 | 83 | 3 |\n| 4 | 72 | 78 | 6 |\n| 5 | 75 | 81 | 6 |\n\nThe test checks whether the **average improvement** is significantly different from 0.\n\n## Interpretation\n\nIf the p-value is less than your significance level, usually \\(0.05\\), you reject the null hypothesis.\n\nExample conclusion:\n\n> There was a statistically significant difference between scores before and after tutoring.\n\nIf the p-value is greater than \\(0.05\\), you fail to reject the null hypothesis.\n\n> There was not enough evidence to conclude that the scores changed after tutoring.",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 563,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5009
+  },
+  "run_profile": "scaleup"
+}

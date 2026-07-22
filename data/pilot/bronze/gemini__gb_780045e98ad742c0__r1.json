@@ -1,0 +1,368 @@
+{
+  "query_id": "gb_780045e98ad742c0",
+  "engine": "gemini",
+  "run_index": 1,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-05-31T23:17:41.540110+00:00",
+  "query_text": "grade to percentage calculator",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 31 May 2026 23:17:41 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=13187",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Depending on what type of grade you need to convert, you can use the calculators and formulas below. \n\nIf you want me to do the math for you, **just reply with your grade** (for example: *\"What is 34 out of 45?\"* or *\"What is a 3.4 GPA as a percentage?\"*) and I will calculate it for you instantly!\n\n---\n\n### 1. Test Score to Percentage (Points Calculator)\nIf you received a score on a test or assignment (e.g., 18 out of 25), use this formula:\n\n$$\\text{Percentage (\\%)} = \\left( \\frac{\\text{Your Score}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** If you scored **41 out of 50**:\n    $$\\left( \\frac{41}{50} \\right) \\times 100 = 82\\%$$\n\n---\n\n### 2. Letter Grade to Percentage Reference Table\nThis is the standard academic grading scale used by most schools and universities to map letter grades to percentages:\n\n| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0 |\n| **F** | Below 65% | 0.0 |\n\n---\n\n### 3. GPA (4.0 Scale) to Percentage\nBecause schools weigh GPA differently, there is no single \"perfect\" formula. However, two common methods are used:\n\n#### Method A: The Quick Multiplier (Linear Estimate)\nIf you need a fast, rough conversion, multiply your 4.0 GPA by 25:\n$$\\text{Percentage} = \\text{GPA} \\times 25$$\n*   *Example:* A **3.2 GPA** $\\times 25 =$ **$80\\%$**\n\n#### Method B: The Standard College Board Scale (More Accurate)\nUniversities often convert your GPA back to a percentage using a curved scale:\n*   **4.0 GPA** $\\approx$ 95% \u2013 100%\n*   **3.7 GPA** $\\approx$ 90% \u2013 92%\n*   **3.3 GPA** $\\approx$ 87% \u2013 89%\n*   **3.0 GPA** $\\approx$ 83% \u2013 86%\n*   **2.7 GPA** $\\approx$ 80% \u2013 82%\n*   **2.3 GPA** $\\approx$ 77% \u2013 79%\n*   **2.0 GPA** $\\approx$ 73% \u2013 76%\n*   **1.7 GPA** $\\approx$ 70% \u2013 72%\n*   **1.0 GPA** $\\approx$ 65% \u2013 66%\n\n---\n\n### Python Code (For Developers)\nIf you are looking to write a quick script or program to automate this, here is a simple Python function:\n\n```python\ndef grade_to_percentage(score, max_score):\n    if max_score <= 0:\n        return \"Total points must be greater than 0.\"\n    percentage = (score / max_score) * 100\n    return f\"{percentage:.2f}%\"\n\n# Example Usage:\nearned = 17\ntotal = 22\nprint(grade_to_percentage(earned, total))  # Output: 77.27%\n```",
+              "thought": null,
+              "thought_signature": "Er0SCroSAQw51sf1KwbxIWhBkIL3y046j-EWUprajSiJjjIZofnPPnX00fR9WBaQ7bocyV9jsUOCntcybHnlkFjI-aVaxm_5SGsoF_evooHo7uFnQkpujtD_ZatNbT3U6PlJUFx_39JvgAeZhLtSQVx1dMec98ewkkSpX2SS4xYf5HH9NoF4L1F8IU3Cx2_mHWEZ3Qa_p7VFX6Dn3yd7z7tBltn-YQFOrNRIqj7bpXWi1P4p-G-3UdpeevfrZAycP4ukPbXhwyqx3CkIkopq6riXG3Wpy14WuQ3GPb4kxy8lJaLxHj9jv7_oFIV6vNQaM816OxDrjHC8L5ya71YRev_poJ8aWrse3kcoCRazl7Lro2lWKlTwycxW-Bc9mndNKxu_FmeZdXvOc32FrkdpuF-NSqO9o3G3oihAuEqoAkDuBw8D-4Jj5aUkIFIr8Uigwr6ccCIfJQZYf6jVtR4wIQXa6Ja0JjuQrR9780iPDzjcc3SOEgRCwu2Vkl7GNf1PpmCbtqDezLcEI7uU869IHJsDXxrq1_ukDhMruhoO3aZRVe8MZY1VMr2Cx9SaN2LvB8dUXibqed_MX5yd_y342UX-ZDSJhynRZwY8DuuWElrDcJpu5uQvpPJisMIlwxyp3OrLQYbIElaLuK6P672f-jf5FJMpjqHk1ebhOsYL-ZRANHBXKX_CuDJ5vSsquTWnBBhpnmdhiQG9szh9m0mshVqV2IRyAggEGWYNuehof_ZkCOm5uhDukhszycsal9GPnJOkQz-zL5IZj3VH4eUvijmsmm4-cAPwt_xbA7Fpl14pZ-vJk1K8JPn3iieN2Eaff_dIXR7U0OozF7NJtydCTotMBuQ_lVMP3PYr4MFj7NWmPMv5U47n2H9J2PRwY4QhIvsEjHZu77ByYUN_OBuKBYKq4UdF0gxrVn0gX9IALGz3hZdZ6K1As54hMNcHG03OYfUS_uB4Eq7JYh_ErR0SqR8ZYFE0JIndgt28YGHR3xOtb84nvBoLiMFzhWtgKwhvuvdpEOTRFxAxVFa5vRAyYJkP3fVeMdYvCu07VnVLcGviEm4RzucqY0cmmSQnJHoToppQ-m4JuGIlbfUwgseEZzFKKOtt8vq7TDbtKA2-UMnWtxscihhHfFOpgyebaNRcD42j-R1JHAVegXGCuQfoEm4_g3JE843bHUdB_QbJDfJ9f-oz_X8AsLOQ2vU6VVC_1LwaaqTv1sb2plcwfCoUHqTy940NbIQrVQXXY3AdRwRpn5ZC-wSYLBTZD4lMUW_NWSiwUjPKecg97nJja6BJkpWP2NJ6N7ZEcpwFTGeaJMz2AuGoNUGbH4b3UrB8Rvgs_yhixsYS9SMmuATuamZXguQOzm0P2D-I4iuXEAKR2yCWx1E3GEXdKKI0qbjnblIwAZwe8LhvnmOHQzY83KcA4xASnWYqIYHrFMyEbl4P-3RZewAw42iAHSYPDniCHWNpARl_5hEMnFmwrwOhX48Ry1skwd0aG1QvJU9mK-haVnJwIg2RIwZwtIseKUw9rj-cncIQ1AyUJpPiZeOVLsHRMlBFq8hpTQTeKS8Zuqj9V1OmcsoqyETJHiDcs22-H__gzRjU1uKFoST-Z9cSD6AXpAA6UQ-dYgjUJs4ex11Z08jCi94DLymIluZXNQKGKSGfK3Yvr1gqDGtFW7fLDC8gTUfbDhXHRbfLe9LrXRTV4nBzGjKeoYaGLm3q7BvRo65szw8I2hfjlVlnJT4b1t13p2CWFDVu_w5d6y6UwAmft7T1-473Lou71rgZpV-xFxLq2RjQDoijI8Ec9aWiuScseHkoahk-fwdcN7HJML05AGCjoV2PddS0HiJfFfGWBVpJmiqAIaWMofNTtVpZtQWDnv22krllJAZPm0lKL06TOw6UAEL1dDvl4rLoiBNI3eF__qVe-Mja0FEZydo4WY8XFzvhfm83VDY0ciTrO8B6r4AuP39k3prEAjon_HNrd1MkLRfv-iVpij6ZdlHhzHabPJiHM0bzxdCLokGF90TrhG4xjqNIZ9_6TjxupBxxzNauJDR1K0IMUwQh_7f9aFT5weGjdxzigu1VJA-hP7yYB4PN6uLrbfH-6NsAiIPrUQVuVMR1Iqd4ainqYSiDoaqU9iNr1GBXIUSoEO-c-QHsrfbnKqZalUGPRNNEYEUrL6vosGa3kxoiqvpt9ama_LJt_TSF3Z1diOewExHBBN7vUa48Za7ObB8LaimGS4xS3cLwzLwpx9RYmDF4KUytTnEo3gZ72aqyOvUlq5tjSHLJsrqIYczHHJzpN0ctVYQPF4oIE-No2vT8Qg8FXqpQmRKp8_CPWTmdgjDuAcVJ5DlJ9dNwhSfqO63ozN1Xw2zLCvcuRgw4SwV-uCzgJDhXA3gWcRCV6YMvOg3FYle8McIu5nu7tYTiSzkYCBwPDhaB9vt0VZIXSqheljXxaMK0Pv5vnFGNS3lRUFybLVXfHqY1lr8GDaneNpd6Tz73g5P3Vd4KNwddDGMYlod-WFLQl_DamUUYRy0rcKLvgm9pPakjGQjJ4NXA2Un4JMM9GbB0LyfG4-V0WzZspp608B5aYj5yRMdhXBf1HjY8Ft4C91hb4sfgC1sTH5onLOkxtf_jG7txzz1KiGgrZ7iluL3tnoX16vSK0_xWgcfuBTCX3R75LxOAZ1kNBDkXzdSkZ4_Pls3A2GDDGi-yxgI9TmSTODUNtnXQEfA4he6N5RqbpcgShUqXG8tY68Yrl0Br-Ure2KAsYAZ3N6n0x144XTz8ilUTj6FHymZ_cCG-wh3gLiDCl1NYWNVxhF-Z6KmDGTa95erVv32BurHbqL6qQJDNcL9SVkBcLa9rQD0GDbDnHwDkF_cVUltLcxC3Ko59qYr-LFsWXkpkx_9w2oB_zZGXyN7eZMe_4HGudOvh9BAK8Dq_C05vYj4ZhqRkprlXnXewHWPR69K_JVJfU2E4sbENahO8z2jmJioefwLzFEwzxTnniaU9MMhCoPkqvsDjz90D45TmB3PzcdqFVFjOwjNTzdVtYHt3dhqw-JKXrCWG0Y1uyiBAwX4ToWuhQFdTWxqHuM1GCI4jSU7eEbrXsffusONax0GC3ArF81o5v4FEEql8r8POOYeuQsxRiGiIOTClH--xplHPDMnegSIxt29qWeR_oA==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "calculator.net",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkEfOx71nQ66WEQ4Z1tTA52DAc1QRFqLRtjVZ_2_q3on82zw9VIdrw_55a0Wk41SA64K71Fd6RKeKeVVvYckuNSKzbIXUCBpsadjzHiQ-mnapW8jkOqZfO0juSwBcLq6CXWnvgIlw="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "omnicalculator.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdtKosaU7FnjVCyvRBej6uSyWHKCXPGFWnpZY_MZcX9AubLSEHtpEYfIvHuwXcgYW_6x8Wd_QwpG4qgkrbXJZo_PHz9JjYpeffPj2X0-qaNfd5XYhtakXJKxlTH-mEBuDOqDSzgg=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "seattlecentral.edu",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwyCSfqjQaXg31gbihohnfTBN3IC4AOmAClb8_Vu330JDvn6Ejq2DbL1l53IdBEj92Hiw6nAUyBgyqXoYvprJfM_qNwxLLv3RIxZ9KcU8y_WUq1LEsy76N8q5Dr-X2AD_bgk8PQ8OsHwmUAjRjci6YSEG8sEjRSOQYIyVC8YEaelBvwll3aoU="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "alfabetaglobal.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNG86JkvKC9pTL3wSlyEaQ7UAK8SCVm7VXNXU4K-EB15n8SRfTIHfl_lShRbQPQDrNxG1BSeE6Q9aoLEj3ZAaHap5rdqEcgedx2S3Z4GTLSzQNkX6Tm_R7hDkWzC_TRhd5mLSYSAuJH0T2tWKb7eFYJA=="
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                1
+              ],
+              "segment": {
+                "start_index": 674,
+                "end_index": 834,
+                "part_index": null,
+                "text": "Letter Grade to Percentage Reference Table\nThis is the standard academic grading scale used by most schools and universities to map letter grades to percentages"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 960,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 990,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1021,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1052,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1082,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1113,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1144,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1174,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1205,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1236,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1266,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 837,
+                "end_index": 1294,
+                "part_index": null,
+                "text": "| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0 |\n| **F** | Below 65% | 0.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 1456,
+                "end_index": 1575,
+                "part_index": null,
+                "text": "#### Method A: The Quick Multiplier (Linear Estimate)\nIf you need a fast, rough conversion, multiply your 4.0 GPA by 25"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 1677,
+                "end_index": 1818,
+                "part_index": null,
+                "text": "#### Method B: The Standard College Board Scale (More Accurate)\nUniversities often convert your GPA back to a percentage using a curved scale"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=gpa+to+percentage+conversion+table&client=app-vertex-grounding&safesearch=active\">gpa to percentage conversion table</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=letter+grade+to+percentage+scale&client=app-vertex-grounding&safesearch=active\">letter grade to percentage scale</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "gpa to percentage conversion table",
+            "letter grade to percentage scale"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "iMEcaoDHGduqkdUPh9iayQU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1118,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 5,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 5
+        }
+      ],
+      "thoughts_token_count": 1326,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2449,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Depending on what type of grade you need to convert, you can use the calculators and formulas below. \n\nIf you want me to do the math for you, **just reply with your grade** (for example: *\"What is 34 out of 45?\"* or *\"What is a 3.4 GPA as a percentage?\"*) and I will calculate it for you instantly!\n\n---\n\n### 1. Test Score to Percentage (Points Calculator)\nIf you received a score on a test or assignment (e.g., 18 out of 25), use this formula:\n\n$$\\text{Percentage (\\%)} = \\left( \\frac{\\text{Your Score}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** If you scored **41 out of 50**:\n    $$\\left( \\frac{41}{50} \\right) \\times 100 = 82\\%$$\n\n---\n\n### 2. Letter Grade to Percentage Reference Table\nThis is the standard academic grading scale used by most schools and universities to map letter grades to percentages:\n\n| Letter Grade | Percentage Range | Standard GPA Equivalent |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 (or 4.3) |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0 |\n| **F** | Below 65% | 0.0 |\n\n---\n\n### 3. GPA (4.0 Scale) to Percentage\nBecause schools weigh GPA differently, there is no single \"perfect\" formula. However, two common methods are used:\n\n#### Method A: The Quick Multiplier (Linear Estimate)\nIf you need a fast, rough conversion, multiply your 4.0 GPA by 25:\n$$\\text{Percentage} = \\text{GPA} \\times 25$$\n*   *Example:* A **3.2 GPA** $\\times 25 =$ **$80\\%$**\n\n#### Method B: The Standard College Board Scale (More Accurate)\nUniversities often convert your GPA back to a percentage using a curved scale:\n*   **4.0 GPA** $\\approx$ 95% \u2013 100%\n*   **3.7 GPA** $\\approx$ 90% \u2013 92%\n*   **3.3 GPA** $\\approx$ 87% \u2013 89%\n*   **3.0 GPA** $\\approx$ 83% \u2013 86%\n*   **2.7 GPA** $\\approx$ 80% \u2013 82%\n*   **2.3 GPA** $\\approx$ 77% \u2013 79%\n*   **2.0 GPA** $\\approx$ 73% \u2013 76%\n*   **1.7 GPA** $\\approx$ 70% \u2013 72%\n*   **1.0 GPA** $\\approx$ 65% \u2013 66%\n\n---\n\n### Python Code (For Developers)\nIf you are looking to write a quick script or program to automate this, here is a simple Python function:\n\n```python\ndef grade_to_percentage(score, max_score):\n    if max_score <= 0:\n        return \"Total points must be greater than 0.\"\n    percentage = (score / max_score) * 100\n    return f\"{percentage:.2f}%\"\n\n# Example Usage:\nearned = 17\ntotal = 22\nprint(grade_to_percentage(earned, total))  # Output: 77.27%\n```",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1118,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 5,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 5
+      }
+    ],
+    "thoughts_token_count": 1326,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2449,
+    "traffic_type": null
+  },
+  "run_profile": "pilot"
+}

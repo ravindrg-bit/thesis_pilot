@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:06:37.451657+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccd08a09a5da7ca0a8d68",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "You can download the latest version of Python from the official Python website. Here are the key details:\n\n## Official Download Sources\n\n**Primary Download Page:**\n- Visit **https://www.python.org/downloads/** \u2014 This is the main download page where you can find the latest stable version of Python for your operating system (Windows, macOS, or Linux).\n\n**Current Latest Version:**\n- According to the official Python.org homepage, **Python 3.14.5** was released on May 10, 2026, and is the latest stable version available.\n\n## How to Download\n\n1. Go to **https://www.python.org/downloads/**\n2. The page will automatically suggest the best version for your operating system\n3. Click the download button to get the installer\n4. For Windows users, you can also visit **https://www.python.org/getit/windows/** for Windows-specific downloads\n\n## Alternative: Microsoft Store\n\nPython is also available on the Microsoft Store for Windows users at:\n- **https://apps.microsoft.com/detail/9pnrbtzxmb4z**\n\n## Important Tips for Installation\n\n- **Windows users**: Make sure to check the box **\"Add Python to PATH\"** during installation so you can use Python from the command line\n- You can choose between the standard installer or a custom installation if you want to change the default installation location\n- For most users, the standard installer is recommended\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://www.python.org/getit/windows/\n4. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/\n5. https://apps.microsoft.com/detail/9pnrbtzxmb4z?hl=zh-cn&gl=SK\n6. https://community.chocolatey.org/packages/python313\n7. https://docs.python.org/3.13/download.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272393,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 393,
+        "prompt_tokens": 7875,
+        "total_tokens": 8268,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I download the latest version of Python?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccd07f3ac",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"8216a3356a1ccd07680f160001d73bad\"},\"usage\":{\"total_tokens\":7723}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccd07f3ac",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"8216a3356a1ccd07680f160001d73bad\"},\"usage\":{\"total_tokens\":7723}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"8216a3356a1ccd07680f160001d73bad\"},\"usage\":{\"total_tokens\":7723}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "You can download the latest version of Python from the official Python website. Here are the key details:\n\n## Official Download Sources\n\n**Primary Download Page:**\n- Visit **https://www.python.org/downloads/** \u2014 This is the main download page where you can find the latest stable version of Python for your operating system (Windows, macOS, or Linux).\n\n**Current Latest Version:**\n- According to the official Python.org homepage, **Python 3.14.5** was released on May 10, 2026, and is the latest stable version available.\n\n## How to Download\n\n1. Go to **https://www.python.org/downloads/**\n2. The page will automatically suggest the best version for your operating system\n3. Click the download button to get the installer\n4. For Windows users, you can also visit **https://www.python.org/getit/windows/** for Windows-specific downloads\n\n## Alternative: Microsoft Store\n\nPython is also available on the Microsoft Store for Windows users at:\n- **https://apps.microsoft.com/detail/9pnrbtzxmb4z**\n\n## Important Tips for Installation\n\n- **Windows users**: Make sure to check the box **\"Add Python to PATH\"** during installation so you can use Python from the command line\n- You can choose between the standard installer or a custom installation if you want to change the default installation location\n- For most users, the standard installer is recommended\n\nSources:\n1. https://www.python.org/\n2. https://www.python.org/downloads/\n3. https://www.python.org/getit/windows/\n4. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/\n5. https://apps.microsoft.com/detail/9pnrbtzxmb4z?hl=zh-cn&gl=SK\n6. https://community.chocolatey.org/packages/python313\n7. https://docs.python.org/3.13/download.html",
+  "usage": {
+    "completion_tokens": 393,
+    "prompt_tokens": 7875,
+    "total_tokens": 8268,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

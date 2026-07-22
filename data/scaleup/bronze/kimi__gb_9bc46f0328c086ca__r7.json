@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:37:06.856697+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24af09964be47cfa5b2bdb",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how TV stations air shows and commercials:\n\n## Overview of TV Broadcasting Process\n\nTV stations use a process called **broadcast programming** or **scheduling** to organize and air shows and commercials in a linear, time-based format. This involves careful planning at both macro (season-long) and micro (minute-by-minute) levels.\n\n## How Shows Are Scheduled\n\n**Programming Strategies**\nTV stations employ various scheduling strategies to maximize audience retention and attract advertisers:\n\n- **Day-parting**: Dividing the day into segments (morning, daytime, prime time, late night) with programming tailored to expected demographics\n- **Stripping**: Running the same show daily at the same time (common for syndicated content)\n- **Stacking**: Grouping similar programs together to keep viewers watching from one show to the next\n- **Counter-programming**: Airing different genres against competitors to capture underserved audiences\n- **Tent-poling**: Placing popular shows at key times to support weaker surrounding programming\n- **Bridging**: Starting programs before competitors' shows end or running late to prevent channel switching\n\n**The Scheduling Timeline**\n- Long-term scheduling is planned seasonally or annually\n- Shows are typically presented weekly in prime time or daily in other dayparts\n- Final minute-by-minute transmission planning ensures every second of airtime is covered\n\n## How Commercials Are Integrated\n\n**The Commercial Scheduling Process**\n\n1. **Sales Phase**: Networks sell advertising slots by show and airdate. The exact position within the show is not specified at this stage.\n\n2. **Advance Scheduling**: Approximately 7-10 days before airing, networks schedule the specific commercial slots.\n\n3. **Position Assignment**: Commercials are assigned to specific positions within commercial breaks. The first and last positions in a break are most desirable because they get higher audience ratings.\n\n4. **Equitable Rotation**: Networks promise advertisers fair rotation among positions within breaks to ensure no single advertiser gets all premium or non-premium spots.\n\n**Key Commercial Scheduling Rules**\n\n- **Product Conflict Avoidance**: Competing products (e.g., Coca-Cola and Pepsi) cannot air in the same commercial break\n- **Content Appropriateness**: Certain commercials (e.g., alcohol) cannot be placed next to related show content (e.g., segments about alcoholism)\n- **Contract Compliance**: Advertisers monitor whether they receive promised percentages of premium positions\n\n## Technical Execution\n\n**Traditional Workflow**\n- The **traffic department** builds a detailed log of all programs, commercials, promos, and public service announcements\n- This log is handed to an **automation system** that executes the schedule\n- A **master control operator** oversees the process, handles breaking news cut-ins, and ensures quality\n\n**Modern Technology Evolution**\n- Early systems used massive robotic tape retrieval systems\n- Modern systems use software-based \"channel-in-a-box\" solutions\n- Cloud-based scheduling and playout is increasingly common, allowing remote access and greater redundancy\n\n**Automation Features**\n- Precise timing of content playback\n- SCTE markers to trigger ad insertion from third-party servers\n- Live programming break insertion\n- On-screen graphics, logos, and text overlay\n\n## Day-to-Day Operations\n\n- The algorithm typically runs overnight to schedule commercials for upcoming weeks\n- Daytime adjustments are made for shows airing within the next few days\n- Last-minute changes (show format alterations, advertiser requests) require manual intervention\n- Prime time often requires more manual scheduling due to content sensitivity and higher commercial costs\n\nSources:\n1. https://pubsonline.informs.org/doi/pdf/10.1287/opre.1030.0083\n2. https://tv-philippines.fandom.com/wiki/Broadcast_programming\n3. https://sites.utexas.edu/rexdu/wp-content/uploads/sites/5750/2025/11/Leveraging-Large-Scale-Granular-Single-Source-Data-for-TV-Advertising.pdf\n4. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n5. https://vulms.vu.edu.pk/Courses/MCM516/Downloads/Formatted%20HANDOUTS%20mcm516...pdf\n6. https://www.wikitia.com/wiki/Broadcast_programming\n7. https://study.com/academy/lesson/television-programming-planning-implementation.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780789002,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 900,
+        "prompt_tokens": 8381,
+        "total_tokens": 9281,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How TV stations air shows and commercials"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24af081413",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"34baf47d6a24af08680f160001eb5ed2\"},\"usage\":{\"total_tokens\":8230}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24af081413",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"34baf47d6a24af08680f160001eb5ed2\"},\"usage\":{\"total_tokens\":8230}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"34baf47d6a24af08680f160001eb5ed2\"},\"usage\":{\"total_tokens\":8230}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how TV stations air shows and commercials:\n\n## Overview of TV Broadcasting Process\n\nTV stations use a process called **broadcast programming** or **scheduling** to organize and air shows and commercials in a linear, time-based format. This involves careful planning at both macro (season-long) and micro (minute-by-minute) levels.\n\n## How Shows Are Scheduled\n\n**Programming Strategies**\nTV stations employ various scheduling strategies to maximize audience retention and attract advertisers:\n\n- **Day-parting**: Dividing the day into segments (morning, daytime, prime time, late night) with programming tailored to expected demographics\n- **Stripping**: Running the same show daily at the same time (common for syndicated content)\n- **Stacking**: Grouping similar programs together to keep viewers watching from one show to the next\n- **Counter-programming**: Airing different genres against competitors to capture underserved audiences\n- **Tent-poling**: Placing popular shows at key times to support weaker surrounding programming\n- **Bridging**: Starting programs before competitors' shows end or running late to prevent channel switching\n\n**The Scheduling Timeline**\n- Long-term scheduling is planned seasonally or annually\n- Shows are typically presented weekly in prime time or daily in other dayparts\n- Final minute-by-minute transmission planning ensures every second of airtime is covered\n\n## How Commercials Are Integrated\n\n**The Commercial Scheduling Process**\n\n1. **Sales Phase**: Networks sell advertising slots by show and airdate. The exact position within the show is not specified at this stage.\n\n2. **Advance Scheduling**: Approximately 7-10 days before airing, networks schedule the specific commercial slots.\n\n3. **Position Assignment**: Commercials are assigned to specific positions within commercial breaks. The first and last positions in a break are most desirable because they get higher audience ratings.\n\n4. **Equitable Rotation**: Networks promise advertisers fair rotation among positions within breaks to ensure no single advertiser gets all premium or non-premium spots.\n\n**Key Commercial Scheduling Rules**\n\n- **Product Conflict Avoidance**: Competing products (e.g., Coca-Cola and Pepsi) cannot air in the same commercial break\n- **Content Appropriateness**: Certain commercials (e.g., alcohol) cannot be placed next to related show content (e.g., segments about alcoholism)\n- **Contract Compliance**: Advertisers monitor whether they receive promised percentages of premium positions\n\n## Technical Execution\n\n**Traditional Workflow**\n- The **traffic department** builds a detailed log of all programs, commercials, promos, and public service announcements\n- This log is handed to an **automation system** that executes the schedule\n- A **master control operator** oversees the process, handles breaking news cut-ins, and ensures quality\n\n**Modern Technology Evolution**\n- Early systems used massive robotic tape retrieval systems\n- Modern systems use software-based \"channel-in-a-box\" solutions\n- Cloud-based scheduling and playout is increasingly common, allowing remote access and greater redundancy\n\n**Automation Features**\n- Precise timing of content playback\n- SCTE markers to trigger ad insertion from third-party servers\n- Live programming break insertion\n- On-screen graphics, logos, and text overlay\n\n## Day-to-Day Operations\n\n- The algorithm typically runs overnight to schedule commercials for upcoming weeks\n- Daytime adjustments are made for shows airing within the next few days\n- Last-minute changes (show format alterations, advertiser requests) require manual intervention\n- Prime time often requires more manual scheduling due to content sensitivity and higher commercial costs\n\nSources:\n1. https://pubsonline.informs.org/doi/pdf/10.1287/opre.1030.0083\n2. https://tv-philippines.fandom.com/wiki/Broadcast_programming\n3. https://sites.utexas.edu/rexdu/wp-content/uploads/sites/5750/2025/11/Leveraging-Large-Scale-Granular-Single-Source-Data-for-TV-Advertising.pdf\n4. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n5. https://vulms.vu.edu.pk/Courses/MCM516/Downloads/Formatted%20HANDOUTS%20mcm516...pdf\n6. https://www.wikitia.com/wiki/Broadcast_programming\n7. https://study.com/academy/lesson/television-programming-planning-implementation.html",
+  "usage": {
+    "completion_tokens": 900,
+    "prompt_tokens": 8381,
+    "total_tokens": 9281,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

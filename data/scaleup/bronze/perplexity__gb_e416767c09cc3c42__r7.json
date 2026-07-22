@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_e416767c09cc3c42",
+  "engine": "perplexity",
+  "run_index": 7,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T17:51:53.112624+00:00",
+  "query_text": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "448552a6-486a-406c-80db-c35a3b825056",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "`new_list = my_list` does **not** create a new list; it makes `new_list` point to the **same object** as `my_list`, so both names refer to one list in memory.[1][2] That is why any mutation through either variable is visible through the other.[1][4]\n\nTo make an actual copy, use one of these **shallow copy** methods for a normal one-dimensional list:[1]\n\n- `new_list = my_list.copy()`\n- `new_list = list(my_list)`\n- `new_list = my_list[:]`\n\nIf your list contains other mutable objects, these methods copy only the outer list, not the nested objects, so changes inside nested lists can still be shared.[2][4] In that case, use a **deep copy**:\n\n```python\nimport copy\nnew_list = copy.deepcopy(my_list)\n```\n\nUse `copy.deepcopy()` when you need a fully independent clone of a nested list or other composite object.[2][3][4]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780854713,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 208,
+      "prompt_tokens": 43,
+      "total_tokens": 251,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 4e-05,
+        "output_tokens_cost": 0.00021,
+        "request_cost": 0.005,
+        "total_cost": 0.00525
+      }
+    },
+    "citations": [
+      "https://www.w3schools.com/python/python_lists_copy.asp",
+      "https://realpython.com/python-copy/",
+      "https://www.youtube.com/watch?v=pyZmtVB7ofY",
+      "https://discuss.python.org/t/how-may-i-copy-a-list-of-list-without-reference/36758",
+      "https://www.youtube.com/watch?v=zBEwm_IBVxI&vl=en"
+    ],
+    "search_results": [
+      {
+        "title": "Python - Copy Lists - W3Schools",
+        "url": "https://www.w3schools.com/python/python_lists_copy.asp",
+        "last_updated": "2026-06-03",
+        "snippet": "You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How to Copy Objects in Python: Shallow vs Deep Copy Explained",
+        "url": "https://realpython.com/python-copy/",
+        "date": "2025-04-21",
+        "last_updated": "2026-06-04",
+        "snippet": "A shallow copy of a list is a separate object that references the original elements, but a copy of an equivalent tuple with identical items isn't. Just as\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "Your Lists Are Being Copied WRONG In Python (Shallow ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=pyZmtVB7ofY",
+        "date": "2022-12-25",
+        "last_updated": "2026-04-30",
+        "snippet": "This is actually really important in Python, and I see a lot of people using copy() as if they're creating a deep copy of the original list,\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How may I copy a list of list without reference? - Python Discussions",
+        "url": "https://discuss.python.org/t/how-may-i-copy-a-list-of-list-without-reference/36758",
+        "date": "2023-10-20",
+        "last_updated": "2026-04-30",
+        "snippet": "I can copy a list without reference a = [3,4,5] b = a.copy() b[0] = -1 print(a) print(b) >>[3, 4, 5] >>[-1, 4, 5] but why can't I do the\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How to Copy Python Lists Safely (Visually Explained) - YouTube",
+        "url": "https://www.youtube.com/watch?v=zBEwm_IBVxI&vl=en",
+        "date": "2025-10-09",
+        "last_updated": "2026-06-07",
+        "snippet": "How to Copy Python Lists Safely (Visually Explained) | Shallow Copy vs Deepcopy | #Python Course 29. 12K views \u00b7 7 months ago ...more\u00a0...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "`new_list = my_list` does **not** create a new list; it makes `new_list` point to the **same object** as `my_list`, so both names refer to one list in memory.[1][2] That is why any mutation through either variable is visible through the other.[1][4]\n\nTo make an actual copy, use one of these **shallow copy** methods for a normal one-dimensional list:[1]\n\n- `new_list = my_list.copy()`\n- `new_list = list(my_list)`\n- `new_list = my_list[:]`\n\nIf your list contains other mutable objects, these methods copy only the outer list, not the nested objects, so changes inside nested lists can still be shared.[2][4] In that case, use a **deep copy**:\n\n```python\nimport copy\nnew_list = copy.deepcopy(my_list)\n```\n\nUse `copy.deepcopy()` when you need a fully independent clone of a nested list or other composite object.[2][3][4]",
+  "usage": {
+    "completion_tokens": 208,
+    "prompt_tokens": 43,
+    "total_tokens": 251,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 4e-05,
+      "output_tokens_cost": 0.00021,
+      "request_cost": 0.005,
+      "total_cost": 0.00525
+    }
+  },
+  "run_profile": "scaleup"
+}

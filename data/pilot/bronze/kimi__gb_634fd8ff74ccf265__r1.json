@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_634fd8ff74ccf265",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:13:30.022032+00:00",
+  "query_text": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccea02303e82f86191282",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I found several excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. However, I need to clarify that **I cannot actually make the reservation for you** - you'll need to do that directly through the restaurant's website or by calling them. Here are some top options:\n\n## Recommended Italian Restaurants in Downtown Chicago\n\n### 1. **Quartino Ristorante** (River North)\n- **Reservation:** https://quartinoristorante.com/reservations\n- A lively Italian restaurant and wine bar known for small plates and authentic Italian atmosphere\n\n### 2. **Osteria Via Stato** (River North)\n- **Reservation:** https://www.exploretock.com/osteriaviastato/search/\n- Authentic Italian dining with fresh, seasonal ingredients from local Midwestern farmers\n\n### 3. **Rose Mary** (West Loop/Fulton Market)\n- **Phone:** (872) 260-3921\n- **Website:** https://www.rosemarychicago.com/\n- Chef Joe Flamm's Italian-Croatian fusion; Friday hours: 4:30PM - 11PM\n- Highly acclaimed with \"incredible\" and \"unbelievable\" food reviews\n\n### 4. **Alla Vita** (West Loop)\n- **Reservation:** https://www.allavitachicago.com/reservations\n- **Address:** 564 West Randolph St., Chicago IL 60661\n- **Phone:** 312.667.0104\n\n### 5. **Labriola Caf\u00e9**\n- **Reservation:** https://www.labriolacafe.com/\n- Italian restaurant in downtown Chicago with online reservation system\n\n### 6. **Tre Dita** (Downtown)\n- **Note:** Only accepts reservations 14 days in advance\n- Led by Chef Evan Funke, specializing in handmade pastas and bistecca Fiorentina\n\n## How to Make Your Reservation\n\n1. **Click on the reservation links** above or call the restaurant directly\n2. **Specify:** Friday night, party of 2\n3. **Have ready:** Your contact information and any dietary restrictions\n\nI'd recommend calling if you're booking for this Friday (as it's short notice) or checking OpenTable for availability: https://www.opentable.com/cuisine/best-italian-restaurants-downtown-chicago-il\n\n---\n\nSources:\n1. https://www.labriolacafe.com/\n2. https://www.opentable.com/cuisine/best-italian-restaurants-downtown-chicago-il\n3. https://www.allavitachicago.com/reservations\n4. https://www.exploretock.com/osteriaviastato/search/\n5. https://quartinoristorante.com/reservations\n6. https://www.rosemarychicago.com/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272800,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 582,
+        "prompt_tokens": 1256,
+        "total_tokens": 1838,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Make a reservation for two at an Italian restaurant in downtown Chicago for this Friday night"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cce9f5e07",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9e68e95f6a1cce9f4f50a50001d90cb5\"},\"usage\":{\"total_tokens\":1092}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cce9f5e07",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9e68e95f6a1cce9f4f50a50001d90cb5\"},\"usage\":{\"total_tokens\":1092}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9e68e95f6a1cce9f4f50a50001d90cb5\"},\"usage\":{\"total_tokens\":1092}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I found several excellent Italian restaurants in downtown Chicago where you can make a reservation for two this Friday night. However, I need to clarify that **I cannot actually make the reservation for you** - you'll need to do that directly through the restaurant's website or by calling them. Here are some top options:\n\n## Recommended Italian Restaurants in Downtown Chicago\n\n### 1. **Quartino Ristorante** (River North)\n- **Reservation:** https://quartinoristorante.com/reservations\n- A lively Italian restaurant and wine bar known for small plates and authentic Italian atmosphere\n\n### 2. **Osteria Via Stato** (River North)\n- **Reservation:** https://www.exploretock.com/osteriaviastato/search/\n- Authentic Italian dining with fresh, seasonal ingredients from local Midwestern farmers\n\n### 3. **Rose Mary** (West Loop/Fulton Market)\n- **Phone:** (872) 260-3921\n- **Website:** https://www.rosemarychicago.com/\n- Chef Joe Flamm's Italian-Croatian fusion; Friday hours: 4:30PM - 11PM\n- Highly acclaimed with \"incredible\" and \"unbelievable\" food reviews\n\n### 4. **Alla Vita** (West Loop)\n- **Reservation:** https://www.allavitachicago.com/reservations\n- **Address:** 564 West Randolph St., Chicago IL 60661\n- **Phone:** 312.667.0104\n\n### 5. **Labriola Caf\u00e9**\n- **Reservation:** https://www.labriolacafe.com/\n- Italian restaurant in downtown Chicago with online reservation system\n\n### 6. **Tre Dita** (Downtown)\n- **Note:** Only accepts reservations 14 days in advance\n- Led by Chef Evan Funke, specializing in handmade pastas and bistecca Fiorentina\n\n## How to Make Your Reservation\n\n1. **Click on the reservation links** above or call the restaurant directly\n2. **Specify:** Friday night, party of 2\n3. **Have ready:** Your contact information and any dietary restrictions\n\nI'd recommend calling if you're booking for this Friday (as it's short notice) or checking OpenTable for availability: https://www.opentable.com/cuisine/best-italian-restaurants-downtown-chicago-il\n\n---\n\nSources:\n1. https://www.labriolacafe.com/\n2. https://www.opentable.com/cuisine/best-italian-restaurants-downtown-chicago-il\n3. https://www.allavitachicago.com/reservations\n4. https://www.exploretock.com/osteriaviastato/search/\n5. https://quartinoristorante.com/reservations\n6. https://www.rosemarychicago.com/",
+  "usage": {
+    "completion_tokens": 582,
+    "prompt_tokens": 1256,
+    "total_tokens": 1838,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

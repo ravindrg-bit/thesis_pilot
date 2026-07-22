@@ -1,0 +1,515 @@
+{
+  "query_id": "gb_bb365aa4d917e369",
+  "engine": "gemini",
+  "run_index": 8,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T11:28:45.953883+00:00",
+  "query_text": "how is bios installed on a motherboard?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 11:28:45 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=25684",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "When people ask how the BIOS (or modern UEFI) is \"installed\" on a motherboard, the answer actually depends on whether you are talking about **how it is physically installed at the factory** during manufacturing, or **how you update or \"flash\" it as an end-user**. \n\n---\n\n### Part 1: How the BIOS is Installed at the Factory (The Hardware)\n\nAt the physical level, the BIOS is not installed onto a hard drive or SSD. Instead, it is written onto a specialized, non-volatile memory chip on the motherboard itself, usually called an **SPI Flash ROM chip** (or EEPROM). Common chip manufacturers include Winbond, Macronix (MXIC), and Gigadevice.\n\nFactories use two main methods to load the BIOS onto these chips during motherboard assembly:\n\n#### 1. Pre-programming (Before Soldering)\nIn this method, blank SPI flash chips are placed into high-volume, automated IC programming machines. These machines physically hold the chips, write the compiled BIOS binary code onto them, and verify that the data is correct. \nOnce programmed, the chips are loaded into the automated assembly line where a **Surface Mount Technology (SMT) machine** precisely positions the chip onto the motherboard PCB (Printed Circuit Board). It is then permanently soldered down in a reflow oven.\n\n#### 2. In-Circuit Programming (After Soldering)\nSometimes, manufacturers solder completely blank SPI flash chips onto the motherboard PCB first. \nOnce the motherboard is assembled, it goes to a testing station that features a **\"bed of nails\"**. This is a fixture containing dozens of spring-loaded test pins (Pogo pins) that press down onto specific copper contacts on the motherboard. These pins interface directly with the SPI chip's traces, allowing a factory computer to program the BIOS onto the chip right there on the production line.\n\n---\n\n### Part 2: How an End-User \"Installs\" or Updates the BIOS (The Software)\n\nFor consumers, \"installing\" a BIOS means overwriting the existing firmware on that SPI flash chip with a newer version. This process is called **\"flashing\"**. \n\nBecause the BIOS controls the basic startup instructions for your computer, a corrupted installation can \"brick\" the motherboard (render it permanently unusable). \n\nThe four primary ways users flash a BIOS include:\n\n#### Method 1: Built-in UEFI Flash Utility (The Safest Standard Method)\nThis is the standard, most recommended way to update your BIOS.\n1. **Download:** Go to the motherboard manufacturer's official support website, locate your exact motherboard model, and download the latest BIOS file.\n2. **Prepare USB:** Format a USB flash drive to **FAT32**, extract the downloaded BIOS file, and copy it to the root directory of the USB drive.\n3. **Enter BIOS:** Restart your computer and repeatedly press `Del` or `F2` to enter the UEFI/BIOS menu.\n4. **Flash:** Locate the flashing utility (called *EZ Flash* on ASUS, *M-Flash* on MSI, or *Q-Flash* on Gigabyte). Select your USB drive, choose the BIOS file, and confirm. The motherboard will overwrite the chip and restart automatically.\n\n#### Method 2: USB BIOS Flashback (No CPU/RAM Required)\nMany modern mid-to-high-end motherboards feature a \"BIOS Flashback\" button on the rear I/O panel. This allows you to install or update the BIOS even if you don't have a CPU, RAM, or graphics card installed. This is incredibly helpful if you bought a new CPU that isn't supported by the motherboard's out-of-the-box BIOS.\n1. Download the BIOS file and format a USB drive to FAT32.\n2. Rename the BIOS file to a specific name required by the manufacturer (e.g., `creative.bin` or `PSI.CAP`), often done using a renaming utility included in the download.\n3. Plug the USB into the specific USB port marked \"Flashback\" on the back of the motherboard.\n4. With the power supply connected and turned on (but the PC itself powered off), press and hold the **BIOS Flashback button** for a few seconds. A LED light will start flashing, indicating the motherboard is reading the USB and writing it to the chip. When the light stops flashing, the process is complete.\n\n#### Method 3: Desktop Software (Not Recommended)\nSome manufacturers bundle software (like ASUS Armoury Crate or MSI Center) that allows you to update your BIOS from directly inside Windows. While convenient, **this is generally discouraged**. If Windows crashes, encounters a blue screen, or hangs during the update, it will interrupt the process and likely brick your motherboard.\n\n#### Method 4: Hardware Programmer (The \"Unbricking\" Method)\nIf a BIOS flash fails midway (due to a power outage or crash) and the computer no longer turns on, the BIOS is corrupted. Because the CPU can no longer read the chip, the system cannot boot to run software recovery. \nTo install the BIOS in this state, technicians use an external USB hardware programmer (such as the **CH341A programmer**). \n* A test clip (SOIC8 clip) is physically clamped onto the legs of the BIOS chip on the motherboard.\n* The other end is plugged into a second, working computer.\n* Using specialized software, the second computer directly overwrites the corrupted chip on the dead motherboard with a clean `.bin` BIOS file, restoring it to life.",
+              "thought": null,
+              "thought_signature": "ErwgCrkgAQw51seSmwmxWZwUGE79leQemQzzuue07nY4KG4g-wxPKdjnrETKt1TxsE9rYyNXrle7CZJOWh71OcvZR7RL5RBreQ5yp6teA8AhF1WUU01KHSXMYAG0hwQLKktMiuBMFJ_A7npZw0Eime9zHyTZKqO6jxXUYQpjY_9XgneDrNJW5TWh5RbjlbKyoKjflpKxvKahtjnEIm0_8yUSWhi2fUT4FgZqpXFUHVHC2d5AE-5DNwY0CtQPwz8XhO0a92gffQ77wRGujL4DxLMIzmL6UFKqnqjRbg29XX4IsCR4SMDgcTHnITRO5W35dWpHtWVtt-b7BHADRefeTSnLPsSjtlrGdc2sX1s6mM3FjUYpPj5cw_dWQrAOeMjaJeyr8j1q0ykdsSpdNYg-ECNl7dPpJYfJnV8kua4bYf7WaXigz3so3OxeMUavgdcAo8enAqLytBNPdWEg4oMc7JLuS_2_MdhmejIi8XyoJFvnewhfFIo-Cjzotphmt5F1BhEswFVBVj1gCxhVRy6zKasEd25M5P-1b2VYLThCk-cF_KQAwsDPa8iQqzqsELGhvO57iq2IymSEbujl0l-gQFYD0dxG1iSwXIohLAxfdiQN6n1k-2QRvcJeqgXLCQJG_amv83WL1xSI-tQHN6tmyiiiOPFwa-wYS5vjdBVueJp4VGKg0bLCA33Btsm296QqR8B557ZhiyzZkp-MAiEalKkZyem6dawvGYXml7S4dHdgRjmTakxCMMPwxY4lpnF_WJ_UZVj58mIIE_Z5ejyo2WKMsDaB3sgxCAwAjYn0clq3iJOvR9_B8g9_lCvPjPqm306iuIDzncSE3b-6H_g7GIkhvcBhpo-EmN8IV-NaL-0RrXmOdePBwv3u9fy-VpNMoD0wczGLKLxTTV5mqEBuq0Jxv_PlaX9lyXXWQGsjl2lNZEKM3iA1i5RKFu4q9DBBhaq-epJ4-BTkaWf4pd8kHNth4yH094xTMSBOBssA724PiFsK0xllhrFY3b-4RC4uGqcPjoFI1DFkiuczNvE7MvNVEwfejX1LDLfSY-hUCmVc5CpOJvRIkYoRlXpnpPBfsgjHOz5ZtLq2c-_3O8F9tCsAm0ICK1SYDCgziVViGw4AYR9EbqO9LoIh47RE4ot83ZQo3zKJxUbxYeOrMmbeNQPg9XD0GV4i3dAqEqBcP6vuPZRP3npfuzd3h454Kfr2qSisuCsylAZwySuihN4O2mdqdw1rw0P3IFexhju2c6wRzVQmNu9zE5sIHpp4zMYc8LHAugQww2FYYj4ns_kvZs69ZH3zyKYw3Whs_CpGzxfxM9Qv1cRWLujBpM0OaWfDjrkBPW1fvyIFH1sfPRwnhdRLo_rcGjSTS7kC1rxOrBAjAUXyJFlYRPwWWZIeCSRuW9HKoeThje8TSellTgZS4dUcMcvTD-revFB-tKben1Si8ydT2vt7-GVirbdnzEIpAnWSmM4vfpoFaEi5MyLMIRQsbSs6fl8uXBwpKqDg1fqYkhWL2RQD1VsjGKoTS0PMdskNW5PH5gLhemoejctHLkphwJSMFzit6mRhM1UTn7Je6S_wTlZDoL3pECo7NBanuVfSTKj87S8IjizaU3Q2Wl7en08xoTe4mqvymNan3r2ppWqgetXLP6_l27nf-rSzXqwEQ1VfwqunkFnj3mrgPHUxxwO4-V077f0zWmFyU44L_bQs_ER3M3d4vCLmv1UwMe7jWOPc50Zv-HE4drrPks38exM6SWQ7qdM-uauXV6Wh_qH_XW_0rSKcsggG0OsAWOGGhJ8daZgylTtWxsoU0ZETdE4mvdXsDmk1kCMs7MJ2kZ8GiJdeVPF7V7Qi7zaDwynPfHyp84sruSOyVE4HiTjHlTJ_L1SOkFCZ60ECgt698Y7SsUD9VKcWNGnScRUNnWhjLgFg3jp4BxeI1MAiYbZlVPhRn1jFf-wfnlqA3AGKZO_1gClQ2Cjh3jpAcGVYwkUstU_XVS0QhEBo480crbKn50T8ZOhjGUf1LGNFrn-oKnW9BDCGKW-N88PXEHchNduJQDnHFc0ZdedQqA4AqO-BM2LSgr213gs6y_SgETB5faBTdOXsku6pZKXLUPC4ALFde5-OTLMR4qzQFBUzY99_6XUoEgxNATmxWryYi0ERxK0F2NMdpmj5nWDXMlqiX6bcLIAMTHh4zVfH7zQ10rylO1UTiKNGO4coKH_DsxVlyQ3z2IJWoFPCKGCp6bwPMq6i9IRN3Lqy7vYpQF_Ef9-Y773UI0pkbzhomh9Q9M3gUPraUuf-8tctpU15LG_6iSBx2vEQtnGPmFRcc_bwy9tiY0E6lfJ8KFsqvq9G7BU4H0SgzbG4_yiLN5WDfxvwB_8owRpPqid3qSvnaz04Dw2rn447FzOwpkpBr2gCTtuTcrNsIsOolTRSWs_sqGrfvztMIDQgMHzuRfkHOf96B-LLoC1QEGRiVMoFCK62o6y-ZBZoZRJ2nuYeGwhyyQr_Utlp7VBr0vUWYo-MC0b5Nx6K_nIkraQX74-lI2f4bswXAMxUVKDBVetrqB0PKPHg28Cv7nYbV7HBLtWwcfNaFcDipUmw-vE45tsNCOPoXUtNVt3fxg_QMYOibGxfKyZb5coJOCrTzkKje1wE_82ppMr3jUwYprKDpxESOlHHSGc_7UpHI_WLCh6WMo6l0iTf6p0U3bjPdUiVB-aw566yhVzHBzuntlUE9UzxVHhVPqnkuvtSUmiFlqhIC6QJ6AzEimcm2Uz1T1M_4kiqCblwEnMLaA4laCafeKvT5v3JLFArFvWxDHzrb1nO0mfTLAToMTu3KPKkTxWmbLlMn4bka20PeLU_8KrYZm3NlgNDuWrZZnFZb95r5ALe6VHf1Yd_sbQJPV06zgQVWcVcI25BLqYtYQgIy1LH34qK5FkGNE9dflDihAPij-Antt6e1tDWegXdrIaEBVc7KxMaa2gIjCL3g3dpFrArQN37BeJF-kFNn3VRcdlxnXaFjWQY-cw68Koi7WxfxA0NnbZOolf2ulWjS6iQPy820bDB77eyru1M6ncQO_9xMFJA5lcfjFlVAVwi7Yh7muZ2lT_p-L_vcJlfSf3CC3dyZKJdhG0IyS5P2byFjDfQ0sNDC5b2Nwm6a2KefwGFfO6OWYJBE5Df_u2Iv2jceL13hE9P8g9hAiWXx4F7ONPR2rsdXX8FsYtdf8VZL9LxSejNPNufb9FzYTtM8uPTRLv6Yht6-TNvk1fg0E4V856t_oF2dWz3lPCgCj0VD3K-i56-Ivlc_ajZFPPrexmVYMYcnGK4_i7jN-ksRKigABFSSjPMet9kbIrFHSof-D1gG0dgUTPS8mAJN5Uts18wFGTWJb3l8wXXN65bbRKUke7PE24Ev22iwOKX2ekTnheKqARnRhJZEVHcnFNvMhoVCOT6AQvCA-vVWc7j11xC6kPv1criVRBq5cNtD5E7d6qo93yM-hyDHRweYeWL11T6jKDoNfM-yBc3j35KMj2oV4xDr9UvtkMeQh1MzLuscZDD0-6R6tiqpO-ELkHMPiXCfjRUFZwdiiNWqflFUwroCey0xqR3KPi89y3LtIbgDiaUJ38k4VZQ_OLsYyi_v7qP16xCOxClnpt5zl_zyqzrbeRtqpgu26c3my_tfePxnKJJtjbCHNJWbextqASEnJvVfJNcQLFoYEzKDMd76zfmapHM5X-CZtiQq5uk3Syk-VUyVEgGjBJxiAhotJabv9bGNtG5-647F2JooU9qJ-a2C2PbNanNy0U3bfv0GtY_9AaMQrCEnWiXkbmtC65VE2xbmKPpWJLMUHJRpqhJhYPQ6suhsyOqUCC9JXRNEE4F4pZ9vjDhpPxv4UN_Ge90FneTnqtEPhEhoe7GNS5Rdjn8ayL6M4dnvKRhns4A5A_Q8jz3-5n7eEtWze4RdXfzmJfbLVNwv3awKdfHN45cAAPu59_Ex6HgYwxVvJMtvCToo-cgN-Icsi0N86tfyOy5958CJDy0uobn1Nn2g62-OiBap7A2W7c9mLAr0WFG15ZSnSu26uLqxV9rRb9BZJXImQU3z2i_kn4hMQUUDiaDnZVoGEPcVyDFekNnyV40tHX-Hpk3fOogVW_WQ0-RqlvE4XdPgrYRmjrhyYXLDGuC6jy7rLl1T1_sGXD9MtwZIM6bJADZz6SaUE2SCOuV7BUuqOXVcQwoo7dDbrT1zzVh5fR80mGZ5Zr6V9M7R15MQmUpfv0dnv11KA3_zS3pODvd4HN3iHYzjqMvG5PQppQ0kJ39zvj482bgd9H7dnIEV_QtZFeIVyNsTFcsAWfQlZuiV8pA61hymDfiIwFxtwyW5f_v-bsmRha8k6K5E_s1kuU9-I6_nniTAZ90nUE8twoib61o3rdOfryletnBJec9TuEFBlq-AwuZIAsZNNbZU5QhZVGSrmLlj3whrpUpAc1kWH0UJ21tUNPGD4jiUsoJgyY3cHV2SnuYgO1dzhm2C9V27onndZhNUKEYBtLQzUQZGGcNV1Tg8rv3SXet_1scmH18WplFZxkVfNAYUQbGuNaoJHSdHVDjIly3ItXuk6LVRA982clLfCwnQVbItwNlhDGru4WQAkBzd70pvIJ-aQGqItkGAy3V3uabrVlUBRG1uh5wBvPvgjTAs6qwth-uup9Jej6ASgamY9i8iY4fBSu9o4Ld_futPpzNyxgxYZ0kdZPdb82xUQVVBDgMGmYMhxh0MZgr8Lu-1iMF827YxdgGdTPXWXwoA6Zdblj94qnBmT41WbtsL8A6vQEgNGYod24GgNwPiujWkXxo2SPiMLDfiAoz8pB0li2_HsF58-ANap5MO2_ydnsYtqhhB3SaY_7d-r5rPeMDfvh1GcIhn_F-UOLXvWPbeJe-8MVq5qo2hACvI2iNNkt4KcsZnfEwWXSicsuSm01FIu6vXEAOhAddvJu3i6b_DXtIcOxMy8T5W3oicqpzLyPpEtpi_ZiEINrfePDK0A2wu63rCP6jJZJ1tA_3WwtAelPEGK_S0JRx9larZP6uHS9THCgl7Cvzd7VNgskQjWqzIjmu4GEYdrKNhHGr-iJ7pNXGQ6fpCbLb7XQFSGs67Dpk3BNxQGwkBy9_cYIJ1JWBTEEa5X-gpuB-bla6WuJPVR-DQEMbFWwcFt7bAn2k-LxTcmKwtaoBG3g1xmgKiCpfbT6IN6ClGxS8NAh4cE8_syDDJudMhmyoHYwdlClqmjptq1-d-sixCG_QDJx05R-bAiRotvGbZZFQR9SYpm0hcHG3owYyMcxiewe8duE8r74PpmzlkSJT8S_pKUmJPW7IMlBOJ6h7yO4Y4QDLg6HTNETYeH-0ANPxl1FHGfrUXcJiafmPQm07RbSFFQ8HQnO2opPdLTOz4gJ0ZkA6j8yCQ8wBi4v8ao1GoptSr7YKbZCh70QBSbs-tYoWA0-RYUgM8j8fz7ccZ_bLzY95WPEEVmZkhRa4i3vVSN7MH7sKIRHI8u79bw-ZPwnTyyiPsrh5MfPCO6u-3xEo2WrPiM5H0o8clLC8PpqX2C_Tm4aeGXeHjzdHiA==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkv1BscORCT79iX3EAHlCgF3wrVipYadhLGM5BXnJ5Qx---4U920Els-5Yzm7MtxZ1hid9ax03pnYNzm5SmIL0auMvk8lKaRwtYhz9h3VnVRSTzHoNHmv6"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "bioschipstore.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZCI3Y559ttYEvGWQtzviC1So5Nq_BAxGBz3vuqSGvOeOxM9zAaepkg-a8x6EtlGlGiOTMnvxti7BgAOoOtz8MgIK32vqPYRqqa3El8wmp5XRD9b0UL04U-269M0wfbg=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "techpowerup.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7gAFxY1E8RxIJJB8oHfc7LxQIIU2sYQBZPF2pJ1VguiYkM3t5L4WU9bBH-hNh_7FpMcCSrkgaW_RBpOCE87kYQVgHjPQtkoT2Rynsw7NNCPvzW5dIZVDsWmIQ7hMfV6s23UwDpVs6Abq42WxllEiuk_C1ChFjNRu64sz7SrymbwhbPEmLyCz_l4ARPNbXQrfxNw=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "rushpcb.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6D83U112dDcAN0b4X574nFXE9SnY6Frp0zOID6spFEo6zNUYEKU9ejODjnhXvSZzumfX_40FTK1fAuuOSSO23tMnMngw-GED-bEcZqCH3YiGsZVwuVrITgBxlahql4MQdsL1mzMBYbzEW1cnflN2W6OuGutnpRyaqE5xOm1MJFY69jakXCNuVsuJAeRIdHr3TRet8-JyoGuMKeKmkI7YPw5bDx0Z4"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1LS-5POX2qb-TR5dsMJXim3wu8jcDHpQO5Fyg6iMk9PqDIpxGT0SyvQmSLQbQ0mEEJswZzR6HGyf93Hz_eWzScE3eO4Pup6ZMSMgCCtRDRG2mU7zFjma1u9wjcEO2jQidY-eniIrTSrgxkds2YpKmabotd3kNGfFJA12RlLXz-sC9UXVNrLF4cYdjsn-pOLzIPuvPKVvPiEGhuIjgJFyYN32Jcw=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "bioschipstore.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZCI3Y559ttYEvGWQtzviC1So5Nq_BAxGBz3vuqSGvOeOxM9zAaepkg-a8x6EtlGlGiOTMnvxti7BgAOoOtz8MgIK32vqPYRqqa3El8wmp5XRD9b0UL04U-269M0wfbg=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "stackexchange.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHj8eHnX0GKWVn2ujtvTn_bJv0HKPqZjHEiLsnfFDodeWvBHeJT3Llwjd2YmF5qPuv4UnG--zRdDccBsl5kMDERfX5ke0nQ2DYIrREKwiTrabwqolqX1FhWIqCdTgytjSDzBq6QHr7xKLpSSbFdA2wCg_jX0e1vecEbL-n23b7RVC0LiWOzIeyAvBl3jUCDil8zZOUxRLpbEU5"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "quora.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVnGsVGLZ8npNTpLXHS-FFbnjcyGWO5HpHTmWq5_kEfivQGLAC6YHs2yGtDsbDdTtsXMIKDdo6DSuWWk9xuiKl7QfOmeU6NUQXXKW2V67ciJ0Khbe2UWW_xkftW88aJ3LAKKLFZKDUBbvrHFJJouSYdQxJ0zykTHf-_niccVtOphXqLLmeR4dCxL9iaxh1mlxdxWE4gLAKX_rOJ7AsqdWuZ6eg_0-ePdA51YKpuWr_MIrgJaUN6_bV_ahDuLnZGQQ6UIEITHS0Cj8WG3UNFPDvoDJw1B0N-BZpSVDd7s_bpE9A"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "quora.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCybRGRt6GNDSxHPwuGvqjwpnw5sEU85lEb_ci2iXjqbxF_lpPNuk1-GYF-VmHPL1E021SJrKFAGgAj0M7tbmrupJHd12-qkYXeW5S-F0x2RM0W3_rneogRbJeUXrwc1DLXdkaonxXe1cfnqnUzJWJRNWm7Rrqam0RXRFpETqrbAUokZNgz74bDTiX4PWanANQ-0YoNh16E_dit8d1hA=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "reddit.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFioFRzFgS1MtTDaP8h5BzaI64iDikD3NZQlVVkwB6T4TWmNBqS9oGKl0l1Jg1YUqbsRr8RQybTklQsNZ1cE0m3dSawt5hBMNaO4Wzzg3k88LXkLWLgIw1_MsU-zJgMINbvH0qkNzH0-sYJqqbCkxa4J4Eul7SPniUOCrKHj_5G3XyaHdZBINt2j8CVWXF24kP76k-G2fLeyhhXo5Kn"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGstIBXMqWGgiEDuevVTDOojReprEnB_UAV_HjuOwX2DhAZB_muWo44cFPxN2EoS8hyzuXPKpyWFASBIya9xtZrce5u5DASUfI1iqD6Jlnzf3Lpj9LzmPaxYZYJmkjTzAb-"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHll1N5J5dBrKBo_Ey4ltstEjm3B4a6WrR5WC8zQNB6sobaVi9WJB6V8P6vw6NjifJBOpQTB64FIF_dBikvMGCY0G_C6_LggyUzCDTdpUhUR5J91soyxfwxULc56gygDsz"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIwvHmkdhz-rr5ki3c2RcJ1_hqSu7VTqfx6InkR_8duImU0pn0GvnvBL_Liyyq3jR25JAxDwkPPWo5VVyfo8Yv2Nf93VToygZzhS6FDRCA2q_MTDBoHwvJtYP7eNp69ECI"
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "youtube.com",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNm0ilwiSMCtiCxDRQ9k3nauMR9lQmfK-IXnXGS9iz84KAPFue9G7k3vbUMSUk970QBZ4KenPxLPWeM7l05Ly_rUBqnE3J3NLy-0QQ2Ino3O5T4ui0snXwbSo_ofFZAGf5"
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0,
+                1
+              ],
+              "segment": {
+                "start_index": 415,
+                "end_index": 562,
+                "part_index": null,
+                "text": "Instead, it is written onto a specialized, non-volatile memory chip on the motherboard itself, usually called an **SPI Flash ROM chip** (or EEPROM)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1,
+                2
+              ],
+              "segment": {
+                "start_index": 564,
+                "end_index": 638,
+                "part_index": null,
+                "text": "Common chip manufacturers include Winbond, Macronix (MXIC), and Gigadevice"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 744,
+                "end_index": 879,
+                "part_index": null,
+                "text": "Pre-programming (Before Soldering)\nIn this method, blank SPI flash chips are placed into high-volume, automated IC programming machines"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4
+              ],
+              "segment": {
+                "start_index": 881,
+                "end_index": 1005,
+                "part_index": null,
+                "text": "These machines physically hold the chips, write the compiled BIOS binary code onto them, and verify that the data is correct"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                5
+              ],
+              "segment": {
+                "start_index": 1008,
+                "end_index": 1207,
+                "part_index": null,
+                "text": "Once programmed, the chips are loaded into the automated assembly line where a **Surface Mount Technology (SMT) machine** precisely positions the chip onto the motherboard PCB (Printed Circuit Board)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6
+              ],
+              "segment": {
+                "start_index": 1209,
+                "end_index": 1262,
+                "part_index": null,
+                "text": "It is then permanently soldered down in a reflow oven"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6
+              ],
+              "segment": {
+                "start_index": 1273,
+                "end_index": 1409,
+                "part_index": null,
+                "text": "In-Circuit Programming (After Soldering)\nSometimes, manufacturers solder completely blank SPI flash chips onto the motherboard PCB first"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                6,
+                7
+              ],
+              "segment": {
+                "start_index": 1412,
+                "end_index": 1510,
+                "part_index": null,
+                "text": "Once the motherboard is assembled, it goes to a testing station that features a **\"bed of nails\"**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 1512,
+                "end_index": 1651,
+                "part_index": null,
+                "text": "This is a fixture containing dozens of spring-loaded test pins (Pogo pins) that press down onto specific copper contacts on the motherboard"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                7,
+                3
+              ],
+              "segment": {
+                "start_index": 1653,
+                "end_index": 1807,
+                "part_index": null,
+                "text": "These pins interface directly with the SPI chip's traces, allowing a factory computer to program the BIOS onto the chip right there on the production line"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                9
+              ],
+              "segment": {
+                "start_index": 2010,
+                "end_index": 2047,
+                "part_index": null,
+                "text": "This process is called **\"flashing\"**"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                8,
+                10
+              ],
+              "segment": {
+                "start_index": 2051,
+                "end_index": 2212,
+                "part_index": null,
+                "text": "Because the BIOS controls the basic startup instructions for your computer, a corrupted installation can \"brick\" the motherboard (render it permanently unusable)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 4441,
+                "end_index": 4622,
+                "part_index": null,
+                "text": "#### Method 4: Hardware Programmer (The \"Unbricking\" Method)\nIf a BIOS flash fails midway (due to a power outage or crash) and the computer no longer turns on, the BIOS is corrupted"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                9,
+                5
+              ],
+              "segment": {
+                "start_index": 4624,
+                "end_index": 4716,
+                "part_index": null,
+                "text": "Because the CPU can no longer read the chip, the system cannot boot to run software recovery"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                11
+              ],
+              "segment": {
+                "start_index": 4719,
+                "end_index": 4841,
+                "part_index": null,
+                "text": "To install the BIOS in this state, technicians use an external USB hardware programmer (such as the **CH341A programmer**)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                12,
+                11
+              ],
+              "segment": {
+                "start_index": 4844,
+                "end_index": 4942,
+                "part_index": null,
+                "text": "* A test clip (SOIC8 clip) is physically clamped onto the legs of the BIOS chip on the motherboard"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                11
+              ],
+              "segment": {
+                "start_index": 4944,
+                "end_index": 5002,
+                "part_index": null,
+                "text": "* The other end is plugged into a second, working computer"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                11,
+                13
+              ],
+              "segment": {
+                "start_index": 5132,
+                "end_index": 5168,
+                "part_index": null,
+                "text": "bin` BIOS file, restoring it to life"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=how+is+bios+chip+programmed+and+installed+during+manufacturing&client=app-vertex-grounding&safesearch=active\">how is bios chip programmed and installed during manufacturing</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=motherboard+bios+chip+flashing+factory+process&client=app-vertex-grounding&safesearch=active\">motherboard bios chip flashing factory process</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "how is bios chip programmed and installed during manufacturing",
+            "motherboard bios chip flashing factory process"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "VKcmasnWE96bvdIPh7S8WA",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1343,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 9,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 9
+        }
+      ],
+      "thoughts_token_count": 2130,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 3482,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "When people ask how the BIOS (or modern UEFI) is \"installed\" on a motherboard, the answer actually depends on whether you are talking about **how it is physically installed at the factory** during manufacturing, or **how you update or \"flash\" it as an end-user**. \n\n---\n\n### Part 1: How the BIOS is Installed at the Factory (The Hardware)\n\nAt the physical level, the BIOS is not installed onto a hard drive or SSD. Instead, it is written onto a specialized, non-volatile memory chip on the motherboard itself, usually called an **SPI Flash ROM chip** (or EEPROM). Common chip manufacturers include Winbond, Macronix (MXIC), and Gigadevice.\n\nFactories use two main methods to load the BIOS onto these chips during motherboard assembly:\n\n#### 1. Pre-programming (Before Soldering)\nIn this method, blank SPI flash chips are placed into high-volume, automated IC programming machines. These machines physically hold the chips, write the compiled BIOS binary code onto them, and verify that the data is correct. \nOnce programmed, the chips are loaded into the automated assembly line where a **Surface Mount Technology (SMT) machine** precisely positions the chip onto the motherboard PCB (Printed Circuit Board). It is then permanently soldered down in a reflow oven.\n\n#### 2. In-Circuit Programming (After Soldering)\nSometimes, manufacturers solder completely blank SPI flash chips onto the motherboard PCB first. \nOnce the motherboard is assembled, it goes to a testing station that features a **\"bed of nails\"**. This is a fixture containing dozens of spring-loaded test pins (Pogo pins) that press down onto specific copper contacts on the motherboard. These pins interface directly with the SPI chip's traces, allowing a factory computer to program the BIOS onto the chip right there on the production line.\n\n---\n\n### Part 2: How an End-User \"Installs\" or Updates the BIOS (The Software)\n\nFor consumers, \"installing\" a BIOS means overwriting the existing firmware on that SPI flash chip with a newer version. This process is called **\"flashing\"**. \n\nBecause the BIOS controls the basic startup instructions for your computer, a corrupted installation can \"brick\" the motherboard (render it permanently unusable). \n\nThe four primary ways users flash a BIOS include:\n\n#### Method 1: Built-in UEFI Flash Utility (The Safest Standard Method)\nThis is the standard, most recommended way to update your BIOS.\n1. **Download:** Go to the motherboard manufacturer's official support website, locate your exact motherboard model, and download the latest BIOS file.\n2. **Prepare USB:** Format a USB flash drive to **FAT32**, extract the downloaded BIOS file, and copy it to the root directory of the USB drive.\n3. **Enter BIOS:** Restart your computer and repeatedly press `Del` or `F2` to enter the UEFI/BIOS menu.\n4. **Flash:** Locate the flashing utility (called *EZ Flash* on ASUS, *M-Flash* on MSI, or *Q-Flash* on Gigabyte). Select your USB drive, choose the BIOS file, and confirm. The motherboard will overwrite the chip and restart automatically.\n\n#### Method 2: USB BIOS Flashback (No CPU/RAM Required)\nMany modern mid-to-high-end motherboards feature a \"BIOS Flashback\" button on the rear I/O panel. This allows you to install or update the BIOS even if you don't have a CPU, RAM, or graphics card installed. This is incredibly helpful if you bought a new CPU that isn't supported by the motherboard's out-of-the-box BIOS.\n1. Download the BIOS file and format a USB drive to FAT32.\n2. Rename the BIOS file to a specific name required by the manufacturer (e.g., `creative.bin` or `PSI.CAP`), often done using a renaming utility included in the download.\n3. Plug the USB into the specific USB port marked \"Flashback\" on the back of the motherboard.\n4. With the power supply connected and turned on (but the PC itself powered off), press and hold the **BIOS Flashback button** for a few seconds. A LED light will start flashing, indicating the motherboard is reading the USB and writing it to the chip. When the light stops flashing, the process is complete.\n\n#### Method 3: Desktop Software (Not Recommended)\nSome manufacturers bundle software (like ASUS Armoury Crate or MSI Center) that allows you to update your BIOS from directly inside Windows. While convenient, **this is generally discouraged**. If Windows crashes, encounters a blue screen, or hangs during the update, it will interrupt the process and likely brick your motherboard.\n\n#### Method 4: Hardware Programmer (The \"Unbricking\" Method)\nIf a BIOS flash fails midway (due to a power outage or crash) and the computer no longer turns on, the BIOS is corrupted. Because the CPU can no longer read the chip, the system cannot boot to run software recovery. \nTo install the BIOS in this state, technicians use an external USB hardware programmer (such as the **CH341A programmer**). \n* A test clip (SOIC8 clip) is physically clamped onto the legs of the BIOS chip on the motherboard.\n* The other end is plugged into a second, working computer.\n* Using specialized software, the second computer directly overwrites the corrupted chip on the dead motherboard with a clean `.bin` BIOS file, restoring it to life.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1343,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 9,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 9
+      }
+    ],
+    "thoughts_token_count": 2130,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 3482,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

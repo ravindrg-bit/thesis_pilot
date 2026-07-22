@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_53f81cdbfb306187",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T05:44:23.233397+00:00",
+  "query_text": "what are opioids derived from",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a250522bc912d0c1c2f5f79",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with comprehensive information about what opioids are derived from.\n\n## Primary Source: The Opium Poppy Plant\n\nThe vast majority of opioids trace their origins to the **opium poppy plant (*Papaver somniferum*)**. This plant produces a resinous latex called **opium**, which contains natural opioid alkaloids including:\n\n- **Morphine** \u2013 the most abundant and medically significant natural opioid\n- **Codeine** \u2013 another major natural opioid used for pain relief and cough suppression\n- **Thebaine** \u2013 a stimulant alkaloid that serves as a critical precursor for many semi-synthetic opioids\n\n## Three Categories of Opioid Origins\n\n### 1. Natural Opioids (Opiates)\nThese are compounds found directly in opium:\n- Morphine\n- Codeine\n- Thebaine\n\n### 2. Semi-Synthetic Opioids\nThese are chemically modified versions of natural opium alkaloids:\n- **Heroin** (diacetylmorphine) \u2013 derived from morphine\n- **Oxycodone** \u2013 synthesized from thebaine\n- **Hydrocodone** \u2013 derived from codeine or thebaine\n- **Hydromorphone** \u2013 derived from morphine\n- **Buprenorphine** \u2013 derived from thebaine\n- **Naloxone** \u2013 synthesized from thebaine\n\n### 3. Fully Synthetic Opioids\nThese are manufactured in laboratories without using natural opium as a starting material, though they are designed to mimic the effects of natural opioids:\n- **Fentanyl**\n- **Methadone**\n- **Meperidine (Demerol)**\n- **Tramadol**\n\n## How Natural Opioids Are Obtained\n\nThe opium alkaloids are found in the **latex** (a milky white fluid) that exudes from the seed pods of the opium poppy when cut. This latex dries to become raw opium. Specialized poppy cultivars have also been bred to produce higher concentrations of specific alkaloids\u2014for example, \"Norman\" and \"Penelope\" strains are bred for high thebaine and low morphine content.\n\n## Other Natural Sources\n\nResearch has also identified opioid-like compounds in other organisms:\n- **Endogenous opioids** \u2013 peptides naturally produced in the human body (endorphins, enkephalins)\n- **Amphibian opioid peptides** \u2013 such as dermorphins and deltorphins found in the skin of certain frogs\n- **Exorphins** \u2013 opioid peptides derived from exogenous proteins such as milk (\u03b2-casomorphins) and wheat gluten\n\nSources:\n1. https://www.prehealing.com/post/thebaine-opioid-precursor-controlled-stimulant-pharmaceutical-keystone\n2. https://odfree.org/history-of-opioids/\n3. https://www.getsmartaboutdrugs.gov/sites/getsmartaboutdrugs.com/files/publications/Drugs%20of%20Abuse%202020-Web%20Version-508%20compliant-4-24-20.pdf\n4. https://www.sciencedirect.com/topics/chemistry/oxymorphone\n5. https://www.sciencedirect.com/topics/nursing-and-health-professions/papaver-somniferum\n6. https://www.deadiversion.usdoj.gov/drug_chem_info/unwashed_poppy_seed.pdf\n7. https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=18222&context=dissertations",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780811043,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 751,
+        "prompt_tokens": 8633,
+        "total_tokens": 9384,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what are opioids derived from"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2505217c50",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"7f9627726a250521680f160001ebe574\"},\"usage\":{\"total_tokens\":8488}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2505217c50",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"7f9627726a250521680f160001ebe574\"},\"usage\":{\"total_tokens\":8488}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"7f9627726a250521680f160001ebe574\"},\"usage\":{\"total_tokens\":8488}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with comprehensive information about what opioids are derived from.\n\n## Primary Source: The Opium Poppy Plant\n\nThe vast majority of opioids trace their origins to the **opium poppy plant (*Papaver somniferum*)**. This plant produces a resinous latex called **opium**, which contains natural opioid alkaloids including:\n\n- **Morphine** \u2013 the most abundant and medically significant natural opioid\n- **Codeine** \u2013 another major natural opioid used for pain relief and cough suppression\n- **Thebaine** \u2013 a stimulant alkaloid that serves as a critical precursor for many semi-synthetic opioids\n\n## Three Categories of Opioid Origins\n\n### 1. Natural Opioids (Opiates)\nThese are compounds found directly in opium:\n- Morphine\n- Codeine\n- Thebaine\n\n### 2. Semi-Synthetic Opioids\nThese are chemically modified versions of natural opium alkaloids:\n- **Heroin** (diacetylmorphine) \u2013 derived from morphine\n- **Oxycodone** \u2013 synthesized from thebaine\n- **Hydrocodone** \u2013 derived from codeine or thebaine\n- **Hydromorphone** \u2013 derived from morphine\n- **Buprenorphine** \u2013 derived from thebaine\n- **Naloxone** \u2013 synthesized from thebaine\n\n### 3. Fully Synthetic Opioids\nThese are manufactured in laboratories without using natural opium as a starting material, though they are designed to mimic the effects of natural opioids:\n- **Fentanyl**\n- **Methadone**\n- **Meperidine (Demerol)**\n- **Tramadol**\n\n## How Natural Opioids Are Obtained\n\nThe opium alkaloids are found in the **latex** (a milky white fluid) that exudes from the seed pods of the opium poppy when cut. This latex dries to become raw opium. Specialized poppy cultivars have also been bred to produce higher concentrations of specific alkaloids\u2014for example, \"Norman\" and \"Penelope\" strains are bred for high thebaine and low morphine content.\n\n## Other Natural Sources\n\nResearch has also identified opioid-like compounds in other organisms:\n- **Endogenous opioids** \u2013 peptides naturally produced in the human body (endorphins, enkephalins)\n- **Amphibian opioid peptides** \u2013 such as dermorphins and deltorphins found in the skin of certain frogs\n- **Exorphins** \u2013 opioid peptides derived from exogenous proteins such as milk (\u03b2-casomorphins) and wheat gluten\n\nSources:\n1. https://www.prehealing.com/post/thebaine-opioid-precursor-controlled-stimulant-pharmaceutical-keystone\n2. https://odfree.org/history-of-opioids/\n3. https://www.getsmartaboutdrugs.gov/sites/getsmartaboutdrugs.com/files/publications/Drugs%20of%20Abuse%202020-Web%20Version-508%20compliant-4-24-20.pdf\n4. https://www.sciencedirect.com/topics/chemistry/oxymorphone\n5. https://www.sciencedirect.com/topics/nursing-and-health-professions/papaver-somniferum\n6. https://www.deadiversion.usdoj.gov/drug_chem_info/unwashed_poppy_seed.pdf\n7. https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=18222&context=dissertations",
+  "usage": {
+    "completion_tokens": 751,
+    "prompt_tokens": 8633,
+    "total_tokens": 9384,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

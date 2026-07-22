@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:59:30.279531+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ec7f1adb862b0ac8e834",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Sources (Recommended for Authenticity)\n\n**1. NBATickets.com** - The NBA's official one-stop ticket marketplace\n- This is the NBA's official ticket hub that links directly to each team's authorized ticketing platform\n- You can buy directly from teams or browse the official resale marketplace\n- All tickets are 100% authentic and verified\n- Website: https://nbatickets.nba.com/\n\n**2. Ticketmaster** - Official authorized ticketing platform for most NBA teams\n- When you click \"Buy Tickets\" on NBATickets.com, you'll be redirected to Ticketmaster for most teams\n- This is the safest option with the most standardized process\n- Website: https://www.ticketmaster.com (accessed through team links)\n\n## Official Resale Marketplaces\n\n**3. StubHub** - One of the largest ticket resale platforms\n- Offers tickets for NBA games across all teams\n- Provides FanProtect Guarantee (100% money back if tickets are invalid)\n- Often has tickets available even for sold-out games\n- Prices may be cheaper closer to game time\n- Website: https://www.stubhub.com/nba-tickets/grouping/115\n\n**4. Vivid Seats** - Trusted resale marketplace\n- Pre-screens all sellers\n- Over 100 million tickets sold\n- Partners with major sports brands including the LA Clippers\n- Website: https://www.vividseats.com\n\n**5. Viagogo** - International ticket resale platform\n- Lists NBA games across multiple teams and cities\n- Website: https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n\n## Other Options\n\n**6. KKday** - Travel platform selling NBA tickets for select teams (Lakers, Heat, Clippers, etc.)\n- Website: https://www.kkday.com\n\n**7. WAUG** - Korean-based platform offering Lakers home game tickets\n- Website: https://www.waug.com\n\n**8. Musement** - Experience platform offering Lakers tickets\n- Website: https://www.musement.com\n\n## \u26a0\ufe0f Important Tips\n\n- **Avoid private sellers on social media** - High risk of scams and counterfeit tickets\n- **Never accept screenshots or photos as tickets** - Only accept officially transferred digital tickets\n- **Check that tickets can be added to your mobile wallet** (Apple Wallet/Google Wallet)\n- **Buy early for popular games** - Prices tend to rise and availability decreases closer to game day\n- **For sold-out games**, the official resale marketplace on NBATickets.com is your safest bet\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://www.stubhub.com/nba-tickets/grouping/115\n4. https://www.kkday.com/zh-hk/blog/105535/nba-tickets\n5. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n6. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n7. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n8. https://rigorousthemes.com/blog/best-ticket-resale-sites/\n9. https://www.waug.com/en/activities/135595\n10. https://www.musement.com/us/los-angeles/los-angeles-lakers-basketball-game-at-crypto-com-arena-439322/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780804736,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 767,
+        "prompt_tokens": 8711,
+        "total_tokens": 9478,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ec7eaa01",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"8e6ea1f46a24ec7e4f50a50001ed5f05\"},\"usage\":{\"total_tokens\":8552}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ec7eaa01",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"8e6ea1f46a24ec7e4f50a50001ed5f05\"},\"usage\":{\"total_tokens\":8552}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"8e6ea1f46a24ec7e4f50a50001ed5f05\"},\"usage\":{\"total_tokens\":8552}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Sources (Recommended for Authenticity)\n\n**1. NBATickets.com** - The NBA's official one-stop ticket marketplace\n- This is the NBA's official ticket hub that links directly to each team's authorized ticketing platform\n- You can buy directly from teams or browse the official resale marketplace\n- All tickets are 100% authentic and verified\n- Website: https://nbatickets.nba.com/\n\n**2. Ticketmaster** - Official authorized ticketing platform for most NBA teams\n- When you click \"Buy Tickets\" on NBATickets.com, you'll be redirected to Ticketmaster for most teams\n- This is the safest option with the most standardized process\n- Website: https://www.ticketmaster.com (accessed through team links)\n\n## Official Resale Marketplaces\n\n**3. StubHub** - One of the largest ticket resale platforms\n- Offers tickets for NBA games across all teams\n- Provides FanProtect Guarantee (100% money back if tickets are invalid)\n- Often has tickets available even for sold-out games\n- Prices may be cheaper closer to game time\n- Website: https://www.stubhub.com/nba-tickets/grouping/115\n\n**4. Vivid Seats** - Trusted resale marketplace\n- Pre-screens all sellers\n- Over 100 million tickets sold\n- Partners with major sports brands including the LA Clippers\n- Website: https://www.vividseats.com\n\n**5. Viagogo** - International ticket resale platform\n- Lists NBA games across multiple teams and cities\n- Website: https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n\n## Other Options\n\n**6. KKday** - Travel platform selling NBA tickets for select teams (Lakers, Heat, Clippers, etc.)\n- Website: https://www.kkday.com\n\n**7. WAUG** - Korean-based platform offering Lakers home game tickets\n- Website: https://www.waug.com\n\n**8. Musement** - Experience platform offering Lakers tickets\n- Website: https://www.musement.com\n\n## \u26a0\ufe0f Important Tips\n\n- **Avoid private sellers on social media** - High risk of scams and counterfeit tickets\n- **Never accept screenshots or photos as tickets** - Only accept officially transferred digital tickets\n- **Check that tickets can be added to your mobile wallet** (Apple Wallet/Google Wallet)\n- **Buy early for popular games** - Prices tend to rise and availability decreases closer to game day\n- **For sold-out games**, the official resale marketplace on NBATickets.com is your safest bet\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://nbatickets.nba.com/faq/\n3. https://www.stubhub.com/nba-tickets/grouping/115\n4. https://www.kkday.com/zh-hk/blog/105535/nba-tickets\n5. https://skyhorseauto.com/en/chase-center-warriors-tickets-guide/\n6. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n7. https://www.prnewswire.com/news-releases/authentic-nba-playoff-tickets-available-on-nbaticketscom-the-only-official-ticket-marketplace-of-the-nba-204470411.html\n8. https://rigorousthemes.com/blog/best-ticket-resale-sites/\n9. https://www.waug.com/en/activities/135595\n10. https://www.musement.com/us/los-angeles/los-angeles-lakers-basketball-game-at-crypto-com-arena-439322/",
+  "usage": {
+    "completion_tokens": 767,
+    "prompt_tokens": 8711,
+    "total_tokens": 9478,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

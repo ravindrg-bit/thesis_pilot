@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:28:56.671105+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256403e0d430e248206e5e",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here's how to log into OneDrive:\n\n## Logging into OneDrive\n\n### Via Web Browser (OneDrive Web Version)\n\n1. Go to the OneDrive login portal: **https://onedrive.live.com/login/** or **https://onedrive.com/sign-in**\n2. Click on the sign-in button or profile icon\n3. Enter your **Microsoft account email address** or phone number\n4. Enter your **password**\n5. Click **Sign in**\n\nIf you don't have a Microsoft account, you can create one for free by clicking \"Create one\" or \"Sign up\" on the login page.\n\n### Via OneDrive Desktop App (Windows)\n\n1. Open the **Start Menu** and search for \"OneDrive\"\n2. Click on the **OneDrive app**\n3. Enter your **Microsoft account email address** and click **Sign in**\n4. If prompted, enter your **password**\n5. Review the Privacy Policy and click **Next**\n6. Choose your preferences for data sharing and click **Accept**\n7. Confirm or change the location of your OneDrive folder and click **Next**\n8. Select which folders to back up, then click **Start backup**\n\n### Via OneDrive Mobile App (iOS/Android)\n\n1. Download the OneDrive app from the App Store or Google Play Store\n2. Open the OneDrive app\n3. Enter your Microsoft account email and tap **Next**\n4. Enter your password and tap **Sign in**\n\n### Important Notes\n\n- OneDrive uses your **Microsoft account** credentials (the same account used for Outlook, Xbox, or other Microsoft services)\n- If you have **two-factor authentication** enabled, you'll need to complete the additional verification step\n- If you forgot your password, use the **\"Forgot Password\"** link on the sign-in page to reset it\n\n---\n\nSources:\n1. https://www.bunian.cn/22394.html\n2. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n3. https://www.xda-developers.com/how-to-sign-into-onedrive/\n4. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n5. https://m.thaihot.com.cn/gonglue/24348.html\n6. https://zhidao.baidu.com/question/2000987832475803467.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780835332,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 499,
+        "prompt_tokens": 8522,
+        "total_tokens": 9021,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256402de91",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"eb9b72226a256402680f160001ec6764\"},\"usage\":{\"total_tokens\":8376}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256402de91",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"eb9b72226a256402680f160001ec6764\"},\"usage\":{\"total_tokens\":8376}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"eb9b72226a256402680f160001ec6764\"},\"usage\":{\"total_tokens\":8376}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here's how to log into OneDrive:\n\n## Logging into OneDrive\n\n### Via Web Browser (OneDrive Web Version)\n\n1. Go to the OneDrive login portal: **https://onedrive.live.com/login/** or **https://onedrive.com/sign-in**\n2. Click on the sign-in button or profile icon\n3. Enter your **Microsoft account email address** or phone number\n4. Enter your **password**\n5. Click **Sign in**\n\nIf you don't have a Microsoft account, you can create one for free by clicking \"Create one\" or \"Sign up\" on the login page.\n\n### Via OneDrive Desktop App (Windows)\n\n1. Open the **Start Menu** and search for \"OneDrive\"\n2. Click on the **OneDrive app**\n3. Enter your **Microsoft account email address** and click **Sign in**\n4. If prompted, enter your **password**\n5. Review the Privacy Policy and click **Next**\n6. Choose your preferences for data sharing and click **Accept**\n7. Confirm or change the location of your OneDrive folder and click **Next**\n8. Select which folders to back up, then click **Start backup**\n\n### Via OneDrive Mobile App (iOS/Android)\n\n1. Download the OneDrive app from the App Store or Google Play Store\n2. Open the OneDrive app\n3. Enter your Microsoft account email and tap **Next**\n4. Enter your password and tap **Sign in**\n\n### Important Notes\n\n- OneDrive uses your **Microsoft account** credentials (the same account used for Outlook, Xbox, or other Microsoft services)\n- If you have **two-factor authentication** enabled, you'll need to complete the additional verification step\n- If you forgot your password, use the **\"Forgot Password\"** link on the sign-in page to reset it\n\n---\n\nSources:\n1. https://www.bunian.cn/22394.html\n2. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n3. https://www.xda-developers.com/how-to-sign-into-onedrive/\n4. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n5. https://m.thaihot.com.cn/gonglue/24348.html\n6. https://zhidao.baidu.com/question/2000987832475803467.html",
+  "usage": {
+    "completion_tokens": 499,
+    "prompt_tokens": 8522,
+    "total_tokens": 9021,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

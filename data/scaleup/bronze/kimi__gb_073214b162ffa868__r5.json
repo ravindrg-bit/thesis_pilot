@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_073214b162ffa868",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T21:45:01.885977+00:00",
+  "query_text": "what's the Mom Test",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25e6577f95460f2b3fab21",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Mom Test** is a customer interviewing methodology created by entrepreneur **Rob Fitzpatrick**, popularized in his book *\"The Mom Test: How to Talk to Customers & Learn if Your Business is a Good Idea When Everyone is Lying to You.\"*\n\n## What It Is\n\nThe Mom Test is a framework for asking questions that get **honest, actionable feedback** from potential customers\u2014even from people who care about you and want to be nice (like your mom). The core insight is that people often lie to entrepreneurs, not maliciously, but to be polite, supportive, or avoid hurting feelings. This creates **false positives** that lead founders to build products nobody actually wants.\n\n## The Three Core Rules\n\n1. **Talk about their life, not your idea** \u2014 Instead of pitching your solution, ask about their current problems, workflows, and challenges.\n\n2. **Ask about specifics in the past, not hypotheticals about the future** \u2014 Past behavior is the best predictor of future behavior. Ask \"When was the last time you had this problem? What did you do?\" instead of \"Would you use this?\"\n\n3. **Talk less and listen more** \u2014 Your job is to learn, not convince. Great interviewers listen about 80% of the time.\n\n## Why It Matters\n\nMost startups fail because they build something nobody wants. The Mom Test helps you validate whether a problem is real, urgent, and worth solving *before* you invest time and money building a solution. It eliminates \"polite lies\" and \"false validation\" by focusing on concrete facts about customer behavior rather than opinions about your idea.\n\n## What to Avoid\n\n- \u274c \"Do you think this is a good idea?\"\n- \u274c \"Would you use this if it existed?\"\n- \u274c \"Would you pay for this?\"\n- \u274c Leading questions or fishing for compliments\n\n## What to Ask Instead\n\n- \u2705 \"How do you currently handle [this problem]?\"\n- \u2705 \"When was the last time this happened? Walk me through it.\"\n- \u2705 \"What did you do to solve it?\"\n- \u2705 \"Have you ever paid to solve this? How much?\"\n\nThe method is widely used by startup founders, product managers, and indie hackers for customer discovery and idea validation.\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n3. https://blog.uxtweak.com/the-mom-test/\n4. https://readingraphics.com/book-summary-the-mom-test/\n5. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n6. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n7. https://hellopm.co/word/moms-test/\n8. https://www.momtestbook.com/\n9. https://www.maxmednik.com/blog/notes-on-the-mom-test-by-rob-fitzpatrick",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780868696,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 643,
+        "prompt_tokens": 7362,
+        "total_tokens": 8005,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what's the Mom Test"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25e657aa01",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"a22f58de6a25e657680f160001ed23cd\"},\"usage\":{\"total_tokens\":7214}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25e657aa01",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"a22f58de6a25e657680f160001ed23cd\"},\"usage\":{\"total_tokens\":7214}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"a22f58de6a25e657680f160001ed23cd\"},\"usage\":{\"total_tokens\":7214}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Mom Test** is a customer interviewing methodology created by entrepreneur **Rob Fitzpatrick**, popularized in his book *\"The Mom Test: How to Talk to Customers & Learn if Your Business is a Good Idea When Everyone is Lying to You.\"*\n\n## What It Is\n\nThe Mom Test is a framework for asking questions that get **honest, actionable feedback** from potential customers\u2014even from people who care about you and want to be nice (like your mom). The core insight is that people often lie to entrepreneurs, not maliciously, but to be polite, supportive, or avoid hurting feelings. This creates **false positives** that lead founders to build products nobody actually wants.\n\n## The Three Core Rules\n\n1. **Talk about their life, not your idea** \u2014 Instead of pitching your solution, ask about their current problems, workflows, and challenges.\n\n2. **Ask about specifics in the past, not hypotheticals about the future** \u2014 Past behavior is the best predictor of future behavior. Ask \"When was the last time you had this problem? What did you do?\" instead of \"Would you use this?\"\n\n3. **Talk less and listen more** \u2014 Your job is to learn, not convince. Great interviewers listen about 80% of the time.\n\n## Why It Matters\n\nMost startups fail because they build something nobody wants. The Mom Test helps you validate whether a problem is real, urgent, and worth solving *before* you invest time and money building a solution. It eliminates \"polite lies\" and \"false validation\" by focusing on concrete facts about customer behavior rather than opinions about your idea.\n\n## What to Avoid\n\n- \u274c \"Do you think this is a good idea?\"\n- \u274c \"Would you use this if it existed?\"\n- \u274c \"Would you pay for this?\"\n- \u274c Leading questions or fishing for compliments\n\n## What to Ask Instead\n\n- \u2705 \"How do you currently handle [this problem]?\"\n- \u2705 \"When was the last time this happened? Walk me through it.\"\n- \u2705 \"What did you do to solve it?\"\n- \u2705 \"Have you ever paid to solve this? How much?\"\n\nThe method is widely used by startup founders, product managers, and indie hackers for customer discovery and idea validation.\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n3. https://blog.uxtweak.com/the-mom-test/\n4. https://readingraphics.com/book-summary-the-mom-test/\n5. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n6. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n7. https://hellopm.co/word/moms-test/\n8. https://www.momtestbook.com/\n9. https://www.maxmednik.com/blog/notes-on-the-mom-test-by-rob-fitzpatrick",
+  "usage": {
+    "completion_tokens": 643,
+    "prompt_tokens": 7362,
+    "total_tokens": 8005,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

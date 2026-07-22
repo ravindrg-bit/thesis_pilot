@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T01:12:12.677693+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cdceaf750f979128421f1",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, here is how to log into OneDrive:\n\n## Logging into OneDrive\n\n### **Via Web Browser**\n1. Go to **https://onedrive.com** or **https://onedrive.live.com**\n2. Click the **\"Sign in\"** button\n3. Enter your **Microsoft account email address** or phone number\n4. Enter your **password**\n5. Click **\"Sign in\"** to access your files\n\n### **Via Windows App (Windows 10/11)**\n1. Click the **Start button** and search for **\"OneDrive\"**\n2. Open the OneDrive app\n3. When OneDrive Setup starts, enter your **Microsoft account email address**\n4. Enter your **password** and follow the prompts to complete setup\n\n### **Via Mobile App (iOS/Android)**\n1. Download the OneDrive app from the App Store or Google Play Store\n2. Open the app and tap **\"Sign in\"**\n3. Enter your Microsoft account email and password\n\n---\n\n## Important Notes\n\n- **OneDrive uses your Microsoft account** \u2014 the same email and password you use for Outlook, Xbox, or other Microsoft services\n- If you have both **personal and work/school accounts**, they can be distinguished by icon color:\n  - **White cloud icon** = Personal OneDrive\n  - **Blue cloud icon** = Work/School OneDrive\n\n---\n\n## Troubleshooting Login Issues\n\nIf you encounter problems signing in:\n\n| Issue | Solution |\n|-------|----------|\n| Forgot password | Click **\"Forgot password\"** on the sign-in page to reset it |\n| Stuck on \"Signing in\" | Try unlinking and re-linking: OneDrive icon \u2192 \u2699\ufe0f Settings \u2192 **\"Unlink this PC\"** \u2192 Sign in again |\n| Error 0x8004de40/0x8004de44 | Check TLS settings: Run `inetcpl.cpl` \u2192 Advanced tab \u2192 Enable **TLS 1.0, 1.1, 1.2, 1.3** |\n| Account sync issues | Run Command Prompt as Administrator, type `dsregcmd /leave` then `dsregcmd /join`, then restart |\n\n---\n\n## Switching or Adding Accounts\n\nTo **switch to a different account**:\n1. Right-click the OneDrive cloud icon in the taskbar\n2. Select **Settings** \u2192 **Account** tab \u2192 **\"Unlink this PC\"**\n3. Sign in with your new account credentials\n\nTo **add an additional account** (personal + work):\n1. Right-click OneDrive icon \u2192 **Settings** \u2192 **Account** tab\n2. Click **\"Add an account\"**\n3. Sign in with your second Microsoft account\n\n---\n\nSources:\n1. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n2. https://learn.microsoft.com/en-us/answers/questions/5652321/how-do-i-sign-to-onedrive\n3. https://www.xda-developers.com/how-to-sign-into-onedrive/\n4. https://learn.microsoft.com/en-us/answers/questions/5651952/how-to-log-into-one-drive-from-home-computer\n5. https://www.solveyourtech.com/how-to-change-onedrive-account-on-windows-11-a-step-by-step-guide-2/\n6. https://www.supportyourtech.com/articles/how-to-change-onedrive-account-on-windows-10-a-step-by-step-guide/\n7. https://www.supportyourtech.com/articles/how-to-add-another-onedrive-account-on-windows-11-a-step-by-step-guide/\n8. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/error-0x8004de40-in-onedrive\n9. https://www.feidaoboke.com/post/fix-onedrive-login-issue-error-code-0x8004de44.html\n10. https://techcommunity.microsoft.com/discussions/onedriveforbusiness/onedrive-stuck-on-signing-in/4023276",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780276296,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 845,
+        "prompt_tokens": 8976,
+        "total_tokens": 9821,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cdc4ad244",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"047c731a6a1cdc4a4f50a50001d94a60\"},\"usage\":{\"total_tokens\":8825}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cdc4ad244",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"047c731a6a1cdc4a4f50a50001d94a60\"},\"usage\":{\"total_tokens\":8825}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"047c731a6a1cdc4a4f50a50001d94a60\"},\"usage\":{\"total_tokens\":8825}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, here is how to log into OneDrive:\n\n## Logging into OneDrive\n\n### **Via Web Browser**\n1. Go to **https://onedrive.com** or **https://onedrive.live.com**\n2. Click the **\"Sign in\"** button\n3. Enter your **Microsoft account email address** or phone number\n4. Enter your **password**\n5. Click **\"Sign in\"** to access your files\n\n### **Via Windows App (Windows 10/11)**\n1. Click the **Start button** and search for **\"OneDrive\"**\n2. Open the OneDrive app\n3. When OneDrive Setup starts, enter your **Microsoft account email address**\n4. Enter your **password** and follow the prompts to complete setup\n\n### **Via Mobile App (iOS/Android)**\n1. Download the OneDrive app from the App Store or Google Play Store\n2. Open the app and tap **\"Sign in\"**\n3. Enter your Microsoft account email and password\n\n---\n\n## Important Notes\n\n- **OneDrive uses your Microsoft account** \u2014 the same email and password you use for Outlook, Xbox, or other Microsoft services\n- If you have both **personal and work/school accounts**, they can be distinguished by icon color:\n  - **White cloud icon** = Personal OneDrive\n  - **Blue cloud icon** = Work/School OneDrive\n\n---\n\n## Troubleshooting Login Issues\n\nIf you encounter problems signing in:\n\n| Issue | Solution |\n|-------|----------|\n| Forgot password | Click **\"Forgot password\"** on the sign-in page to reset it |\n| Stuck on \"Signing in\" | Try unlinking and re-linking: OneDrive icon \u2192 \u2699\ufe0f Settings \u2192 **\"Unlink this PC\"** \u2192 Sign in again |\n| Error 0x8004de40/0x8004de44 | Check TLS settings: Run `inetcpl.cpl` \u2192 Advanced tab \u2192 Enable **TLS 1.0, 1.1, 1.2, 1.3** |\n| Account sync issues | Run Command Prompt as Administrator, type `dsregcmd /leave` then `dsregcmd /join`, then restart |\n\n---\n\n## Switching or Adding Accounts\n\nTo **switch to a different account**:\n1. Right-click the OneDrive cloud icon in the taskbar\n2. Select **Settings** \u2192 **Account** tab \u2192 **\"Unlink this PC\"**\n3. Sign in with your new account credentials\n\nTo **add an additional account** (personal + work):\n1. Right-click OneDrive icon \u2192 **Settings** \u2192 **Account** tab\n2. Click **\"Add an account\"**\n3. Sign in with your second Microsoft account\n\n---\n\nSources:\n1. https://one-drive.helpshift.com/hc/faq/10-how-to-sign-in-to-onedrive-account/\n2. https://learn.microsoft.com/en-us/answers/questions/5652321/how-do-i-sign-to-onedrive\n3. https://www.xda-developers.com/how-to-sign-into-onedrive/\n4. https://learn.microsoft.com/en-us/answers/questions/5651952/how-to-log-into-one-drive-from-home-computer\n5. https://www.solveyourtech.com/how-to-change-onedrive-account-on-windows-11-a-step-by-step-guide-2/\n6. https://www.supportyourtech.com/articles/how-to-change-onedrive-account-on-windows-10-a-step-by-step-guide/\n7. https://www.supportyourtech.com/articles/how-to-add-another-onedrive-account-on-windows-11-a-step-by-step-guide/\n8. https://learn.microsoft.com/zh-cn/sharepoint/troubleshoot/sync/error-0x8004de40-in-onedrive\n9. https://www.feidaoboke.com/post/fix-onedrive-login-issue-error-code-0x8004de44.html\n10. https://techcommunity.microsoft.com/discussions/onedriveforbusiness/onedrive-stuck-on-signing-in/4023276",
+  "usage": {
+    "completion_tokens": 845,
+    "prompt_tokens": 8976,
+    "total_tokens": 9821,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

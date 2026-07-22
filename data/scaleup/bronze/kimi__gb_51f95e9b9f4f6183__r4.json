@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_51f95e9b9f4f6183",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T20:43:14.831265+00:00",
+  "query_text": "who plays unis in she's the man",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2486619f012017a8ee90eb",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I believe you may be asking about **Eunice** (which sounds similar to \"Unis\"). In the movie *She's the Man* (2006), **Eunice Bates** is played by **Emily Perkins**.\n\nEunice is Duke's lab partner and later becomes Toby's girlfriend in the film.\n\nSources:\n1. https://shestheman.fandom.com/wiki/Eunice_Bates\n2. https://www.tvguide.com/movies/shes-the-man/cast/2000128245/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780778593,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 117,
+        "prompt_tokens": 1124,
+        "total_tokens": 1241,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who plays unis in she's the man"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a248660a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ec43bb1e6a248660680f160001eb3cc4\"},\"usage\":{\"total_tokens\":974}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a248660a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ec43bb1e6a248660680f160001eb3cc4\"},\"usage\":{\"total_tokens\":974}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ec43bb1e6a248660680f160001eb3cc4\"},\"usage\":{\"total_tokens\":974}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I believe you may be asking about **Eunice** (which sounds similar to \"Unis\"). In the movie *She's the Man* (2006), **Eunice Bates** is played by **Emily Perkins**.\n\nEunice is Duke's lab partner and later becomes Toby's girlfriend in the film.\n\nSources:\n1. https://shestheman.fandom.com/wiki/Eunice_Bates\n2. https://www.tvguide.com/movies/shes-the-man/cast/2000128245/",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 1124,
+    "total_tokens": 1241,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

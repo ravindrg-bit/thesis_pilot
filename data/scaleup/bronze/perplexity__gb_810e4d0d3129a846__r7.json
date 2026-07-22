@@ -1,0 +1,125 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "perplexity",
+  "run_index": 7,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T04:42:26.608461+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you explain dependency injection in C# like a gangster?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "64fa1bca-bedd-4eaa-ac87-2165ba9e9370",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Dependency injection in C# is when a class **asks for what it needs** instead of **building it itself**\u2014like a boss telling his crew, \u201cYou bring me the engine,\u201d instead of personally wrenching one together.[1][5] In plain terms: the class gets its dependencies from the outside, which makes the code easier to swap, test, and maintain.[1][2][5]\n\nThink of it like this:  \n- **Without DI:** `Boss` makes its own `Gun`, `Car`, or `Logger` inside the class.  \n- **With DI:** somebody else hands `Boss` the `Gun`, `Car`, or `Logger` when `Boss` gets created.[2][5]\n\nThe most common style in C# is **constructor injection**, where you pass the dependency into the constructor.[2][5] Microsoft also notes that .NET has built-in DI support through a service container, where services are registered at startup and then injected where needed.[5]\n\nA simple C# example:\n\n```csharp\npublic interface IWeapon\n{\n    void Use();\n}\n\npublic class Pistol : IWeapon\n{\n    public void Use() => Console.WriteLine(\"Bang!\");\n}\n\npublic class Gangster\n{\n    private readonly IWeapon _weapon;\n\n    public Gangster(IWeapon weapon)\n    {\n        _weapon = weapon;\n    }\n\n    public void HandleBusiness()\n    {\n        _weapon.Use();\n    }\n}\n```\n\nAnd in the DI container setup:\n\n```csharp\nservices.AddTransient<IWeapon, Pistol>();\nservices.AddTransient<Gangster>();\n```\n\nNow `Gangster` doesn\u2019t care *which* weapon it gets, only that it gets something that follows `IWeapon`.[2][5] That\u2019s the real power: you can swap implementations without rewriting the class, and your tests can inject fake dependencies instead of the real ones.[2][4][5]\n\nIf you want, I can also explain it in:\n- **full gangster slang**\n- **super simple beginner English**\n- **with a real ASP.NET Core example**",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780893746,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 421,
+      "prompt_tokens": 14,
+      "total_tokens": 435,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00042,
+        "request_cost": 0.005,
+        "total_cost": 0.00543
+      }
+    },
+    "citations": [
+      "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+      "https://builtin.com/articles/dependency-injection",
+      "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+      "https://www.youtube.com/watch?v=cCSrPZroICg",
+      "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview"
+    ],
+    "search_results": [
+      {
+        "title": "What is Dependency Injection in C# With Example (Guide)",
+        "url": "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+        "date": "2025-09-16",
+        "last_updated": "2026-06-07",
+        "snippet": "Dependency Injection is a key concept in C#'s object-oriented programming. Unlike hard-coding them inside, it allows you to inject dependencies into a class.",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection: A Guide With Examples | Built In",
+        "url": "https://builtin.com/articles/dependency-injection",
+        "date": "2024-06-10",
+        "last_updated": "2025-12-17",
+        "snippet": "Dependency injection is a technique in which you make the interactions between objects as minimal as possible through specific dependencies.",
+        "source": "web"
+      },
+      {
+        "title": "Learn Dependency Injection in less than 20 minutes! - C# DI",
+        "url": "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+        "date": "2024-06-11",
+        "last_updated": "2026-06-06",
+        "snippet": "... C# Dependency Injection video! 01:20 Understanding Dependency in Dependency Injection 05:58 Super Simple Constructor Dependency Injection 10 ...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection in C# A Hands-On Guide to Boosting Code ...",
+        "url": "https://www.youtube.com/watch?v=cCSrPZroICg",
+        "date": "2023-08-24",
+        "last_updated": "2025-08-03",
+        "snippet": "... like this video? Let us know in the comments below! \u2713 Click ... Learn Dependency Injection the Right Way - Simple C# Tutorial. Nick ...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency injection - .NET - Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview",
+        "date": "2026-01-28",
+        "last_updated": "2026-06-04",
+        "snippet": "Learn how to use dependency injection within your .NET apps. Discover how to define service lifetimes and express dependencies in C#.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Dependency injection in C# is when a class **asks for what it needs** instead of **building it itself**\u2014like a boss telling his crew, \u201cYou bring me the engine,\u201d instead of personally wrenching one together.[1][5] In plain terms: the class gets its dependencies from the outside, which makes the code easier to swap, test, and maintain.[1][2][5]\n\nThink of it like this:  \n- **Without DI:** `Boss` makes its own `Gun`, `Car`, or `Logger` inside the class.  \n- **With DI:** somebody else hands `Boss` the `Gun`, `Car`, or `Logger` when `Boss` gets created.[2][5]\n\nThe most common style in C# is **constructor injection**, where you pass the dependency into the constructor.[2][5] Microsoft also notes that .NET has built-in DI support through a service container, where services are registered at startup and then injected where needed.[5]\n\nA simple C# example:\n\n```csharp\npublic interface IWeapon\n{\n    void Use();\n}\n\npublic class Pistol : IWeapon\n{\n    public void Use() => Console.WriteLine(\"Bang!\");\n}\n\npublic class Gangster\n{\n    private readonly IWeapon _weapon;\n\n    public Gangster(IWeapon weapon)\n    {\n        _weapon = weapon;\n    }\n\n    public void HandleBusiness()\n    {\n        _weapon.Use();\n    }\n}\n```\n\nAnd in the DI container setup:\n\n```csharp\nservices.AddTransient<IWeapon, Pistol>();\nservices.AddTransient<Gangster>();\n```\n\nNow `Gangster` doesn\u2019t care *which* weapon it gets, only that it gets something that follows `IWeapon`.[2][5] That\u2019s the real power: you can swap implementations without rewriting the class, and your tests can inject fake dependencies instead of the real ones.[2][4][5]\n\nIf you want, I can also explain it in:\n- **full gangster slang**\n- **super simple beginner English**\n- **with a real ASP.NET Core example**",
+  "usage": {
+    "completion_tokens": 421,
+    "prompt_tokens": 14,
+    "total_tokens": 435,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00042,
+      "request_cost": 0.005,
+      "total_cost": 0.00543
+    }
+  },
+  "run_profile": "scaleup"
+}

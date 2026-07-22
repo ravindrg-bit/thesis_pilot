@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T02:49:37.767612+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24dc34fa37775202cea0cf",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, you can download the latest version of Python from the **official Python website**.\n\n## Where to Download Python\n\nThe primary and most reliable source is:\n\n**https://www.python.org/downloads/**\n\nThis is the official download page maintained by the Python Software Foundation. When you visit this page:\n\n- The website will typically auto-detect your operating system and display a prominent **\"Download Python\"** button for the latest stable release\n- As of the search results, the latest stable version available is **Python 3.14.5**\n\n## Alternative Download Methods\n\nDepending on your operating system, you have several options:\n\n### Windows\n- **Microsoft Store**: Install the \"Python Install Manager\" for automatic updates (recommended for Python 3.14+)\n- **Traditional installer**: Download the `.exe` installer directly from python.org/downloads (note: this method is deprecated since Python 3.14 and will be removed in Python 3.16)\n\n### macOS\n- Official installer from python.org/downloads\n- Homebrew package manager: `brew install python3`\n\n### Linux\n- Your distribution's package manager (e.g., `apt`, `dnf`, `pacman`)\n- Build from source code downloaded from python.org if you need the absolute latest version\n\n## Important Tips\n\n- Always download from the **official website** to avoid counterfeit or malware-infected versions\n- Make sure to check **\"Add Python to PATH\"** during installation (especially on Windows) for easier command-line access\n- You can verify your installation by running `python --version` or `python3 --version` in your terminal/command prompt\n\nSources:\n1. https://www.python.org/\n2. https://wiki.python.org/moin/BeginnersGuide/Download\n3. https://realpython.com/installing-python/\n4. http://geekchamp.com/how-to-download-python-on-windows-11-a-step-by-step-installation-guide\n5. http://raspberrytips.com/install-latest-python-raspberry-pi",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780800566,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 414,
+        "prompt_tokens": 7634,
+        "total_tokens": 8048,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I download the latest version of Python?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24dc347898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"c4dc31da6a24dc34680f160001eba7d7\"},\"usage\":{\"total_tokens\":7480}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24dc347898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"c4dc31da6a24dc34680f160001eba7d7\"},\"usage\":{\"total_tokens\":7480}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"c4dc31da6a24dc34680f160001eba7d7\"},\"usage\":{\"total_tokens\":7480}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, you can download the latest version of Python from the **official Python website**.\n\n## Where to Download Python\n\nThe primary and most reliable source is:\n\n**https://www.python.org/downloads/**\n\nThis is the official download page maintained by the Python Software Foundation. When you visit this page:\n\n- The website will typically auto-detect your operating system and display a prominent **\"Download Python\"** button for the latest stable release\n- As of the search results, the latest stable version available is **Python 3.14.5**\n\n## Alternative Download Methods\n\nDepending on your operating system, you have several options:\n\n### Windows\n- **Microsoft Store**: Install the \"Python Install Manager\" for automatic updates (recommended for Python 3.14+)\n- **Traditional installer**: Download the `.exe` installer directly from python.org/downloads (note: this method is deprecated since Python 3.14 and will be removed in Python 3.16)\n\n### macOS\n- Official installer from python.org/downloads\n- Homebrew package manager: `brew install python3`\n\n### Linux\n- Your distribution's package manager (e.g., `apt`, `dnf`, `pacman`)\n- Build from source code downloaded from python.org if you need the absolute latest version\n\n## Important Tips\n\n- Always download from the **official website** to avoid counterfeit or malware-infected versions\n- Make sure to check **\"Add Python to PATH\"** during installation (especially on Windows) for easier command-line access\n- You can verify your installation by running `python --version` or `python3 --version` in your terminal/command prompt\n\nSources:\n1. https://www.python.org/\n2. https://wiki.python.org/moin/BeginnersGuide/Download\n3. https://realpython.com/installing-python/\n4. http://geekchamp.com/how-to-download-python-on-windows-11-a-step-by-step-installation-guide\n5. http://raspberrytips.com/install-latest-python-raspberry-pi",
+  "usage": {
+    "completion_tokens": 414,
+    "prompt_tokens": 7634,
+    "total_tokens": 8048,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

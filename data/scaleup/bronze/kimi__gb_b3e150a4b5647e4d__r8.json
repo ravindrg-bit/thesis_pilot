@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b3e150a4b5647e4d",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T11:56:27.883415+00:00",
+  "query_text": "What is the difference between the potato masala for Dosa and the one that is served with poori? ",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26add90ccb4c6f89a7b5b5",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, I can now explain the key differences between the potato masala served with dosa and the one served with poori.\n\n## Main Differences\n\n### **Consistency/Texture**\nThe most significant difference is the **consistency**:\n\n- **Dosa potato masala** is **thick and dry** (semi-dry sabzi). The potatoes are boiled and roughly mashed or left in soft chunks so that the filling can be easily stuffed inside the crispy dosa without making it soggy.\n\n- **Poori masala** is **thin, watery, and gravy-like** (curry consistency). It's designed specifically for dipping the poori into, so it needs to be more liquid and flowy.\n\n### **Ingredients**\n- **Dosa potato masala** typically contains: potatoes, onions, mustard seeds, cumin, urad dal, chana dal, curry leaves, green chilies, ginger, turmeric, and sometimes cashews or green peas. **Tomatoes are usually NOT added**.\n\n- **Poori masala** contains similar base ingredients but **includes tomatoes**, which contribute to the gravy consistency and a slightly different flavor profile. Some recipes also include garlic.\n\n### **Purpose**\n- **Dosa masala** is primarily a **stuffing/filling** that needs to stay in place when rolled inside the dosa.\n- **Poori masala** is a **dipping curry** meant to be scooped up with pieces of fried poori bread.\n\n### **Regional Variations**\nAs noted in the sources, there are also regional differences \u2014 for example, Karnataka/Mysore style masala dosa may have a slightly sweeter potato masala, and Tamil Nadu style tends to be spicier and drier. Similarly, poori masala varies across South Indian states, Maharashtra (puri bhaji), and North India (aloo sabzi).\n\n---\n\n## Summary Table\n\n| Aspect | Dosa Potato Masala | Poori Potato Masala |\n|--------|-------------------|---------------------|\n| **Consistency** | Thick, dry, semi-mashed | Thin, watery, gravy-like |\n| **Tomatoes** | Usually not added | Typically added |\n| **Purpose** | Stuffing for dosa | Dipping curry for poori |\n| **Potato texture** | Roughly mashed or chunky | Mashed, sometimes with pieces |\n| **Serving style** | Stuffed inside dosa | Served on side for dipping |\n\nInterestingly, the same base recipe can often be adapted for either purpose \u2014 you can make the dosa masala thinner by adding water for poori, or cook down poori masala to make it thicker for dosa.\n\nSources:\n1. https://www.indianhealthyrecipes.com/poori-masala/\n2. https://www.indianhealthyrecipes.com/potato-masala-aloo-masala/\n3. https://masalachilli.com/potato-masala-south-indian/\n4. http://www.lincyscookart.com/2015/06/poori-masala-potato-masala-for-poori.html\n5. https://rakskitchen.net/masala-dosa-recipe-south-indian-breakfast/\n6. https://www.indianveggiedelight.com/potato-masala/\n7. https://cookingfromheart.com/urulai-kizhangu-masala-poori-masala/\n8. https://www.cookwithkushi.com/potato-masala-aloo-bhaji/\n9. https://foodviva.com/south-indian-recipes/masala-dosa/\n10. https://www.vegrecipesofindia.com/potato-curry-recipe-for-masala-dosa/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780919770,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 780,
+        "prompt_tokens": 8890,
+        "total_tokens": 9670,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What is the difference between the potato masala for Dosa and the one that is served with poori? "
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26add8a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"2c889d516a26add8680f160001ef7edc\"},\"usage\":{\"total_tokens\":8725}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26add8a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"2c889d516a26add8680f160001ef7edc\"},\"usage\":{\"total_tokens\":8725}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"2c889d516a26add8680f160001ef7edc\"},\"usage\":{\"total_tokens\":8725}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, I can now explain the key differences between the potato masala served with dosa and the one served with poori.\n\n## Main Differences\n\n### **Consistency/Texture**\nThe most significant difference is the **consistency**:\n\n- **Dosa potato masala** is **thick and dry** (semi-dry sabzi). The potatoes are boiled and roughly mashed or left in soft chunks so that the filling can be easily stuffed inside the crispy dosa without making it soggy.\n\n- **Poori masala** is **thin, watery, and gravy-like** (curry consistency). It's designed specifically for dipping the poori into, so it needs to be more liquid and flowy.\n\n### **Ingredients**\n- **Dosa potato masala** typically contains: potatoes, onions, mustard seeds, cumin, urad dal, chana dal, curry leaves, green chilies, ginger, turmeric, and sometimes cashews or green peas. **Tomatoes are usually NOT added**.\n\n- **Poori masala** contains similar base ingredients but **includes tomatoes**, which contribute to the gravy consistency and a slightly different flavor profile. Some recipes also include garlic.\n\n### **Purpose**\n- **Dosa masala** is primarily a **stuffing/filling** that needs to stay in place when rolled inside the dosa.\n- **Poori masala** is a **dipping curry** meant to be scooped up with pieces of fried poori bread.\n\n### **Regional Variations**\nAs noted in the sources, there are also regional differences \u2014 for example, Karnataka/Mysore style masala dosa may have a slightly sweeter potato masala, and Tamil Nadu style tends to be spicier and drier. Similarly, poori masala varies across South Indian states, Maharashtra (puri bhaji), and North India (aloo sabzi).\n\n---\n\n## Summary Table\n\n| Aspect | Dosa Potato Masala | Poori Potato Masala |\n|--------|-------------------|---------------------|\n| **Consistency** | Thick, dry, semi-mashed | Thin, watery, gravy-like |\n| **Tomatoes** | Usually not added | Typically added |\n| **Purpose** | Stuffing for dosa | Dipping curry for poori |\n| **Potato texture** | Roughly mashed or chunky | Mashed, sometimes with pieces |\n| **Serving style** | Stuffed inside dosa | Served on side for dipping |\n\nInterestingly, the same base recipe can often be adapted for either purpose \u2014 you can make the dosa masala thinner by adding water for poori, or cook down poori masala to make it thicker for dosa.\n\nSources:\n1. https://www.indianhealthyrecipes.com/poori-masala/\n2. https://www.indianhealthyrecipes.com/potato-masala-aloo-masala/\n3. https://masalachilli.com/potato-masala-south-indian/\n4. http://www.lincyscookart.com/2015/06/poori-masala-potato-masala-for-poori.html\n5. https://rakskitchen.net/masala-dosa-recipe-south-indian-breakfast/\n6. https://www.indianveggiedelight.com/potato-masala/\n7. https://cookingfromheart.com/urulai-kizhangu-masala-poori-masala/\n8. https://www.cookwithkushi.com/potato-masala-aloo-bhaji/\n9. https://foodviva.com/south-indian-recipes/masala-dosa/\n10. https://www.vegrecipesofindia.com/potato-curry-recipe-for-masala-dosa/",
+  "usage": {
+    "completion_tokens": 780,
+    "prompt_tokens": 8890,
+    "total_tokens": 9670,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

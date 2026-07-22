@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b956ca640639b1e9",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:40:41.653634+00:00",
+  "query_text": "Are there any academic fields that don't have enough people trying to teach?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cd4e75fec9e2dd7c4e661",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found several academic fields that face significant shortages of people willing to teach. Here are the key findings:\n\n## Fields with Teaching Shortages\n\n### 1. **Computer Science and Artificial Intelligence**\nThe Georgetown University Center for Security and Emerging Technology found that \"demand for CS education does exceed the supply of available CS faculty.\" Over the last decade, enrollments in undergraduate and master's computer science programs have \"far outpaced the growth of computer science departments,\" leading universities to restrict access to CS courses. Academic leaders fear they lack the teaching capacity to meet student demand. The report identifies that while industry has increased salaries for AI experts, \"academia has not been able to respond as nimbly given the tight budgetary and institutional constraints that universities face.\"\n\n### 2. **Engineering (India and globally)**\nIndia faces an acute engineering faculty shortage, with an estimated 120,000 faculty members needed for various engineering colleges. The All India Council for Technical Education (AICTE) mandates a teacher-pupil ratio of 1:15, which translates to needing 33,000-40,000 faculty for India's 1,300 engineering colleges. Critically, \"India produces less than 450 PhDs in technology annually\" - far below what's needed. The perception that \"the compensation package in academia is not attractive at all\" means \"many talented individuals do not prefer to pursue an academic career.\"\n\n### 3. **Pharmacy**\nA study in *Currents in Pharmacy Teaching and Learning* identified \"a significant shortage of pharmacy faculty.\" During the next decade, \"academia will need at least 1200 new faculty members to staff the various pharmacy programs around the country.\" Low patient contact was the top reason students didn't intend to pursue academia, while teaching responsibilities and work-life balance attracted those who were interested.\n\n### 4. **Mathematics, Sciences, and Special Education (K-12 and higher education)**\nA comprehensive literature review identified major recruitment and retention difficulties in mathematics, sciences, English (as a foreign language), and special education. These fields face particular challenges globally, including in the United States (California, West Virginia, Kansas), United Kingdom (England and Ireland), and Israel.\n\n### 5. **Natural Sciences (Physics, Chemistry, Astronomy, Mathematics) - in specific contexts**\nInterestingly, research from Poland shows that fields like chemistry, physics, astronomy, and mathematics maintained strong research positions precisely because \"no private higher education institution lured academics\" away from these fields. However, this also means these fields had \"virtually no opportunities to focus on additional paid teaching,\" suggesting potential underinvestment in teaching capacity despite research strength.\n\n## Key Reasons for Teaching Shortages\n\nThe research consistently identifies several factors:\n- **Salary disparities** between academia and industry\n- **Low prestige/status** of teaching as a profession\n- **Better opportunities** in private sector (especially in tech and engineering)\n- **Work-life balance** concerns\n- **Lack of awareness** about faculty shortages among students\n\nSources:\n1. https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Faculty-Shortages.pdf\n2. https://www.inae.in/wp-content/themes/fortuna-child/img/Engg%20Education%20Profilebook.pdf#page=162\n3. https://www.sciencedirect.com/science/article/abs/pii/S1877129710000043\n4. https://educationworld.in/special-report-6/\n5. http://cpp.amu.edu.pl/kwiek/pdf/Kwiek_Deinstitutionalization.pdf\n6. https://repozytorium.amu.edu.pl/server/api/core/bitstreams/1d3c822d-4f6c-4d2c-9c58-8977374a6b28/content\n7. https://files.eric.ed.gov/fulltext/ED493514.pdf\n8. https://www.academia.edu/Documents/in/Teacher_Shortage",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780274408,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 822,
+        "prompt_tokens": 4327,
+        "total_tokens": 5149,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Are there any academic fields that don't have enough people trying to teach?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cd4e7d244",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"2383fb296a1cd4e7680f160001d757db\"},\"usage\":{\"total_tokens\":4170}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cd4e7d244",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"2383fb296a1cd4e7680f160001d757db\"},\"usage\":{\"total_tokens\":4170}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"2383fb296a1cd4e7680f160001d757db\"},\"usage\":{\"total_tokens\":4170}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found several academic fields that face significant shortages of people willing to teach. Here are the key findings:\n\n## Fields with Teaching Shortages\n\n### 1. **Computer Science and Artificial Intelligence**\nThe Georgetown University Center for Security and Emerging Technology found that \"demand for CS education does exceed the supply of available CS faculty.\" Over the last decade, enrollments in undergraduate and master's computer science programs have \"far outpaced the growth of computer science departments,\" leading universities to restrict access to CS courses. Academic leaders fear they lack the teaching capacity to meet student demand. The report identifies that while industry has increased salaries for AI experts, \"academia has not been able to respond as nimbly given the tight budgetary and institutional constraints that universities face.\"\n\n### 2. **Engineering (India and globally)**\nIndia faces an acute engineering faculty shortage, with an estimated 120,000 faculty members needed for various engineering colleges. The All India Council for Technical Education (AICTE) mandates a teacher-pupil ratio of 1:15, which translates to needing 33,000-40,000 faculty for India's 1,300 engineering colleges. Critically, \"India produces less than 450 PhDs in technology annually\" - far below what's needed. The perception that \"the compensation package in academia is not attractive at all\" means \"many talented individuals do not prefer to pursue an academic career.\"\n\n### 3. **Pharmacy**\nA study in *Currents in Pharmacy Teaching and Learning* identified \"a significant shortage of pharmacy faculty.\" During the next decade, \"academia will need at least 1200 new faculty members to staff the various pharmacy programs around the country.\" Low patient contact was the top reason students didn't intend to pursue academia, while teaching responsibilities and work-life balance attracted those who were interested.\n\n### 4. **Mathematics, Sciences, and Special Education (K-12 and higher education)**\nA comprehensive literature review identified major recruitment and retention difficulties in mathematics, sciences, English (as a foreign language), and special education. These fields face particular challenges globally, including in the United States (California, West Virginia, Kansas), United Kingdom (England and Ireland), and Israel.\n\n### 5. **Natural Sciences (Physics, Chemistry, Astronomy, Mathematics) - in specific contexts**\nInterestingly, research from Poland shows that fields like chemistry, physics, astronomy, and mathematics maintained strong research positions precisely because \"no private higher education institution lured academics\" away from these fields. However, this also means these fields had \"virtually no opportunities to focus on additional paid teaching,\" suggesting potential underinvestment in teaching capacity despite research strength.\n\n## Key Reasons for Teaching Shortages\n\nThe research consistently identifies several factors:\n- **Salary disparities** between academia and industry\n- **Low prestige/status** of teaching as a profession\n- **Better opportunities** in private sector (especially in tech and engineering)\n- **Work-life balance** concerns\n- **Lack of awareness** about faculty shortages among students\n\nSources:\n1. https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Faculty-Shortages.pdf\n2. https://www.inae.in/wp-content/themes/fortuna-child/img/Engg%20Education%20Profilebook.pdf#page=162\n3. https://www.sciencedirect.com/science/article/abs/pii/S1877129710000043\n4. https://educationworld.in/special-report-6/\n5. http://cpp.amu.edu.pl/kwiek/pdf/Kwiek_Deinstitutionalization.pdf\n6. https://repozytorium.amu.edu.pl/server/api/core/bitstreams/1d3c822d-4f6c-4d2c-9c58-8977374a6b28/content\n7. https://files.eric.ed.gov/fulltext/ED493514.pdf\n8. https://www.academia.edu/Documents/in/Teacher_Shortage",
+  "usage": {
+    "completion_tokens": 822,
+    "prompt_tokens": 4327,
+    "total_tokens": 5149,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

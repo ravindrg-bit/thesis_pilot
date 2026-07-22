@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b28cf85e67d23677",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:15:40.326026+00:00",
+  "query_text": "How do I make poached eggs at home?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2536b0e0d430e2482047f1",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Here's how to make perfect poached eggs at home:\n\n## Basic Method\n\n**What you need:**\n- Fresh eggs (fresh eggs hold together better)\n- Water\n- White vinegar (optional, but helps whites coagulate)\n- A small bowl or ramekin per egg\n- A slotted spoon\n- Paper towels\n\n**Step-by-step instructions:**\n\n1. **Prepare the water:** Fill a pot with at least 3-4 inches of water. Bring to a boil, then reduce heat to low so the water is at a bare simmer (small bubbles at the bottom, no bubbles breaking the surface). The ideal temperature is around 180\u00b0F (82\u00b0C).\n\n2. **Prep the egg:** Crack an egg into a fine mesh sieve over a bowl to strain off the loose, watery whites. This prevents wispy white strands in the water. Transfer the strained egg to a small bowl or ramekin.\n\n3. **Add vinegar (optional):** Stir in about 1 tablespoon of white vinegar or white wine vinegar to the water. This helps the egg white set faster without adding noticeable flavor.\n\n4. **Create a vortex (for single eggs):** Use a spoon to swirl the water into a gentle whirlpool. Carefully pour the egg into the center. The swirling motion helps wrap the white around the yolk for a neater, rounder shape.\n\n5. **Cook:** Let the egg simmer gently for 2\u00bd to 4 minutes, depending on how runny you want the yolk. The white should be fully set while the yolk remains soft and runny.\n\n6. **Remove and drain:** Use a slotted spoon to lift the egg out. Dab gently on a paper towel to remove excess water before serving.\n\n## Pro Tips\n\n- **For multiple eggs:** Skip the vortex method. Just gently lower each egg into the water one by one, keeping some distance between them. Keep them moving slightly with a slotted spoon so they cook evenly.\n- **Make ahead:** Poached eggs can be made ahead and stored in cold water in the refrigerator for up to 4-5 days. Reheat in hot tap water for 2-3 minutes before serving.\n- **Shallow vs. deep water:** A deeper pot (4+ inches) produces a more classic spherical shape; shallower water gives a flatter result.\n- **Don't add salt** to the water\u2014it actually increases white wispies by making the egg white spread out more.\n\n## Alternative Methods\n\n- **Microwave method:** Spray a small microwave-safe bowl with oil, add \u00bd cup water, crack in an egg, and microwave covered for about 1 minute.\n- **Egg poacher cups:** These make it easier to cook multiple eggs at once, though they technically \"coddle\" rather than truly poach the eggs.\n\nSources:\n1. https://www.allrecipes.com/recipe/284903/perfect-poached-egg/\n2. https://www.egginfo.co.uk/recipes/perfectly-poached-eggs\n3. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n4. https://thecookful.com/how-to-poach-eggs/\n5. https://downshiftology.com/recipes/poached-eggs/\n6. https://www.seriouseats.com/foolproof-poached-eggs-food-lab-recipe",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780823729,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 710,
+        "prompt_tokens": 8379,
+        "total_tokens": 9089,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How do I make poached eggs at home?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2536af7898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"cb8bb3296a2536af4f50a50001edc69e\"},\"usage\":{\"total_tokens\":8225}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2536af7898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"cb8bb3296a2536af4f50a50001edc69e\"},\"usage\":{\"total_tokens\":8225}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"cb8bb3296a2536af4f50a50001edc69e\"},\"usage\":{\"total_tokens\":8225}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Here's how to make perfect poached eggs at home:\n\n## Basic Method\n\n**What you need:**\n- Fresh eggs (fresh eggs hold together better)\n- Water\n- White vinegar (optional, but helps whites coagulate)\n- A small bowl or ramekin per egg\n- A slotted spoon\n- Paper towels\n\n**Step-by-step instructions:**\n\n1. **Prepare the water:** Fill a pot with at least 3-4 inches of water. Bring to a boil, then reduce heat to low so the water is at a bare simmer (small bubbles at the bottom, no bubbles breaking the surface). The ideal temperature is around 180\u00b0F (82\u00b0C).\n\n2. **Prep the egg:** Crack an egg into a fine mesh sieve over a bowl to strain off the loose, watery whites. This prevents wispy white strands in the water. Transfer the strained egg to a small bowl or ramekin.\n\n3. **Add vinegar (optional):** Stir in about 1 tablespoon of white vinegar or white wine vinegar to the water. This helps the egg white set faster without adding noticeable flavor.\n\n4. **Create a vortex (for single eggs):** Use a spoon to swirl the water into a gentle whirlpool. Carefully pour the egg into the center. The swirling motion helps wrap the white around the yolk for a neater, rounder shape.\n\n5. **Cook:** Let the egg simmer gently for 2\u00bd to 4 minutes, depending on how runny you want the yolk. The white should be fully set while the yolk remains soft and runny.\n\n6. **Remove and drain:** Use a slotted spoon to lift the egg out. Dab gently on a paper towel to remove excess water before serving.\n\n## Pro Tips\n\n- **For multiple eggs:** Skip the vortex method. Just gently lower each egg into the water one by one, keeping some distance between them. Keep them moving slightly with a slotted spoon so they cook evenly.\n- **Make ahead:** Poached eggs can be made ahead and stored in cold water in the refrigerator for up to 4-5 days. Reheat in hot tap water for 2-3 minutes before serving.\n- **Shallow vs. deep water:** A deeper pot (4+ inches) produces a more classic spherical shape; shallower water gives a flatter result.\n- **Don't add salt** to the water\u2014it actually increases white wispies by making the egg white spread out more.\n\n## Alternative Methods\n\n- **Microwave method:** Spray a small microwave-safe bowl with oil, add \u00bd cup water, crack in an egg, and microwave covered for about 1 minute.\n- **Egg poacher cups:** These make it easier to cook multiple eggs at once, though they technically \"coddle\" rather than truly poach the eggs.\n\nSources:\n1. https://www.allrecipes.com/recipe/284903/perfect-poached-egg/\n2. https://www.egginfo.co.uk/recipes/perfectly-poached-eggs\n3. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n4. https://thecookful.com/how-to-poach-eggs/\n5. https://downshiftology.com/recipes/poached-eggs/\n6. https://www.seriouseats.com/foolproof-poached-eggs-food-lab-recipe",
+  "usage": {
+    "completion_tokens": 710,
+    "prompt_tokens": 8379,
+    "total_tokens": 9089,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

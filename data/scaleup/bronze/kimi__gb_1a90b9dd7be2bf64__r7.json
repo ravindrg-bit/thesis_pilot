@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:29:08.619643+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25640d138b10ddec1bbcef",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the ways to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Open your browser** and go to the OneDrive login page:\n   - Official URL: **https://onedrive.live.com/login/** or **https://portal.office.com/onedrive**\n\n2. **Click the \"Sign in\"** button (usually in the top-right corner)\n\n3. **Enter your Microsoft account credentials**:\n   - Email address, phone number, or Skype ID\n   - Password\n\n4. **Click \"Sign in\"** to access your OneDrive files\n\nIf you don't have a Microsoft account, click **\"Create one\"** or **\"Create a new account\"** to register.\n\n---\n\n## Windows Desktop App\n\n1. **Open OneDrive app**:\n   - Click the **Start Menu** and search for \"OneDrive\"\n   - Or click the OneDrive cloud icon in the system tray\n\n2. **Enter your Microsoft Account email** and click **Sign in**\n\n3. **Enter your password** (if prompted)\n\n4. Follow the setup prompts to choose your OneDrive folder location and backup preferences\n\n---\n\n## Mobile Devices (iOS/Android)\n\n1. **Download the OneDrive app** from your device's app store (App Store or Google Play)\n\n2. **Open the OneDrive app**\n\n3. **Sign in** with your Microsoft account (email and password)\n\n4. If required, complete **multi-factor authentication (MFA)**\n\n---\n\n## Troubleshooting Login Issues\n\nIf you can't log in, try these solutions:\n\n| Issue | Solution |\n|-------|----------|\n| Forgot password | Click \"Forgot password\" on the login page |\n| Stuck on signing in | Restart OneDrive or clear cached credentials |\n| Network problems | Check your internet connection |\n| Firewall blocking | Temporarily disable firewall or whitelist OneDrive |\n| App not working | Update OneDrive to the latest version or reinstall |\n| Account issues | Verify your Microsoft account status at account.microsoft.com |\n\n---\n\n## Important Notes\n\n- **OneDrive for Business/School accounts**: Use your organization credentials (e.g., username@yourorganization.edu)\n- **Multi-factor authentication (MFA)**: You may need to verify with a code, authenticator app, or phone call\n- **Same account across devices**: Use the same Microsoft account to sync files across all your devices\n\nSources:\n1. https://td.usnh.edu/TDClient/60/Portal/KB/Article/2064/OneDrive-Accessing-Logging-in-to-OneDrive\n2. https://www.xda-developers.com/how-to-sign-into-onedrive/\n3. https://www.bunian.cn/22394.html\n4. https://zhidao.baidu.com/question/931669486309366379.html\n5. https://zhidao.baidu.com/question/1959178849767969348.html\n6. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/\n7. https://bcainc.com/blog/2024-expert-solution-for-onedrive-stuck-on-signing-in/\n8. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n9. https://ms.codes/blogs/microsoft-office/how-to-access-onedrive-without-microsoft-account\n10. https://www.elevenforum.com/t/onedrive-suddenly-wont-log-in-and-sync.28940/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780835342,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 727,
+        "prompt_tokens": 8653,
+        "total_tokens": 9380,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25640cb17d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"de24c2dd6a25640c680f160001ec6776\"},\"usage\":{\"total_tokens\":8505}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25640cb17d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"de24c2dd6a25640c680f160001ec6776\"},\"usage\":{\"total_tokens\":8505}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"de24c2dd6a25640c680f160001ec6776\"},\"usage\":{\"total_tokens\":8505}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the ways to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Open your browser** and go to the OneDrive login page:\n   - Official URL: **https://onedrive.live.com/login/** or **https://portal.office.com/onedrive**\n\n2. **Click the \"Sign in\"** button (usually in the top-right corner)\n\n3. **Enter your Microsoft account credentials**:\n   - Email address, phone number, or Skype ID\n   - Password\n\n4. **Click \"Sign in\"** to access your OneDrive files\n\nIf you don't have a Microsoft account, click **\"Create one\"** or **\"Create a new account\"** to register.\n\n---\n\n## Windows Desktop App\n\n1. **Open OneDrive app**:\n   - Click the **Start Menu** and search for \"OneDrive\"\n   - Or click the OneDrive cloud icon in the system tray\n\n2. **Enter your Microsoft Account email** and click **Sign in**\n\n3. **Enter your password** (if prompted)\n\n4. Follow the setup prompts to choose your OneDrive folder location and backup preferences\n\n---\n\n## Mobile Devices (iOS/Android)\n\n1. **Download the OneDrive app** from your device's app store (App Store or Google Play)\n\n2. **Open the OneDrive app**\n\n3. **Sign in** with your Microsoft account (email and password)\n\n4. If required, complete **multi-factor authentication (MFA)**\n\n---\n\n## Troubleshooting Login Issues\n\nIf you can't log in, try these solutions:\n\n| Issue | Solution |\n|-------|----------|\n| Forgot password | Click \"Forgot password\" on the login page |\n| Stuck on signing in | Restart OneDrive or clear cached credentials |\n| Network problems | Check your internet connection |\n| Firewall blocking | Temporarily disable firewall or whitelist OneDrive |\n| App not working | Update OneDrive to the latest version or reinstall |\n| Account issues | Verify your Microsoft account status at account.microsoft.com |\n\n---\n\n## Important Notes\n\n- **OneDrive for Business/School accounts**: Use your organization credentials (e.g., username@yourorganization.edu)\n- **Multi-factor authentication (MFA)**: You may need to verify with a code, authenticator app, or phone call\n- **Same account across devices**: Use the same Microsoft account to sync files across all your devices\n\nSources:\n1. https://td.usnh.edu/TDClient/60/Portal/KB/Article/2064/OneDrive-Accessing-Logging-in-to-OneDrive\n2. https://www.xda-developers.com/how-to-sign-into-onedrive/\n3. https://www.bunian.cn/22394.html\n4. https://zhidao.baidu.com/question/931669486309366379.html\n5. https://zhidao.baidu.com/question/1959178849767969348.html\n6. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/\n7. https://bcainc.com/blog/2024-expert-solution-for-onedrive-stuck-on-signing-in/\n8. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n9. https://ms.codes/blogs/microsoft-office/how-to-access-onedrive-without-microsoft-account\n10. https://www.elevenforum.com/t/onedrive-suddenly-wont-log-in-and-sync.28940/",
+  "usage": {
+    "completion_tokens": 727,
+    "prompt_tokens": 8653,
+    "total_tokens": 9380,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c4f7386505e41f8a",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:10:58.673316+00:00",
+  "query_text": "navy p3",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256ddbe73a2947771607b2",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about the **U.S. Navy P-3 Orion**, a long-range maritime patrol aircraft.\n\n## Overview\n\nThe **Lockheed P-3 Orion** was the primary maritime patrol and anti-submarine warfare (ASW) aircraft of the United States Navy for over five decades. It was based on the Lockheed L-188 Electra commercial airliner.\n\n## Key Variants\n\n| Variant | Description |\n|---------|-------------|\n| **P-3A** | Initial production version (1962) |\n| **P-3B** | Improved variant with upgraded engines and avionics |\n| **P-3C** | Major upgrade with digital avionics, new radar, and acoustic processors |\n| **P-3C AIP** | Anti-Surface Warfare Improvement Program |\n| **P-3C AIP+** | Further enhanced version |\n| **EP-3E** | Signals intelligence (SIGINT) variant |\n| **WP-3D** | Weather reconnaissance variant (NOAA) |\n\n## Key Specifications\n\n- **Crew:** 11 (pilot, co-pilot, navigator, flight engineer, sensor operators, acoustic operators)\n- **Engines:** Four Allison T56-A-14 turboprop engines\n- **Range:** Approximately 2,380 nautical miles (combat radius)\n- **Endurance:** Up to 16+ hours (with crew rotation)\n- **Armament:** Torpedoes, depth charges, Harpoon anti-ship missiles, mines\n\n## Primary Missions\n\n1. **Anti-Submarine Warfare (ASW)** - The P-3's primary role\n2. **Anti-Surface Warfare (ASuW)**\n3. **Intelligence, Surveillance, and Reconnaissance (ISR)**\n4. **Search and Rescue (SAR)**\n5. **Maritime patrol and drug interdiction**\n\n## Service History\n\n- **Entered service:** 1962\n- **Peak production:** Over 750 aircraft built for the U.S. Navy and international customers\n- **Replacement:** Gradually being replaced by the **P-8 Poseidon** (based on Boeing 737)\n- **Current status:** Most P-3Cs have been retired from U.S. Navy service, though some remain in service with other nations and in specialized roles\n\n## Notable Features\n\nThe P-3 was equipped with an extensive sensor suite including:\n- Magnetic Anomaly Detector (MAD) boom at the tail\n- Sonobuoy launch tubes\n- Surface search radar\n- Electro-optical/infrared sensors\n- Acoustic processing systems\n\nThe aircraft was operated by various Navy patrol squadrons (VP squadrons) such as VP-1, VP-4, VP-5, VP-8, VP-9, VP-10, VP-16, VP-26, VP-30, VP-40, VP-45, VP-46, VP-47, VP-62, and others.\n\nSources:\n1. https://www.p3orion.nl/ALHR.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837852,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 646,
+        "prompt_tokens": 7709,
+        "total_tokens": 8355,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "navy p3"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256ddb9a21",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"620a11d16a256ddb680f160001ec756d\"},\"usage\":{\"total_tokens\":7564}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256ddb9a21",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"620a11d16a256ddb680f160001ec756d\"},\"usage\":{\"total_tokens\":7564}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"620a11d16a256ddb680f160001ec756d\"},\"usage\":{\"total_tokens\":7564}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about the **U.S. Navy P-3 Orion**, a long-range maritime patrol aircraft.\n\n## Overview\n\nThe **Lockheed P-3 Orion** was the primary maritime patrol and anti-submarine warfare (ASW) aircraft of the United States Navy for over five decades. It was based on the Lockheed L-188 Electra commercial airliner.\n\n## Key Variants\n\n| Variant | Description |\n|---------|-------------|\n| **P-3A** | Initial production version (1962) |\n| **P-3B** | Improved variant with upgraded engines and avionics |\n| **P-3C** | Major upgrade with digital avionics, new radar, and acoustic processors |\n| **P-3C AIP** | Anti-Surface Warfare Improvement Program |\n| **P-3C AIP+** | Further enhanced version |\n| **EP-3E** | Signals intelligence (SIGINT) variant |\n| **WP-3D** | Weather reconnaissance variant (NOAA) |\n\n## Key Specifications\n\n- **Crew:** 11 (pilot, co-pilot, navigator, flight engineer, sensor operators, acoustic operators)\n- **Engines:** Four Allison T56-A-14 turboprop engines\n- **Range:** Approximately 2,380 nautical miles (combat radius)\n- **Endurance:** Up to 16+ hours (with crew rotation)\n- **Armament:** Torpedoes, depth charges, Harpoon anti-ship missiles, mines\n\n## Primary Missions\n\n1. **Anti-Submarine Warfare (ASW)** - The P-3's primary role\n2. **Anti-Surface Warfare (ASuW)**\n3. **Intelligence, Surveillance, and Reconnaissance (ISR)**\n4. **Search and Rescue (SAR)**\n5. **Maritime patrol and drug interdiction**\n\n## Service History\n\n- **Entered service:** 1962\n- **Peak production:** Over 750 aircraft built for the U.S. Navy and international customers\n- **Replacement:** Gradually being replaced by the **P-8 Poseidon** (based on Boeing 737)\n- **Current status:** Most P-3Cs have been retired from U.S. Navy service, though some remain in service with other nations and in specialized roles\n\n## Notable Features\n\nThe P-3 was equipped with an extensive sensor suite including:\n- Magnetic Anomaly Detector (MAD) boom at the tail\n- Sonobuoy launch tubes\n- Surface search radar\n- Electro-optical/infrared sensors\n- Acoustic processing systems\n\nThe aircraft was operated by various Navy patrol squadrons (VP squadrons) such as VP-1, VP-4, VP-5, VP-8, VP-9, VP-10, VP-16, VP-26, VP-30, VP-40, VP-45, VP-46, VP-47, VP-62, and others.\n\nSources:\n1. https://www.p3orion.nl/ALHR.pdf",
+  "usage": {
+    "completion_tokens": 646,
+    "prompt_tokens": 7709,
+    "total_tokens": 8355,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

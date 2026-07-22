@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_19d8ed45cb124693",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T18:51:59.424573+00:00",
+  "query_text": "Transfer money to my savings account",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a270f461b4f7af185070204",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can provide you with general guidance on how to transfer money to a savings account, though I cannot perform the actual transfer for you as I don't have access to your banking systems.\n\n## Common Ways to Transfer Money to a Savings Account\n\n### 1. **Online/Mobile Banking Transfer (Same Bank)**\n- Log in to your bank's online banking platform or mobile app\n- Navigate to the \"Transfers\" section\n- Select your source account (e.g., checking account) as the \"from\" account\n- Select your savings account as the \"to\" account\n- Enter the amount and confirm the transfer\n\n### 2. **Transfer Between Different Banks**\n- Set up the external savings account using the account number and routing number\n- Verify the account (your bank may make small test deposits)\n- Once linked, you can transfer funds between institutions\n- Note: These transfers typically take 1-3 business days to process\n\n### 3. **In-Person at a Branch**\n- Visit your bank branch\n- Fill out a transfer form with your account details and transfer amount\n- Submit to a teller to complete the transaction\n\n### 4. **Direct Deposit**\n- Set up automatic deposits from your paycheck directly into your savings account through your employer\n\n### 5. **Mobile Check Deposit**\n- Use your bank's mobile app to take a photo of a check and deposit it into your savings account\n\n## Important Considerations\n\n| Factor | Details |\n|--------|---------|\n| **Processing Time** | Same-bank transfers are usually instant; external transfers take 1-3 business days |\n| **Transfer Limits** | Banks may impose daily or monthly limits |\n| **Fees** | Some banks charge for external transfers or excessive transactions |\n| **Withdrawal Limits** | Savings accounts typically limit certain withdrawals to 6 per month (Regulation D in the US) |\n\n## Steps to Get Started\n\n1. **Log in to your bank's online or mobile banking**\n2. **Find the \"Transfer\" or \"Move Money\" option**\n3. **Select your source and destination accounts**\n4. **Enter the transfer amount**\n5. **Review and confirm the transaction**\n\nIf you need specific instructions, please check with your particular bank or credit union, as procedures vary by institution.\n\nSources:\n1. https://www.discover.com/online-banking/banking-topics/how-to-open-an-online-savings-account/\n2. https://support.apple.com/en-us/108334\n3. https://www.co-operativebank.co.uk/tools-and-guides/savings/how-to-pay-money-into-a-savings-account/\n4. https://www.xapobank.com/en/faq/features/how-do-i-transfer-funds-in-out-of-my-savings-account\n5. https://paytm.com/faqs/money-transfers/how-to-transfer-money-from-od-account-to-savings-account\n6. https://www.affinityfcu.com/financial-wellbeing/blog/personal-banking/how-can-i-transfer-money-between-savings-and-checking-accounts\n7. https://www.icicibank.com/nri-banking/accounts/savings-account/savings-account-faqs\n8. https://www.insiderinvestments.com/how-to-transfer-money-from-savings-to-a-current-account/\n9. https://wallethub.com/answers/sa/how-to-transfer-money-from-savings-to-checking-2140859743/\n10. https://help.gxs.com.sg/GXS_Savings_Account/Fund_Account/How_do_I_transfer_funds_to_and_from_my_GXS_Savings_Account%3F\n11. https://help.atome.ph/hc/en-gb/articles/37618920746649-How-can-I-transfer-funds-from-my-Atome-Savings-account-to-another-account\n12. https://www.applebank.com/personal/banking/savings-cds/savings/simple-savings\n13. https://www.penfed.org/learn/should-you-transfer-your-matured-certificate-funds-to-savings\n14. https://blog.bankbazaar.com/transfer-money-overseas-using-indian-savings-account/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780944711,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 853,
+        "prompt_tokens": 8410,
+        "total_tokens": 9263,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Transfer money to my savings account"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a270f4598b2",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4e429d1c6a270f454f50a50001f1c8b2\"},\"usage\":{\"total_tokens\":8256}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a270f4598b2",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4e429d1c6a270f454f50a50001f1c8b2\"},\"usage\":{\"total_tokens\":8256}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4e429d1c6a270f454f50a50001f1c8b2\"},\"usage\":{\"total_tokens\":8256}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can provide you with general guidance on how to transfer money to a savings account, though I cannot perform the actual transfer for you as I don't have access to your banking systems.\n\n## Common Ways to Transfer Money to a Savings Account\n\n### 1. **Online/Mobile Banking Transfer (Same Bank)**\n- Log in to your bank's online banking platform or mobile app\n- Navigate to the \"Transfers\" section\n- Select your source account (e.g., checking account) as the \"from\" account\n- Select your savings account as the \"to\" account\n- Enter the amount and confirm the transfer\n\n### 2. **Transfer Between Different Banks**\n- Set up the external savings account using the account number and routing number\n- Verify the account (your bank may make small test deposits)\n- Once linked, you can transfer funds between institutions\n- Note: These transfers typically take 1-3 business days to process\n\n### 3. **In-Person at a Branch**\n- Visit your bank branch\n- Fill out a transfer form with your account details and transfer amount\n- Submit to a teller to complete the transaction\n\n### 4. **Direct Deposit**\n- Set up automatic deposits from your paycheck directly into your savings account through your employer\n\n### 5. **Mobile Check Deposit**\n- Use your bank's mobile app to take a photo of a check and deposit it into your savings account\n\n## Important Considerations\n\n| Factor | Details |\n|--------|---------|\n| **Processing Time** | Same-bank transfers are usually instant; external transfers take 1-3 business days |\n| **Transfer Limits** | Banks may impose daily or monthly limits |\n| **Fees** | Some banks charge for external transfers or excessive transactions |\n| **Withdrawal Limits** | Savings accounts typically limit certain withdrawals to 6 per month (Regulation D in the US) |\n\n## Steps to Get Started\n\n1. **Log in to your bank's online or mobile banking**\n2. **Find the \"Transfer\" or \"Move Money\" option**\n3. **Select your source and destination accounts**\n4. **Enter the transfer amount**\n5. **Review and confirm the transaction**\n\nIf you need specific instructions, please check with your particular bank or credit union, as procedures vary by institution.\n\nSources:\n1. https://www.discover.com/online-banking/banking-topics/how-to-open-an-online-savings-account/\n2. https://support.apple.com/en-us/108334\n3. https://www.co-operativebank.co.uk/tools-and-guides/savings/how-to-pay-money-into-a-savings-account/\n4. https://www.xapobank.com/en/faq/features/how-do-i-transfer-funds-in-out-of-my-savings-account\n5. https://paytm.com/faqs/money-transfers/how-to-transfer-money-from-od-account-to-savings-account\n6. https://www.affinityfcu.com/financial-wellbeing/blog/personal-banking/how-can-i-transfer-money-between-savings-and-checking-accounts\n7. https://www.icicibank.com/nri-banking/accounts/savings-account/savings-account-faqs\n8. https://www.insiderinvestments.com/how-to-transfer-money-from-savings-to-a-current-account/\n9. https://wallethub.com/answers/sa/how-to-transfer-money-from-savings-to-checking-2140859743/\n10. https://help.gxs.com.sg/GXS_Savings_Account/Fund_Account/How_do_I_transfer_funds_to_and_from_my_GXS_Savings_Account%3F\n11. https://help.atome.ph/hc/en-gb/articles/37618920746649-How-can-I-transfer-funds-from-my-Atome-Savings-account-to-another-account\n12. https://www.applebank.com/personal/banking/savings-cds/savings/simple-savings\n13. https://www.penfed.org/learn/should-you-transfer-your-matured-certificate-funds-to-savings\n14. https://blog.bankbazaar.com/transfer-money-overseas-using-indian-savings-account/",
+  "usage": {
+    "completion_tokens": 853,
+    "prompt_tokens": 8410,
+    "total_tokens": 9263,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

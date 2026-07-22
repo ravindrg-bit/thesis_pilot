@@ -1,0 +1,125 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 8,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:47.011284+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "21cac9a3-0f97-4fc2-ac4a-eeee782892b9",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators get square roots accurately by using **iterative approximation** methods: they start with a rough guess and repeatedly refine it until the error becomes very small.[1][2] The most common refinement is based on **Newton\u2019s method**, which for square roots uses the update \\(x_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{a}{x_n}\\right)\\); this converges very quickly, often doubling the number of correct digits each step.[1]\n\nThere are also other algorithms depending on the hardware and design goals. Some devices use the **digit-by-digit** square-root method, which builds the answer one digit at a time using arithmetic similar to long division.[2][3] Others use methods like **CORDIC** or **Goldschmidt\u2019s algorithm**, especially when they can be implemented efficiently with the available CPU instructions.[1]\n\nWhy this works so well comes down to two facts:  \n- checking a guess is easy because you can square it and compare with the original number,[1]  \n- modern processors can do floating-point arithmetic with very high precision, so each iteration can shrink the error dramatically before the final rounding step.[1][2]\n\nIf you want, I can also show a simple step-by-step example of Newton\u2019s method for a number like \\(\\sqrt{10}\\).",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914406,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 275,
+      "prompt_tokens": 15,
+      "total_tokens": 290,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00027,
+        "request_cost": 0.005,
+        "total_cost": 0.00529
+      }
+    },
+    "citations": [
+      "https://androidcalculator.com/how-does-a-calculator-computes-square-roots/",
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://www.cantorsparadise.com/the-square-root-algorithm-f97ab5c29d6d",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "How do calculators compute square roots?",
+        "url": "https://androidcalculator.com/how-does-a-calculator-computes-square-roots/",
+        "date": "2022-01-30",
+        "last_updated": "2026-04-20",
+        "snippet": "The idea is simple: checking whether a number x is the square root of a is very easy. Just multiply it with itself and you can estimate the ...",
+        "source": "web"
+      },
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "The Square Root Algorithm - Cantor's Paradise",
+        "url": "https://www.cantorsparadise.com/the-square-root-algorithm-f97ab5c29d6d",
+        "date": "2021-08-20",
+        "last_updated": "2025-03-29",
+        "snippet": "Steps \u00b7 Pairing: Starting from the right, group the digits of the given number in pairs of two. \u00b7 Initial guess: Start with the leftmost group.",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots ...",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "How To Calculate Any Square Root. An Ancient Method That Powers Modern Computers. 2M views \u00b7 1 year ago ...more ...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators get square roots accurately by using **iterative approximation** methods: they start with a rough guess and repeatedly refine it until the error becomes very small.[1][2] The most common refinement is based on **Newton\u2019s method**, which for square roots uses the update \\(x_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{a}{x_n}\\right)\\); this converges very quickly, often doubling the number of correct digits each step.[1]\n\nThere are also other algorithms depending on the hardware and design goals. Some devices use the **digit-by-digit** square-root method, which builds the answer one digit at a time using arithmetic similar to long division.[2][3] Others use methods like **CORDIC** or **Goldschmidt\u2019s algorithm**, especially when they can be implemented efficiently with the available CPU instructions.[1]\n\nWhy this works so well comes down to two facts:  \n- checking a guess is easy because you can square it and compare with the original number,[1]  \n- modern processors can do floating-point arithmetic with very high precision, so each iteration can shrink the error dramatically before the final rounding step.[1][2]\n\nIf you want, I can also show a simple step-by-step example of Newton\u2019s method for a number like \\(\\sqrt{10}\\).",
+  "usage": {
+    "completion_tokens": 275,
+    "prompt_tokens": 15,
+    "total_tokens": 290,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00027,
+      "request_cost": 0.005,
+      "total_cost": 0.00529
+    }
+  },
+  "run_profile": "scaleup"
+}

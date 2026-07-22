@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:11:42.253385+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cce35d22adfe5ee653d50",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the main places where you can get tickets for the next NBA game:\n\n## Official & Primary Ticket Sources\n\n1. **NBA Official Tickets (nbatickets.nba.com)** - The NBA's official ticket portal where you can search team inventories for single game tickets, season packages, group tickets, and special offers.\n\n2. **Ticketmaster (ticketmaster.com/nba)** - The **Official Ticketing Partner of the NBA**. This is the most recommended primary source for NBA tickets. You can purchase single-game tickets, and they offer verified resale options if games are sold out.\n\n## Secondary/Resale Marketplaces\n\n3. **StubHub (stubhub.com/nba-tickets)** - A major secondary marketplace with a wide selection of NBA tickets for all teams and games.\n\n4. **Vivid Seats (vividseats.com/nba-basketball)** - Another popular resale marketplace offering tickets throughout the preseason, regular season, and playoffs.\n\n5. **Viagogo (viagogo.com)** - International ticket marketplace with NBA game listings.\n\n6. **SeatGeek (seatgeek.com)** - A mobile-focused ticket platform that aggregates tickets from various sources and offers price comparison tools.\n\n## Other Options\n\n7. **Gametime (gametime.co)** - Specializes in last-minute tickets, sometimes available even after games have started.\n\n8. **KKday (kkday.com)** - For international buyers, particularly in Asia, offering tickets for popular teams like Lakers, Heat, and Clippers.\n\n9. **Team Official Websites** - Each NBA team's official website typically links directly to their ticket sales through Ticketmaster.\n\n## Tips for Buying\n\n- **Best time to buy**: August or early September when single-game tickets for the entire season usually go on sale\n- **Last-minute options**: Check Ticketmaster and Gametime for last-minute availability\n- **Price range**: Average NBA tickets typically cost between $100-$200, but vary based on matchup, seat location, and timing\n- **Safety**: Use secure payment methods (credit card, PayPal) and stick to reputable platforms to avoid scams\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://www.ticketmaster.com/nba\n3. https://www.ticketmaster.com/nba?ac_link=tmholiday23_gg_sports\n4. https://www.ticketmaster.com/nba?brand=nba&wt.mc_id=NBA_LEAGUE_NBA_TICKET_NAV_DROPDOWN\n5. https://www.stubhub.com/nba-tickets/grouping/115\n6. https://www.vividseats.com/nba-basketball\n7. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n8. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n9. https://www.extrabux.cn/chs/guide/8473057\n10. https://www.sohu.com/a/864555045_122006510\n11. https://zhidao.baidu.com/question/1186689820073420339.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272694,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 691,
+        "prompt_tokens": 8639,
+        "total_tokens": 9330,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cce35651d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ff8fa4aa6a1cce354f50a50001d90c0a\"},\"usage\":{\"total_tokens\":8482}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cce35651d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ff8fa4aa6a1cce354f50a50001d90c0a\"},\"usage\":{\"total_tokens\":8482}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ff8fa4aa6a1cce354f50a50001d90c0a\"},\"usage\":{\"total_tokens\":8482}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the main places where you can get tickets for the next NBA game:\n\n## Official & Primary Ticket Sources\n\n1. **NBA Official Tickets (nbatickets.nba.com)** - The NBA's official ticket portal where you can search team inventories for single game tickets, season packages, group tickets, and special offers.\n\n2. **Ticketmaster (ticketmaster.com/nba)** - The **Official Ticketing Partner of the NBA**. This is the most recommended primary source for NBA tickets. You can purchase single-game tickets, and they offer verified resale options if games are sold out.\n\n## Secondary/Resale Marketplaces\n\n3. **StubHub (stubhub.com/nba-tickets)** - A major secondary marketplace with a wide selection of NBA tickets for all teams and games.\n\n4. **Vivid Seats (vividseats.com/nba-basketball)** - Another popular resale marketplace offering tickets throughout the preseason, regular season, and playoffs.\n\n5. **Viagogo (viagogo.com)** - International ticket marketplace with NBA game listings.\n\n6. **SeatGeek (seatgeek.com)** - A mobile-focused ticket platform that aggregates tickets from various sources and offers price comparison tools.\n\n## Other Options\n\n7. **Gametime (gametime.co)** - Specializes in last-minute tickets, sometimes available even after games have started.\n\n8. **KKday (kkday.com)** - For international buyers, particularly in Asia, offering tickets for popular teams like Lakers, Heat, and Clippers.\n\n9. **Team Official Websites** - Each NBA team's official website typically links directly to their ticket sales through Ticketmaster.\n\n## Tips for Buying\n\n- **Best time to buy**: August or early September when single-game tickets for the entire season usually go on sale\n- **Last-minute options**: Check Ticketmaster and Gametime for last-minute availability\n- **Price range**: Average NBA tickets typically cost between $100-$200, but vary based on matchup, seat location, and timing\n- **Safety**: Use secure payment methods (credit card, PayPal) and stick to reputable platforms to avoid scams\n\n---\n\nSources:\n1. https://nbatickets.nba.com/\n2. https://www.ticketmaster.com/nba\n3. https://www.ticketmaster.com/nba?ac_link=tmholiday23_gg_sports\n4. https://www.ticketmaster.com/nba?brand=nba&wt.mc_id=NBA_LEAGUE_NBA_TICKET_NAV_DROPDOWN\n5. https://www.stubhub.com/nba-tickets/grouping/115\n6. https://www.vividseats.com/nba-basketball\n7. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n8. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n9. https://www.extrabux.cn/chs/guide/8473057\n10. https://www.sohu.com/a/864555045_122006510\n11. https://zhidao.baidu.com/question/1186689820073420339.html",
+  "usage": {
+    "completion_tokens": 691,
+    "prompt_tokens": 8639,
+    "total_tokens": 9330,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

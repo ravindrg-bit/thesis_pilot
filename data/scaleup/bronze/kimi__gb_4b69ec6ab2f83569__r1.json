@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_4b69ec6ab2f83569",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T08:08:40.606897+00:00",
+  "query_text": "how tall is jay ellis",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a267880b7d0a28424c19b60",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, Jay Ellis's height is reported differently across sources:\n\n- **6 feet 3 \u00bd inches (191.8 cm)** according to Celeb Heights (as cited by one source)\n- **6 feet 2 \u00bd inches (189 cm)** according to Who's Dated Who\n- **6 feet 2 inches** according to MrDustbin\n\nThe most commonly cited height appears to be around **6 feet 2 inches to 6 feet 3 \u00bd inches** (approximately 189-192 cm). The variation may be due to different measurement methods or whether shoe height is included. Celeb Heights, which specializes in celebrity height measurements, lists him at the taller end of 6'3\u00bd\".\n\nSources:\n1. https://sfp.mlga.ek.gov.ng/how-tall-is-the-insecure-actor-and-5-facts-about-him.html\n2. https://www.whosdatedwho.com/dating/jay-ellis\n3. https://www.mrdustbin.com/us/jay-ellis/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780906112,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 223,
+        "prompt_tokens": 2231,
+        "total_tokens": 2454,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how tall is jay ellis"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26787f7898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1ff0113d6a26787f680f160001eed0f5\"},\"usage\":{\"total_tokens\":2080}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26787f7898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1ff0113d6a26787f680f160001eed0f5\"},\"usage\":{\"total_tokens\":2080}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1ff0113d6a26787f680f160001eed0f5\"},\"usage\":{\"total_tokens\":2080}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, Jay Ellis's height is reported differently across sources:\n\n- **6 feet 3 \u00bd inches (191.8 cm)** according to Celeb Heights (as cited by one source)\n- **6 feet 2 \u00bd inches (189 cm)** according to Who's Dated Who\n- **6 feet 2 inches** according to MrDustbin\n\nThe most commonly cited height appears to be around **6 feet 2 inches to 6 feet 3 \u00bd inches** (approximately 189-192 cm). The variation may be due to different measurement methods or whether shoe height is included. Celeb Heights, which specializes in celebrity height measurements, lists him at the taller end of 6'3\u00bd\".\n\nSources:\n1. https://sfp.mlga.ek.gov.ng/how-tall-is-the-insecure-actor-and-5-facts-about-him.html\n2. https://www.whosdatedwho.com/dating/jay-ellis\n3. https://www.mrdustbin.com/us/jay-ellis/",
+  "usage": {
+    "completion_tokens": 223,
+    "prompt_tokens": 2231,
+    "total_tokens": 2454,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

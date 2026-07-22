@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_3002b203ab970192",
+  "engine": "gemini",
+  "run_index": 2,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-05-31T21:11:06.525140+00:00",
+  "query_text": "How do green screens work and why do they choose green or other colors",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 31 May 2026 21:11:06 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=10639",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "The technology behind a green screen is called **chroma keying** (or chroma key compositing). It is a special effects technique used to layer two images or video streams together based on color hues. \n\nHere is a breakdown of how it works, why green is the go-to color, and when other colors like blue are used instead.\n\n---\n\n### How Green Screens Work\n\nThe process of chroma keying is actually very straightforward, relying on a mix of good lighting and software:\n\n1. **The Shoot:** An actor or subject is filmed standing in front of a completely solid, brightly lit backdrop (the green screen). \n2. **The \"Key\":** In post-production, editing software (like Premiere, After Effects, or live broadcasting software) is instructed to look for a very specific color value (the exact shade of green).\n3. **The Cutout:** The software takes that specific color and makes it completely transparent, creating a digital \"hole\" or mask around the subject.\n4. **The Composite:** A new background image or video is placed on the layer *underneath* the subject, filling in the transparent area. The actor now appears to be in space, a newsroom, or a fantasy world.\n\nFor this to work flawlessly, **even lighting is critical**. If there are shadows or bright hot spots on the screen, the software will see them as different shades of green and fail to remove them cleanly, leaving \"ghost\" artifacts or jagged edges.\n\n---\n\n### Why Green?\n\nWhile you can technically use any color for chroma keying, **bright neon green** (often called \"chroma key green\") is the industry standard for three main reasons:\n\n#### 1. It Doesn\u2019t Exist in Human Skin Tones\nThe most important rule of chroma keying is that **the background color cannot match anything on the subject**. Human skin tones, regardless of ethnicity, consist of red, brown, yellow, and pink undertones. Because green is on the exact opposite side of the color wheel, there is zero natural green in human skin. If you used a peach or beige screen, the software would accidentally make the actor\u2019s face transparent. \n\n#### 2. Digital Cameras are \"Biased\" Toward Green\nMost modern digital video cameras use a sensor layout called a **Bayer filter** (an RGGB pattern). To mimic the human eye's natural sensitivity to the color green, digital sensors contain **twice as many green light detectors** as they do red or blue detectors. \nBecause digital cameras capture more data and detail in the green channel, a green screen produces a much cleaner, sharper, and less \"noisy\" key in modern editing software.\n\n#### 3. It Requires Less Light\nGreen is highly reflective. Because it reflects a lot of light, you don\u2019t need as many heavy, expensive studio lights to illuminate a green screen evenly compared to darker colors.\n\n---\n\n### Why Use Other Colors (Like Blue)?\n\nBefore green screens dominated digital filmmaking, **blue screens** were the original industry standard (widely used in analog film eras like the original *Star Wars* trilogy). Blue screens are still frequently used today for specific reasons:\n\n* **Wardrobe and Props:** If an actor has to wear a green costume (like the Green Lantern or Elphaba in *Wicked*) or hold a green prop, a green screen cannot be used. They will switch to a blue screen instead.\n* **Blonde Hair:** Blonde hair is highly reflective and easily picks up \"spill\" (the green light bouncing off the screen and landing on the actor). This green spill can make blonde hair look muddy or cause parts of it to be accidentally keyed out. Blue spill is much easier to mask and looks more natural.\n* **Night and Dark Scenes:** Blue reflects less light than green. If a scene is supposed to take place at night or in a dimly lit environment, a blue screen is preferred. Any blue light that accidentally spills onto the actors blends naturally with the dark, cool tones of a night scene, whereas a bright green glow would look highly unnatural.\n* **Eye Color:** If an actor has piercing green eyes, a green screen might key out their pupils, making them look hollow. A blue screen avoids this.",
+              "thought": null,
+              "thought_signature": "EqAhCp0hAQw51sdxyYmiEky-ONaUSYY3R2hT32MmDSp3fjN734MIjvtat7y95wuOUro6nHCig4Vx61hFUISLM-G_-ecZZIGL6_U9m5O8PIGtV_5FbSyjT68MURou6lO6FajY-SqPPcHXe6rItT9659rwWGVcfGH9YMjYqN0vawgnRMPF0rXjTPn3QtpvGw-ujEEWOgO6tIwre6vl0HgNrN1AF4f3ezUTMLGgGHzFJZs87Vkjy2zzPCaeuqe4_QPh-QBoDqYbZCTE5FX7YvH1fEpJ9_3CUU0fIw0Lhlbuck3SETgZjExP1nnd1N1xb0x9feuE5DtLkBH5Su2vuabHB2oshj5kKMxg31FDJ2n9iXznyLmfKovzQ4s3Wf1YPzOHKOXrPYx6tcOhJK84lFhbYX5k-feVs8lIiVCVXeVbdXSbekUxwNzANEYZWofEhnX4cseXp2TQIZ1iT-3MGJ1B-cnXktC2lr4KWDV1DoV_mS8Wh9-jk56jreNmkgJcV_rjTzU2O8_9Q7nmBoEVWsAOaHKC-G6jkXt0UVfeHV6OSf8cpGCKsI2nKLOxZyjrukFb3Cr3Jmccp8u9C_iu6c8EoB_3T0uLtacVqMpD_5mAoC-cw01B6pFuekoEJ9LFlCOnsUzlYyPrSg83hzwPxckq477roU53YI8UwIbJec7GtpYT3mBnIYZunN_rvZcvuqKquxUSXNlu8hHBAOfpxAoEXKLTfMMHXyujQ4s81JHNwD5XUF5mV_TVVfq5zVRNS0hxU_DhTdFzR_jzc3HBJaizynJiiPt5W8fOTpGGV6t6fBIjeradf-nv7N40DwCLuwTFeSusdAYVoTmdIbRRBq_8lxWyG6tzUrs7ZTyxa0HCBVpt4wbDURWouBuZBfQlzXmpe9wDARndu6jDzYrkaVYdLHgPRct2VYLd6Ni8v3giLRPaw4S3KVjaY5lPbpuwHgJlzbNZQFyLNLQ5DTJl9lIhFiqAGwopVon6HMKm2ytf67N-6e_cEbqT7cujYxsLd9xFa7R-We7vW23JHe0CiR9qP4nFEFzWe4I6Pi_i7tAsNTGYDP3qP0uGxod-MucdyI4OpOE_dhli_JA6drr1K1rz4oliRIlzBPwk1jNYXUUPYigKYfhMrA8hUnu9Z9YOpf6w2l4ZHcsz0CguM3e-Jmy-oEuusiEGG4NlXYNAW-ZzmpGQRS7XdC1nkvgA1f1zIqLBdFABglln9iHXM9yErnJQoFfjYUtCxwFjIcpJyM6LAcPtSjq0N3dNYJqqjZSsdGgrKrrMmxnrlcb7LLIzpBouYjZxhoKnhuQLasvw2MHT9YrJ5CDo1c1NWO8sZTFAojGc63W7fpUjILSxxPM96MuKNnfE7gm6zcfiLJ7_-EWPOHK32-wPrf7qsI6IwZBcn0VKfYFtKVpsr7hbnN2f5RmrSmZu8IdLXxlppVDx_3joNUr5RPM0Uc-xXMhs9Q7WhyrRDWUM1eBY7hqF4BtxMqr0a4dYlqsiJteB_GgALFrVd_5C8f5-8PtT1rOnSi5YyPRjvPTF2DsdjU-LN1WIhvnZxN4eXUoN1qOZMm0V9m1L-RcTiStGst_b25ZFKFfik8tjKrHNeyJxgCqGKHuQ7GqWgtYyEIEVzhyflagY6nvnYItg49rOeLtKbyagHF2xZpcsoOfwGrrG4t4QmmFnnCPq0QwfDAH9MkaRxHz_tllzzj0nr35P_gLR78rTdO2OHaw9o3TD_dwWcOj5o8L2lnItRwBTUnCTG63wG9qypkS4DkhJqhdXQn4RwAlz0KAUk4rCEE0sS_xDfgNBR_mVEmDf4y9diRILdJJGU-P_3OuT_PX-lZu_tv8FwxyzwaSGxLV0n-2ba1qc-0DWdiWiNMHKH--ztvwCrXYtawuC_IJcWsaihAx6tJv51pH3KpOsmrA3ZQELxpyfXT4VMMG86MxZZWY8hadvY-eiaPsRN7qoU3mMTyAILhakKED0I5_Bp24v6t-QgiqIXZ4aTQV4wPWJ1tACHHbZqwXS9Nwo6j2AFIhnLbxjV2CkXRl1DppgvG4iNQurZtAS94xydyY8Y-tSihUg-HH4hlZBWysg1IHeC6azKXKBiFTLFo_Q-DBC_HXlsmKmtUcA5OXWCHhXnKicKGg4nTSq-2KmhaxtekgYCeQf9qT7NwbNpVEGSkPTBgvbqxRe_c7K7HoyEGNOEF0obys0EJy048AnsPPDfRuQNtlkeI5JwWvw5pTTJaYXeYxbsJib-3_FgpO4zzd40ITfjMluuIp4yzpXsuNfDxbSct9PYXAhGqXXFCs8V6c2u1YQB7DuZy77P7-Y9ZBAWXx6-mQZ3li6UZ3bJrOwbmjlUK8ttydnLeqmaNFmWefKdC05Re4sKVnJYHPMXKZx-uXt17b0pFelVCwudPHreT48x1InJnOo6UjIQj4Dl252PKSzhfKLC5z3sgnw3vkKbOYCr_s52Tv0ABGGwEafK-MAYFmU5J4kX7_uI5AO-XymhA_yo1-gIY4NIC4ySqMnx6kKcQ0VkamIlsrNNcOUlxK273o8zE1eQXJSkb8RQ2qmeULcHRz1vZWR3GeM0EUoQ1zMsWC6PAVF7khIo2ZRqEp89_syBNDoFKxdH9Vz90f32F6EzGdUvF7-OP4NMe-XFtMsYxKeWl_6HQteyhvY2hVoBps8G9Jd7btbPvkiOgauzJyaIaBHZ5XowfzzTHz33332I4GYGyEyAoTGeZgJJb73rMWKjJ88yassketRdCwwjtI9xu1ICUriCI3q-cSx6XhXZ5QKw6zW-jckM5HLCkTKBUNPobihAtwAVjxQ0jPUiCKZAt_RDfCRd4tRMZKMxL4ZVMcaI_mgHHR-hmkxZqxGyGHKAlEP4kGN9ZlD_kIKszPt-uIge_UXwzPRT5LkbABv6yREAYkCgE1-T9UcgDbAFrUg1C8KQcwgvopABqNAX5vyt2A62mCjJUrBcD-L7kVxlgS12DAgFAMnM8c6snxRkKIi-XGcxXCeW7zP6J1jV7JbCS-5BMWIEv9arvqdEGIna2GV8E_2IwJZ_YKmBvXMkSMAXmhzPEeKDDbcuRhRTQY2132im1PUJxzejKf4rJRcjKUzigay1uQ3QaoufdV0bupMFhl8xw5TwZnG1K5IruDMXkvWvDUCoV53nonEGTXb1YMng7m7ejGPcrpTVHJOR_uxdtV1zzKu3zi0cAw0YJbpcQmikN7DVKVL1SEWoO-Zv6oTvs7plP_0kIDLF-Ej5LRPZeYWvhwqAPzcmko8gANfkXUMJNF5d7DTgyeLPFlJku8nHZJF_9Cr7ZTJfVbGSKKrjMIKpkSGd8wl9V6TkQnKK-AbtHlQh_xg4wQsDrOFaJU7Om-xntaWqOD7ITiFTONZvfS4zVdBYA_GXlRTqMyQ5DhSBCFRdvCgq9pChACITbNua8IEYS7VluJAt0lf-Nc_xvNvHOhDhm8RmOoTTSrhkrS9or3dHzRLrqq73-1qNRSyrbv6YPOneEJ6-BZXHCRoJeVxAx5kY4Y1IzmCACbfJJOURMEQ1Lb3Xd82PJXi_sm2Lny3tm04S-feDBBskEHBaWprKk28hPmHbFAHkg3rNwAZA-OuxtXLAx3Uc1BcognfjNtQR4AD4Bw_nqI5u3lR9yr3RXohs4YYyeDeKAuTt3xTrAayM6A7AuG6_iFyAmfievHM8VrFmwXZ1Gjz9HxECeImVVs7Uffme4BxsPu36l__-mJHHt567-4Md0kjtyOAI9_skS-nx7nzsh4EgVAZmahbWXWe-4907CADDep0NohFVHxr8PP3lurH-yOtX3_kUSvLNWCndk-wrpkrsz38YBM2vGsMM4gK-qtEwcV7Hf8WDLzllIRU9FjNaVT6u12Tydw2ggJ-2jcdPNgoYQ9P2jowCVQ5W2yJxwt0lf6xunFmGULVLvmVzNg-sPfYz4a9N-n8yY6XN_h1IPJ7708yYzEbCqddjpzRHyXBJB8hAWKy0ecl49_M6pcKDoeVrsCbv9R1TWLvvCHv_epF-DXxP43oP1NP7rQjpw7Jxvvv-fy_mAmeXtHTWoxJuRj9SlQYCeP1AVpgrKJGUdm0Mx6ecZ00L1YB3ItC7-EI4Fi8kMGmFggJKW51jf35lnNUGtvupIdhS9gwIsloFOVtjTCKO5fPSzjEk1_T-T_FrjIxM9Hb93JR7HE0pneWLRuEH4z-mEgr0MOMTW_S1eOK5R2A1isWiOua5ihZ-5JnUDXnw0M4BI5sFM7FHhi8FqhlLPGLth-noZpvpWwGLGG5_9r9shFcuLbKzkKQKgh1Z2ZuRka1mTw_coLnqAsLRscE-zOxE4ruXRb7FO24GJDTPOkXSAGtRWs5D05Plf7cwGyAQwNPo9f5Yc3jkKPtSxWH2yjC7f_LxZXUQ2WJJakvIqi9zRfYzqfU8s4qZFjJVRelEnMnbktzWhjs_zfjlvdH3iZgM4PQ2kqP_aYJoSplIE2_pS1EA6oGG6H4AzafKiYrC28TIKQeSlP7YhGcHHOPvqlKsJQy--cIQRc6IPBa-Uq4QXpo9BeuFYfyXCAZTqZIJA_M_nhMS-N-nVAI5pGjtXJaEQryCpAzZFCrdH4-GmCcbNZvlbBsy7b9Fv9RPQdjVNZrNQiW4Jl1RIr8j3jZH8hexXl9p8qfzb9oSuerpCQVGqFKvOrJSevLUbgOeFAMb-QqyAZxtSWVBobKmUm0BvkvYS2FSKegfaOnfHX9d2ePLLV9AqS_JaLldfISmIed1SFKmTeArrybXAt5YaoqhR6SxPxBfcZicUxdY83dSzzwEDjJEHN9_8EewPvb4V9JCX0v02rRPNpRrxFIozw4kwgt1t8jVBBWywbCrKeyaGs1JmdFpIVo4e3Ek4YK9ame9R9117p-uapih4NwAZ7Ij6OZm7NArZmIUYNtDwr2qulOjMupV2TYImjkC0bgTsyzgK5gjejZaO6Am3z9Qdbo2T3fcZDobdm0SN9ofkFema-1-jAsgrenvt5s46c_RuwlzoWv7kdLzf1TfCmEcu-nmwA4iSL2oB6ds6s-U8z14w8jKFW6WfHJdaFJsEsDVMdda0nhhGZZjd_4urnJ-h_-nlDkd5u1lcpjlxRK79uP7s6O7ZF-qrQ3wQSHEt1HC4himeGM1PPlFKS4IKb3tCOve7Jdy_VMqT3TJzi8yDoZ0F9-xHUSzEPtOtgrqQkYowh2UCNnFRTlTbxIM46CYjFoKsoM0W8ud4_iRfqtvr89A-pghUDLchkuZonNTdDT-bG0Tz9MwEaSR5pLWafIkLLjOWdyudt1C_6j0dHCUM11fHTh2e1RKRw7ZAfcUtytEL3vRgTvjQ4pxNB3ak4yN9mA8Q2m8OQ3ACNVPhQZehGQDX4SUFmEQTYbhrY6wce_TWo8awPGI7BHGHMAI7-ccjKZO__rJhmkM7pNN56URTEgOenXZ9uqgb0O0TjM9Jj27E-flcLwY9XP85Tsh84cMQ3UC-ATGOajjk3oa73afONk6rVtUSTE2PG-SYvrgwBW8Dc5ch-0qm9UI3zgWOgVIyJ0R66-hR03dBQjOmN7ut19lgXh9fxA2ByT6Qej9fxdjNN16Z-oS9-JC1bwmmy7WpzFuZpGpgWhI41iHcJEH4-Rz0YIRoG1EjKPCpV-2g8nYvlf_YiMqmJLww_7JO55_Qi6YW5J6_ydMY1KEvQurNZYud9F8aI=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "4KMcapyQF4bwnsEPjOqW0AI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 885,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 15,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 15
+        }
+      ],
+      "thoughts_token_count": 986,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1886,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "The technology behind a green screen is called **chroma keying** (or chroma key compositing). It is a special effects technique used to layer two images or video streams together based on color hues. \n\nHere is a breakdown of how it works, why green is the go-to color, and when other colors like blue are used instead.\n\n---\n\n### How Green Screens Work\n\nThe process of chroma keying is actually very straightforward, relying on a mix of good lighting and software:\n\n1. **The Shoot:** An actor or subject is filmed standing in front of a completely solid, brightly lit backdrop (the green screen). \n2. **The \"Key\":** In post-production, editing software (like Premiere, After Effects, or live broadcasting software) is instructed to look for a very specific color value (the exact shade of green).\n3. **The Cutout:** The software takes that specific color and makes it completely transparent, creating a digital \"hole\" or mask around the subject.\n4. **The Composite:** A new background image or video is placed on the layer *underneath* the subject, filling in the transparent area. The actor now appears to be in space, a newsroom, or a fantasy world.\n\nFor this to work flawlessly, **even lighting is critical**. If there are shadows or bright hot spots on the screen, the software will see them as different shades of green and fail to remove them cleanly, leaving \"ghost\" artifacts or jagged edges.\n\n---\n\n### Why Green?\n\nWhile you can technically use any color for chroma keying, **bright neon green** (often called \"chroma key green\") is the industry standard for three main reasons:\n\n#### 1. It Doesn\u2019t Exist in Human Skin Tones\nThe most important rule of chroma keying is that **the background color cannot match anything on the subject**. Human skin tones, regardless of ethnicity, consist of red, brown, yellow, and pink undertones. Because green is on the exact opposite side of the color wheel, there is zero natural green in human skin. If you used a peach or beige screen, the software would accidentally make the actor\u2019s face transparent. \n\n#### 2. Digital Cameras are \"Biased\" Toward Green\nMost modern digital video cameras use a sensor layout called a **Bayer filter** (an RGGB pattern). To mimic the human eye's natural sensitivity to the color green, digital sensors contain **twice as many green light detectors** as they do red or blue detectors. \nBecause digital cameras capture more data and detail in the green channel, a green screen produces a much cleaner, sharper, and less \"noisy\" key in modern editing software.\n\n#### 3. It Requires Less Light\nGreen is highly reflective. Because it reflects a lot of light, you don\u2019t need as many heavy, expensive studio lights to illuminate a green screen evenly compared to darker colors.\n\n---\n\n### Why Use Other Colors (Like Blue)?\n\nBefore green screens dominated digital filmmaking, **blue screens** were the original industry standard (widely used in analog film eras like the original *Star Wars* trilogy). Blue screens are still frequently used today for specific reasons:\n\n* **Wardrobe and Props:** If an actor has to wear a green costume (like the Green Lantern or Elphaba in *Wicked*) or hold a green prop, a green screen cannot be used. They will switch to a blue screen instead.\n* **Blonde Hair:** Blonde hair is highly reflective and easily picks up \"spill\" (the green light bouncing off the screen and landing on the actor). This green spill can make blonde hair look muddy or cause parts of it to be accidentally keyed out. Blue spill is much easier to mask and looks more natural.\n* **Night and Dark Scenes:** Blue reflects less light than green. If a scene is supposed to take place at night or in a dimly lit environment, a blue screen is preferred. Any blue light that accidentally spills onto the actors blends naturally with the dark, cool tones of a night scene, whereas a bright green glow would look highly unnatural.\n* **Eye Color:** If an actor has piercing green eyes, a green screen might key out their pupils, making them look hollow. A blue screen avoids this.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 885,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 15,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 15
+      }
+    ],
+    "thoughts_token_count": 986,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 1886,
+    "traffic_type": null
+  },
+  "run_profile": "pilot"
+}

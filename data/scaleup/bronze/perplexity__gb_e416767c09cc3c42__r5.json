@@ -1,0 +1,142 @@
+{
+  "query_id": "gb_e416767c09cc3c42",
+  "engine": "perplexity",
+  "run_index": 5,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T17:51:47.218917+00:00",
+  "query_text": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "a95a9193-8496-45b7-86ea-df30415b9f28",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "`new_list = my_list` does **not** create a new list; it creates a second name bound to the **same list object**. Because Python lists are **mutable**, changing `new_list` in place also changes `my_list`[1][3][4].\n\nTo make an actual copy, use one of these:\n\n- **Shallow copy**: `new_list = my_list.copy()`\n- **Shallow copy**: `new_list = my_list[:]`\n- **Shallow copy**: `new_list = list(my_list)`\n\nThese create a new outer list, so changes to the list itself do not affect the original[3][4]. If the list contains nested lists or other mutable objects, a shallow copy still shares those inner objects, so changes to nested items will be visible in both lists[1]. In that case, use a **deep copy**:\n\n```python\nimport copy\n\nnew_list = copy.deepcopy(my_list)\n```\n\nA deep copy recursively copies the nested objects too, which prevents shared inner lists from being modified together[1].\n\nExample:\n\n```python\nmy_list = [1, 2, [3, 4]]\n\nnew_list = my_list.copy()\nnew_list[0] = 99        # my_list is unchanged\nnew_list[2][0] = 100     # my_list changes too, because inner list is shared\n```\n\nIf you want, I can also show the difference between **assignment**, **shallow copy**, and **deep copy** with a small diagram.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780854707,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 314,
+      "prompt_tokens": 43,
+      "total_tokens": 357,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 4e-05,
+        "output_tokens_cost": 0.00031,
+        "request_cost": 0.005,
+        "total_cost": 0.00536
+      }
+    },
+    "citations": [
+      "https://discuss.python.org/t/why-do-my-lists-get-modified-when-passed-to-a-function/5036",
+      "https://www.youtube.com/watch?v=6JsKMYxORxo",
+      "https://www.dummies.com/article/technology/programming-web-design/python/how-to-modify-lists-in-python-203522/",
+      "https://www.sitepoint.com/python/lists-change/",
+      "https://www.geeksforgeeks.org/python/python-change-list-item/",
+      "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists",
+      "https://www.w3schools.com/python/python_lists_change.asp"
+    ],
+    "search_results": [
+      {
+        "title": "Why do my lists get modified when passed to a function? - Python Help",
+        "url": "https://discuss.python.org/t/why-do-my-lists-get-modified-when-passed-to-a-function/5036",
+        "date": "2020-08-24",
+        "last_updated": "2026-06-07",
+        "snippet": "Your lists get modified because lists are mutable objects that are capable of being modified, and you modify them.",
+        "source": "web"
+      },
+      {
+        "title": "Programming Fundamentals with Python - Modifying Lists - YouTube",
+        "url": "https://www.youtube.com/watch?v=6JsKMYxORxo",
+        "date": "2025-10-02",
+        "last_updated": "2025-10-02",
+        "snippet": "All JomaClass videos from 2020 are now free to watch. If you enjoy please consider donating here: https://support.joma.io/ This video was ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Modify Lists in Python - Dummies.com",
+        "url": "https://www.dummies.com/article/technology/programming-web-design/python/how-to-modify-lists-in-python-203522/",
+        "date": "2017-01-25",
+        "last_updated": "2026-02-06",
+        "snippet": "You can modify the content of a list as needed with Python. Modifying a list means to change a particular entry, add a new entry, or remove an existing entry.",
+        "source": "web"
+      },
+      {
+        "title": "Python - Change List Items - SitePoint",
+        "url": "https://www.sitepoint.com/python/lists-change/",
+        "date": "2025-07-01",
+        "last_updated": "2026-03-28",
+        "snippet": "In this section, we'll dive deep into how to modify list elements: replacing values, working with indexes and ranges, and using methods to reorder elements.",
+        "source": "web"
+      },
+      {
+        "title": "Change List Item - Python - GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/python/python-change-list-item/",
+        "date": "2025-07-23",
+        "last_updated": "2026-06-07",
+        "snippet": "Lists in Python are mutable meaning their items can be changed after the list is created. Modifying elements in a list is a common task.",
+        "source": "web"
+      },
+      {
+        "title": "Modifying Python Lists | Add, Remove, Change Items",
+        "url": "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists",
+        "date": "2025-04-04",
+        "last_updated": "2026-06-04",
+        "snippet": "Discover common methods for adding elements, removing elements, and changing existing elements within Python lists.",
+        "source": "web"
+      },
+      {
+        "title": "Python - Change List Items - W3Schools",
+        "url": "https://www.w3schools.com/python/python_lists_change.asp",
+        "last_updated": "2026-06-02",
+        "snippet": "To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the ...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "`new_list = my_list` does **not** create a new list; it creates a second name bound to the **same list object**. Because Python lists are **mutable**, changing `new_list` in place also changes `my_list`[1][3][4].\n\nTo make an actual copy, use one of these:\n\n- **Shallow copy**: `new_list = my_list.copy()`\n- **Shallow copy**: `new_list = my_list[:]`\n- **Shallow copy**: `new_list = list(my_list)`\n\nThese create a new outer list, so changes to the list itself do not affect the original[3][4]. If the list contains nested lists or other mutable objects, a shallow copy still shares those inner objects, so changes to nested items will be visible in both lists[1]. In that case, use a **deep copy**:\n\n```python\nimport copy\n\nnew_list = copy.deepcopy(my_list)\n```\n\nA deep copy recursively copies the nested objects too, which prevents shared inner lists from being modified together[1].\n\nExample:\n\n```python\nmy_list = [1, 2, [3, 4]]\n\nnew_list = my_list.copy()\nnew_list[0] = 99        # my_list is unchanged\nnew_list[2][0] = 100     # my_list changes too, because inner list is shared\n```\n\nIf you want, I can also show the difference between **assignment**, **shallow copy**, and **deep copy** with a small diagram.",
+  "usage": {
+    "completion_tokens": 314,
+    "prompt_tokens": 43,
+    "total_tokens": 357,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 4e-05,
+      "output_tokens_cost": 0.00031,
+      "request_cost": 0.005,
+      "total_cost": 0.00536
+    }
+  },
+  "run_profile": "scaleup"
+}

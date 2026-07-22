@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T01:11:31.379530+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cdcaec77e0ee14e7337ff",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the ways to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Go to the official login URL**: https://onedrive.live.com/login/\n2. Click the **\"Sign in\"** button in the top right corner\n3. Enter your **Microsoft account email/phone number** and password\n4. Click **\"Sign in\"** to access your OneDrive\n\n## Desktop App (Windows)\n\n1. Click the **Start menu** and search for \"OneDrive\"\n2. Click on the **OneDrive app** to open it\n3. Enter your **Microsoft account credentials** (email and password)\n4. Follow the setup prompts to complete sign-in\n\n## Switching or Adding Accounts\n\nIf you need to switch between personal and work/school accounts:\n\n1. Click the **OneDrive cloud icon** in your taskbar (near the clock)\n   - White icon = Personal OneDrive\n   - Blue icon = Work/School OneDrive\n2. Click the **gear icon \u2192 Settings**\n3. Go to the **Account tab**\n4. Choose:\n   - **\"Unlink this PC\"** to switch entirely to a different account, OR\n   - **\"Add an account\"** to use multiple accounts simultaneously\n\n## Important Notes\n\n- You need a **Microsoft account** to use OneDrive\n- OneDrive supports **one personal account plus one or more work/school accounts** on the same PC\n- If you don't have an account, you can create one during the login process\n\nSources:\n1. https://learn.microsoft.com/en-us/answers/questions/5706456/how-to-login-to-onedrive\n2. https://learn.microsoft.com/en-us/answers/questions/5651952/how-to-log-into-one-drive-from-home-computer\n3. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/?srsltid=AfmBOopoyZKOygpB-IdleP6mwxfx5h6FPmjBsqtPOqJAEDi5O4mmBvcH\n4. https://www.bunian.cn/22394.html\n5. https://zhidao.baidu.com/question/931669486309366379.html\n6. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n7. https://inclowdz.wondershare.com/cloud-manage/switch-onedrive-account.html\n8. https://www.xda-developers.com/how-to-sign-into-onedrive/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780276269,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 540,
+        "prompt_tokens": 7149,
+        "total_tokens": 7689,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cdc2fd244",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ff9c6dc46a1cdc2f680f160001d77fe8\"},\"usage\":{\"total_tokens\":6999}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cdc2fd244",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ff9c6dc46a1cdc2f680f160001d77fe8\"},\"usage\":{\"total_tokens\":6999}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ff9c6dc46a1cdc2f680f160001d77fe8\"},\"usage\":{\"total_tokens\":6999}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the ways to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Go to the official login URL**: https://onedrive.live.com/login/\n2. Click the **\"Sign in\"** button in the top right corner\n3. Enter your **Microsoft account email/phone number** and password\n4. Click **\"Sign in\"** to access your OneDrive\n\n## Desktop App (Windows)\n\n1. Click the **Start menu** and search for \"OneDrive\"\n2. Click on the **OneDrive app** to open it\n3. Enter your **Microsoft account credentials** (email and password)\n4. Follow the setup prompts to complete sign-in\n\n## Switching or Adding Accounts\n\nIf you need to switch between personal and work/school accounts:\n\n1. Click the **OneDrive cloud icon** in your taskbar (near the clock)\n   - White icon = Personal OneDrive\n   - Blue icon = Work/School OneDrive\n2. Click the **gear icon \u2192 Settings**\n3. Go to the **Account tab**\n4. Choose:\n   - **\"Unlink this PC\"** to switch entirely to a different account, OR\n   - **\"Add an account\"** to use multiple accounts simultaneously\n\n## Important Notes\n\n- You need a **Microsoft account** to use OneDrive\n- OneDrive supports **one personal account plus one or more work/school accounts** on the same PC\n- If you don't have an account, you can create one during the login process\n\nSources:\n1. https://learn.microsoft.com/en-us/answers/questions/5706456/how-to-login-to-onedrive\n2. https://learn.microsoft.com/en-us/answers/questions/5651952/how-to-log-into-one-drive-from-home-computer\n3. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/?srsltid=AfmBOopoyZKOygpB-IdleP6mwxfx5h6FPmjBsqtPOqJAEDi5O4mmBvcH\n4. https://www.bunian.cn/22394.html\n5. https://zhidao.baidu.com/question/931669486309366379.html\n6. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n7. https://inclowdz.wondershare.com/cloud-manage/switch-onedrive-account.html\n8. https://www.xda-developers.com/how-to-sign-into-onedrive/",
+  "usage": {
+    "completion_tokens": 540,
+    "prompt_tokens": 7149,
+    "total_tokens": 7689,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

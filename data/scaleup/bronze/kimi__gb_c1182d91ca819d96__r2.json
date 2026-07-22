@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c1182d91ca819d96",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T17:59:29.397993+00:00",
+  "query_text": "cfa ins",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2702fa02f4d3f9001e615e",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with comprehensive information about **CFA Institute membership**. This covers the requirements, fees, and types of membership available.\n\n## CFA Institute Membership Overview\n\nCFA Institute offers different types of membership, and **Regular Membership is a prerequisite to earning the CFA charter** \u2014 you cannot use the \"CFA\" designation without it.\n\n---\n\n## Types of Membership\n\n### 1. **Regular Membership**\n- **Who it's for:** Investment professionals directly involved in or supporting the investment decision-making process\n- **Requirements:**\n  - Bachelor's degree or equivalent education/work experience\n  - Passing score on Level I CFA Exam (or equivalent)\n  - At least **4,000 hours of relevant work experience**, completed in a minimum of **36 months**\n  - **2 professional references** if one is an active regular member of your local CFA society, **OR 3 references** if none are active members\n\n### 2. **Affiliate Membership**\n- **Who it's for:** Investment professionals who don't meet regular membership eligibility\n- **Requirements:**\n  - Passing score on Level I CFA Exam\n  - No work experience required\n  - Same reference requirements as regular membership\n\n---\n\n## Membership Fees (2025-2026)\n\n| Component | Cost |\n|-----------|------|\n| **CFA Institute Annual Dues (Global)** | **USD $299/year** |\n| **CFA Society India Dues** | **INR 5,000 + 18% GST** (~INR 5,900) |\n| **Professional Leave (reduced dues)** | USD $100 (CFA Institute) / INR 2,000 + GST (India) |\n\n**Note:** CFA Institute dues are discounted for certain countries, including India.\n\n---\n\n## Key Changes for 2026\n\n- The **one-time $350 enrollment fee was abolished** starting February 2026\n- Registration fees per level were adjusted upward accordingly:\n  - **Level I & II:** Early $1,140 / Standard $1,490\n  - **Level III:** Early $1,240 / Standard $1,590\n\n---\n\n## Maintaining Your Charter\n\nAfter earning the CFA charter:\n- You must maintain **active Regular Membership** ($299/year)\n- You must also belong to a **local CFA society** (required for Institute membership)\n- If membership lapses, you lose the right to use the \"CFA\" designation \u2014 but you can reactivate by paying back dues\n\n---\n\n## Membership Application Process\n\n1. Complete application on CFA Institute website: Personal Profile, Address, Education, Work Experience, Select Society, References\n2. Pay CFA Institute dues\n3. Pay local society dues separately (e.g., CFA Society India collects dues in INR)\n4. Application review: up to 10 business days (CFA Institute) + up to 1 month (local society)\n\n---\n\n## Sources:\n\n1. https://300hours.com/cfa-exam-cost/\n2. https://capstonelearnings.com/cfa-vs-frm-india/\n3. https://www.zelleducation.com/blog/cfa-membership-fees/\n4. https://cfasocietyindia.org/membership/\n5. https://corpready.in/resources/articles/146-cfa-course-details-india.html\n6. https://300hours.com/cfa-requirements/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780941563,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 689,
+        "prompt_tokens": 8069,
+        "total_tokens": 8758,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "cfa ins"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2702f975ae",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"07e27e856a2702f94f50a50001f1b018\"},\"usage\":{\"total_tokens\":7922}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2702f975ae",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"07e27e856a2702f94f50a50001f1b018\"},\"usage\":{\"total_tokens\":7922}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"07e27e856a2702f94f50a50001f1b018\"},\"usage\":{\"total_tokens\":7922}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with comprehensive information about **CFA Institute membership**. This covers the requirements, fees, and types of membership available.\n\n## CFA Institute Membership Overview\n\nCFA Institute offers different types of membership, and **Regular Membership is a prerequisite to earning the CFA charter** \u2014 you cannot use the \"CFA\" designation without it.\n\n---\n\n## Types of Membership\n\n### 1. **Regular Membership**\n- **Who it's for:** Investment professionals directly involved in or supporting the investment decision-making process\n- **Requirements:**\n  - Bachelor's degree or equivalent education/work experience\n  - Passing score on Level I CFA Exam (or equivalent)\n  - At least **4,000 hours of relevant work experience**, completed in a minimum of **36 months**\n  - **2 professional references** if one is an active regular member of your local CFA society, **OR 3 references** if none are active members\n\n### 2. **Affiliate Membership**\n- **Who it's for:** Investment professionals who don't meet regular membership eligibility\n- **Requirements:**\n  - Passing score on Level I CFA Exam\n  - No work experience required\n  - Same reference requirements as regular membership\n\n---\n\n## Membership Fees (2025-2026)\n\n| Component | Cost |\n|-----------|------|\n| **CFA Institute Annual Dues (Global)** | **USD $299/year** |\n| **CFA Society India Dues** | **INR 5,000 + 18% GST** (~INR 5,900) |\n| **Professional Leave (reduced dues)** | USD $100 (CFA Institute) / INR 2,000 + GST (India) |\n\n**Note:** CFA Institute dues are discounted for certain countries, including India.\n\n---\n\n## Key Changes for 2026\n\n- The **one-time $350 enrollment fee was abolished** starting February 2026\n- Registration fees per level were adjusted upward accordingly:\n  - **Level I & II:** Early $1,140 / Standard $1,490\n  - **Level III:** Early $1,240 / Standard $1,590\n\n---\n\n## Maintaining Your Charter\n\nAfter earning the CFA charter:\n- You must maintain **active Regular Membership** ($299/year)\n- You must also belong to a **local CFA society** (required for Institute membership)\n- If membership lapses, you lose the right to use the \"CFA\" designation \u2014 but you can reactivate by paying back dues\n\n---\n\n## Membership Application Process\n\n1. Complete application on CFA Institute website: Personal Profile, Address, Education, Work Experience, Select Society, References\n2. Pay CFA Institute dues\n3. Pay local society dues separately (e.g., CFA Society India collects dues in INR)\n4. Application review: up to 10 business days (CFA Institute) + up to 1 month (local society)\n\n---\n\n## Sources:\n\n1. https://300hours.com/cfa-exam-cost/\n2. https://capstonelearnings.com/cfa-vs-frm-india/\n3. https://www.zelleducation.com/blog/cfa-membership-fees/\n4. https://cfasocietyindia.org/membership/\n5. https://corpready.in/resources/articles/146-cfa-course-details-india.html\n6. https://300hours.com/cfa-requirements/",
+  "usage": {
+    "completion_tokens": 689,
+    "prompt_tokens": 8069,
+    "total_tokens": 8758,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

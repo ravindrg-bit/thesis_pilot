@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_780045e98ad742c0",
+  "engine": "gemini",
+  "run_index": 8,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T14:19:42.151351+00:00",
+  "query_text": "grade to percentage calculator",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 14:19:42 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=10970",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "To convert your grade to a percentage, it depends on what kind of grade you are starting with. \n\nIf you want me to calculate it for you, **just reply with your grade (e.g., \"17 out of 23\" or \"B+\") and I will calculate it instantly!**\n\nOtherwise, you can use the guides, formulas, and charts below to convert your grades:\n\n---\n\n### 1. Points to Percentage (e.g., Test Scores)\nIf you have a score (like 18 out of 25) and want to find the percentage, use this simple formula:\n\n$$\\text{Percentage} = \\left( \\frac{\\text{Your Score}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** You got **37** out of **45** points.\n    *   $37 \\div 45 = 0.8222$\n    *   $0.8222 \\times 100 =$ **$82.2\\%$** (which is a **B** or **B-** depending on your school's scale).\n\n---\n\n### 2. Letter Grade to Percentage Chart\nMost schools in the US use a standard 4.0 GPA and percentage scale. *Note: Exact percentage ranges can vary by school or teacher.*\n\n| Letter Grade | Percentage Range | GPA (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0 |\n| **F** | Below 65% | 0.0 |\n\n---\n\n### 3. GPA to Percentage\nIf you have a GPA on a **4.0 scale** and want to find the equivalent percentage, you can use this standard conversion formula:\n\n$$\\text{Percentage} = (\\text{GPA} \\times 20) + 20$$\n\n*   **Example:** A **3.5 GPA**\n    *   $(3.5 \\times 20) + 20 = 70 + 20 =$ **$90\\%$**\n\n*(Note: Some schools use a direct linear conversion, $\\text{GPA} \\div 4.0 \\times 100$, where a 3.0 GPA is a 75%. Check with your school's handbook to see which method they use.)*\n\n---\n\n### 4. Create Your Own Desktop Calculator\nIf you want an actual interactive calculator on your computer, you can copy the code below, paste it into Notepad, save the file as `calculator.html`, and double-click it to open it in any web browser:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Grade to Percentage Calculator</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; text-align: center;}\n        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); display: inline-block; }\n        input { padding: 10px; font-size: 16px; width: 80px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; text-align: center; }\n        button { padding: 10px 20px; font-size: 16px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }\n        button:hover { background-color: #0056b3; }\n        #result { margin-top: 20px; font-size: 20px; font-weight: bold; color: #333; }\n    </style>\n</head>\n<body>\n    <div class=\"card\">\n        <h2>Grade to Percentage Calculator</h2>\n        <input type=\"number\" id=\"score\" placeholder=\"Score\"> \n        / \n        <input type=\"number\" id=\"total\" placeholder=\"Total\">\n        <br><br>\n        <button onclick=\"calculate()\">Calculate</button>\n        <div id=\"result\"></div>\n    </div>\n\n    <script>\n        function calculate() {\n            var score = parseFloat(document.getElementById('score').value);\n            var total = parseFloat(document.getElementById('total').value);\n            if (isNaN(score) || isNaN(total) || total === 0) {\n                document.getElementById('result').innerText = \"Please enter valid numbers.\";\n                return;\n            }\n            var percentage = (score / total) * 100;\n            document.getElementById('result').innerText = \"Percentage: \" + percentage.toFixed(2) + \"%\";\n        }\n    </script>\n</body>\n</html>\n```",
+              "thought": null,
+              "thought_signature": "EvIXCu8XAQw51sdHNQjZdCiTr8R6mtnkuxl3zcWvUD-o8XR2wPqez56RgPXZCjgX96B_TQp1k2pJpkBox4X3Itl7K_2_Spu1i1dp_3XHcpdOXZicMvVrx_7I8GTXorSMMBVWV2pxhYva1WnDb8tVeWUNoZHDGMlXkvc5tBwfh77cpLtGHIU3fdLSUSNcQHDq0wGV5UimpmFVKROeXuiehwxx6rm1xB4RyBvidygo1Uat6Qja9gKcmU2lUdP7CB5q6XRpyDFDHs_A40trSmOPQX-7NsljLeKZaKCGKJwgaQyUkEAbl60_Wb9JsWfU9CjRsF2L9WAJuU_c2kVoTq2x6NYP4jtq1ftBoW29jTmT6l7FYQbafqbzvp3WFc6BGyACjDTyGlS1P0DtPSYrguLXwNa6EJlTO5q1NoBmk1GokJVs1js8rswtQIgJEtayTAvNYeH0rjr2oEI2cKrreqpfVJ7EzwQOQsKzvDiQW75QT6aI-BxuWBQ6McpaBM5XVeZGAs5rqzd9GJWBf8esYuc1Ha5hO4rdDxRgdF9z1DVKPS0bJopw02aUb5_WA5xfU1dp1HSz73gg0k8mdA-1ZPvt81ljgDn1sHCHdOnzTC1RlwG5ia1yMLZEskn8rvzDFOpt_iYRfUkiy9czhJ6XlDGAMlv8QIm6Ew4Gb6WMyyFrq0bMV50lt7PCOIZ_8W1K1zsjwwY4RDkngntXZasReNWyi1572T-yui0-pCsYM1JFLmCzDDJZOAvzy0oeNF0nQtVE3QoJ1gDsomiTgfXMYiTmMpjnlzepPxWV_Ah7ttOeV3RL-Pbafk1GHJQPu59axM-9Tb1a9yLsclEuNEO2yGOVCSDV1F4dH9Tqdi8YHmfIjX5swJA12gvZed8G59c2s1YD_lAXvnkJDQRLZfCxAe0jdj4uqM_R-xaFfVzj5YEWtcVP0DFQdaBbKapKfxhcA_MPlLz9JqeA0Uv1sNcnTwYaU52Q_p5qIwUqN_xxQiq6fNqZuZfKBlZQbbq6Vx5KjiKgMYrXYmp9oHi3EsLSRxF4zrKZzRW6G0gjbEaUg6Zcz0uW5uHVovx5pLIdxJ5fmqxns8EymHlcFsE_1CyWpAQdXlvImn19fc0O6-DUsnJFCsfMN2TMX5AXvMJONfRUDJdb4HanLBz7_mY8B-BXPXfn-iLDhPyi_J4g_FLVtT8mKLJhmWrvAoMdITEZaVjS90OBGNGnGLuL8ogn_XlApOQ8V38ILqBYsuN2J3s3NaJacOF5twcyT7m1LCsUz5f7SlCpLjm5OTP5Hyr0QMEWyrQ4-053ZRdkUZFE2EqB1tg46dhFdEDqoZo6VOXBRbNERTT_G-y3ThNvg40_0wIfNHD6x90jtUrvnGHx82spo30mzq352ihcYNfXbFOc_6BqbYpWiK-e5rX4_26LwyhjURU8-pKmw9Usrv4eMV6JN6zQdgr6cwfSlZRG4Rt6Nju7X9WDTBWq5GECkIgkn5-lNr02gPaDxbtV6-ItM47s5xCWPFAFJcRU_GPhTrb5PEnz1_nIQI4kSQ9Kf_XND3DER2dqeRyWuxDse7qkeqRoz-jLfeTkn_7X4j9N762DcXcZO_Mbs5fTlfWFmu1N-pQ5gcoeqzspNvncythddI8N6PSDY8lSv4oFcIrt2R2dbVIw1V879oCvz108DASJCHT6okyJ2kp5H934xlZaR4lUft_dD-6Wt-DoySbk_e45rDSpIp5FlUDCOxIga55Ui28QOyzNmzHBWM81L_VadSgSIx6sjSwUPdYwM-_pdIv91EKOzmzlW81BFvyizuyK6rmAtxDCAG0f5JS4uC9lpuiJp8aT-YhJqZ7wG2EOm4WZPA7o4brxLKrd_HbjD7rFunXHT1hNqe2oEc65Dg02JP0uS7wU2v6H-vA1I9LmsAgeuZUBfsaJFelIJOkKlbrU6EJzadsLbNtU8K2SjsNlakMgqkM4IjM2vXWLdarrFP-JhvTWty5FWHkYb2aabE6yv94pV_BS_ygVAnJV9De8j1R2k37J2azVwnm35j8nCvTGgc_o-kfpf9WCY5Ed72046iQyKEJIN3-20CEDVJF6exu3gDRbhwPAwAHQyx87OV4hiXpPpJluTPpeagVcn60xSP5TQLUl7eCplLfj8BCxoYaZ8TCsFnATZMFp-rucEM5R7dfseixofngea_XvgRwBuOL6-4Ra8cPxB1ac0EeycnSqYgiDBd4_YsrOBBceV2RaEVhujjdwydGs_HIi0wFPkAi6QMVKnzL9lDgSFEWo7OQeeSKqmdq8tPlQq3vDO4V2u-VlJIrew-99dLhWgFLHYcITuCKuKObkOzXbrm4YJDpUVmSaUBSbtNl9BSg1JxDhweIQAriHAy7VslkHhZVs1V0DvlAV0tBUq7S075J_Qeo19_slx6ztp3m9GpCM24elauXFdKnEpv8vw2yxpjMHbMZ52te1XMEai3Zb11APDallMoPhFWFO4FC-1W4HHO9UV7pjOXCkBNXjE3jnvJc3YKidu6g8LyMc2dw8iuHo04kwL6xtVu0tRIzZl_2bR7KwODcWDUnxCrUt9tOpk25_byi-PaKuNQ-4wdLfD0uZZxlSiYFmyb-94WhQNAzpqKfoa7cz9f_MtACz3ao5Qz9QaRQ20x0JUGu7V66AOd0e8ao0p9gCycNeTxt3jhGescT1OJ_WsBnv676R8dWUDyedRnB_ObqRna7K0Iuj0YEntrdbb5rcklU8d0SMeI3OQH4YmYOFHK2JYXyRH_Vv-EZUbDJjJ40gwS8J_jiy-6z_oGGYtaBATUHwUDknzk5NMmDO3cRA24AgiouNz3vXm8rDE5hmIpOJzz4DRbINQIsHV8cpIg_1AqiHAn-UDC5EVLcp7sAR0LmppnX3wEDFsUGf1lKy8uLEoqq8HbJOrLbgdfKkjXgCgsVyQz1H5QH_Rg9-VKDn1yI7ka1yb-IU2OpmRg8fJN-VdOHlDDXT9W0yKzwCvww7U1_bTFazBp_5p0kONC2jiQm7CrDBqz7Q3WP7FbdFdhTD1nhnKVWANuA0QCJ5cp5o3SqInG-9VH0npKXrfPzlkPryVwQiq2ipquWCELi6Yg0PTu9Yi0rUftzUJxjog6BfnYcNHcqt87xQduTTsUyiTG7vv5iZcuiscIfE5Dx7rrmDw1USFlCysUKufPY57ZhuKxwkl8qIqtQJIVptJr1p8fUgxWjGFM2XXKMRCtz7RLQFCn9B2qpErphVsA6eUIpMYp7k8FlzbP5JuQKrbI1HJ2fKeK6tSUUp5gMK6w7ODVb1Rm4OteLJb-kiDEElo-4QzbbkSS8-9Eu5nfhrkQilBTz5kn4TsgfwI5aQheVfpntMX1JC9B-qYZjgcdHsOFUFHrPq5PFPDSPdxjtInVL-OXx4WBkUbpIN41LK_hO8BQ74n7HGBjWt5TOhwJOzPaKiE7xmwaLfC6NTIdtzDPsiqGKzneALNtaR4Gm9CEwNyE7VfhUhovsTwdestHTUdaXwF3y8gWhqdrvxzqF8mV0qTjWKfi286rZhq4sVo4R5Cf0VK6IiDQ_cPO2W6WfYXbGE0SqeMAaSNNNJ2VoUPFsfFKgh76aVoaSrldNe4rs2-V567eIieZRkB88yL_x-6sYPNx-CE4DoYXKdMWu4VkwN852gNDtvtLxmkm2Uk4Q4owLp7AEbtiytUB0MR8JfKqqFW1JaCw90ozOoTJLTv4e2UmiRW77O80GIp9hRRKmyxODWkWcgjX2H8kzx5YNa1Y2SiLLSTamiZ1gbVwBS1PAmixvo-gUREHSrBO8S5Y3ap_6uZUCUSmxbSgQs02bDeH7uPjvGrV-OVuNDK_d6-93b1oBOV4LcVMy3OXWTApNyVvoP3opTf_dyECKI7w-AS6ihGhoTuHb1Yw2158XUH3ecx8Z4llz7Nb3AsgRLMNxpIzFJTlfr-noH0lAXnskgMejq0fif5y6I4dIN8Nelif6ukgoFmiScfHfPqOQbqKSYC27Woi7i5HCgUb2pypsLplvSVk_tj7pNX0IHsED76jn3pe4-CzD4HstGQitUyi-gfuhI2gkPEk_wF2PbOI0lBOvZJnJ8U_3SZw==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "830lavzmEJC9jrEPu4irqQg",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1334,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 5,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 5
+        }
+      ],
+      "thoughts_token_count": 942,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2281,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "To convert your grade to a percentage, it depends on what kind of grade you are starting with. \n\nIf you want me to calculate it for you, **just reply with your grade (e.g., \"17 out of 23\" or \"B+\") and I will calculate it instantly!**\n\nOtherwise, you can use the guides, formulas, and charts below to convert your grades:\n\n---\n\n### 1. Points to Percentage (e.g., Test Scores)\nIf you have a score (like 18 out of 25) and want to find the percentage, use this simple formula:\n\n$$\\text{Percentage} = \\left( \\frac{\\text{Your Score}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** You got **37** out of **45** points.\n    *   $37 \\div 45 = 0.8222$\n    *   $0.8222 \\times 100 =$ **$82.2\\%$** (which is a **B** or **B-** depending on your school's scale).\n\n---\n\n### 2. Letter Grade to Percentage Chart\nMost schools in the US use a standard 4.0 GPA and percentage scale. *Note: Exact percentage ranges can vary by school or teacher.*\n\n| Letter Grade | Percentage Range | GPA (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 65% \u2013 66% | 1.0 |\n| **F** | Below 65% | 0.0 |\n\n---\n\n### 3. GPA to Percentage\nIf you have a GPA on a **4.0 scale** and want to find the equivalent percentage, you can use this standard conversion formula:\n\n$$\\text{Percentage} = (\\text{GPA} \\times 20) + 20$$\n\n*   **Example:** A **3.5 GPA**\n    *   $(3.5 \\times 20) + 20 = 70 + 20 =$ **$90\\%$**\n\n*(Note: Some schools use a direct linear conversion, $\\text{GPA} \\div 4.0 \\times 100$, where a 3.0 GPA is a 75%. Check with your school's handbook to see which method they use.)*\n\n---\n\n### 4. Create Your Own Desktop Calculator\nIf you want an actual interactive calculator on your computer, you can copy the code below, paste it into Notepad, save the file as `calculator.html`, and double-click it to open it in any web browser:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Grade to Percentage Calculator</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f4f4f9; text-align: center;}\n        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); display: inline-block; }\n        input { padding: 10px; font-size: 16px; width: 80px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; text-align: center; }\n        button { padding: 10px 20px; font-size: 16px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }\n        button:hover { background-color: #0056b3; }\n        #result { margin-top: 20px; font-size: 20px; font-weight: bold; color: #333; }\n    </style>\n</head>\n<body>\n    <div class=\"card\">\n        <h2>Grade to Percentage Calculator</h2>\n        <input type=\"number\" id=\"score\" placeholder=\"Score\"> \n        / \n        <input type=\"number\" id=\"total\" placeholder=\"Total\">\n        <br><br>\n        <button onclick=\"calculate()\">Calculate</button>\n        <div id=\"result\"></div>\n    </div>\n\n    <script>\n        function calculate() {\n            var score = parseFloat(document.getElementById('score').value);\n            var total = parseFloat(document.getElementById('total').value);\n            if (isNaN(score) || isNaN(total) || total === 0) {\n                document.getElementById('result').innerText = \"Please enter valid numbers.\";\n                return;\n            }\n            var percentage = (score / total) * 100;\n            document.getElementById('result').innerText = \"Percentage: \" + percentage.toFixed(2) + \"%\";\n        }\n    </script>\n</body>\n</html>\n```",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1334,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 5,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 5
+      }
+    ],
+    "thoughts_token_count": 942,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2281,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

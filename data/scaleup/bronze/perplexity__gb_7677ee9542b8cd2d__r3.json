@@ -1,0 +1,157 @@
+{
+  "query_id": "gb_7677ee9542b8cd2d",
+  "engine": "perplexity",
+  "run_index": 3,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T10:18:55.569195+00:00",
+  "query_text": "Given a <span> in HTML I want to change its color on mouse over.",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Given a <span> in HTML I want to change its color on mouse over."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "f9bd7084-00c9-47c9-9658-5197e2c346bd",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Use CSS with the `:hover` pseudo-class on the `span` itself. The `:hover` selector applies to any element, including `span`, so you can change its text color when the mouse is over it.[6][8]\n\n```html\n<span class=\"hover-text\">Hover over me</span>\n\n<style>\n  .hover-text {\n    color: black;\n  }\n\n  .hover-text:hover {\n    color: red;\n  }\n</style>\n```\n\nIf the `span` already has an inline `style=\"color: ...\"` attribute, that inline style can override your stylesheet, so remove the inline styling or use a more specific rule if needed.[1]\n\nIf you want, I can also show the same effect using inline CSS only or with a smooth transition.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780827535,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 160,
+      "prompt_tokens": 18,
+      "total_tokens": 178,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 2e-05,
+        "output_tokens_cost": 0.00016,
+        "request_cost": 0.005,
+        "total_cost": 0.00518
+      }
+    },
+    "citations": [
+      "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+      "https://elementor.com/blog/span/",
+      "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+      "https://mimo.org/glossary/html/span-tag",
+      "https://www.youtube.com/watch?v=z7hwJvfSuYw",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+      "https://forum.freecodecamp.org/t/styling-links-span/431255",
+      "http://www.w3schools.com/Cssref/sel_hover.php",
+      "https://www.shecodes.io/athena/38699-how-to-use-the-span-element-in-html-for-text-styling"
+    ],
+    "search_results": [
+      {
+        "title": "Add a hover effect to a span - HTML & CSS - SitePoint",
+        "url": "https://www.sitepoint.com/community/t/add-a-hover-effect-to-a-span/329922",
+        "date": "2019-06-05",
+        "last_updated": "2026-03-28",
+        "snippet": "I have a div with 2 spans to make the line, when I mouseover the div at the start, the color changes, but how do I make it so the whole div\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "HTML Span Tag: Usage, Attributes, CSS, Tips, Tricks & Examples",
+        "url": "https://elementor.com/blog/span/",
+        "date": "2025-12-31",
+        "last_updated": "2026-06-06",
+        "snippet": "Hover Effects: Change text styles, colors, or backgrounds when a user hovers over an element: \u201cThis text <span style=\u201dtext-decoration\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "CSS - hover effect not working with <span></span> | Code Forum",
+        "url": "https://codeforum.org/threads/hover-effect-not-working-with-span-span.1334/",
+        "date": "2021-01-04",
+        "last_updated": "2026-05-18",
+        "snippet": "I want to make hover effect on my h1 headlines, but it does not work with the <span></span>. It works fine if the header is just wrapped in <h1></h1>.",
+        "source": "web"
+      },
+      {
+        "title": "HTML Span Tag: Syntax, Usage, and Examples - Mimo",
+        "url": "https://mimo.org/glossary/html/span-tag",
+        "last_updated": "2026-06-07",
+        "snippet": "HTML Span Style Tips ; Add color highlights: \u00b7 span style=\"background-color: yellow;\" ; Animate hover effects: \u00b7.hover-effect:hover { color ; Apply theme-based\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "HTML span Element: Styling Text Made Easy for Beginners! - YouTube",
+        "url": "https://www.youtube.com/watch?v=z7hwJvfSuYw",
+        "date": "2025-04-05",
+        "last_updated": "2026-06-06",
+        "snippet": "Learn how to use the HTML `\u227aspan/\u227b` element to style specific parts of text! This beginner-friendly tutorial will guide you through the\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "hover CSS pseudo-class - MDN Web Docs",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover",
+        "date": "2026-04-17",
+        "last_updated": "2026-06-06",
+        "snippet": "The :hover CSS pseudo-class matches an element when a user interacts with it using a pointing device. The pseudo-class is generally\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "Styling links (span) - HTML-CSS - The freeCodeCamp Forum",
+        "url": "https://forum.freecodecamp.org/t/styling-links-span/431255",
+        "date": "2020-11-19",
+        "last_updated": "2026-02-10",
+        "snippet": "The \u201cMore Information\u201d text is no longer white (when it should) and when I hover the text turns orange (which shouldn't happen). I'm not sure\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "CSS :hover Pseudo-class - W3Schools",
+        "url": "http://www.w3schools.com/Cssref/sel_hover.php",
+        "snippet": "The CSS :hover pseudo-class is used to select elements when you mouse over them. Tip: The :hover pseudo-class can be used on all elements, not only on links.",
+        "source": "web"
+      },
+      {
+        "title": "How to use the span element in HTML for text styling - SheCodes",
+        "url": "https://www.shecodes.io/athena/38699-how-to-use-the-span-element-in-html-for-text-styling",
+        "last_updated": "2026-06-06",
+        "snippet": "In this example, the span element is used to change the color and weight of specific text. ... The link color and hover color styles are applied, ensuring a\u00a0...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Use CSS with the `:hover` pseudo-class on the `span` itself. The `:hover` selector applies to any element, including `span`, so you can change its text color when the mouse is over it.[6][8]\n\n```html\n<span class=\"hover-text\">Hover over me</span>\n\n<style>\n  .hover-text {\n    color: black;\n  }\n\n  .hover-text:hover {\n    color: red;\n  }\n</style>\n```\n\nIf the `span` already has an inline `style=\"color: ...\"` attribute, that inline style can override your stylesheet, so remove the inline styling or use a more specific rule if needed.[1]\n\nIf you want, I can also show the same effect using inline CSS only or with a smooth transition.",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 18,
+    "total_tokens": 178,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 2e-05,
+      "output_tokens_cost": 0.00016,
+      "request_cost": 0.005,
+      "total_cost": 0.00518
+    }
+  },
+  "run_profile": "scaleup"
+}

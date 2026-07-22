@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "gemini",
+  "run_index": 4,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T04:40:50.157591+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 04:40:50 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=15656",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Alright, grab a chair, pour yourself an espresso, and listen close. I\u2019m gonna explain *Dependency Injection* (DI) in C# so simple even a guy from the rival crew could get it. \n\nImagine you\u2019re running a crew, alright? You got a bank heist to pull off. \n\n### The Old Way: Tight Coupling (A Rookie Mistake)\n\nIn the old days, you\u2019d write a `Heist` class. And inside that class, you\u2019d hire a getaway driver yourself. It looks like this:\n\n```csharp\npublic class Heist \n{\n    private JimmyTheWheelman _driver;\n\n    public Heist() \n    {\n        // You're hardcoding Jimmy directly into the operation!\n        _driver = new JimmyTheWheelman(); \n    }\n\n    public void Execute() \n    {\n        _driver.DriveTheGetawayCar();\n    }\n}\n```\n\nNow, what\u2019s the problem here? \n\nYou just tightly coupled your heist to Jimmy. What happens if Jimmy gets pinched by the feds the night before the job? Or what if he takes a permanent vacation at the bottom of the Hudson River? Your whole operation is busted! You gotta go back, rewrite the blueprints of the heist, and change the code to hire a new guy, say, *Frankie Fast-Car*. \n\nThat\u2019s messy, kid. It leaves too many fingerprints.\n\n---\n\n### The New Way: Dependency Injection (The Professional Way)\n\nWith Dependency Injection, we don't hardcode who does what. We use **Interfaces**. An interface is like a job description. We don't care *who* does the job, as long as they know how to do it.\n\nFirst, we define the job description:\n\n```csharp\npublic interface IGetawayDriver \n{\n    void DriveTheGetawayCar();\n}\n```\n\nNow, Jimmy and Frankie can both implement this interface. They\u2019re both qualified wheelmen.\n\n```csharp\npublic class JimmyTheWheelman : IGetawayDriver \n{\n    public void DriveTheGetawayCar() => Console.WriteLine(\"Jimmy is driving! We're burning rubber!\");\n}\n\npublic class FrankieFastCar : IGetawayDriver \n{\n    public void DriveTheGetawayCar() => Console.WriteLine(\"Frankie is driving! The cops can't catch us!\");\n}\n```\n\nNow, look at how we write the `Heist` class. We don't say `new JimmyTheWheelman()`. Instead, we demand that whoever sets up the heist *hands* (injects) us a driver. We call this **Constructor Injection**:\n\n```csharp\npublic class Heist \n{\n    private readonly IGetawayDriver _driver;\n\n    // \"Hey, you want a heist? Give me a driver who knows how to drive!\"\n    public Heist(IGetawayDriver driver) \n    {\n        _driver = driver; \n    }\n\n    public void Execute() \n    {\n        _driver.DriveTheGetawayCar();\n    }\n}\n```\n\nSee that? The `Heist` class doesn't care who the driver is anymore. It just expects *someone* who implements `IGetawayDriver`.\n\n---\n\n### The Don (The IoC Container)\n\nNow you\u2019re asking, *\"Boss, who actually hands the driver to the heist?\"*\n\nThat's where **The Don** comes in. In C#, we call this the **IoC Container** (Inversion of Control Container), managed by the `IServiceCollection` in your modern C# `Program.cs` file.\n\nThe Don keeps a ledger of who is available. At the start of the night, you register your guys with the Don:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// The Don says: \"Whenever a job needs an IGetawayDriver, give 'em Jimmy.\"\nbuilder.Services.AddTransient<IGetawayDriver, JimmyTheWheelman>();\n\n// Register the heist itself\nbuilder.Services.AddTransient<Heist>();\n```\n\nWhen it's time to run the heist, the Don handles all the dirty work behind the scenes. He sees that `Heist` needs an `IGetawayDriver`, grabs Jimmy from his books, injects him into the `Heist` constructor, and hands you the ready-to-go `Heist` object.\n\nIf Jimmy gets pinched? You don't touch the `Heist` class. You just change *one line* in the Don's ledger:\n\n```csharp\n// Jimmy is out. Frankie is in.\nbuilder.Services.AddTransient<IGetawayDriver, FrankieFastCar>();\n```\n\nBoom. Clean. No rewritten code, no compilation errors, and the job gets done.\n\n---\n\n### Understanding the Don's \"Lifetimes\"\n\nThe Don manages his guys in three different ways (Service Lifetimes):\n\n1. **Transient (`AddTransient`)**: The contract killer. You need a hit, the Don sends a fresh face. Once the job is done, he vanishes. Next time you ask, you get a brand-new guy.\n2. **Scoped (`AddScoped`)**: The crew for a specific heist. They stick around for the duration of one job (like a single HTTP request). Once the loot is secured, they go home. If another heist starts, the Don puts together a new crew.\n3. **Singleton (`AddSingleton`)**: The Consigliere. There is only one of him. He stays alive from the moment the family starts operating until the whole program shuts down. Every time you ask the Don for advice, you get the exact same guy.\n\nAnd that, kid, is Dependency Injection. It keeps your code loose, easy to test, and ready for when things go sideways. Now get out of here and start refactoring before I have to make you an offer you can't refuse.",
+              "thought": null,
+              "thought_signature": "EtcvCtQvAQw51sdHrNnUtTZHesTVQpTTafYL1hTw9xE9nvXV9NYtU4DXCvlL7A4CDhWITliWUMYk399M-BZbB2jbJxUS-QiYh1rhtmRg1pf-TPQPmmyEiwga2sWvTMOVb9n48O_o8y9G0GWb3T60M-hTqcBBO7Z6ZBEapF7UmFe9n3nzdNCx1Wv6964C43a6my-CekPV2dtvNymQtVFtqhk5ksNir1__rXhQYXns-j_G6mwjikbspCqi9tZhfDMmIbR5-PA0fRSk0Z4Qgstq6F5kx79lYHpTq9o29pY0ih046x7HcWAYQPftt70AfujRL4oGGawkvSVXoE4zBaY694OEc4Vl0wZtBrnU0BDyHULcL-9ZI1hqzyQdd-A-NNYPUYteSVQKOuxvOGSwdEUManZ40R5--XATlw7qsxXsiqXkDRvptCGoOoOvGnSF9De8rCU9WkvAsG8IBEyxiJHH_9Xt1W2uWCo6T1WjTOY7Z85NHU3mLpUyJi7vXReUv3xZnSsjYj2daff9b-cxmLrIyUaE9gQmkQIBxZ17X0iGBYArEKE-Z2XWyNkOrHZ9swg-zYUYlweexnsLO1txwVCXOO-IEx4JONQdK2Umw8s6VOvhRVwa2Aj-ppV-K9GaYkgBxxXwHPhU_vRMNe-LmniCeh8UYup4qn0s-xjFngeAfzPEbsS2CAAAQQEF3G0-Rbel4d7i3Eh1dxImiPj7BVClRzX40XAVgt4xz1BT9KOK1pUTXRO_-gpNzH6tD7IMmG_6SnC7fToTZ1WecZzk83FyNzH8gp2xyR70mgGFWQloFKQemthIUV3fGSgyRR9HfwyzEKB6RmC52P1nYLla1IFBR6A_k1cAJVcoyYZxj8tjiM_qLpt-ohzhb3IAVsHgU9KMesX6sZp60Pix_XjkZUNS3edU50a6G0QEWZZbjrDk0_LXNp74Gdbc0rSljqlXlZFg1MG0VIHIWAIOzWGSVVVRNngrd7pgU-fvKgb6XbKyDsPxmzs-eTjIkI95JacPGW8e0r2z0GS1EdudYNyBLlyowzPwSKaMmKkgK6FCegbeZPCaH9629bQLAq4CBtMPJZM9Dsp2zTFPjzJidu1bmt6IPUmK9jiSPrGN8uJRSAz1V_JReRwvM7Dr9jWAI4OZiu5b4qj6E9zn2AeNAyLsJO_xp1IrCO1x1LfZGBj_GvdWqEYf7B3Wd6X-EN3n61IDm2tS6GaYYKrHHEg77hR0jtyjkx1ygZ6B1PfGvXyAdSVsut36sA-rwQwkAp2AQ3jXXb7rVRCPG6u1PMRTmP_0BYT9yjDlwBXOvF2pCcJQcx9p754VOw_GBuWw6kRhXYPIpfj1l73LV9Uz2sFRBj9H1meXvJYODFmwetpnXxpdGKtqScSCQegAp-0edZ46KVrRNvDolID17yj8wLf_qNggOlhfVodrqFCWE4DetfcjVx7grMRvcpdtVPsjh_1YIVhcX5PCCk_l11Lq6dXlMJAyNaF8lWhJgqHiySOjeafOwZt1NF7swf9dfzns0v20ZyljQWJTgohx2CGfOHUPNCnRyCNoNTiinOQZXXZ4TMIrBg1QFwkMnmbhH2jADmiZGXpWG4f9o_Twi2wGV7b4EceAvOzYKbJ0nAvGXPQCTGPudhr-VFYWEukUTeYKfjhZznOpotFexIY8kXN5syS4oXyU-qTPx7yNv9VwmLs4WcyaSE6St_As5LIQ3-4XqMBn2bN-zKxbjEsXAKwU7rvoq7LK-c7k5oj9EpcvOahXgzMa9bfScfhfUNvi62CneW2_fxrlVM4GlMNUzluPA5x6Sn6-oC6sUtgpyG-7AUKYGRLonPTmCWgAvixj19yCp6E8ueyzFAdpBMaJUb13gMUFQh-0sGIjigETw2hjQDFAWT9uCjbnUEv1H__qXWOzsIIOWeRhKp5_ZwnY5rPN3UPPotH5C6QEBWLEW8pNMJcSgCevngVqzzZV1kCGC9YK8PSWO243rPO1OJ-gZgf1grplEc0nJqB_PgFMhb6J5vuhuLw7fzbUG1t0P5yZbW2QSX7j9sU2bcF-rskfz_W4Vv9dX7xFrSmXBiV603405T_oVDKIiDLxAgJVCEgmCuzBGEOuY9UPmNenFJqulZ0-0YhkKP_TXFW9Zj7w8DiaL7IvybH720jy4tYDzcekptsOSmRg12IKCSVkNWQ-jOP8OJPMxHozDLj7sqhEl4DyTi92qnRHFvNaVJc8i1Dsj9Poi0cqShub9Fz9EUKtr2g5gp4nWt-OXh6305Pqe4av-soE6gUbpFFMpbFEhdSqjH6gW7MaRR5VmzJS8XYZE-i1mB59lSK-LjhFWMXnhBmdXwj83kZ07Mul3q_1Su0djl-nqWN-oUAM9NRFJIdgp9c9CJboK-h6l-uijlSp5gI5lSI9UB2vgjufWKgDDxMD_-0qLltTQjcdH7g2IxIbsuW3CUjQMTGZWuWhzvWMRoHytkzBal37dcGdZuC-SB9_v2ZWMRHttAAD22v4bbj_g16e2h2IwQYRoYJDynr5Hu5rWTpxLofVrcCm2ESmBpV8gASpjofFXLZWeNyNDZ0hNcw2ihkLlyRbBLNuWAaickyuS9oAm-LJFhat6yQ1o4aO78djPAbxa9pC13_EXmugahtwf5YCbKCbR9W6Z6JIVzRbqH_irUCr5jdGUMirdv_VL0jcRYYO51Z0DqMHRXDbxseXZrnEnEXo7AMTlIBYKJ2J11M3HW91oGjaYjB1mjebxIJpVrGRFxYS4fg-DzFmv2PskJzTUmkaMkA_fxdBVHcOrFMoutvLZ4S3_kkbW_oJfk_I5fBZ9Fbho6Bv7xiwURakONEu_Ucx0D_bsygKrPx2QrfRQxnDEf5QDwewzxIjWS-K_X7f2vx6K5NcRCnQwU1YnBjqaohpBMdiHaZqg_Z2DBuPqxuAVctzt0wrVM8QNdZyvcV6tv0IFJp6Ppepyoc50dKdFvyeSYkXH1zkXSl_8ugyQ0OBlO6Q5b5RE8Yoxywcw3g1-B5DhlnUH2ye5QYk1oInJlERRlnQQaGo3aGnJ46eGFYh09q3GcS0GwgRJ4IfOrIKKVLCRvOwwb1V7-CrQdxYCMMjin0nt159U4WQHpqKIuF8KxruNymWdsjIHtMeUWev8PXu9ph0epxu235H8hkOwDudSs-kD_kl7vdpXA4MMKSs3KjTuco6ecKFR1DEMsgqIDhVX8-s0yofLxSueGFotkDS_ezDHsazNHBLASGD_DJqCW63MHbOEZpXmVMUMDw5fh4oOAN1T4LaLPxamrxYSJRYMqIcerXENSyKsuHQKd6D2SisyH3oiDmFZW0ufcAZWz8On9A4JZ1-DEaKcwpsvxjuGcVrAap0Wy77iEuv_OKK5ZxhgWsimAG141jXnQaURxvIF-hPpRQ3FZ3jHa2kNtrgAO-jSkjocATtwxOiQE5ogI2wpvPr4IN74qxAg0wnY9n6kBCAAsv94vx5wMS_Jhf_1R4uaN1x6tac7yTWEVAtSER0lX-nbig3JSS0x2AJupzNY_thhoSHRB_ZpAh_NyjRAOGVqFfmRPOHacQf5unPP5gnolrafB4tOEaz2x2btCIhwywo6ff2k1JCMzRBgqnrV0zfNQCNkB7ztsTiEWy0Q5aV7xXZcUnIygGQGJMzu0WbFrPERW_0vSQsXDNWSsDcbwtFI0SsdsOJcLD084Ev9rz9gzwf7wgBcziIlNScWONVs-_POB5ZYX9n0wNfxRtsr6rQ4s6MFE-R1Y0_9XlS7_caa5PXL2QfsZDpWAugJ53EENizau0cVsmiYyGNRDavU4jrBAFa-QvsBYS5ll_P0A3CxAIPMW0qkceRhYVNn92_hWtB5Hg4Usug0IEvHDrfAzA0IsHHrm1Lv0nwHpBlgDZ5J7eYMsFwqluPl-UaM2-BN3V66-AqgBlvEW7hhjhh0S8tfXgwLax5tSgG-V3WbGWB7pbVGvxi86cAZ42iINPB94gReozTNLZaHob171IFAy28WKL5ZeXjF2yBAi6cIc0VhDT_oXvQ7jrYiGqVakKKO1V2qINGovGAkoqDXYH7aCXzanJKq3EvfJjI2TOEFIdwZYQjGT2KFsMbbY_RuVwj4OlaP-8EBYTZEzW3goZlQdolCs9hMG_UJXEMu5GhkSLxRpqLH2n9yd9DbIIZ_s1SEARU-5CZDpZziJGRrqsm_Cnb1XfyDFylFWzaJO-WCqlWSOC8McdP0QGAYhDuMffWHXS6RR0k3ZkTma7IKCjPMviLgvDfXn4FxCEWr6gBlxUcnTQ4t6OGIRiu1e8R076PJ_meYFy2jIo5I35UwTJ-Fzve7iI1C0RYd7BTuKwKsqGv7XjhYY0vv2dR52Jz_gsMs2Ch_Z3N_3XD-o3Kr30LNA1f1CLpbb8r-ZTKRLCm-OyoEF1REkVYyefCeAqH19Us167KSYINj4WnjS-CFT1p2jboskJkIzS4JGnRZ_mLwvxONJXEi4TLzpEHxXEwnnMXLY9NG2o-liYC4-2lLZZCekdxDHpUFi5tWkhDCnGWr19WRuYOdMaqbT3kBCtkP7zDseHdxBqEL2X01voE2F6YOTajf8-ZnsU7OaNbXatjjKnU9o7BPaJIWFOx3VoqP9lfB5A0EOVfndLMDqLqtyo6rfhRs9tR4IMXhcmgfUVew_9gojx5C-qLeKrU1jZCFT_-x2bm2FEDR4BNexpDs-yFftj-gIuG1LdKriPSdO7riy_uP2fh6R7ECPamXa06vr4j5SMVAkX1v8QopMOdDsAnh4hLCZBLo0xFLDjUioefUBiDY82yhJfPompByAGQgr1MxRP2wc_hU_nWMG4htgH7jmEcUBuld4OgJ_nMDEGbj-AZcx7UtyibF_bmk2oIIY-b7siwyy-QmVDd6-yF5dSeDMnI7ZFYeZJmqVXqc42CdW3nTBh-7QmVJPLd2m0yA4jTF63SzVY1Z30tXtIdERxx5KNOyvBlvFeIpkver0CrVYiCa3UAx7OoymaNjL1ozWt8a6WHXChYKoNg15RzIxGHEWAsuJDElH7KSx50rCHVGkP9zVPATgUh1ekJYxam49SF5qIFmt0c2vxNttT-XxSrs2hfn5qZB4RqdtrNIe1hBvx2Z5XN_waX7bQ5zLvWgNqYdt6oeXuLjChVHXwumBzWkBFQ1RVnJdGxSGhZZqV3buTbGGbmpsARNzJ2zyfwWy99-IDfy1dyQUZkVQXnBTUnnejhP1jw0zXZYI2rIgFL6BBir_9RqurGP1OEk4KDcJHVquHKTtuout3Pt_7udLOAdCC7FY23fdiElom4JBfZ_vHzxXOJ73SOix5TFj1Mc0IveB3I_Fy77O4-QPaFh64D9L52MgASbR0FV75nN_sF0IvrZBa84g8EqhF-rUPfFJyDWhB-QeQL1CROxC78xOPy7etMKmfnVlfhO_97jNOpFyQRXA-UvgFH3lZhikb5c9BXkHr6IgJfH7z8Zv675RoETJ860k6-buWsB_npNgcRCTP4NLuY_1QN3b_9H0ZbPrv3ydVKkHiXAdm7cd0x2sreemJ4h3QaZbY_4aOSLrnHFVzJB_ioZVYsYWc8XKJi4CTh6Up-FcPQNMljo3mq__NFYxU1_ii5rUnzs_5NxVBBc6SxN6-YaS4VNFOpoG_AYUvjAJx6sCO70xrFScHyurobtD2WUmktWgYCckOMhEmhyCKOGXXtF2HjaqiSdX2o0uucL3FGyiF9jUlXD_uzbmYWtKq8tUaOsdRgR4AgDRjURxWaeNNjGYR8dRI9DoxgFyGkORAmeND8k41MePJZkt5vvwoAcBhcFO-3HpF_-dZfGykYUON7SXNjxVPGH2IbIMMmh-NvuR8reP2jE4lifrWfoRSiGS2FVXLoXvzmZ90kdhJBbd5D9QFK-v1mObvCicCJb1h3AM7aTSSqo6mlutshKoehIWXOhlFOR6FZS5vXCgdk-zUx1HPqoPGQ5viJcDviJEGsDSxySI9MS1tWlGHi3tgS6n1cleOUrHvkPZlVLMKi0VZojpm_1ClfdumthIfnktqT8J3_FeGFw47jiDB_SueBdFiQJU3tQzdN2mgsF9ky0VqiVwtswKQn8kaxI-9pErsLXKXMiQGPL7hipQjuOZkY1rCy67ttOM254YljcucKQ5G0TpLb0JPNJTvc9oteDpH5UHCYwZI1KrFgoywpSa1kRIX6tLLfqYJRvhuS7ODiC71bFHQHdOZ78ubNcxnemG_ODzaFPAan_n0JNeC9kP00pnjyiggSlXOcRm27x8lOp3pkI_Mv4GDiWLYnFQIGj0LIelWe4QZgKDjQcr6T8OBE1GH8lmRwEpXs3sIHBQoIGis5ZqgR4Qei8sX6BFsKGlYmy2p7YVuuwSLmKIlN3J4zW4K4hYtcjko8dy0k47L5TjUHgIHvjjG0pZMupOk6fk4_yzxIxuHGD9-lhWsnRu5zuIdwrtt-H6bctNGHV9o6HDznHtK_nVwi0HSQmLDkrV8qzv4gSLDzpuF-MvDD_3789K_ppilAyUyg4AD7Ybapfst7ls6UYlcQepos8corrCPFjEwu33V3gwvZA4jOo5ktUqRzKDX42eeW61BHS9VOl7ofXXlz7azaTVpiohum3zvxPi3FHSm-EYPxxlvlu0-eFXRlZyRdp-3F6rCVawexBi-6UQlyInIH1BGXxv7PBBWd_Ul-6kxtuCt_2RmLxWVBl2qcsP1_cZVeR4btoYm2MwjLKSKT-nXAvzcUAv9LLjy2xyf_TSznYowyEEH9SVnHjU9H4fGlru3I-2r3mtDCtLzxKsoQe037szOXtpyGy7Y4ffaFky0pRDanpmSAYlrzZahV4RTDwVCFJkQps4PWA6D5XgQgMBdjZHfIv_2EPhfPtPXDDHYsClU1c2mZoHnzcL1A9pQs31MCqVYf90bFUa6YiwZSFSpOatoLchFZPjaKjhy9CVVMbeULT2ButIt-gtLd2AJbl5nnm4c3Y5Ky1v7njiRxFON9ILcUBang8wBzl6UnSHqalTEOAPQ0kg1JCORkHvdsDuUnMlUCYKoQ90T1jSLlYbWl1swAKo98BVdwdr0GZRyTLFmKk5WtZVXWUzYsc3NtbUD7chILCV9jn8UcWhXCod66mCXfKCHUVwIIdOsgF2Z594r05q9CH8J191BPv82dQNH8n66aj0s3-KneFKdvDMcLV0rKoSWxjNXUy0B-9PDZCiFOqq9k_w1hv2ce9x5CeXTZyqfTAVJP-vIZ3MJ_xG7Zjem1QRPtrdR0UqCEuMgE0MsZLs2NCf57__gG5iy1MxkoXYBd_4-EhWI-WeiTMRLb96hc5w3oJMCNTfLBcfhKf7-K06sBc6wdlbcNPjnaOtvwOlycLBnK0EI9uv57pXS1sfhrI9xkF_IkOsM12wUUFPnRKzoJdqCvKNTVwxlBhw_8p7KxxMtzwUBMw1z1flGazn77YLtzI6C9yXhEA67kI9ozKk3hpK6dDDOoykJJU8HxGj7TzxK4UnAWLOuJd0sbDKCmhLqAN8mFk3sh-Mqxlr3sgKml2VrtR2ArEKGcajyOd-g7RvYfxso9EkUgAFoWFA_-VSnxfMqa5q_JQ5gttJo1rzvu0Bhli4FmMbXNuJxHGHP-9GgxHqVPn7GETZLmnZX0hH2J1jfBBdL5V5NLZCMTeK5rPkAtN74wmKObBdUpQVoz5FtYhnN7RYmD1MwaD5is45xwJVUlOhHIB2Em8icpdS56EFv89rJAM__HNwOGFnzfmsVDzml4IxdVnPtGEXP31mzARsr7i4oWzODRKbFPKumZAzjYgv1LlUokJk59MYvadPIzGS4hX0bUOiCafBDIb0xdEbB7R-hM8kq_TYJ6mnhBFDhZXXZ4uquSfLkxLk1py0QxM-4Pwuo-64nlOAo5nKY4DVVW3qdjf7IPoktFbZKCqmf1-s3CP39oehWKU0kQ6zHPTJrV1hdbxXnVcVZHrO9yZlTaRiuQLuZ7ZzK_G9l8VlaN-MKDqxoVpsFwzYNSnJHGyew2yid6ygg07Git63y9YzJG2_iSTFtkEHlPl7rzUc_ewRzXVE-5RXxiBB1xDpJCFlLRR1FXLt4uO85sSPF4IyyW4QEV2O9fPDmnTrO3klTewltERGMqVjgnqk_yNCLMG_BVFUCf8TTpSgXuMSRramkgca9o-M0Dqh5wTA==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "wkcmaoHDIbblxN8P1Zve4As",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1280,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 13,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 13
+        }
+      ],
+      "thoughts_token_count": 1548,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2841,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Alright, grab a chair, pour yourself an espresso, and listen close. I\u2019m gonna explain *Dependency Injection* (DI) in C# so simple even a guy from the rival crew could get it. \n\nImagine you\u2019re running a crew, alright? You got a bank heist to pull off. \n\n### The Old Way: Tight Coupling (A Rookie Mistake)\n\nIn the old days, you\u2019d write a `Heist` class. And inside that class, you\u2019d hire a getaway driver yourself. It looks like this:\n\n```csharp\npublic class Heist \n{\n    private JimmyTheWheelman _driver;\n\n    public Heist() \n    {\n        // You're hardcoding Jimmy directly into the operation!\n        _driver = new JimmyTheWheelman(); \n    }\n\n    public void Execute() \n    {\n        _driver.DriveTheGetawayCar();\n    }\n}\n```\n\nNow, what\u2019s the problem here? \n\nYou just tightly coupled your heist to Jimmy. What happens if Jimmy gets pinched by the feds the night before the job? Or what if he takes a permanent vacation at the bottom of the Hudson River? Your whole operation is busted! You gotta go back, rewrite the blueprints of the heist, and change the code to hire a new guy, say, *Frankie Fast-Car*. \n\nThat\u2019s messy, kid. It leaves too many fingerprints.\n\n---\n\n### The New Way: Dependency Injection (The Professional Way)\n\nWith Dependency Injection, we don't hardcode who does what. We use **Interfaces**. An interface is like a job description. We don't care *who* does the job, as long as they know how to do it.\n\nFirst, we define the job description:\n\n```csharp\npublic interface IGetawayDriver \n{\n    void DriveTheGetawayCar();\n}\n```\n\nNow, Jimmy and Frankie can both implement this interface. They\u2019re both qualified wheelmen.\n\n```csharp\npublic class JimmyTheWheelman : IGetawayDriver \n{\n    public void DriveTheGetawayCar() => Console.WriteLine(\"Jimmy is driving! We're burning rubber!\");\n}\n\npublic class FrankieFastCar : IGetawayDriver \n{\n    public void DriveTheGetawayCar() => Console.WriteLine(\"Frankie is driving! The cops can't catch us!\");\n}\n```\n\nNow, look at how we write the `Heist` class. We don't say `new JimmyTheWheelman()`. Instead, we demand that whoever sets up the heist *hands* (injects) us a driver. We call this **Constructor Injection**:\n\n```csharp\npublic class Heist \n{\n    private readonly IGetawayDriver _driver;\n\n    // \"Hey, you want a heist? Give me a driver who knows how to drive!\"\n    public Heist(IGetawayDriver driver) \n    {\n        _driver = driver; \n    }\n\n    public void Execute() \n    {\n        _driver.DriveTheGetawayCar();\n    }\n}\n```\n\nSee that? The `Heist` class doesn't care who the driver is anymore. It just expects *someone* who implements `IGetawayDriver`.\n\n---\n\n### The Don (The IoC Container)\n\nNow you\u2019re asking, *\"Boss, who actually hands the driver to the heist?\"*\n\nThat's where **The Don** comes in. In C#, we call this the **IoC Container** (Inversion of Control Container), managed by the `IServiceCollection` in your modern C# `Program.cs` file.\n\nThe Don keeps a ledger of who is available. At the start of the night, you register your guys with the Don:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// The Don says: \"Whenever a job needs an IGetawayDriver, give 'em Jimmy.\"\nbuilder.Services.AddTransient<IGetawayDriver, JimmyTheWheelman>();\n\n// Register the heist itself\nbuilder.Services.AddTransient<Heist>();\n```\n\nWhen it's time to run the heist, the Don handles all the dirty work behind the scenes. He sees that `Heist` needs an `IGetawayDriver`, grabs Jimmy from his books, injects him into the `Heist` constructor, and hands you the ready-to-go `Heist` object.\n\nIf Jimmy gets pinched? You don't touch the `Heist` class. You just change *one line* in the Don's ledger:\n\n```csharp\n// Jimmy is out. Frankie is in.\nbuilder.Services.AddTransient<IGetawayDriver, FrankieFastCar>();\n```\n\nBoom. Clean. No rewritten code, no compilation errors, and the job gets done.\n\n---\n\n### Understanding the Don's \"Lifetimes\"\n\nThe Don manages his guys in three different ways (Service Lifetimes):\n\n1. **Transient (`AddTransient`)**: The contract killer. You need a hit, the Don sends a fresh face. Once the job is done, he vanishes. Next time you ask, you get a brand-new guy.\n2. **Scoped (`AddScoped`)**: The crew for a specific heist. They stick around for the duration of one job (like a single HTTP request). Once the loot is secured, they go home. If another heist starts, the Don puts together a new crew.\n3. **Singleton (`AddSingleton`)**: The Consigliere. There is only one of him. He stays alive from the moment the family starts operating until the whole program shuts down. Every time you ask the Don for advice, you get the exact same guy.\n\nAnd that, kid, is Dependency Injection. It keeps your code loose, easy to test, and ready for when things go sideways. Now get out of here and start refactoring before I have to make you an offer you can't refuse.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1280,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 13,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 13
+      }
+    ],
+    "thoughts_token_count": 1548,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2841,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

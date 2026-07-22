@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 6,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:34:35.795211+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_079a23ca386dba69006a26464d1c6c819fa83a103899b97d7c",
+    "created_at": 1780893261.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_079a23ca386dba69006a26464de7c0819fbbfa24b1176f9233",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Aight, listen up.\n\n**Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call it `OrderService`. This class needs some help from another class, maybe `EmailSender`, to send emails.\n\nNow, the old-school way is `OrderService` goes out and gets its own guy:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThat\u2019s messy business.\n\n`OrderService` is now too tied up with `EmailSender`. If you wanna swap `EmailSender` for `SmsSender`, `FakeEmailSender`, or some fancy cloud email thing, you gotta crack open `OrderService` and change the code.\n\nThat\u2019s bad for business.\n\n---\n\nDependency Injection says:\n\n> \u201cDon\u2019t go get your own crew. I\u2019ll send you the crew you need.\u201d\n\nSo instead of `OrderService` creating `EmailSender`, you **inject** it from the outside.\n\nLike this:\n\n```csharp\npublic interface IMessageSender\n{\n    void SendMessage(string message);\n}\n\npublic class EmailSender : IMessageSender\n{\n    public void SendMessage(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IMessageSender _messageSender;\n\n    public OrderService(IMessageSender messageSender)\n    {\n        _messageSender = messageSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _messageSender.SendMessage(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care who sends the message.\n\nEmail guy? Fine.  \nSMS guy? Fine.  \nFake test guy? Also fine.\n\nAs long as they implement `IMessageSender`, they\u2019re in the family.\n\n---\n\nThen somewhere else, usually in `Program.cs`, you tell C# who\u2019s who:\n\n```csharp\nbuilder.Services.AddScoped<IMessageSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThat means:\n\n> \u201cAny time somebody asks for `IMessageSender`, give \u2019em an `EmailSender`.\u201d\n\nThen ASP.NET Core handles the introductions.\n\nNo drama. No hardcoding. No class making shady backroom deals with `new EmailSender()`.\n\n---\n\nThe big idea:\n\n**Without dependency injection:**\n\n```csharp\nvar sender = new EmailSender();\n```\n\nYour class is choosing its own dependency.\n\n**With dependency injection:**\n\n```csharp\npublic OrderService(IMessageSender sender)\n```\n\nYour class gets handed what it needs.\n\n---\n\nWhy it matters:\n\n- **Loose coupling** \u2014 classes ain\u2019t glued together.\n- **Easier testing** \u2014 swap real services for fake ones.\n- **Cleaner code** \u2014 each class minds its own business.\n- **More flexible** \u2014 change implementations without rewriting everything.\n\nSo, gangster summary:\n\n> Dependency Injection is when your class doesn\u2019t hire its own crew.  \n> The boss hands it the right people, and everybody does their job without asking too many questions.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893275.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 640,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5094
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Aight, listen up.\n\n**Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call it `OrderService`. This class needs some help from another class, maybe `EmailSender`, to send emails.\n\nNow, the old-school way is `OrderService` goes out and gets its own guy:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThat\u2019s messy business.\n\n`OrderService` is now too tied up with `EmailSender`. If you wanna swap `EmailSender` for `SmsSender`, `FakeEmailSender`, or some fancy cloud email thing, you gotta crack open `OrderService` and change the code.\n\nThat\u2019s bad for business.\n\n---\n\nDependency Injection says:\n\n> \u201cDon\u2019t go get your own crew. I\u2019ll send you the crew you need.\u201d\n\nSo instead of `OrderService` creating `EmailSender`, you **inject** it from the outside.\n\nLike this:\n\n```csharp\npublic interface IMessageSender\n{\n    void SendMessage(string message);\n}\n\npublic class EmailSender : IMessageSender\n{\n    public void SendMessage(string message)\n    {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n}\n\npublic class OrderService\n{\n    private readonly IMessageSender _messageSender;\n\n    public OrderService(IMessageSender messageSender)\n    {\n        _messageSender = messageSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _messageSender.SendMessage(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care who sends the message.\n\nEmail guy? Fine.  \nSMS guy? Fine.  \nFake test guy? Also fine.\n\nAs long as they implement `IMessageSender`, they\u2019re in the family.\n\n---\n\nThen somewhere else, usually in `Program.cs`, you tell C# who\u2019s who:\n\n```csharp\nbuilder.Services.AddScoped<IMessageSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThat means:\n\n> \u201cAny time somebody asks for `IMessageSender`, give \u2019em an `EmailSender`.\u201d\n\nThen ASP.NET Core handles the introductions.\n\nNo drama. No hardcoding. No class making shady backroom deals with `new EmailSender()`.\n\n---\n\nThe big idea:\n\n**Without dependency injection:**\n\n```csharp\nvar sender = new EmailSender();\n```\n\nYour class is choosing its own dependency.\n\n**With dependency injection:**\n\n```csharp\npublic OrderService(IMessageSender sender)\n```\n\nYour class gets handed what it needs.\n\n---\n\nWhy it matters:\n\n- **Loose coupling** \u2014 classes ain\u2019t glued together.\n- **Easier testing** \u2014 swap real services for fake ones.\n- **Cleaner code** \u2014 each class minds its own business.\n- **More flexible** \u2014 change implementations without rewriting everything.\n\nSo, gangster summary:\n\n> Dependency Injection is when your class doesn\u2019t hire its own crew.  \n> The boss hands it the right people, and everybody does their job without asking too many questions.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 640,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5094
+  },
+  "run_profile": "scaleup"
+}

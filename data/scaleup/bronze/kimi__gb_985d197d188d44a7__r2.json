@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:14:26.149931+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27229a042abf104cb42825",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on historical pirate leadership practices and the spirit of classic piracy, here's what I'd say to my crew to motivate them to search for hidden treasure:\n\n---\n\n**\"Gather 'round, ye sea dogs! Listen well to yer captain's words!**\n\n*I see the hunger in yer eyes\u2014the hunger for gold, for freedom, for a life worth the tellin'! We've sailed through storms that'd make lesser men weep, fought battles that'd turn a navy captain pale, and here we stand\u2014*alive* and *thirsty*!*\n\n*Now, I hold in me hand a map\u2014aye, a true map, stained with the blood of those who died to protect its secret. They say this treasure's cursed. They say it can't be found. **Well, I say curses are for those too weak to take what's theirs!***\n\n*Here's the deal, me hearties\u2014and it's a fair one, for ye sail with a fair captain. **Every man jack of ye gets an equal share of what we find.** The cook, the carpenter, the swab who just joined us last port\u2014equal shares! No navy captain offers ye that, do he? In the King's service, ye get nothin' but floggin' and empty pockets. **Here, ye get RICH!***\n\n*But hear this\u2014it won't come easy. There'll be traps laid by dead men's hands. There'll be rivals who'd cut our throats for a glance at this map. The jungle'll be thick, the caves dark, the water treacherous. **So what?** The rougher the seas, the smoother we sail, I always say!*\n\n*Think on it, lads\u2014think of the taverns where ye'll be *buyin'* the drinks instead of beggin' 'em! Think of the fine coats, the warm beds, the *respect* in folks' eyes when they whisper, *'There goes a man who sailed with Captain [Name], who found the lost treasure of [Legend]!'***\n\n*This is our moment. Our *destiny*. The devil himself knows where his treasure lies, and he expects weak men to come for it. **Let's disappoint the devil, shall we?***\n\n*Now\u2014**who's with me?** Who'll follow the Black Flag to glory and gold? Who'll be rich or *damn well die tryin'*?*\n\n***Raise yer cutlasses and give me an 'ARRRR!' that shakes the heavens!\"***\n\n---\n\n**Key motivational tactics used (based on historical pirate practices):**\n\n| Tactic | Why It Works |\n|--------|-------------|\n| **Equal profit-sharing** | Unlike navy or merchant ships, pirates democratically split loot\u2014massive incentive |\n| **Freedom vs. oppression** | Contrasting pirate liberty with the harsh discipline of \"legitimate\" service |\n| **Shared risk & glory** | Building camaraderie through collective identity |\n| **Tangible vision** | Painting vivid pictures of the reward (taverns, respect, comfort) |\n| **Challenge as opportunity** | Reframing danger as proof of their toughness |\n| **Call to action** | Demanding immediate, vocal commitment |\n\nAs the historical approach to pirate leadership suggests, the most successful captains combined **vision, fair reward, and boldness**\u2014plus, as one source notes, \"don't forget the rum\" for celebration after victory!\n\n---\n\nSources:\n1. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y\n2. https://generalleadership.com/pirate/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://quotesanity.com/beidou-quotes/\n5. https://punscope.com/captain-puns/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949658,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 823,
+        "prompt_tokens": 3030,
+        "total_tokens": 3853,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a272299aafc",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1c8d92d06a272299680f160001f030b1\"},\"usage\":{\"total_tokens\":2865}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a272299aafc",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1c8d92d06a272299680f160001f030b1\"},\"usage\":{\"total_tokens\":2865}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1c8d92d06a272299680f160001f030b1\"},\"usage\":{\"total_tokens\":2865}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on historical pirate leadership practices and the spirit of classic piracy, here's what I'd say to my crew to motivate them to search for hidden treasure:\n\n---\n\n**\"Gather 'round, ye sea dogs! Listen well to yer captain's words!**\n\n*I see the hunger in yer eyes\u2014the hunger for gold, for freedom, for a life worth the tellin'! We've sailed through storms that'd make lesser men weep, fought battles that'd turn a navy captain pale, and here we stand\u2014*alive* and *thirsty*!*\n\n*Now, I hold in me hand a map\u2014aye, a true map, stained with the blood of those who died to protect its secret. They say this treasure's cursed. They say it can't be found. **Well, I say curses are for those too weak to take what's theirs!***\n\n*Here's the deal, me hearties\u2014and it's a fair one, for ye sail with a fair captain. **Every man jack of ye gets an equal share of what we find.** The cook, the carpenter, the swab who just joined us last port\u2014equal shares! No navy captain offers ye that, do he? In the King's service, ye get nothin' but floggin' and empty pockets. **Here, ye get RICH!***\n\n*But hear this\u2014it won't come easy. There'll be traps laid by dead men's hands. There'll be rivals who'd cut our throats for a glance at this map. The jungle'll be thick, the caves dark, the water treacherous. **So what?** The rougher the seas, the smoother we sail, I always say!*\n\n*Think on it, lads\u2014think of the taverns where ye'll be *buyin'* the drinks instead of beggin' 'em! Think of the fine coats, the warm beds, the *respect* in folks' eyes when they whisper, *'There goes a man who sailed with Captain [Name], who found the lost treasure of [Legend]!'***\n\n*This is our moment. Our *destiny*. The devil himself knows where his treasure lies, and he expects weak men to come for it. **Let's disappoint the devil, shall we?***\n\n*Now\u2014**who's with me?** Who'll follow the Black Flag to glory and gold? Who'll be rich or *damn well die tryin'*?*\n\n***Raise yer cutlasses and give me an 'ARRRR!' that shakes the heavens!\"***\n\n---\n\n**Key motivational tactics used (based on historical pirate practices):**\n\n| Tactic | Why It Works |\n|--------|-------------|\n| **Equal profit-sharing** | Unlike navy or merchant ships, pirates democratically split loot\u2014massive incentive |\n| **Freedom vs. oppression** | Contrasting pirate liberty with the harsh discipline of \"legitimate\" service |\n| **Shared risk & glory** | Building camaraderie through collective identity |\n| **Tangible vision** | Painting vivid pictures of the reward (taverns, respect, comfort) |\n| **Challenge as opportunity** | Reframing danger as proof of their toughness |\n| **Call to action** | Demanding immediate, vocal commitment |\n\nAs the historical approach to pirate leadership suggests, the most successful captains combined **vision, fair reward, and boldness**\u2014plus, as one source notes, \"don't forget the rum\" for celebration after victory!\n\n---\n\nSources:\n1. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y\n2. https://generalleadership.com/pirate/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://quotesanity.com/beidou-quotes/\n5. https://punscope.com/captain-puns/",
+  "usage": {
+    "completion_tokens": 823,
+    "prompt_tokens": 3030,
+    "total_tokens": 3853,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

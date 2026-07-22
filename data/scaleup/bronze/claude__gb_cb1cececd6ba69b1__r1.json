@@ -1,0 +1,67 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "claude",
+  "run_index": 1,
+  "model_requested": "claude-sonnet-4-6",
+  "model_served": "claude-sonnet-4-6",
+  "timestamp_utc": "2026-06-07T20:24:33.268648+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 2048,
+    "tools": [
+      {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 5
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "msg_01NtLZupDwTzriBDz4wnqi8i",
+    "container": null,
+    "content": [
+      {
+        "citations": null,
+        "text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related groups** is significantly different from zero.\n\n---\n\n## \ud83d\udccc When to Use It\n\nUse a paired samples t-test when:\n\n* You have **two measurements from the same subject** (e.g., before and after a treatment)\n* You have **matched pairs** of subjects (e.g., twins, siblings, or matched controls)\n* The two groups are **not independent** of each other\n\n---\n\n## \ud83d\udcd0 Hypotheses\n\n| | Statement |\n|---|---|\n| **Null Hypothesis (H\u2080)** | The mean difference between paired observations = 0 (\u00b5_d = 0) |\n| **Alternative Hypothesis (H\u2081)** | The mean difference \u2260 0 (two-tailed), > 0, or < 0 (one-tailed) |\n\n---\n\n## \ud83e\uddee Formula\n\nThe test statistic is:\n\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\nWhere:\n\n| Symbol | Meaning |\n|---|---|\n| $\\bar{d}$ | Mean of the differences between paired observations |\n| $s_d$ | Standard deviation of the differences |\n| $n$ | Number of pairs |\n| $s_d / \\sqrt{n}$ | Standard error of the differences |\n\n---\n\n## \ud83d\udd22 Step-by-Step Process\n\n1. **Calculate the difference** (d) for each pair: $d_i = X_{1i} - X_{2i}$\n2. **Calculate the mean difference**: $\\bar{d} = \\frac{\\sum d_i}{n}$\n3. **Calculate the standard deviation** of the differences ($s_d$)\n4. **Calculate the t-statistic** using the formula above\n5. **Determine degrees of freedom**: $df = n - 1$\n6. **Find the p-value** and compare to your significance level (\u03b1, usually 0.05)\n7. **Make a decision**: Reject H\u2080 if p-value < \u03b1\n\n---\n\n## \u2705 Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Dependent pairs** | Observations must be paired/related |\n| **Continuous data** | The variable must be measured on an interval or ratio scale |\n| **Normality** | The *differences* should be approximately normally distributed |\n| **No significant outliers** | Outliers in differences can distort results |\n| **Random sampling** | Data should be a random sample |\n\n> \ud83d\udca1 For large samples (n > 30), the Central Limit Theorem relaxes the normality assumption.\n\n---\n\n## \ud83d\udcca Example\n\nA researcher wants to test whether a training program improves test scores.\n\n| Student | Before | After | Difference (d) |\n|---|---|---|---|\n| 1 | 70 | 80 | 10 |\n| 2 | 65 | 70 | 5 |\n| 3 | 80 | 85 | 5 |\n| 4 | 75 | 90 | 15 |\n| 5 | 60 | 68 | 8 |\n\n* $\\bar{d}$ = (10+5+5+15+8)/5 = **8.6**\n* $s_d$ \u2248 **3.91**\n* $t = \\frac{8.6}{3.91/\\sqrt{5}} = \\frac{8.6}{1.748} \u2248 \\textbf{4.92}$\n* $df = 5 - 1 = 4$\n* p-value \u2248 **0.008** < 0.05 \u2192 **Reject H\u2080**\n\n\u2705 Conclusion: The training program **significantly improved** test scores.\n\n---\n\n## \ud83c\udd9a Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---|---|---|\n| Groups | Related/matched | Separate/unrelated |\n| Data structure | Same subject, two measurements | Different subjects |\n| Variability | Reduced (controls individual differences) | Higher |\n| Power | Generally **higher** | Generally lower |\n\n---\n\n## \ud83d\udee0\ufe0f Software Commands\n\n| Software | Command |\n|---|---|\n| **R** | `t.test(before, after, paired = TRUE)` |\n| **Python** | `scipy.stats.ttest_rel(before, after)` |\n| **SPSS** | Analyze \u2192 Compare Means \u2192 Paired-Samples T Test |\n| **Excel** | Data Analysis \u2192 t-Test: Paired Two Sample for Means |\n\n---\n\nWould you like help with a **specific dataset**, **interpreting output**, or understanding any part in more detail? \ud83d\ude0a",
+        "type": "text"
+      }
+    ],
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2219,
+      "output_tokens": 1183,
+      "output_tokens_details": null,
+      "server_tool_use": null,
+      "service_tier": "standard"
+    }
+  },
+  "answer_text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related groups** is significantly different from zero.\n\n---\n\n## \ud83d\udccc When to Use It\n\nUse a paired samples t-test when:\n\n* You have **two measurements from the same subject** (e.g., before and after a treatment)\n* You have **matched pairs** of subjects (e.g., twins, siblings, or matched controls)\n* The two groups are **not independent** of each other\n\n---\n\n## \ud83d\udcd0 Hypotheses\n\n| | Statement |\n|---|---|\n| **Null Hypothesis (H\u2080)** | The mean difference between paired observations = 0 (\u00b5_d = 0) |\n| **Alternative Hypothesis (H\u2081)** | The mean difference \u2260 0 (two-tailed), > 0, or < 0 (one-tailed) |\n\n---\n\n## \ud83e\uddee Formula\n\nThe test statistic is:\n\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\nWhere:\n\n| Symbol | Meaning |\n|---|---|\n| $\\bar{d}$ | Mean of the differences between paired observations |\n| $s_d$ | Standard deviation of the differences |\n| $n$ | Number of pairs |\n| $s_d / \\sqrt{n}$ | Standard error of the differences |\n\n---\n\n## \ud83d\udd22 Step-by-Step Process\n\n1. **Calculate the difference** (d) for each pair: $d_i = X_{1i} - X_{2i}$\n2. **Calculate the mean difference**: $\\bar{d} = \\frac{\\sum d_i}{n}$\n3. **Calculate the standard deviation** of the differences ($s_d$)\n4. **Calculate the t-statistic** using the formula above\n5. **Determine degrees of freedom**: $df = n - 1$\n6. **Find the p-value** and compare to your significance level (\u03b1, usually 0.05)\n7. **Make a decision**: Reject H\u2080 if p-value < \u03b1\n\n---\n\n## \u2705 Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Dependent pairs** | Observations must be paired/related |\n| **Continuous data** | The variable must be measured on an interval or ratio scale |\n| **Normality** | The *differences* should be approximately normally distributed |\n| **No significant outliers** | Outliers in differences can distort results |\n| **Random sampling** | Data should be a random sample |\n\n> \ud83d\udca1 For large samples (n > 30), the Central Limit Theorem relaxes the normality assumption.\n\n---\n\n## \ud83d\udcca Example\n\nA researcher wants to test whether a training program improves test scores.\n\n| Student | Before | After | Difference (d) |\n|---|---|---|---|\n| 1 | 70 | 80 | 10 |\n| 2 | 65 | 70 | 5 |\n| 3 | 80 | 85 | 5 |\n| 4 | 75 | 90 | 15 |\n| 5 | 60 | 68 | 8 |\n\n* $\\bar{d}$ = (10+5+5+15+8)/5 = **8.6**\n* $s_d$ \u2248 **3.91**\n* $t = \\frac{8.6}{3.91/\\sqrt{5}} = \\frac{8.6}{1.748} \u2248 \\textbf{4.92}$\n* $df = 5 - 1 = 4$\n* p-value \u2248 **0.008** < 0.05 \u2192 **Reject H\u2080**\n\n\u2705 Conclusion: The training program **significantly improved** test scores.\n\n---\n\n## \ud83c\udd9a Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---|---|---|\n| Groups | Related/matched | Separate/unrelated |\n| Data structure | Same subject, two measurements | Different subjects |\n| Variability | Reduced (controls individual differences) | Higher |\n| Power | Generally **higher** | Generally lower |\n\n---\n\n## \ud83d\udee0\ufe0f Software Commands\n\n| Software | Command |\n|---|---|\n| **R** | `t.test(before, after, paired = TRUE)` |\n| **Python** | `scipy.stats.ttest_rel(before, after)` |\n| **SPSS** | Analyze \u2192 Compare Means \u2192 Paired-Samples T Test |\n| **Excel** | Data Analysis \u2192 t-Test: Paired Two Sample for Means |\n\n---\n\nWould you like help with a **specific dataset**, **interpreting output**, or understanding any part in more detail? \ud83d\ude0a",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2219,
+    "output_tokens": 1183,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard"
+  },
+  "run_profile": "scaleup"
+}

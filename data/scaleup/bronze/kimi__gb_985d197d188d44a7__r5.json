@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_985d197d188d44a7",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:15:03.614894+00:00",
+  "query_text": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2722c0baccb30f61460637",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "As a pirate captain, I'd rally my crew with a speech that combines the promise of riches, the spirit of adventure, and the bonds of brotherhood. Here's what I'd say:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and sea wolves!**\n\nListen well, for I speak of more than gold tonight\u2014I speak of *destiny*!\n\nYer bellies may be empty now, yer boots worn thin from deck planks, but I hold in me hands a map that whispers of **fortunes beyond counting**! Chests of Spanish doubloons, jewels fit for kings, and enough silver to sink the Royal Navy twice over! **Only the devil and I know the whereabouts of this treasure**, and I intend to outlive the devil himself!\n\nBut mark me words\u2014this ain't just about the loot. Every man here signed articles knowing the code: **we share the wealth, every last man jack of us!** No captain hoards while his crew starves. The more we haul, the richer *every* mother's son becomes! Aye, there'll be rum enough to float the ship home, and land for any man who wants to quit the sea a *gentleman*!\n\nThe voyage ahead? **Rough seas make for smooth sailing**, says the old wisdom. There'll be storms that test our timber, reefs that hunger for our hull, and maybe\u2014*maybe*\u2014a navy frigate or two thinking us easy prey. But I ask ye: **why join the navy if ye can be a pirate?** We ain't slaves to kings and their petty laws! We are *free men*, masters of our fate, captains of our own souls!\n\nYer captain has fed ye when stores ran low, trained ye to fight and sail, and shared what little we had. Now I ask ye to trust me one voyage more. **Every pirate believes the next island holds something amazing**\u2014and this time, that belief is *true*!\n\nSo hoist the black flag high! Let 'em know we come! For **not all treasure is silver and gold, mate**\u2014the real treasure is the fortune we forge together, the stories we'll tell, and the day we split that hoard and every man here goes home *rich beyond his wildest dreams*!\n\n**Who's with me? Say 'Aye' and let's take what's ours!**\"\n\n---\n\n*Throws open the rum barrel*\n\n*\"To plunder, to freedom, and to *us*! Now **set sail for glory!**\"*\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949697,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 635,
+        "prompt_tokens": 3583,
+        "total_tokens": 4218,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "As a pirate captain, what would you say to your crew to motivate them to search for hidden treasure?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2722c01ff3",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9a8d3b466a2722c04f50a50001f1d414\"},\"usage\":{\"total_tokens\":3415}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2722c01ff3",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9a8d3b466a2722c04f50a50001f1d414\"},\"usage\":{\"total_tokens\":3415}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9a8d3b466a2722c04f50a50001f1d414\"},\"usage\":{\"total_tokens\":3415}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "As a pirate captain, I'd rally my crew with a speech that combines the promise of riches, the spirit of adventure, and the bonds of brotherhood. Here's what I'd say:\n\n---\n\n**\"Gather 'round, ye scurvy dogs and sea wolves!**\n\nListen well, for I speak of more than gold tonight\u2014I speak of *destiny*!\n\nYer bellies may be empty now, yer boots worn thin from deck planks, but I hold in me hands a map that whispers of **fortunes beyond counting**! Chests of Spanish doubloons, jewels fit for kings, and enough silver to sink the Royal Navy twice over! **Only the devil and I know the whereabouts of this treasure**, and I intend to outlive the devil himself!\n\nBut mark me words\u2014this ain't just about the loot. Every man here signed articles knowing the code: **we share the wealth, every last man jack of us!** No captain hoards while his crew starves. The more we haul, the richer *every* mother's son becomes! Aye, there'll be rum enough to float the ship home, and land for any man who wants to quit the sea a *gentleman*!\n\nThe voyage ahead? **Rough seas make for smooth sailing**, says the old wisdom. There'll be storms that test our timber, reefs that hunger for our hull, and maybe\u2014*maybe*\u2014a navy frigate or two thinking us easy prey. But I ask ye: **why join the navy if ye can be a pirate?** We ain't slaves to kings and their petty laws! We are *free men*, masters of our fate, captains of our own souls!\n\nYer captain has fed ye when stores ran low, trained ye to fight and sail, and shared what little we had. Now I ask ye to trust me one voyage more. **Every pirate believes the next island holds something amazing**\u2014and this time, that belief is *true*!\n\nSo hoist the black flag high! Let 'em know we come! For **not all treasure is silver and gold, mate**\u2014the real treasure is the fortune we forge together, the stories we'll tell, and the day we split that hoard and every man here goes home *rich beyond his wildest dreams*!\n\n**Who's with me? Say 'Aye' and let's take what's ours!**\"\n\n---\n\n*Throws open the rum barrel*\n\n*\"To plunder, to freedom, and to *us*! Now **set sail for glory!**\"*\n\n---\n\nSources:\n1. https://generalleadership.com/pirate/\n2. https://switchedonsailing.com/10-uncommon-pirate-quotes-to-inspire-you/\n3. https://sailing-blog.nauticed.org/pirate-facts-quotes/\n4. https://www.nightofmystery.com/blog/funny-pirate-sayings/?srsltid=AfmBOorLdFTC1Mc39ojBN68pCizjdUF5r2hezMdAG7v9MHxMrMqZgZ-y",
+  "usage": {
+    "completion_tokens": 635,
+    "prompt_tokens": 3583,
+    "total_tokens": 4218,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

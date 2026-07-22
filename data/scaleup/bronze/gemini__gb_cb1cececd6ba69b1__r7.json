@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "gemini",
+  "run_index": 7,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T20:29:05.450883+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 20:29:05 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=10189",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "A **paired samples t-test** (also known as a *dependent samples t-test*) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is statistically significant. \n\nIn this test, the same subjects are measured twice (e.g., a pre-test and a post-test), or two closely matched subjects are paired together.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one group** of participants and you are measuring them under **two different conditions**, or at **two different times**. \n\n**Common Scenarios:**\n* **Pre-test / Post-test:** Measuring blood pressure before starting a medication and again after six weeks on the medication.\n* **Two different conditions (Within-subjects):** Testing reaction times of the same participants when they are tired versus when they are well-rested.\n* **Matched pairs:** Pairing participants based on similar characteristics (e.g., age, IQ) and giving one person Treatment A and the other Treatment B.\n\n---\n\n### 2. Hypotheses\nThe paired t-test evaluates the differences ($d$) between the pairs of data points.\n\n* **Null Hypothesis ($H_0$):** The mean difference between the paired observations is equal to zero ($\\mu_d = 0$). *This means the treatment or condition had no effect.*\n* **Alternative Hypothesis ($H_a$):** The mean difference between the paired observations is not equal to zero ($\\mu_d \\neq 0$). *This means there is a statistically significant change or difference.*\n\n---\n\n### 3. Assumptions\nFor the results of a paired t-test to be valid, your data must meet the following assumptions:\n1. **Continuous Dependent Variable:** The data must be measured on an interval or ratio scale (e.g., height, weight, test scores, time).\n2. **Dependent / Paired Groups:** The two observations must come from the same subject or matched pairs.\n3. **No Significant Outliers:** There should be no extreme outliers in the differences between the paired values.\n4. **Normality:** The *differences* between the paired values should be approximately normally distributed. (This is especially important for small sample sizes; if $n > 30$, the test is relatively robust to violations of normality).\n\n---\n\n### 4. Formula\nThe paired t-test looks at the mean of the differences ($\\bar{d}$) and compares it to the standard error of those differences.\n\n$$t = \\frac{\\bar{d} - \\mu_d}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n* $\\bar{d}$ = the mean of the differences between the paired observations.\n* $\\mu_d$ = the hypothesized mean difference (usually assumed to be $0$).\n* $s_d$ = the standard deviation of the differences.\n* $n$ = the number of pairs (sample size).\n* **Degrees of Freedom ($df$)** = $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nImagine you want to test whether a 4-week training program improves employees' typing speed (words per minute, WPM). You measure 5 employees before and after the training.\n\n| Employee | Before Training (X) | After Training (Y) | Difference ($d = Y - X$) |\n| :--- | :--- | :--- | :--- |\n| A | 50 | 55 | +5 |\n| B | 62 | 65 | +3 |\n| C | 45 | 52 | +7 |\n| D | 55 | 58 | +3 |\n| E | 60 | 67 | +7 |\n\n**Step 1: Calculate the differences ($d$)**\n* Differences: $5, 3, 7, 3, 7$\n\n**Step 2: Find the mean of the differences ($\\bar{d}$)**\n* $\\bar{d} = \\frac{5 + 3 + 7 + 3 + 7}{5} = \\frac{25}{5} = 5$\n\n**Step 3: Calculate the standard deviation of the differences ($s_d$)**\n* First, find the variance of the differences:\n  $$\\text{Variance} = \\frac{\\sum (d - \\bar{d})^2}{n - 1}$$\n  $$\\text{Variance} = \\frac{(5-5)^2 + (3-5)^2 + (7-5)^2 + (3-5)^2 + (7-5)^2}{5 - 1}$$\n  $$\\text{Variance} = \\frac{0 + 4 + 4 + 4 + 4}{4} = \\frac{16}{4} = 4$$\n* Standard Deviation ($s_d$) = $\\sqrt{4} = 2$\n\n**Step 4: Calculate the $t$-statistic**\n* $n = 5$\n* $t = \\frac{\\bar{d} - 0}{s_d / \\sqrt{n}} = \\frac{5}{2 / \\sqrt{5}} = \\frac{5}{2 / 2.236} = \\frac{5}{0.894} \\approx 5.59$\n\n**Step 5: Determine significance**\n* Degrees of Freedom ($df$) = $5 - 1 = 4$\n* Look up a $t$-distribution table for $df = 4$ and a two-tailed significance level ($\\alpha = 0.05$). The critical $t$-value is **2.776**.\n* Since our calculated $t$ (5.59) is **greater** than the critical value (2.776), we reject the null hypothesis.\n\n**Conclusion:** The training program significantly improved typing speeds.\n\n---\n\n### 6. What if Assumptions are Violated?\nIf your differences are heavily skewed or contain major outliers (meaning the assumption of normality is violated), you should not use a paired t-test. \n\nInstead, use a non-parametric alternative: the **Wilcoxon Signed-Rank Test**. This test compares the medians rather than the means and does not require a normal distribution.",
+              "thought": null,
+              "thought_signature": "ErMXCrAXAQw51scwrYsVYYZGxhrADo45jSfbdiPfhDnJUpVuPv5fHvCMQjnfmo-72N9QPjUavF9-XIVbb44ERePX0on7kyca4Z5DweYfyCJ2CWB8oE2y0XxkIS919OoS2kQ7T4abZzC0m8MdHFxKPTWoURhUX-7-NGup6XxskB_X-uG2_UG1gT1TX7vs4ETiOh92TUwaCbLwoOp0BhyJTb6wm0IcnHv4Jp-tcWQK-rJSVOqcZD8ogp3EXUWQvfFl047JrbnYm8g5IFx5MYEx5i6yUZPuq8YOoF6JKJ1aS_3HVQ0U8Bo7CM3nFWXNGwoYt9BivX84T_lZh9qT4czc68QxUo9aOJjQxtRe0oz3UvHWtPyJ4KM_qPe11805ma_ZjkXHmAl8Fv-67NOkExGUS3UUXnaEGEs5iW8UVxorT1nm3ZpaNqZ1nAeIy68xHSN4AdssVHzc9MZxpegBdntRwC-JINslZYBakPZPWE_dIpI1Nxfl_HfcK_chKcAl3jDEkAKFa4OlD6o1-VtaJoZhhE8VH1JG6yFsc4ZSEVjFcKylJcBSIxAvK94FighBhM14TZB7ODzhtvWkaWBhrGa1is5VKyzbU5QZ44qtLcuru4oSpvgZutJ-tT0omx2GSoXzjT-HksaOZ8z2nBRS2uqaQ-CMHjPykO2F_hSVJzOUbZKyMyodU4bPZUbWVV-wVfuowLqWmEmi-Qkp98HURkzDZNNs_vDIhzok1m0JNb7s_vbTgjaPSTgr3mXCKDcW5jgBkd0iwAfOT46Q8hizsjqF3w9_SoHPGnZxPf5-DxFmfAEDTxOYiZq8ogrkzuDcTmJwrb-3XnyGuhu155rOAXvMDmfYgU-KtqdXUi3W58mZqXGg_dcPF_wa5QwNEij-vKDVkiR4RxjqIe3FPwTYVWek5nJfiO3elzVNiQrY6HGwJpFzfJrKTu725yqIFVzliIc-FDtMRknCDXUBsTC5eO8pMiTCotm6HDstBB5SWHbrxdYeLb3HQ3w-96wPgnykoNwGrCAeQU0OWKIk2ZRm-PQj8eoWfSiqRb_y8OIZfiNZQLe4eeUqOK1M7HnAjDpyMJi1XDSMUfKYMmKyR83x7lpU4hexjrDxeeKwuWe999Qn6Us7xuVS2duC4rImDanhlsZ7PnkFiIspkT5EzVYbxkELh8PN8Xl86M7YJWEmn0S9mZznBcAnR58cDsygL4ViGvSXBxlKh3Z_qCtTQaxjamZJrehXIadEM6bX3TEHWUhf-dEox_gzeDWsa_X1cHmY_y2JEZeb4MmRXP-f8O--Z7LQYBbItT32gJDWz73r7kU3kJ4f7maYLTEm4a0iVeH5x25zK9Kxb7ewAAjamvyyrjXIgdB_mbg6Izaaaqg6KExf0DNyWoE_jjCNHPJuGA1iwZZ9mz1LzH9xWd9YukzJ3YGHbjW_IYt0sLkreL5nz8Ytvl1qjVdbB1yWqeCmro14lJBy4nYcoypYeK-XHu-mmp3HiBiq7yBX-XctXjOqYHt3oYrpnceWZxUX2zjYdIHIbSEOnGAydyu3zLlLSP3K9JvwWWhOTiGprTDBmCh-hPyOKYeFvjs6ck1aGG8_WD3kDf7HlHP29FuEqOUb_tPvh-5pJVCvCZrA9o43hfD7K6AtYK21F8BL96qLoGWoHsC6_f7srMdYOyoHpa-NBvPIgQ_t4vmU1SCpPZlsgDvPQlxXmtT4wSNcRnsfa18q-nEtaoefpRf4W_t2XycvX0akaUOyJX0ID8D99HZoA4mp8YJbxaNeWRe6l_Baa5uOMvPlsPUmxbFwqA-4tRNuh3RGx1U7pOSJTnN5ZJRok7Wb1OcESObzElUJa5oxcbGvbag2d2atkKv6SSzNQcddS_a3m1PRQlv5HxzDRxZYJuj5eF_XrPs5yjz3oaJvw5omtcbMVeeETIekwjty2lWDM14JSEYUWabjejTlrVQRsZEYSRVD8e4UqkRBO1siVmaXdNjOHDY9InlsllFfMOYjvPC2ysWQTj4wdbzoxoAtGhuetkT-Qji4DBZLH32QDMVj6YFHv_gMV5qkyXjWlW8xUQvjr4i3LUUwfA1FzBrygHbsDPhFb43gJoMlhJGcwqLc-DrskbwSs2VipUmukhkpjEmTM-LpcEjkwC6HPRzhW5HpaBVnIFPwW6fpJXwkD6u75D1acI5kiUXxja2Dw9DJpColdycahH55DoJ1vFhw5LfJcU_PYb3ouqcRLM1w49J5BxQGDDM5k63A5Onrh_zi9oXrJaDJ5aFmmcZS-8ORayhLiXp-gwceEKi1S7V0OMl24geVaX-vGu2wjzKzpQRFul2YYedJunurxiRi0_ytsDo3yHmeg4DzPu1RKR6nsERPuFVHo-DYFmBQzjARRyYHqGBtRY_NmUrTfXnC_SmUiyU7-CNrzBxI213IjyDo2lini8dBTDrvak7pDJPzwPL3OfHvnDtDe49tjSjBIszk6lUUkjohT8jDq4ngQkjiCnZUd9xki7OCr-U38JY6wmE0NGud7L9WZvMoZELSp5_hz-LrhtpR4uCl3_9JCH7Hy24geEUCXLVoalgDEVTFJpSRGqFlLIKpiHuCmDTWajJudWRP0b6TW-m1UvavP0ZE3HQOMbBGo7H6HjWklvkNU4iHWebyLusNMfcXa8KGRlf3QeU1Tc0vGx2Wr9zxdBX0w7IgiSxsqe3ZzDZ5-N3R-6FWxjjEJN0yfloAYQJN_8Fd3XqDXtUKYMnxwNxszGkySMD-CLPW4o4Qm-IJwl9VDOG0Ui1iYKnQ1aH95ARw51tTA7RmUKPtlFws5uF14XMEsc9P9LypMAT8GcuFYNvCz8lDJQkqdmhAGHZ-SiJGchRdADV-4ffpj9JBJ9oeUaEzQEoGj_AyulANIJp9mqMysa9M4Ww7_kn_tWZCu0M4-JiL9qzBiN1rKaXvrkl4pNRbcyFNjeFadto1MNtOWlozfg6bykMf3wr9STKl2k1Raa2imVCfYSY-wpx8X3uxUOuzzTN4dySFn9cTKULp7cipdCO5tEKJyvmaqr8fs-pGhjV2nSUrCZGQkqq6K3EWIX8MsNUU3SOzfCa56J0svwfpb2q5nEGGglONP5AbWloqye32-s2Adkym_TjJrW5fFXcR-NeSgZi0vcDLXwDHs5dgH5CVoe5yi6i31i3Kh3p9UHuDkOVIQ6okqRcBCwApK68XJAll1onBlLZ1NFhY7oTWZ2ZRjcRAxek3_7Fp78IPAGKa8jrIjjnz2FpbZI9Bh2DBZl5JuEcNh_7EP25SI6hg6w_yp13i_1TW9KmcwurwTgJUPDXQerO8MfbZ_Wqr0Bxm9nbrRsKCDzDDLFyuQowaRMSmL0qttVvYnQQ93QSGwJ-WBcs2ROEJSGRWTkk7nmdQY5gw08Jkc6n2pDfNpg1JFb8OD0Chx60lW90A3vn2_O8TjXqsi_wn9-qXK37re1KoGsaBbu7l5qI7p8dR5CgfMUPolwMkwnegIXBS4AeqRGfMY1wWCPF_jExuqAUmHcK71Y7TUm30lyPC8JFP9JKaMU-0mQWal9ijHHpP5tUGx6A5laGsSWxl3syKYApVYv6Exi_5oycZuBV5bPcJDWLU_7BOB2XjFYsV93jwSeHzg2Vf0UfafThtUt2CQTMWWSVm9h90lrW--u9rtZvgjTNyT2mwur9JGwn2tROd-0c20AiNqkyZyHAYe1ZKumUD5Y5KEO0kP0dbZE0OrtMu33m1QIB3WFPYQlykbb3x9bPM-ygjsqhFiwVvez3i62wSJQI-vsPBxqvqtbgXqY83SDDNtF3d9dMKyvKMVns1Y-H8ECO4XmyKOQ0AL0-8lVLL8BYnD191r7B1_HU6jBsKBbXVqAw26aecAOO_lnLhpaaS6PepZWw2QpkQPSOK08mMckG-ZVDiUi_NKDCLPA69GfEPQlRaepBB5o2oTxpK5NrP2_jljZVMOlgrxx3MRZotAJc3oaAChuK1d9Yz-G5J86g0uLVDQGqUJPY80mo7tcgVcw==",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "h9QlavL3EtbVxs0PxOPbgQE",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1372,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 6,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 6
+        }
+      ],
+      "thoughts_token_count": 794,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2172,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "A **paired samples t-test** (also known as a *dependent samples t-test*) is a statistical procedure used to determine whether the mean difference between two sets of paired observations is statistically significant. \n\nIn this test, the same subjects are measured twice (e.g., a pre-test and a post-test), or two closely matched subjects are paired together.\n\n---\n\n### 1. When to Use a Paired Samples T-Test\nYou should use this test when you have **one group** of participants and you are measuring them under **two different conditions**, or at **two different times**. \n\n**Common Scenarios:**\n* **Pre-test / Post-test:** Measuring blood pressure before starting a medication and again after six weeks on the medication.\n* **Two different conditions (Within-subjects):** Testing reaction times of the same participants when they are tired versus when they are well-rested.\n* **Matched pairs:** Pairing participants based on similar characteristics (e.g., age, IQ) and giving one person Treatment A and the other Treatment B.\n\n---\n\n### 2. Hypotheses\nThe paired t-test evaluates the differences ($d$) between the pairs of data points.\n\n* **Null Hypothesis ($H_0$):** The mean difference between the paired observations is equal to zero ($\\mu_d = 0$). *This means the treatment or condition had no effect.*\n* **Alternative Hypothesis ($H_a$):** The mean difference between the paired observations is not equal to zero ($\\mu_d \\neq 0$). *This means there is a statistically significant change or difference.*\n\n---\n\n### 3. Assumptions\nFor the results of a paired t-test to be valid, your data must meet the following assumptions:\n1. **Continuous Dependent Variable:** The data must be measured on an interval or ratio scale (e.g., height, weight, test scores, time).\n2. **Dependent / Paired Groups:** The two observations must come from the same subject or matched pairs.\n3. **No Significant Outliers:** There should be no extreme outliers in the differences between the paired values.\n4. **Normality:** The *differences* between the paired values should be approximately normally distributed. (This is especially important for small sample sizes; if $n > 30$, the test is relatively robust to violations of normality).\n\n---\n\n### 4. Formula\nThe paired t-test looks at the mean of the differences ($\\bar{d}$) and compares it to the standard error of those differences.\n\n$$t = \\frac{\\bar{d} - \\mu_d}{\\frac{s_d}{\\sqrt{n}}}$$\n\nWhere:\n* $\\bar{d}$ = the mean of the differences between the paired observations.\n* $\\mu_d$ = the hypothesized mean difference (usually assumed to be $0$).\n* $s_d$ = the standard deviation of the differences.\n* $n$ = the number of pairs (sample size).\n* **Degrees of Freedom ($df$)** = $n - 1$\n\n---\n\n### 5. Step-by-Step Example\nImagine you want to test whether a 4-week training program improves employees' typing speed (words per minute, WPM). You measure 5 employees before and after the training.\n\n| Employee | Before Training (X) | After Training (Y) | Difference ($d = Y - X$) |\n| :--- | :--- | :--- | :--- |\n| A | 50 | 55 | +5 |\n| B | 62 | 65 | +3 |\n| C | 45 | 52 | +7 |\n| D | 55 | 58 | +3 |\n| E | 60 | 67 | +7 |\n\n**Step 1: Calculate the differences ($d$)**\n* Differences: $5, 3, 7, 3, 7$\n\n**Step 2: Find the mean of the differences ($\\bar{d}$)**\n* $\\bar{d} = \\frac{5 + 3 + 7 + 3 + 7}{5} = \\frac{25}{5} = 5$\n\n**Step 3: Calculate the standard deviation of the differences ($s_d$)**\n* First, find the variance of the differences:\n  $$\\text{Variance} = \\frac{\\sum (d - \\bar{d})^2}{n - 1}$$\n  $$\\text{Variance} = \\frac{(5-5)^2 + (3-5)^2 + (7-5)^2 + (3-5)^2 + (7-5)^2}{5 - 1}$$\n  $$\\text{Variance} = \\frac{0 + 4 + 4 + 4 + 4}{4} = \\frac{16}{4} = 4$$\n* Standard Deviation ($s_d$) = $\\sqrt{4} = 2$\n\n**Step 4: Calculate the $t$-statistic**\n* $n = 5$\n* $t = \\frac{\\bar{d} - 0}{s_d / \\sqrt{n}} = \\frac{5}{2 / \\sqrt{5}} = \\frac{5}{2 / 2.236} = \\frac{5}{0.894} \\approx 5.59$\n\n**Step 5: Determine significance**\n* Degrees of Freedom ($df$) = $5 - 1 = 4$\n* Look up a $t$-distribution table for $df = 4$ and a two-tailed significance level ($\\alpha = 0.05$). The critical $t$-value is **2.776**.\n* Since our calculated $t$ (5.59) is **greater** than the critical value (2.776), we reject the null hypothesis.\n\n**Conclusion:** The training program significantly improved typing speeds.\n\n---\n\n### 6. What if Assumptions are Violated?\nIf your differences are heavily skewed or contain major outliers (meaning the assumption of normality is violated), you should not use a paired t-test. \n\nInstead, use a non-parametric alternative: the **Wilcoxon Signed-Rank Test**. This test compares the medians rather than the means and does not require a normal distribution.",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1372,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 6,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 6
+      }
+    ],
+    "thoughts_token_count": 794,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2172,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

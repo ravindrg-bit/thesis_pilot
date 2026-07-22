@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_3dfd19034e427687",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T14:11:12.100635+00:00",
+  "query_text": "free online auto repair estimates",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a257bf680bb89f256992b38",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best free online auto repair estimate tools available:\n\n## Top Free Online Auto Repair Estimate Tools\n\n### 1. **RepairPal Estimator**\nThe most widely recognized and trusted option. Enter your zip code to get fair pricing estimates for repairs from RepairPal Certified shops, with guaranteed prices for 30 days.\n\n### 2. **YourMechanic Estimates**\nProvides free instant auto repair and maintenance estimates with detailed price breakdowns showing parts and labor costs separately. You can also book a mobile mechanic to come to your home or office.\n\n### 3. **Otto (ottofixit.com)**\nAn AI-powered tool where you upload a photo of your car damage and get an instant repair estimate in under 30 seconds. Also helps you compare quotes from local shops, get deductible assistance, and connect with attorneys if needed. Claims 85% accuracy compared to final shop quotes.\n\n### 4. **Instant Estimator**\nA free online system that automatically assesses and costs cosmetic auto body and paint damage. You can submit photos for more precise quotes and get connected to up to 3 authorized auto body repair facilities in your area.\n\n### 5. **WhoCanFixMyCar (UK)**\nFree car repair cost calculator where you select your vehicle make/model and enter your postcode to get instant average repair costs and savings potential when booking through their platform.\n\n### 6. **FreeAutoMechanic.com**\nOffers free auto repair estimates for US cars and trucks from 1990-2013. Provides labor time guides that you can multiply by your local shop's hourly rate to estimate costs. Note: Response may take up to a week due to high demand.\n\n### 7. **Mechlance**\nA mobile mechanic network offering instant free estimates. Mechanics come to you, and the platform uses a secure escrow payment system. Claims customers save up to 50% on auto services.\n\n### 8. **City of Stars Collision Online Estimator**\nFree auto body repair estimates in minutes. Fill out a form with your vehicle details and damage description, and technicians respond with estimates, timelines, and next steps.\n\n### 9. **Certified Calculator Auto Repair Costs Calculator**\nA simple calculator tool where you input labor cost, parts cost, and tax rate to get a total repair cost estimate. Best for quick calculations when you already know component costs.\n\n---\n\n## Tips for Using These Tools\n\n- **Compare multiple estimates** \u2013 Prices can vary significantly between shops and regions\n- **Be specific about your vehicle** \u2013 Year, make, model, and even VIN can improve accuracy\n- **Upload photos when possible** \u2013 Visual damage assessment improves estimate precision\n- **Understand what's included** \u2013 Some estimates may not include diagnostic fees or hidden damage\n- **Check if estimates are binding** \u2013 Most free online estimates are for planning purposes only\n\n---\n\nSources:\n1. https://www.repairpal.com/estimator\n2. https://www.yourmechanic.com/estimates\n3. https://www.ottofixit.com/\n4. https://www.instantestimator.com/\n5. https://www.whocanfixmycar.com/car-service-cost-calculator\n6. https://www.freeautomechanic.com/free-auto-repair-estimates-online.html\n7. https://mechlance.com/\n8. https://cityofstarscollision.com/online-estimator-tool/\n9. https://certifiedcalculator.com/auto-repair-costs-calculator/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780841463,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 718,
+        "prompt_tokens": 8656,
+        "total_tokens": 9374,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "free online auto repair estimates"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a257bf5f1ab",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ca7133256a257bf54f50a50001ee271d\"},\"usage\":{\"total_tokens\":8509}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a257bf5f1ab",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ca7133256a257bf54f50a50001ee271d\"},\"usage\":{\"total_tokens\":8509}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ca7133256a257bf54f50a50001ee271d\"},\"usage\":{\"total_tokens\":8509}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best free online auto repair estimate tools available:\n\n## Top Free Online Auto Repair Estimate Tools\n\n### 1. **RepairPal Estimator**\nThe most widely recognized and trusted option. Enter your zip code to get fair pricing estimates for repairs from RepairPal Certified shops, with guaranteed prices for 30 days.\n\n### 2. **YourMechanic Estimates**\nProvides free instant auto repair and maintenance estimates with detailed price breakdowns showing parts and labor costs separately. You can also book a mobile mechanic to come to your home or office.\n\n### 3. **Otto (ottofixit.com)**\nAn AI-powered tool where you upload a photo of your car damage and get an instant repair estimate in under 30 seconds. Also helps you compare quotes from local shops, get deductible assistance, and connect with attorneys if needed. Claims 85% accuracy compared to final shop quotes.\n\n### 4. **Instant Estimator**\nA free online system that automatically assesses and costs cosmetic auto body and paint damage. You can submit photos for more precise quotes and get connected to up to 3 authorized auto body repair facilities in your area.\n\n### 5. **WhoCanFixMyCar (UK)**\nFree car repair cost calculator where you select your vehicle make/model and enter your postcode to get instant average repair costs and savings potential when booking through their platform.\n\n### 6. **FreeAutoMechanic.com**\nOffers free auto repair estimates for US cars and trucks from 1990-2013. Provides labor time guides that you can multiply by your local shop's hourly rate to estimate costs. Note: Response may take up to a week due to high demand.\n\n### 7. **Mechlance**\nA mobile mechanic network offering instant free estimates. Mechanics come to you, and the platform uses a secure escrow payment system. Claims customers save up to 50% on auto services.\n\n### 8. **City of Stars Collision Online Estimator**\nFree auto body repair estimates in minutes. Fill out a form with your vehicle details and damage description, and technicians respond with estimates, timelines, and next steps.\n\n### 9. **Certified Calculator Auto Repair Costs Calculator**\nA simple calculator tool where you input labor cost, parts cost, and tax rate to get a total repair cost estimate. Best for quick calculations when you already know component costs.\n\n---\n\n## Tips for Using These Tools\n\n- **Compare multiple estimates** \u2013 Prices can vary significantly between shops and regions\n- **Be specific about your vehicle** \u2013 Year, make, model, and even VIN can improve accuracy\n- **Upload photos when possible** \u2013 Visual damage assessment improves estimate precision\n- **Understand what's included** \u2013 Some estimates may not include diagnostic fees or hidden damage\n- **Check if estimates are binding** \u2013 Most free online estimates are for planning purposes only\n\n---\n\nSources:\n1. https://www.repairpal.com/estimator\n2. https://www.yourmechanic.com/estimates\n3. https://www.ottofixit.com/\n4. https://www.instantestimator.com/\n5. https://www.whocanfixmycar.com/car-service-cost-calculator\n6. https://www.freeautomechanic.com/free-auto-repair-estimates-online.html\n7. https://mechlance.com/\n8. https://cityofstarscollision.com/online-estimator-tool/\n9. https://certifiedcalculator.com/auto-repair-costs-calculator/",
+  "usage": {
+    "completion_tokens": 718,
+    "prompt_tokens": 8656,
+    "total_tokens": 9374,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

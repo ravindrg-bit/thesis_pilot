@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_19753cd5cf660b96",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T18:12:59.888233+00:00",
+  "query_text": "who is catherine mccoy",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27062a0e3053689e19dae8",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found several people named \"Catherine McCoy\" or similar variations. Let me search more specifically to see if there's a particularly notable Catherine McCoy:",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780942379,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 39,
+        "prompt_tokens": 9217,
+        "total_tokens": 9256,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who is catherine mccoy"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2706295d9b",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"990048db6a2706294f50a50001f1b7c6\"},\"usage\":{\"total_tokens\":9066}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2706295d9b",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"990048db6a2706294f50a50001f1b7c6\"},\"usage\":{\"total_tokens\":9066}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"990048db6a2706294f50a50001f1b7c6\"},\"usage\":{\"total_tokens\":9066}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found several people named \"Catherine McCoy\" or similar variations. Let me search more specifically to see if there's a particularly notable Catherine McCoy:",
+  "usage": {
+    "completion_tokens": 39,
+    "prompt_tokens": 9217,
+    "total_tokens": 9256,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

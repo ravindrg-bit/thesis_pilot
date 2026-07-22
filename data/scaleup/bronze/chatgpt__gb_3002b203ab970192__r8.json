@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_3002b203ab970192",
+  "engine": "chatgpt",
+  "run_index": 8,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-06T22:21:16.554226+00:00",
+  "query_text": "How do green screens work and why do they choose green or other colors",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0ff257a28b2fb2d2006a249d48703081919436a85e11a1c8b0",
+    "created_at": 1780784456.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0ff257a28b2fb2d2006a249d490f44819185ce98d9686610cb",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Green screens work through a video/photo technique called **chroma keying**: software removes, or \u201ckeys out,\u201d a chosen color from the image and replaces it with another background.\n\n## How green screens work\n\n1. **Film a subject in front of a solid-colored background**\n   - Usually bright green, but sometimes blue or another color.\n\n2. **The editing software detects that color**\n   - It looks for pixels within a selected color range \u2014 for example, a particular shade of green.\n\n3. **That color is made transparent**\n   - The green background becomes an alpha/transparent area.\n\n4. **A new image or video is placed behind it**\n   - The subject appears to be somewhere else: a battlefield, weather map, fantasy world, spaceship, etc.\n\nIn practice, the software doesn\u2019t remove only one exact color. It removes a **range** of similar greens, because lighting, shadows, camera noise, and wrinkles in the screen create slightly different shades.\n\n## Why green is commonly used\n\nGreen is popular because it has several advantages:\n\n### 1. Human skin usually does not contain bright green\nChroma keying works best when the background color is **not present in the subject**. Human skin tones contain reds, oranges, yellows, and browns, but very little saturated green.\n\n### 2. Digital cameras capture green very well\nMost digital camera sensors use a Bayer pattern with **twice as many green-sensitive pixels** as red or blue ones. That means the green channel often has more detail and less noise, making it easier to separate cleanly.\n\n### 3. Green is bright\nGreen tends to appear very luminous to cameras and human eyes, so it can often be lit with less light than blue. A brighter, cleaner background can produce a better key.\n\n### 4. It contrasts well with many subjects\nGreen often stands out against people, hair, clothing, and props \u2014 unless someone is wearing green.\n\n## Why blue screens are also used\n\nBefore green screens became dominant, **blue screens** were very common, especially in film.\n\nBlue may be chosen when:\n\n- The subject has green clothing or green objects.\n- The scene contains plants, grass, military uniforms, or green props.\n- Blue spill is less noticeable for a particular shot.\n- The production is matching older visual-effects workflows.\n\nBlue also tends to be useful with blond hair in some cases, because green spill can be more visible along fine hair edges.\n\n## Why not use red?\n\nRed screens are rare because:\n\n- Human skin contains a lot of red tones.\n- Lips, blush, blood, clothing, and many common objects may have red.\n- Keying red could accidentally remove or damage parts of the actor.\n\nRed can be used for very specific situations, but it\u2019s usually a bad general-purpose choice.\n\n## Can other colors be used?\n\nYes. Any color can technically be keyed out, as long as:\n\n- It is distinct from the subject.\n- It is evenly lit.\n- It is not reflected strongly onto the subject.\n- The camera captures it cleanly.\n\nFor example, productions might use **magenta, yellow, white, black, or gray** in special workflows, though green and blue are by far the most common.\n\n## Why lighting matters so much\n\nA green screen has to be lit evenly because shadows and wrinkles create different shades of green. If one part is dark green and another is bright green, the software has a harder time removing it cleanly.\n\nGood green-screen work usually involves:\n\n- Even lighting on the screen.\n- Separate lighting on the subject.\n- Distance between subject and screen.\n- Avoiding green clothing or reflective objects.\n- Reducing \u201cspill,\u201d where green light bounces onto the subject.\n\n## What is green spill?\n\n**Green spill** is green light reflected from the screen onto the actor or object. It often appears around hair, shoulders, glasses, or shiny surfaces.\n\nEditors usually reduce spill by:\n\n- Moving the subject farther from the screen.\n- Lighting the screen separately.\n- Using flags or blockers.\n- Applying \u201cdespill\u201d tools in compositing software.\n\n## Simple summary\n\nA green screen works by filming someone in front of a solid color, then using software to remove that color and replace it with another background. Green is chosen because it is usually very different from skin tones, digital cameras capture it cleanly, and it is bright and easy to separate. Blue or other colors are used when green would conflict with the subject, clothing, props, or scene.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780784476.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4456,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 922,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5378
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Green screens work through a video/photo technique called **chroma keying**: software removes, or \u201ckeys out,\u201d a chosen color from the image and replaces it with another background.\n\n## How green screens work\n\n1. **Film a subject in front of a solid-colored background**\n   - Usually bright green, but sometimes blue or another color.\n\n2. **The editing software detects that color**\n   - It looks for pixels within a selected color range \u2014 for example, a particular shade of green.\n\n3. **That color is made transparent**\n   - The green background becomes an alpha/transparent area.\n\n4. **A new image or video is placed behind it**\n   - The subject appears to be somewhere else: a battlefield, weather map, fantasy world, spaceship, etc.\n\nIn practice, the software doesn\u2019t remove only one exact color. It removes a **range** of similar greens, because lighting, shadows, camera noise, and wrinkles in the screen create slightly different shades.\n\n## Why green is commonly used\n\nGreen is popular because it has several advantages:\n\n### 1. Human skin usually does not contain bright green\nChroma keying works best when the background color is **not present in the subject**. Human skin tones contain reds, oranges, yellows, and browns, but very little saturated green.\n\n### 2. Digital cameras capture green very well\nMost digital camera sensors use a Bayer pattern with **twice as many green-sensitive pixels** as red or blue ones. That means the green channel often has more detail and less noise, making it easier to separate cleanly.\n\n### 3. Green is bright\nGreen tends to appear very luminous to cameras and human eyes, so it can often be lit with less light than blue. A brighter, cleaner background can produce a better key.\n\n### 4. It contrasts well with many subjects\nGreen often stands out against people, hair, clothing, and props \u2014 unless someone is wearing green.\n\n## Why blue screens are also used\n\nBefore green screens became dominant, **blue screens** were very common, especially in film.\n\nBlue may be chosen when:\n\n- The subject has green clothing or green objects.\n- The scene contains plants, grass, military uniforms, or green props.\n- Blue spill is less noticeable for a particular shot.\n- The production is matching older visual-effects workflows.\n\nBlue also tends to be useful with blond hair in some cases, because green spill can be more visible along fine hair edges.\n\n## Why not use red?\n\nRed screens are rare because:\n\n- Human skin contains a lot of red tones.\n- Lips, blush, blood, clothing, and many common objects may have red.\n- Keying red could accidentally remove or damage parts of the actor.\n\nRed can be used for very specific situations, but it\u2019s usually a bad general-purpose choice.\n\n## Can other colors be used?\n\nYes. Any color can technically be keyed out, as long as:\n\n- It is distinct from the subject.\n- It is evenly lit.\n- It is not reflected strongly onto the subject.\n- The camera captures it cleanly.\n\nFor example, productions might use **magenta, yellow, white, black, or gray** in special workflows, though green and blue are by far the most common.\n\n## Why lighting matters so much\n\nA green screen has to be lit evenly because shadows and wrinkles create different shades of green. If one part is dark green and another is bright green, the software has a harder time removing it cleanly.\n\nGood green-screen work usually involves:\n\n- Even lighting on the screen.\n- Separate lighting on the subject.\n- Distance between subject and screen.\n- Avoiding green clothing or reflective objects.\n- Reducing \u201cspill,\u201d where green light bounces onto the subject.\n\n## What is green spill?\n\n**Green spill** is green light reflected from the screen onto the actor or object. It often appears around hair, shoulders, glasses, or shiny surfaces.\n\nEditors usually reduce spill by:\n\n- Moving the subject farther from the screen.\n- Lighting the screen separately.\n- Using flags or blockers.\n- Applying \u201cdespill\u201d tools in compositing software.\n\n## Simple summary\n\nA green screen works by filming someone in front of a solid color, then using software to remove that color and replace it with another background. Green is chosen because it is usually very different from skin tones, digital cameras capture it cleanly, and it is bright and easy to separate. Blue or other colors are used when green would conflict with the subject, clothing, props, or scene.",
+  "usage": {
+    "input_tokens": 4456,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 922,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5378
+  },
+  "run_profile": "scaleup"
+}

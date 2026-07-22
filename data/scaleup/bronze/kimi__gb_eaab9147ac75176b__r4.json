@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_eaab9147ac75176b",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T20:39:25.179819+00:00",
+  "query_text": "which came first the walking dead comic or show",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2485723485e4c1451b0c58",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was **first published on October 8, 2003**, created by writer Robert Kirkman and artist Tony Moore (published by Image Comics). The AMC television adaptation premiered **in October 2010**, nearly seven years later. The TV series was developed by Frank Darabont and was based on the comic book series, though it eventually diverged from the source material's storyline.\n\nSources:\n1. https://pdfs.semanticscholar.org/dfbe/16e3e81dde20f06e02b483f04d6ea98881c0.pdf\n2. https://intensitiescultmedia.com/wp-content/uploads/2014/08/3-booth-playing-dead-pp-21-35.pdf\n3. https://www.mpcaaca.org/_files/ugd/5a6d69_e559a813d41e40cd8cf2123742d997a1.pdf?index=true\n4. https://unglueit-files.s3.amazonaws.com/ebf/6ee294ef8a6246ed9e66778a04bc92a5.pdf\n5. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n6. https://pdfhive.com/wp-content/uploads/2019/04/Encyclopedia-of-Comic-Books-and-Graphic-Novels-PDFhive.com-.pdf\n7. https://walking-dead-new-blood.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n8. https://walkingdead.fandom.com/wiki/Issue_1\n9. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n10. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780778356,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 394,
+        "prompt_tokens": 8811,
+        "total_tokens": 9205,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "which came first the walking dead comic or show"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2485727898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"31e4fe696a248571680f160001eb3c0c\"},\"usage\":{\"total_tokens\":8659}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2485727898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"31e4fe696a248571680f160001eb3c0c\"},\"usage\":{\"total_tokens\":8659}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"31e4fe696a248571680f160001eb3c0c\"},\"usage\":{\"total_tokens\":8659}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series was **first published on October 8, 2003**, created by writer Robert Kirkman and artist Tony Moore (published by Image Comics). The AMC television adaptation premiered **in October 2010**, nearly seven years later. The TV series was developed by Frank Darabont and was based on the comic book series, though it eventually diverged from the source material's storyline.\n\nSources:\n1. https://pdfs.semanticscholar.org/dfbe/16e3e81dde20f06e02b483f04d6ea98881c0.pdf\n2. https://intensitiescultmedia.com/wp-content/uploads/2014/08/3-booth-playing-dead-pp-21-35.pdf\n3. https://www.mpcaaca.org/_files/ugd/5a6d69_e559a813d41e40cd8cf2123742d997a1.pdf?index=true\n4. https://unglueit-files.s3.amazonaws.com/ebf/6ee294ef8a6246ed9e66778a04bc92a5.pdf\n5. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n6. https://pdfhive.com/wp-content/uploads/2019/04/Encyclopedia-of-Comic-Books-and-Graphic-Novels-PDFhive.com-.pdf\n7. https://walking-dead-new-blood.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n8. https://walkingdead.fandom.com/wiki/Issue_1\n9. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n10. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+  "usage": {
+    "completion_tokens": 394,
+    "prompt_tokens": 8811,
+    "total_tokens": 9205,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

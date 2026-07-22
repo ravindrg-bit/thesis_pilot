@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_dc7ef1dbbd81090d",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:28:03.042352+00:00",
+  "query_text": "How is cheese made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24e520f07adda1307c0322",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Cheese is made through a process of milk fermentation that involves removing most of the water from milk while retaining the solids. The fundamental process can be broken down into several key steps:\n\n## Basic Ingredients\nThe four basic ingredients needed to make cheese are: milk, microorganisms (starter cultures), rennet, and salt.\n\n## The Cheese-Making Process\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It is then often pasteurized to eliminate harmful bacteria and extend shelf life. The milk may also be standardized to adjust the fat-to-protein ratio, and sometimes ultrafiltered to concentrate protein.\n\n### 2. Inoculation and Curdling\nStarter cultures (lactic-acid-producing bacteria) are added to the milk. These bacteria ferment lactose (milk sugar) into lactic acid. Then rennet\u2014an enzyme preparation typically derived from the fourth stomach of calves\u2014is added. Rennet contains proteolytic enzymes (including chymosin and pepsin) that cause the milk protein casein to coagulate. Some cheeses, like cottage cheese and cream cheese, use acid coagulation alone.\n\n### 3. Curd Formation and Cutting\nThe coagulated casein forms a solid, gel-like structure called curd, which traps fat, bacteria, calcium, and other particulates. The remaining liquid is whey. The curd is cut into small cubes (approximately 1 cm square) using wire knives. The size of the cut affects the final cheese texture\u2014smaller curds release more whey and create drier, firmer cheeses, while larger curds retain more moisture for softer cheeses.\n\n### 4. Cooking and Whey Removal\nThe curd is gently heated and stirred, causing it to shrink and release more whey. The whey is then drained or dipped away. This step significantly determines the moisture content and final consistency of the cheese.\n\n### 5. Salting and Pressing\nThe curds are salted (either before or after pressing, depending on the cheese type) and placed into molds. Pressing expels remaining whey and gives the cheese its characteristic shape and texture.\n\n### 6. Ripening (Aging)\nMost cheeses are ripened for varying periods to develop distinctive flavors, textures, and aromas. During aging, enzymes from three sources act on the cheese: rennet or other added enzymes, microorganisms growing inside or on the cheese surface, and the milk itself. Proteins break down (proteolysis) and fats break down (lipolysis), creating complex flavor compounds.\n\n**Ripening variations by cheese type:**\n- **Swiss cheese**: Propionic acid bacteria produce CO\u2082 gas, creating characteristic holes (eyes)\n- **Brie**: *Penicillium camemberti* mold forms a soft, bloomy rind\n- **Blue cheese**: *Penicillium roqueforti* spores are added and activated by air introduced through needle holes, creating blue veins\n- **Fresh cheeses** (mozzarella, cottage cheese, ricotta): Ready for consumption immediately without aging\n\n### 7. Pasteurized Process Cheese (Optional)\nSome natural cheese is ground, mixed with emulsifiers and other ingredients, and heated to at least 65.5\u00b0C (150\u00b0F) to halt ripening, creating a product with indefinite shelf life and uniform melting properties.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n4. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n5. https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1196879/full",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780802848,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 802,
+        "prompt_tokens": 8653,
+        "total_tokens": 9455,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is cheese made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24e51fc5c1",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4fbb20576a24e51f4f50a50001ed554b\"},\"usage\":{\"total_tokens\":8503}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24e51fc5c1",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4fbb20576a24e51f4f50a50001ed554b\"},\"usage\":{\"total_tokens\":8503}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4fbb20576a24e51f4f50a50001ed554b\"},\"usage\":{\"total_tokens\":8503}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Cheese is made through a process of milk fermentation that involves removing most of the water from milk while retaining the solids. The fundamental process can be broken down into several key steps:\n\n## Basic Ingredients\nThe four basic ingredients needed to make cheese are: milk, microorganisms (starter cultures), rennet, and salt.\n\n## The Cheese-Making Process\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It is then often pasteurized to eliminate harmful bacteria and extend shelf life. The milk may also be standardized to adjust the fat-to-protein ratio, and sometimes ultrafiltered to concentrate protein.\n\n### 2. Inoculation and Curdling\nStarter cultures (lactic-acid-producing bacteria) are added to the milk. These bacteria ferment lactose (milk sugar) into lactic acid. Then rennet\u2014an enzyme preparation typically derived from the fourth stomach of calves\u2014is added. Rennet contains proteolytic enzymes (including chymosin and pepsin) that cause the milk protein casein to coagulate. Some cheeses, like cottage cheese and cream cheese, use acid coagulation alone.\n\n### 3. Curd Formation and Cutting\nThe coagulated casein forms a solid, gel-like structure called curd, which traps fat, bacteria, calcium, and other particulates. The remaining liquid is whey. The curd is cut into small cubes (approximately 1 cm square) using wire knives. The size of the cut affects the final cheese texture\u2014smaller curds release more whey and create drier, firmer cheeses, while larger curds retain more moisture for softer cheeses.\n\n### 4. Cooking and Whey Removal\nThe curd is gently heated and stirred, causing it to shrink and release more whey. The whey is then drained or dipped away. This step significantly determines the moisture content and final consistency of the cheese.\n\n### 5. Salting and Pressing\nThe curds are salted (either before or after pressing, depending on the cheese type) and placed into molds. Pressing expels remaining whey and gives the cheese its characteristic shape and texture.\n\n### 6. Ripening (Aging)\nMost cheeses are ripened for varying periods to develop distinctive flavors, textures, and aromas. During aging, enzymes from three sources act on the cheese: rennet or other added enzymes, microorganisms growing inside or on the cheese surface, and the milk itself. Proteins break down (proteolysis) and fats break down (lipolysis), creating complex flavor compounds.\n\n**Ripening variations by cheese type:**\n- **Swiss cheese**: Propionic acid bacteria produce CO\u2082 gas, creating characteristic holes (eyes)\n- **Brie**: *Penicillium camemberti* mold forms a soft, bloomy rind\n- **Blue cheese**: *Penicillium roqueforti* spores are added and activated by air introduced through needle holes, creating blue veins\n- **Fresh cheeses** (mozzarella, cottage cheese, ricotta): Ready for consumption immediately without aging\n\n### 7. Pasteurized Process Cheese (Optional)\nSome natural cheese is ground, mixed with emulsifiers and other ingredients, and heated to at least 65.5\u00b0C (150\u00b0F) to halt ripening, creating a product with indefinite shelf life and uniform melting properties.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n4. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n5. https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1196879/full",
+  "usage": {
+    "completion_tokens": 802,
+    "prompt_tokens": 8653,
+    "total_tokens": 9455,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

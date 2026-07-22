@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d11a15fb3622af70",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T04:46:21.739743+00:00",
+  "query_text": "Buy a return train ticket from Boston to New York for next Friday",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24f78dbf0141ce3365992d",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I don't have the ability to purchase train tickets or make reservations on your behalf. However, I can help you find information about how to book a return train ticket from Boston to New York for next Friday.\n\nBased on my knowledge, here are the main options for booking this trip:\n\n## Amtrak (Primary Option)\n\nAmtrak operates the **Northeast Regional** and **Acela** services between Boston (South Station/Back Bay) and New York (Penn Station).\n\n**To book your ticket:**\n- **Website:** https://www.amtrak.com\n- **Phone:** 1-800-USA-RAIL (1-800-872-7245)\n- **Mobile app:** Amtrak app (iOS/Android)\n\n**Key details:**\n- Journey time: Approximately 3.5-4 hours (Northeast Regional) or 3.5 hours (Acela)\n- Acela is faster but more expensive\n- Book early for better fares\n\n## Other Options\n\nYou could also check:\n- **Greyhound bus** (cheaper but longer journey): https://www.greyhound.com\n- **FlixBus**: https://www.flixbus.com\n- **Peter Pan Bus**: https://www.peterpanbus.com\n\n## What You'll Need to Book\n\n1. Specific travel dates and preferred departure times\n2. Passenger information (name, contact details)\n3. Payment method\n4. Preferred class of service (Coach/Business/First)\n\nI recommend booking directly through Amtrak's official website or app for the most reliable service on this route.\n\n---\n\n**Note:** I cannot complete this purchase for you. You'll need to visit the booking website or call directly to secure your tickets.\n\nSources:",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780807565,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 353,
+        "prompt_tokens": 175,
+        "total_tokens": 528,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Buy a return train ticket from Boston to New York for next Friday"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24f78d1413",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"935a7d0c6a24f78d4f50a50001ed7055\"},\"usage\":{\"total_tokens\":16}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24f78d1413",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"935a7d0c6a24f78d4f50a50001ed7055\"},\"usage\":{\"total_tokens\":16}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"935a7d0c6a24f78d4f50a50001ed7055\"},\"usage\":{\"total_tokens\":16}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I don't have the ability to purchase train tickets or make reservations on your behalf. However, I can help you find information about how to book a return train ticket from Boston to New York for next Friday.\n\nBased on my knowledge, here are the main options for booking this trip:\n\n## Amtrak (Primary Option)\n\nAmtrak operates the **Northeast Regional** and **Acela** services between Boston (South Station/Back Bay) and New York (Penn Station).\n\n**To book your ticket:**\n- **Website:** https://www.amtrak.com\n- **Phone:** 1-800-USA-RAIL (1-800-872-7245)\n- **Mobile app:** Amtrak app (iOS/Android)\n\n**Key details:**\n- Journey time: Approximately 3.5-4 hours (Northeast Regional) or 3.5 hours (Acela)\n- Acela is faster but more expensive\n- Book early for better fares\n\n## Other Options\n\nYou could also check:\n- **Greyhound bus** (cheaper but longer journey): https://www.greyhound.com\n- **FlixBus**: https://www.flixbus.com\n- **Peter Pan Bus**: https://www.peterpanbus.com\n\n## What You'll Need to Book\n\n1. Specific travel dates and preferred departure times\n2. Passenger information (name, contact details)\n3. Payment method\n4. Preferred class of service (Coach/Business/First)\n\nI recommend booking directly through Amtrak's official website or app for the most reliable service on this route.\n\n---\n\n**Note:** I cannot complete this purchase for you. You'll need to visit the booking website or call directly to secure your tickets.\n\nSources:",
+  "usage": {
+    "completion_tokens": 353,
+    "prompt_tokens": 175,
+    "total_tokens": 528,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

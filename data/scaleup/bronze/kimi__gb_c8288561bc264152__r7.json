@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c8288561bc264152",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T02:43:43.390103+00:00",
+  "query_text": "Where can I find the latest news about the stock market?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24dad3def40df01962c263",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best sources for finding the latest stock market news:\n\n## Top Financial News Websites\n\n**Bloomberg** - One of the most comprehensive sources for real-time quotes, in-depth market analysis, and detailed company information. It provides data on stocks, bonds, and forex with professional-grade analytics.\n\n**CNBC** - Excellent for breaking stock market news and live market coverage. The site is divided into sections covering markets, business, and investing, with live quotes and charts. CNBC is often among the first to break major market stories.\n\n**Reuters** - Offers comprehensive coverage of companies and industries worldwide, with extensive market data and analysis tools for informed investment decisions.\n\n**Financial Times** - Internationally recognized for accuracy and authority, featuring a robust \"Market Data\" section with real-time stock quotes and currency conversions.\n\n**MarketWatch** - Provides the latest stock market, financial and business news along with personal finance advice and company news.\n\n**Investing.com** - Features real-time stock quotes, economic calendars, market news, expert analysis, streaming charts, and currency converters.\n\n**Yahoo Finance** - Offers a broad range of financial content including stock quotes, market data, portfolio tracking, and stock screeners.\n\n**The Wall Street Journal** - Renowned for in-depth financial reporting and market analysis.\n\n**Seeking Alpha** - Known for crowd-sourced investment analysis and market commentary.\n\n**Benzinga** - Provides original, accurate, and timely global financial content with trading ideas and stock research.\n\n## For Indian Markets\n\n**Economic Times** - Leading source for Indian stock market updates, live market news, IPO updates, and sector-specific coverage.\n\n**NDTV Business** - Covers Indian and global business news with market analysis.\n\n**Zerodha Pulse** - Aggregates financial news from multiple sources for Indian investors.\n\n**MarketBeat** - Provides real-time analyst ratings, dividend information, earnings results, and financial headlines.\n\n## Regional Specialized Sources\n\n- **AASTOCKS** - For Hong Kong market focus\n- **CNYES (\u9245\u4ea8\u7db2)** - For Taiwan and Asian markets\n\n## Additional Formats\n\nBeyond websites, you can also stay informed through:\n- **Podcasts** (e.g., The Meb Faber Show)\n- **YouTube channels** (e.g., Investor's Business Daily)\n- **Telegram channels** for instant updates\n\nFor the most comprehensive coverage, it's recommended to follow multiple sources to get a full and unbiased picture of market movements.\n\nSources:\n1. https://news.feedspot.com/financial_news_websites/\n2. https://pulse.zerodha.com/?c=ZMPCDF%2F1000\n3. https://tradersunion.com/interesting-articles/how-to-start-investing/best-finance-news-websites/\n4. https://www.marketbeat.com/\n5. https://www.briefing.com/\n6. https://digital.ettfos.com/blog/best-financial-news-websites-for-traders/\n7. https://www.biyapay.com/blogdetail/1743-top-5-real-time-financial-news-websites\n8. https://investguiding.com/article/best-financial-news-websites-8-best-choices\n9. https://www.marketwatch.com/\n10. https://www.etnownews.com/markets/sensex-nifty-50-today-stock-market-live-updates-27-may-2026-sensex-nifty-movement-top-gainers-losers-market-trends-liveblog-liveblog-154406359/amp\n11. https://jarvisinvest.com/jarvis-library/stock-market-news-updates-14th-january-2026/?amp=1",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780800212,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 771,
+        "prompt_tokens": 9269,
+        "total_tokens": 10040,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I find the latest news about the stock market?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24dad21700",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"d7bb73086a24dad2680f160001eba588\"},\"usage\":{\"total_tokens\":9116}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24dad21700",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"d7bb73086a24dad2680f160001eba588\"},\"usage\":{\"total_tokens\":9116}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"d7bb73086a24dad2680f160001eba588\"},\"usage\":{\"total_tokens\":9116}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best sources for finding the latest stock market news:\n\n## Top Financial News Websites\n\n**Bloomberg** - One of the most comprehensive sources for real-time quotes, in-depth market analysis, and detailed company information. It provides data on stocks, bonds, and forex with professional-grade analytics.\n\n**CNBC** - Excellent for breaking stock market news and live market coverage. The site is divided into sections covering markets, business, and investing, with live quotes and charts. CNBC is often among the first to break major market stories.\n\n**Reuters** - Offers comprehensive coverage of companies and industries worldwide, with extensive market data and analysis tools for informed investment decisions.\n\n**Financial Times** - Internationally recognized for accuracy and authority, featuring a robust \"Market Data\" section with real-time stock quotes and currency conversions.\n\n**MarketWatch** - Provides the latest stock market, financial and business news along with personal finance advice and company news.\n\n**Investing.com** - Features real-time stock quotes, economic calendars, market news, expert analysis, streaming charts, and currency converters.\n\n**Yahoo Finance** - Offers a broad range of financial content including stock quotes, market data, portfolio tracking, and stock screeners.\n\n**The Wall Street Journal** - Renowned for in-depth financial reporting and market analysis.\n\n**Seeking Alpha** - Known for crowd-sourced investment analysis and market commentary.\n\n**Benzinga** - Provides original, accurate, and timely global financial content with trading ideas and stock research.\n\n## For Indian Markets\n\n**Economic Times** - Leading source for Indian stock market updates, live market news, IPO updates, and sector-specific coverage.\n\n**NDTV Business** - Covers Indian and global business news with market analysis.\n\n**Zerodha Pulse** - Aggregates financial news from multiple sources for Indian investors.\n\n**MarketBeat** - Provides real-time analyst ratings, dividend information, earnings results, and financial headlines.\n\n## Regional Specialized Sources\n\n- **AASTOCKS** - For Hong Kong market focus\n- **CNYES (\u9245\u4ea8\u7db2)** - For Taiwan and Asian markets\n\n## Additional Formats\n\nBeyond websites, you can also stay informed through:\n- **Podcasts** (e.g., The Meb Faber Show)\n- **YouTube channels** (e.g., Investor's Business Daily)\n- **Telegram channels** for instant updates\n\nFor the most comprehensive coverage, it's recommended to follow multiple sources to get a full and unbiased picture of market movements.\n\nSources:\n1. https://news.feedspot.com/financial_news_websites/\n2. https://pulse.zerodha.com/?c=ZMPCDF%2F1000\n3. https://tradersunion.com/interesting-articles/how-to-start-investing/best-finance-news-websites/\n4. https://www.marketbeat.com/\n5. https://www.briefing.com/\n6. https://digital.ettfos.com/blog/best-financial-news-websites-for-traders/\n7. https://www.biyapay.com/blogdetail/1743-top-5-real-time-financial-news-websites\n8. https://investguiding.com/article/best-financial-news-websites-8-best-choices\n9. https://www.marketwatch.com/\n10. https://www.etnownews.com/markets/sensex-nifty-50-today-stock-market-live-updates-27-may-2026-sensex-nifty-movement-top-gainers-losers-market-trends-liveblog-liveblog-154406359/amp\n11. https://jarvisinvest.com/jarvis-library/stock-market-news-updates-14th-january-2026/?amp=1",
+  "usage": {
+    "completion_tokens": 771,
+    "prompt_tokens": 9269,
+    "total_tokens": 10040,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

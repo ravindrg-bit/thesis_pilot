@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c4f7386505e41f8a",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:11:14.428721+00:00",
+  "query_text": "navy p3",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256deaee6c7118629e0bdd",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The **Lockheed P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft that served as the U.S. Navy's primary land-based patrol aircraft for over 50 years.\n\n## Key Facts\n\n**Development & Design**\n- Based on the **Lockheed L-188 Electra** commercial airliner, with modifications for military use including a shortened fuselage (by 7 feet forward of the wing), strengthened structure, and the distinctive **MAD (Magnetic Anomaly Detector) \"stinger\" boom** at the tail for detecting submarines\n- First fielded by the Navy in **1962**\n\n**Production**\n- **648 P-3s** built by Lockheed in the United States\n- **107 additional units** manufactured by **Kawasaki** in Japan\n\n**Performance Characteristics**\n- **Endurance:** Capable of flying **16-hour missions**\n- **Dash speed:** Up to **466 mph** \u2014 faster than many World War II-era fighters\n- Crew: **12-person flight crew**\n\n**Mission & Armament**\n- Primary role: **Anti-submarine warfare (ASW)** and maritime patrol\n- Weapons included:\n  - Torpedoes and depth charges in internal bomb bay\n  - **10 wing hard-points** for missiles, mines, and other ordnance\n  - Could carry **AIM-9 Sidewinder** and **Harpoon missiles**\n\n**Major Variants**\n- **P-3A** \u2014 Initial production version\n- **P-3B** \u2014 Improved variant\n- **P-3C** \u2014 Most numerous and capable variant, with multiple upgrade programs including:\n  - **AIP (Anti-surface Warfare Improvement Program)**\n  - **AIP+** \u2014 Further enhancement\n  - **BMUP (Baseline Maintenance and Upgrade Program)**\n\n**Service History**\n- The P-3C was the primary operational variant for decades, serving with numerous patrol squadrons (VP squadrons) such as VP-1, VP-4, VP-5, VP-8, VP-9, VP-10, VP-16, VP-26, VP-30, VP-40, VP-45, VP-46, VP-47, VP-62, VP-69, and others\n- Many aircraft underwent multiple modifications and squadron assignments throughout their service lives\n- Some aircraft were eventually transferred to foreign militaries or sent to **AMARG** (Aerospace Maintenance and Regeneration Group) for storage\n\n**Replacement**\n- The P-3 Orion is being phased out and replaced by the **P-8 Poseidon**, a jet-powered maritime patrol aircraft based on the Boeing 737 airframe\n\nThe P-3's greatest operational advantage was its **endurance** \u2014 the ability to stay on station for hours while hunting submarines, making it a formidable ASW platform throughout the Cold War and beyond.\n\nSources:\n1. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n2. https://www.p3orion.nl/ALHR.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837866,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 644,
+        "prompt_tokens": 7537,
+        "total_tokens": 8181,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "navy p3"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256de9de91",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"97a7a2526a256de9680f160001ec7578\"},\"usage\":{\"total_tokens\":7390}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256de9de91",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"97a7a2526a256de9680f160001ec7578\"},\"usage\":{\"total_tokens\":7390}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"97a7a2526a256de9680f160001ec7578\"},\"usage\":{\"total_tokens\":7390}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The **Lockheed P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft that served as the U.S. Navy's primary land-based patrol aircraft for over 50 years.\n\n## Key Facts\n\n**Development & Design**\n- Based on the **Lockheed L-188 Electra** commercial airliner, with modifications for military use including a shortened fuselage (by 7 feet forward of the wing), strengthened structure, and the distinctive **MAD (Magnetic Anomaly Detector) \"stinger\" boom** at the tail for detecting submarines\n- First fielded by the Navy in **1962**\n\n**Production**\n- **648 P-3s** built by Lockheed in the United States\n- **107 additional units** manufactured by **Kawasaki** in Japan\n\n**Performance Characteristics**\n- **Endurance:** Capable of flying **16-hour missions**\n- **Dash speed:** Up to **466 mph** \u2014 faster than many World War II-era fighters\n- Crew: **12-person flight crew**\n\n**Mission & Armament**\n- Primary role: **Anti-submarine warfare (ASW)** and maritime patrol\n- Weapons included:\n  - Torpedoes and depth charges in internal bomb bay\n  - **10 wing hard-points** for missiles, mines, and other ordnance\n  - Could carry **AIM-9 Sidewinder** and **Harpoon missiles**\n\n**Major Variants**\n- **P-3A** \u2014 Initial production version\n- **P-3B** \u2014 Improved variant\n- **P-3C** \u2014 Most numerous and capable variant, with multiple upgrade programs including:\n  - **AIP (Anti-surface Warfare Improvement Program)**\n  - **AIP+** \u2014 Further enhancement\n  - **BMUP (Baseline Maintenance and Upgrade Program)**\n\n**Service History**\n- The P-3C was the primary operational variant for decades, serving with numerous patrol squadrons (VP squadrons) such as VP-1, VP-4, VP-5, VP-8, VP-9, VP-10, VP-16, VP-26, VP-30, VP-40, VP-45, VP-46, VP-47, VP-62, VP-69, and others\n- Many aircraft underwent multiple modifications and squadron assignments throughout their service lives\n- Some aircraft were eventually transferred to foreign militaries or sent to **AMARG** (Aerospace Maintenance and Regeneration Group) for storage\n\n**Replacement**\n- The P-3 Orion is being phased out and replaced by the **P-8 Poseidon**, a jet-powered maritime patrol aircraft based on the Boeing 737 airframe\n\nThe P-3's greatest operational advantage was its **endurance** \u2014 the ability to stay on station for hours while hunting submarines, making it a formidable ASW platform throughout the Cold War and beyond.\n\nSources:\n1. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n2. https://www.p3orion.nl/ALHR.pdf",
+  "usage": {
+    "completion_tokens": 644,
+    "prompt_tokens": 7537,
+    "total_tokens": 8181,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

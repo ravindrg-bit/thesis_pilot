@@ -1,0 +1,133 @@
+{
+  "query_id": "gb_e416767c09cc3c42",
+  "engine": "perplexity",
+  "run_index": 2,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T17:51:35.810170+00:00",
+  "query_text": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "8acc63c5-a1da-45fb-b7b6-06a8dd94c9c7",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "`new_list = my_list` does **not** create a new list. It makes `new_list` and `my_list` refer to the **same list object**, so any in-place change through one name is visible through the other because Python lists are **mutable**.[1][2]\n\nTo make an independent copy, use one of these:\n\n- `new_list = my_list.copy()` \u2014 creates a **shallow copy**.[2]\n- `new_list = my_list[:]` \u2014 also creates a **shallow copy**.[2]\n- `new_list = list(my_list)` \u2014 another way to make a shallow copy.\n\nExample:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\n\nprint(my_list)   # [1, 2, 3]\nprint(new_list)  # [1, 2, 3, 4]\n```\n\nA **shallow copy** is enough for a flat list of immutable values like numbers or strings.[2] If your list contains nested lists or other mutable objects, a shallow copy still shares the inner objects, so changes inside them will still be reflected in both lists.[1] In that case, use `copy.deepcopy()` to make a **deep copy**.[1]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780854695,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 270,
+      "prompt_tokens": 43,
+      "total_tokens": 313,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 4e-05,
+        "output_tokens_cost": 0.00027,
+        "request_cost": 0.005,
+        "total_cost": 0.00531
+      }
+    },
+    "citations": [
+      "https://discuss.python.org/t/why-do-my-lists-get-modified-when-passed-to-a-function/5036",
+      "https://python-automation-book.readthedocs.io/en/1.0/03_collection/01_list.html",
+      "https://www.youtube.com/watch?v=6JsKMYxORxo",
+      "https://www.dummies.com/article/technology/programming-web-design/python/how-to-modify-lists-in-python-203522/",
+      "https://www.sitepoint.com/python/lists-change/",
+      "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists"
+    ],
+    "search_results": [
+      {
+        "title": "Why do my lists get modified when passed to a function? - Python Help",
+        "url": "https://discuss.python.org/t/why-do-my-lists-get-modified-when-passed-to-a-function/5036",
+        "date": "2020-08-24",
+        "last_updated": "2026-06-07",
+        "snippet": "Your lists get modified because lists are mutable objects that are capable of being modified, and you modify them.",
+        "source": "web"
+      },
+      {
+        "title": "Understanding Lists in Python",
+        "url": "https://python-automation-book.readthedocs.io/en/1.0/03_collection/01_list.html",
+        "last_updated": "2025-02-23",
+        "snippet": "Updating a List#. Since lists are mutable, you can change their contents. To change the first item to 88 : my_list[0] = 88 print(my_list) # Output: [88, 1 ...",
+        "source": "web"
+      },
+      {
+        "title": "Programming Fundamentals with Python - Modifying Lists - YouTube",
+        "url": "https://www.youtube.com/watch?v=6JsKMYxORxo",
+        "date": "2025-10-02",
+        "last_updated": "2025-10-02",
+        "snippet": "All JomaClass videos from 2020 are now free to watch. If you enjoy please consider donating here: https://support.joma.io/ This video was ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Modify Lists in Python - Dummies.com",
+        "url": "https://www.dummies.com/article/technology/programming-web-design/python/how-to-modify-lists-in-python-203522/",
+        "date": "2017-01-25",
+        "last_updated": "2026-02-06",
+        "snippet": "You can modify the content of a list as needed with Python. Modifying a list means to change a particular entry, add a new entry, or remove an existing entry.",
+        "source": "web"
+      },
+      {
+        "title": "Python - Change List Items - SitePoint",
+        "url": "https://www.sitepoint.com/python/lists-change/",
+        "date": "2025-07-01",
+        "last_updated": "2026-03-28",
+        "snippet": "Any modification affects the original list, not creating a new one (unlike strings, which are immutable).",
+        "source": "web"
+      },
+      {
+        "title": "Modifying Python Lists | Add, Remove, Change Items",
+        "url": "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists",
+        "date": "2025-04-04",
+        "last_updated": "2026-06-04",
+        "snippet": "Discover common methods for adding elements, removing elements, and changing existing elements within Python lists.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "`new_list = my_list` does **not** create a new list. It makes `new_list` and `my_list` refer to the **same list object**, so any in-place change through one name is visible through the other because Python lists are **mutable**.[1][2]\n\nTo make an independent copy, use one of these:\n\n- `new_list = my_list.copy()` \u2014 creates a **shallow copy**.[2]\n- `new_list = my_list[:]` \u2014 also creates a **shallow copy**.[2]\n- `new_list = list(my_list)` \u2014 another way to make a shallow copy.\n\nExample:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\n\nprint(my_list)   # [1, 2, 3]\nprint(new_list)  # [1, 2, 3, 4]\n```\n\nA **shallow copy** is enough for a flat list of immutable values like numbers or strings.[2] If your list contains nested lists or other mutable objects, a shallow copy still shares the inner objects, so changes inside them will still be reflected in both lists.[1] In that case, use `copy.deepcopy()` to make a **deep copy**.[1]",
+  "usage": {
+    "completion_tokens": 270,
+    "prompt_tokens": 43,
+    "total_tokens": 313,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 4e-05,
+      "output_tokens_cost": 0.00027,
+      "request_cost": 0.005,
+      "total_cost": 0.00531
+    }
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:11:30.730119+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cce24ba17a7f1a4906925",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Channels (Recommended)\n\n1. **NBA Official Ticket Website** - Visit [https://nbatickets.nba.com/](https://nbatickets.nba.com/) or [http://tickets.nba.com/](http://tickets.nba.com/) to search for single game tickets, season ticket packages, group tickets, and special offers directly from the NBA.\n\n2. **Ticketmaster** - As the **Official Ticketing Partner of the NBA**, Ticketmaster ([https://www.ticketmaster.com/nba](https://www.ticketmaster.com/nba)) is the most reliable source. You can purchase single-game tickets, and if games are sold out, additional seats may become available closer to game day. They also offer secure ticket transfer and resale options.\n\n## Other Reputable Ticketing Platforms\n\n3. **StubHub** - A major secondary ticket marketplace for NBA tickets: [https://www.stubhub.com/nba-tickets/grouping/115](https://www.stubhub.com/nba-tickets/grouping/115)\n\n4. **Vivid Seats** - Offers tickets for preseason, regular season, playoffs, and NBA Finals: [https://www.vividseats.com/nba-basketball](https://www.vividseats.com/nba-basketball)\n\n5. **Viagogo** - International ticket platform with NBA game listings: [https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA](https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA)\n\n6. **WAUG** - Offers NBA tickets with easy payment options, particularly for international buyers: [https://www.waug.com/en/activities/142629](https://www.waug.com/en/activities/142629)\n\n## Tips for Buying NBA Tickets\n\n- **Best time to buy**: Single-game tickets typically go on sale in August or early September for the full season\n- **Average price**: NBA tickets typically range from $100-$200, but vary based on matchup, seat location, and timing\n- **Last-minute options**: Check Ticketmaster or resale sites if deciding to attend a game spontaneously\n- **Avoid scams**: Stick to official and well-known platforms; avoid buying from random individuals or suspiciously cheap offers\n\n## For International Buyers (Especially China)\n\n- **\u89c2\u8d5b\u65e5 (Saiday)**: [http://www.saiday.com/](http://www.saiday.com/) - A Chinese sports travel platform offering NBA tickets with Alipay/WeChat Pay options\n\n---\n\n**Sources:**\n1. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n2. https://www.vividseats.com/nba-basketball\n3. https://www.waug.com/en/activities/142629\n4. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n5. https://www.waug.com/en/magazines/1724\n6. https://www.ticketmaster.com/nba\n7. http://nbatickets.nba.com\n8. https://www.ticketmaster.com/nba?ac_link=tmholiday23_gg_sports\n9. https://capturetheatlas.com/nba-basketball-game-tickets-nyc/\n10. https://www.sohu.com/a/864555045_122006510\n11. https://www.stubhub.com/nba-tickets/grouping/115\n12. https://zhidao.baidu.com/question/1186689820073420339.html\n13. https://nbatickets.nba.com/\n14. https://www.kopyst.com/documents/how-to-buy-tickets-for-an-nba-game/\n15. https://www.extrabux.cn/chs/guide/8473057\n16. https://www.waug.com/en/activities/135737\n17. http://tickets.nba.com/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272677,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 872,
+        "prompt_tokens": 8663,
+        "total_tokens": 9535,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cce249b47",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"b475549f6a1cce24680f160001d73ff7\"},\"usage\":{\"total_tokens\":8509}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cce249b47",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"b475549f6a1cce24680f160001d73ff7\"},\"usage\":{\"total_tokens\":8509}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"b475549f6a1cce24680f160001d73ff7\"},\"usage\":{\"total_tokens\":8509}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Channels (Recommended)\n\n1. **NBA Official Ticket Website** - Visit [https://nbatickets.nba.com/](https://nbatickets.nba.com/) or [http://tickets.nba.com/](http://tickets.nba.com/) to search for single game tickets, season ticket packages, group tickets, and special offers directly from the NBA.\n\n2. **Ticketmaster** - As the **Official Ticketing Partner of the NBA**, Ticketmaster ([https://www.ticketmaster.com/nba](https://www.ticketmaster.com/nba)) is the most reliable source. You can purchase single-game tickets, and if games are sold out, additional seats may become available closer to game day. They also offer secure ticket transfer and resale options.\n\n## Other Reputable Ticketing Platforms\n\n3. **StubHub** - A major secondary ticket marketplace for NBA tickets: [https://www.stubhub.com/nba-tickets/grouping/115](https://www.stubhub.com/nba-tickets/grouping/115)\n\n4. **Vivid Seats** - Offers tickets for preseason, regular season, playoffs, and NBA Finals: [https://www.vividseats.com/nba-basketball](https://www.vividseats.com/nba-basketball)\n\n5. **Viagogo** - International ticket platform with NBA game listings: [https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA](https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA)\n\n6. **WAUG** - Offers NBA tickets with easy payment options, particularly for international buyers: [https://www.waug.com/en/activities/142629](https://www.waug.com/en/activities/142629)\n\n## Tips for Buying NBA Tickets\n\n- **Best time to buy**: Single-game tickets typically go on sale in August or early September for the full season\n- **Average price**: NBA tickets typically range from $100-$200, but vary based on matchup, seat location, and timing\n- **Last-minute options**: Check Ticketmaster or resale sites if deciding to attend a game spontaneously\n- **Avoid scams**: Stick to official and well-known platforms; avoid buying from random individuals or suspiciously cheap offers\n\n## For International Buyers (Especially China)\n\n- **\u89c2\u8d5b\u65e5 (Saiday)**: [http://www.saiday.com/](http://www.saiday.com/) - A Chinese sports travel platform offering NBA tickets with Alipay/WeChat Pay options\n\n---\n\n**Sources:**\n1. https://www.kkday.com/zh-hk/blog/105535/nba-tickets?srsltid=AfmBOopEoIxGqClicHxqBTYmpK-ujp74xVpezdohPTwJvKfiqlMEdmyw\n2. https://www.vividseats.com/nba-basketball\n3. https://www.waug.com/en/activities/142629\n4. https://www.viagogo.com/cn/Sports-Tickets/Basketball/NBA\n5. https://www.waug.com/en/magazines/1724\n6. https://www.ticketmaster.com/nba\n7. http://nbatickets.nba.com\n8. https://www.ticketmaster.com/nba?ac_link=tmholiday23_gg_sports\n9. https://capturetheatlas.com/nba-basketball-game-tickets-nyc/\n10. https://www.sohu.com/a/864555045_122006510\n11. https://www.stubhub.com/nba-tickets/grouping/115\n12. https://zhidao.baidu.com/question/1186689820073420339.html\n13. https://nbatickets.nba.com/\n14. https://www.kopyst.com/documents/how-to-buy-tickets-for-an-nba-game/\n15. https://www.extrabux.cn/chs/guide/8473057\n16. https://www.waug.com/en/activities/135737\n17. http://tickets.nba.com/",
+  "usage": {
+    "completion_tokens": 872,
+    "prompt_tokens": 8663,
+    "total_tokens": 9535,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

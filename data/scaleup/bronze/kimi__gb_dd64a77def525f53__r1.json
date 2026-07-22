@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_dd64a77def525f53",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T17:17:17.458379+00:00",
+  "query_text": "Where can I buy the latest iPhone?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26f9160e3053689e19d199",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, you can buy the latest iPhone from several types of retailers depending on your location:\n\n## Official Apple Channels\n- **Apple's Online Store** \u2013 Direct from Apple with trade-in options (available in most countries with official Apple presence)\n- **Apple Retail Stores** \u2013 Physical Apple Stores for in-person purchases\n\n## Major Electronics Retailers (Varies by Country)\n\n**United States:**\n- Amazon (often in partnership with carriers)\n- Walmart\n- Best Buy\n\n**United Kingdom:**\n- Amazon UK\n- Argos\n- AO\n- Currys\n- John Lewis\n- Carphone Warehouse\n- KRCS\n\n**United Arab Emirates:**\n- Sharaf DG \u2013 Offers trade-in programs, extended warranties, and flexible payment options\n\n**Singapore:**\n- OH Mobile Tech\n- Switch\n- CompAsia\n\n## Authorized Apple Resellers (Region-Specific)\n\n**Pakistan:**\n- Apple Kid (Hafeez Center, Lahore) \u2013 Offers PTA-approved iPhones, installments, and trade-ins\n- Authentico.pk \u2013 Online with nationwide delivery\n- Victory Computers Pakistan\n\n**Vietnam:**\n- ShopDunk (multiple locations in Ho Chi Minh City)\n- FPT Shop (600+ stores nationwide)\n- Futureworld Vietnam (Apple Premium Reseller)\n- DIGIBOX\n- Ho\u00e0ng H\u00e0 Mobile\n\n**Malaysia:**\n- KTS Malaysia\n\n**Nepal:**\n- MobileMandu \u2013 Offers EMI/financing options\n\n**New Zealand:**\n- 2degrees (carrier with trade-in deals)\n\n## Carrier Stores\nMost major mobile carriers worldwide offer the latest iPhones with contract plans, trade-in incentives, and installment options.\n\n## Tips for Buying:\n- Check for **authorized dealer status** to ensure genuine products with official warranties\n- Compare prices across multiple retailers\n- Look for **trade-in programs** to offset costs\n- Consider **financing/EMI options** if available\n- Watch for seasonal promotions (Black Friday, 618, etc.)\n\nSources:\n1. https://applekid.pk/lahore/latest-iphone-price-in-pakistan/\n2. https://www.macworld.com/article/672801/best-iphone-deals.html\n3. https://www.2degrees.nz/shop/mobile-phones/apple\n4. https://ohmobile.shop/product-category/apple/iphone/new-iphone/\n5. https://www.authentico.pk/iphones\n6. https://victorycomputer.pk/iphone-17-pro-max-price-in-pakistan-2025-latest-updates-and-where-to-buy\n7. https://uae.sharafdg.com/apple-iphone-16/\n8. https://kts.my/product-category/apple/\n9. https://mobilemandu.com/categories/mobile-phones/apple\n10. https://shopdunk.com/find-the-best-iphone-purchase-locations-in-ho-chi-minh-city\n11. https://demandteq.com/iphone-16e-pre-order-starts-today-heres-how-to-buy-the-latest-iphone-in-india/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780939031,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 634,
+        "prompt_tokens": 9303,
+        "total_tokens": 9937,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I buy the latest iPhone?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26f91585e1",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"6127ecd96a26f9154f50a50001f1a153\"},\"usage\":{\"total_tokens\":9150}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26f91585e1",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"6127ecd96a26f9154f50a50001f1a153\"},\"usage\":{\"total_tokens\":9150}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"6127ecd96a26f9154f50a50001f1a153\"},\"usage\":{\"total_tokens\":9150}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, you can buy the latest iPhone from several types of retailers depending on your location:\n\n## Official Apple Channels\n- **Apple's Online Store** \u2013 Direct from Apple with trade-in options (available in most countries with official Apple presence)\n- **Apple Retail Stores** \u2013 Physical Apple Stores for in-person purchases\n\n## Major Electronics Retailers (Varies by Country)\n\n**United States:**\n- Amazon (often in partnership with carriers)\n- Walmart\n- Best Buy\n\n**United Kingdom:**\n- Amazon UK\n- Argos\n- AO\n- Currys\n- John Lewis\n- Carphone Warehouse\n- KRCS\n\n**United Arab Emirates:**\n- Sharaf DG \u2013 Offers trade-in programs, extended warranties, and flexible payment options\n\n**Singapore:**\n- OH Mobile Tech\n- Switch\n- CompAsia\n\n## Authorized Apple Resellers (Region-Specific)\n\n**Pakistan:**\n- Apple Kid (Hafeez Center, Lahore) \u2013 Offers PTA-approved iPhones, installments, and trade-ins\n- Authentico.pk \u2013 Online with nationwide delivery\n- Victory Computers Pakistan\n\n**Vietnam:**\n- ShopDunk (multiple locations in Ho Chi Minh City)\n- FPT Shop (600+ stores nationwide)\n- Futureworld Vietnam (Apple Premium Reseller)\n- DIGIBOX\n- Ho\u00e0ng H\u00e0 Mobile\n\n**Malaysia:**\n- KTS Malaysia\n\n**Nepal:**\n- MobileMandu \u2013 Offers EMI/financing options\n\n**New Zealand:**\n- 2degrees (carrier with trade-in deals)\n\n## Carrier Stores\nMost major mobile carriers worldwide offer the latest iPhones with contract plans, trade-in incentives, and installment options.\n\n## Tips for Buying:\n- Check for **authorized dealer status** to ensure genuine products with official warranties\n- Compare prices across multiple retailers\n- Look for **trade-in programs** to offset costs\n- Consider **financing/EMI options** if available\n- Watch for seasonal promotions (Black Friday, 618, etc.)\n\nSources:\n1. https://applekid.pk/lahore/latest-iphone-price-in-pakistan/\n2. https://www.macworld.com/article/672801/best-iphone-deals.html\n3. https://www.2degrees.nz/shop/mobile-phones/apple\n4. https://ohmobile.shop/product-category/apple/iphone/new-iphone/\n5. https://www.authentico.pk/iphones\n6. https://victorycomputer.pk/iphone-17-pro-max-price-in-pakistan-2025-latest-updates-and-where-to-buy\n7. https://uae.sharafdg.com/apple-iphone-16/\n8. https://kts.my/product-category/apple/\n9. https://mobilemandu.com/categories/mobile-phones/apple\n10. https://shopdunk.com/find-the-best-iphone-purchase-locations-in-ho-chi-minh-city\n11. https://demandteq.com/iphone-16e-pre-order-starts-today-heres-how-to-buy-the-latest-iphone-in-india/",
+  "usage": {
+    "completion_tokens": 634,
+    "prompt_tokens": 9303,
+    "total_tokens": 9937,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

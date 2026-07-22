@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:36:36.896714+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24aeefda6fe414fb3b49c7",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Basic Workflow\n\nTV stations operate on a **linear scheduling** model where content is programmed in a continuous, back-to-back sequence. The process involves several key departments and technologies working together.\n\n### 1. Traffic Department Creates the Schedule\n\nThe **traffic department** builds a detailed log of all content for a day, week, or longer period. This log includes:\n- Pre-recorded programs\n- Live programs (newscasts, sporting events)\n- Commercials\n- Promos (for upcoming shows)\n- Public service announcements\n\n### 2. Automation Systems Execute the Schedule\n\nThe traffic log is handed off to an **automation system** that controls **playout servers**\u2014specialized video servers that store and play back content. The automation system executes the schedule with precise timing, switching between different content sources as programmed.\n\n### 3. Master Control Oversight\n\nA **master control operator** monitors the entire process to:\n- Ensure playout proceeds as scheduled\n- Insert on-screen graphics like weather bugs and logos\n- Monitor signal quality\n- Handle manual cut-ins for breaking news\n- Manage transitions to live programming\n\n## Commercial Insertion Methods\n\nCommercials are inserted through several technical approaches:\n\n### Cue Tone System\nAn **audio signal embedded in the program stream** (called a \"cue tone\") triggers equipment to prepare for ad playback. When a commercial break opportunity approaches, the cue tone signals the system to switch from network programming to a local ad server. The process reverses when the break ends.\n\n### SCTE Markers\nModern systems use **SCTE-35 markers**\u2014digital signals embedded in the video stream that precisely identify where commercial breaks begin and end. These markers allow for automated ad insertion and can trigger regional/local advertising to replace national ads.\n\n### Regional/Local Insertion Models\n\nTV stations and cable systems use different models for inserting local content:\n\n| Model | Description |\n|-------|-------------|\n| **Centralized** | All playout happens at headquarters; local ads are part of the main feed |\n| **Hub** | Regional stations receive network feeds and insert local ads at break markers |\n| **Dual** | Stations play local programming during certain periods, then rebroadcast network feeds with local ad insertion |\n| **Edge** | Regional servers insert content at distribution points based on marked break positions |\n\n## Historical Evolution\n\nThe technology has evolved significantly over time:\n\n- **Early days**: Humans manually fed videotapes into players\n- **Robot systems**: Automated machines retrieved video cassettes and loaded them into players\n- **Channel-in-a-box**: PC-based systems combining scheduling and playout\n- **Cloud-based**: Modern systems that schedule and play out content from cloud servers, accessible from anywhere\n\n## How Advertising Sales Work\n\nTV networks sell advertising slots based on the shows where commercials will air. They determine the **exact location within the show** where each commercial will appear. Advertisers can buy:\n- **National spots**: Air across all affiliates simultaneously\n- **Local spots**: Air only in specific markets during local station breaks\n- **Zone-based targeting** (cable): Ads targeted to specific neighborhoods or ZIP codes\n\n## Time Squeeze Technology\n\nSome broadcasters use **time squeeze** technology to subtly compress programs (speeding them up imperceptibly) to create additional time for commercials\u2014typically 1-2 minutes per hour\u2014without removing any actual content.\n\nSources:\n1. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n2. https://core.ac.uk/download/pdf/219381540.pdf\n3. https://www.aveco.com/en/solutions/detail/12/regional-program-insertion\n4. https://www.skybeam.io/blog/types-of-tv-advertising\n5. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n6. https://pubsonline.informs.org/doi/10.1287/opre.1030.0083\n7. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n8. https://files.eric.ed.gov/fulltext/ED375824.pdf\n9. https://ijoc.org/index.php/ijoc/article/download/5075/1827/22572\n10. https://jacquelineprasai.files.wordpress.com/2017/10/prasai_imc.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780788976,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 943,
+        "prompt_tokens": 5911,
+        "total_tokens": 6854,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How TV stations air shows and commercials"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24aeeeb17d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"0ecc09f66a24aeee680f160001eb5ecc\"},\"usage\":{\"total_tokens\":5762}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24aeeeb17d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"0ecc09f66a24aeee680f160001eb5ecc\"},\"usage\":{\"total_tokens\":5762}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"0ecc09f66a24aeee680f160001eb5ecc\"},\"usage\":{\"total_tokens\":5762}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how TV stations air shows and commercials:\n\n## The Basic Workflow\n\nTV stations operate on a **linear scheduling** model where content is programmed in a continuous, back-to-back sequence. The process involves several key departments and technologies working together.\n\n### 1. Traffic Department Creates the Schedule\n\nThe **traffic department** builds a detailed log of all content for a day, week, or longer period. This log includes:\n- Pre-recorded programs\n- Live programs (newscasts, sporting events)\n- Commercials\n- Promos (for upcoming shows)\n- Public service announcements\n\n### 2. Automation Systems Execute the Schedule\n\nThe traffic log is handed off to an **automation system** that controls **playout servers**\u2014specialized video servers that store and play back content. The automation system executes the schedule with precise timing, switching between different content sources as programmed.\n\n### 3. Master Control Oversight\n\nA **master control operator** monitors the entire process to:\n- Ensure playout proceeds as scheduled\n- Insert on-screen graphics like weather bugs and logos\n- Monitor signal quality\n- Handle manual cut-ins for breaking news\n- Manage transitions to live programming\n\n## Commercial Insertion Methods\n\nCommercials are inserted through several technical approaches:\n\n### Cue Tone System\nAn **audio signal embedded in the program stream** (called a \"cue tone\") triggers equipment to prepare for ad playback. When a commercial break opportunity approaches, the cue tone signals the system to switch from network programming to a local ad server. The process reverses when the break ends.\n\n### SCTE Markers\nModern systems use **SCTE-35 markers**\u2014digital signals embedded in the video stream that precisely identify where commercial breaks begin and end. These markers allow for automated ad insertion and can trigger regional/local advertising to replace national ads.\n\n### Regional/Local Insertion Models\n\nTV stations and cable systems use different models for inserting local content:\n\n| Model | Description |\n|-------|-------------|\n| **Centralized** | All playout happens at headquarters; local ads are part of the main feed |\n| **Hub** | Regional stations receive network feeds and insert local ads at break markers |\n| **Dual** | Stations play local programming during certain periods, then rebroadcast network feeds with local ad insertion |\n| **Edge** | Regional servers insert content at distribution points based on marked break positions |\n\n## Historical Evolution\n\nThe technology has evolved significantly over time:\n\n- **Early days**: Humans manually fed videotapes into players\n- **Robot systems**: Automated machines retrieved video cassettes and loaded them into players\n- **Channel-in-a-box**: PC-based systems combining scheduling and playout\n- **Cloud-based**: Modern systems that schedule and play out content from cloud servers, accessible from anywhere\n\n## How Advertising Sales Work\n\nTV networks sell advertising slots based on the shows where commercials will air. They determine the **exact location within the show** where each commercial will appear. Advertisers can buy:\n- **National spots**: Air across all affiliates simultaneously\n- **Local spots**: Air only in specific markets during local station breaks\n- **Zone-based targeting** (cable): Ads targeted to specific neighborhoods or ZIP codes\n\n## Time Squeeze Technology\n\nSome broadcasters use **time squeeze** technology to subtly compress programs (speeding them up imperceptibly) to create additional time for commercials\u2014typically 1-2 minutes per hour\u2014without removing any actual content.\n\nSources:\n1. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n2. https://core.ac.uk/download/pdf/219381540.pdf\n3. https://www.aveco.com/en/solutions/detail/12/regional-program-insertion\n4. https://www.skybeam.io/blog/types-of-tv-advertising\n5. https://www.researchgate.net/publication/220243857_Scheduling_Commercials_on_Broadcast_Television\n6. https://pubsonline.informs.org/doi/10.1287/opre.1030.0083\n7. https://repositorium.uminho.pt/bitstreams/fe681d21-61a7-4ed2-bb08-6e4df718db3b/download\n8. https://files.eric.ed.gov/fulltext/ED375824.pdf\n9. https://ijoc.org/index.php/ijoc/article/download/5075/1827/22572\n10. https://jacquelineprasai.files.wordpress.com/2017/10/prasai_imc.pdf",
+  "usage": {
+    "completion_tokens": 943,
+    "prompt_tokens": 5911,
+    "total_tokens": 6854,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

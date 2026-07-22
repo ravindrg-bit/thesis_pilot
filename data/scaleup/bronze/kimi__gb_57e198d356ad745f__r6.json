@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_57e198d356ad745f",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T21:03:19.223541+00:00",
+  "query_text": "the book of the thousand nights and one night volume v",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a248b16ce2881045958e2a2",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I need to search for more specific information about \"The Book of the Thousand Nights and One Night Volume V\".\n\nLet me try another search with more specific terms: ",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780779798,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 36,
+        "prompt_tokens": 170,
+        "total_tokens": 206,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "the book of the thousand nights and one night volume v"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a248b1566c9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"2140a36a6a248b15680f160001eb40c3\"},\"usage\":{\"total_tokens\":16}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a248b1566c9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"2140a36a6a248b15680f160001eb40c3\"},\"usage\":{\"total_tokens\":16}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"2140a36a6a248b15680f160001eb40c3\"},\"usage\":{\"total_tokens\":16}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I need to search for more specific information about \"The Book of the Thousand Nights and One Night Volume V\".\n\nLet me try another search with more specific terms: ",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 170,
+    "total_tokens": 206,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

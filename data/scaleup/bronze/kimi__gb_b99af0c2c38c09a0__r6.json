@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b99af0c2c38c09a0",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:04:46.209521+00:00",
+  "query_text": "Book a taxi for a pickup at the airport",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a27205216418912217ef08c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I don't have the ability to book a taxi for you directly. However, I can guide you on how to book an airport taxi pickup based on common booking methods used worldwide.\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms**\nMost airport taxi services allow you to book through their websites. You'll typically need to provide:\n- Flight number and arrival time\n- Number of passengers\n- Amount of luggage\n- Destination address\n- Contact phone number\n\n### 2. **Mobile Apps**\nPopular ride-hailing and taxi apps include:\n- **Uber** - Available at most major airports worldwide\n- **Careem** - Popular in Middle East regions\n- **Bolt** - Available in Europe and select other regions\n- **Local taxi apps** - Many cities have their own dedicated taxi apps\n\n### 3. **Phone Booking**\nCall a local taxi dispatch service directly. For example:\n- **American Taxi (Chicago)**: 847-255-9600\n- Many services recommend booking at least 24 hours in advance\n\n### 4. **Pre-Booked Private Transfers**\nFor a more premium experience, you can book private transfer services that offer:\n- Meet & greet service (driver waits with a name sign at arrivals)\n- Flight monitoring (driver adjusts for delays)\n- Fixed pricing with no hidden charges\n- Assistance with luggage\n\n### 5. **Airport Taxi Stands**\nMost airports have official taxi stands directly outside the arrivals terminal where you can get a taxi without pre-booking.\n\n## Tips for Airport Pickup Booking:\n- **Book in advance** for early morning/late night flights or during peak travel seasons\n- **Confirm fixed fare** before starting if the taxi doesn't use a meter\n- **Provide your flight number** so the driver can track delays\n- **Check pickup locations** - many airports have designated ride-hailing pickup zones in parking garages or specific doors\n\nTo help you further, could you tell me which **city or airport** you need the taxi pickup from? I can then provide more specific information about local services and booking options for that location.\n\nSources:\n1. https://www.taxi2airport.com/en/\n2. https://taksi.ch/en/blog/flughafen-zuerich-taxi/\n3. https://camberleycar.co.uk/blog/book-airport-taxi-uk-step-by-step/\n4. https://www.americantaxi.com/airports/\n5. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n6. https://ktaxi.net/\n7. https://taxiserviceinvaranasi.com/airport-taxi/\n8. https://umrahpathtaxi.com/jeddah-to-madinah/\n9. https://taxxilo.com/sabadell-airport-taxi/\n10. https://blog.gettransfer.com/phnom-penh-airport-to-sihanoukville-airport-taxi-private-transfers-and-airport-pickup-in-cambodia/\n11. https://www.bluebirdtravels.in/product/kochi-airport-to-trivandrum-taxi/\n12. https://www.airporttaxibengaluru.com/page/book-airport-drop-pickup-taxi-from-govindaraj-nagar-starts-at-799-kia\n13. https://www.tripadvisor.co.nz/ShowTopic-g294212-i2147-k3810117-Taxi_reservation_or_advance_booking_to_the_airport-Beijing.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949074,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 739,
+        "prompt_tokens": 8616,
+        "total_tokens": 9355,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Book a taxi for a pickup at the airport"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2720510f8f",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"9787cb926a2720514f50a50001f1d259\"},\"usage\":{\"total_tokens\":8464}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2720510f8f",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"9787cb926a2720514f50a50001f1d259\"},\"usage\":{\"total_tokens\":8464}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"9787cb926a2720514f50a50001f1d259\"},\"usage\":{\"total_tokens\":8464}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I don't have the ability to book a taxi for you directly. However, I can guide you on how to book an airport taxi pickup based on common booking methods used worldwide.\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms**\nMost airport taxi services allow you to book through their websites. You'll typically need to provide:\n- Flight number and arrival time\n- Number of passengers\n- Amount of luggage\n- Destination address\n- Contact phone number\n\n### 2. **Mobile Apps**\nPopular ride-hailing and taxi apps include:\n- **Uber** - Available at most major airports worldwide\n- **Careem** - Popular in Middle East regions\n- **Bolt** - Available in Europe and select other regions\n- **Local taxi apps** - Many cities have their own dedicated taxi apps\n\n### 3. **Phone Booking**\nCall a local taxi dispatch service directly. For example:\n- **American Taxi (Chicago)**: 847-255-9600\n- Many services recommend booking at least 24 hours in advance\n\n### 4. **Pre-Booked Private Transfers**\nFor a more premium experience, you can book private transfer services that offer:\n- Meet & greet service (driver waits with a name sign at arrivals)\n- Flight monitoring (driver adjusts for delays)\n- Fixed pricing with no hidden charges\n- Assistance with luggage\n\n### 5. **Airport Taxi Stands**\nMost airports have official taxi stands directly outside the arrivals terminal where you can get a taxi without pre-booking.\n\n## Tips for Airport Pickup Booking:\n- **Book in advance** for early morning/late night flights or during peak travel seasons\n- **Confirm fixed fare** before starting if the taxi doesn't use a meter\n- **Provide your flight number** so the driver can track delays\n- **Check pickup locations** - many airports have designated ride-hailing pickup zones in parking garages or specific doors\n\nTo help you further, could you tell me which **city or airport** you need the taxi pickup from? I can then provide more specific information about local services and booking options for that location.\n\nSources:\n1. https://www.taxi2airport.com/en/\n2. https://taksi.ch/en/blog/flughafen-zuerich-taxi/\n3. https://camberleycar.co.uk/blog/book-airport-taxi-uk-step-by-step/\n4. https://www.americantaxi.com/airports/\n5. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n6. https://ktaxi.net/\n7. https://taxiserviceinvaranasi.com/airport-taxi/\n8. https://umrahpathtaxi.com/jeddah-to-madinah/\n9. https://taxxilo.com/sabadell-airport-taxi/\n10. https://blog.gettransfer.com/phnom-penh-airport-to-sihanoukville-airport-taxi-private-transfers-and-airport-pickup-in-cambodia/\n11. https://www.bluebirdtravels.in/product/kochi-airport-to-trivandrum-taxi/\n12. https://www.airporttaxibengaluru.com/page/book-airport-drop-pickup-taxi-from-govindaraj-nagar-starts-at-799-kia\n13. https://www.tripadvisor.co.nz/ShowTopic-g294212-i2147-k3810117-Taxi_reservation_or_advance_booking_to_the_airport-Beijing.html",
+  "usage": {
+    "completion_tokens": 739,
+    "prompt_tokens": 8616,
+    "total_tokens": 9355,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

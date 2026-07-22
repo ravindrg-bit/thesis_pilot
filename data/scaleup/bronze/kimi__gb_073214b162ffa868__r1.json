@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_073214b162ffa868",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T21:44:26.245316+00:00",
+  "query_text": "what's the Mom Test",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25e634def40df019634676",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Mom Test** is a customer interview methodology and book by entrepreneur **Rob Fitzpatrick** (published in 2013) that teaches you how to talk to potential customers to get honest, actionable feedback about your business idea\u2014even from people who might otherwise lie to be polite (like your mom).\n\n## The Core Concept\n\nThe name comes from a thought experiment: if you asked your mom whether your business idea is good, she'd probably say yes because she loves you and doesn't want to hurt your feelings. Most people do the same\u2014they give polite, encouraging answers rather than honest feedback. The Mom Test is a way of asking questions **so that even your mom couldn't lie to you**.\n\n## The Three Rules\n\nThe framework boils down to three key principles:\n\n1. **Talk about their life, not your idea** \u2014 Don't pitch your solution. Ask about their actual experiences, workflows, and challenges.\n\n2. **Ask about specifics in the past, not generics or hypotheticals about the future** \u2014 Instead of \"Would you use this?\" ask \"Tell me about the last time you faced this problem\u2014what did you do?\" Past behavior is data; future intentions are often fiction.\n\n3. **Talk less and listen more** \u2014 Let the other person do most of the talking. The more you explain your idea, the more you bias their responses.\n\n## Why It Matters\n\nThe Mom Test helps entrepreneurs avoid **false positives**\u2014when people say they like your idea but wouldn't actually use or pay for it. By focusing on concrete past behavior rather than opinions and hypotheticals, you get real evidence about whether a problem is worth solving.\n\nThe book has become essential reading in startup circles, particularly for indie hackers, founders, and product managers working to validate ideas before building.\n\n---\n\nSources:\n1. https://www.dictionary.com/browse/mom-test\n2. https://gonogo.team/the-mom-test\n3. https://tldv.io/blog/the-mom-test/\n4. https://www.collinsdictionary.com/dictionary/english/mom-test\n5. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n6. https://blog.uxtweak.com/the-mom-test/\n7. https://readingraphics.com/book-summary-the-mom-test/\n8. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n9. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n10. https://hellopm.co/word/moms-test/\n11. https://dictionary.reverso.net/english-definition/mom+test",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780868661,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 561,
+        "prompt_tokens": 7434,
+        "total_tokens": 7995,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what's the Mom Test"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25e634b38d",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f2e5acc26a25e634680f160001ed239b\"},\"usage\":{\"total_tokens\":7286}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25e634b38d",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f2e5acc26a25e634680f160001ed239b\"},\"usage\":{\"total_tokens\":7286}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f2e5acc26a25e634680f160001ed239b\"},\"usage\":{\"total_tokens\":7286}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Mom Test** is a customer interview methodology and book by entrepreneur **Rob Fitzpatrick** (published in 2013) that teaches you how to talk to potential customers to get honest, actionable feedback about your business idea\u2014even from people who might otherwise lie to be polite (like your mom).\n\n## The Core Concept\n\nThe name comes from a thought experiment: if you asked your mom whether your business idea is good, she'd probably say yes because she loves you and doesn't want to hurt your feelings. Most people do the same\u2014they give polite, encouraging answers rather than honest feedback. The Mom Test is a way of asking questions **so that even your mom couldn't lie to you**.\n\n## The Three Rules\n\nThe framework boils down to three key principles:\n\n1. **Talk about their life, not your idea** \u2014 Don't pitch your solution. Ask about their actual experiences, workflows, and challenges.\n\n2. **Ask about specifics in the past, not generics or hypotheticals about the future** \u2014 Instead of \"Would you use this?\" ask \"Tell me about the last time you faced this problem\u2014what did you do?\" Past behavior is data; future intentions are often fiction.\n\n3. **Talk less and listen more** \u2014 Let the other person do most of the talking. The more you explain your idea, the more you bias their responses.\n\n## Why It Matters\n\nThe Mom Test helps entrepreneurs avoid **false positives**\u2014when people say they like your idea but wouldn't actually use or pay for it. By focusing on concrete past behavior rather than opinions and hypotheticals, you get real evidence about whether a problem is worth solving.\n\nThe book has become essential reading in startup circles, particularly for indie hackers, founders, and product managers working to validate ideas before building.\n\n---\n\nSources:\n1. https://www.dictionary.com/browse/mom-test\n2. https://gonogo.team/the-mom-test\n3. https://tldv.io/blog/the-mom-test/\n4. https://www.collinsdictionary.com/dictionary/english/mom-test\n5. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n6. https://blog.uxtweak.com/the-mom-test/\n7. https://readingraphics.com/book-summary-the-mom-test/\n8. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n9. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n10. https://hellopm.co/word/moms-test/\n11. https://dictionary.reverso.net/english-definition/mom+test",
+  "usage": {
+    "completion_tokens": 561,
+    "prompt_tokens": 7434,
+    "total_tokens": 7995,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

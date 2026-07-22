@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d1bb7628b7bcaf8a",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:46:21.505026+00:00",
+  "query_text": "what port is mundra",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25a0567f95460f2b3f84b7",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with detailed information about Mundra Port.\n\n## Mundra Port Overview\n\n**Mundra Port** is a major seaport located in **Gujarat, India**, on the **northern shores of the Gulf of Kutch** near the town of Mundra in Kutch district. It is one of the most significant ports in India with the following key characteristics:\n\n### Location Details\n- **Country**: India\n- **State**: Gujarat\n- **Specific Location**: North shores of the Gulf of Kutch, near Mundra town, Kutch district\n- **Body of Water**: Arabian Sea, Indian Ocean\n- **GPS Coordinates**: Latitude 22\u00b0 43' 42\" N, Longitude 69\u00b0 42' 24\" E\n- **UN/LOCODE**: INMUN\n\n### Significance\n- **India's largest private port** \u2013 owned and operated by **Adani Ports & SEZ Limited (APSEZ)**\n- **India's largest commercial port** by cargo volume\n- **India's largest container port** overall (even larger than JNPT among major ports)\n- India's first private port\n- Designated as a **Special Economic Zone (SEZ)**\n\n### Port Specifications\n- **Harbor Type**: Open Roadstead\n- **Anchorage Depth**: 11.0 meters\n- **Cargo Pier Depth**: 17.5 meters\n- **Oil Terminal Depth**: 32.0 meters\n- **Channel Depth**: 14.0 meters\n- **Tidal Range**: 5.0 meters\n- **Entrance Width**: 460 meters\n- **Number of Berths**: 10+ berths (including 8 multipurpose berths)\n- **Draft Range**: 15 to 30 meters\n\n### Cargo Handling\nThe port handles diverse cargo types including:\n- Dry bulk cargo\n- Liquid cargo\n- Crude oil (via Single Point Mooring - SPM)\n- Containers\n- Coal (home to India's largest coal import terminal - 40 million tonnes annually)\n- Automobiles/Ro-Ro cargo\n- LPG/LNG\n- Fertilizers, timber, steel products\n\n### Connectivity\nMundra Port offers strategic access to:\n- **Domestic markets**: Delhi, Rajasthan, Gujarat, Madhya Pradesh, Haryana, Punjab, Himachal Pradesh\n- **International markets**: Middle East, Europe, United States, Africa, South Asia, Indian subcontinent, Far East, Southeast Asia\n\n### Annual Capacity\n- Handles over **150 million tonnes** of cargo annually\n- Approximately **850,000 TEU** containers\n- About **375 vessels** handled annually\n\n---\n\nSources:\n1. https://www.gemitakibi.com/ship-tracking/mundra-india-port-details.html\n2. https://falconfreight.com/information-gujarat-mundra-port-special-economic-zone/\n3. https://falconfreight.com/know-more-about-mundra-port-services/\n4. https://mapsforupsc.com/major-ports-in-india/\n5. https://m.sofreight.com/ports/IN/INMUN.html\n6. https://baike.baidu.com/item/%E8%92%99%E5%BE%B7%E6%8B%89/9189831\n7. https://www.voceanship.com/country/india/mundra-port-information\n8. https://shipnext.com/port/mundra-inmun-iot",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780850775,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 725,
+        "prompt_tokens": 7190,
+        "total_tokens": 7915,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what port is mundra"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25a056f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ec91ef196a25a0564f50a50001ee5fb0\"},\"usage\":{\"total_tokens\":7041}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25a056f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ec91ef196a25a0564f50a50001ee5fb0\"},\"usage\":{\"total_tokens\":7041}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ec91ef196a25a0564f50a50001ee5fb0\"},\"usage\":{\"total_tokens\":7041}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with detailed information about Mundra Port.\n\n## Mundra Port Overview\n\n**Mundra Port** is a major seaport located in **Gujarat, India**, on the **northern shores of the Gulf of Kutch** near the town of Mundra in Kutch district. It is one of the most significant ports in India with the following key characteristics:\n\n### Location Details\n- **Country**: India\n- **State**: Gujarat\n- **Specific Location**: North shores of the Gulf of Kutch, near Mundra town, Kutch district\n- **Body of Water**: Arabian Sea, Indian Ocean\n- **GPS Coordinates**: Latitude 22\u00b0 43' 42\" N, Longitude 69\u00b0 42' 24\" E\n- **UN/LOCODE**: INMUN\n\n### Significance\n- **India's largest private port** \u2013 owned and operated by **Adani Ports & SEZ Limited (APSEZ)**\n- **India's largest commercial port** by cargo volume\n- **India's largest container port** overall (even larger than JNPT among major ports)\n- India's first private port\n- Designated as a **Special Economic Zone (SEZ)**\n\n### Port Specifications\n- **Harbor Type**: Open Roadstead\n- **Anchorage Depth**: 11.0 meters\n- **Cargo Pier Depth**: 17.5 meters\n- **Oil Terminal Depth**: 32.0 meters\n- **Channel Depth**: 14.0 meters\n- **Tidal Range**: 5.0 meters\n- **Entrance Width**: 460 meters\n- **Number of Berths**: 10+ berths (including 8 multipurpose berths)\n- **Draft Range**: 15 to 30 meters\n\n### Cargo Handling\nThe port handles diverse cargo types including:\n- Dry bulk cargo\n- Liquid cargo\n- Crude oil (via Single Point Mooring - SPM)\n- Containers\n- Coal (home to India's largest coal import terminal - 40 million tonnes annually)\n- Automobiles/Ro-Ro cargo\n- LPG/LNG\n- Fertilizers, timber, steel products\n\n### Connectivity\nMundra Port offers strategic access to:\n- **Domestic markets**: Delhi, Rajasthan, Gujarat, Madhya Pradesh, Haryana, Punjab, Himachal Pradesh\n- **International markets**: Middle East, Europe, United States, Africa, South Asia, Indian subcontinent, Far East, Southeast Asia\n\n### Annual Capacity\n- Handles over **150 million tonnes** of cargo annually\n- Approximately **850,000 TEU** containers\n- About **375 vessels** handled annually\n\n---\n\nSources:\n1. https://www.gemitakibi.com/ship-tracking/mundra-india-port-details.html\n2. https://falconfreight.com/information-gujarat-mundra-port-special-economic-zone/\n3. https://falconfreight.com/know-more-about-mundra-port-services/\n4. https://mapsforupsc.com/major-ports-in-india/\n5. https://m.sofreight.com/ports/IN/INMUN.html\n6. https://baike.baidu.com/item/%E8%92%99%E5%BE%B7%E6%8B%89/9189831\n7. https://www.voceanship.com/country/india/mundra-port-information\n8. https://shipnext.com/port/mundra-inmun-iot",
+  "usage": {
+    "completion_tokens": 725,
+    "prompt_tokens": 7190,
+    "total_tokens": 7915,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

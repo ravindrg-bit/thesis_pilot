@@ -1,0 +1,67 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "claude",
+  "run_index": 5,
+  "model_requested": "claude-sonnet-4-6",
+  "model_served": "claude-sonnet-4-6",
+  "timestamp_utc": "2026-06-07T20:26:15.328944+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 2048,
+    "tools": [
+      {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 5
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "msg_01XbHDpBM97ZxpFpUuvRbsQs",
+    "container": null,
+    "content": [
+      {
+        "citations": null,
+        "text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related groups** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n- You have **two measurements from the same subjects** (e.g., before vs. after treatment)\n- You have **matched pairs** of subjects (e.g., twins, or subjects matched by age/gender)\n- The two groups are **not independent** of each other\n\n---\n\n## Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Dependent pairs** | Each observation in one group corresponds to exactly one observation in the other |\n| **Continuous data** | The outcome variable is measured on an interval or ratio scale |\n| **Normality** | The *differences* between pairs are approximately normally distributed |\n| **No significant outliers** | Outliers in the differences can distort results |\n| **Random sampling** | Data is a random sample from the population |\n\n---\n\n## Hypotheses\n\n| | Statement |\n|---|---|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (the mean difference between pairs is zero) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed), or \u03bc_d > 0 / \u03bc_d < 0 (one-tailed) |\n\n---\n\n## Formula\n\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\nWhere:\n\n| Symbol | Meaning |\n|---|---|\n| $\\bar{d}$ | Mean of the differences between pairs |\n| $s_d$ | Standard deviation of the differences |\n| $n$ | Number of pairs |\n| $s_d / \\sqrt{n}$ | Standard error of the differences |\n\n---\n\n## Degrees of Freedom\n\n$$df = n - 1$$\n\n---\n\n## Step-by-Step Example\n\n> A researcher wants to know if a training program improves test scores. 5 students are tested **before** and **after** the program.\n\n| Student | Before | After | Difference (d) |\n|---|---|---|---|\n| 1 | 70 | 75 | +5 |\n| 2 | 65 | 70 | +5 |\n| 3 | 80 | 85 | +5 |\n| 4 | 72 | 74 | +2 |\n| 5 | 68 | 76 | +8 |\n\n**Step 1: Calculate the mean difference**\n$$\\bar{d} = \\frac{5+5+5+2+8}{5} = \\frac{25}{5} = 5$$\n\n**Step 2: Calculate the standard deviation of differences**\n$$s_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}} = \\sqrt{\\frac{(0)^2+(0)^2+(0)^2+(-3)^2+(3)^2}{4}} = \\sqrt{\\frac{18}{4}} \\approx 2.12$$\n\n**Step 3: Calculate the t-statistic**\n$$t = \\frac{5}{2.12/\\sqrt{5}} = \\frac{5}{0.948} \\approx 5.27$$\n\n**Step 4: Find the critical value**\n- df = 5 - 1 = **4**\n- At \u03b1 = 0.05 (two-tailed), critical t = **2.776**\n\n**Step 5: Decision**\n- Since **5.27 > 2.776**, we **reject H\u2080**\n- \u2705 The training program **significantly improved** test scores.\n\n---\n\n## Interpretation\n\n| p-value | Decision |\n|---|---|\n| p < \u03b1 (e.g., 0.05) | Reject H\u2080 \u2014 significant difference exists |\n| p \u2265 \u03b1 | Fail to reject H\u2080 \u2014 no significant difference |\n\n---\n\n## Paired vs. Independent T-Test\n\n| Feature | Paired T-Test | Independent T-Test |\n|---|---|---|\n| Subjects | Same or matched | Different groups |\n| Groups | Related/dependent | Unrelated/independent |\n| Variance control | Removes between-subject variability | Does not control for it |\n| Statistical power | Generally **higher** | Generally lower |\n\n---\n\n## Key Takeaway\n\n> The paired samples t-test is **more powerful** than the independent samples t-test when data is related, because it **controls for individual variability** by focusing only on the *differences* within pairs.",
+        "type": "text"
+      }
+    ],
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2219,
+      "output_tokens": 1135,
+      "output_tokens_details": null,
+      "server_tool_use": null,
+      "service_tier": "standard"
+    }
+  },
+  "answer_text": "## Paired Samples T-Test\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related groups** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n- You have **two measurements from the same subjects** (e.g., before vs. after treatment)\n- You have **matched pairs** of subjects (e.g., twins, or subjects matched by age/gender)\n- The two groups are **not independent** of each other\n\n---\n\n## Assumptions\n\n| Assumption | Description |\n|---|---|\n| **Dependent pairs** | Each observation in one group corresponds to exactly one observation in the other |\n| **Continuous data** | The outcome variable is measured on an interval or ratio scale |\n| **Normality** | The *differences* between pairs are approximately normally distributed |\n| **No significant outliers** | Outliers in the differences can distort results |\n| **Random sampling** | Data is a random sample from the population |\n\n---\n\n## Hypotheses\n\n| | Statement |\n|---|---|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (the mean difference between pairs is zero) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed), or \u03bc_d > 0 / \u03bc_d < 0 (one-tailed) |\n\n---\n\n## Formula\n\n$$t = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\nWhere:\n\n| Symbol | Meaning |\n|---|---|\n| $\\bar{d}$ | Mean of the differences between pairs |\n| $s_d$ | Standard deviation of the differences |\n| $n$ | Number of pairs |\n| $s_d / \\sqrt{n}$ | Standard error of the differences |\n\n---\n\n## Degrees of Freedom\n\n$$df = n - 1$$\n\n---\n\n## Step-by-Step Example\n\n> A researcher wants to know if a training program improves test scores. 5 students are tested **before** and **after** the program.\n\n| Student | Before | After | Difference (d) |\n|---|---|---|---|\n| 1 | 70 | 75 | +5 |\n| 2 | 65 | 70 | +5 |\n| 3 | 80 | 85 | +5 |\n| 4 | 72 | 74 | +2 |\n| 5 | 68 | 76 | +8 |\n\n**Step 1: Calculate the mean difference**\n$$\\bar{d} = \\frac{5+5+5+2+8}{5} = \\frac{25}{5} = 5$$\n\n**Step 2: Calculate the standard deviation of differences**\n$$s_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}} = \\sqrt{\\frac{(0)^2+(0)^2+(0)^2+(-3)^2+(3)^2}{4}} = \\sqrt{\\frac{18}{4}} \\approx 2.12$$\n\n**Step 3: Calculate the t-statistic**\n$$t = \\frac{5}{2.12/\\sqrt{5}} = \\frac{5}{0.948} \\approx 5.27$$\n\n**Step 4: Find the critical value**\n- df = 5 - 1 = **4**\n- At \u03b1 = 0.05 (two-tailed), critical t = **2.776**\n\n**Step 5: Decision**\n- Since **5.27 > 2.776**, we **reject H\u2080**\n- \u2705 The training program **significantly improved** test scores.\n\n---\n\n## Interpretation\n\n| p-value | Decision |\n|---|---|\n| p < \u03b1 (e.g., 0.05) | Reject H\u2080 \u2014 significant difference exists |\n| p \u2265 \u03b1 | Fail to reject H\u2080 \u2014 no significant difference |\n\n---\n\n## Paired vs. Independent T-Test\n\n| Feature | Paired T-Test | Independent T-Test |\n|---|---|---|\n| Subjects | Same or matched | Different groups |\n| Groups | Related/dependent | Unrelated/independent |\n| Variance control | Removes between-subject variability | Does not control for it |\n| Statistical power | Generally **higher** | Generally lower |\n\n---\n\n## Key Takeaway\n\n> The paired samples t-test is **more powerful** than the independent samples t-test when data is related, because it **controls for individual variability** by focusing only on the *differences* within pairs.",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2219,
+    "output_tokens": 1135,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard"
+  },
+  "run_profile": "scaleup"
+}

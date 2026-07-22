@@ -1,0 +1,145 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "chatgpt",
+  "run_index": 8,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T03:50:00.657817+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0f885199cdfca3eb006a24ea636388819cbb19a94af10fc314",
+    "created_at": 1780804195.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0f885199cdfca3eb006a24ea643634819ca0a609d7d3fed175",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_0f885199cdfca3eb006a24ea64e4bc819c9c65fe4b33c87d3b",
+        "action": {
+          "query": "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-06-07\",\"num_games\":5}",
+          "type": "search",
+          "queries": [
+            "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-06-07\",\"num_games\":5}"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_0f885199cdfca3eb006a24ea661f10819c93b17d401dfdf3d4",
+        "content": [
+          {
+            "annotations": [],
+            "text": "The next NBA game is **San Antonio Spurs @ New York Knicks** on **Monday, June 8, 2026 at 8:30 PM ET** at the Knicks\u2019 home arena. \n\nYou can get tickets from:\n\n- **Official team/NBA ticketing pages** \u2014 safest option; check the Knicks\u2019 or NBA site.\n- **Ticketmaster** \u2014 often the official primary ticketing partner for NBA games.\n- **Verified resale marketplaces** like **SeatGeek**, **StubHub**, or **Vivid Seats**.\n\nIf you want, tell me your budget and whether you prefer cheapest seats or best view, and I can help you choose where to buy.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780804200.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4676,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "reasoning_tokens": 85
+      },
+      "total_tokens": 4915
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "The next NBA game is **San Antonio Spurs @ New York Knicks** on **Monday, June 8, 2026 at 8:30 PM ET** at the Knicks\u2019 home arena. \n\nYou can get tickets from:\n\n- **Official team/NBA ticketing pages** \u2014 safest option; check the Knicks\u2019 or NBA site.\n- **Ticketmaster** \u2014 often the official primary ticketing partner for NBA games.\n- **Verified resale marketplaces** like **SeatGeek**, **StubHub**, or **Vivid Seats**.\n\nIf you want, tell me your budget and whether you prefer cheapest seats or best view, and I can help you choose where to buy.",
+  "usage": {
+    "input_tokens": 4676,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 239,
+    "output_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "total_tokens": 4915
+  },
+  "run_profile": "scaleup"
+}

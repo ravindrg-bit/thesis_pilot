@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_c4f7386505e41f8a",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T13:12:03.519487+00:00",
+  "query_text": "navy p3",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256e1aa89a3affba32a241",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about the **Navy P-3 Orion**, which is a maritime patrol aircraft rather than a vessel (ship). Here's what I found:\n\n## Overview\n\nThe **P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft developed by Lockheed Martin. It has been a cornerstone of U.S. Navy maritime patrol operations for decades.\n\n## Key Specifications\n\n| Feature | Specification |\n|---------|-------------|\n| **Engines** | 4 \u00d7 Allison T56-A-14 turboprops |\n| **Shaft horsepower per engine** | 4,600 SHP |\n| **Propeller type** | Hamilton Standard four-blade, full feathering & reversible |\n| **Propeller diameter** | 13.5 feet |\n| **Maximum speed** | 466 mph (dash speed) |\n| **Endurance** | Up to 16-hour missions |\n| **Crew capacity** | 12-person flight crew |\n| **Total built** | 648 by Lockheed + 107 by Kawasaki (Japan) |\n\n## Current Status (U.S. Navy)\n\nThe U.S. Navy has been phasing out its active-duty P-3C Orion fleet, replacing them with the **P-8A Poseidon**. As of recent reports:\n\n- The last active-duty P-3C squadron (VP-40 \"Fighting Marlins\") completed its final deployments in 2019\n- As of October 2025, only **6 active U.S. Navy P-3 Orions** remain in service with test and special mission units:\n  - **VX-30**: 4 aircraft (150521, 160293, 162999, 163291)\n  - **VXS-1**: 2 aircraft (158570, 158912)\n\n## Distinctive Features\n\n- **MAD \"Stinger\"**: A magnetic anomaly detector tail boom for detecting submarines\n- **Bomb bay**: Internal weapons bay for torpedoes and depth charges\n- **10 wing hard-points**: For missiles, mines, and other ordnance\n- ** shortened fuselage**: 7 feet shorter than the commercial L-188 Electra it was based on\n\n## International Operations\n\nThe P-3 Orion continues to serve with numerous international operators including:\n- **Canada** (CP-140 Aurora/CP-140M)\n- **Japan** (P-3C, being replaced by P-1)\n- **Germany** (recently retired in 2025, transitioning to P-8A)\n- **Portugal** (P-3C CUP+)\n- **Argentina** (recently acquiring P-3Cs from Norway)\n- **Greece** (modernizing P-3B fleet)\n- **NOAA** (WP-3D for hurricane hunting)\n\n## NASA Use\n\nNASA operates a P-3B Orion as an airborne laboratory for scientific research, with a maximum research altitude of approximately 28,000 ft (capable of 32,000 ft under certain conditions).\n\nSources:\n1. https://airbornescience.nasa.gov/sites/default/files/P-3B%20Experimenter%20Handbook%20548-HDBK-0001.pdf\n2. https://www.p3orion.nl/news.html\n3. https://www.twz.com/27565/the-navys-last-active-duty-p-3c-patrol-squadron-is-on-its-final-deployment\n4. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n5. https://www.naval-technology.com/news/argentina-enriches-naval-surveillance-with-acquisition-of-p-3-orion/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837915,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 781,
+        "prompt_tokens": 8201,
+        "total_tokens": 8982,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "navy p3"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256e19fc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"e0f7d6986a256e194f50a50001ee12c4\"},\"usage\":{\"total_tokens\":8051}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256e19fc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"e0f7d6986a256e194f50a50001ee12c4\"},\"usage\":{\"total_tokens\":8051}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"e0f7d6986a256e194f50a50001ee12c4\"},\"usage\":{\"total_tokens\":8051}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about the **Navy P-3 Orion**, which is a maritime patrol aircraft rather than a vessel (ship). Here's what I found:\n\n## Overview\n\nThe **P-3 Orion** is a four-engine turboprop anti-submarine and maritime surveillance aircraft developed by Lockheed Martin. It has been a cornerstone of U.S. Navy maritime patrol operations for decades.\n\n## Key Specifications\n\n| Feature | Specification |\n|---------|-------------|\n| **Engines** | 4 \u00d7 Allison T56-A-14 turboprops |\n| **Shaft horsepower per engine** | 4,600 SHP |\n| **Propeller type** | Hamilton Standard four-blade, full feathering & reversible |\n| **Propeller diameter** | 13.5 feet |\n| **Maximum speed** | 466 mph (dash speed) |\n| **Endurance** | Up to 16-hour missions |\n| **Crew capacity** | 12-person flight crew |\n| **Total built** | 648 by Lockheed + 107 by Kawasaki (Japan) |\n\n## Current Status (U.S. Navy)\n\nThe U.S. Navy has been phasing out its active-duty P-3C Orion fleet, replacing them with the **P-8A Poseidon**. As of recent reports:\n\n- The last active-duty P-3C squadron (VP-40 \"Fighting Marlins\") completed its final deployments in 2019\n- As of October 2025, only **6 active U.S. Navy P-3 Orions** remain in service with test and special mission units:\n  - **VX-30**: 4 aircraft (150521, 160293, 162999, 163291)\n  - **VXS-1**: 2 aircraft (158570, 158912)\n\n## Distinctive Features\n\n- **MAD \"Stinger\"**: A magnetic anomaly detector tail boom for detecting submarines\n- **Bomb bay**: Internal weapons bay for torpedoes and depth charges\n- **10 wing hard-points**: For missiles, mines, and other ordnance\n- ** shortened fuselage**: 7 feet shorter than the commercial L-188 Electra it was based on\n\n## International Operations\n\nThe P-3 Orion continues to serve with numerous international operators including:\n- **Canada** (CP-140 Aurora/CP-140M)\n- **Japan** (P-3C, being replaced by P-1)\n- **Germany** (recently retired in 2025, transitioning to P-8A)\n- **Portugal** (P-3C CUP+)\n- **Argentina** (recently acquiring P-3Cs from Norway)\n- **Greece** (modernizing P-3B fleet)\n- **NOAA** (WP-3D for hurricane hunting)\n\n## NASA Use\n\nNASA operates a P-3B Orion as an airborne laboratory for scientific research, with a maximum research altitude of approximately 28,000 ft (capable of 32,000 ft under certain conditions).\n\nSources:\n1. https://airbornescience.nasa.gov/sites/default/files/P-3B%20Experimenter%20Handbook%20548-HDBK-0001.pdf\n2. https://www.p3orion.nl/news.html\n3. https://www.twz.com/27565/the-navys-last-active-duty-p-3c-patrol-squadron-is-on-its-final-deployment\n4. https://airandspace.si.edu/air-and-space-quarterly/issue-13/orion-p3\n5. https://www.naval-technology.com/news/argentina-enriches-naval-surveillance-with-acquisition-of-p-3-orion/",
+  "usage": {
+    "completion_tokens": 781,
+    "prompt_tokens": 8201,
+    "total_tokens": 8982,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

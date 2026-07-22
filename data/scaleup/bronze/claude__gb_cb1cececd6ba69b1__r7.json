@@ -1,0 +1,67 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "claude",
+  "run_index": 7,
+  "model_requested": "claude-sonnet-4-6",
+  "model_served": "claude-sonnet-4-6",
+  "timestamp_utc": "2026-06-07T20:27:07.607290+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 2048,
+    "tools": [
+      {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 5
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "msg_01MqxwdjECcm1dQHMzx6bgtf",
+    "container": null,
+    "content": [
+      {
+        "citations": null,
+        "text": "# Paired Samples T-Test\n\n## Definition\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related (paired) groups** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n\n| Condition | Example |\n|-----------|---------|\n| **Before & After** measurements on the same subjects | Blood pressure before and after medication |\n| **Matched pairs** of subjects | Twins assigned to different treatments |\n| **Two conditions** on the same subject | Test scores under quiet vs. noisy conditions |\n| **Repeated measures** | Same patients measured at two time points |\n\n---\n\n## Assumptions\n\n1. \u2705 The **differences** between pairs are **normally distributed**\n2. \u2705 Observations are **paired/dependent** (not independent)\n3. \u2705 The differences are measured on a **continuous scale**\n4. \u2705 **No significant outliers** in the differences\n5. \u2705 Data is a **random sample** from the population\n\n---\n\n## Hypotheses\n\n| | Formula |\n|--|---------|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (mean difference = 0) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed) |\n| | \u03bc_d > 0 (one-tailed, right) |\n| | \u03bc_d < 0 (one-tailed, left) |\n\nWhere **\u03bc_d** is the population mean of the differences.\n\n---\n\n## Formula & Step-by-Step Calculation\n\n### Step 1: Calculate the difference for each pair\n$$d_i = X_{1i} - X_{2i}$$\n\n### Step 2: Calculate the mean of differences\n$$\\bar{d} = \\frac{\\sum d_i}{n}$$\n\n### Step 3: Calculate the standard deviation of differences\n$$s_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}}$$\n\n### Step 4: Calculate the Standard Error\n$$SE = \\frac{s_d}{\\sqrt{n}}$$\n\n### Step 5: Compute the t-statistic\n$$t = \\frac{\\bar{d}}{SE} = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\n### Step 6: Find the degrees of freedom\n$$df = n - 1$$\n\n### Step 7: Compare t to critical value or find p-value\n- If **|t| > t_critical** \u2192 **Reject H\u2080**\n- If **p-value < \u03b1** \u2192 **Reject H\u2080**\n\n---\n\n## Worked Example\n\n> 5 students took a math test **before** and **after** tutoring. Did tutoring help?\n\n| Student | Before (X\u2081) | After (X\u2082) | d = X\u2082 - X\u2081 |\n|---------|------------|-----------|------------|\n| 1 | 70 | 78 | +8 |\n| 2 | 65 | 70 | +5 |\n| 3 | 80 | 85 | +5 |\n| 4 | 75 | 80 | +5 |\n| 5 | 60 | 68 | +8 |\n\n- **d\u0304** = (8+5+5+5+8)/5 = **6.2**\n- **s_d** = 1.643\n- **SE** = 1.643/\u221a5 = **0.735**\n- **t** = 6.2 / 0.735 = **8.44**\n- **df** = 5 - 1 = **4**\n- **t_critical** (\u03b1 = 0.05, two-tailed, df=4) = **2.776**\n\nSince **8.44 > 2.776** \u2192 \u2705 **Reject H\u2080** \u2014 tutoring significantly improved scores.\n\n---\n\n## Effect Size (Cohen's d)\n\n$$d = \\frac{\\bar{d}}{s_d}$$\n\n| Cohen's d | Interpretation |\n|-----------|---------------|\n| 0.2 | Small effect |\n| 0.5 | Medium effect |\n| 0.8 | Large effect |\n\nIn the example: d = 6.2 / 1.643 = **3.77** \u2192 Very large effect \u2705\n\n---\n\n## Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---------|--------|-------------|\n| Groups | Related/dependent | Unrelated |\n| Same subjects? | \u2705 Yes | \u274c No |\n| Controls variability? | \u2705 Better | \u274c Less |\n| df | n - 1 | n\u2081 + n\u2082 - 2 |\n| More powerful? | \u2705 Generally yes | \u274c Generally no |\n\n---\n\n## Key Takeaway\n\n> The paired t-test is **more powerful** than the independent samples t-test because it **removes between-subject variability**, allowing you to detect smaller effects with fewer participants.",
+        "type": "text"
+      }
+    ],
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2219,
+      "output_tokens": 1271,
+      "output_tokens_details": null,
+      "server_tool_use": null,
+      "service_tier": "standard"
+    }
+  },
+  "answer_text": "# Paired Samples T-Test\n\n## Definition\n\nA **paired samples t-test** (also called a **dependent samples t-test** or **repeated measures t-test**) is a statistical hypothesis test used to determine whether the **mean difference between two related (paired) groups** is significantly different from zero.\n\n---\n\n## When to Use It\n\nUse a paired samples t-test when:\n\n| Condition | Example |\n|-----------|---------|\n| **Before & After** measurements on the same subjects | Blood pressure before and after medication |\n| **Matched pairs** of subjects | Twins assigned to different treatments |\n| **Two conditions** on the same subject | Test scores under quiet vs. noisy conditions |\n| **Repeated measures** | Same patients measured at two time points |\n\n---\n\n## Assumptions\n\n1. \u2705 The **differences** between pairs are **normally distributed**\n2. \u2705 Observations are **paired/dependent** (not independent)\n3. \u2705 The differences are measured on a **continuous scale**\n4. \u2705 **No significant outliers** in the differences\n5. \u2705 Data is a **random sample** from the population\n\n---\n\n## Hypotheses\n\n| | Formula |\n|--|---------|\n| **Null Hypothesis (H\u2080)** | \u03bc_d = 0 (mean difference = 0) |\n| **Alternative Hypothesis (H\u2081)** | \u03bc_d \u2260 0 (two-tailed) |\n| | \u03bc_d > 0 (one-tailed, right) |\n| | \u03bc_d < 0 (one-tailed, left) |\n\nWhere **\u03bc_d** is the population mean of the differences.\n\n---\n\n## Formula & Step-by-Step Calculation\n\n### Step 1: Calculate the difference for each pair\n$$d_i = X_{1i} - X_{2i}$$\n\n### Step 2: Calculate the mean of differences\n$$\\bar{d} = \\frac{\\sum d_i}{n}$$\n\n### Step 3: Calculate the standard deviation of differences\n$$s_d = \\sqrt{\\frac{\\sum(d_i - \\bar{d})^2}{n-1}}$$\n\n### Step 4: Calculate the Standard Error\n$$SE = \\frac{s_d}{\\sqrt{n}}$$\n\n### Step 5: Compute the t-statistic\n$$t = \\frac{\\bar{d}}{SE} = \\frac{\\bar{d}}{s_d / \\sqrt{n}}$$\n\n### Step 6: Find the degrees of freedom\n$$df = n - 1$$\n\n### Step 7: Compare t to critical value or find p-value\n- If **|t| > t_critical** \u2192 **Reject H\u2080**\n- If **p-value < \u03b1** \u2192 **Reject H\u2080**\n\n---\n\n## Worked Example\n\n> 5 students took a math test **before** and **after** tutoring. Did tutoring help?\n\n| Student | Before (X\u2081) | After (X\u2082) | d = X\u2082 - X\u2081 |\n|---------|------------|-----------|------------|\n| 1 | 70 | 78 | +8 |\n| 2 | 65 | 70 | +5 |\n| 3 | 80 | 85 | +5 |\n| 4 | 75 | 80 | +5 |\n| 5 | 60 | 68 | +8 |\n\n- **d\u0304** = (8+5+5+5+8)/5 = **6.2**\n- **s_d** = 1.643\n- **SE** = 1.643/\u221a5 = **0.735**\n- **t** = 6.2 / 0.735 = **8.44**\n- **df** = 5 - 1 = **4**\n- **t_critical** (\u03b1 = 0.05, two-tailed, df=4) = **2.776**\n\nSince **8.44 > 2.776** \u2192 \u2705 **Reject H\u2080** \u2014 tutoring significantly improved scores.\n\n---\n\n## Effect Size (Cohen's d)\n\n$$d = \\frac{\\bar{d}}{s_d}$$\n\n| Cohen's d | Interpretation |\n|-----------|---------------|\n| 0.2 | Small effect |\n| 0.5 | Medium effect |\n| 0.8 | Large effect |\n\nIn the example: d = 6.2 / 1.643 = **3.77** \u2192 Very large effect \u2705\n\n---\n\n## Paired vs. Independent Samples T-Test\n\n| Feature | Paired | Independent |\n|---------|--------|-------------|\n| Groups | Related/dependent | Unrelated |\n| Same subjects? | \u2705 Yes | \u274c No |\n| Controls variability? | \u2705 Better | \u274c Less |\n| df | n - 1 | n\u2081 + n\u2082 - 2 |\n| More powerful? | \u2705 Generally yes | \u274c Generally no |\n\n---\n\n## Key Takeaway\n\n> The paired t-test is **more powerful** than the independent samples t-test because it **removes between-subject variability**, allowing you to detect smaller effects with fewer participants.",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2219,
+    "output_tokens": 1271,
+    "output_tokens_details": null,
+    "server_tool_use": null,
+    "service_tier": "standard"
+  },
+  "run_profile": "scaleup"
+}

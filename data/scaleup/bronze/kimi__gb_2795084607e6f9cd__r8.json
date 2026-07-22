@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_2795084607e6f9cd",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T04:57:31.455257+00:00",
+  "query_text": "who do the pacers play in the playoffs",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a264bb59318ed5091225571",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, the Indiana Pacers **did not make the 2026 NBA playoffs**.\n\nAccording to BetMGM, the Pacers have been eliminated from the 2026 playoff picture and trail the final play-in spot by 23 games. This comes after their successful 2025 season where they reached the NBA Finals but lost to the Oklahoma City Thunder in Game 7.\n\nThe 2026 NBA playoff bracket shows the following Eastern Conference matchups:\n\n- **(1) Detroit Pistons vs. (8) Orlando Magic**\n- **(2) Boston Celtics vs. (7) Philadelphia 76ers**\n- **(3) New York Knicks vs. (6) Atlanta Hawks**\n- **(4) Cleveland Cavaliers vs. (5) Toronto Raptors**\n\nThe Indiana Pacers are not included in this bracket.\n\nSources:\n1. https://sports.betmgm.com/en/blog/nba/pacers-playoff-odds-bracket-seed-bm23/\n2. https://www.basketball-reference.com/playoffs/NBA_2026_games.html\n3. https://sports.yahoo.com/nba/breaking-news/article/2026-nba-playoffs-and-play-in-schedule-scores-matchups-bracket-030933374.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780894646,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 268,
+        "prompt_tokens": 8641,
+        "total_tokens": 8909,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who do the pacers play in the playoffs"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a264bb47898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"b0570c766a264bb4680f160001ee550e\"},\"usage\":{\"total_tokens\":8490}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a264bb47898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"b0570c766a264bb4680f160001ee550e\"},\"usage\":{\"total_tokens\":8490}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"b0570c766a264bb4680f160001ee550e\"},\"usage\":{\"total_tokens\":8490}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, the Indiana Pacers **did not make the 2026 NBA playoffs**.\n\nAccording to BetMGM, the Pacers have been eliminated from the 2026 playoff picture and trail the final play-in spot by 23 games. This comes after their successful 2025 season where they reached the NBA Finals but lost to the Oklahoma City Thunder in Game 7.\n\nThe 2026 NBA playoff bracket shows the following Eastern Conference matchups:\n\n- **(1) Detroit Pistons vs. (8) Orlando Magic**\n- **(2) Boston Celtics vs. (7) Philadelphia 76ers**\n- **(3) New York Knicks vs. (6) Atlanta Hawks**\n- **(4) Cleveland Cavaliers vs. (5) Toronto Raptors**\n\nThe Indiana Pacers are not included in this bracket.\n\nSources:\n1. https://sports.betmgm.com/en/blog/nba/pacers-playoff-odds-bracket-seed-bm23/\n2. https://www.basketball-reference.com/playoffs/NBA_2026_games.html\n3. https://sports.yahoo.com/nba/breaking-news/article/2026-nba-playoffs-and-play-in-schedule-scores-matchups-bracket-030933374.html",
+  "usage": {
+    "completion_tokens": 268,
+    "prompt_tokens": 8641,
+    "total_tokens": 8909,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

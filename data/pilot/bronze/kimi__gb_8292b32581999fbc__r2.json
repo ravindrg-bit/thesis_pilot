@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_8292b32581999fbc",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:07:08.457807+00:00",
+  "query_text": "How is chocolate made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccd232afa495ba9cbc9c2",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Chocolate is made through a fascinating multi-step process that transforms raw cacao beans into the delicious treat we all know. Here's how it works:\n\n## From Bean to Bar: The Chocolate Making Process\n\n### 1. Cacao Cultivation and Harvesting\nChocolate begins with the cacao tree (*Theobroma cacao*), which grows within 20\u00b0 north and south of the Equator in hot, rainy climates. The trees produce oval pods (5\u201312 inches long) containing 30\u201350 seeds, known as cacao beans. When the pods turn vibrant yellow/orange, they're harvested\u2014typically twice per year. Workers chop the pods open and remove the beans, which are surrounded by a white pulp called \"baba.\"\n\n### 2. Fermentation\nThis is where chocolate flavor begins to develop. The beans are cleaned by hand, with the pulp left on to aid fermentation. Using either the \"heap method\" (piles on the ground, common in Africa) or cascading boxes (popular in Latin America), the beans are covered with banana leaves and fermented for 2\u20139 days. During this time, the cream-colored beans turn purplish and begin developing recognizable chocolate flavors.\n\n### 3. Drying and Shipping\nAfter fermentation, beans are spread on wooden boards or bamboo mats and dried in the sun for 7\u201314 days, being continually raked and turned. Once dried, they're graded, packed into sacks, and shipped to chocolate manufacturers worldwide.\n\n### 4. Roasting and Winnowing\nAt the factory, beans are cleaned and roasted at low temperatures to develop flavor. The shells are then separated from the nibs (the \"meat\" of the bean) through a process called winnowing.\n\n### 5. Creating Cocoa Mass/Liquor\nThe nibs are finely ground into cocoa mass (also called cocoa liquor), which is solid at room temperature. When placed under extremely high pressure, this paste yields two products: **cocoa powder** and **cocoa butter**.\n\n### 6. Producing Chocolate\nTo make actual chocolate, cocoa mass is combined with additional cocoa butter and sweetener. The ingredients vary by chocolate type:\n- **Dark chocolate**: cocoa mass, cocoa butter, and sugar\n- **Milk chocolate**: cocoa mass, cocoa butter, sugar, and milk powder\n- **White chocolate**: cocoa butter, sugar, and milk powder (no cocoa mass\u2014hence the debate over whether it's \"real\" chocolate)\n\n### 7. Conching\nThis critical step involves rolling, kneading, heating, and aerating the chocolate mixture in a large machine called a conche. Conching can last for hours and defines the final aroma and flavor while creating a smooth texture. Soy lecithin and cocoa butter may be added for fluidity.\n\n### 8. Tempering and Molding\nFinally, the chocolate is tempered\u2014slowly brought to specific temperatures to stabilize the cocoa butter crystals. This gives well-tempered chocolate its characteristic \"snap,\" shiny surface, and smoothness. The tempered chocolate is then poured into molds, cooled, and packaged.\n\n## Home Chocolate Making\n\nFor those interested in making chocolate at home, there are three main approaches:\n- **Easy**: Using cocoa powder, oil, and sweetener (quick but least authentic)\n- **Intermediate**: Starting with cacao nibs and grinding with sugar and cocoa butter\n- **Advanced**: Full bean-to-bar, beginning with raw cacao beans and handling roasting, grinding, conching, and tempering yourself\n\nSources:\n1. https://www.lakechamplainchocolates.com/making-chocolate/\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://www.webstaurantstore.com/blog/2362/chocolate-candy-making.html?srsltid=AfmBOoqUsGy0R1C3hFs5Tg-12mOye6I-dXtMEW2rgw-hyOEk7S9h-ghu\n5. https://vegiglow.com/the-weekend-chocolatier-exploring-the-art-of-chocolate-making-molding/\n6. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272420,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 903,
+        "prompt_tokens": 8401,
+        "total_tokens": 9304,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is chocolate made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccd22841a",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"3bcda8cc6a1ccd224f50a50001d9088b\"},\"usage\":{\"total_tokens\":8251}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccd22841a",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"3bcda8cc6a1ccd224f50a50001d9088b\"},\"usage\":{\"total_tokens\":8251}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"3bcda8cc6a1ccd224f50a50001d9088b\"},\"usage\":{\"total_tokens\":8251}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Chocolate is made through a fascinating multi-step process that transforms raw cacao beans into the delicious treat we all know. Here's how it works:\n\n## From Bean to Bar: The Chocolate Making Process\n\n### 1. Cacao Cultivation and Harvesting\nChocolate begins with the cacao tree (*Theobroma cacao*), which grows within 20\u00b0 north and south of the Equator in hot, rainy climates. The trees produce oval pods (5\u201312 inches long) containing 30\u201350 seeds, known as cacao beans. When the pods turn vibrant yellow/orange, they're harvested\u2014typically twice per year. Workers chop the pods open and remove the beans, which are surrounded by a white pulp called \"baba.\"\n\n### 2. Fermentation\nThis is where chocolate flavor begins to develop. The beans are cleaned by hand, with the pulp left on to aid fermentation. Using either the \"heap method\" (piles on the ground, common in Africa) or cascading boxes (popular in Latin America), the beans are covered with banana leaves and fermented for 2\u20139 days. During this time, the cream-colored beans turn purplish and begin developing recognizable chocolate flavors.\n\n### 3. Drying and Shipping\nAfter fermentation, beans are spread on wooden boards or bamboo mats and dried in the sun for 7\u201314 days, being continually raked and turned. Once dried, they're graded, packed into sacks, and shipped to chocolate manufacturers worldwide.\n\n### 4. Roasting and Winnowing\nAt the factory, beans are cleaned and roasted at low temperatures to develop flavor. The shells are then separated from the nibs (the \"meat\" of the bean) through a process called winnowing.\n\n### 5. Creating Cocoa Mass/Liquor\nThe nibs are finely ground into cocoa mass (also called cocoa liquor), which is solid at room temperature. When placed under extremely high pressure, this paste yields two products: **cocoa powder** and **cocoa butter**.\n\n### 6. Producing Chocolate\nTo make actual chocolate, cocoa mass is combined with additional cocoa butter and sweetener. The ingredients vary by chocolate type:\n- **Dark chocolate**: cocoa mass, cocoa butter, and sugar\n- **Milk chocolate**: cocoa mass, cocoa butter, sugar, and milk powder\n- **White chocolate**: cocoa butter, sugar, and milk powder (no cocoa mass\u2014hence the debate over whether it's \"real\" chocolate)\n\n### 7. Conching\nThis critical step involves rolling, kneading, heating, and aerating the chocolate mixture in a large machine called a conche. Conching can last for hours and defines the final aroma and flavor while creating a smooth texture. Soy lecithin and cocoa butter may be added for fluidity.\n\n### 8. Tempering and Molding\nFinally, the chocolate is tempered\u2014slowly brought to specific temperatures to stabilize the cocoa butter crystals. This gives well-tempered chocolate its characteristic \"snap,\" shiny surface, and smoothness. The tempered chocolate is then poured into molds, cooled, and packaged.\n\n## Home Chocolate Making\n\nFor those interested in making chocolate at home, there are three main approaches:\n- **Easy**: Using cocoa powder, oil, and sweetener (quick but least authentic)\n- **Intermediate**: Starting with cacao nibs and grinding with sugar and cocoa butter\n- **Advanced**: Full bean-to-bar, beginning with raw cacao beans and handling roasting, grinding, conching, and tempering yourself\n\nSources:\n1. https://www.lakechamplainchocolates.com/making-chocolate/\n2. https://chocolatiering.com/how-make-chocolate-at-home/\n3. https://hungryhappenings.com/chocolate-making-tips/\n4. https://www.webstaurantstore.com/blog/2362/chocolate-candy-making.html?srsltid=AfmBOoqUsGy0R1C3hFs5Tg-12mOye6I-dXtMEW2rgw-hyOEk7S9h-ghu\n5. https://vegiglow.com/the-weekend-chocolatier-exploring-the-art-of-chocolate-making-molding/\n6. https://chocolatemakingmachinery.com/process-of-white-chocolate-production/\n7. https://gondormachinery.com/chocolate-processing-steps-essential-steps-and-equipment/",
+  "usage": {
+    "completion_tokens": 903,
+    "prompt_tokens": 8401,
+    "total_tokens": 9304,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

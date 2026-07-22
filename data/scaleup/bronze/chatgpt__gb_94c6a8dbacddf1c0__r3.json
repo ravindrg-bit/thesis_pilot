@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "chatgpt",
+  "run_index": 3,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T10:15:46.994910+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0a8dbcde542ecb61006a2696444cf48190a3985e53486ab6b5",
+    "created_at": 1780913732.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0a8dbcde542ecb61006a26964568dc8190939a6eeb5b5c3f6f",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Computers and calculators don\u2019t \u201cknow\u201d square roots in the way we memorize facts. They compute them using **algorithms** that repeatedly improve an estimate until it is accurate enough for the number of digits the machine can display or store.\n\nA common method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\n## The basic idea\n\nTo find:\n\n\\[\n\\sqrt{N}\n\\]\n\nthe machine wants a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nIt starts with a rough guess, then improves it using this formula:\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(x+\\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too high, then \\(N/x\\) is too low, and averaging them gives a better estimate.\n\n## Example: finding \\(\\sqrt{10}\\)\n\nSuppose we start with \\(x=3\\).\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(3+\\frac{10}{3}\\right)\n\\]\n\n\\[\n=\\frac{1}{2}(3+3.3333)=3.1667\n\\]\n\nNow repeat:\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(3.1667+\\frac{10}{3.1667}\\right)\n\\]\n\n\\[\n\\approx 3.1623\n\\]\n\nRepeat again:\n\n\\[\n\\approx 3.16227766\n\\]\n\nAnd that is very close to the true value:\n\n\\[\n\\sqrt{10}\\approx 3.162277660168379\n\\]\n\nIn just a few steps, the estimate becomes extremely accurate.\n\n## Why it becomes accurate so quickly\n\nNewton\u2019s method has a powerful property: once the guess is reasonably close, the number of correct digits roughly **doubles each iteration**.\n\nSo a calculator does not need hundreds of steps. It may only need a handful.\n\n## How computers make it fast\n\nComputers also use tricks such as:\n\n- **initial approximations** from lookup tables or bit-level estimates\n- **Newton\u2019s method** or related iterative methods\n- **hardware circuits** designed specifically for floating-point arithmetic\n- **rounding rules** to make sure the final displayed answer is as accurate as possible\n\nModern processors often have built-in square-root instructions, so the operation is handled directly by the hardware.\n\n## Why the answer is not always \u201cexact\u201d\n\nFor many numbers, square roots are irrational. For example:\n\n\\[\n\\sqrt{2}=1.41421356237\\ldots\n\\]\n\nThe decimal goes on forever without repeating. A computer cannot store infinitely many digits, so it stores a rounded approximation.\n\nBut it can still be accurate to many digits, often around 15\u201317 decimal digits for ordinary double-precision floating-point numbers.\n\n## Short version\n\nCalculators and computers find square roots by:\n\n1. making an initial guess,\n2. repeatedly improving it using an efficient formula,\n3. stopping when the estimate is accurate enough,\n4. rounding the result for display or storage.\n\nThat is why they can produce square roots very quickly and very accurately.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780913746.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4455,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 664,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5119
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Computers and calculators don\u2019t \u201cknow\u201d square roots in the way we memorize facts. They compute them using **algorithms** that repeatedly improve an estimate until it is accurate enough for the number of digits the machine can display or store.\n\nA common method is **Newton\u2019s method**, also called the **Newton\u2013Raphson method**.\n\n## The basic idea\n\nTo find:\n\n\\[\n\\sqrt{N}\n\\]\n\nthe machine wants a number \\(x\\) such that:\n\n\\[\nx^2 = N\n\\]\n\nIt starts with a rough guess, then improves it using this formula:\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(x+\\frac{N}{x}\\right)\n\\]\n\nThis works because if \\(x\\) is too high, then \\(N/x\\) is too low, and averaging them gives a better estimate.\n\n## Example: finding \\(\\sqrt{10}\\)\n\nSuppose we start with \\(x=3\\).\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(3+\\frac{10}{3}\\right)\n\\]\n\n\\[\n=\\frac{1}{2}(3+3.3333)=3.1667\n\\]\n\nNow repeat:\n\n\\[\nx_{\\text{new}}=\\frac{1}{2}\\left(3.1667+\\frac{10}{3.1667}\\right)\n\\]\n\n\\[\n\\approx 3.1623\n\\]\n\nRepeat again:\n\n\\[\n\\approx 3.16227766\n\\]\n\nAnd that is very close to the true value:\n\n\\[\n\\sqrt{10}\\approx 3.162277660168379\n\\]\n\nIn just a few steps, the estimate becomes extremely accurate.\n\n## Why it becomes accurate so quickly\n\nNewton\u2019s method has a powerful property: once the guess is reasonably close, the number of correct digits roughly **doubles each iteration**.\n\nSo a calculator does not need hundreds of steps. It may only need a handful.\n\n## How computers make it fast\n\nComputers also use tricks such as:\n\n- **initial approximations** from lookup tables or bit-level estimates\n- **Newton\u2019s method** or related iterative methods\n- **hardware circuits** designed specifically for floating-point arithmetic\n- **rounding rules** to make sure the final displayed answer is as accurate as possible\n\nModern processors often have built-in square-root instructions, so the operation is handled directly by the hardware.\n\n## Why the answer is not always \u201cexact\u201d\n\nFor many numbers, square roots are irrational. For example:\n\n\\[\n\\sqrt{2}=1.41421356237\\ldots\n\\]\n\nThe decimal goes on forever without repeating. A computer cannot store infinitely many digits, so it stores a rounded approximation.\n\nBut it can still be accurate to many digits, often around 15\u201317 decimal digits for ordinary double-precision floating-point numbers.\n\n## Short version\n\nCalculators and computers find square roots by:\n\n1. making an initial guess,\n2. repeatedly improving it using an efficient formula,\n3. stopping when the estimate is accurate enough,\n4. rounding the result for display or storage.\n\nThat is why they can produce square roots very quickly and very accurately.",
+  "usage": {
+    "input_tokens": 4455,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 664,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5119
+  },
+  "run_profile": "scaleup"
+}

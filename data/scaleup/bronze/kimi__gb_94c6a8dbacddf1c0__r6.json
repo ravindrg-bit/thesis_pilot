@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T10:30:34.485185+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2699af0bf18a5e13ffa184",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Computers and calculators determine square roots accurately through iterative approximation algorithms, most commonly the **Newton-Raphson method** (also known as the **Babylonian method** or **Heron's method**). Here's how it works:\n\n## The Core Method: Newton-Raphson Iteration\n\nTo find \u221aa, computers solve the equation x\u00b2 - a = 0. The Newton-Raphson formula for this is:\n\n$$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{a}{x_n}\\right)$$\n\nThis elegant formula works by:\n1. Starting with an initial guess x\u2080 (often a/2 or a rough estimate)\n2. Calculating a/x\u2099 \u2014 if x\u2099 is too large, a/x\u2099 will be too small, and vice versa\n3. Averaging these two values to get a better approximation\n4. Repeating until the desired precision is reached\n\n## Why It's So Accurate\n\n**Quadratic convergence**: The number of correct digits roughly doubles with each iteration. For example, to find \u221a2 starting with x\u2080 = 1.5:\n- After 1 iteration: 1.4166... (2 correct digits)\n- After 2 iterations: 1.414215... (5 correct digits)\n- After 3 iterations: 1.41421356237... (11 correct digits)\n- After 5 iterations: ~15 correct decimal places\n\nThis rapid convergence means calculators can achieve 10+ digit precision in just 4-6 iterations.\n\n## Alternative Approaches\n\nSome calculators use logarithms: \u221aa = e^((ln a)/2) or 10^((log a)/2), computing via exponential and logarithm routines. Hardware implementations may use digit-by-digit (non-restoring) algorithms, particularly in FPGAs and specialized circuits.\n\n## Optimizations for High Precision\n\nFor extremely high precision (thousands or millions of digits), computers use a critical optimization: they don't maintain full precision throughout. Instead, they:\n- Calculate intermediate approximations at increasing precision levels\n- Use the fact that x\u2099\u00b2 \u2248 a to avoid redundant calculations\n- Apply the final iteration at full precision only at the end\n\nThis reduces the total time to approximately O(M(n)), where M(n) is the time to multiply two n-bit numbers.\n\n## Hardware Implementation\n\nModern processors often have dedicated square root instructions (like `fsqrt` in x86) that implement these algorithms in microcode or dedicated circuitry, making the operation nearly as fast as division.\n\n---\n\nSources:\n1. https://downloads.ctfassets.net/oshmmv7kdjgm/6hjp4FzXbMhGk4x17uwkBi/b51007f4b638f93862fac5a074c4d6ce/HelloWorld_8.pdf\n2. http://mrnashsmathclass.weebly.com/uploads/1/3/5/1/13512417/abc.pdf\n3. https://www.literateprograms.org/newton-raphson_s_method_for_root_finding__c_.html\n4. https://graphicmaths.com/pure/numerical-methods/newton-raphson-method/\n5. https://cs.stackexchange.com/questions/133616/what-algorithm-do-computers-use-to-compute-the-square-root-of-a-number\n6. https://web.ma.utexas.edu/users/m408n/CurrentWeb/LM4-8-4.php\n7. https://www.101computing.net/square-root-estimation-algorithms/\n8. https://www.researchgate.net/publication/4193025_Decimal_floating-point_square_root_using_Newton-Raphson_iteration\n9. http://www.cestems.org/uploads/20220627/16563076217781.pdf\n10. https://www.geeksforgeeks.org/engineering-mathematics/newton-raphson-method/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780914609,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 816,
+        "prompt_tokens": 8576,
+        "total_tokens": 9392,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2699ae2e25",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"18688ef86a2699ae680f160001ef4846\"},\"usage\":{\"total_tokens\":8422}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2699ae2e25",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"18688ef86a2699ae680f160001ef4846\"},\"usage\":{\"total_tokens\":8422}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"18688ef86a2699ae680f160001ef4846\"},\"usage\":{\"total_tokens\":8422}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Computers and calculators determine square roots accurately through iterative approximation algorithms, most commonly the **Newton-Raphson method** (also known as the **Babylonian method** or **Heron's method**). Here's how it works:\n\n## The Core Method: Newton-Raphson Iteration\n\nTo find \u221aa, computers solve the equation x\u00b2 - a = 0. The Newton-Raphson formula for this is:\n\n$$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{a}{x_n}\\right)$$\n\nThis elegant formula works by:\n1. Starting with an initial guess x\u2080 (often a/2 or a rough estimate)\n2. Calculating a/x\u2099 \u2014 if x\u2099 is too large, a/x\u2099 will be too small, and vice versa\n3. Averaging these two values to get a better approximation\n4. Repeating until the desired precision is reached\n\n## Why It's So Accurate\n\n**Quadratic convergence**: The number of correct digits roughly doubles with each iteration. For example, to find \u221a2 starting with x\u2080 = 1.5:\n- After 1 iteration: 1.4166... (2 correct digits)\n- After 2 iterations: 1.414215... (5 correct digits)\n- After 3 iterations: 1.41421356237... (11 correct digits)\n- After 5 iterations: ~15 correct decimal places\n\nThis rapid convergence means calculators can achieve 10+ digit precision in just 4-6 iterations.\n\n## Alternative Approaches\n\nSome calculators use logarithms: \u221aa = e^((ln a)/2) or 10^((log a)/2), computing via exponential and logarithm routines. Hardware implementations may use digit-by-digit (non-restoring) algorithms, particularly in FPGAs and specialized circuits.\n\n## Optimizations for High Precision\n\nFor extremely high precision (thousands or millions of digits), computers use a critical optimization: they don't maintain full precision throughout. Instead, they:\n- Calculate intermediate approximations at increasing precision levels\n- Use the fact that x\u2099\u00b2 \u2248 a to avoid redundant calculations\n- Apply the final iteration at full precision only at the end\n\nThis reduces the total time to approximately O(M(n)), where M(n) is the time to multiply two n-bit numbers.\n\n## Hardware Implementation\n\nModern processors often have dedicated square root instructions (like `fsqrt` in x86) that implement these algorithms in microcode or dedicated circuitry, making the operation nearly as fast as division.\n\n---\n\nSources:\n1. https://downloads.ctfassets.net/oshmmv7kdjgm/6hjp4FzXbMhGk4x17uwkBi/b51007f4b638f93862fac5a074c4d6ce/HelloWorld_8.pdf\n2. http://mrnashsmathclass.weebly.com/uploads/1/3/5/1/13512417/abc.pdf\n3. https://www.literateprograms.org/newton-raphson_s_method_for_root_finding__c_.html\n4. https://graphicmaths.com/pure/numerical-methods/newton-raphson-method/\n5. https://cs.stackexchange.com/questions/133616/what-algorithm-do-computers-use-to-compute-the-square-root-of-a-number\n6. https://web.ma.utexas.edu/users/m408n/CurrentWeb/LM4-8-4.php\n7. https://www.101computing.net/square-root-estimation-algorithms/\n8. https://www.researchgate.net/publication/4193025_Decimal_floating-point_square_root_using_Newton-Raphson_iteration\n9. http://www.cestems.org/uploads/20220627/16563076217781.pdf\n10. https://www.geeksforgeeks.org/engineering-mathematics/newton-raphson-method/",
+  "usage": {
+    "completion_tokens": 816,
+    "prompt_tokens": 8576,
+    "total_tokens": 9392,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

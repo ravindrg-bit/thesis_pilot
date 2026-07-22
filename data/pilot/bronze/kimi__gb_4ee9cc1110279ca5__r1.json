@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_4ee9cc1110279ca5",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T01:20:06.433829+00:00",
+  "query_text": "prelicensetraining login",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cde3df2014c180c410db6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the login options for PrelicenseTraining:\n\n## Main Login Portals\n\n1. **Student Login**: https://prelicensetraining.com/login\n   - For students to access their accounts\n   - You can log in using your login name and password (your login name may be your email address)\n\n2. **Mentor/Recruiter/Company Login**: https://prelicensetraining.com/mentor/login\n   - For mentors, recruiters, and company accounts\n   - Requires email and password\n\n3. **Infinity Schools Mentor Login**: https://infinityschools.prelicensetraining.com/mentor/login\n   - Alternative portal for specific school partners\n\n## Registration\nIf you don't have an account yet, you can register at: https://prelicensetraining.com/register\n\n## Tips\n- If you're a student, make sure you're using the student login portal, not the mentor portal\n- Your login name is typically your email address unless you specified otherwise during registration\n\nSources:\n1. https://prelicensetraining.com/mentor/login\n2. https://prelicensetraining.com/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://insurance.prelicensetraining.com/page/test-drive\n5. https://prelicensetraining.com/register\n6. https://preclass.affordableeducators.com/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780276797,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 303,
+        "prompt_tokens": 543,
+        "total_tokens": 846,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "prelicensetraining login"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cde393ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"76f719d56a1cde394f50a50001d95049\"},\"usage\":{\"total_tokens\":395}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cde393ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"76f719d56a1cde394f50a50001d95049\"},\"usage\":{\"total_tokens\":395}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"76f719d56a1cde394f50a50001d95049\"},\"usage\":{\"total_tokens\":395}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the login options for PrelicenseTraining:\n\n## Main Login Portals\n\n1. **Student Login**: https://prelicensetraining.com/login\n   - For students to access their accounts\n   - You can log in using your login name and password (your login name may be your email address)\n\n2. **Mentor/Recruiter/Company Login**: https://prelicensetraining.com/mentor/login\n   - For mentors, recruiters, and company accounts\n   - Requires email and password\n\n3. **Infinity Schools Mentor Login**: https://infinityschools.prelicensetraining.com/mentor/login\n   - Alternative portal for specific school partners\n\n## Registration\nIf you don't have an account yet, you can register at: https://prelicensetraining.com/register\n\n## Tips\n- If you're a student, make sure you're using the student login portal, not the mentor portal\n- Your login name is typically your email address unless you specified otherwise during registration\n\nSources:\n1. https://prelicensetraining.com/mentor/login\n2. https://prelicensetraining.com/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://insurance.prelicensetraining.com/page/test-drive\n5. https://prelicensetraining.com/register\n6. https://preclass.affordableeducators.com/",
+  "usage": {
+    "completion_tokens": 303,
+    "prompt_tokens": 543,
+    "total_tokens": 846,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

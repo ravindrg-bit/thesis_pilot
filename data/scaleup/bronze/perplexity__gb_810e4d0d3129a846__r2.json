@@ -1,0 +1,125 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "perplexity",
+  "run_index": 2,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T04:42:06.925844+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can you explain dependency injection in C# like a gangster?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "92caa180-b990-4126-a8c0-d2152a1d8976",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Dependency injection in C# is when a class *asks for* what it needs instead of *creating it itself*. That makes the code cleaner, easier to test, and easier to swap out later[1][5].\n\nIn gangster terms: **\u201cDon\u2019t let the class run its own errands.\u201d** If `Car` needs an `Engine`, you don\u2019t have `Car` sneak off and build one in the back alley. You hand it the engine from outside[1][5].\n\n```csharp\npublic interface IEngine\n{\n    void Start();\n}\n\npublic class V8Engine : IEngine\n{\n    public void Start() => Console.WriteLine(\"Engine purring.\");\n}\n\npublic class Car\n{\n    private readonly IEngine _engine;\n\n    public Car(IEngine engine)\n    {\n        _engine = engine;\n    }\n\n    public void Drive()\n    {\n        _engine.Start();\n        Console.WriteLine(\"Car is rolling.\");\n    }\n}\n```\n\nHere, `Car` **depends on** `IEngine`, but it does not create `V8Engine` itself. Something else\u2014usually a DI container\u2014provides it at runtime[1][5].\n\nWhy this is powerful:\n\n- **Swappable parts:** You can replace `V8Engine` with `ElectricEngine` without changing `Car`[4][5].\n- **Better testing:** In tests, you can inject a fake engine instead of the real one[2][4].\n- **Less coupling:** Classes stay focused on their own job instead of building their dependencies too[2][5].\n\nThe most common style in C# is **constructor injection**, where the dependency is passed through the constructor[2][5]. Microsoft\u2019s .NET DI container supports this pattern directly[5].\n\nIf you want, I can also explain it in:\n- *full gangster slang*,\n- *super simple beginner English*,\n- or *with a real ASP.NET Core example*.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780893726,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 395,
+      "prompt_tokens": 14,
+      "total_tokens": 409,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.0004,
+        "request_cost": 0.005,
+        "total_cost": 0.00541
+      }
+    },
+    "citations": [
+      "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+      "https://builtin.com/articles/dependency-injection",
+      "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+      "https://www.youtube.com/watch?v=cCSrPZroICg",
+      "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview"
+    ],
+    "search_results": [
+      {
+        "title": "What is Dependency Injection in C# With Example (Guide)",
+        "url": "https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern",
+        "date": "2025-09-16",
+        "last_updated": "2026-06-07",
+        "snippet": "Dependency Injection is a key concept in C#'s object-oriented programming. Unlike hard-coding them inside, it allows you to inject dependencies into a class.",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection: A Guide With Examples | Built In",
+        "url": "https://builtin.com/articles/dependency-injection",
+        "date": "2024-06-10",
+        "last_updated": "2025-12-17",
+        "snippet": "Dependency injection is a technique in which you make the interactions between objects as minimal as possible through specific dependencies.",
+        "source": "web"
+      },
+      {
+        "title": "Learn Dependency Injection in less than 20 minutes! - C# DI",
+        "url": "https://www.youtube.com/watch?v=wwzhReyKV2Y",
+        "date": "2024-06-11",
+        "last_updated": "2026-06-06",
+        "snippet": "... C# Dependency Injection video! 01:20 Understanding Dependency in Dependency Injection 05:58 Super Simple Constructor Dependency Injection 10 ...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency Injection in C# A Hands-On Guide to Boosting Code ...",
+        "url": "https://www.youtube.com/watch?v=cCSrPZroICg",
+        "date": "2023-08-24",
+        "last_updated": "2025-08-03",
+        "snippet": "... like this video? Let us know in the comments below! \u2713 Click ... Learn Dependency Injection the Right Way - Simple C# Tutorial. Nick ...",
+        "source": "web"
+      },
+      {
+        "title": "Dependency injection - .NET - Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview",
+        "date": "2026-01-28",
+        "last_updated": "2026-06-04",
+        "snippet": "Learn how to use dependency injection within your .NET apps. Discover how to define service lifetimes and express dependencies in C#.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Dependency injection in C# is when a class *asks for* what it needs instead of *creating it itself*. That makes the code cleaner, easier to test, and easier to swap out later[1][5].\n\nIn gangster terms: **\u201cDon\u2019t let the class run its own errands.\u201d** If `Car` needs an `Engine`, you don\u2019t have `Car` sneak off and build one in the back alley. You hand it the engine from outside[1][5].\n\n```csharp\npublic interface IEngine\n{\n    void Start();\n}\n\npublic class V8Engine : IEngine\n{\n    public void Start() => Console.WriteLine(\"Engine purring.\");\n}\n\npublic class Car\n{\n    private readonly IEngine _engine;\n\n    public Car(IEngine engine)\n    {\n        _engine = engine;\n    }\n\n    public void Drive()\n    {\n        _engine.Start();\n        Console.WriteLine(\"Car is rolling.\");\n    }\n}\n```\n\nHere, `Car` **depends on** `IEngine`, but it does not create `V8Engine` itself. Something else\u2014usually a DI container\u2014provides it at runtime[1][5].\n\nWhy this is powerful:\n\n- **Swappable parts:** You can replace `V8Engine` with `ElectricEngine` without changing `Car`[4][5].\n- **Better testing:** In tests, you can inject a fake engine instead of the real one[2][4].\n- **Less coupling:** Classes stay focused on their own job instead of building their dependencies too[2][5].\n\nThe most common style in C# is **constructor injection**, where the dependency is passed through the constructor[2][5]. Microsoft\u2019s .NET DI container supports this pattern directly[5].\n\nIf you want, I can also explain it in:\n- *full gangster slang*,\n- *super simple beginner English*,\n- or *with a real ASP.NET Core example*.",
+  "usage": {
+    "completion_tokens": 395,
+    "prompt_tokens": 14,
+    "total_tokens": 409,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.0004,
+      "request_cost": 0.005,
+      "total_cost": 0.00541
+    }
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,123 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 5,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:35.394504+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "758d0ac7-2112-44e5-a4f5-b5731e859cca",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators get square roots by **approximating** them numerically, not by \u201cknowing\u201d the exact answer in one step. They start with a good guess and then repeatedly refine it using an algorithm such as **Newton\u2019s method / the Babylonian method**, which quickly converges to the true value to the number of digits the machine can store.[1][4]\n\nThe key idea is that square roots solve the equation \\(x^2=S\\). If you have an estimate \\(x\\), you can improve it by averaging the estimate with \\(S/x\\), which gives the update rule \\(x_{n+1}=\\tfrac{1}{2}\\left(x_n+\\tfrac{S}{x_n}\\right)\\).[1][4] This works because if \\(x\\) is too large, then \\(S/x\\) is too small, and their average lands closer to the true root.[1][4]\n\nWhy it can be so accurate:\n- **Each iteration improves the estimate a lot.** Newton-style methods have very fast convergence, so the number of correct digits often increases dramatically with each step.[1][2]\n- **Computers use finite precision.** They store numbers in binary floating-point, so the result is accurate only to the precision the hardware and software support.[1]\n- **Extra techniques speed things up.** Real calculators may use table lookups, polynomial approximations, logarithms/exponentials, or hardware-specific square-root instructions before or during refinement.[2][3]\n\nIn practice, the machine is not \u201cderiving\u201d the exact irrational square root; it is computing a **very close approximation** and rounding it to the available digits.[1][2]\n\nIf you want, I can also show a concrete step-by-step example of how the Babylonian/Newton method computes \\(\\sqrt{2}\\).",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914395,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 379,
+      "prompt_tokens": 15,
+      "total_tokens": 394,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00038,
+        "request_cost": 0.005,
+        "total_cost": 0.00539
+      }
+    },
+    "citations": [
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://journalspress.com/LJRCST_Volume18/372_Revisiting-Square-Roots-with-a-Fast-Estimator.pdf",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "[PDF] Revisiting Square Roots with a Fast Estimator",
+        "url": "https://journalspress.com/LJRCST_Volume18/372_Revisiting-Square-Roots-with-a-Fast-Estimator.pdf",
+        "last_updated": "2025-09-21",
+        "snippet": "This paper proposes a new method that we derive for estimating square root with high accuracy. In particular, we show how square root of 2 can be calculated ...",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Estimate Square Roots in Mental Math",
+        "url": "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+        "last_updated": "2026-05-07",
+        "snippet": "This article describes an easier method for quickly estimating the value of a square root, to about 2\u20135 significant figures.",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "An ancient formula is astoundingly accurate. Why didn't we learn this in school? 0:00 history 2:32 calculations 7:22 sqrt 2 10:19 intuition ...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators get square roots by **approximating** them numerically, not by \u201cknowing\u201d the exact answer in one step. They start with a good guess and then repeatedly refine it using an algorithm such as **Newton\u2019s method / the Babylonian method**, which quickly converges to the true value to the number of digits the machine can store.[1][4]\n\nThe key idea is that square roots solve the equation \\(x^2=S\\). If you have an estimate \\(x\\), you can improve it by averaging the estimate with \\(S/x\\), which gives the update rule \\(x_{n+1}=\\tfrac{1}{2}\\left(x_n+\\tfrac{S}{x_n}\\right)\\).[1][4] This works because if \\(x\\) is too large, then \\(S/x\\) is too small, and their average lands closer to the true root.[1][4]\n\nWhy it can be so accurate:\n- **Each iteration improves the estimate a lot.** Newton-style methods have very fast convergence, so the number of correct digits often increases dramatically with each step.[1][2]\n- **Computers use finite precision.** They store numbers in binary floating-point, so the result is accurate only to the precision the hardware and software support.[1]\n- **Extra techniques speed things up.** Real calculators may use table lookups, polynomial approximations, logarithms/exponentials, or hardware-specific square-root instructions before or during refinement.[2][3]\n\nIn practice, the machine is not \u201cderiving\u201d the exact irrational square root; it is computing a **very close approximation** and rounding it to the available digits.[1][2]\n\nIf you want, I can also show a concrete step-by-step example of how the Babylonian/Newton method computes \\(\\sqrt{2}\\).",
+  "usage": {
+    "completion_tokens": 379,
+    "prompt_tokens": 15,
+    "total_tokens": 394,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00038,
+      "request_cost": 0.005,
+      "total_cost": 0.00539
+    }
+  },
+  "run_profile": "scaleup"
+}

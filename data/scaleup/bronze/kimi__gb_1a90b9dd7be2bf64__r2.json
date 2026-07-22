@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_1a90b9dd7be2bf64",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:27:57.321875+00:00",
+  "query_text": "login into onedrive",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2563c7782db2bda9d4dcad",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Here are the steps to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Open the OneDrive login page**: Go to https://onedrive.live.com/login/ in your web browser\n\n2. **Click \"Sign in\"**: On the OneDrive homepage, click the \"Sign in\" button in the upper right corner\n\n3. **Enter your Microsoft account credentials**:\n   - Enter your Microsoft account email address, phone number, or Skype ID\n   - Click \"Next\"\n   - Enter your password\n   - Click \"Sign in\"\n\n4. **Access your OneDrive**: After successful login, you'll be taken to your OneDrive file storage interface where you can upload, download, and manage files\n\n## Windows Desktop App\n\n1. **Open OneDrive**: Click the Start menu and search for \"OneDrive\", or click the OneDrive cloud icon in your system tray\n\n2. **Sign in**: Enter your Microsoft account email address when prompted\n\n3. **Enter password**: Input your password and click \"Sign in\"\n\n4. **Set up sync folder**: Choose or confirm the location for your OneDrive folder on your computer\n\n## Mobile App (iOS/Android)\n\n1. **Download the OneDrive app** from your device's app store\n\n2. **Open the app** and tap \"Sign in\"\n\n3. **Enter your Microsoft account** email and password\n\n## Important Notes\n\n- You need a **Microsoft account** to use OneDrive. If you don't have one, you can create it by clicking \"Create one\" on the login page\n- Your Microsoft account is the same one used for Outlook, Xbox, Windows, and other Microsoft services\n- If you forgot your password, click \"Forgot password?\" on the login page to reset it\n- For security, use a secure network environment and don't share your account information\n\n---\n\n**Sources:**\n\n1. https://www.bunian.cn/22394.html\n2. https://zhidao.baidu.com/question/931669486309366379.html\n3. https://zhidao.baidu.com/question/1959178849767969348.html\n4. https://www.xda-developers.com/how-to-sign-into-onedrive/\n5. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n6. https://td.usnh.edu/TDClient/60/Portal/KB/Article/2064/OneDrive-Accessing-Logging-in-to-OneDrive\n7. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/\n8. https://inclowdz.wondershare.com/cloud-manage/switch-onedrive-account.html\n9. http://udongde.com/info/432585",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780835271,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 576,
+        "prompt_tokens": 7705,
+        "total_tokens": 8281,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "login into onedrive"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2563c651ad",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"28dfe0676a2563c5680f160001ec672e\"},\"usage\":{\"total_tokens\":7558}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2563c651ad",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"28dfe0676a2563c5680f160001ec672e\"},\"usage\":{\"total_tokens\":7558}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"28dfe0676a2563c5680f160001ec672e\"},\"usage\":{\"total_tokens\":7558}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Here are the steps to log into OneDrive:\n\n## Web Browser (OneDrive Web Version)\n\n1. **Open the OneDrive login page**: Go to https://onedrive.live.com/login/ in your web browser\n\n2. **Click \"Sign in\"**: On the OneDrive homepage, click the \"Sign in\" button in the upper right corner\n\n3. **Enter your Microsoft account credentials**:\n   - Enter your Microsoft account email address, phone number, or Skype ID\n   - Click \"Next\"\n   - Enter your password\n   - Click \"Sign in\"\n\n4. **Access your OneDrive**: After successful login, you'll be taken to your OneDrive file storage interface where you can upload, download, and manage files\n\n## Windows Desktop App\n\n1. **Open OneDrive**: Click the Start menu and search for \"OneDrive\", or click the OneDrive cloud icon in your system tray\n\n2. **Sign in**: Enter your Microsoft account email address when prompted\n\n3. **Enter password**: Input your password and click \"Sign in\"\n\n4. **Set up sync folder**: Choose or confirm the location for your OneDrive folder on your computer\n\n## Mobile App (iOS/Android)\n\n1. **Download the OneDrive app** from your device's app store\n\n2. **Open the app** and tap \"Sign in\"\n\n3. **Enter your Microsoft account** email and password\n\n## Important Notes\n\n- You need a **Microsoft account** to use OneDrive. If you don't have one, you can create it by clicking \"Create one\" on the login page\n- Your Microsoft account is the same one used for Outlook, Xbox, Windows, and other Microsoft services\n- If you forgot your password, click \"Forgot password?\" on the login page to reset it\n- For security, use a secure network environment and don't share your account information\n\n---\n\n**Sources:**\n\n1. https://www.bunian.cn/22394.html\n2. https://zhidao.baidu.com/question/931669486309366379.html\n3. https://zhidao.baidu.com/question/1959178849767969348.html\n4. https://www.xda-developers.com/how-to-sign-into-onedrive/\n5. https://www.cu.edu/doc/how-log-onedrive-pcpdf-3\n6. https://td.usnh.edu/TDClient/60/Portal/KB/Article/2064/OneDrive-Accessing-Logging-in-to-OneDrive\n7. https://www.systoolsgroup.com/updates/copy-onedrive-files-to-another-onedrive-account/\n8. https://inclowdz.wondershare.com/cloud-manage/switch-onedrive-account.html\n9. http://udongde.com/info/432585",
+  "usage": {
+    "completion_tokens": 576,
+    "prompt_tokens": 7705,
+    "total_tokens": 8281,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

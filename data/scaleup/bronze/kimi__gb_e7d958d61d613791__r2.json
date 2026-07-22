@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T03:55:41.281128+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24eb9c6efd987bc9db5354",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Sources (Recommended)\n\n**1. NBATickets.com** \u2014 The NBA's official ticket hub\n- This is the league's one-stop shop that links directly to each team's official ticketing options\n- You can buy directly from the team or browse verified resale marketplace options\n- Tickets are 100% authentic and guaranteed\n- Visit: http://nbatickets.nba.com\n\n**2. Ticketmaster** \u2014 Official Ticketing Partner of the NBA\n- The primary official platform for most NBA teams\n- Offers 100% verified tickets, including Verified Resale tickets\n- All-in pricing shows full cost upfront (including fees)\n- Website: https://www.ticketmaster.com/nba\n- Also available via mobile app\n\n## Reputable Secondary Marketplaces\n\nIf official sources are sold out, these platforms offer buyer protections:\n\n| Platform | Notable Features |\n|----------|---------------|\n| **StubHub** | FanProtect Guarantee, seat view previews, pricing assistant |\n| **SeatGeek** | Interactive seat maps, ticket ratings based on price/view value |\n| **Vivid Seats** | 140M+ tickets sold since 2001, rewards program |\n| **TickPick** | No hidden fees, price drop notifications |\n| **Gametime** | Last-minute deals, birds-eye seat view |\n\n## Tips for Buying NBA Tickets\n\n- **Best time to buy**: When the schedule is released (typically August) and single-game tickets go on sale\n- **For sold-out games**: Keep checking back closer to game day, as more tickets often become available\n- **Avoid scams**: Only purchase from official sources or reputable marketplaces with buyer guarantees\n- **Compare prices**: Check multiple platforms, as prices fluctuate based on demand\n\nFor the most secure experience, start with **NBATickets.com** or **Ticketmaster**, then compare secondary options if needed.\n\n---\n\nSources:\n1. https://blog.ticketmaster.com/nba-ticket-buyers-guide/\n2. https://www.sportingnews.com/ca/tickets/news/how-buy-nba-tickets-guide-pricing-dates-history-2025-26-season/41b7ead33bfe4bf90567c629\n3. https://www.sportingnews.com/us/tickets/news/nba-playoffs-tickets-2025-prices-schedule-bracket-postseason/b25d6feaa8bdc5a176ee943b\n4. https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-celtics-vs-knicks-nba-playoffs-tickets-online-1235334272/\n5. https://www.usatoday.com/story/shopping/2025/05/04/how-to-buy-golden-state-warriors-minnesota-timberwolves-nba-playoff-tickets-schedule/83422671007/\n6. https://help.ticketmaster.com/hc/en-us/articles/27533401409041-NBA-National-Basketball-Association\n7. https://www.ticketsmarter.com/sports/basketball/nba\n8. https://www.sweepstakesbible.com/blog/knowledge/10-best-websites-to-buy-nba-tickets/\n9. https://nbatickets.nba.com/faq/\n10. http://nbatickets.nba.com\n11. https://www.365lvtu.com/1743046731143693/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780804509,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 721,
+        "prompt_tokens": 8359,
+        "total_tokens": 9080,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I get tickets for the next NBA game?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24eb9b71e6",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"87f276bb6a24eb9b4f50a50001ed5e0a\"},\"usage\":{\"total_tokens\":8201}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24eb9b71e6",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"87f276bb6a24eb9b4f50a50001ed5e0a\"},\"usage\":{\"total_tokens\":8201}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"87f276bb6a24eb9b4f50a50001ed5e0a\"},\"usage\":{\"total_tokens\":8201}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here are the best places to get tickets for the next NBA game:\n\n## Official Sources (Recommended)\n\n**1. NBATickets.com** \u2014 The NBA's official ticket hub\n- This is the league's one-stop shop that links directly to each team's official ticketing options\n- You can buy directly from the team or browse verified resale marketplace options\n- Tickets are 100% authentic and guaranteed\n- Visit: http://nbatickets.nba.com\n\n**2. Ticketmaster** \u2014 Official Ticketing Partner of the NBA\n- The primary official platform for most NBA teams\n- Offers 100% verified tickets, including Verified Resale tickets\n- All-in pricing shows full cost upfront (including fees)\n- Website: https://www.ticketmaster.com/nba\n- Also available via mobile app\n\n## Reputable Secondary Marketplaces\n\nIf official sources are sold out, these platforms offer buyer protections:\n\n| Platform | Notable Features |\n|----------|---------------|\n| **StubHub** | FanProtect Guarantee, seat view previews, pricing assistant |\n| **SeatGeek** | Interactive seat maps, ticket ratings based on price/view value |\n| **Vivid Seats** | 140M+ tickets sold since 2001, rewards program |\n| **TickPick** | No hidden fees, price drop notifications |\n| **Gametime** | Last-minute deals, birds-eye seat view |\n\n## Tips for Buying NBA Tickets\n\n- **Best time to buy**: When the schedule is released (typically August) and single-game tickets go on sale\n- **For sold-out games**: Keep checking back closer to game day, as more tickets often become available\n- **Avoid scams**: Only purchase from official sources or reputable marketplaces with buyer guarantees\n- **Compare prices**: Check multiple platforms, as prices fluctuate based on demand\n\nFor the most secure experience, start with **NBATickets.com** or **Ticketmaster**, then compare secondary options if needed.\n\n---\n\nSources:\n1. https://blog.ticketmaster.com/nba-ticket-buyers-guide/\n2. https://www.sportingnews.com/ca/tickets/news/how-buy-nba-tickets-guide-pricing-dates-history-2025-26-season/41b7ead33bfe4bf90567c629\n3. https://www.sportingnews.com/us/tickets/news/nba-playoffs-tickets-2025-prices-schedule-bracket-postseason/b25d6feaa8bdc5a176ee943b\n4. https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-celtics-vs-knicks-nba-playoffs-tickets-online-1235334272/\n5. https://www.usatoday.com/story/shopping/2025/05/04/how-to-buy-golden-state-warriors-minnesota-timberwolves-nba-playoff-tickets-schedule/83422671007/\n6. https://help.ticketmaster.com/hc/en-us/articles/27533401409041-NBA-National-Basketball-Association\n7. https://www.ticketsmarter.com/sports/basketball/nba\n8. https://www.sweepstakesbible.com/blog/knowledge/10-best-websites-to-buy-nba-tickets/\n9. https://nbatickets.nba.com/faq/\n10. http://nbatickets.nba.com\n11. https://www.365lvtu.com/1743046731143693/",
+  "usage": {
+    "completion_tokens": 721,
+    "prompt_tokens": 8359,
+    "total_tokens": 9080,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

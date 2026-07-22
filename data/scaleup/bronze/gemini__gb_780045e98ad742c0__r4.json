@@ -1,0 +1,530 @@
+{
+  "query_id": "gb_780045e98ad742c0",
+  "engine": "gemini",
+  "run_index": 4,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-07T14:18:48.888546+00:00",
+  "query_text": "grade to percentage calculator",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Sun, 07 Jun 2026 14:18:48 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=38457",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "To convert a grade to a percentage, the method depends on whether you are converting **test/assignment points**, a **letter grade**, or a **GPA (Grade Point Average)**. \n\n---\n\n### 1. Test Score to Percentage (Points)\nIf you have a specific score (e.g., you got 18 out of 25), use this standard formula:\n\n$$\\text{Percentage} = \\left( \\frac{\\text{Points Earned}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** If you scored **18** out of **25**:\n    $$\\left(\\frac{18}{25}\\right) \\times 100 = 0.72 \\times 100 = 72\\%$$\n\n---\n\n### 2. Letter Grade to Percentage Chart\nIf you have a letter grade and want to know its typical percentage equivalent (using the standard US grading scale):\n\n| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0 |\n| **D-** | 60% \u2013 62% | 0.7 |\n| **F** | Below 60% | 0.0 |\n\n---\n\n### 3. GPA to Percentage (4.0 Scale)\nBecause GPA is not perfectly linear, there are two common formulas used to convert a 4.0 GPA to a percentage:\n\n#### Formula A: Strict Linear Ratio (Most common for mathematical conversions)\n$$\\text{Percentage} = \\text{GPA} \\times 25$$\n*   *Example:* If your GPA is **3.2**:  \n    $$3.2 \\times 25 = 80\\%$$\n\n#### Formula B: Adjusted Scale (Standard US High School Mapping)\nThis formula is often used because a $2.0$ GPA typically maps to a passing $C$ ($60\\%\\text{--}70\\%$) rather than a failing $50\\%$. \n$$\\text{Percentage} = (\\text{GPA} \\times 20) + 20$$\n*   *Example:* If your GPA is **3.0** (a standard 'B' grade):  \n    $$(3.0 \\times 20) + 20 = 80\\%$$\n\n---\n\n### \ud83d\udcbb Want an Interactive Calculator?\nYou can build your own interactive desktop/phone calculator instantly. \n\n**How to use it:**\n1. Copy the code block below.\n2. Open a text editor (like Notepad, TextEdit, or VS Code), paste the code, and save the file as `calculator.html`.\n3. Double-click the saved file to open it in any web browser!\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Grade to Percentage Calculator</title>\n    <style>\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background-color: #f4f6f9;\n            color: #333;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 100vh;\n            margin: 0;\n            padding: 20px;\n        }\n        .calculator-card {\n            background: #fff;\n            padding: 30px;\n            border-radius: 12px;\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n            width: 100%;\n            max-width: 480px;\n        }\n        h2 {\n            text-align: center;\n            margin-top: 0;\n            color: #2c3e50;\n        }\n        .tabs {\n            display: flex;\n            justify-content: space-around;\n            margin-bottom: 20px;\n            border-bottom: 2px solid #ddd;\n        }\n        .tab-btn {\n            background: none;\n            border: none;\n            padding: 10px 15px;\n            font-size: 14px;\n            font-weight: 600;\n            cursor: pointer;\n            color: #7f8c8d;\n            border-bottom: 3px solid transparent;\n            transition: all 0.3s;\n        }\n        .tab-btn.active {\n            color: #3498db;\n            border-bottom-color: #3498db;\n        }\n        .tab-content {\n            display: none;\n        }\n        .tab-content.active {\n            display: block;\n        }\n        .input-group {\n            margin-bottom: 15px;\n        }\n        label {\n            display: block;\n            font-weight: 600;\n            margin-bottom: 5px;\n            color: #34495e;\n        }\n        input, select {\n            width: 100%;\n            padding: 10px;\n            border: 1px solid #ccc;\n            border-radius: 6px;\n            box-sizing: border-box;\n            font-size: 16px;\n        }\n        button.calc-btn {\n            width: 100%;\n            padding: 12px;\n            background-color: #3498db;\n            color: white;\n            border: none;\n            border-radius: 6px;\n            font-size: 16px;\n            font-weight: bold;\n            cursor: pointer;\n            transition: background 0.2s;\n        }\n        button.calc-btn:hover {\n            background-color: #2980b9;\n        }\n        .result-box {\n            margin-top: 20px;\n            padding: 15px;\n            background-color: #e8f4fd;\n            border-left: 5px solid #3498db;\n            border-radius: 4px;\n            font-size: 18px;\n            font-weight: bold;\n            color: #2c3e50;\n            text-align: center;\n            display: none;\n        }\n    </style>\n</head>\n<body>\n\n<div class=\"calculator-card\">\n    <h2>Grade Converter</h2>\n    \n    <div class=\"tabs\">\n        <button class=\"tab-btn active\" onclick=\"switchTab('score-tab', this)\">Score / Points</button>\n        <button class=\"tab-btn\" onclick=\"switchTab('letter-tab', this)\">Letter Grade</button>\n        <button class=\"tab-btn\" onclick=\"switchTab('gpa-tab', this)\">GPA (4.0)</button>\n    </div>\n\n    <!-- Score Tab -->\n    <div id=\"score-tab\" class=\"tab-content active\">\n        <div class=\"input-group\">\n            <label for=\"earned\">Points Earned</label>\n            <input type=\"number\" id=\"earned\" placeholder=\"e.g. 18\" step=\"any\">\n        </div>\n        <div class=\"input-group\">\n            <label for=\"total\">Total Possible Points</label>\n            <input type=\"number\" id=\"total\" placeholder=\"e.g. 25\" step=\"any\">\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateScore()\">Calculate Percentage</button>\n        <div id=\"score-result\" class=\"result-box\"></div>\n    </div>\n\n    <!-- Letter Grade Tab -->\n    <div id=\"letter-tab\" class=\"tab-content\">\n        <div class=\"input-group\">\n            <label for=\"letter\">Select Letter Grade</label>\n            <select id=\"letter\">\n                <option value=\"98\">A+ (97% - 100%)</option>\n                <option value=\"95\">A (93% - 96%)</option>\n                <option value=\"91\">A- (90% - 92%)</option>\n                <option value=\"88\">B+ (87% - 89%)</option>\n                <option value=\"85\">B (83% - 86%)</option>\n                <option value=\"81\">B- (80% - 82%)</option>\n                <option value=\"78\">C+ (77% - 79%)</option>\n                <option value=\"75\">C (73% - 76%)</option>\n                <option value=\"71\">C- (70% - 72%)</option>\n                <option value=\"68\">D+ (67% - 69%)</option>\n                <option value=\"65\">D (63% - 66%)</option>\n                <option value=\"61\">D- (60% - 62%)</option>\n                <option value=\"50\">F (Below 60%)</option>\n            </select>\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateLetter()\">Convert to Percentage</button>\n        <div id=\"letter-result\" class=\"result-box\"></div>\n    </div>\n\n    <!-- GPA Tab -->\n    <div id=\"gpa-tab\" class=\"tab-content\">\n        <div class=\"input-group\">\n            <label for=\"gpa\">Enter GPA (out of 4.0)</label>\n            <input type=\"number\" id=\"gpa\" placeholder=\"e.g. 3.7\" min=\"0\" max=\"4.0\" step=\"0.01\">\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateGPA()\">Convert to Percentage</button>\n        <div id=\"gpa-result\" class=\"result-box\"></div>\n    </div>\n</div>\n\n<script>\n    function switchTab(tabId, btn) {\n        const contents = document.querySelectorAll('.tab-content');\n        contents.forEach(content => content.classList.remove('active'));\n        \n        const buttons = document.querySelectorAll('.tab-btn');\n        buttons.forEach(b => b.classList.remove('active'));\n        \n        document.getElementById(tabId).classList.add('active');\n        btn.classList.add('active');\n    }\n\n    function calculateScore() {\n        const earned = parseFloat(document.getElementById('earned').value);\n        const total = parseFloat(document.getElementById('total').value);\n        const resultDiv = document.getElementById('score-result');\n        \n        if (isNaN(earned) || isNaN(total) || total <= 0) {\n            resultDiv.style.display = 'block';\n            resultDiv.style.backgroundColor = '#fde8e8';\n            resultDiv.style.borderLeftColor = '#f53b57';\n            resultDiv.style.color = '#c0392b';\n            resultDiv.innerText = \"Please enter valid points.\";\n            return;\n        }\n        \n        const percentage = ((earned / total) * 100).toFixed(2);\n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerText = `${earned} / ${total} = ${percentage}%`;\n    }\n\n    function calculateLetter() {\n        const select = document.getElementById('letter');\n        const percentage = select.value;\n        const text = select.options[select.selectedIndex].text;\n        const resultDiv = document.getElementById('letter-result');\n        \n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerText = `Typical Range for ${text.split(' ')[0]} is approx. ${percentage}%`;\n    }\n\n    function calculateGPA() {\n        const gpa = parseFloat(document.getElementById('gpa').value);\n        const resultDiv = document.getElementById('gpa-result');\n        \n        if (isNaN(gpa) || gpa < 0 || gpa > 4.0) {\n            resultDiv.style.display = 'block';\n            resultDiv.style.backgroundColor = '#fde8e8';\n            resultDiv.style.borderLeftColor = '#f53b57';\n            resultDiv.style.color = '#c0392b';\n            resultDiv.innerText = \"Please enter a valid GPA between 0.0 and 4.0.\";\n            return;\n        }\n        \n        const percentageLinear = (gpa * 25).toFixed(1);\n        const percentageStandard = ((gpa * 20) + 20).toFixed(1);\n        \n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerHTML = `\n            <strong>Strict Ratio:</strong> ${percentageLinear}%<br>\n            <span style=\"font-size:13px; font-weight:normal; color:#555;\">(GPA \u00d7 25)</span><br>\n            <strong style=\"margin-top:5px; display:inline-block;\">Common HS Scale:</strong> ${percentageStandard}%<br>\n            <span style=\"font-size:13px; font-weight:normal; color:#555;\">((GPA \u00d7 20) + 20)</span>\n        `;\n    }\n</script>\n\n</body>\n</html>\n```",
+              "thought": null,
+              "thought_signature": "EvluCvZuAQw51scKS_iqXL8IvGkoeMEeJhPci732Nc-kohzs2gpaS7i5QCPtmUWK2N4Tlm0lVEMItqJV9dXdJMdhjkXG8od0nRXJFAy8yRwdfTL2Uxfokkc1EI9g8qpcvZM_80LXROIIzCbKitEU8lavXsys7rO7bQsEgn0dE-ORBaXHfIGQS7hJmDaLx_OGNHCIy0ay3ko8bCU2K4qw9lutofZc_3yIFttXiI9KqcnrTRSP1Pc2PhCmCScatoFvtJ6mJGCFGwuCFsRW1G9vh0REonfTFdJdr9AwjCSBGKRFvFjf9aMuDlBfp9M9LI3HJrsPSz2IA-OrcF2d_BQBMLmmU3vGKrvXYRmp2e5pGY8rFbOEu0JlqauBtDhSZl-Zq-vomd-7YzvOzSDM_Glr479b_K50D8tMPNk1rZmhMWGLmvgEZxk6r1B852TkwPlc6WTzR44xJt3ExD_qrvoQM1pn4bsT13zDYT2wRzL45vGvoDxaJO-JW1mhuVAZdXVDZL7wDgpd9WPDIZwVMHUrzokngZFqEp0vSefWXtpRA-_Gmq-FbnfQ1HYrGP9oQsXkZRE6Ydwdx17s0DJoGEodLd2RiTU_p1bfFqw7freMpYjEYHccm80Nryw7oJErBN9Cm1XgX7as7cWn0D-9xOGS5T2F2fv2TrHTED0t_sDaV2ivd_1trm1dfgqCT7DFfCVv_45awU70Vvei-YUppO3PFVGg1HWDEqvaLlfqVbX4o1FP6ovA7dc-8hEA4z3ep3YLSyugpOB2EaeNfsYLeP1CdmjfwincNc8yY_pLvh9Wq5CXi3LmDpndMnge1WiWpRuInImPqPpGkmPHX0MsSl1lbiMx9p0nTXP1ndOOB9zV9gMgV8w62eaYD5vXZdNlnXGD1qEEqnMQ7WtMmnCNYKsX5lQiDo83ii7y3aytpJBGg6vJY6D8RMC27ZG2nynw6CL8IzuK3FkuuBuBRJou1yb5nNPAHpG5QRiT9kNYDyhkZjaA_dg8z3izMdxml31cbl26WKHj_yx2CNAu8a3QORE4WZ4StpdXb3-TgJxPAdRfoSoMa502-I20Twpuc-qmfanhiO7Y4T1kw8hraM9WDmZ2tPugPSgvKVkEiDHNtOJkW0O35TOUynN-VN2oH8jFB5P7HHR0ZL5yeFxiYVP4uAmwLSMKcWCvyjbZDvvlC0a3bfZXfmg009RCjrHEgScorfdu3PdRejgN51M1Oq8cc-WnAeOaTmGFbGJoOxvjc5VEdhL5j4dD4BIWLFHv5wwhbsWQ0KamOg4Bk-Dkb0RRFC8EYx7iqhW05ap-YGdzYvic_svjmVfPr75wqMNV5zloauL6feWdQq4aA40aLtYt1tJESPInCj27aaVw4WZJFx7V1WkQTUsSaJO5aw4on6PwJmDgMinV2cOBwacWZrhTwCmWG6CfRrLM-j4SYTRKxkYO1NrnxNqMBdH_q8fArHtDySI-DkmQy40plVbqk8KxvuN-p8Ty5dnIrU68ir4HwYWnwpQb4WIF2m-g-GGRMlJpkXHhTvS8PjFIFOFLlQD4yUBQcrLjCn4Lb9Oxx4W1Kj-66Cg2cLB5g7h3X1EYtpSQgYHhAFrGdRpMXTkgSmbXdBWnPx_puUadpDhkzGmDsqhknvF9ZB0iZEgVVHGiAWEPo7WLW5D3bw5l8t-NFdMgOCPJ2ZENyWhYt7PihXGb0gXhqg9sSVPmH14VjKASYp-B5iI5UK9AwhBJxjmUL42opxZ3IL8VYqnxWc3rCxU8DWm85Thnr6Jg2taysvUrfOtVIGW24MI34jXvija-IVDAFcvJ3nTw77JkDlpg_iXQ-N0FQNMU2L6lvAGa13q8hgURfMcecQ_pjey5udH73UUR4xS3DPQ3xCwQyX-EcTNNJq4TDbZAYbyOkPiQdVnHqFTKTaIXbz3NtDGzeMkfEJYWg0mycokEg-GaHos4cgLxpIm9GfdsnFyIFC-gLzzlrJi8USWVr7b9xbGgt3-M219fmVpA80cy9dt4MjeSwKvz_EoZEP6MutJZCWftpUDN3JO_kxML5csKADf9cpRixEaLOBoZW0nNa_VAsMAqypCEOU9bCeapvpvLzDVDX9BsMdKiB52Ik7xt5I5qDrqUG_D29cCgpbOmL_laWWznzaJeX9T-pNpLkRQrseFH-J63hDkasosNvKSoRXYx95zR-TX_t0shbWYwkZBtHcaj8RW4LbtReXVJvc3QdrLzdjz3NVmfw81cXx1A0T_V41WRv6T-S1AYRaPmklIrj8up7SF0iy3rB1kYxUYTtx7fgbRxK9pHZVbTZSHeJvFztbfaXkdZpC3eRkNr9UM31sS1TwET2KD7wTY0CTRDYqiGkkG-X4cj05ZE3TnMf2ztcIBOd7fkvbQ9ud69OlG8HRSxpgORIaKui2J5u9-fVlNfx_U_UJ_wwoOPlVrHR_EBrJUDp6JarDSK4C33B8sBxOeiIJ8szkvH6cthMVCK15VTqCxYIeZHv1Oc9AwlikJXV3MXTm61rHjVRKUOXTjZHYb2_rYm9l2t3CnWvpkB27B1jsAjGMlHItG4dpkfR94BRsXIorO1yxU32-Sx6uHxnlq4uagHCnbvFwhjSEF-UIYugautSzHOqJBRqcwnCjQGXySN3g39x8QvJc1PulGEnaYh1mz1ZSzi3v-nzf6h3UDkvI9BlxHCVmx-29YSuvs_qXNwgyZsLSXWR6FROi7bTlIzpbvwwGAd_QG1YJtqQjHd4812IPbu6RfwrO3sA7PZVFmMrxV5Set4RdC6NHE65hvPGwvsEOnsn9vjE_TVJRyNZZ3GqX0zU9n4IM0BjLIK6EB_21BomHwLw6397AcHVgb7VHHYEwswKl2cv9qt9zFh1LoCyraixSo08X1HsZsbfJFug_fAsHTTkeYQ86oZZ-U_SP6_BsoErtB1s3k049HvPGTQTNtqUHA447M8ZmmqDEFyrObWxOUTEPmbiLIt12NjBuy6hrdhjLUgvgzMr5xgtlHa1OJSTCDlUtsDLZaAJeK1Te7ud4jpBzyEvcrOclO2xXH2WsVI_ig68eJWfMq6R1tup2QFOkTIvqVD_LQc2o4d2A7XEZCrevN-EKnwGJ69wKg1p7KuZ4oI3HGX-IQpXlzMk3UwoyHXvcLKfswbd405Kcer0tkVpjSrlJ3kHJSMoC0FwI0XeJ8k849D3IEdlVQbgtaXHy8nXTrG3MoZmp6rC5MFpB6oGlXnKB6yQUEt3kMoWAqpqf9yiTkvuuRUKBUX23xgSU92-hZt5Axbb7mWSb2eoNKjgJHDhDh3nllXDr9AqpZ-MgXF0NYhbV09IzY7WjsjomuuQftwa0_T0FbdnQWk8u3GsVQDr9fReHsvQaQICIsHKk0W3oiyvfN0CLLi90-d2fpBFy7Z4BCz640c8bD6u1lPMT2dJRiVmI0Ww4q2r0hEZhguZaNW3J_Q2Ok76_phZImULmlVmcvGBOcBw4fJTczwGr5LF3_vh3BtiBxHE0CNyzuaKa0BTFGqeaXFPTVktZX1Yz9P7_MyQx4ZTm_d39vYXbNND1s0egknFCwk1P7brndmk90gJYPqlmiwgWxTVNUXTzAwm5AbP9r-AkmtLoaU8HO3rhoyRX2zTQTXRQ-zhOk5vWJTj5hfTBrqiHYgKKXz0k7lTFdMDwwsMHmypMpya24bVLmD0O-y7C7ChxE76r79S7JXptg0ef_NN_DGo15XWhF3hcQs-YQuHq0iuplHExai_zhSRe2AAQjrA563nbL5fj0NMtb4PCLzMCzYfnnYya98dwdiKIdMdvBcXe9p_8kR-56pdLFPPujjv88skcXlX3Qt76AcHWQv0s8jHQpLXoJ86reckQB7foAqMsQFnATb_USlbQGkTPSeU9FhkwiBheEz9ShRssIayVy6oTuVHPR3p7rwTnLh-yy3kyoRD2xf0F5mZfADp4H3ihvNHuz_lw5NdFN16QI4A-h44YtVt0zGb4_Ka8XphO7e5wvjNCJ8VooYjhSl3V7fImbMupe3C8wUpjHjSuju6Ch07jZwwwMVSgDWXOP8rqiLMY6yLY86ozagq89qs-cETQnFK2UJwsuaEIcY5ZHmdqE1whCmswv-Y2uxR3oWzBTeTfvmvrW7ZVIscJIOKLVfHna4wpQ4u1_NbU6D77wu6CgTRIkafE38XhpGBl97zCG8b7zqK3PovtQod-WS4YQ-LGmqjN6erAHeW1WQSskHVcVNAqmDn7DibCIhyMdOJbSWAoOiqwIsbji8pHrNK-FNBRc1VMopOl5MYqym1AFWGclK81QaGBKPFXUPZi4Rzq3qoNWz6aTGR_kykb_-tTA2dIEy6O9HbVuJbdrs5Ny4bnI3T8ux0th5csuvZeHABAimhuwPt06gA3xBaFRwOqrQtTsH5o7X58A1W5LgPGmZrOFwwFZnKVfiwxLqF29FDF5vRa7JXwjzmDi14dAc_MetsdO5yXI3sXBeGBQs8C87KYONvQPNV1qyf0Y4U2MlvZxvM15QIaaWa0FNeJ95YWY1hho2izVCyYLIkGhPsAweqbZcBxOmWrJcjAaX20XPsQ96d6EPBPBBLzut_fnaKN_4fvmM2qf5gc_9Q5TeRtTj4ZIR78I5b9jGqECJ-FJOYL1wbE2i54y4dqjceMS4W8aaeglbS8M06tQaxa4E_0EbYu8WoFQRo0T5RrJ2jt9UGOcdkMAi49_UyINTCf8BMgBuZ94aW-wx_FJfg14nOwgAubBIsHQlgHs5iOtUuo_ukmOJTDItdf1vXUQozOOObTHkOgAUljCwDlM2oTg8lf5RffbEwi5x0pLkyQ1l55iBs8gDVi6_fXz8XsN2Yu1SaW4WPy3Cd4U5FOSdnfuo4AOHg3u6B1-5CwQf9zrCMoFbez-Sxbkq4eYiAel7Z9aU-l_RwFWvv22DaB-VX7Sq_BPBuNKwmBrA0vasjJ9xVRzHVOYIc6_UDPdCZ6wXlZbaXrrFe8pn7R-uNG2aVyrqjbBGy-6ucpMqEX0R0dQ5uDMRel5bspXahd7crPQ6L-gxNFpFXM6Ak6NMm5Kbh0d12PJ5QFqvrfQB1odpuDCfy4SEiADp_rvBxPCWfdovM0ZME4Np_WB2ex4-mCkbrGWdeGJXDRadgY86o10N3sjynSsWe9R0TAcHPpfF_yQs-s12w_v3V1U_gcMgJB8DpfsuO5chQvMEvOzgLpnJjJn3X2UGcKKNcwvqW0oOq2rj3t2eupHkYQigoZmkWlSE0Z67s5V9MN2ANoyihhg5-IIeim_SCP_R38F28s0K9GBFDl0mDaumqKWy6skKHs6qAkXE9j9fUHcy1khfHFMAmHO5cdcToXQ4H7EUn5bbdqwFdhQ7G5ooYOd8XElxr2sSiCLFq8iVMvbANXcK7v1ucur7VLn4Ei7or5lH492FOzBA144w-ObnCycVfxrQZAXbpWs8GOTZx644BKvi29WITdpPB30exo33HWaF4h_Bo51yyN305ngsruFw_uZPnIY9ZptHCQary5KfZZjURb0HIZ6a4PklIDXfIqMDTB4FwGchCYVSahqp7BLgFMIMiuaJO9W5SnG19jl2-18xXAWrNfZnoXd11A74u1B9FcV7bFnOgAyeASGD23ZFYr_Ogobqj2iiRWM3LYlc2qFngQQuCQp2VedKBFE7ewZkGjs87rkkG5ieEtCSrsm2piiR9Xu5Ubt0Ne6hehiOiwypAiIUMIeI3qZ2UBuO1_bUzFhQ9bT0F7Pgp72k-8CJ2v5l9pvZYcgcVG9MaDFqqClsAlLD0t_BnMgKu1Lp4HVORWzYchwQmlBl9EjjTZ7iENXee38pNrGLvm8qLjFfwbZtJWvkUUlES9RPh2cfGAby4S4U5QcW5-4rw8wS1LgyCYggaultQERz03TS3UpoU8mubkTK6xbQVZ_45oscbvznn2pxbZOHJuhZuYy6Z8LaXooOgohpCvlEdCsE8H7bxj9pssIXF-sNNv95o2qfxHSAZA7tzSSyKIshQMvEGOxNdLNcESnHLQZfh8rgJk3kPq_7RiqznNV_Hb65xH_t-XgI5ztOBDvBf-T_qzHbenKJfji-j0SSoIYEEKkTMRM9NfdekHBQ7f-3qSTLJBEVj3y3gTDB-PZA2HLtADrRIpT8lz3RJGaf3lgJ-pBoB-6KFdBZbLubz6iJYkScUC_DxqhNkxdkIJHUe4NvP7Ag7QrJyZcxqSTY1A4JSfkLUaG21cf0lRnIKCdvJTB6tYdvlQ-KFChWqMb9hsRLe5RZacoWWfhoHwp7DZjMkdARAyBjCAvzvRQBSEgPU6y_VFO5cchKrUgO8tEG58jW1mxFwvKgHqJIlBVopDRjTYf7MZmK-n0j8nErVpJb0mDztUAxi7DrCE_aIgNdIcbLs_0zSxxtJYUnLQS3jxhkW90M4adVm71GqOVlkoEF2t1TbYLAA3bveety1YT2r4S-q_oed97tJtWvhfPA6IKlxnOQ8dcM0u319F77vSUv1S20_3XSSStrOrKqvJ_aEHv_CICBRWGGdi7vT0UOsZceY9GvXxLwFghxU1ZtQWJt5NzfpLXDJp0CBK_MUjQYNeqcLXcKVnU98onn6BH7_ECuX1AavrTZwzkrjMJDHKHGpQXIy3ycf2g3qqq_oGLGa2LTRPcCZjsgnu7tPuGxmZcNIV5YNU9Nj_EdqSp-VIGKS-W_vo58gC8BdH4JRg5Ku0-ax_2ScMGQcjWK4K2ZZ-CaALlPlvflwus6j_JjI4z-e5WwiqoHGNx6g8Y4fkLohitJZkpBcY4t5ZGfuZDG86oiD0kdGMfMyHo1woCsSLb_HFiIjG57mlFQ-Rad_NA6xZfHP_Si4S6JZV2OJwz7rXNRByMgUgMGf8aPzsv3hs7qWISvtiTR0289dcNfyoeA6sL3n1oeAt0-iknmNl-Z0Sxs_Xw_GEPBh1YWxSq2CUFRgE9RSHVMA4O0pCuIIxi245Qq5vBbIN2xXd7yL7lZkDcpcD-J3m1jtzyNLinmv-IQgnW-voMnkGZpUONSwyX2srWudis6DzmEV0P0bIuyKVlbODL2H2FewJa6_9yYPjZ7ZzdbYZOB2-4jKAPau99oAguTy7meS3yUKq9CRfnuRNoCJm9YzZi8BBmQlhS1P9KUbr4XkgnLI3iQUgJ-gYlgTKnJ-ySzvQILqA51w_JQPGGWnMetvPqwMZYMXiglbpRv58-zHFR3wtCRDGcFx_ql42CyHsMgY84UQ1RXCvYjxQ49kxjxsPgTwO-pTt3Qyzl0gSCB6s-wLnUs__sKQNQ-Up1jodYtf3_NgUf5iaygkYKkhgmiQCNqKuoVeF3KRPeOk4aIEEHtV-VmF9LH3qSdir_P2wTgRru8yk8WE8LeaTTIqq7HKTDUtn5KFrNTQKnqgBWKyefKva9pr--EOzBGKbcFNzucFKE9AfjtT-cO_g6-WPEdL4Xyt3P0pzewBONc9Pbq67BtI_jtKhm1s4xYkvnR3hdrGmvx0FRMukrp5MgcvUFWsLvxAYEQwbUhNy1HdiqURYJrAWcSRKDX_6Un1PUGImajYiV3BhloKdgcXj-8FTRaBR8JdckD08EIpX_ys_Y8769faSNtl7Iwai3vcfbqiCTDF16N-mWqnqOWrddJJmInh9xKKmvx_9VpvAhZzAulyTNsLPeVVhZhOXyXkCiJurc9dkR6rTPzWHhOpsebN1MKUq4MNy_HAjliQAxRSwGcwAdVh4j2VqEYP3Mz-Ss9FBtjKsJMPKNltiZlJlvyPMmg4hjFHAWoAxhS7ZDqQeTe-wtAUE5ZQJ0PxxpgontRhSHiVqhk2tVJj9yLz1t1zXUcgtOSaQmDb6PVNN2Fkzap86LOO75BWF-Wv0zvksyug8tRxUjaHLKJ7DPX3TXK2YtAP_ffSHcxdCrzyLV-8C1-u2FyYa3kyQKyP2lZZWkJoyQzpvgxPUCiAa-mJoLbVUvSND-CB3MECEtcEoqPYH0vlFhyKYUXWBH1XTEVZ3Ye5iIjJjQ6g0n1laNsG48wT1bEybvk_ROV1nGEcA9uS6JqBXX4Z02pPIlFX1obdwpM6D1uIs7JEgaBqAe66QiF1Amlt0viDWdvPuKOklZWeaiTNCyS1nayh9e1aT4ePd2GRaGsTg_lMT7RbI5nHButA3jH8QP3iY7JV1-aZyx8yooZRDRKcc_3RnLemTAQygmQwtFsKGfxC3slZQN3NLdNMqFw3tuknzisT09y8Gip28bsDTLr11ABAbCY67DeSTdbU-fQUGSUV0-C5TE4hNhp5uohvvwhg5YAiEoHruSKDWzvfT1SondKfPZVTpzChWtLXK0Lhctr-cKszGPb14tnoPD6ba-QfzwFZsLSmMSfnmsw6lHocbZ04bg_yt3_noqN1yGSRQ7AmpYk9ABRakDn4_qwWJKPJSJJPFonoRD5hX_Rxs0lKpsJFpoHCVLqS0eA8LAWsHGVpz1chh8JuLn67bISdEM2H6a0bf8dRbPfw1AjYtdJ8IZNpIdpQJVUMo51yiNBnQ6MZzbc4ix6XuZ7tkzGNkOsu3vZ3xsHY1qQOSO1aEHybRGtMd67z5p7niIJ98qp4qIQcSULxUWnoFi4X88khm-cU9L530UgMAaTNTEP9iNrLM27_sNLfoZp3j6Q3ZjUAtVlW62UkI4zwU3NnnkeTPtSH2XEOAadeF9pWe98slBb8mK56R-rpgaZdx_1vMpPrn8DYUFTUm_tov4sAupMDtTKYj39f56x1464u2822AIlHHzYp3QgTDFtKn_S2YTcWpgx8RFcMMuaYbFWXsgEhLKa-46bZKIo0brrJn-vCP0BHOiKh0MBAxdeYAiKMVNO-svKtYHs30Xj-Rp691GIuUGz2ebGp01p9d6lHHr1joGLlgN4iMuEZVbiyhgl61OVw90X0UT3hUZW6IIi-LRJpqgUWuOrpjzM_eCvOu9YTlqaUxeHrSxI7MeXEvUIPND-7GP7wSO06pYxTTzpr-Ge_BdlxEAV63NfkoXRRdYNY1sRHaPyuDpu6G9nHV3UMPfD5GEyY06i46QBvE4flGYF0x3z4ZqCXpVN7486EvzPDYvuDfy7DqTL-I6kQcxMTzHwXYGoG0xSRTPBK2nZrMhedRjAhZ6tArkxwo4KCUT-VXXkb9abiY_od-VZg_c_XGpfLEZNEAqk1C5I3lM-7CL_QXx7JjWTcRc-mYrJCJ2Qk942P0-l3i_sDDc12Uz4HG9dCKo-rXBCZV29dRCdYQKCHiNySCIjopRPT6dEy11GJsYHX5CZphorWH6SrxgWEGvoXVfan_lz-Wy9TZ4c9g0lswLYUT7CSqVGpVfdHZR5RWBMGseAh1KF-8zVkfksJ07FMpRJgGONCTUz9MmakF3aS4ForF4zwX7zInLd9CemVt0-lATuqjQR6UJJ4ZGzxQiBWdSdbc_ngbfKdi052R3OBtenDQGnNJnxuoDF99tT4vja2Jrw7f857CR4rzAClV_UwpSgZXMvytREL0iKeUssAzPB3tgeDgUQ6zSkdHw8PAL9g5bLzDKXu08IEiEk4U7njMTHWAOiXWM7furRfCiXFcU7YNSryj_J_Dnes3WbpC5Ol4WVFK40LsrATnIVpHhGfNYCGgiu7Ds0CV2Gp-ynKoI1xXpq4bC697ylM4NnfgYpyCjsuV1gLTgr11saT5CROmjYmK2wf2598ZLtWwms5zL5vWa3dytjkfcrQ8EGYcKcC8EBdSQMZKGwBJPHM6COinkTR0RR9W8ZlG3swWNUTq7u-zG97EHK0WrOL2vT2OlcqG1JFwbO1gJPPEjOtjD4r-vC_JJyIq3g5xNYQn-COVIvN4mHj4YDgXPRv74EqsLHXAJeUkYJJ4mUU7QlKvWkZ5oBsdJqSid29KKqLVZHGMMjRRTuyKsFYqShb4CY80TRD0hWTsD4hgsIdWP4CzsPb3Qil7TMjp-Nu5LFH_HaWUN6VYHI0r9XXghBcCMMMl3ElmlzXe_TM7og1Bvh0XnxyopSZw0EZbnd4gUXbOI2dr_JS92aIEhq2aBBt4JOp9WFz9PbS6a02ZRwC0PLZh1QOPocngcsFnjPLKzOf8PLs62s-BOBvC5X0UyWLs5sTFhwEQ3p8rO9nh0SFfjp2mpFG6pkGjRBfOeEg6YW3HYZaZB2aCjd41L5XPKta_JndHNmtOF--MEYKBqpr5HPVRGNyDjIvjFXczx7O0_5gY6e5HRkDH3U9SasDyZd1c4wzCcjzEFu37XkzABvRMGKL61FkMWd5uDzKtJunR4JySyKN0rkteEWkuoaVCEHIfunpsVNXFmJ7-pgg2a8jXbrOnodjZeCcfghRUByDl5UrvDByqsW8MqLGJDAnJNfmGa566c1ozTwp5PHV-6d84pnXclJMfntQ9kEGAJDliI7nobjFwoyBLRheVmGsFsZmDrwEib89EnHmsLCOsKZ-33J7_sHccq2BX9Suv64LjABmqd8EwoYZE5MOua8xtG3pbsCxnQaAQHu-3rBxoX7VHWGrZeriwP1R1rxxGUwnOinkRHfYEBMZHQkIP9LN-OkTzG7NAWQco3FIt_vGGz8jeBuXRQ4cvLXE9SdXwD6sdT2TJMbw93pxzP6Nxv51HBUi6H4ThC6SONJKusrREgkHtwu0q7WrmW-qcpYY9GPIYWOmIHdVmA2UYQO71UlKtRB-ZbWqfGnIUJsXmG0IsVh7VO3wSfOc4f5vj_fqVkmzfKAqWruVmeX2LbMAdrw48XTJgjZXd1kBSe9Gis_CmnFMVCjKlRkYiALvS3rVJFJvgf_lWPWdM07A5b8G3lKptNxLC0o5qgOFlsZ0Ztd-BQ7RSmPWIXhoyyTJ2JO3bmS2dlDEofkzo33aXS2lHtdTBk7AB740cXlwb90Rl7H5htpC48fcwF9e7Rl8OYRD41raHPpYDPXCvC2SW8ck2oIAS4HfhQsPkOdZPW24nJcITdxbLxH69PhbwnjBMIbU4tGFn6T3dJtdhmLkiifK4dqmjd3yHFRuGMKARcb_zobSExS_QHcDoMG9s67QlI7xJrdEoAGkTYAV1ANbLUcdtjsCTdNi9SjbaF8-n7mRJcMWqrIA0xrM2wycOcUSD_WnB7i6k6WY8Jp5G-Zn5y8gGYz0CV-8pSvZrF_LbykvYO_9hVEbYOH5-Z9PEBn-Syqr1C8PiCvVl8iegPBihcylG1VqFOLJ5dbu5P4g1O19pH7mlXddcbnGuNojHf_3sinBO3Fh1KN5wsy6tWkcKVBFsMnEw7FtJr1v9XEdgwLmIwLkImvR-xB4Y-EkCFzpDJq1BAiONmjG0U2ayoRRMajZpPkFEdpK7rhqwLbGxmV0EbEXuErq2ktYR4Dusi5ajAaSfAUwTlK5RB-uaoo7tUytP0YN4NdNrHJT3s9i6ErdXh3wHUD3C5zA8i0jG2x5Fh4QT6OIr3UXAPlHJ0D4rWDEBi-so3Sn9iXGNQ0oWg4MklpHktQHlqD7nwIhLBaV0Af74V_5ALG_eKTP6krfMCx7f9gnNaWH5kflTCwhVHLsf6wkbKm6yi75J1KQ0vg1fciA-Z53ZJuSFFu_rz1zl0hUhd386A211yUd64pQym3gtzeTO0AQ1SShJ2r679IDBItjgZiUaAX42GdXEXOzH8_DaCL2WjVJZA9m4JVFQeAU2hErJOjYqUiQKuKML8N4CfPBlRMyRvadpBrP4_RXruWs5wqlSSxQsdkzCB_vnIxYYOgpby5TF2cxI7l3GLAEjLje0VZTqmKKkOWTFP6VPy2b9rltPY8mUal4Tdq26wqv5Z4bjr6RXSUAiwdFWq1JJ_3cZ3zitvwP6KTdCuVcUWlRubZIvPSm0XmmYTXhVvRZmMqjVM4nlVZgDJt_bAPJ3B6PVh8kLEX3GYe0oGt-u_qlWVowcy2aAlvnogE_KxVRKjLpXqfFhy597LHjF3Ld930lBdQ78YDDZoUokLXs2cSJwf50ps7U6CUIuv2onOLbPHPMMSCOdjhOuMgz1hs2y6klHerD2x1apPVtxMmjUoaTCNI5bSQahTsz8y29ui8BhYgqlk3OxnPAB-eLQwYeGa7WwPOAqUxUVxgsLpbb2BRow3nc9Wl5aP6UZMLqaUPsIUDw2x0A6p1_SNilmByMHyrFnIfX4bFPe9IUIYqQsiRrNFJIq8hZmn7pWQYXxyf12CitE0FKCMYM97HAuUhna9EzqnweDXHaxqnpAjXt92fEuKv3JXmICK68RzamS8n6jM391TTAoN6UXUWSUUnHuyk4LdLx6p2jexba34QKcE6C6tqYTYBvev6xjEiWxRL_UxIoJBpE6LLiAAYOE1toGw3kr3lO_Gx88jN8nOf2c7f0tRRX1o-by9e0uFT0Hsgh4QWxy2OXVNekoVM4Fjcr4d2uO60Sk2NoycystnWVIm-xM8J2bw-f6iQ2D_9HDvF6diusfNOGqNWTnc6uY3u1Em2F4_Q3AQuxMSHm-G1VhQg8bRO3AAcg-c91h4pZeKslQMt3ILV4A7F-xSjzPJ05LIttAOTyaoN3M_JLH5QtHZ2RqPfczdQpQn1kVkC-pg_B_ZOND-crRw4PuJqrrG2bxP57AP0vagLYvwgFmVK1mJ73kUgv-KtDzzHR7awXqEYeL58FeG7kYINxhWXySI91PZSFIBYeFtC198s-dyaYYnYiEjqt2zamnG7bhbeLloW11h8zfam0bnrLoE_DTfJ-W_B2rk92DgcBWiIn7q9Zrk9uGDvhx6zY0aeiwzDfxPQOxGEJrXRL1vVlMOMXqJDWaf2Ti9QVkUWZzblepC0nsY8Ea-apy09fW3OM1Lb2lsaWpEoJQrW5HKByJM4XxfsCN8XBdb-gsUrw6FU9ct_yL82F31PrtSTObQYS94A5hoJ3-iRMt1kuxmZ1nvTnB1PDu95VVOduB8KZlngGNoNgksYR-UTAbZuO0GL1xmuouDHrka44sx6dRPYo9jlxMJeUeWbmCMOwUm672JeYv5ipbGzkSybS1UHO95sgq21aAxRbW1PTAE2qUZDiAe9r2LNQvY7UkZAd-tspACwRSUXVBCw2ar7-SMKG7QMatKbXvf_oVdKkH1FlkYeZIcPaxyq1Ik8eZgW_RApsHGc1EeysBu7GNop0kUgX9cnWIv68jCGxEQZByBirjp6ksbGFEMMPQWABsYZjOeUFAEs52vh5Rk4uj2yUU_h6IupiINZy3pj9X-4_JdT-R01mUaTKFP-xeg_kwIJ-QSkraWSf70rG-1wlr2buXJ1J1YkyNGZFtA1wIjU6OcIdHLTamXcQDdknqnSHhNnpZVzjjwRwPLHG92xcsY0-5knbXDUK3WxqbaM3Ju9Rvp0AaBVWsAmrbPY_-oEyZdbVnKeJmjXYFIwWz9w1nC41w7mAzLCc9wVTL-u4SsG-Ulpl2nDq108wLicl_zAf15vlMMWueQgSnvqGFxnuwVw-7GG5VEhFuqQgBshvGE_70chqYSAvGgB4tlfprE3U1XMVqZCiBI7CE1-I1t6D6U6Byo3wWRyKtktNZCYIUmYCRJcbzI2Vw7a9zQKW9Q6ftj3Eg_Lhm498ny5zNdETa8rtot9BheyIC8Yrp9UFEgey9xROjpQBtZBMfm6kFGc3UGbx2qIs8dorUNmUFntIetoz4q5KPyaDM_eExtksyRU6ia6GXaaIGyTNi0eHknhmetlji_BBr24bXbDvGj-TvRJuPcLYa3vFIePVwAqqxFDHFAxNHqInlJGw5QHNTm3mbEgnfAqEHbI_S3OuuFL11GzKaRvOCT3x1HbuzBAhWNb_8R6znC7libgDocYGa0fBgRWN7VSYiHktIkkpNW38Ywfn8glq4_ad9u7-TRhd4B-4x4YZMNX68dW0QqdeXgeoXiuSa8nKSDN0pic_boE984KHjv4aHDrC7_TlBMIQpKninKtr8ApS1_Ym78L6hmS9_f7x4cobsfwSLDYyzKB33hcQgrwFPaRdOZPcVttpi-yl3ch2S2NdJlZBSgWDqjhNbroKpefMqgz75VELCZmmoZYMH8okdbEI6Xl7IYwnw3sjiGRgufUsbBlvNqNj6xq0mDuMxZnBZFn1oiDynPLbhXeKoSW39Pn6ugEcLYE6Bcq7bFI6T_4MjSNf3C08T1-KSE91P0jigkMAe394yExX0LZbNDYzizYDYSQFO79WWKc5QzDWK8jEaZ1z5y0mZNsX-0XERX1iB78N_Hg98NCPgA6lLzIGE5sWCOu4HVpzOoGBVLDWI2LsaEHbSGbf1BlXf-yekwiVhGnFlOMwkbe72K8FuNjlWl2kWUggY5nOG7nYsqkWORCN_70bvBYMK3XViN4tt4v8bZIQqu_zKQRhgXz_Q9vtNTvap5phUDED9O6K8qPGVrtw0Aj4ImLjdY9U99Zzy-xJxRo6Is-RNQpq6Twtx0nuX7lZxLp1uCOsACML6QudG9FEIvqWyHtcJACi0ViMH-t7yIv2SLIn0TzE-CkKxKGE8q4869r9vh6aB6kWGUS1LTAu0dRCXvwAq-UziwtciQ629lDjtB3aV-SAki8kaHPE_-1IbVZFmU4bFiYt_nQsgeLqApfojh4rBcqG-kDg3Wr37wY7apBrWFGEQLvc6QJakjq5B9vRAfZtk1zizjdhmc1zSHdC2snCWcZo8pyLt9vI-CO69jHyiwkMQuhgQJlib0cAFt3c9BFClJxR9X-kZqntNpArrA1bb9a_jtSvWCMoNqBnJyAZDHvcDZjM1tFZ0q1vsWsH8NGhsJ-dnduQXosL-RRE-h7vBJASJMd7_vS9iWMwhNAeusBn5M2Wh44wEeCdSavjW_N9S6vsVHio7GyhHfsivip_UVKXCeB0WwMIDzkq7aNkNDEIRxu8pxebcnf35rYu5Yxso2bMILK0CMOqtRSXEI5mtXt1REJC0jEqRu6QFRKtXAakd0xv-Ubm6xCuudSAkrZMzIE-7opKeXeBwh0UWnhXpW9dK9DRN8vBP18W8z3misbPrsq8fSwoaCnU5v0MNcb4QnFToZjSW0I5ps5j0AGl2PUQXvu37CmHMcmOUhhnpNIkE7ZhIW2HvHGH6VjNtyxOEQIoL0ePMpFl-U9JiT-lusuFE15nX1whQtR7vuSlmfdSsm4s4ENe-A4D2WBbsR9ij_stNB9_mtAhwB9PRrlBhPsuIbdeMPtzYoEnR4h0zGJD9bq_CdqdvYvuV6yJGpSwSmh8lg-GYUjL9fdpLQGnZ8DtIVrQNK-kLcYjEFWlFrubcvLbwVpB_3bAm6tizJG79ZWYEzfmUtsQxgZ6tD9xMvhnQytCFTpYBu7SOhtraam2_R_PY5ewEUEaP08LMNIVpa9cIQ4_XQnnXZwlBnUv-b0LI_LKZmjf4hcueBtOGuCbk1mAM1-gEwvMLtR2p3L2aJ_hPQ5mbohKf0DDjyEoURzrC4EhNEqNNrVhhMO3zjoYlUZA7pJFVjf4CVBGpIh3y31ZXfwx5pixbQVbwdj_bAx__UuqfzVqvOVk4HWwYQ1YPigM1e4JdomjajCb_EDwquKWqJY-VYBWLo2kpxekHt-Af4NrotndTG23K0Vrk2rY93r_ipnQ97xXviKjgaQ3nfBIL4MPG5r8mrJ2QvVyMRNoRqXMjZbvTBHWAtfX-KkqyqPR9GEhT5wgiLBX4FAYt4cJv81Hr0OtRSu8Dkj036t_BKhupZOucVeA0oQuT3JXfDev2WYa90Ah_MCN3o5m3WxcES4S44UmA-IJr-GAMqKXfEReKL8tAdoeB2eNVsXbNxRJkH3_u90t4-A_2uT-hc5MoJtSJ4GD2tyCbLN5PuQOTvdSsc1YU02AZ8FNtMcKstLc_mcOG0juMAE5xIKm0RG9GkKblpgCGYs8_TeTf0SaLjq0-Jxfk8LH2qv14C-eto66K4HNCgPmySD4vX-Yfc0ZQ4zAhBNwxho3TI0OkDE49WLxf3eIUlejXTIK98Fjh_hlQ7RH1fB95aJRlsAq-OShgZ6yWktNJMJAoyGCRNjJukA-w21J-DzLh8t-2IZOgdcA3zfpGSogPzRAMSQmpu0rrt4QQ2CI_Jt-3hzfbJgOl16w6XHjQzsyvS34fAT8vMKr5yO1ebbE0CyfX77yB8g-PIASxHjtliFe-NjqyNfcpKXF2epCc9BU8PZNLkAKlOYwoTMS-HXpbSvTXRHLlI6JG4wytasUaDO5aDD_iOhgflMMD_8aeKVyS3wMoXG0BCxn0huriNwtp7mX2LWfA7o9es0RpH6id3aBUCGw5uGFkTMG8rM2psnGwnxxX1prSptXs-t9AmGiSgRBjouZL46J3m9NJazIVM8FN_HNHAgemNRgTODdpJmufuHPecLyEvqYQ-oXnX9-ez_7H2a3lZRTKin-FtPhbeR-nDjS2rcC8caCrFCqdaXn0akIviiOuP0GJYzjbPOMfWsydrGR658NteZc4HplnotivC6KU4LjVlGHOPmOT2Rd_PdS-tPZLJJ21zwKoY-8QjjTSrbLi7mSa8EHIpKM-TXcWcr4nw7HECUhrkzT-GrvxZHa_60NfB8N3CsOFAMgOl5UARC0zLNVh9qi2znOukZ3pc19EnU5lu_u9KtVEuVBeEa-w0eXM6K99HFhuk2oW-ccOIKGykDUNep7vCtgY-Xb21u51oWqcMonXtXVJp2JrIJFNUsk-ey6D-HXnQkckZm-p0MWPrYjD1rxZI_Y4CuGJwRpfnvnCEMCWup9YhqTqvyJuxsUbOGnjlYM1v6MldCGuNzjH0hfdJ6FBCgfERVaMqANtmaPWEjL2JMc1HAkRPN_I6lTvDq9DrGVUSoqqEd3Xts7NNuAEfep9fZgPO1_sqWwEAMM_RtsVKGFQTAQt6OeRy41C8qblfaZWmtCHY14jp98fmYSLQg7zKCT-vk1ThP8_f3p1W4YYRrFn8zuS06RFyLqik2RAJ56o9QMaPQfujbv6S_1Tj3-ZXxRKFIhqT6sqmIdK91iVS1Ufy2rWcRhOpda_FgmatltG0lFSNCboZZuvUraHVC4iS2fx2WH63TprD-poPicgBSlbKA0Bi3FsBQCVV07vx5NExnC8Ql-3Fw-gm4b_KVMKPAXeEUYvmqS8hauiSFwdd868_R6xrab54TEdyVtC5sAOylqdBfpHNqsEhbpX4dhCoYzO0WyjrJQVqnMYxRSQikp7CNnJTi_gSbCVbeMregQEKIVuFBJa_sMX4_Pj1E8oLEHuhwwFgrH8h6vYhlBZvcylppy00HQ-1DZIyogDfgeAhTIfAAQsqeX7WwE39DthdHjQjsV3Yk7x1LnAFqYte5YiE7bLjC1g8hRwPGQt7A_EvpdlN_JnPMdUm7BQ5yCDRo9yo4Pj-XcxCmsA9UHK6GZ5tB50ZiT7HBfPhZbXAe8MrOJG8O1SRDTu_fhl-DHXrTMG3EslzRfqhJPsxZRVx3C25cN6oDDsh9cdFjUOmhIJYTeBo123UAAE5sVLV8uYuufsz7B6wMldH5a5PuC0NVdKOx7BOfRFkdZfz63saFg8HVXBjV-g37tP87RJsFajGX3jo5tqXW8enelP47WVD_sbrLQKyJnJq7TNakN2OsAj7U-VPwVpZZn-Qsos9FrD0Wbgw6Zee_dZ5o4Zy1VL7hYIrVmkI2hCJcoASRY6beYsqYafHIonmiU9bsgOzjBno-49258IWMPuivYg9BWjs4igF8QIMvg3gwXSF1GyFXmcGmAGPNk61czSmUJnYmICqjeVbOuAAj85WAR8kVBDZDtMwjCbULoGh5fsAdItXXM6E6p9QdXjQvFx1rQBGGTRuZxvftcauO0I3WaYOZbFWdyWbEgYllcfuTzJfyRSkNbbaEn6Fxn4BANeC4PJM8BuUafSYFCN0VS3Yk_dJGP2JoCPS200H4jR19us_96D__-MzPQNjutzUYEI1bXGihUj8n7NAeP4kvJ9sDx2wjZ3hkgyLODoHFS_qt1y1h1VvhHOicQNv3x99wRTnutFp6r0X5BPRqjXFHW818qxJ2iah9QOeAQ3_7Qv-vNRlZw82LHsd5-__ypCZZI4J7n3fZRsJ_-6YmfZqfpbqCIQm70z0_9DETdKYZsRJWfpBaCNZq8RAhjGMjMz7n2YYmDhdlH_jGbo8L8Uh-ALamjJV8ZGZJlOYmlQ1iy-0U8BCmLbcuobpsiJM8ug-PwP3cofAhFWaTjySAm191LGSSxQyvEDUAR1H76KBp7qZ0ArV7chq08n25jnlgV1HrJo5P7znvVdqEbzXbj9MbUv73gI8XfAO17NogmLrgbDeVVsNhzZJ0daSwnz_-4Yb42jkXtLMaqANAGOX6yItMeHXyr4Fz0NClwtNdjlgk6n5wJhOsnd48Bv_uPf2SrG9-1GZoPTYYjCDysjFSZr_3vx7ZZUD9qEHG_lk1_xqzyByUWdqXYOkS8kiMz9mcbGGwoJMdoT-EYX0qyTUSwWSeJbdXXWl4hMiQ1jiV8T609kfmphBATCPWwT777K6BDX2v72kvJo-98q3-_dxuwj17RPjb96eEVr-wfASq5FmNg6OPowkMzeIyM5YdgByqI9QsFGxfR3g6RHW8DZBpPiIw5NM9_2KbN_62XJ7wJnaNLPYqBcb1YFW0gzyzrK4TKTYlnRkpujnWA1MJqQ4DYLT_Yc3J7Hck_GLg8vgWPCU_rUKaV6rPBAblxc_OHHUyHIcKmfDU0jRaEWsd1mYiGAK3QLbjwO9WgtMXaL5-2daJtQXiw34qE9hyebRF45XlN0YZF0C0S9Uibg9T11eemfIBT4z13jP96UkBQzkKOZcXcYedLMFX-DnZRWPcpkbfpw1ojIV5D8O4q7CWuvJ-XC8dq4SS-3uwDsk9fnIILKwtW1SqRkdgnOAsHj8jsKiyOjJr0xnRxhrtvSIK33DNVQ5zHmmcUJ6vkoINO7l_p0z5MTXEod7G_mExjAlzEpbvgzhzqe0l2ujPerr98ZXNXQtZ-GPvM9oCubOAS4e_uj6SGXu5UMfbG1GtfUjacNvxySrbrX2YZ4JV1jcVqqos3VSf5KdgJvszxM2fYLcFAUo=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": {
+          "image_search_queries": null,
+          "grounding_chunks": [
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "wikipedia.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqrLEu95pPWWeLQGng3xd-IrRCG3L0jo6PXiq6xOP485VdU4sdkWJXtXKCMfM5VkLGvsoUCZfUou3gwxvWQiEBkeSIfB-xdr00H-hn297FSar11ymD6kZS0EoiAIPaDdBPh_zH5C-fyInjuNcl9Uzk4XIgso4PAAE="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "calculator.net",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLQlIg3tq9XfbgeNuJQWVKUXCcinthjJDclnL25r8oaP_NCps9TMcTwhvDIhsCs6KhGRGuePgk8W06cda-OhC8Y0RYzDvQJX1hOUHj1L0jheOeNAVoe8ASITBbW-tIPGUQHlqULQ=="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "laep.org",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6K9ipXbJWYkA8Gae5m97S0QC3Q25gHHeu3oMIpZMNflABkJqbN3lJIamGEtjKQfydOok3ZneVMT4TsvzrOhjd3rxyy5VzUgblqreSHok3LAC1u-lbtlBhdKc877WQ_U8Dx8IdhGnUSDkYc0_HEB6NOS8vf1QCTLk6Qp5eofo="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "gpacalculator.net",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHsqlz_zEge78DkRrA57TPfJcN8kz9zXy5WCeRSVHMyMNgALuYNetbZt0To1EawtQnMw0X-irRaf1xxprfenRT26i-t6_vqPFVfjU9sztczfyGO_aGmBk8miO_cmicY4bTcUyn0lQ="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "hws.edu",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPCMH9qlgI1z5ZMzYgKvG35-8gHgHXHq7hutdeRz67tcsFJ3v_9Q9jbZHO5NUjbxqQ7ovBjJ357shAHpUtxSryH3l_Im08dE2Q64HW2P9imQVBNLN3Nei4E9w="
+              }
+            },
+            {
+              "image": null,
+              "maps": null,
+              "retrieved_context": null,
+              "web": {
+                "domain": null,
+                "title": "bryanhealthcollege.edu",
+                "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL26OgNFFweiF_zN-Q-TG_lIEoZ4XWRlUYSwHOWZUeisXp3JmwZgQ9WaLzK4l_4kq51UySHFVV1TJ3VPcNM2iNvuCr1y-27JtvrcP14RgapSJiw5H0uspscTy8ItVfXnJhVtQiVXJeRX40"
+              }
+            }
+          ],
+          "grounding_supports": [
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                0
+              ],
+              "segment": {
+                "start_index": 550,
+                "end_index": 698,
+                "part_index": null,
+                "text": "Letter Grade to Percentage Chart\nIf you have a letter grade and want to know its typical percentage equivalent (using the standard US grading scale)"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                1
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 820,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 826,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 850,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 856,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 881,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 887,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 912,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 918,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 942,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 948,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 973,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 979,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                2
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1004,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1010,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1034,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1040,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1065,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1071,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1096,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1102,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1126,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                3
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1132,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1157,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0 |\n| **D-** | 60% \u2013 62%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                4
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1185,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0 |\n| **D-** | 60% \u2013 62% | 0.7 |\n| **F** | Below 60%"
+              },
+              "rendered_parts": null
+            },
+            {
+              "confidence_scores": null,
+              "grounding_chunk_indices": [
+                5
+              ],
+              "segment": {
+                "start_index": 701,
+                "end_index": 1191,
+                "part_index": null,
+                "text": "| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0 |\n| **D-** | 60% \u2013 62% | 0.7 |\n| **F** | Below 60% | 0.0"
+              },
+              "rendered_parts": null
+            }
+          ],
+          "retrieval_metadata": null,
+          "search_entry_point": {
+            "rendered_content": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=letter+grade+to+percentage+scale&client=app-vertex-grounding&safesearch=active\">letter grade to percentage scale</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=GPA+to+percentage+formula&client=app-vertex-grounding&safesearch=active\">GPA to percentage formula</a>\n  </div>\n</div>",
+            "sdk_blob": null
+          },
+          "web_search_queries": [
+            "letter grade to percentage scale",
+            "GPA to percentage formula"
+          ],
+          "google_maps_widget_context_token": null,
+          "retrieval_queries": null,
+          "source_flagging_uris": null
+        },
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "on0lar7XH6z8jrEP0eDr0Aw",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 3680,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 5,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 5
+        }
+      ],
+      "thoughts_token_count": 4854,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 8539,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "To convert a grade to a percentage, the method depends on whether you are converting **test/assignment points**, a **letter grade**, or a **GPA (Grade Point Average)**. \n\n---\n\n### 1. Test Score to Percentage (Points)\nIf you have a specific score (e.g., you got 18 out of 25), use this standard formula:\n\n$$\\text{Percentage} = \\left( \\frac{\\text{Points Earned}}{\\text{Total Possible Points}} \\right) \\times 100$$\n\n*   **Example:** If you scored **18** out of **25**:\n    $$\\left(\\frac{18}{25}\\right) \\times 100 = 0.72 \\times 100 = 72\\%$$\n\n---\n\n### 2. Letter Grade to Percentage Chart\nIf you have a letter grade and want to know its typical percentage equivalent (using the standard US grading scale):\n\n| Letter Grade | Typical Percentage Range | GPA Equivalent (4.0 Scale) |\n| :--- | :--- | :--- |\n| **A+** | 97% \u2013 100% | 4.0 |\n| **A** | 93% \u2013 96% | 4.0 |\n| **A-** | 90% \u2013 92% | 3.7 |\n| **B+** | 87% \u2013 89% | 3.3 |\n| **B** | 83% \u2013 86% | 3.0 |\n| **B-** | 80% \u2013 82% | 2.7 |\n| **C+** | 77% \u2013 79% | 2.3 |\n| **C** | 73% \u2013 76% | 2.0 |\n| **C-** | 70% \u2013 72% | 1.7 |\n| **D+** | 67% \u2013 69% | 1.3 |\n| **D** | 63% \u2013 66% | 1.0 |\n| **D-** | 60% \u2013 62% | 0.7 |\n| **F** | Below 60% | 0.0 |\n\n---\n\n### 3. GPA to Percentage (4.0 Scale)\nBecause GPA is not perfectly linear, there are two common formulas used to convert a 4.0 GPA to a percentage:\n\n#### Formula A: Strict Linear Ratio (Most common for mathematical conversions)\n$$\\text{Percentage} = \\text{GPA} \\times 25$$\n*   *Example:* If your GPA is **3.2**:  \n    $$3.2 \\times 25 = 80\\%$$\n\n#### Formula B: Adjusted Scale (Standard US High School Mapping)\nThis formula is often used because a $2.0$ GPA typically maps to a passing $C$ ($60\\%\\text{--}70\\%$) rather than a failing $50\\%$. \n$$\\text{Percentage} = (\\text{GPA} \\times 20) + 20$$\n*   *Example:* If your GPA is **3.0** (a standard 'B' grade):  \n    $$(3.0 \\times 20) + 20 = 80\\%$$\n\n---\n\n### \ud83d\udcbb Want an Interactive Calculator?\nYou can build your own interactive desktop/phone calculator instantly. \n\n**How to use it:**\n1. Copy the code block below.\n2. Open a text editor (like Notepad, TextEdit, or VS Code), paste the code, and save the file as `calculator.html`.\n3. Double-click the saved file to open it in any web browser!\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Grade to Percentage Calculator</title>\n    <style>\n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            background-color: #f4f6f9;\n            color: #333;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            min-height: 100vh;\n            margin: 0;\n            padding: 20px;\n        }\n        .calculator-card {\n            background: #fff;\n            padding: 30px;\n            border-radius: 12px;\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n            width: 100%;\n            max-width: 480px;\n        }\n        h2 {\n            text-align: center;\n            margin-top: 0;\n            color: #2c3e50;\n        }\n        .tabs {\n            display: flex;\n            justify-content: space-around;\n            margin-bottom: 20px;\n            border-bottom: 2px solid #ddd;\n        }\n        .tab-btn {\n            background: none;\n            border: none;\n            padding: 10px 15px;\n            font-size: 14px;\n            font-weight: 600;\n            cursor: pointer;\n            color: #7f8c8d;\n            border-bottom: 3px solid transparent;\n            transition: all 0.3s;\n        }\n        .tab-btn.active {\n            color: #3498db;\n            border-bottom-color: #3498db;\n        }\n        .tab-content {\n            display: none;\n        }\n        .tab-content.active {\n            display: block;\n        }\n        .input-group {\n            margin-bottom: 15px;\n        }\n        label {\n            display: block;\n            font-weight: 600;\n            margin-bottom: 5px;\n            color: #34495e;\n        }\n        input, select {\n            width: 100%;\n            padding: 10px;\n            border: 1px solid #ccc;\n            border-radius: 6px;\n            box-sizing: border-box;\n            font-size: 16px;\n        }\n        button.calc-btn {\n            width: 100%;\n            padding: 12px;\n            background-color: #3498db;\n            color: white;\n            border: none;\n            border-radius: 6px;\n            font-size: 16px;\n            font-weight: bold;\n            cursor: pointer;\n            transition: background 0.2s;\n        }\n        button.calc-btn:hover {\n            background-color: #2980b9;\n        }\n        .result-box {\n            margin-top: 20px;\n            padding: 15px;\n            background-color: #e8f4fd;\n            border-left: 5px solid #3498db;\n            border-radius: 4px;\n            font-size: 18px;\n            font-weight: bold;\n            color: #2c3e50;\n            text-align: center;\n            display: none;\n        }\n    </style>\n</head>\n<body>\n\n<div class=\"calculator-card\">\n    <h2>Grade Converter</h2>\n    \n    <div class=\"tabs\">\n        <button class=\"tab-btn active\" onclick=\"switchTab('score-tab', this)\">Score / Points</button>\n        <button class=\"tab-btn\" onclick=\"switchTab('letter-tab', this)\">Letter Grade</button>\n        <button class=\"tab-btn\" onclick=\"switchTab('gpa-tab', this)\">GPA (4.0)</button>\n    </div>\n\n    <!-- Score Tab -->\n    <div id=\"score-tab\" class=\"tab-content active\">\n        <div class=\"input-group\">\n            <label for=\"earned\">Points Earned</label>\n            <input type=\"number\" id=\"earned\" placeholder=\"e.g. 18\" step=\"any\">\n        </div>\n        <div class=\"input-group\">\n            <label for=\"total\">Total Possible Points</label>\n            <input type=\"number\" id=\"total\" placeholder=\"e.g. 25\" step=\"any\">\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateScore()\">Calculate Percentage</button>\n        <div id=\"score-result\" class=\"result-box\"></div>\n    </div>\n\n    <!-- Letter Grade Tab -->\n    <div id=\"letter-tab\" class=\"tab-content\">\n        <div class=\"input-group\">\n            <label for=\"letter\">Select Letter Grade</label>\n            <select id=\"letter\">\n                <option value=\"98\">A+ (97% - 100%)</option>\n                <option value=\"95\">A (93% - 96%)</option>\n                <option value=\"91\">A- (90% - 92%)</option>\n                <option value=\"88\">B+ (87% - 89%)</option>\n                <option value=\"85\">B (83% - 86%)</option>\n                <option value=\"81\">B- (80% - 82%)</option>\n                <option value=\"78\">C+ (77% - 79%)</option>\n                <option value=\"75\">C (73% - 76%)</option>\n                <option value=\"71\">C- (70% - 72%)</option>\n                <option value=\"68\">D+ (67% - 69%)</option>\n                <option value=\"65\">D (63% - 66%)</option>\n                <option value=\"61\">D- (60% - 62%)</option>\n                <option value=\"50\">F (Below 60%)</option>\n            </select>\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateLetter()\">Convert to Percentage</button>\n        <div id=\"letter-result\" class=\"result-box\"></div>\n    </div>\n\n    <!-- GPA Tab -->\n    <div id=\"gpa-tab\" class=\"tab-content\">\n        <div class=\"input-group\">\n            <label for=\"gpa\">Enter GPA (out of 4.0)</label>\n            <input type=\"number\" id=\"gpa\" placeholder=\"e.g. 3.7\" min=\"0\" max=\"4.0\" step=\"0.01\">\n        </div>\n        <button class=\"calc-btn\" onclick=\"calculateGPA()\">Convert to Percentage</button>\n        <div id=\"gpa-result\" class=\"result-box\"></div>\n    </div>\n</div>\n\n<script>\n    function switchTab(tabId, btn) {\n        const contents = document.querySelectorAll('.tab-content');\n        contents.forEach(content => content.classList.remove('active'));\n        \n        const buttons = document.querySelectorAll('.tab-btn');\n        buttons.forEach(b => b.classList.remove('active'));\n        \n        document.getElementById(tabId).classList.add('active');\n        btn.classList.add('active');\n    }\n\n    function calculateScore() {\n        const earned = parseFloat(document.getElementById('earned').value);\n        const total = parseFloat(document.getElementById('total').value);\n        const resultDiv = document.getElementById('score-result');\n        \n        if (isNaN(earned) || isNaN(total) || total <= 0) {\n            resultDiv.style.display = 'block';\n            resultDiv.style.backgroundColor = '#fde8e8';\n            resultDiv.style.borderLeftColor = '#f53b57';\n            resultDiv.style.color = '#c0392b';\n            resultDiv.innerText = \"Please enter valid points.\";\n            return;\n        }\n        \n        const percentage = ((earned / total) * 100).toFixed(2);\n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerText = `${earned} / ${total} = ${percentage}%`;\n    }\n\n    function calculateLetter() {\n        const select = document.getElementById('letter');\n        const percentage = select.value;\n        const text = select.options[select.selectedIndex].text;\n        const resultDiv = document.getElementById('letter-result');\n        \n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerText = `Typical Range for ${text.split(' ')[0]} is approx. ${percentage}%`;\n    }\n\n    function calculateGPA() {\n        const gpa = parseFloat(document.getElementById('gpa').value);\n        const resultDiv = document.getElementById('gpa-result');\n        \n        if (isNaN(gpa) || gpa < 0 || gpa > 4.0) {\n            resultDiv.style.display = 'block';\n            resultDiv.style.backgroundColor = '#fde8e8';\n            resultDiv.style.borderLeftColor = '#f53b57';\n            resultDiv.style.color = '#c0392b';\n            resultDiv.innerText = \"Please enter a valid GPA between 0.0 and 4.0.\";\n            return;\n        }\n        \n        const percentageLinear = (gpa * 25).toFixed(1);\n        const percentageStandard = ((gpa * 20) + 20).toFixed(1);\n        \n        resultDiv.style.display = 'block';\n        resultDiv.style.backgroundColor = '#e8f4fd';\n        resultDiv.style.borderLeftColor = '#3498db';\n        resultDiv.style.color = '#2c3e50';\n        resultDiv.innerHTML = `\n            <strong>Strict Ratio:</strong> ${percentageLinear}%<br>\n            <span style=\"font-size:13px; font-weight:normal; color:#555;\">(GPA \u00d7 25)</span><br>\n            <strong style=\"margin-top:5px; display:inline-block;\">Common HS Scale:</strong> ${percentageStandard}%<br>\n            <span style=\"font-size:13px; font-weight:normal; color:#555;\">((GPA \u00d7 20) + 20)</span>\n        `;\n    }\n</script>\n\n</body>\n</html>\n```",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 3680,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 5,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 5
+      }
+    ],
+    "thoughts_token_count": 4854,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 8539,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_3002b203ab970192",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T22:30:08.379891+00:00",
+  "query_text": "How do green screens work and why do they choose green or other colors",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a249f564f37ea969c3876e9",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how green screens work and why green (or other colors) are chosen:\n\n## How Green Screens Work\n\nGreen screen technology is officially called **chroma keying**. Here's the step-by-step process:\n\n1. **Filming**: A subject is filmed in front of a solid-colored backdrop (typically green)\n\n2. **Color Isolation**: In post-production, specialized software or hardware called a **chroma keyer** analyzes the video's chrominance (color) data. It identifies all pixels that fall within a specific range of the target color\u2014in this case, green\n\n3. **Transparency Creation**: The software makes all pixels matching that green color transparent, effectively \"keying out\" the background\n\n4. **Background Replacement**: The transparent areas are then filled with a new background image or video, making it appear as though the subject is in a completely different environment\n\nThe key technical requirement is that the background must be **flat, uniform, and evenly lit**\u2014any shadows, wrinkles, or variations in color can cause problems with the keying process.\n\n## Why Green? (And Sometimes Blue)\n\n### 1. **Distance from Human Skin Tones**\nThe most important reason green is chosen is that **people are not green**. From a color science perspective, human skin tones are essentially orange, making green the color farthest away from skin on the color wheel. This minimizes the risk of accidentally making parts of a person transparent during keying.\n\n### 2. **High Luminance**\nGreen has a **higher luminance** (brightness) than blue\u2014it reflects more light. This means:\n- Green screens require **less lighting** to achieve an evenly lit background\n- The brighter color produces cleaner edges and less noise in the final composite\n- It's ideal for daytime scenes when you want shots to look bright\n\n### 3. **Camera Sensor Sensitivity**\nDigital cameras have more **green-sensitive pixels** than red or blue ones (following the Bayer pattern sensor design). This makes green easier to capture cleanly with less digital noise, resulting in sharper keying.\n\n### 4. **Less Common in Clothing**\nWhile people do wear green, it's generally **less common in everyday clothing and accessories** than blue, reducing the chance of wardrobe conflicts.\n\n## When Blue Is Used Instead\n\nBlue screens were actually the **original choice** when chroma keying was first developed in the 1940s. Blue is still preferred in certain situations:\n\n| Situation | Why Blue Works Better |\n|-----------|----------------------|\n| **Night/dark scenes** | Lower luminance reflects less light, reducing color spill |\n| **Actor wears green** | Avoids making their clothing transparent |\n| **Blonde hair** | Blue provides stronger contrast, reducing edge issues |\n| **Outdoor scenes with grass/trees** | Natural green environment would interfere |\n| **Close-up shots** | Less color spill around edges of subjects |\n\n## Other Colors That Have Been Used\n\nWhile green and blue are standard, chroma keying can technically work with **any solid color**:\n\n- **Magenta** \u2013 occasionally used for specialized applications\n- **White screens with sodium lamps** \u2013 used for classic films like *Mary Poppins* (1964)\n- **Custom colors** \u2013 modern software allows keying out any color as needed\n\nThe fundamental principle remains the same: choose a color that **doesn't appear in your subject** and can be cleanly isolated.\n\nSources:\n1. https://theconversation.com/ive-always-wondered-why-is-a-green-screen-green-92989\n2. https://www.sugarstudios.co.uk/greenscreen-studio/how-greenscreens-work\n3. https://borisfx.com/blog/davinci-resolve-chroma-key-green-screen-tutorial/\n4. https://www.cineviewstudios.com/why-green-screen-is-green\n5. https://documents.blackmagicdesign.com/UserManuals/Fusion17_Manual.pdf?_v=1636009210000\n6. https://pianoinspires.com/wp-content/uploads/2024/03/Clavier-Companion-2018-Volume-10-No.-3-May-June-compressed_compressed.pdf\n7. https://www.avace.com/pdf/Analog%20Way%20EKS500%20User%20Manual.pdf?srsltid=AfmBOoo9pRW7XniSP_6SST6yyfq0puSR6hOcOmodL6kc2rPFka2iBfJp\n8. https://img.ly/docs/cesdk/svelte/filters-and-effects/chroma-key-green-screen-1e3e99/\n9. https://streamlabs.com/content-hub/post/green-screen-101-why-do-you-need-it-and-how-to-use-it-in-talk-studio?srsltid=AfmBOorhRR9l2pTQe3S-RDJ7Sq4vxeQ9L2Jz--72AhxpP01Y6By32DZ3\n10. https://documents.blackmagicdesign.com/UserManuals/Fusion18_Manual.pdf?_v=1702368010000#/\n11. https://s3-us-west-2.amazonaws.com/demco-makerhub-prod/makerhub/pdfs/Chroma%20Keying%20-%20Lesson%203.pdf\n12. https://www.finchley.co.uk/finchley-learning/the-science-behind-green-screen-technology\n13. https://www.linkedin.com/advice/0/how-can-you-use-green-screen-technology-create-innovative-l1jke\n14. https://www.adobe.com/creativecloud/video/discover/blue-screen-vs-green-screen.html",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780784984,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 1165,
+        "prompt_tokens": 9002,
+        "total_tokens": 10167,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How do green screens work and why do they choose green or other colors"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a249f5551ad",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"434a923b6a249f55680f160001eb4e85\"},\"usage\":{\"total_tokens\":8845}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a249f5551ad",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"434a923b6a249f55680f160001eb4e85\"},\"usage\":{\"total_tokens\":8845}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"434a923b6a249f55680f160001eb4e85\"},\"usage\":{\"total_tokens\":8845}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how green screens work and why green (or other colors) are chosen:\n\n## How Green Screens Work\n\nGreen screen technology is officially called **chroma keying**. Here's the step-by-step process:\n\n1. **Filming**: A subject is filmed in front of a solid-colored backdrop (typically green)\n\n2. **Color Isolation**: In post-production, specialized software or hardware called a **chroma keyer** analyzes the video's chrominance (color) data. It identifies all pixels that fall within a specific range of the target color\u2014in this case, green\n\n3. **Transparency Creation**: The software makes all pixels matching that green color transparent, effectively \"keying out\" the background\n\n4. **Background Replacement**: The transparent areas are then filled with a new background image or video, making it appear as though the subject is in a completely different environment\n\nThe key technical requirement is that the background must be **flat, uniform, and evenly lit**\u2014any shadows, wrinkles, or variations in color can cause problems with the keying process.\n\n## Why Green? (And Sometimes Blue)\n\n### 1. **Distance from Human Skin Tones**\nThe most important reason green is chosen is that **people are not green**. From a color science perspective, human skin tones are essentially orange, making green the color farthest away from skin on the color wheel. This minimizes the risk of accidentally making parts of a person transparent during keying.\n\n### 2. **High Luminance**\nGreen has a **higher luminance** (brightness) than blue\u2014it reflects more light. This means:\n- Green screens require **less lighting** to achieve an evenly lit background\n- The brighter color produces cleaner edges and less noise in the final composite\n- It's ideal for daytime scenes when you want shots to look bright\n\n### 3. **Camera Sensor Sensitivity**\nDigital cameras have more **green-sensitive pixels** than red or blue ones (following the Bayer pattern sensor design). This makes green easier to capture cleanly with less digital noise, resulting in sharper keying.\n\n### 4. **Less Common in Clothing**\nWhile people do wear green, it's generally **less common in everyday clothing and accessories** than blue, reducing the chance of wardrobe conflicts.\n\n## When Blue Is Used Instead\n\nBlue screens were actually the **original choice** when chroma keying was first developed in the 1940s. Blue is still preferred in certain situations:\n\n| Situation | Why Blue Works Better |\n|-----------|----------------------|\n| **Night/dark scenes** | Lower luminance reflects less light, reducing color spill |\n| **Actor wears green** | Avoids making their clothing transparent |\n| **Blonde hair** | Blue provides stronger contrast, reducing edge issues |\n| **Outdoor scenes with grass/trees** | Natural green environment would interfere |\n| **Close-up shots** | Less color spill around edges of subjects |\n\n## Other Colors That Have Been Used\n\nWhile green and blue are standard, chroma keying can technically work with **any solid color**:\n\n- **Magenta** \u2013 occasionally used for specialized applications\n- **White screens with sodium lamps** \u2013 used for classic films like *Mary Poppins* (1964)\n- **Custom colors** \u2013 modern software allows keying out any color as needed\n\nThe fundamental principle remains the same: choose a color that **doesn't appear in your subject** and can be cleanly isolated.\n\nSources:\n1. https://theconversation.com/ive-always-wondered-why-is-a-green-screen-green-92989\n2. https://www.sugarstudios.co.uk/greenscreen-studio/how-greenscreens-work\n3. https://borisfx.com/blog/davinci-resolve-chroma-key-green-screen-tutorial/\n4. https://www.cineviewstudios.com/why-green-screen-is-green\n5. https://documents.blackmagicdesign.com/UserManuals/Fusion17_Manual.pdf?_v=1636009210000\n6. https://pianoinspires.com/wp-content/uploads/2024/03/Clavier-Companion-2018-Volume-10-No.-3-May-June-compressed_compressed.pdf\n7. https://www.avace.com/pdf/Analog%20Way%20EKS500%20User%20Manual.pdf?srsltid=AfmBOoo9pRW7XniSP_6SST6yyfq0puSR6hOcOmodL6kc2rPFka2iBfJp\n8. https://img.ly/docs/cesdk/svelte/filters-and-effects/chroma-key-green-screen-1e3e99/\n9. https://streamlabs.com/content-hub/post/green-screen-101-why-do-you-need-it-and-how-to-use-it-in-talk-studio?srsltid=AfmBOorhRR9l2pTQe3S-RDJ7Sq4vxeQ9L2Jz--72AhxpP01Y6By32DZ3\n10. https://documents.blackmagicdesign.com/UserManuals/Fusion18_Manual.pdf?_v=1702368010000#/\n11. https://s3-us-west-2.amazonaws.com/demco-makerhub-prod/makerhub/pdfs/Chroma%20Keying%20-%20Lesson%203.pdf\n12. https://www.finchley.co.uk/finchley-learning/the-science-behind-green-screen-technology\n13. https://www.linkedin.com/advice/0/how-can-you-use-green-screen-technology-create-innovative-l1jke\n14. https://www.adobe.com/creativecloud/video/discover/blue-screen-vs-green-screen.html",
+  "usage": {
+    "completion_tokens": 1165,
+    "prompt_tokens": 9002,
+    "total_tokens": 10167,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

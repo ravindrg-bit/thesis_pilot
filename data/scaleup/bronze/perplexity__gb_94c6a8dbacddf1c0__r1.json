@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 1,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:18.135837+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "23efd57f-6e4b-49b0-885f-f97175498ff8",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators get square roots so accurately because they use **iterative numerical methods** that rapidly refine an estimate until it is correct to the machine\u2019s precision, rather than trying to \u201cguess\u201d the root directly.[1][2] One classic method is **Newton\u2019s method** (also called the Babylonian method for square roots), which repeatedly applies \\(x_{n+1}=\\tfrac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right)\\); each step typically doubles the number of correct digits once the estimate is close enough.[1][2][4]\n\nIn practice, a device may use one of several approaches:\n\n- **Newton/Babylonian iteration**: start with an initial guess, then average that guess with \\(S\\) divided by the guess to move closer to \\(\\sqrt{S}\\).[1][2]\n- **Digit-by-digit methods**: similar to long division, these build the root one digit at a time, ensuring each chosen digit is correct before moving on.[1]\n- **Logarithm-based methods**: some systems compute \\(\\sqrt{S}\\) by using the identity \\(\\sqrt{S}=e^{\\frac{1}{2}\\ln S}\\), then approximating \\(\\ln\\) and \\(e^x\\) numerically.[3]\n\nThe reason this works so well is mathematical: near the true root, the function \\(x^2\\) is smooth, so a tangent-line approximation is very accurate locally, and Newton\u2019s method exploits that fact.[4] Modern hardware and software then stop when the result is within the required rounding error for the number format being used, so the answer is usually as accurate as the device can represent.[1][3]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914378,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 353,
+      "prompt_tokens": 15,
+      "total_tokens": 368,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00035,
+        "request_cost": 0.005,
+        "total_cost": 0.00537
+      }
+    },
+    "citations": [
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://blogs.sas.com/content/iml/2016/05/16/babylonian-square-roots.html",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "The Babylonian method for finding square roots by hand - SAS Blogs",
+        "url": "https://blogs.sas.com/content/iml/2016/05/16/babylonian-square-roots.html",
+        "date": "2016-05-16",
+        "last_updated": "2026-06-08",
+        "snippet": "Make an initial guess. Guess any positive number x0. \u00b7 Improve the guess. Apply the formula x1 = (x0 + S / x0) / 2. The number x1 is a better\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots\u00a0...",
+        "source": "web"
+      },
+      {
+        "title": "How to Estimate Square Roots in Mental Math",
+        "url": "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+        "last_updated": "2026-05-07",
+        "snippet": "This article describes an easier method for quickly estimating the value of a square root, to about 2\u20135 significant figures.",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "An ancient formula is astoundingly accurate. Why didn't we learn this in school? 0:00 history 2:32 calculations 7:22 sqrt 2 10:19 intuition\u00a0...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators get square roots so accurately because they use **iterative numerical methods** that rapidly refine an estimate until it is correct to the machine\u2019s precision, rather than trying to \u201cguess\u201d the root directly.[1][2] One classic method is **Newton\u2019s method** (also called the Babylonian method for square roots), which repeatedly applies \\(x_{n+1}=\\tfrac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right)\\); each step typically doubles the number of correct digits once the estimate is close enough.[1][2][4]\n\nIn practice, a device may use one of several approaches:\n\n- **Newton/Babylonian iteration**: start with an initial guess, then average that guess with \\(S\\) divided by the guess to move closer to \\(\\sqrt{S}\\).[1][2]\n- **Digit-by-digit methods**: similar to long division, these build the root one digit at a time, ensuring each chosen digit is correct before moving on.[1]\n- **Logarithm-based methods**: some systems compute \\(\\sqrt{S}\\) by using the identity \\(\\sqrt{S}=e^{\\frac{1}{2}\\ln S}\\), then approximating \\(\\ln\\) and \\(e^x\\) numerically.[3]\n\nThe reason this works so well is mathematical: near the true root, the function \\(x^2\\) is smooth, so a tangent-line approximation is very accurate locally, and Newton\u2019s method exploits that fact.[4] Modern hardware and software then stop when the result is within the required rounding error for the number format being used, so the answer is usually as accurate as the device can represent.[1][3]",
+  "usage": {
+    "completion_tokens": 353,
+    "prompt_tokens": 15,
+    "total_tokens": 368,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00035,
+      "request_cost": 0.005,
+      "total_cost": 0.00537
+    }
+  },
+  "run_profile": "scaleup"
+}

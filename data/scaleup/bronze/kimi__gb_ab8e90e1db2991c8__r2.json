@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_ab8e90e1db2991c8",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T02:18:29.997326+00:00",
+  "query_text": "Should corporations be required to report their carbon emissions?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a262664fc120b6d03cf307f",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, there is a clear global trend toward **requiring corporations to report their carbon emissions**, with mandatory reporting already in effect or being implemented in major economies. Here's what the evidence shows:\n\n## Current Mandatory Reporting Requirements\n\n### European Union\nThe EU is leading with the **Corporate Sustainability Reporting Directive (CSRD)**, which requires large and listed companies to disclose detailed greenhouse gas emissions (Scope 1, 2, and 3) if they meet at least two of these criteria:\n- More than 250 employees\n- \u20ac50 million+ in annual turnover\n- \u20ac25 million+ in total assets\n\nCompanies must also create decarbonization plans aligned with EU climate neutrality targets, and reports must be externally audited. Individual member states like France, Germany, Italy, Spain, and others are implementing these requirements through national legislation.\n\n### United Kingdom\nThe UK has multiple mandatory frameworks:\n- **Streamlined Energy and Carbon Reporting (SECR)**: Since 2019, large UK companies (250+ employees, \u00a336M+ turnover) must report energy use and Scope 1-2 emissions\n- **TCFD-aligned disclosures**: Mandatory since April 2022 for large companies, publicly listed companies, and financial institutions\n\n### United States\nThe **SEC has proposed climate disclosure rules** that would require publicly-traded companies to report their total greenhouse gas emissions, with larger companies also needing to account for Scope 3 (supply chain) emissions. Additionally, California's SB 261 requires US companies with over $500 million in revenue doing business in California to publish biennial climate-related financial risk reports.\n\n### Other Jurisdictions\nMandatory reporting also exists or is emerging in Australia, Japan, New Zealand, Singapore, Canada, and China.\n\n## Arguments Supporting Mandatory Reporting\n\n1. **Transparency and accountability**: Standardized reporting prevents greenwashing and allows stakeholders to assess actual environmental performance\n2. **Data accuracy**: Structured methodologies prevent inconsistencies and errors in emissions data\n3. **Risk management**: Helps companies identify climate-related financial risks and opportunities\n4. **Market efficiency**: Investors and purchasers can make informed decisions based on comparable data\n5. **Emissions reduction**: Structured reporting helps businesses identify inefficiencies and reduction opportunities\n\n## Challenges and Considerations\n\n- **Scope 3 complexity**: Supply chain emissions are often the largest source but most difficult to measure accurately\n- **Compliance costs**: Especially burdensome for smaller companies\n- **Evolving standards**: Multiple frameworks (GHG Protocol, TCFD, ESRS, ISSB) create complexity as they develop and converge\n\n## Conclusion\n\nCorporations are **increasingly being required to report carbon emissions** across major economies. The trend is clearly toward mandatory, standardized disclosure rather than voluntary reporting. Whether this should be universal depends on company size thresholds and implementation timelines, but the direction of regulation suggests that comprehensive carbon reporting will become a standard business requirement for large companies globally.\n\nSources:\n1. https://noviqtech.com/articles/key-mandatory-and-voluntary-carbon-reporting-standards-guide\n2. https://nbs.net/the-shift-to-mandatory-carbon-reporting-6-ways-companies-can-prepare/\n3. https://www.novata.com/esg-regulations/\n4. https://www.carbonchain.com/carbon-reporting\n5. https://ecologi.com/resources/blog/do-you-need-to-disclose-your-carbon-emissions\n6. https://www.econos-esg.com/blogs/is-carbon-footprint-mandatory-for-my-company",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780885093,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 727,
+        "prompt_tokens": 6531,
+        "total_tokens": 7258,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Should corporations be required to report their carbon emissions?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a262663a946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"a112910b6a262663680f160001edd20b\"},\"usage\":{\"total_tokens\":6380}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a262663a946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"a112910b6a262663680f160001edd20b\"},\"usage\":{\"total_tokens\":6380}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"a112910b6a262663680f160001edd20b\"},\"usage\":{\"total_tokens\":6380}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, there is a clear global trend toward **requiring corporations to report their carbon emissions**, with mandatory reporting already in effect or being implemented in major economies. Here's what the evidence shows:\n\n## Current Mandatory Reporting Requirements\n\n### European Union\nThe EU is leading with the **Corporate Sustainability Reporting Directive (CSRD)**, which requires large and listed companies to disclose detailed greenhouse gas emissions (Scope 1, 2, and 3) if they meet at least two of these criteria:\n- More than 250 employees\n- \u20ac50 million+ in annual turnover\n- \u20ac25 million+ in total assets\n\nCompanies must also create decarbonization plans aligned with EU climate neutrality targets, and reports must be externally audited. Individual member states like France, Germany, Italy, Spain, and others are implementing these requirements through national legislation.\n\n### United Kingdom\nThe UK has multiple mandatory frameworks:\n- **Streamlined Energy and Carbon Reporting (SECR)**: Since 2019, large UK companies (250+ employees, \u00a336M+ turnover) must report energy use and Scope 1-2 emissions\n- **TCFD-aligned disclosures**: Mandatory since April 2022 for large companies, publicly listed companies, and financial institutions\n\n### United States\nThe **SEC has proposed climate disclosure rules** that would require publicly-traded companies to report their total greenhouse gas emissions, with larger companies also needing to account for Scope 3 (supply chain) emissions. Additionally, California's SB 261 requires US companies with over $500 million in revenue doing business in California to publish biennial climate-related financial risk reports.\n\n### Other Jurisdictions\nMandatory reporting also exists or is emerging in Australia, Japan, New Zealand, Singapore, Canada, and China.\n\n## Arguments Supporting Mandatory Reporting\n\n1. **Transparency and accountability**: Standardized reporting prevents greenwashing and allows stakeholders to assess actual environmental performance\n2. **Data accuracy**: Structured methodologies prevent inconsistencies and errors in emissions data\n3. **Risk management**: Helps companies identify climate-related financial risks and opportunities\n4. **Market efficiency**: Investors and purchasers can make informed decisions based on comparable data\n5. **Emissions reduction**: Structured reporting helps businesses identify inefficiencies and reduction opportunities\n\n## Challenges and Considerations\n\n- **Scope 3 complexity**: Supply chain emissions are often the largest source but most difficult to measure accurately\n- **Compliance costs**: Especially burdensome for smaller companies\n- **Evolving standards**: Multiple frameworks (GHG Protocol, TCFD, ESRS, ISSB) create complexity as they develop and converge\n\n## Conclusion\n\nCorporations are **increasingly being required to report carbon emissions** across major economies. The trend is clearly toward mandatory, standardized disclosure rather than voluntary reporting. Whether this should be universal depends on company size thresholds and implementation timelines, but the direction of regulation suggests that comprehensive carbon reporting will become a standard business requirement for large companies globally.\n\nSources:\n1. https://noviqtech.com/articles/key-mandatory-and-voluntary-carbon-reporting-standards-guide\n2. https://nbs.net/the-shift-to-mandatory-carbon-reporting-6-ways-companies-can-prepare/\n3. https://www.novata.com/esg-regulations/\n4. https://www.carbonchain.com/carbon-reporting\n5. https://ecologi.com/resources/blog/do-you-need-to-disclose-your-carbon-emissions\n6. https://www.econos-esg.com/blogs/is-carbon-footprint-mandatory-for-my-company",
+  "usage": {
+    "completion_tokens": 727,
+    "prompt_tokens": 6531,
+    "total_tokens": 7258,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

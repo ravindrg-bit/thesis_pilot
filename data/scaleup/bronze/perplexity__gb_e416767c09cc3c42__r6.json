@@ -1,0 +1,123 @@
+{
+  "query_id": "gb_e416767c09cc3c42",
+  "engine": "perplexity",
+  "run_index": 6,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-07T17:51:50.276061+00:00",
+  "query_text": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "While using ```new_list = my_list```, any modifications to ```new_list``` changes ```my_list``` every time. Why is this, and how can I clone or copy the list to prevent it?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "7c81242d-aaa6-42f9-9109-13449bced9fb",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "`new_list = my_list` does **not** create a new list. It copies the **reference** to the same mutable list object, so both variables point to the same list; changing one changes the other[1][2].\n\nTo make an independent copy, use one of these:\n\n- `new_list = my_list.copy()` for a **shallow copy**[2]\n- `new_list = my_list[:]` to copy the whole list with slicing[2]\n- `new_list = list(my_list)` to build a new list from the iterable\n\nExample:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\n\nprint(my_list)   # [1, 2, 3]\nprint(new_list)  # [1, 2, 3, 4]\n```\n\nIf your list contains nested mutable objects, these methods make a **shallow copy** only, meaning the outer list is separate but inner objects are still shared.",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780854710,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 212,
+      "prompt_tokens": 43,
+      "total_tokens": 255,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 4e-05,
+        "output_tokens_cost": 0.00021,
+        "request_cost": 0.005,
+        "total_cost": 0.00526
+      }
+    },
+    "citations": [
+      "https://programming-24.mooc.fi/part-5/2-references/",
+      "https://python-automation-book.readthedocs.io/en/1.0/03_collection/01_list.html",
+      "https://www.youtube.com/watch?v=6JsKMYxORxo",
+      "https://www.sitepoint.com/python/lists-change/",
+      "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists"
+    ],
+    "search_results": [
+      {
+        "title": "References - Python Programming MOOC 2024",
+        "url": "https://programming-24.mooc.fi/part-5/2-references/",
+        "last_updated": "2026-03-14",
+        "snippet": "The variable my_list now points to the new list created inside the function, and the reference to the original list is no longer available within the function.",
+        "source": "web"
+      },
+      {
+        "title": "Understanding Lists in Python",
+        "url": "https://python-automation-book.readthedocs.io/en/1.0/03_collection/01_list.html",
+        "last_updated": "2025-02-23",
+        "snippet": "Since lists are mutable, you can change their contents. To change the first item to 88 : my_list[0] = 88 print(my_list) # Output: [88, 1, \"hello\", [], None, 2.3] ...",
+        "source": "web"
+      },
+      {
+        "title": "Programming Fundamentals with Python - Modifying Lists - YouTube",
+        "url": "https://www.youtube.com/watch?v=6JsKMYxORxo",
+        "date": "2025-10-02",
+        "last_updated": "2025-10-02",
+        "snippet": "All JomaClass videos from 2020 are now free to watch. If you enjoy please consider donating here: https://support.joma.io/ This video was ...",
+        "source": "web"
+      },
+      {
+        "title": "Python - Change List Items - SitePoint",
+        "url": "https://www.sitepoint.com/python/lists-change/",
+        "date": "2025-07-01",
+        "last_updated": "2026-03-28",
+        "snippet": "In this section, we'll dive deep into how to modify list elements: replacing values, working with indexes and ranges, and using methods to reorder elements.",
+        "source": "web"
+      },
+      {
+        "title": "Modifying Python Lists | Add, Remove, Change Items",
+        "url": "https://apxml.com/courses/python-for-beginners/chapter-4-organizing-data-collections/python-modifying-lists",
+        "date": "2025-04-04",
+        "last_updated": "2026-06-04",
+        "snippet": "Discover common methods for adding elements, removing elements, and changing existing elements within Python lists.",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "`new_list = my_list` does **not** create a new list. It copies the **reference** to the same mutable list object, so both variables point to the same list; changing one changes the other[1][2].\n\nTo make an independent copy, use one of these:\n\n- `new_list = my_list.copy()` for a **shallow copy**[2]\n- `new_list = my_list[:]` to copy the whole list with slicing[2]\n- `new_list = list(my_list)` to build a new list from the iterable\n\nExample:\n\n```python\nmy_list = [1, 2, 3]\nnew_list = my_list.copy()\n\nnew_list.append(4)\n\nprint(my_list)   # [1, 2, 3]\nprint(new_list)  # [1, 2, 3, 4]\n```\n\nIf your list contains nested mutable objects, these methods make a **shallow copy** only, meaning the outer list is separate but inner objects are still shared.",
+  "usage": {
+    "completion_tokens": 212,
+    "prompt_tokens": 43,
+    "total_tokens": 255,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 4e-05,
+      "output_tokens_cost": 0.00021,
+      "request_cost": 0.005,
+      "total_cost": 0.00526
+    }
+  },
+  "run_profile": "scaleup"
+}

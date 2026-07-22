@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_8aeba1c619e5bff5",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:10:13.497873+00:00",
+  "query_text": "how much % do mutual fund managers make",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26e958e7020ddf2704f300",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, mutual fund managers make money through two main channels: **management fees charged to the fund** (which investors pay indirectly through expense ratios) and **their personal compensation** (salary, bonuses, and profit-sharing from the fund company).\n\n## Management Fees (What Fund Managers Charge Investors)\n\nThe management fee that mutual fund managers charge to the fund itself typically ranges from:\n\n- **0.10% to over 2%** of assets under management (AUM) annually\n- **Passive/index funds**: usually 0.05% to 0.20%\n- **Actively managed funds**: typically 0.5% to 1.5%\n- **Specialized or aggressive active funds**: can exceed 2%\n\nAccording to research, most funds receive management fees of about **0.25% to 0.60%** (25 to 60 basis points) of AUM. This fee is deducted from the fund's assets and reflected in the expense ratio that investors pay.\n\n## Mutual Fund Manager Personal Compensation\n\nFor what the managers themselves actually earn:\n\n| Level | Compensation |\n|-------|-------------|\n| **Average U.S. mutual fund manager** | ~$1.76\u2013$2.04 million annually (including base + bonuses) |\n| **Entry-level/assistant managers** | $100,000\u2013$150,000 base salary |\n| **Experienced managers (large funds)** | $300,000+ base salary, with total comp reaching seven figures |\n| **Top 14% of managers** | Account for ~66% of total industry compensation |\n\n### Key Compensation Components:\n1. **Base salary** \u2013 steady income regardless of market conditions\n2. **Bonuses** \u2013 typically 50% to 100%+ of base salary, tied to fund performance relative to peers\n3. **Profit-sharing** \u2013 some firms offer 0.1% to 0.5% of fund profits\n4. **Performance incentives** \u2013 a manager whose investments outperform by 1% over 3\u201310 years can see pay increases of 5.3% to 10.3%\n\n### Important Notes:\n- There's **huge dispersion** in pay\u2014the standard deviation is $3.26 million, meaning many earn far less than the average while top performers earn substantially more\n- Unlike hedge funds (which use \"2 and 20\"\u20142% of assets + 20% of profits), mutual funds rarely use fulcrum/performance fees (only ~6.5% of funds do)\n- Manager compensation is often structured as a **\"tournament\"**\u2014bonuses depend on relative ranking against peer funds (e.g., top quartile = 100% of base salary bonus; below median = no bonus)\n\nSources:\n1. https://smartasset.com/financial-advisor/management-fee\n2. https://www.investopedia.com/terms/m/managementfee.asp\n3. https://www.investopedia.com/articles/financial-advisors/121515/how-much-mutual-fund-managers-make.asp\n4. https://accountinginsights.org/how-much-is-the-average-mutual-fund-manager-salary/\n5. https://www.strategy-business.com/article/15206\n6. https://www.zippia.com/salaries/mutual-fund-manager/\n7. https://www.shmoop.com/careers/mutual-fund-manager/salary.html\n8. https://www.glassdoor.ca/Salaries/mutual-funds-manager-salary-SRCH_KO0,20.htm\n9. https://bankbrisk.com/mutual-fund-fee-calculator/\n10. https://www.myfindex.com/finance-terms/management-fees",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780935001,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 776,
+        "prompt_tokens": 8268,
+        "total_tokens": 9044,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much % do mutual fund managers make"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26e9575d9b",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"fd7f37336a26e9574f50a50001f18dca\"},\"usage\":{\"total_tokens\":8115}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26e9575d9b",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"fd7f37336a26e9574f50a50001f18dca\"},\"usage\":{\"total_tokens\":8115}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"fd7f37336a26e9574f50a50001f18dca\"},\"usage\":{\"total_tokens\":8115}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, mutual fund managers make money through two main channels: **management fees charged to the fund** (which investors pay indirectly through expense ratios) and **their personal compensation** (salary, bonuses, and profit-sharing from the fund company).\n\n## Management Fees (What Fund Managers Charge Investors)\n\nThe management fee that mutual fund managers charge to the fund itself typically ranges from:\n\n- **0.10% to over 2%** of assets under management (AUM) annually\n- **Passive/index funds**: usually 0.05% to 0.20%\n- **Actively managed funds**: typically 0.5% to 1.5%\n- **Specialized or aggressive active funds**: can exceed 2%\n\nAccording to research, most funds receive management fees of about **0.25% to 0.60%** (25 to 60 basis points) of AUM. This fee is deducted from the fund's assets and reflected in the expense ratio that investors pay.\n\n## Mutual Fund Manager Personal Compensation\n\nFor what the managers themselves actually earn:\n\n| Level | Compensation |\n|-------|-------------|\n| **Average U.S. mutual fund manager** | ~$1.76\u2013$2.04 million annually (including base + bonuses) |\n| **Entry-level/assistant managers** | $100,000\u2013$150,000 base salary |\n| **Experienced managers (large funds)** | $300,000+ base salary, with total comp reaching seven figures |\n| **Top 14% of managers** | Account for ~66% of total industry compensation |\n\n### Key Compensation Components:\n1. **Base salary** \u2013 steady income regardless of market conditions\n2. **Bonuses** \u2013 typically 50% to 100%+ of base salary, tied to fund performance relative to peers\n3. **Profit-sharing** \u2013 some firms offer 0.1% to 0.5% of fund profits\n4. **Performance incentives** \u2013 a manager whose investments outperform by 1% over 3\u201310 years can see pay increases of 5.3% to 10.3%\n\n### Important Notes:\n- There's **huge dispersion** in pay\u2014the standard deviation is $3.26 million, meaning many earn far less than the average while top performers earn substantially more\n- Unlike hedge funds (which use \"2 and 20\"\u20142% of assets + 20% of profits), mutual funds rarely use fulcrum/performance fees (only ~6.5% of funds do)\n- Manager compensation is often structured as a **\"tournament\"**\u2014bonuses depend on relative ranking against peer funds (e.g., top quartile = 100% of base salary bonus; below median = no bonus)\n\nSources:\n1. https://smartasset.com/financial-advisor/management-fee\n2. https://www.investopedia.com/terms/m/managementfee.asp\n3. https://www.investopedia.com/articles/financial-advisors/121515/how-much-mutual-fund-managers-make.asp\n4. https://accountinginsights.org/how-much-is-the-average-mutual-fund-manager-salary/\n5. https://www.strategy-business.com/article/15206\n6. https://www.zippia.com/salaries/mutual-fund-manager/\n7. https://www.shmoop.com/careers/mutual-fund-manager/salary.html\n8. https://www.glassdoor.ca/Salaries/mutual-funds-manager-salary-SRCH_KO0,20.htm\n9. https://bankbrisk.com/mutual-fund-fee-calculator/\n10. https://www.myfindex.com/finance-terms/management-fees",
+  "usage": {
+    "completion_tokens": 776,
+    "prompt_tokens": 8268,
+    "total_tokens": 9044,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

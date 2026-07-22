@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_0c0058305876a645",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:50:32.175463+00:00",
+  "query_text": "What medicine should I take when I get a cold?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a253ecf62113dbf699c36ab",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on information from health authorities, here is guidance on what to take when you have a cold:\n\n## Important First Points\n\n- **There is no cure for the common cold** \u2014 it is caused by viruses, so antibiotics will not help and should not be used.\n- Most colds improve on their own within **7\u201310 days**.\n- Treatment focuses on **relieving symptoms** while your body recovers.\n\n## Over-the-Counter Medicines by Symptom\n\n| Symptom | Recommended Medicine | Notes |\n|---------|----------------------|-------|\n| **Fever, headache, sore throat, body aches** | Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin) | Do not exceed recommended doses. Check that other cold medicines don't already contain these to avoid accidental overdose. |\n| **Stuffy nose / congestion** | Decongestants (pseudoephedrine, phenylephrine) or decongestant nasal sprays (Afrin, Neo-Synephrine) | Nasal sprays should not be used for more than **3 days** to avoid rebound congestion. Decongestants can raise blood pressure and heart rate. |\n| **Runny nose / sneezing** | Antihistamines (Benadryl, Chlor-Trimeton) | May cause drowsiness; non-sedating options are available. Not very effective for cold symptoms in some cases. |\n| **Cough** | Cough suppressants, expectorants, or honey (for adults and children over 1 year) | Evidence for cough medicines is mixed; they may not work significantly better than placebo. |\n\n## Non-Drug Remedies That Help\n\n- **Rest** and plenty of sleep\n- **Drink lots of fluids** (water, warm broths)\n- **Humidifier or steam** from a hot shower\n- **Saline nasal spray or rinses** (Neti pot)\n- **Warm salt water gargle** for sore throat\n- **Hot lemon and honey drink** (not for children under 1 year)\n\n## Important Warnings\n\n- **Children under 6:** Avoid decongestant nasal sprays/drops and most OTC cough/cold medicines. Use only children-strength acetaminophen or ibuprofen for fever, with correct dosing.\n- **Never give aspirin to children or teenagers** \u2014 risk of Reye's syndrome.\n- **Avoid zinc nasal sprays** \u2014 FDA warns they may cause permanent loss of smell.\n- **Check combination medicines** carefully so you don't double up on ingredients like acetaminophen, which can cause liver damage in excess.\n- **If you have high blood pressure, heart disease, or other chronic conditions**, consult a doctor or pharmacist before taking decongestants.\n\n## When to See a Doctor\n\n- Fever lasting more than 3\u20134 days\n- Symptoms lasting more than 10 days without improvement\n- Trouble breathing, chest pain, or severe shortness of breath\n- Symptoms that improve then worsen\n- Severe dehydration\n- If you have a weakened immune system or chronic medical conditions\n\nIf you're unsure which medicine is right for you, especially if you take other medications or have health conditions, consult a pharmacist or healthcare provider.\n\n---\n\nSources:\n1. https://www.nhs.uk/conditions/common-cold/\n2. https://www.cdc.gov/common-cold/treatment/index.html\n3. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n4. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n5. https://www.webmd.com/cold-and-flu/cold-medicine-treatment-when-what-how",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780825808,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 792,
+        "prompt_tokens": 5222,
+        "total_tokens": 6014,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What medicine should I take when I get a cold?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a253ecff913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"139242876a253ecf680f160001ec33f2\"},\"usage\":{\"total_tokens\":5071}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a253ecff913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"139242876a253ecf680f160001ec33f2\"},\"usage\":{\"total_tokens\":5071}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"139242876a253ecf680f160001ec33f2\"},\"usage\":{\"total_tokens\":5071}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on information from health authorities, here is guidance on what to take when you have a cold:\n\n## Important First Points\n\n- **There is no cure for the common cold** \u2014 it is caused by viruses, so antibiotics will not help and should not be used.\n- Most colds improve on their own within **7\u201310 days**.\n- Treatment focuses on **relieving symptoms** while your body recovers.\n\n## Over-the-Counter Medicines by Symptom\n\n| Symptom | Recommended Medicine | Notes |\n|---------|----------------------|-------|\n| **Fever, headache, sore throat, body aches** | Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin) | Do not exceed recommended doses. Check that other cold medicines don't already contain these to avoid accidental overdose. |\n| **Stuffy nose / congestion** | Decongestants (pseudoephedrine, phenylephrine) or decongestant nasal sprays (Afrin, Neo-Synephrine) | Nasal sprays should not be used for more than **3 days** to avoid rebound congestion. Decongestants can raise blood pressure and heart rate. |\n| **Runny nose / sneezing** | Antihistamines (Benadryl, Chlor-Trimeton) | May cause drowsiness; non-sedating options are available. Not very effective for cold symptoms in some cases. |\n| **Cough** | Cough suppressants, expectorants, or honey (for adults and children over 1 year) | Evidence for cough medicines is mixed; they may not work significantly better than placebo. |\n\n## Non-Drug Remedies That Help\n\n- **Rest** and plenty of sleep\n- **Drink lots of fluids** (water, warm broths)\n- **Humidifier or steam** from a hot shower\n- **Saline nasal spray or rinses** (Neti pot)\n- **Warm salt water gargle** for sore throat\n- **Hot lemon and honey drink** (not for children under 1 year)\n\n## Important Warnings\n\n- **Children under 6:** Avoid decongestant nasal sprays/drops and most OTC cough/cold medicines. Use only children-strength acetaminophen or ibuprofen for fever, with correct dosing.\n- **Never give aspirin to children or teenagers** \u2014 risk of Reye's syndrome.\n- **Avoid zinc nasal sprays** \u2014 FDA warns they may cause permanent loss of smell.\n- **Check combination medicines** carefully so you don't double up on ingredients like acetaminophen, which can cause liver damage in excess.\n- **If you have high blood pressure, heart disease, or other chronic conditions**, consult a doctor or pharmacist before taking decongestants.\n\n## When to See a Doctor\n\n- Fever lasting more than 3\u20134 days\n- Symptoms lasting more than 10 days without improvement\n- Trouble breathing, chest pain, or severe shortness of breath\n- Symptoms that improve then worsen\n- Severe dehydration\n- If you have a weakened immune system or chronic medical conditions\n\nIf you're unsure which medicine is right for you, especially if you take other medications or have health conditions, consult a pharmacist or healthcare provider.\n\n---\n\nSources:\n1. https://www.nhs.uk/conditions/common-cold/\n2. https://www.cdc.gov/common-cold/treatment/index.html\n3. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n4. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n5. https://www.webmd.com/cold-and-flu/cold-medicine-treatment-when-what-how",
+  "usage": {
+    "completion_tokens": 792,
+    "prompt_tokens": 5222,
+    "total_tokens": 6014,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

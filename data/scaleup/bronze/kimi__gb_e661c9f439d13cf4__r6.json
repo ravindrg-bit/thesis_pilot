@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e661c9f439d13cf4",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T16:24:50.619337+00:00",
+  "query_text": "what is a custodial ira",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a259b4ae0d430e248209c94",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "A **custodial IRA** (also known as a guardian IRA) is a retirement account opened for a minor by an adult\u2014typically a parent, grandparent, or legal guardian. The account is legally owned by the child, but the adult serves as the custodian who manages the account until the child reaches adulthood (usually age 18 or 21, depending on state laws).\n\n## Key Features\n\n- **Owned by the minor, managed by an adult**: The child is the legal owner of the account and its assets, but the custodian makes all investment decisions and manages the funds until the minor comes of age.\n- **Types available**: A custodial IRA can be either a **Traditional IRA** or a **Roth IRA**, following the same IRS rules as regular IRAs for contributions, taxes, and withdrawals.\n- **Earned income requirement**: The minor must have earned income (wages from a job or self-employment income like babysitting or lawn mowing) to contribute. The contribution limit is the lesser of the annual IRA limit ($7,000 for 2024-2025 for those under 50) or the child's total earned income for the year.\n- **Conversion to regular IRA**: When the minor reaches the age of majority (18 or 21, depending on the state), the custodial account converts to a regular IRA in the child's name, and they assume full control.\n\n## Custodial Roth IRA vs. Custodial Traditional IRA\n\n| Feature | Traditional IRA | Roth IRA |\n|--------|-----------------|----------|\n| Contributions | Pre-tax (may be deductible) | After-tax |\n| Growth | Tax-deferred | Tax-free |\n| Withdrawals in retirement | Taxed as ordinary income | Tax-free (if qualified) |\n| Required Minimum Distributions (RMDs) | Required starting at age 73 | None required |\n| Early withdrawal of contributions | Subject to taxes and penalties | Can be withdrawn anytime, tax-free and penalty-free |\n\nFor most minors, a **Roth IRA** is typically the better choice because children are usually in low or zero tax brackets, so they pay little to no tax on contributions now, and all future growth and qualified withdrawals are tax-free.\n\n## Benefits of a Custodial IRA\n\n- **Compound growth**: Starting early allows decades of compound growth, potentially turning small contributions into significant retirement savings.\n- **Tax advantages**: Roth IRAs offer tax-free growth and withdrawals in retirement.\n- **Flexibility**: Roth IRA contributions can be withdrawn at any time without penalty. Earnings can also be withdrawn penalty-free (but may be taxed) for qualified education expenses or a first-time home purchase (up to $10,000).\n- **Financial education**: Helps teach children about investing, saving, and retirement planning from an early age.\n\n## Important Rules\n\n- Anyone can contribute to the child's IRA (parents, grandparents, etc.) as long as the total doesn't exceed the child's earned income or the annual limit.\n- The custodian cannot withdraw or use the funds for themselves\u2014the account belongs entirely to the minor.\n- Once the child takes control at adulthood, they can manage the investments and continue contributing or withdraw funds (subject to IRA rules).\n\nSources:\n1. https://www.nerdwallet.com/article/investing/why-your-kid-needs-a-roth-ira\n2. https://verdence.com/insight/custodial-roth-ira/\n3. https://carry.com/learn/custodial-roth-ira-explained\n4. https://www.experian.com/blogs/ask-experian/what-is-custodial-ira/\n5. https://www.thrivent.com/insights/investing/custodial-roth-ira-for-a-child\n6. https://20somethingfinance.com/custodial-ira/\n7. https://www.birchgold.com/blog/retirement/gold-custodial-iras/\n8. https://www.kidsmoney.org/parents/investing/custodial-ira/\n9. https://nopassiveincome.com/custodial-roth-ira-vs-ugma/\n10. https://1stchancefinance.com/custodial-ira-vs-savings-accounts-which-is-better-for-minors/\n11. https://www.wealthenhancement.com/blog/custodial-roth-ira-build-child-wealth",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780849483,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 893,
+        "prompt_tokens": 8605,
+        "total_tokens": 9498,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what is a custodial ira"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a259b49f913",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"681c6cb26a259b494f50a50001ee587b\"},\"usage\":{\"total_tokens\":8455}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a259b49f913",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"681c6cb26a259b494f50a50001ee587b\"},\"usage\":{\"total_tokens\":8455}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"681c6cb26a259b494f50a50001ee587b\"},\"usage\":{\"total_tokens\":8455}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "A **custodial IRA** (also known as a guardian IRA) is a retirement account opened for a minor by an adult\u2014typically a parent, grandparent, or legal guardian. The account is legally owned by the child, but the adult serves as the custodian who manages the account until the child reaches adulthood (usually age 18 or 21, depending on state laws).\n\n## Key Features\n\n- **Owned by the minor, managed by an adult**: The child is the legal owner of the account and its assets, but the custodian makes all investment decisions and manages the funds until the minor comes of age.\n- **Types available**: A custodial IRA can be either a **Traditional IRA** or a **Roth IRA**, following the same IRS rules as regular IRAs for contributions, taxes, and withdrawals.\n- **Earned income requirement**: The minor must have earned income (wages from a job or self-employment income like babysitting or lawn mowing) to contribute. The contribution limit is the lesser of the annual IRA limit ($7,000 for 2024-2025 for those under 50) or the child's total earned income for the year.\n- **Conversion to regular IRA**: When the minor reaches the age of majority (18 or 21, depending on the state), the custodial account converts to a regular IRA in the child's name, and they assume full control.\n\n## Custodial Roth IRA vs. Custodial Traditional IRA\n\n| Feature | Traditional IRA | Roth IRA |\n|--------|-----------------|----------|\n| Contributions | Pre-tax (may be deductible) | After-tax |\n| Growth | Tax-deferred | Tax-free |\n| Withdrawals in retirement | Taxed as ordinary income | Tax-free (if qualified) |\n| Required Minimum Distributions (RMDs) | Required starting at age 73 | None required |\n| Early withdrawal of contributions | Subject to taxes and penalties | Can be withdrawn anytime, tax-free and penalty-free |\n\nFor most minors, a **Roth IRA** is typically the better choice because children are usually in low or zero tax brackets, so they pay little to no tax on contributions now, and all future growth and qualified withdrawals are tax-free.\n\n## Benefits of a Custodial IRA\n\n- **Compound growth**: Starting early allows decades of compound growth, potentially turning small contributions into significant retirement savings.\n- **Tax advantages**: Roth IRAs offer tax-free growth and withdrawals in retirement.\n- **Flexibility**: Roth IRA contributions can be withdrawn at any time without penalty. Earnings can also be withdrawn penalty-free (but may be taxed) for qualified education expenses or a first-time home purchase (up to $10,000).\n- **Financial education**: Helps teach children about investing, saving, and retirement planning from an early age.\n\n## Important Rules\n\n- Anyone can contribute to the child's IRA (parents, grandparents, etc.) as long as the total doesn't exceed the child's earned income or the annual limit.\n- The custodian cannot withdraw or use the funds for themselves\u2014the account belongs entirely to the minor.\n- Once the child takes control at adulthood, they can manage the investments and continue contributing or withdraw funds (subject to IRA rules).\n\nSources:\n1. https://www.nerdwallet.com/article/investing/why-your-kid-needs-a-roth-ira\n2. https://verdence.com/insight/custodial-roth-ira/\n3. https://carry.com/learn/custodial-roth-ira-explained\n4. https://www.experian.com/blogs/ask-experian/what-is-custodial-ira/\n5. https://www.thrivent.com/insights/investing/custodial-roth-ira-for-a-child\n6. https://20somethingfinance.com/custodial-ira/\n7. https://www.birchgold.com/blog/retirement/gold-custodial-iras/\n8. https://www.kidsmoney.org/parents/investing/custodial-ira/\n9. https://nopassiveincome.com/custodial-roth-ira-vs-ugma/\n10. https://1stchancefinance.com/custodial-ira-vs-savings-accounts-which-is-better-for-minors/\n11. https://www.wealthenhancement.com/blog/custodial-roth-ira-build-child-wealth",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 8605,
+    "total_tokens": 9498,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

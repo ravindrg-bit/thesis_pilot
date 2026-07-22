@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_4ab30f906b404e5d",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T23:00:20.061728+00:00",
+  "query_text": "chase capital services",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25f7feeed681b12ff077c7",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found information about two different entities named \"Chase Capital Services\":\n\n## 1. Chase Capital Services (P) Ltd - India\n\nThis is an Indian private limited company founded in **1997** and headquartered in **Chandigarh, India**. According to its website and business records, the company is engaged in:\n\n- **Project Consultancy**\n- **Debt Syndication**\n- **Securitisation Services**\n- **Currency and Commodities Trading** (with recognized exchanges in India)\n\nThe company's mission is to be an asset to clients through long-term relationships based on personalized service and constant communication. It also has a related entity called **Infinity Commodity Services (P) Ltd**, which has been engaged in commodity brokering since 2004.\n\n**Company Details:**\n- Legal Name: Chase Capital Services Private Limited\n- CIN: U67120CH1997PTC019990\n- Incorporated: May 26, 1997\n- Registered Address: House No 2548, Sector 47 C, Chandigarh 160047, India\n- Industry: Activities Auxiliary to Financial Intermediation (NIC Code 67120)\n- Authorized/Paid-up Capital: \u20b910,000,000\n\n---\n\n## 2. JPMorgan Chase Capital Services (U.S.)\n\nThe search results also show that **JPMorgan Chase & Co.** (NYSE: JPM), through its Chase business banking division, provides various **capital and financial services** to businesses, including:\n\n- Small business loans and lines of credit\n- Commercial real estate financing\n- Business checking and savings accounts\n- Merchant services/payment processing\n- Credit cards (Chase Ink business credit cards)\n- Cash management solutions\n\nThis is part of Chase's broader U.S. consumer and commercial banking operations, not a separately named \"Chase Capital Services\" entity.\n\n---\n\n**Note:** There is also a separate **Chase Capital Advisors** founded in 2007 and headquartered in Palm Beach Gardens, Florida (website: chase-ca.com), which appears to be a different investment advisory firm.\n\n---\n\nSources:\n1. https://chasecapital.in/\n2. https://www.instafinancials.com/company/chase-capital-services-private-limited-U67120CH1997PTC019990\n3. https://polsky.uchicago.edu/event/capital-access-jpmorgan-chase/\n4. https://www.chase.com/business/knowledge-center/start/business-capital\n5. https://fitsmallbusiness.com/chase-vs-capital-one-business-checking-account/\n6. https://pitchbook.com/profiles/company/146196-19\n7. https://www.myunitedway.com/news/jp-morgan-chase-announces-40k-emergency-water-distribution\n8. https://tracenable.com/company/jpmorgan-chase-and-co/climate-targets",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780873215,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 599,
+        "prompt_tokens": 5933,
+        "total_tokens": 6532,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "chase capital services"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25f7fda946",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"cbf0d1ca6a25f7fd680f160001ed49fe\"},\"usage\":{\"total_tokens\":5785}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25f7fda946",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"cbf0d1ca6a25f7fd680f160001ed49fe\"},\"usage\":{\"total_tokens\":5785}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"cbf0d1ca6a25f7fd680f160001ed49fe\"},\"usage\":{\"total_tokens\":5785}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found information about two different entities named \"Chase Capital Services\":\n\n## 1. Chase Capital Services (P) Ltd - India\n\nThis is an Indian private limited company founded in **1997** and headquartered in **Chandigarh, India**. According to its website and business records, the company is engaged in:\n\n- **Project Consultancy**\n- **Debt Syndication**\n- **Securitisation Services**\n- **Currency and Commodities Trading** (with recognized exchanges in India)\n\nThe company's mission is to be an asset to clients through long-term relationships based on personalized service and constant communication. It also has a related entity called **Infinity Commodity Services (P) Ltd**, which has been engaged in commodity brokering since 2004.\n\n**Company Details:**\n- Legal Name: Chase Capital Services Private Limited\n- CIN: U67120CH1997PTC019990\n- Incorporated: May 26, 1997\n- Registered Address: House No 2548, Sector 47 C, Chandigarh 160047, India\n- Industry: Activities Auxiliary to Financial Intermediation (NIC Code 67120)\n- Authorized/Paid-up Capital: \u20b910,000,000\n\n---\n\n## 2. JPMorgan Chase Capital Services (U.S.)\n\nThe search results also show that **JPMorgan Chase & Co.** (NYSE: JPM), through its Chase business banking division, provides various **capital and financial services** to businesses, including:\n\n- Small business loans and lines of credit\n- Commercial real estate financing\n- Business checking and savings accounts\n- Merchant services/payment processing\n- Credit cards (Chase Ink business credit cards)\n- Cash management solutions\n\nThis is part of Chase's broader U.S. consumer and commercial banking operations, not a separately named \"Chase Capital Services\" entity.\n\n---\n\n**Note:** There is also a separate **Chase Capital Advisors** founded in 2007 and headquartered in Palm Beach Gardens, Florida (website: chase-ca.com), which appears to be a different investment advisory firm.\n\n---\n\nSources:\n1. https://chasecapital.in/\n2. https://www.instafinancials.com/company/chase-capital-services-private-limited-U67120CH1997PTC019990\n3. https://polsky.uchicago.edu/event/capital-access-jpmorgan-chase/\n4. https://www.chase.com/business/knowledge-center/start/business-capital\n5. https://fitsmallbusiness.com/chase-vs-capital-one-business-checking-account/\n6. https://pitchbook.com/profiles/company/146196-19\n7. https://www.myunitedway.com/news/jp-morgan-chase-announces-40k-emergency-water-distribution\n8. https://tracenable.com/company/jpmorgan-chase-and-co/climate-targets",
+  "usage": {
+    "completion_tokens": 599,
+    "prompt_tokens": 5933,
+    "total_tokens": 6532,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

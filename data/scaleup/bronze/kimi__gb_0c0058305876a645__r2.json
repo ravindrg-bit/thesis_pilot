@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_0c0058305876a645",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:47:21.187856+00:00",
+  "query_text": "What medicine should I take when I get a cold?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a253e130fd3f923264900fc",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on information from medical authorities, here is guidance on what to take when you have a cold:\n\n## Important Facts First\n\n- **There is no cure for the common cold.** Most colds improve on their own within 7\u201310 days.\n- **Antibiotics do not work** against cold viruses and should not be used.\n- **Rest and hydration** are the most important treatments.\n\n## Over-the-Counter (OTC) Medications by Symptom\n\n| Symptom | Recommended Medication | Notes |\n|---------|----------------------|-------|\n| **Fever, headache, sore throat, body aches** | Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin) | Follow label directions; don't exceed recommended doses |\n| **Nasal congestion/stuffy nose** | Decongestants with **pseudoephedrine** (Sudafed) | Oral phenylephrine was found ineffective by the FDA in 2024; nasal sprays work but don't use >3\u20135 days |\n| **Runny nose** | Antihistamines (limited benefit for colds) | May help when combined with decongestants; first-generation types cause drowsiness |\n| **Cough** | Dextromethorphan (for severe cough only) | Honey works for adults and children >1 year; most coughs don't need suppression |\n\n## Non-Drug Remedies\n\n- **Saline nasal spray or rinses** to clear mucus\n- **Humidifier or cool-mist vaporizer** to moisten air\n- **Warm liquids** (chicken soup, tea with honey, warm water with lemon)\n- **Saltwater gargle** for sore throat\n- **Throat lozenges** (not for children under 4)\n\n## Important Warnings\n\n- **Children under 6:** Avoid OTC cough/cold medicines; use only acetaminophen or ibuprofen for fever (with correct dosing)\n- **Never give aspirin to children or teenagers** (risk of Reye's syndrome)\n- **Never give honey to infants under 1 year** (risk of botulism)\n- **Avoid zinc nasal sprays** (risk of permanent loss of smell)\n- **Check combination products** to avoid duplicating ingredients, especially acetaminophen (liver risk)\n- **Consult your doctor** before using decongestants if you have high blood pressure, heart disease, diabetes, thyroid problems, or prostate issues\n\n## When to See a Doctor\n\n- Trouble breathing or fast breathing\n- Fever lasting more than 4 days\n- Symptoms lasting more than 10 days without improvement\n- Symptoms that improve then worsen\n- Severe dehydration\n\nIf you're unsure which medications are safe for you, consult your healthcare provider or pharmacist, especially if you take prescription medications or have chronic health conditions.\n\n---\n\nSources:\n1. https://www.cdc.gov/common-cold/treatment/index.html\n2. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n3. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n4. https://www.webmd.com/cold-and-flu/otc-cold-medicines\n5. https://www.webmd.com/cold-and-flu/understanding-common-cold-treatment",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780825619,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 713,
+        "prompt_tokens": 6617,
+        "total_tokens": 7330,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "What medicine should I take when I get a cold?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a253e1266c9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ea811b8c6a253e124f50a50001edcdd7\"},\"usage\":{\"total_tokens\":6462}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a253e1266c9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ea811b8c6a253e124f50a50001edcdd7\"},\"usage\":{\"total_tokens\":6462}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ea811b8c6a253e124f50a50001edcdd7\"},\"usage\":{\"total_tokens\":6462}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on information from medical authorities, here is guidance on what to take when you have a cold:\n\n## Important Facts First\n\n- **There is no cure for the common cold.** Most colds improve on their own within 7\u201310 days.\n- **Antibiotics do not work** against cold viruses and should not be used.\n- **Rest and hydration** are the most important treatments.\n\n## Over-the-Counter (OTC) Medications by Symptom\n\n| Symptom | Recommended Medication | Notes |\n|---------|----------------------|-------|\n| **Fever, headache, sore throat, body aches** | Acetaminophen (Tylenol) or Ibuprofen (Advil, Motrin) | Follow label directions; don't exceed recommended doses |\n| **Nasal congestion/stuffy nose** | Decongestants with **pseudoephedrine** (Sudafed) | Oral phenylephrine was found ineffective by the FDA in 2024; nasal sprays work but don't use >3\u20135 days |\n| **Runny nose** | Antihistamines (limited benefit for colds) | May help when combined with decongestants; first-generation types cause drowsiness |\n| **Cough** | Dextromethorphan (for severe cough only) | Honey works for adults and children >1 year; most coughs don't need suppression |\n\n## Non-Drug Remedies\n\n- **Saline nasal spray or rinses** to clear mucus\n- **Humidifier or cool-mist vaporizer** to moisten air\n- **Warm liquids** (chicken soup, tea with honey, warm water with lemon)\n- **Saltwater gargle** for sore throat\n- **Throat lozenges** (not for children under 4)\n\n## Important Warnings\n\n- **Children under 6:** Avoid OTC cough/cold medicines; use only acetaminophen or ibuprofen for fever (with correct dosing)\n- **Never give aspirin to children or teenagers** (risk of Reye's syndrome)\n- **Never give honey to infants under 1 year** (risk of botulism)\n- **Avoid zinc nasal sprays** (risk of permanent loss of smell)\n- **Check combination products** to avoid duplicating ingredients, especially acetaminophen (liver risk)\n- **Consult your doctor** before using decongestants if you have high blood pressure, heart disease, diabetes, thyroid problems, or prostate issues\n\n## When to See a Doctor\n\n- Trouble breathing or fast breathing\n- Fever lasting more than 4 days\n- Symptoms lasting more than 10 days without improvement\n- Symptoms that improve then worsen\n- Severe dehydration\n\nIf you're unsure which medications are safe for you, consult your healthcare provider or pharmacist, especially if you take prescription medications or have chronic health conditions.\n\n---\n\nSources:\n1. https://www.cdc.gov/common-cold/treatment/index.html\n2. https://www.mayoclinic.org/diseases-conditions/common-cold/diagnosis-treatment/drc-20351611\n3. https://www.webmd.com/cold-and-flu/decongestants-antihistamines-cold\n4. https://www.webmd.com/cold-and-flu/otc-cold-medicines\n5. https://www.webmd.com/cold-and-flu/understanding-common-cold-treatment",
+  "usage": {
+    "completion_tokens": 713,
+    "prompt_tokens": 6617,
+    "total_tokens": 7330,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

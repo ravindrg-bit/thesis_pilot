@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_7ab59c10e87f0a8c",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T02:48:03.915911+00:00",
+  "query_text": "Where can I download the latest version of Python?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24dbdb6d356b70cc042fd0",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "You can download the latest version of Python from the **official Python website** at **python.org/downloads**.\n\nThe official Python website automatically detects your operating system and provides the appropriate installer for:\n\n- **Windows** (.exe installer)\n- **macOS** (.pkg installer)\n- **Linux/Unix** (source code tarball)\n\nTo download:\n\n1. Visit **https://www.python.org/downloads/**\n2. The page will show the latest stable release (currently Python 3.13.x or newer)\n3. Click the download button for your operating system, or select a specific version from the list\n\nFor specific versions, you can also browse all releases at **https://www.python.org/downloads/release/** or visit the Python source repository.\n\n**Important tips:**\n- Always download from the official Python website to avoid malware or outdated versions\n- On Windows, make sure to check **\"Add Python to PATH\"** during installation\n- Python 3 is the current standard \u2014 avoid Python 2 as it's no longer supported\n\nSources:\n1. https://www.python.org/\n2. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/\n3. https://academify.com.br/en/how-to-install-python-on-your-pc/\n4. https://phoenixnap.com/kb/latest-python-version\n5. https://www.liquidweb.com/blog/latest-python-version/\n6. https://python.p2hp.com/downloads/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780800477,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 295,
+        "prompt_tokens": 8691,
+        "total_tokens": 8986,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I download the latest version of Python?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24dbda71e6",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"25d018286a24dbda680f160001eba771\"},\"usage\":{\"total_tokens\":8541}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24dbda71e6",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"25d018286a24dbda680f160001eba771\"},\"usage\":{\"total_tokens\":8541}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"25d018286a24dbda680f160001eba771\"},\"usage\":{\"total_tokens\":8541}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "You can download the latest version of Python from the **official Python website** at **python.org/downloads**.\n\nThe official Python website automatically detects your operating system and provides the appropriate installer for:\n\n- **Windows** (.exe installer)\n- **macOS** (.pkg installer)\n- **Linux/Unix** (source code tarball)\n\nTo download:\n\n1. Visit **https://www.python.org/downloads/**\n2. The page will show the latest stable release (currently Python 3.13.x or newer)\n3. Click the download button for your operating system, or select a specific version from the list\n\nFor specific versions, you can also browse all releases at **https://www.python.org/downloads/release/** or visit the Python source repository.\n\n**Important tips:**\n- Always download from the official Python website to avoid malware or outdated versions\n- On Windows, make sure to check **\"Add Python to PATH\"** during installation\n- Python 3 is the current standard \u2014 avoid Python 2 as it's no longer supported\n\nSources:\n1. https://www.python.org/\n2. https://www.geeksforgeeks.org/python/download-and-install-python-3-latest-version/\n3. https://academify.com.br/en/how-to-install-python-on-your-pc/\n4. https://phoenixnap.com/kb/latest-python-version\n5. https://www.liquidweb.com/blog/latest-python-version/\n6. https://python.p2hp.com/downloads/",
+  "usage": {
+    "completion_tokens": 295,
+    "prompt_tokens": 8691,
+    "total_tokens": 8986,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,114 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "gemini",
+  "run_index": 7,
+  "model_requested": "gemini-3.5-flash",
+  "model_served": "gemini-3.5-flash",
+  "timestamp_utc": "2026-06-08T04:41:41.814556+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gemini-3.5-flash",
+    "tools": [
+      "google_search"
+    ]
+  },
+  "raw_response": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Mon, 08 Jun 2026 04:41:41 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=16363",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Alright, listen to me, and listen good. You wanna know about this thing of ours called **Dependency Injection (DI)** in C#? Grab a seat, pour yourself a glass of anisette, and let me break it down so even a low-level associate can understand. \n\nIn our line of work, we got a big rule: **Don't do everything yourself, and don't get too attached to nobody.** That\u2019s what DI is all about.\n\n---\n\n### The Problem: The \"Amateur\" Way (Tight Coupling)\n\nLet's say you're a Capo, a boss of a crew. You need to shake down some local shops. \n\nIf you're a real amateur, you write your code like this:\n\n```csharp\n// This is bad news, kid.\npublic class Capo \n{\n    private JimmyTwoTimes _muscle;\n\n    public Capo() \n    {\n        // You're \"newing\" up your own muscle inside your office.\n        _muscle = new JimmyTwoTimes(); \n    }\n\n    public void CollectProtectionMoney() \n    {\n        _muscle.CrackSomeSkulls();\n    }\n}\n```\n\n**Why is this a problem?** \nBecause you just \"newed\" up Jimmy inside your own class. You are now *married* to Jimmy. If the Feds pinch Jimmy, or if Jimmy goes soft and starts singing to the cops, your whole operation goes belly up because you can't easily replace him. You're *tightly coupled*, capisce? \n\nAnd what if you wanna test your `Capo` class without actually breaking real bones? You can't, because Jimmy is baked right into your system.\n\n---\n\n### The Solution: Dependency Injection (The Clean Way)\n\nWe don\u2019t talk about names; we talk about *roles*. You don't say \"I need Jimmy.\" You say, \"I need **Muscle**.\"\n\nFirst, we set up an **Interface**. This is the contract. Any wise guy who wants to work for the family has to adhere to this contract:\n\n```csharp\npublic interface IMuscle \n{\n    void CrackSomeSkulls();\n}\n```\n\nNow, Jimmy implements that interface. He\u2019s the actual guy doing the dirty work:\n\n```csharp\npublic class JimmyTwoTimes : IMuscle \n{\n    public void CrackSomeSkulls() \n    {\n        Console.WriteLine(\"Bada bing, bada boom! Pay up!\");\n    }\n}\n```\n\nNow, when we build the `Capo` class, we don't `new` nobody. We let the **Boss** (the DI Container) hand us the muscle when we walk into the room. This is called **Constructor Injection**:\n\n```csharp\npublic class Capo \n{\n    private readonly IMuscle _muscle;\n\n    // You don't create the muscle. The Don hands him to you when you start.\n    public Capo(IMuscle muscle) \n    {\n        _muscle = muscle; \n    }\n\n    public void CollectProtectionMoney() \n    {\n        _muscle.CrackSomeSkulls();\n    }\n}\n```\n\nSee that? The `Capo` doesn't know *who* the muscle is. It could be Jimmy, it could be Tony, or it could be a fake \"mock\" muscle we use during a sit-down (unit testing) to make sure the books are clean.\n\n---\n\n### The \"Don\" (The DI Container)\n\nSo, who coordinates all this? Who hands the muscle to the Capo? \n\nIn .NET, we got **The Don**\u2014the Host Builder. When the program starts up, you register your guys with the family roster. You tell the Don: *\"Hey, whenever someone asks for an `IMuscle`, give 'em a `JimmyTwoTimes`.\"*\n\nYou do this in your `Program.cs` file:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Registering your crew with the Don:\nbuilder.Services.AddTransient<IMuscle, JimmyTwoTimes>();\nbuilder.Services.AddTransient<Capo>(); \n```\n\nNow, when the application needs a `Capo`, the Don looks at his roster, sees the `Capo` needs an `IMuscle`, grabs `JimmyTwoTimes`, stuffs him in the `Capo`'s constructor, and hands the `Capo` to the application. You don't write a single `new` keyword. Beautiful, right?\n\n---\n\n### The Family Rules: Service Lifetimes\n\nWhen you register a guy with the Don, you gotta tell him how long that guy is gonna stick around. We got three kinds of contracts:\n\n#### 1. Transient (The Freelancer)\n* **Code:** `builder.Services.AddTransient<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** You call this guy, he does the hit, he gets paid, and he disappears. Every single time a class asks for `IMuscle`, the Don sends a brand new, fresh `JimmyTwoTimes`. They don't share state, and they don't stick around.\n\n#### 2. Scoped (The Heist Guy)\n* **Code:** `builder.Services.AddScoped<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** This guy is hired for the duration of a *single operation* (in web terms, one HTTP request). From the moment the client places the order until the response is delivered, everyone in the crew uses the *same* Jimmy. Once the operation is finished, Jimmy scrambles. Next operation gets a new Jimmy.\n\n#### 3. Singleton (The Consigliere)\n* **Code:** `builder.Services.AddSingleton<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** There is only *one*. He is the family counselor. He's been here since day one, and he's gonna be here until the whole family folds (the app shuts down). Everybody in the entire organization shares this exact same guy. You gotta be careful with Singletons\u2014if he gets dirty (state changes), everyone gets dirty.\n\n---\n\n### The Bottom Line\n\nYou use Dependency Injection so you can swap out your guys without rewriting your entire code base. If Jimmy gets locked up, you just change one line in your `Program.cs` to:\n\n```csharp\nbuilder.Services.AddTransient<IMuscle, TonyTheTiger>();\n```\n\nAnd boom\u2014just like that, the entire family is now using Tony, and you didn't have to touch a single line of your `Capo` class. \n\nNow, fuggetaboutit and go write some clean code before I have to send someone to see ya. Capisce?",
+              "thought": null,
+              "thought_signature": "Eu0pCuopAQw51sckwROyAogUGJeD9MAueuZMqDa8ihaicETR_6IPKGCufgyKPqKuphItpuCAX1OpCJFqz25Znii92kiOGQbT5dJurZmPbbIIxIPtAafG_Mhf8XGwsZxP6SFiDxNGzUiCvnEnf7opgYVHH07liOQTD0FjExEq2x8Aun1gWNNx_6Co_q31u8Kbtk5FaCcOSul8m_nVpeokh1wM1Y0mBRxfmEpOT3XRYrWVvhnXHxiaYq93IFOum8NWG7RSsHZp1radoc7GhR1yXTJklhw8HdlDMpnIt6WfolnEF0kEO9dUTk5k5vzbCaACtsV9mXCcaymgEikheZawDCfX75FRyzLy1eG0uKqfIHBz3ImKqHPuJeeIzi0dwBSXWEftH4un5VEYawwGvgt5Snrqd8Zz-ISKvABymoDf1dezW6YEUFHmpLSr67k9YdEKWt-aLA21Z23mMCjcPUsiqminKW5oiRiyPdp5BdAm52QjJtRLveRoPtY0zbjS8TytstLYjr9d0BiRWnd7rJpPX1uWD6W3f4uqsXdbHVAatLm1Qx2yynMKv254eAu7iUxTUhgStkEncdFXSuss9LT6WUodnMRJR0bJbWhcWaMHp1P1nrqqWNEzOXKGjpytItAnhyhoh52zkwwqzj_A3mY616bxYQtEhoRAVMPioNYwcu0Wix4S9DB7FcHg-cgDwSut3rK_rZaZF413pTWkto00xKdh-P2UM2zunC75AsLG6l6Vt4qCt26FJf7_CHuubvJm6peGRJonI2q-fUdAIs_UJqbTHVHAHCenMgG513qfeAMqz0mLIsjUdQk0mgK-tWZvTdlB-HGUGhsTvZhLMiGD02yDHlzuPuzAR51WGwOh3FPPKJ8BCyvyZqHh1iq1WZsk4he27oP23pC4Pd8tcVqg06OFJMF6A_0mnBHjCRhTA40hqruMaust8wA9QvWVw8-yq_McelLSlVyRHPTsP_2kL6n80I88OgHxDLpfj3odLvXnmsetSSnGaLs_MqF1Z6oegKnMkvQGm7XKQd5uRBHsCaqtwQyyEPCykxfxg3NjDvpqwb9V58PvkCQTEpTSKpSXxBI1q9zGiUceZE0oD1S55Q-VzlGHEJOECQ_xFgMRUz8PXl4JgjBpSabwVhMZiCaUULXkn26YuM3QhwIXQ3Lh6L5q4Mh2II9zHMg16-wKhIIuTdxKBKxEx3s-XxtrfSl5fpI2tuBgM3v20QqHWGtfW2jhUNh6vH3dk8KSA79UOliooYmeuWwndzb-2QjrpCt0hohbCjJzlKFi_h7DcU5gFELRhspU2H-S5JrtUFXhdQOsnYerP-mDIY0diFz7AA7RDSIHDDl6o945rk5XKl2JcadNhvlqiS0SeOeDcxxxNgQoXOeDo7WndIZhD2QOr1_YpzdiEvM9L3DLKP0qohtfKWq5uqbyT6n8KWJcX74xp3ka1wLfoosDWCmt-b8-zumUi5hICud1LtolIaSMCkT0a7NmurnpGSq_aRTY7k9ef_Q0NV0eYoFVrV7RHCrQ3ZyURPbiNQ_CNeGeuBWbqRjBpX-Aaf2dXaTEbK6SQmilRcnQxCUv9MJNzuzXKoyw3ZvG-kiGyYtCoSRtWtFMnwJHuiOh20Lp2PPiRChcsOAO18j3mQGVZM_-qLqLa7v7v0_icnaVyCLpMZQPKDSk5Fhw7eUxfJKtUPOZ31CBPZnYcft83_8LkbiSbSpfXOEApErWinbbyu8U3gBCPQc3LwBHMWaZO6uJAPggMoMJW3OV7I6r4NmpOP2Xl_VAd5mx5te08EwK3aAtTQye91WT-yaSY3gP2JQAey4TqGuKFg1HDO3m1tlWTC7lBSrMMpBHn6GMGvKb0qBs4Bpk-de4OAJcmzNJlTKgykKK11pyIWkESahE_oyby8yQpHXu2Chwrn_NNa7Df1XvtYxeF9Pw7TWf6PTBatyy4HN27qofYaev4qzEpbnTAAk9QIWShcudc4FF3MWtnUzqOgImbGvA8Y2WyqeTM4PvvxIPdE9WrTld71JBMCWXPxEGI2GfhxvCZ3E3NyowzpY7X8gKkZOc9gCcsO9xi5k951NN0ubmhWk8Pn8WVgVLs_l2LOxW_XOLtqs5aT7PnCZE4H_XV02vJgaEtcvJFJ0soZkinnlPhnEVzX3WQ80b1lPB4Oyauq0c80nx7mpBQwoX-8XhApl_myJH6jKEsWXLvyx12TOmg_j5j-J9lE1iORNu2E-8_4Ge9hbwTNXUdKi5nVrQs8B9WMbUhc-l0_AaMcFRQyEaAvh1ck_SBvwtgQ-zelWrpoBJCKjxbmDnR-I4CMF7KAVhMcxJZfw1csbYaE1prZUzJGudFIoNmbhh1KNG01aGzKnH9Eciv4Agaie1WJ21qwIRubc9oqC2fqUg1ES9s7FbBn6wEgm2tc1bIcoj_hBBjR5d5LdbukAOAW6y16K10mNXxweB7znW5fHbQZ_P9MnJq_2RqkmMrS4M9L2zbZg6VgUMlmuSHaZHuI_68Ik1VjG0iKOH-rTW2K0qhxn8nW0UZfVuHsSP6iWS1MYDyA6MkcFdkF6ywG9hS9-LsV1_0Ef_zt0XK6UTFT04n8IGeUfBWuYvroz3q4KdVYsC-A3q8ZiAVtJHcF5X_VGNqvXIra_uMRwHMt7OGTVlX4pPCLdlP77dqwS8toaTgB18WjRcTuDviFaHh0WvtW-O9Z1DdkTAqQsQBo73xErrYg63Qg3YgCftLZrVIE4u3PoK8c1U4kI2hG0Lzc8I52xmXDQ7w2ogltaA9xjKvOlhWxVsMKRnoM2Co_fN5BHZfNK25dRJthyRAuWu1khD3dnneFkEQxQlJtZF7PC7A_zo8HvzLG6L7cG8SYuINm1uM9uiMfH_UZdRaqYF4HRHt_EUJABoSFYILGpNx_WVwaRr1K7dDfcooJzHjHfCv2MBWhiGjM5mpC6KIEEVX6scn-1bvtA1NRccEs9Jj7AaoL-LcTzvLk_pHnyTDdAyXrBV4_pEtjhC8uQIcB57UsWGYih3TFifm86Bh929pqpzxb8r10LWcCygpaCYSbvf02SvfG2zU0KNLGdt8fwpMq-40lcsdVFSC1WxHXxDrCL4AGML_7petqzT-6fRTeXLtObEOC75_hWZ65UlFxWhoLZXI4vfYAjlcq7ueSrMkjf4K_UHUXHFNCvD4GiMhbcEBuhROMbJGS6YrdlbGbw0Oke_yZ33OvIM32spsgHeO99F3EhQEymggmRs6jqSVs9nhNAhFoXb4thKTMoGdmj2A-Zchx2bJKAkakFZpHD1FI0qE-6W1DJPBX_lktZU246xpPTbMuFdwUyolq7qfCeHlkeKe40vaNWmJZkylS_K-of2YXtAmLCyYfY47hSwvWv6KlGk9lgdlD5Oce_uf1KJcgqOfBSfg4Qym6ycuslmENsn3zV6it1gV5LqlgEyz3pSupl3Wzq50CHxhK9ePpIBC4AXqH5chP0jw0EtNlHj1qFDRo3kf0lZ1EhvYQ1mdz-QpS4zIdTVy9MDwWmbQ1XYFLc6LCf1sOYNxNEjjwQME4QhS8IjmjkvYW4yI3h7Ly4_Ym0QmeK0V0ho1Rm2X63EXKcNScdpXFUyduk6i2yC29eK1IHFGeoHJQQFmDc4tLDPd0mI0N0rDULfy8B2pLnleqKG7JM77_G72DHIhOLUmf7kX7KLCJQXOSLJf_7wWVBgbRSXd4adAD1EJu3KnxW9NCePBQEMgQpPHBMZw5v-lpffAYwPgMfHdXDe53u50p_CwF2ZEC4uZGvUgtXdiQ4gy7kIuizyX_q6w9FbTGXJIh3tRMUfFycnw18fUqYPBgKmJ7399e7VXkIwrMthbDydI-YrThRTu99quUyE3YppTaAYrEWHDvo54nhEUReJ0_VKU9kfYUR-pGzU7qesbp0ZNkfeF4z669u4YMG2Y9YUHtaIzLTClyD6XMhXR4Ndrdtx02vdO0QhjGVCbQ1LbAD7PpKVqmZuTI3-HJFga2e_bZOeLX_9eWmE4yTdmO0lItLOIrd7LkXCHGDP5rIV6xAqybQhmgmN6LGz7ACeGAvTbv-sEDmGdxuaDfjUhTI7FoFBjlHMtbm6jMba7JGDq4Gk4PJAoOdzd3Q513Cn-7hutKFm1rO8lZaDDJBpOyuuAMkWOvwHLIA3t7K6IDtdTP-WUcVBlbOdORIukoKdAUXifqz_0pGAWvfSg4MS54F9IEtlMwb8X8sbNgsMq1NBnFP3Ft6JVifoFSMDYTLIWI_0AMQRrnjfN6IkosgbtTRMK6sDdebcLigRaWxTgae-4O8UFJaPySVf_YzMARKSmEHgsE5FTFSmQp01EoRbipv14kLbz12gAJl-6X7oUb45c-wbIgErnuvrsY3hM7JzjDR0I_0_G2GLD894o8YVjgCh2V9sMmMdE6G88ibn5rkBSM-kZCGKkw4eABEKJxTtgjcuaofZmaMEDTJvRDRYAANLOLQJ3GwHP6Rhwbv175yc6euVFItjZAWtFNlf5pFQ7RzWL6xn8NPZlV_oBPryUxhl0U8brU3YVVRsbDEkjCzlRio8A4d1Ei4x7Lh8U6jk9D5uIRKwZhxWnIxknPWNUx0wLkIM62QE2ayy-NVaD14cFGl5AW3A8BDIB7zi0wVwB8uVgw6rPB7GVH5CtuCHnQX4umgcUBN6yPwCaKdHM8RtPW-EXCvMtdx_i5OQZhBlblyrHq_ptYAOqW9DKu6cbjXHqJWJEaaI7YIJbliTbVPxLDRUVZ0hx8Eus0quQw-ognx-g9XGQEB_pnFeYAm4ngr95tEsoXCdRakbVywfKjtD78c2xoF6fuey4y2Mc9TCldnW9m2sCnXAXdzj3T2howDH5WAN8B0MIAeoum7g1rmna-DRXPz4wIIw1Ba7Y29ybS8Q99ICgvFfNFvZ1h6R7s0xtIzFUKFKBz0kzY2uSbF0YeKr38HKL2zBCjP5CtVvGwz9dq0D3g-AAihP0yj9-POgs0fKgP6UiPRoM6NEVPLOEuiDxza19Uh9moLXjWBfoBtGUP9WYZtHFUAKzRGUn4mYxITcAHczbxIq_-TDwWSwTNfKomZYBwgz8BLOP-nxHsIght0hW9S8Qn1pTpuPAuiKHpuqS8h1g6TbeJfj8Vpl_lSJbWYVmQ4BEgJu_rmG9ltiYFlNsicxlv2dvuyF1iB_LaY8lv6B8qCHmEc_fapKdVtl1OPFT4J-zfKO0AnDOeEVlNnIf5ehyvqbtZdAEsXEOvFoQBn0Gw0ZSBc-X8DvdpxtY7k35J6AHW_oCbuRVeQePhVZyaNdq1O9oljPwkuYp2sZLVJrVrQ5BVVWYF8VcYlEF3eprmMvKmT9Jnn3NlQwZHrXJEIawpGqH62uJ9LO2YxLj1f3MKbJr3dY96RJgaySsbcBP26oFwQQWjxrMnOyjVSMcV27V4Vg6ebN9bTkS6AOKqRN7a9ja3bD-GmlJbv7c6re3As84c-H1FMGuGPsNT---IxOF_JxxOxrHtX5walZQ3Vo_zTosaETGGO9CAAqtX0j8fePWjBYwpVAYY0c3VMNdvT_1QSE4ZAm5sUJ8187ioUvuR3zDMP093Z04c-hLw95VuHVgFQJLmHTrzO8wDaoIP9kCjA-afvcFruyBaTLSKL0n32-MY_RSW1svw6OQajUPVe1jC1LRnLJwBtoIZ5ul0T7cdYIh8diwTF56NTQrKsZVHErQf1IXrPrflbBdr3finc7AMFdGVD8ZoJaQ_HWDGHAoSBGGZfkTicpTkHYkSaDFcV8NZeC4XfZYscOQCZruXhmJ2RlAcnKHQdDNeNWnDGeoeL9nhy7fBQnw0AKI4xaNXhXJdXWGq2YpxYfNTJIO-67PszSzrH6wZMpqsaVsuvry0OIhAh_jxFkqpd7xHRtxG6L0kHZWucdXJKgdwIqKcNoxi4MbJsvTTNn-JOwd0Kcgu1_U3nEh1nrs5wQAtkv6xd4s7DD9IzDtSYFpXCsSoyCxIWzuYXkJdOL6DKE0miUDp5oY5ft2kuxOV1Ca4uCIMHYP2TvEgZJO-YXphgr6G7Zbw2OTqjVdw9Wb-VUwab1JgeGyV-X7k9ersXZuXC2t1S1MTioX09UfSck4dEzY4iI9jsvIVvqIJuqfJz_flCHq7PcMZMxs5Eg1Rh-9YCbr9p94MUaHWOhnS_wba6CSmBYPTbQjpoL_1QseP_pBvJSTkevFCHcev9nSvdPNYkGdJXPTcxIZfHahFn8ZiYnyhGBUN85WjtYxc7Wq8w23Ir0cDwV5Z3aycGBMtqaeuRGE7X0yTnRlSGuxRA5yWUSBb8msNJUe7AJTalWCEXBAS6BzWpLcATIlH50kN2jORKD-yyelhijrtDisQtK_iHMvKq2eO5d9qq6loXdyCPlIigHtMrU8qqamPAYaQqbOg36gE85gYA11ANx8LwUwxtzr3IRYIxMqpfl9GQq1ntT_c4uykgdn5bwH3ge5iG6Z3Wj4eoLog7-CsmPdOGJxwRnZ_kU0CgcxooikKLNUNRekl1E4O9YCPuCcv7RdAffoJc3WRnOaNW-Wa-nQ3Y33PpGt-u5sIGZJRFIDgShnTgfDiU1peTFHDx5Q7Z6OjKV9jCpQP4Hk65nk4UrhTrLR2jF3CcQjbi_i2vTrcWjgubgUhUSw4nCgf8RYQpkLstO-hhHLB6INVwAFI2vRDFgZO5x7gnUtCvlCYE-tAo3Q_TvPforZ2dT4gfPSffEjUBWCb3KrRXGRS7cCZHdPMFEBEmmWy25U_LUaUa7Ht9G3jPetM_FaDGEyjQQlL32yHzfzMzdKjmI7oKuZ72ROG6KVcBIa45eJr2SsXGEbZUR1lcG8jnSuKhPm6NZ-F_4cPozetR44t06-SloON7qa7LDcR0oy8uJ6OpRjCQeciTEDI0CCr3uuId8mdLuPKv-DsqSSQnHkwCOKk53n5eK_vCeexsZ7zGZcJkJjJLB1V82HeslEiJs9cfpGps5QKCXuIxaeeR5TK93S8Xgyk-ZY7-TIpB5LIMWFsKJpnAJgQdxPpEJ7ZyUeIyDvtXaSBV51vLNPLi_9rnFb7HV7sqyUuieOqdUp9DtZVdfU530ih8W261vlp60jk4OORLjLeuMiQNnZiytvOhtUyRawtatsLaM6Et5grVYWhZytjO0hgoYHWCa9WZpC02yrV1sB6QJwMc=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash",
+    "prompt_feedback": null,
+    "response_id": "9UcmatCDH7b3vdIPxIni8AU",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 1479,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 13,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 13
+        }
+      ],
+      "thoughts_token_count": 1389,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 2881,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "answer_text": "Alright, listen to me, and listen good. You wanna know about this thing of ours called **Dependency Injection (DI)** in C#? Grab a seat, pour yourself a glass of anisette, and let me break it down so even a low-level associate can understand. \n\nIn our line of work, we got a big rule: **Don't do everything yourself, and don't get too attached to nobody.** That\u2019s what DI is all about.\n\n---\n\n### The Problem: The \"Amateur\" Way (Tight Coupling)\n\nLet's say you're a Capo, a boss of a crew. You need to shake down some local shops. \n\nIf you're a real amateur, you write your code like this:\n\n```csharp\n// This is bad news, kid.\npublic class Capo \n{\n    private JimmyTwoTimes _muscle;\n\n    public Capo() \n    {\n        // You're \"newing\" up your own muscle inside your office.\n        _muscle = new JimmyTwoTimes(); \n    }\n\n    public void CollectProtectionMoney() \n    {\n        _muscle.CrackSomeSkulls();\n    }\n}\n```\n\n**Why is this a problem?** \nBecause you just \"newed\" up Jimmy inside your own class. You are now *married* to Jimmy. If the Feds pinch Jimmy, or if Jimmy goes soft and starts singing to the cops, your whole operation goes belly up because you can't easily replace him. You're *tightly coupled*, capisce? \n\nAnd what if you wanna test your `Capo` class without actually breaking real bones? You can't, because Jimmy is baked right into your system.\n\n---\n\n### The Solution: Dependency Injection (The Clean Way)\n\nWe don\u2019t talk about names; we talk about *roles*. You don't say \"I need Jimmy.\" You say, \"I need **Muscle**.\"\n\nFirst, we set up an **Interface**. This is the contract. Any wise guy who wants to work for the family has to adhere to this contract:\n\n```csharp\npublic interface IMuscle \n{\n    void CrackSomeSkulls();\n}\n```\n\nNow, Jimmy implements that interface. He\u2019s the actual guy doing the dirty work:\n\n```csharp\npublic class JimmyTwoTimes : IMuscle \n{\n    public void CrackSomeSkulls() \n    {\n        Console.WriteLine(\"Bada bing, bada boom! Pay up!\");\n    }\n}\n```\n\nNow, when we build the `Capo` class, we don't `new` nobody. We let the **Boss** (the DI Container) hand us the muscle when we walk into the room. This is called **Constructor Injection**:\n\n```csharp\npublic class Capo \n{\n    private readonly IMuscle _muscle;\n\n    // You don't create the muscle. The Don hands him to you when you start.\n    public Capo(IMuscle muscle) \n    {\n        _muscle = muscle; \n    }\n\n    public void CollectProtectionMoney() \n    {\n        _muscle.CrackSomeSkulls();\n    }\n}\n```\n\nSee that? The `Capo` doesn't know *who* the muscle is. It could be Jimmy, it could be Tony, or it could be a fake \"mock\" muscle we use during a sit-down (unit testing) to make sure the books are clean.\n\n---\n\n### The \"Don\" (The DI Container)\n\nSo, who coordinates all this? Who hands the muscle to the Capo? \n\nIn .NET, we got **The Don**\u2014the Host Builder. When the program starts up, you register your guys with the family roster. You tell the Don: *\"Hey, whenever someone asks for an `IMuscle`, give 'em a `JimmyTwoTimes`.\"*\n\nYou do this in your `Program.cs` file:\n\n```csharp\nvar builder = WebApplication.CreateBuilder(args);\n\n// Registering your crew with the Don:\nbuilder.Services.AddTransient<IMuscle, JimmyTwoTimes>();\nbuilder.Services.AddTransient<Capo>(); \n```\n\nNow, when the application needs a `Capo`, the Don looks at his roster, sees the `Capo` needs an `IMuscle`, grabs `JimmyTwoTimes`, stuffs him in the `Capo`'s constructor, and hands the `Capo` to the application. You don't write a single `new` keyword. Beautiful, right?\n\n---\n\n### The Family Rules: Service Lifetimes\n\nWhen you register a guy with the Don, you gotta tell him how long that guy is gonna stick around. We got three kinds of contracts:\n\n#### 1. Transient (The Freelancer)\n* **Code:** `builder.Services.AddTransient<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** You call this guy, he does the hit, he gets paid, and he disappears. Every single time a class asks for `IMuscle`, the Don sends a brand new, fresh `JimmyTwoTimes`. They don't share state, and they don't stick around.\n\n#### 2. Scoped (The Heist Guy)\n* **Code:** `builder.Services.AddScoped<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** This guy is hired for the duration of a *single operation* (in web terms, one HTTP request). From the moment the client places the order until the response is delivered, everyone in the crew uses the *same* Jimmy. Once the operation is finished, Jimmy scrambles. Next operation gets a new Jimmy.\n\n#### 3. Singleton (The Consigliere)\n* **Code:** `builder.Services.AddSingleton<IMuscle, JimmyTwoTimes>();`\n* **The Deal:** There is only *one*. He is the family counselor. He's been here since day one, and he's gonna be here until the whole family folds (the app shuts down). Everybody in the entire organization shares this exact same guy. You gotta be careful with Singletons\u2014if he gets dirty (state changes), everyone gets dirty.\n\n---\n\n### The Bottom Line\n\nYou use Dependency Injection so you can swap out your guys without rewriting your entire code base. If Jimmy gets locked up, you just change one line in your `Program.cs` to:\n\n```csharp\nbuilder.Services.AddTransient<IMuscle, TonyTheTiger>();\n```\n\nAnd boom\u2014just like that, the entire family is now using Tony, and you didn't have to touch a single line of your `Capo` class. \n\nNow, fuggetaboutit and go write some clean code before I have to send someone to see ya. Capisce?",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 1479,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 13,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 13
+      }
+    ],
+    "thoughts_token_count": 1389,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 2881,
+    "traffic_type": null
+  },
+  "run_profile": "scaleup"
+}

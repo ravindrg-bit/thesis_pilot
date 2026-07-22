@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 5,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:23:16.755847+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_0ddbd683627bcce6006a25d3256598819f882e79ce47d42486",
+    "created_at": 1780863781.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0ddbd683627bcce6006a25d32676b0819f80260d3e78abc66f",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nIt tests whether the **mean difference** between paired observations is significantly different from zero.\n\n## When to use it\n\nUse a paired-samples t-test when the two sets of scores are **linked**, such as:\n\n- The same people measured **before and after** a treatment\n- Matched pairs, such as twins or matched participants\n- The same subjects measured under two different conditions\n\n### Example\n\nYou measure students\u2019 test scores:\n\n| Student | Before tutoring | After tutoring |\n|---|---:|---:|\n| 1 | 70 | 78 |\n| 2 | 65 | 68 |\n| 3 | 80 | 85 |\n| 4 | 75 | 79 |\n\nBecause each \u201cbefore\u201d score is paired with the same student\u2019s \u201cafter\u201d score, this calls for a **paired-samples t-test**.\n\n---\n\n## Hypotheses\n\nLet \\(d\\) represent the difference between paired scores, such as:\n\n\\[\nd = \\text{After} - \\text{Before}\n\\]\n\nThe hypotheses are:\n\n### Two-tailed test\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\nThis asks whether there is **any difference** between the two related means.\n\n### One-tailed test\n\nIf you expect scores to increase:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\nIf you expect scores to decrease:\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired-samples t-test is based on the differences between pairs:\n\n\\[\nt = \\frac{\\bar{d} - \\mu_{d0}}{s_d / \\sqrt{n}}\n\\]\n\nUsually:\n\n\\[\n\\mu_{d0} = 0\n\\]\n\nSo:\n\n\\[\nt = \\frac{\\bar{d}}{s_d / \\sqrt{n}}\n\\]\n\nWhere:\n\n- \\(\\bar{d}\\) = mean of the paired differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n- \\(df = n - 1\\)\n\n---\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. **Paired observations**  \n   Each observation in one group has a meaningful match in the other group.\n\n2. **Independence of pairs**  \n   Each pair is independent of the other pairs.\n\n3. **Approximately normal differences**  \n   The differences between paired scores should be approximately normally distributed, especially for small samples.\n\nThe raw scores themselves do **not** need to be normally distributed. The assumption applies to the **difference scores**.\n\n---\n\n## Interpretation\n\nIf the p-value is less than your significance level, usually:\n\n\\[\n\\alpha = 0.05\n\\]\n\nthen you reject the null hypothesis.\n\n### Example interpretation\n\n> A paired-samples t-test showed that scores were significantly higher after tutoring than before tutoring, \\(t(3) = 4.21, p < .05\\).\n\nThis means the average change was unlikely to be due to random variation alone.\n\n---\n\n## In simple terms\n\nA **paired-samples t-test** asks:\n\n> \u201cFor the same people or matched pairs, did the average score change from one condition to another?\u201d",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863796.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 747,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5193
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nIt tests whether the **mean difference** between paired observations is significantly different from zero.\n\n## When to use it\n\nUse a paired-samples t-test when the two sets of scores are **linked**, such as:\n\n- The same people measured **before and after** a treatment\n- Matched pairs, such as twins or matched participants\n- The same subjects measured under two different conditions\n\n### Example\n\nYou measure students\u2019 test scores:\n\n| Student | Before tutoring | After tutoring |\n|---|---:|---:|\n| 1 | 70 | 78 |\n| 2 | 65 | 68 |\n| 3 | 80 | 85 |\n| 4 | 75 | 79 |\n\nBecause each \u201cbefore\u201d score is paired with the same student\u2019s \u201cafter\u201d score, this calls for a **paired-samples t-test**.\n\n---\n\n## Hypotheses\n\nLet \\(d\\) represent the difference between paired scores, such as:\n\n\\[\nd = \\text{After} - \\text{Before}\n\\]\n\nThe hypotheses are:\n\n### Two-tailed test\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\nThis asks whether there is **any difference** between the two related means.\n\n### One-tailed test\n\nIf you expect scores to increase:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\nIf you expect scores to decrease:\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\n---\n\n## Test statistic\n\nThe paired-samples t-test is based on the differences between pairs:\n\n\\[\nt = \\frac{\\bar{d} - \\mu_{d0}}{s_d / \\sqrt{n}}\n\\]\n\nUsually:\n\n\\[\n\\mu_{d0} = 0\n\\]\n\nSo:\n\n\\[\nt = \\frac{\\bar{d}}{s_d / \\sqrt{n}}\n\\]\n\nWhere:\n\n- \\(\\bar{d}\\) = mean of the paired differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n- \\(df = n - 1\\)\n\n---\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. **Paired observations**  \n   Each observation in one group has a meaningful match in the other group.\n\n2. **Independence of pairs**  \n   Each pair is independent of the other pairs.\n\n3. **Approximately normal differences**  \n   The differences between paired scores should be approximately normally distributed, especially for small samples.\n\nThe raw scores themselves do **not** need to be normally distributed. The assumption applies to the **difference scores**.\n\n---\n\n## Interpretation\n\nIf the p-value is less than your significance level, usually:\n\n\\[\n\\alpha = 0.05\n\\]\n\nthen you reject the null hypothesis.\n\n### Example interpretation\n\n> A paired-samples t-test showed that scores were significantly higher after tutoring than before tutoring, \\(t(3) = 4.21, p < .05\\).\n\nThis means the average change was unlikely to be due to random variation alone.\n\n---\n\n## In simple terms\n\nA **paired-samples t-test** asks:\n\n> \u201cFor the same people or matched pairs, did the average score change from one condition to another?\u201d",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 747,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5193
+  },
+  "run_profile": "scaleup"
+}

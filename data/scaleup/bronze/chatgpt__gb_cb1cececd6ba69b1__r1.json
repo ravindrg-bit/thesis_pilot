@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_cb1cececd6ba69b1",
+  "engine": "chatgpt",
+  "run_index": 1,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-07T20:22:22.778052+00:00",
+  "query_text": "paired samples t-test",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_049093b071b49a0b006a25d2eed0e8819ca878162e390aea5f",
+    "created_at": 1780863726.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_049093b071b49a0b006a25d2f156c4819c96d063baeb7bb2eb",
+        "content": [
+          {
+            "annotations": [],
+            "text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nCommon examples:\n\n- The same people measured **before and after** a treatment\n- Matched pairs, such as twins or matched patients\n- The same subjects tested under **two conditions**\n\n## What it tests\n\nA paired t-test checks whether the **mean difference** between paired observations is significantly different from zero.\n\nFor each pair, compute:\n\n\\[\nd_i = X_{2i} - X_{1i}\n\\]\n\nThen test:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\nagainst one of:\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\nwhere \\(\\mu_d\\) is the population mean of the paired differences.\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar{d}}{s_d / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{d}\\) = mean of the differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The observations are paired or matched.\n2. The pairs are independent of each other.\n3. The differences are approximately normally distributed.\n4. The outcome variable is continuous or approximately continuous.\n\nImportantly, the test does **not** require each condition to be normally distributed separately; it requires the **differences** to be approximately normal.\n\n## Example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 76 | 6 |\n| 2 | 65 | 70 | 5 |\n| 3 | 80 | 82 | 2 |\n| 4 | 75 | 78 | 3 |\n| 5 | 68 | 74 | 6 |\n\nDifferences:\n\n\\[\n6, 5, 2, 3, 6\n\\]\n\nMean difference:\n\n\\[\n\\bar{d} = 4.4\n\\]\n\nIf the t-test gives a small p-value, for example \\(p < .05\\), you would conclude that the before and after scores are significantly different.\n\n## Reporting format\n\nA paired-samples t-test is often reported like this:\n\n> A paired-samples t-test showed that scores were significantly higher after tutoring, \\(t(4) = 4.78\\), \\(p = .009\\).\n\nYou may also include means and standard deviations:\n\n> Scores were higher after tutoring \\((M = 76.0, SD = 4.47)\\) than before tutoring \\((M = 71.6, SD = 5.94)\\), \\(t(4) = 4.78\\), \\(p = .009\\).\n\n## When not to use it\n\nDo **not** use a paired t-test if:\n\n- The two groups are independent\n- There are more than two repeated measurements\n- The outcome is categorical\n- The difference scores are extremely non-normal with a small sample size\n\nFor independent groups, use an **independent-samples t-test**.  \nFor more than two repeated measurements, use a **repeated-measures ANOVA** or a mixed-effects model.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780863742.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4446,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 761,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5207
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "A **paired-samples t-test** (also called a **dependent t-test** or **repeated-measures t-test**) is used to compare the means of **two related measurements**.\n\nCommon examples:\n\n- The same people measured **before and after** a treatment\n- Matched pairs, such as twins or matched patients\n- The same subjects tested under **two conditions**\n\n## What it tests\n\nA paired t-test checks whether the **mean difference** between paired observations is significantly different from zero.\n\nFor each pair, compute:\n\n\\[\nd_i = X_{2i} - X_{1i}\n\\]\n\nThen test:\n\n\\[\nH_0: \\mu_d = 0\n\\]\n\nagainst one of:\n\n\\[\nH_a: \\mu_d \\neq 0\n\\]\n\n\\[\nH_a: \\mu_d > 0\n\\]\n\n\\[\nH_a: \\mu_d < 0\n\\]\n\nwhere \\(\\mu_d\\) is the population mean of the paired differences.\n\n## Test statistic\n\n\\[\nt = \\frac{\\bar{d}}{s_d / \\sqrt{n}}\n\\]\n\nwhere:\n\n- \\(\\bar{d}\\) = mean of the differences\n- \\(s_d\\) = standard deviation of the differences\n- \\(n\\) = number of pairs\n\nDegrees of freedom:\n\n\\[\ndf = n - 1\n\\]\n\n## Assumptions\n\nA paired-samples t-test assumes:\n\n1. The observations are paired or matched.\n2. The pairs are independent of each other.\n3. The differences are approximately normally distributed.\n4. The outcome variable is continuous or approximately continuous.\n\nImportantly, the test does **not** require each condition to be normally distributed separately; it requires the **differences** to be approximately normal.\n\n## Example\n\nSuppose 5 students take a test before and after tutoring.\n\n| Student | Before | After | Difference |\n|---|---:|---:|---:|\n| 1 | 70 | 76 | 6 |\n| 2 | 65 | 70 | 5 |\n| 3 | 80 | 82 | 2 |\n| 4 | 75 | 78 | 3 |\n| 5 | 68 | 74 | 6 |\n\nDifferences:\n\n\\[\n6, 5, 2, 3, 6\n\\]\n\nMean difference:\n\n\\[\n\\bar{d} = 4.4\n\\]\n\nIf the t-test gives a small p-value, for example \\(p < .05\\), you would conclude that the before and after scores are significantly different.\n\n## Reporting format\n\nA paired-samples t-test is often reported like this:\n\n> A paired-samples t-test showed that scores were significantly higher after tutoring, \\(t(4) = 4.78\\), \\(p = .009\\).\n\nYou may also include means and standard deviations:\n\n> Scores were higher after tutoring \\((M = 76.0, SD = 4.47)\\) than before tutoring \\((M = 71.6, SD = 5.94)\\), \\(t(4) = 4.78\\), \\(p = .009\\).\n\n## When not to use it\n\nDo **not** use a paired t-test if:\n\n- The two groups are independent\n- There are more than two repeated measurements\n- The outcome is categorical\n- The difference scores are extremely non-normal with a small sample size\n\nFor independent groups, use an **independent-samples t-test**.  \nFor more than two repeated measurements, use a **repeated-measures ANOVA** or a mixed-effects model.",
+  "usage": {
+    "input_tokens": 4446,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 761,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5207
+  },
+  "run_profile": "scaleup"
+}

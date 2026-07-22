@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_f3a09c028168dc20",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-05-31T23:39:29.277660+00:00",
+  "query_text": "where does the sound come from when you crack your knuckles",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cc6abd3585541a792ec89",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on scientific research, the sound you hear when cracking your knuckles comes from **gas bubbles forming and collapsing in the synovial fluid** that lubricates your joints.\n\n## The Mechanism: Cavitation\n\nHere's what happens step by step:\n\n1. **Your knuckle joints are synovial joints** \u2013 they're surrounded by a joint capsule filled with synovial fluid, which contains dissolved gases like nitrogen, oxygen, and carbon dioxide.\n\n2. **When you stretch or pull your finger**, you create a sudden increase in joint volume and a rapid drop in pressure inside the joint.\n\n3. **This pressure change causes dissolved gases to form a gas-filled cavity (bubble)** in the synovial fluid \u2013 a process called **cavitation**.\n\n4. **The formation or collapse of this bubble produces the distinctive \"pop\" sound**.\n\n## What Research Has Shown\n\nA landmark 2015 study published in *PLOS ONE* used real-time MRI video to finally settle a decades-long scientific debate. Researchers from the University of Alberta observed that when a knuckle cracked, a dark gas-filled cavity appeared in the synovial fluid. Lead researcher Greg Kawchuk described it as being \"a little bit like forming a vacuum\" \u2013 as the joint surfaces suddenly separate, there's no fluid available to fill the increasing joint volume, so a cavity is created, and that event is associated with the sound.\n\nLater research in 2018 developed a mathematical model showing that only a **partial collapse** of the bubble is needed to produce the sound, and that the bubble can actually remain in the joint fluid after cracking (which explains why you can't crack the same knuckle again immediately \u2013 the gas needs time to dissolve back into the fluid).\n\n## What It's NOT\n\nImportantly, the sound is **not** caused by:\n- Bones rubbing together\n- Tendons snapping\n- Ligaments popping\n\nThose are different phenomena that can occur in other joint conditions, but knuckle cracking specifically involves the cavitation of gas bubbles in synovial fluid.\n\n---\n\nSources:\n1. https://www.sciencedaily.com/releases/2015/04/150415155320.htm\n2. https://medicalnewsbulletin.com/cracking-knuckles-what-makes-popping-sound/\n3. https://ablebody.ca/2021/11/11/does-knuckle-cracking-cause-arthritis/\n4. https://monteortho.org/author/admin/\n5. https://rollingout.com/2025/01/10/the-damage-created-by-popping-knuckles/\n6. https://physiologicnyc.com/press/can-knuckle-cracking-really-make-your-fingers-bigger/\n7. https://smart.dhgate.com/why-do-my-knuckles-crack-causes-harmlessness-prevention/\n8. https://radiologybusiness.com/topics/medical-imaging/diagnostic-imaging/mri-cracks-case-knuckle-popping-puzzle",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780270764,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 617,
+        "prompt_tokens": 9096,
+        "total_tokens": 9713,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "where does the sound come from when you crack your knuckles"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cc6aa64a0",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"1809be5b6a1cc6aa4f50a50001d8f1b1\"},\"usage\":{\"total_tokens\":8934}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cc6aa64a0",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"1809be5b6a1cc6aa4f50a50001d8f1b1\"},\"usage\":{\"total_tokens\":8934}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"1809be5b6a1cc6aa4f50a50001d8f1b1\"},\"usage\":{\"total_tokens\":8934}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on scientific research, the sound you hear when cracking your knuckles comes from **gas bubbles forming and collapsing in the synovial fluid** that lubricates your joints.\n\n## The Mechanism: Cavitation\n\nHere's what happens step by step:\n\n1. **Your knuckle joints are synovial joints** \u2013 they're surrounded by a joint capsule filled with synovial fluid, which contains dissolved gases like nitrogen, oxygen, and carbon dioxide.\n\n2. **When you stretch or pull your finger**, you create a sudden increase in joint volume and a rapid drop in pressure inside the joint.\n\n3. **This pressure change causes dissolved gases to form a gas-filled cavity (bubble)** in the synovial fluid \u2013 a process called **cavitation**.\n\n4. **The formation or collapse of this bubble produces the distinctive \"pop\" sound**.\n\n## What Research Has Shown\n\nA landmark 2015 study published in *PLOS ONE* used real-time MRI video to finally settle a decades-long scientific debate. Researchers from the University of Alberta observed that when a knuckle cracked, a dark gas-filled cavity appeared in the synovial fluid. Lead researcher Greg Kawchuk described it as being \"a little bit like forming a vacuum\" \u2013 as the joint surfaces suddenly separate, there's no fluid available to fill the increasing joint volume, so a cavity is created, and that event is associated with the sound.\n\nLater research in 2018 developed a mathematical model showing that only a **partial collapse** of the bubble is needed to produce the sound, and that the bubble can actually remain in the joint fluid after cracking (which explains why you can't crack the same knuckle again immediately \u2013 the gas needs time to dissolve back into the fluid).\n\n## What It's NOT\n\nImportantly, the sound is **not** caused by:\n- Bones rubbing together\n- Tendons snapping\n- Ligaments popping\n\nThose are different phenomena that can occur in other joint conditions, but knuckle cracking specifically involves the cavitation of gas bubbles in synovial fluid.\n\n---\n\nSources:\n1. https://www.sciencedaily.com/releases/2015/04/150415155320.htm\n2. https://medicalnewsbulletin.com/cracking-knuckles-what-makes-popping-sound/\n3. https://ablebody.ca/2021/11/11/does-knuckle-cracking-cause-arthritis/\n4. https://monteortho.org/author/admin/\n5. https://rollingout.com/2025/01/10/the-damage-created-by-popping-knuckles/\n6. https://physiologicnyc.com/press/can-knuckle-cracking-really-make-your-fingers-bigger/\n7. https://smart.dhgate.com/why-do-my-knuckles-crack-causes-harmlessness-prevention/\n8. https://radiologybusiness.com/topics/medical-imaging/diagnostic-imaging/mri-cracks-case-knuckle-popping-puzzle",
+  "usage": {
+    "completion_tokens": 617,
+    "prompt_tokens": 9096,
+    "total_tokens": 9713,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

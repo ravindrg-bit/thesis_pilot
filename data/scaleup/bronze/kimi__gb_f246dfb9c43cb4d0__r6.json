@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_f246dfb9c43cb4d0",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T06:20:42.562432+00:00",
+  "query_text": "first satellite compared to the latest",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a265f391b4f7af18506a13e",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Now let me search for information about the latest satellites to provide a comprehensive comparison.",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780899641,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 19,
+        "prompt_tokens": 7464,
+        "total_tokens": 7483,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "first satellite compared to the latest"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a265f3866c9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ce5f06f46a265f38680f160001ee7f4e\"},\"usage\":{\"total_tokens\":7313}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a265f3866c9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ce5f06f46a265f38680f160001ee7f4e\"},\"usage\":{\"total_tokens\":7313}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ce5f06f46a265f38680f160001ee7f4e\"},\"usage\":{\"total_tokens\":7313}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Now let me search for information about the latest satellites to provide a comprehensive comparison.",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 7464,
+    "total_tokens": 7483,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

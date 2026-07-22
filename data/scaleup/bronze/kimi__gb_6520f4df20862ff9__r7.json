@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_6520f4df20862ff9",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T14:14:15.942660+00:00",
+  "query_text": "how many swimming styles can one learn",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26ce268ac16249fcfd904b",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, there are **over 20 distinct swimming styles** one can learn, ranging from competitive Olympic strokes to recreational, survival, and traditional techniques.\n\n## Main Categories of Swimming Styles\n\n### The 4 Competitive/Olympic Strokes\nThese are the core strokes used in competitive swimming:\n1. **Freestyle (Front Crawl)** \u2013 fastest stroke, alternating arm movements with flutter kick\n2. **Backstroke** \u2013 performed on your back with alternating arm movements\n3. **Breaststroke** \u2013 simultaneous arm and leg movements with frog-like kick\n4. **Butterfly** \u2013 most challenging, uses dolphin kick with simultaneous overhead arm motion\n\n### Additional Common Strokes (6-8 main types)\nBeyond the competitive strokes, swimmers commonly learn:\n5. **Sidestroke** \u2013 used in lifesaving, swimming on your side with scissor kick\n6. **Elementary Backstroke** \u2013 beginner-friendly, face stays above water\n7. **Combat Sidestroke** \u2013 used by Navy SEALs, combines elements of multiple strokes\n8. **Trudgen Stroke** \u2013 historical stroke combining side position with scissor kick\n9. **Survival Backstroke** \u2013 energy-efficient stroke for emergency situations\n\n### Other Techniques and Variations\n- **Dog Paddle** \u2013 basic recreational stroke for beginners\n- **Sculling** \u2013 hand technique to stay afloat with minimal effort\n- **Treading water** \u2013 vertical water survival technique\n- **Individual Medley (IM)** \u2013 combination of all four competitive strokes in sequence\n\n## How Many Can You Actually Learn?\n\nAccording to multiple sources, there are **dozens of different swimming techniques** when including:\n- Competitive variations\n- Recreational methods\n- Survival and lifesaving strokes\n- Cultural/traditional swimming methods\n- Modified and hybrid strokes\n\nOne source specifically states there are \"**over 20 distinct styles**\" when counting all variations. Another notes that while only 4 strokes are used in Olympic competition, the total number of swimming techniques extends well beyond that when including survival strokes, traditional techniques, and modified variations.\n\n## Benefits of Learning Multiple Styles\n\nLearning multiple swimming styles is highly recommended because:\n- **Safety**: Different situations require different strokes (e.g., sidestroke for rescues, backstroke for resting)\n- **Fitness**: Each stroke engages different muscle groups, providing a more balanced workout\n- **Injury prevention**: Rotating strokes reduces repetitive stress by distributing effort across different muscles\n- **Versatility**: Adaptability to various water conditions (pools, open water, currents)\n- **Competition**: Medley events require proficiency in all four competitive strokes\n\nFor beginners, it's common to start with freestyle or breaststroke, then progressively add backstroke, butterfly, and specialty strokes as skills and confidence develop.\n\nSources:\n1. https://www.coachslava.com/swimming-techniques/swimming-styles-guide-6-main-types-best-techniques-2025\n2. https://www.coachslava.com/swimming-techniques-drills/8-essential-swimming-styles-and-strokes-you-need-to-know\n3. https://www.ocaquatics.com/different-types-of-swim-strokes-for-children\n4. https://www.philathletics.org/swimming-styles-and-strokes/\n5. https://swimmr.net/different-swimming-strokes/\n6. https://aquaticglee.com/types-swimming-strokes-styles-names/\n7. https://www.speediswim.org/the-six-strokes-in-swimming/\n8. https://www.activesgcircle.gov.sg/read/learn-different-types-of-swimming-styles-and-strokes\n9. https://bigblueswimschool.com/blog/different-types-of-swim-strokes/\n10. https://www.swimjim.com/blog/8-different-swimming-styles-strokes\n11. https://inspiredswim.com/mastering-different-swimming-styles-types-of-swim-strokes-explained/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780928039,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 821,
+        "prompt_tokens": 8493,
+        "total_tokens": 9314,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how many swimming styles can one learn"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26ce26b767",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4d34dcbe6a26ce264f50a50001f166e3\"},\"usage\":{\"total_tokens\":8341}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26ce26b767",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4d34dcbe6a26ce264f50a50001f166e3\"},\"usage\":{\"total_tokens\":8341}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4d34dcbe6a26ce264f50a50001f166e3\"},\"usage\":{\"total_tokens\":8341}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, there are **over 20 distinct swimming styles** one can learn, ranging from competitive Olympic strokes to recreational, survival, and traditional techniques.\n\n## Main Categories of Swimming Styles\n\n### The 4 Competitive/Olympic Strokes\nThese are the core strokes used in competitive swimming:\n1. **Freestyle (Front Crawl)** \u2013 fastest stroke, alternating arm movements with flutter kick\n2. **Backstroke** \u2013 performed on your back with alternating arm movements\n3. **Breaststroke** \u2013 simultaneous arm and leg movements with frog-like kick\n4. **Butterfly** \u2013 most challenging, uses dolphin kick with simultaneous overhead arm motion\n\n### Additional Common Strokes (6-8 main types)\nBeyond the competitive strokes, swimmers commonly learn:\n5. **Sidestroke** \u2013 used in lifesaving, swimming on your side with scissor kick\n6. **Elementary Backstroke** \u2013 beginner-friendly, face stays above water\n7. **Combat Sidestroke** \u2013 used by Navy SEALs, combines elements of multiple strokes\n8. **Trudgen Stroke** \u2013 historical stroke combining side position with scissor kick\n9. **Survival Backstroke** \u2013 energy-efficient stroke for emergency situations\n\n### Other Techniques and Variations\n- **Dog Paddle** \u2013 basic recreational stroke for beginners\n- **Sculling** \u2013 hand technique to stay afloat with minimal effort\n- **Treading water** \u2013 vertical water survival technique\n- **Individual Medley (IM)** \u2013 combination of all four competitive strokes in sequence\n\n## How Many Can You Actually Learn?\n\nAccording to multiple sources, there are **dozens of different swimming techniques** when including:\n- Competitive variations\n- Recreational methods\n- Survival and lifesaving strokes\n- Cultural/traditional swimming methods\n- Modified and hybrid strokes\n\nOne source specifically states there are \"**over 20 distinct styles**\" when counting all variations. Another notes that while only 4 strokes are used in Olympic competition, the total number of swimming techniques extends well beyond that when including survival strokes, traditional techniques, and modified variations.\n\n## Benefits of Learning Multiple Styles\n\nLearning multiple swimming styles is highly recommended because:\n- **Safety**: Different situations require different strokes (e.g., sidestroke for rescues, backstroke for resting)\n- **Fitness**: Each stroke engages different muscle groups, providing a more balanced workout\n- **Injury prevention**: Rotating strokes reduces repetitive stress by distributing effort across different muscles\n- **Versatility**: Adaptability to various water conditions (pools, open water, currents)\n- **Competition**: Medley events require proficiency in all four competitive strokes\n\nFor beginners, it's common to start with freestyle or breaststroke, then progressively add backstroke, butterfly, and specialty strokes as skills and confidence develop.\n\nSources:\n1. https://www.coachslava.com/swimming-techniques/swimming-styles-guide-6-main-types-best-techniques-2025\n2. https://www.coachslava.com/swimming-techniques-drills/8-essential-swimming-styles-and-strokes-you-need-to-know\n3. https://www.ocaquatics.com/different-types-of-swim-strokes-for-children\n4. https://www.philathletics.org/swimming-styles-and-strokes/\n5. https://swimmr.net/different-swimming-strokes/\n6. https://aquaticglee.com/types-swimming-strokes-styles-names/\n7. https://www.speediswim.org/the-six-strokes-in-swimming/\n8. https://www.activesgcircle.gov.sg/read/learn-different-types-of-swimming-styles-and-strokes\n9. https://bigblueswimschool.com/blog/different-types-of-swim-strokes/\n10. https://www.swimjim.com/blog/8-different-swimming-styles-strokes\n11. https://inspiredswim.com/mastering-different-swimming-styles-types-of-swim-strokes-explained/",
+  "usage": {
+    "completion_tokens": 821,
+    "prompt_tokens": 8493,
+    "total_tokens": 9314,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_eaab9147ac75176b",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-05-31T23:38:08.910567+00:00",
+  "query_text": "which came first the walking dead comic or show",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cc65dba3a45d296a8c7fb",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series debuted on **October 8, 2003**, published by Image Comics and created by writer Robert Kirkman and artist Tony Moore.\n\nThe TV show adaptation came much later, premiering on **October 31, 2010** on AMC. The show was announced in August 2009, with filming beginning in May 2010.\n\nSo the comic predates the TV show by approximately **7 years**.\n\nSources:\n1. https://walkingdead.fandom.com/wiki/Issue_1\n2. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n3. https://walking-dead-new-blood.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n4. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n5. https://comicvine.gamespot.com/the-walking-dead/4075-27/\n6. https://www.catawiki.com/en/stories/4771-the-walking-dead-comic-vs-the-show-what-s-the-same-and-what-s-different\n7. https://www.thepopverse.com/the-walking-dead-read-play-order-comics-graphic-novels-spinoffs-release-chronological-order\n8. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780270686,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 299,
+        "prompt_tokens": 8678,
+        "total_tokens": 8977,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "which came first the walking dead comic or show"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cc65c0bb1",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"f62e6ce76a1cc65c4f50a50001d8f112\"},\"usage\":{\"total_tokens\":8522}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cc65c0bb1",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"f62e6ce76a1cc65c4f50a50001d8f112\"},\"usage\":{\"total_tokens\":8522}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"f62e6ce76a1cc65c4f50a50001d8f112\"},\"usage\":{\"total_tokens\":8522}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, **The Walking Dead comic came first**.\n\nThe comic book series debuted on **October 8, 2003**, published by Image Comics and created by writer Robert Kirkman and artist Tony Moore.\n\nThe TV show adaptation came much later, premiering on **October 31, 2010** on AMC. The show was announced in August 2009, with filming beginning in May 2010.\n\nSo the comic predates the TV show by approximately **7 years**.\n\nSources:\n1. https://walkingdead.fandom.com/wiki/Issue_1\n2. https://ultimatepopculture.fandom.com/wiki/The_Walking_Dead_(comic_book)\n3. https://walking-dead-new-blood.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n4. https://walkingdead.fandom.com/wiki/The_Walking_Dead_(Comic_Series)\n5. https://comicvine.gamespot.com/the-walking-dead/4075-27/\n6. https://www.catawiki.com/en/stories/4771-the-walking-dead-comic-vs-the-show-what-s-the-same-and-what-s-different\n7. https://www.thepopverse.com/the-walking-dead-read-play-order-comics-graphic-novels-spinoffs-release-chronological-order\n8. https://zombie.fandom.com/wiki/The_Walking_Dead_(Comic_Series)",
+  "usage": {
+    "completion_tokens": 299,
+    "prompt_tokens": 8678,
+    "total_tokens": 8977,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

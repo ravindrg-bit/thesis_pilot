@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_31878cf7e84996d8",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:29:16.531507+00:00",
+  "query_text": "how much is too much b12",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26edd3f05a5f054dd9b6ae",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here's what you need to know about vitamin B12 intake:\n\n## No Established Upper Limit\n\nVitamin B12 **does not have a Tolerable Upper Intake Level (UL)** because it has very low potential for toxicity. The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine did not establish a UL for vitamin B12, as it is generally considered safe even at high doses.\n\n## Why B12 Is Considered Safe\n\n- **Water-soluble**: B12 is a water-soluble vitamin, meaning any excess is excreted through urine rather than stored in the body\n- The Institute of Medicine states that **\"no adverse effects have been associated with excess vitamin B12 intake from food and supplements in healthy individuals\"**\n\n## Recommended Daily Amounts\n\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg |\n| Pregnancy | 2.6 mcg |\n| Breastfeeding | 2.8 mcg |\n\n## What Counts as \"Too Much\" in Practice\n\nWhile there's no official toxic threshold, some considerations exist:\n\n- **Supplements of 25 mcg/day or higher** may be associated with increased risk of bone fractures in some studies\n- **Oral doses up to 1,000 mcg/day** are commonly used to treat deficiency and are generally considered safe\n- High-dose supplements (500\u20131,000 mcg) are often recommended for those with absorption issues since only a small percentage is actually absorbed\n\n## Possible Side Effects at High Doses\n\nThough rare, some people taking very high amounts may experience:\n- Skin reactions (acne, rosacea-like rashes, flushing)\n- Mild gastrointestinal upset (nausea, vomiting, diarrhea)\n- Headaches, dizziness, or tingling in hands and feet\n\n## Important Caveats\n\n- **Folic acid interaction**: High folic acid intake (>1 mg/day) can mask B12 deficiency symptoms, potentially leading to nervous system damage if untreated\n- **Kidney disease**: Very high B12 doses may cause complications in people with kidney disease\n- **Pernicious anemia**: People with this condition cannot absorb B12 properly and need injections rather than oral supplements\n\n## Bottom Line\n\nThere is essentially **no \"too much\" B12** in terms of toxicity for healthy individuals. However, you should still:\n- Consult a healthcare provider before taking high-dose supplements\n- Not use high-dose B12 to self-treat without proper diagnosis\n- Be aware that more isn't necessarily better\u2014your body can only absorb so much at once\n\nSources:\n1. https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/\n2. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n3. https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/overview-of-vitamins\n4. https://www.health.com/how-much-vitamin-b12-per-day-should-you-take-11896280\n5. https://www.health.harvard.edu/healthy-aging-and-longevity/should-you-take-a-vitamin-b12-supplement\n6. https://www.mayoclinic.org/drugs-supplements-vitamin-b12/art-20363663\n7. https://biologyinsights.com/can-you-overdose-on-vitamin-b12/\n8. https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-b/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780936148,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 749,
+        "prompt_tokens": 7406,
+        "total_tokens": 8155,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much is too much b12"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26edd2e7ed",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"e2030dcf6a26edd24f50a50001f192f0\"},\"usage\":{\"total_tokens\":7255}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26edd2e7ed",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"e2030dcf6a26edd24f50a50001f192f0\"},\"usage\":{\"total_tokens\":7255}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"e2030dcf6a26edd24f50a50001f192f0\"},\"usage\":{\"total_tokens\":7255}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here's what you need to know about vitamin B12 intake:\n\n## No Established Upper Limit\n\nVitamin B12 **does not have a Tolerable Upper Intake Level (UL)** because it has very low potential for toxicity. The Food and Nutrition Board at the National Academies of Sciences, Engineering, and Medicine did not establish a UL for vitamin B12, as it is generally considered safe even at high doses.\n\n## Why B12 Is Considered Safe\n\n- **Water-soluble**: B12 is a water-soluble vitamin, meaning any excess is excreted through urine rather than stored in the body\n- The Institute of Medicine states that **\"no adverse effects have been associated with excess vitamin B12 intake from food and supplements in healthy individuals\"**\n\n## Recommended Daily Amounts\n\n| Group | RDA |\n|-------|-----|\n| Adults (14+ years) | 2.4 mcg |\n| Pregnancy | 2.6 mcg |\n| Breastfeeding | 2.8 mcg |\n\n## What Counts as \"Too Much\" in Practice\n\nWhile there's no official toxic threshold, some considerations exist:\n\n- **Supplements of 25 mcg/day or higher** may be associated with increased risk of bone fractures in some studies\n- **Oral doses up to 1,000 mcg/day** are commonly used to treat deficiency and are generally considered safe\n- High-dose supplements (500\u20131,000 mcg) are often recommended for those with absorption issues since only a small percentage is actually absorbed\n\n## Possible Side Effects at High Doses\n\nThough rare, some people taking very high amounts may experience:\n- Skin reactions (acne, rosacea-like rashes, flushing)\n- Mild gastrointestinal upset (nausea, vomiting, diarrhea)\n- Headaches, dizziness, or tingling in hands and feet\n\n## Important Caveats\n\n- **Folic acid interaction**: High folic acid intake (>1 mg/day) can mask B12 deficiency symptoms, potentially leading to nervous system damage if untreated\n- **Kidney disease**: Very high B12 doses may cause complications in people with kidney disease\n- **Pernicious anemia**: People with this condition cannot absorb B12 properly and need injections rather than oral supplements\n\n## Bottom Line\n\nThere is essentially **no \"too much\" B12** in terms of toxicity for healthy individuals. However, you should still:\n- Consult a healthcare provider before taking high-dose supplements\n- Not use high-dose B12 to self-treat without proper diagnosis\n- Be aware that more isn't necessarily better\u2014your body can only absorb so much at once\n\nSources:\n1. https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/\n2. https://nutritionsource.hsph.harvard.edu/vitamin-b12/\n3. https://www.merckmanuals.com/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/overview-of-vitamins\n4. https://www.health.com/how-much-vitamin-b12-per-day-should-you-take-11896280\n5. https://www.health.harvard.edu/healthy-aging-and-longevity/should-you-take-a-vitamin-b12-supplement\n6. https://www.mayoclinic.org/drugs-supplements-vitamin-b12/art-20363663\n7. https://biologyinsights.com/can-you-overdose-on-vitamin-b12/\n8. https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-b/",
+  "usage": {
+    "completion_tokens": 749,
+    "prompt_tokens": 7406,
+    "total_tokens": 8155,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

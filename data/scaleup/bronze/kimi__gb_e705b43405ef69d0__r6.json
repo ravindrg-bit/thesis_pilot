@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_e705b43405ef69d0",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:22:01.901667+00:00",
+  "query_text": "How to actually pronounce doge",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ab93a63d40921e27cdbb",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, there are actually **two different pronunciations** of \"doge\" depending on which meaning you're referring to:\n\n## 1. The Doge Meme / Dogecoin\n\nThe correct pronunciation is **\"dohj\"** (IPA: /d\u0259\u028a\u0292/ or /do\u028a\u0292/).\n\nThis was confirmed by Dogecoin co-creator Jackson Palmer, who explained that the word was inspired by the animated series *Homestar Runner*. In a 2005 episode, a character spells out \"D-O-G-E\" and another character reads it as \"dohj\" (/d\u0259\u028a\u0292/).\n\nThis pronunciation sounds like:\n- The \"do\" in \"don't\"\n- The \"j\" sound in the French \"Je m'appelle\" or the \"s\" in \"vision\"\n\nSo **\"dohj-coin\"** for Dogecoin.\n\n## 2. The Historical Title (Venetian/Genoese Ruler)\n\nThe traditional pronunciation is **\"dohj\"** with a hard \"j\" sound (IPA: /d\u0259\u028ad\u0292/ or /do\u028ad\u0292/), rhyming with \"dodge.\"\n\nThis refers to the chief magistrate in the former republics of Venice and Genoa in Italy. The word comes from Italian *doge*, derived from Latin *dux* meaning \"leader.\"\n\n## Common Mispronunciations\n\nMany people incorrectly say:\n- \"Dog\" (like the animal)\n- \"Doggy\" \n- \"Dodge\" (/d\u0252d\u0292/)\n- \"Dog-ee\" (two syllables)\n- \"Dogue\" (rhyming with \"rogue\" or \"vogue\" \u2014 this was used by some early Dogecoin adopters but is not the creator-intended pronunciation)\n\n## Summary\n\n| Context | Pronunciation | IPA |\n|--------|---------------|-----|\n| Meme / Dogecoin (creator's intent) | \"dohj\" | /d\u0259\u028a\u0292/ or /do\u028a\u0292/ |\n| Venetian ruler (traditional) | \"dohj\" (like \"dodge\") | /d\u0259\u028ad\u0292/ or /do\u028ad\u0292/ |\n\nIf you're talking about the internet meme or cryptocurrency, **\"dohj\"** (/d\u0259\u028a\u0292/) is the officially confirmed pronunciation.\n\nSources:\n1. https://accenthero.com/app/pronunciation-practice/english/american/doge\n2. https://dictionary.cambridge.org/pronunciation/english/doge\n3. https://dictionary.cambridge.org/us/pronunciation/english/doge\n4. https://www.collinsdictionary.com/dictionary/english/doge\n5. https://www.cryptopolitan.com/how-do-you-pronounce-dogecoin/\n6. https://elementalcrypto.com/dogecoin/how-to-pronounce-dogecoin/\n7. https://cryptonews.net/news/altcoins/20844172/\n8. https://tieba.baidu.com/p/7611827332\n9. https://italianhistories.com/podcast/venice-a-saint-comes-to-venice/\n10. https://toipa.org/BrE/doge\n11. https://toipa.org/AmE/doge",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780788116,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 702,
+        "prompt_tokens": 7727,
+        "total_tokens": 8429,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How to actually pronounce doge"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ab9276e9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"6766a7366a24ab92680f160001eb5a8f\"},\"usage\":{\"total_tokens\":7577}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ab9276e9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"6766a7366a24ab92680f160001eb5a8f\"},\"usage\":{\"total_tokens\":7577}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"6766a7366a24ab92680f160001eb5a8f\"},\"usage\":{\"total_tokens\":7577}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, there are actually **two different pronunciations** of \"doge\" depending on which meaning you're referring to:\n\n## 1. The Doge Meme / Dogecoin\n\nThe correct pronunciation is **\"dohj\"** (IPA: /d\u0259\u028a\u0292/ or /do\u028a\u0292/).\n\nThis was confirmed by Dogecoin co-creator Jackson Palmer, who explained that the word was inspired by the animated series *Homestar Runner*. In a 2005 episode, a character spells out \"D-O-G-E\" and another character reads it as \"dohj\" (/d\u0259\u028a\u0292/).\n\nThis pronunciation sounds like:\n- The \"do\" in \"don't\"\n- The \"j\" sound in the French \"Je m'appelle\" or the \"s\" in \"vision\"\n\nSo **\"dohj-coin\"** for Dogecoin.\n\n## 2. The Historical Title (Venetian/Genoese Ruler)\n\nThe traditional pronunciation is **\"dohj\"** with a hard \"j\" sound (IPA: /d\u0259\u028ad\u0292/ or /do\u028ad\u0292/), rhyming with \"dodge.\"\n\nThis refers to the chief magistrate in the former republics of Venice and Genoa in Italy. The word comes from Italian *doge*, derived from Latin *dux* meaning \"leader.\"\n\n## Common Mispronunciations\n\nMany people incorrectly say:\n- \"Dog\" (like the animal)\n- \"Doggy\" \n- \"Dodge\" (/d\u0252d\u0292/)\n- \"Dog-ee\" (two syllables)\n- \"Dogue\" (rhyming with \"rogue\" or \"vogue\" \u2014 this was used by some early Dogecoin adopters but is not the creator-intended pronunciation)\n\n## Summary\n\n| Context | Pronunciation | IPA |\n|--------|---------------|-----|\n| Meme / Dogecoin (creator's intent) | \"dohj\" | /d\u0259\u028a\u0292/ or /do\u028a\u0292/ |\n| Venetian ruler (traditional) | \"dohj\" (like \"dodge\") | /d\u0259\u028ad\u0292/ or /do\u028ad\u0292/ |\n\nIf you're talking about the internet meme or cryptocurrency, **\"dohj\"** (/d\u0259\u028a\u0292/) is the officially confirmed pronunciation.\n\nSources:\n1. https://accenthero.com/app/pronunciation-practice/english/american/doge\n2. https://dictionary.cambridge.org/pronunciation/english/doge\n3. https://dictionary.cambridge.org/us/pronunciation/english/doge\n4. https://www.collinsdictionary.com/dictionary/english/doge\n5. https://www.cryptopolitan.com/how-do-you-pronounce-dogecoin/\n6. https://elementalcrypto.com/dogecoin/how-to-pronounce-dogecoin/\n7. https://cryptonews.net/news/altcoins/20844172/\n8. https://tieba.baidu.com/p/7611827332\n9. https://italianhistories.com/podcast/venice-a-saint-comes-to-venice/\n10. https://toipa.org/BrE/doge\n11. https://toipa.org/AmE/doge",
+  "usage": {
+    "completion_tokens": 702,
+    "prompt_tokens": 7727,
+    "total_tokens": 8429,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

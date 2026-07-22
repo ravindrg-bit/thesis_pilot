@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_73b258264b7984d1",
+  "engine": "kimi",
+  "run_index": 6,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T19:02:22.372802+00:00",
+  "query_text": "Sign up for a photography course at the community center",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2711b902f4d3f9001e6954",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found several community centers and arts organizations that offer photography courses. Here's how you can sign up:\n\n## Phoenix Center for the Arts\n\nThe Phoenix Center for the Arts offers photography classes including both digital and darkroom developing. They have multi-week classes, one or two day workshops, and offsite photography workshops.\n\n**To register:**\n- Visit their photography class page and click the \"Sign Up\" button at the bottom of a class description\n- You'll need to create a **Mindbody account** to register for classes\n- For questions about registration or financial aid, call **(602) 254-3100** or email **contacts@phoenixcenterforthearts.org**\n\n**Before attending:** You must digitally sign their Student Agreement prior to arriving for in-person classes.\n\n## Monroe County Center (Cleveland State Community College)\n\nThey offer photography classes during January and February. \n\n**To sign up:**\n- Visit their community classes page to be added to the notification list for upcoming photography classes\n\n## Center for Community Arts (Shadelands location)\n\nThey offer digital media and photography classes.\n\n**To register:**\n- Visit their photography and digital media classes page\n- Browse available classes and register online\n\n## Los Angeles Center of Photography (LACPhoto)\n\nThey have registration open for photography courses.\n\n**To sign up:**\n- Visit their website and click \"Sign Up Here\" to register\n\n---\n\n**General tips for signing up at any community center:**\n1. Check if you need to create an account on their registration platform first\n2. Have payment information ready\n3. Look for early registration discounts\n4. Ask about financial aid or sliding scale fees if needed\n5. Check equipment requirements\u2014some classes may require you to bring your own camera\n\nIf you have a specific community center in mind, I recommend calling them directly or visiting their website for the most accurate registration information.\n\nSources:\n1. https://phoenixcenterforthearts.org/class/photography/\n2. https://www.clevelandstatecc.edu/monroe-county-center/monroe-community-classes/\n3. https://lacphoto.org/\n4. https://www.sfcc.edu/programs/photography/\n5. https://www.communityarts.org/classes/photography-digital-media\n6. https://www.linandjirsa.com/wedding-photography-course/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780945337,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 481,
+        "prompt_tokens": 1553,
+        "total_tokens": 2034,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Sign up for a photography course at the community center"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2711b91ff3",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"72fa3aa36a2711b9680f160001f0294d\"},\"usage\":{\"total_tokens\":1399}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2711b91ff3",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"72fa3aa36a2711b9680f160001f0294d\"},\"usage\":{\"total_tokens\":1399}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"72fa3aa36a2711b9680f160001f0294d\"},\"usage\":{\"total_tokens\":1399}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found several community centers and arts organizations that offer photography courses. Here's how you can sign up:\n\n## Phoenix Center for the Arts\n\nThe Phoenix Center for the Arts offers photography classes including both digital and darkroom developing. They have multi-week classes, one or two day workshops, and offsite photography workshops.\n\n**To register:**\n- Visit their photography class page and click the \"Sign Up\" button at the bottom of a class description\n- You'll need to create a **Mindbody account** to register for classes\n- For questions about registration or financial aid, call **(602) 254-3100** or email **contacts@phoenixcenterforthearts.org**\n\n**Before attending:** You must digitally sign their Student Agreement prior to arriving for in-person classes.\n\n## Monroe County Center (Cleveland State Community College)\n\nThey offer photography classes during January and February. \n\n**To sign up:**\n- Visit their community classes page to be added to the notification list for upcoming photography classes\n\n## Center for Community Arts (Shadelands location)\n\nThey offer digital media and photography classes.\n\n**To register:**\n- Visit their photography and digital media classes page\n- Browse available classes and register online\n\n## Los Angeles Center of Photography (LACPhoto)\n\nThey have registration open for photography courses.\n\n**To sign up:**\n- Visit their website and click \"Sign Up Here\" to register\n\n---\n\n**General tips for signing up at any community center:**\n1. Check if you need to create an account on their registration platform first\n2. Have payment information ready\n3. Look for early registration discounts\n4. Ask about financial aid or sliding scale fees if needed\n5. Check equipment requirements\u2014some classes may require you to bring your own camera\n\nIf you have a specific community center in mind, I recommend calling them directly or visiting their website for the most accurate registration information.\n\nSources:\n1. https://phoenixcenterforthearts.org/class/photography/\n2. https://www.clevelandstatecc.edu/monroe-county-center/monroe-community-classes/\n3. https://lacphoto.org/\n4. https://www.sfcc.edu/programs/photography/\n5. https://www.communityarts.org/classes/photography-digital-media\n6. https://www.linandjirsa.com/wedding-photography-course/",
+  "usage": {
+    "completion_tokens": 481,
+    "prompt_tokens": 1553,
+    "total_tokens": 2034,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

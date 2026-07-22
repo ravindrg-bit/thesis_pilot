@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "kimi",
+  "run_index": 4,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T10:29:22.126242+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a269960c83904a6d93560bd",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Computers and calculators achieve accurate square root calculations through several sophisticated methods, ranging from ancient iterative algorithms to modern hardware implementations. Here's how they work:\n\n## Primary Methods Used\n\n### 1. Iterative Methods (Software-Based Approaches)\n\n**Newton-Raphson Method / Babylonian Method (Heron's Method):**\nThis is the most common approach. The algorithm starts with an initial guess and repeatedly refines it using the formula:\n\n$$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{a}{x_n}\\right)$$\n\nWhere $a$ is the number we want the square root of. This method converges extremely quickly\u2014the number of correct digits roughly doubles with each iteration. Typically, 5-6 iterations are sufficient for 15-digit precision.\n\n**Improved Newton-Raphson (Division-Free):**\nSince division is computationally expensive, modern calculators often compute $\\frac{1}{\\sqrt{a}}$ instead, then multiply by $a$ to get $\\sqrt{a}$. The iteration becomes:\n\n$$x_{n+1} = \\frac{3}{2}x_n - \\frac{x_n^3 a}{2}$$\n\nThis formula uses only multiplications and additions (division by 2 is trivial in binary), making it much faster on modern processors.\n\n### 2. Hardware Implementations\n\n**Direct Hardware Instructions:**\nMost modern CPUs (x86, ARM) have dedicated square root instructions. These typically implement digit-by-digit algorithms (similar to long division) in base 2, 4, or 16. While accurate, these are among the slowest arithmetic operations, often taking 16-64 clock cycles.\n\n**Goldschmidt's Algorithm:**\nSome processors use this method, which calculates $\\sqrt{a}$ and $\\frac{1}{\\sqrt{a}}$ simultaneously. If the CPU supports fused multiply-add operations (FMA), this can be faster than Newton's method.\n\n### 3. Alternative Approaches\n\n**Using Logarithms:**\nSome calculators, particularly older or simpler ones, use the identity:\n$$\\sqrt{a} = e^{(\\ln a)/2} \\text{ or } \\sqrt{a} = 10^{(\\log_{10} a)/2}$$\n\nThis requires implementing efficient logarithm and exponential functions.\n\n**CORDIC Algorithm:**\nFor systems where even multiplication was historically expensive, CORDIC (Coordinate Rotation Digital Computer) uses only additions, subtractions, and bit shifts to compute square roots and other functions.\n\n## Why These Methods Are So Accurate\n\n1. **Quadratic Convergence:** Newton-Raphson methods double the number of correct digits each iteration, achieving extraordinary precision in very few steps.\n\n2. **Arbitrary Precision:** For very high precision (thousands or millions of digits), algorithms use variable precision\u2014calculating rough approximations first, then refining with full precision only at the final steps.\n\n3. **Error Control:** The iteration stops when successive approximations differ by less than a specified epsilon (e.g., 0.0001 or smaller), guaranteeing the desired accuracy.\n\n4. **Binary Representation:** Computers work in binary, and operations like division by 2 are simply bit shifts, eliminating rounding errors in those steps.\n\n## Historical Context\n\nThe Babylonian method dates back to at least 1700 BCE, demonstrating that the mathematical foundations are ancient. What makes modern implementations so powerful is the ability to perform millions of these simple operations per second with perfect consistency.\n\nSources:\n1. https://androidcalculator.com/how-does-a-calculator-computes-square-roots/\n2. https://downloads.ctfassets.net/oshmmv7kdjgm/6hjp4FzXbMhGk4x17uwkBi/b51007f4b638f93862fac5a074c4d6ce/HelloWorld_8.pdf\n3. http://mrnashsmathclass.weebly.com/uploads/1/3/5/1/13512417/abc.pdf\n4. https://cs.stackexchange.com/questions/133616/what-algorithm-do-computers-use-to-compute-the-square-root-of-a-number\n5. https://stackoverflow.com/questions/12304577/how-does-the-computer-calculate-square-roots\n6. https://www.101computing.net/square-root-estimation-algorithms/\n7. https://github.com/VinodkumarShukla/Babylonian-Square-Root-Calculator\n8. https://www.worldradiohistory.com/Archive-Electronic-Design/1973/Electronic-Design-V21-N15-1973-0719.pdf\n9. https://www.worldradiohistory.com/BOOKSHELF-ARH/Technology/Radio-Shack/Radio-Shack-Understanding-Digital-Electronics-1978.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780914530,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 994,
+        "prompt_tokens": 8532,
+        "total_tokens": 9526,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26996051ad",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"3a45c3a46a269960680f160001ef471d\"},\"usage\":{\"total_tokens\":8376}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26996051ad",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"3a45c3a46a269960680f160001ef471d\"},\"usage\":{\"total_tokens\":8376}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"3a45c3a46a269960680f160001ef471d\"},\"usage\":{\"total_tokens\":8376}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Computers and calculators achieve accurate square root calculations through several sophisticated methods, ranging from ancient iterative algorithms to modern hardware implementations. Here's how they work:\n\n## Primary Methods Used\n\n### 1. Iterative Methods (Software-Based Approaches)\n\n**Newton-Raphson Method / Babylonian Method (Heron's Method):**\nThis is the most common approach. The algorithm starts with an initial guess and repeatedly refines it using the formula:\n\n$$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{a}{x_n}\\right)$$\n\nWhere $a$ is the number we want the square root of. This method converges extremely quickly\u2014the number of correct digits roughly doubles with each iteration. Typically, 5-6 iterations are sufficient for 15-digit precision.\n\n**Improved Newton-Raphson (Division-Free):**\nSince division is computationally expensive, modern calculators often compute $\\frac{1}{\\sqrt{a}}$ instead, then multiply by $a$ to get $\\sqrt{a}$. The iteration becomes:\n\n$$x_{n+1} = \\frac{3}{2}x_n - \\frac{x_n^3 a}{2}$$\n\nThis formula uses only multiplications and additions (division by 2 is trivial in binary), making it much faster on modern processors.\n\n### 2. Hardware Implementations\n\n**Direct Hardware Instructions:**\nMost modern CPUs (x86, ARM) have dedicated square root instructions. These typically implement digit-by-digit algorithms (similar to long division) in base 2, 4, or 16. While accurate, these are among the slowest arithmetic operations, often taking 16-64 clock cycles.\n\n**Goldschmidt's Algorithm:**\nSome processors use this method, which calculates $\\sqrt{a}$ and $\\frac{1}{\\sqrt{a}}$ simultaneously. If the CPU supports fused multiply-add operations (FMA), this can be faster than Newton's method.\n\n### 3. Alternative Approaches\n\n**Using Logarithms:**\nSome calculators, particularly older or simpler ones, use the identity:\n$$\\sqrt{a} = e^{(\\ln a)/2} \\text{ or } \\sqrt{a} = 10^{(\\log_{10} a)/2}$$\n\nThis requires implementing efficient logarithm and exponential functions.\n\n**CORDIC Algorithm:**\nFor systems where even multiplication was historically expensive, CORDIC (Coordinate Rotation Digital Computer) uses only additions, subtractions, and bit shifts to compute square roots and other functions.\n\n## Why These Methods Are So Accurate\n\n1. **Quadratic Convergence:** Newton-Raphson methods double the number of correct digits each iteration, achieving extraordinary precision in very few steps.\n\n2. **Arbitrary Precision:** For very high precision (thousands or millions of digits), algorithms use variable precision\u2014calculating rough approximations first, then refining with full precision only at the final steps.\n\n3. **Error Control:** The iteration stops when successive approximations differ by less than a specified epsilon (e.g., 0.0001 or smaller), guaranteeing the desired accuracy.\n\n4. **Binary Representation:** Computers work in binary, and operations like division by 2 are simply bit shifts, eliminating rounding errors in those steps.\n\n## Historical Context\n\nThe Babylonian method dates back to at least 1700 BCE, demonstrating that the mathematical foundations are ancient. What makes modern implementations so powerful is the ability to perform millions of these simple operations per second with perfect consistency.\n\nSources:\n1. https://androidcalculator.com/how-does-a-calculator-computes-square-roots/\n2. https://downloads.ctfassets.net/oshmmv7kdjgm/6hjp4FzXbMhGk4x17uwkBi/b51007f4b638f93862fac5a074c4d6ce/HelloWorld_8.pdf\n3. http://mrnashsmathclass.weebly.com/uploads/1/3/5/1/13512417/abc.pdf\n4. https://cs.stackexchange.com/questions/133616/what-algorithm-do-computers-use-to-compute-the-square-root-of-a-number\n5. https://stackoverflow.com/questions/12304577/how-does-the-computer-calculate-square-roots\n6. https://www.101computing.net/square-root-estimation-algorithms/\n7. https://github.com/VinodkumarShukla/Babylonian-Square-Root-Calculator\n8. https://www.worldradiohistory.com/Archive-Electronic-Design/1973/Electronic-Design-V21-N15-1973-0719.pdf\n9. https://www.worldradiohistory.com/BOOKSHELF-ARH/Technology/Radio-Shack/Radio-Shack-Understanding-Digital-Electronics-1978.pdf",
+  "usage": {
+    "completion_tokens": 994,
+    "prompt_tokens": 8532,
+    "total_tokens": 9526,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

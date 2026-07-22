@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_d11a15fb3622af70",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T04:46:02.066046+00:00",
+  "query_text": "Buy a return train ticket from Boston to New York for next Friday",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24f788b483ae22fb852e53",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I need to search for information about purchasing train tickets from Boston to New York for next Friday. Let me search for relevant options.",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780807560,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 29,
+        "prompt_tokens": 171,
+        "total_tokens": 200,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Buy a return train ticket from Boston to New York for next Friday"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24f7877c50",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"5cb5011f6a24f787680f160001ebd25d\"},\"usage\":{\"total_tokens\":16}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24f7877c50",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"5cb5011f6a24f787680f160001ebd25d\"},\"usage\":{\"total_tokens\":16}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"5cb5011f6a24f787680f160001ebd25d\"},\"usage\":{\"total_tokens\":16}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I need to search for information about purchasing train tickets from Boston to New York for next Friday. Let me search for relevant options.",
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 171,
+    "total_tokens": 200,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

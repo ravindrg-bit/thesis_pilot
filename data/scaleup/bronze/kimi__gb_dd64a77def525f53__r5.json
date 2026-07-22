@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_dd64a77def525f53",
+  "engine": "kimi",
+  "run_index": 5,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T17:18:30.125762+00:00",
+  "query_text": "Where can I buy the latest iPhone?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26f95db7d0a28424c1ddd2",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, you can buy the latest iPhone from several types of retailers depending on your location:\n\n## Official Apple Channels\n\n- **Apple Store** (physical retail locations and online at apple.com) - Offers the full iPhone 17 lineup including iPhone 17, iPhone 17 Air, iPhone 17 Pro, iPhone 17 Pro Max, and iPhone 17e, with direct Apple warranty and support\n\n## Authorized Retailers and Resellers\n\n- **Electronics retailers** like Best Buy, Challenger, Best Denki, Courts, and Harvey Norman (availability varies by country)\n- **Carrier stores** - Major mobile networks offer iPhones with contract plans\n- **Apple Authorized Resellers** on e-commerce platforms like **Shopee** and **Lazada** (in Singapore and similar markets), which often offer competitive pricing with official Apple warranty\n\n## Online Marketplaces\n\n- **Amazon** (country-specific sites like Amazon.sg)\n- **Daraz** (in Pakistan, Nepal, and South Asian markets)\n- **Regional e-commerce sites** with official Apple partnerships\n\n## Regional Retailers (Examples by Country)\n\n| Country | Sample Retailers |\n|---------|-----------------|\n| **UK** | Laptop Outlet and other authorized dealers |\n| **Singapore** | Shopee, Lazada, Challenger, Best Denki, Courts |\n| **Pakistan** | Authentico.pk, Apple Kid, iSpot, iStore |\n| **Nepal** | EvoStore, Oliz Store, Daraz official stores (distributed by GenNext) |\n| **Egypt** | Miami Center |\n| **Bangladesh** | RM Trading International |\n\n## Key Buying Tips\n\n- Verify you're buying from an **Apple Authorized Reseller** to ensure genuine products and warranty coverage\n- The iPhone 17 series (launched September 2025) and iPhone 17e (March 2026) are Apple's latest models as of mid-2026\n- Prices typically range from approximately $599 (iPhone 17e) to $1,199+ (iPhone 17 Pro Max)\n- Look for seasonal sales events (11.11, Black Friday, etc.) for potential discounts\n\nIf you need a specific recommendation for your country or region, let me know and I can provide more targeted guidance.\n\nSources:\n1. https://miamicenters.com/best-iphone-to-buy-in-2026/?srsltid=AfmBOoo4ehNuyG3fhIaprEcPv5AaXjWHE9xsHCnGQLUP6NuCVMhHOeY8\n2. http://nepalitelecom.com/iphone-price-in-nepal\n3. https://buywhere.ai/blog/where-to-buy-iphone-16-singapore/\n4. https://www.authentico.pk/iphones?srsltid=AfmBOoq9w3HD9bp39lMj1zs5j3Q3y6PU4-45qs8854Eklw86OUPTkIKS\n5. https://pakgovschemes.com.pk/new-iphone-price-in-pakistan/\n6. https://www.laptopoutlet.co.uk/blog/which-iphone-buying-guide.html\n7. https://applekid.pk/lahore/iphone-price-in-pakistan/?srsltid=AfmBOoqtzbNSOfsWdzvYIgYe8mw8XZKHKknI-0IZFdfXLVLq2z33x712\n8. https://bazaronweb.com/current-iphone-models-in-2026-complete-guide-to-apples-latest-iphone-17-lineup/\n9. https://www.pcmag.com/picks/whats-the-best-iphone-to-buy\n10. https://zeerawireless.com/blogs/news/iphone-18-release-date-2026-latest-rumors-will-apple-delay-standard-models-to-2027?srsltid=AfmBOoqDEdzM2IPLKSAlSnjaD5H8yCL_FVZ1TDZ9QDq3IQB5lcvmtDPv",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780939102,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 865,
+        "prompt_tokens": 9315,
+        "total_tokens": 10180,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Where can I buy the latest iPhone?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26f95cefe8",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"659c49b26a26f95c4f50a50001f1a1be\"},\"usage\":{\"total_tokens\":9159}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26f95cefe8",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"659c49b26a26f95c4f50a50001f1a1be\"},\"usage\":{\"total_tokens\":9159}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"659c49b26a26f95c4f50a50001f1a1be\"},\"usage\":{\"total_tokens\":9159}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, you can buy the latest iPhone from several types of retailers depending on your location:\n\n## Official Apple Channels\n\n- **Apple Store** (physical retail locations and online at apple.com) - Offers the full iPhone 17 lineup including iPhone 17, iPhone 17 Air, iPhone 17 Pro, iPhone 17 Pro Max, and iPhone 17e, with direct Apple warranty and support\n\n## Authorized Retailers and Resellers\n\n- **Electronics retailers** like Best Buy, Challenger, Best Denki, Courts, and Harvey Norman (availability varies by country)\n- **Carrier stores** - Major mobile networks offer iPhones with contract plans\n- **Apple Authorized Resellers** on e-commerce platforms like **Shopee** and **Lazada** (in Singapore and similar markets), which often offer competitive pricing with official Apple warranty\n\n## Online Marketplaces\n\n- **Amazon** (country-specific sites like Amazon.sg)\n- **Daraz** (in Pakistan, Nepal, and South Asian markets)\n- **Regional e-commerce sites** with official Apple partnerships\n\n## Regional Retailers (Examples by Country)\n\n| Country | Sample Retailers |\n|---------|-----------------|\n| **UK** | Laptop Outlet and other authorized dealers |\n| **Singapore** | Shopee, Lazada, Challenger, Best Denki, Courts |\n| **Pakistan** | Authentico.pk, Apple Kid, iSpot, iStore |\n| **Nepal** | EvoStore, Oliz Store, Daraz official stores (distributed by GenNext) |\n| **Egypt** | Miami Center |\n| **Bangladesh** | RM Trading International |\n\n## Key Buying Tips\n\n- Verify you're buying from an **Apple Authorized Reseller** to ensure genuine products and warranty coverage\n- The iPhone 17 series (launched September 2025) and iPhone 17e (March 2026) are Apple's latest models as of mid-2026\n- Prices typically range from approximately $599 (iPhone 17e) to $1,199+ (iPhone 17 Pro Max)\n- Look for seasonal sales events (11.11, Black Friday, etc.) for potential discounts\n\nIf you need a specific recommendation for your country or region, let me know and I can provide more targeted guidance.\n\nSources:\n1. https://miamicenters.com/best-iphone-to-buy-in-2026/?srsltid=AfmBOoo4ehNuyG3fhIaprEcPv5AaXjWHE9xsHCnGQLUP6NuCVMhHOeY8\n2. http://nepalitelecom.com/iphone-price-in-nepal\n3. https://buywhere.ai/blog/where-to-buy-iphone-16-singapore/\n4. https://www.authentico.pk/iphones?srsltid=AfmBOoq9w3HD9bp39lMj1zs5j3Q3y6PU4-45qs8854Eklw86OUPTkIKS\n5. https://pakgovschemes.com.pk/new-iphone-price-in-pakistan/\n6. https://www.laptopoutlet.co.uk/blog/which-iphone-buying-guide.html\n7. https://applekid.pk/lahore/iphone-price-in-pakistan/?srsltid=AfmBOoqtzbNSOfsWdzvYIgYe8mw8XZKHKknI-0IZFdfXLVLq2z33x712\n8. https://bazaronweb.com/current-iphone-models-in-2026-complete-guide-to-apples-latest-iphone-17-lineup/\n9. https://www.pcmag.com/picks/whats-the-best-iphone-to-buy\n10. https://zeerawireless.com/blogs/news/iphone-18-release-date-2026-latest-rumors-will-apple-delay-standard-models-to-2027?srsltid=AfmBOoqDEdzM2IPLKSAlSnjaD5H8yCL_FVZ1TDZ9QDq3IQB5lcvmtDPv",
+  "usage": {
+    "completion_tokens": 865,
+    "prompt_tokens": 9315,
+    "total_tokens": 10180,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

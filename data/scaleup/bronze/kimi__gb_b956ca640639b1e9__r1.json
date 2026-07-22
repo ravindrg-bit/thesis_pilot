@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b956ca640639b1e9",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T09:36:14.758779+00:00",
+  "query_text": "Are there any academic fields that don't have enough people trying to teach?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a253b8249ac2b00b28591e8",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with information about academic fields that face shortages of people willing or able to teach.\n\n## Academic Fields with Teaching Shortages\n\n### STEM Fields (Science, Technology, Engineering, Mathematics)\n\n**Physics** is a particularly acute example. According to research cited in the search results, in the United States there were over **30,000 vacancies for physics teachers** in 2019, but only about **6,000 physics majors** available to fill them. Similarly, in England, entry into initial teacher training for physics was only **17% of the target number**, and for computing it was just **30% of the target**.\n\n**Nursing/Clinical Fields** face a different but related challenge. While there are plenty of students wanting to enter nursing programs, there's a shortage of **clinical preceptors and teaching settings**. The primary reason nursing schools cannot admit all qualified applicants is insufficient clinical teaching capacity rather than lack of classroom instructors.\n\n### Broader Patterns\n\nThe search results reveal an important distinction in understanding teaching shortages:\n\n1. **\"Vacancies but no teachers\"** \u2013 Insufficient supply of qualified candidates (common in STEM fields)\n2. **\"Teachers but no vacancies\"** \u2013 Budget constraints prevent hiring even when qualified people exist\n\nIn **upper-middle and high-income countries**, the problem tends to be on the **supply side** \u2013 not enough qualified and interested candidates. The data shows that on average, only about **4% of 15-year-olds** wanted to become teachers in 2015, with rates as low as **1% in Canada, Denmark, and Latvia**.\n\n### Subject-Specific Shortages\n\nCountries face particular difficulties recruiting teachers for:\n- **Science** (especially physics)\n- **Technology/Computing**\n- **Engineering**\n- **Mathematics**\n\n### Higher Education/Academia Specific Issues\n\nAt the college level, some specific understaffed areas identified include:\n- **Astronomy** (due to having only single physics instructors at some institutions)\n- **Engineering** (some programs operate with minimal full-time faculty)\n- **Certain humanities disciplines** like philosophy and history at specific institutions\n\n### Contributing Factors\n\nThe shortages stem from multiple causes:\n- Low interest in teaching as a profession among young people\n- Better-paying alternative careers for STEM graduates\n- High teacher attrition rates\n- Retirement of experienced teachers\n- Insufficient enrollment in teacher training programs (e.g., in Hungary, education entrants fell from 12% to 7% between 2015-2022)\n\nThe modern classroom also demands specialized skills in areas like **mental health support, technology integration, and diverse learning needs**, creating additional specialized shortages beyond traditional subject areas.\n\nSources:\n1. https://www.education-progress.org/focus/35-teachershortage\n2. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n3. https://www.sciencedirect.com/science/article/pii/S0897189716300088\n4. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n8. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780824963,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 744,
+        "prompt_tokens": 4643,
+        "total_tokens": 5387,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Are there any academic fields that don't have enough people trying to teach?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a253b81fc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"4432b66f6a253b814f50a50001edcb8a\"},\"usage\":{\"total_tokens\":4484}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a253b81fc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"4432b66f6a253b814f50a50001edcb8a\"},\"usage\":{\"total_tokens\":4484}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"4432b66f6a253b814f50a50001edcb8a\"},\"usage\":{\"total_tokens\":4484}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with information about academic fields that face shortages of people willing or able to teach.\n\n## Academic Fields with Teaching Shortages\n\n### STEM Fields (Science, Technology, Engineering, Mathematics)\n\n**Physics** is a particularly acute example. According to research cited in the search results, in the United States there were over **30,000 vacancies for physics teachers** in 2019, but only about **6,000 physics majors** available to fill them. Similarly, in England, entry into initial teacher training for physics was only **17% of the target number**, and for computing it was just **30% of the target**.\n\n**Nursing/Clinical Fields** face a different but related challenge. While there are plenty of students wanting to enter nursing programs, there's a shortage of **clinical preceptors and teaching settings**. The primary reason nursing schools cannot admit all qualified applicants is insufficient clinical teaching capacity rather than lack of classroom instructors.\n\n### Broader Patterns\n\nThe search results reveal an important distinction in understanding teaching shortages:\n\n1. **\"Vacancies but no teachers\"** \u2013 Insufficient supply of qualified candidates (common in STEM fields)\n2. **\"Teachers but no vacancies\"** \u2013 Budget constraints prevent hiring even when qualified people exist\n\nIn **upper-middle and high-income countries**, the problem tends to be on the **supply side** \u2013 not enough qualified and interested candidates. The data shows that on average, only about **4% of 15-year-olds** wanted to become teachers in 2015, with rates as low as **1% in Canada, Denmark, and Latvia**.\n\n### Subject-Specific Shortages\n\nCountries face particular difficulties recruiting teachers for:\n- **Science** (especially physics)\n- **Technology/Computing**\n- **Engineering**\n- **Mathematics**\n\n### Higher Education/Academia Specific Issues\n\nAt the college level, some specific understaffed areas identified include:\n- **Astronomy** (due to having only single physics instructors at some institutions)\n- **Engineering** (some programs operate with minimal full-time faculty)\n- **Certain humanities disciplines** like philosophy and history at specific institutions\n\n### Contributing Factors\n\nThe shortages stem from multiple causes:\n- Low interest in teaching as a profession among young people\n- Better-paying alternative careers for STEM graduates\n- High teacher attrition rates\n- Retirement of experienced teachers\n- Insufficient enrollment in teacher training programs (e.g., in Hungary, education entrants fell from 12% to 7% between 2015-2022)\n\nThe modern classroom also demands specialized skills in areas like **mental health support, technology integration, and diverse learning needs**, creating additional specialized shortages beyond traditional subject areas.\n\nSources:\n1. https://www.education-progress.org/focus/35-teachershortage\n2. https://www.bridgeport.edu/news/teacher-demand-in-2026/\n3. https://www.sciencedirect.com/science/article/pii/S0897189716300088\n4. https://www.waynecc.edu/wp-content/uploads/AGEN_Review-Form2020-21.pdf\n5. https://www.waynecc.edu/wp-content/uploads/AS_Review-Form2020-21-Final.pdf\n6. https://www.waynecc.edu/wp-content/uploads/AGE_Review-Form2020-21.pdf\n7. https://www.waynecc.edu/wp-content/uploads/AA_Review-Form2020-21-Final.pdf\n8. https://www.waynecc.edu/wp-content/uploads/AE_Review-Form2020-21-Final.pdf",
+  "usage": {
+    "completion_tokens": 744,
+    "prompt_tokens": 4643,
+    "total_tokens": 5387,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

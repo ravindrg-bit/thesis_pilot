@@ -1,0 +1,189 @@
+{
+  "query_id": "gb_e7d958d61d613791",
+  "engine": "chatgpt",
+  "run_index": 3,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-05-31T18:22:03.480678+00:00",
+  "query_text": "Where can I get tickets for the next NBA game?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_042a9b1412ba1b0b006a1c7c4267e081958431abc0195c2a89",
+    "created_at": 1780251714.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_042a9b1412ba1b0b006a1c7c4333688195a8d0386740a5279a",
+        "summary": [],
+        "type": "reasoning",
+        "content": null,
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_042a9b1412ba1b0b006a1c7c44268c8195bc85d1c01117a73b",
+        "action": {
+          "query": "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-05-31\",\"num_games\":5}",
+          "type": "search",
+          "queries": [
+            "sports: {\"tool\":\"sports\",\"fn\":\"schedule\",\"league\":\"nba\",\"date_from\":\"2026-05-31\",\"num_games\":5}"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "rs_042a9b1412ba1b0b006a1c7c4524908195b057446661e8963e",
+        "summary": [],
+        "type": "reasoning",
+        "content": null,
+        "encrypted_content": null,
+        "status": null
+      },
+      {
+        "id": "ws_042a9b1412ba1b0b006a1c7c45a6e081958959c9a483d61140",
+        "action": {
+          "query": "NBA official tickets Knicks Spurs June 3 2026 tickets",
+          "type": "search",
+          "queries": [
+            "NBA official tickets Knicks Spurs June 3 2026 tickets",
+            "San Antonio Spurs official tickets June 3 2026 Knicks"
+          ],
+          "sources": null
+        },
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "id": "msg_042a9b1412ba1b0b006a1c7c475ad8819591add7db343b2f1c",
+        "content": [
+          {
+            "annotations": [
+              {
+                "end_index": 269,
+                "start_index": 182,
+                "title": "Find tickets for 'spurs att' at Ticketmaster.com",
+                "type": "url_citation",
+                "url": "https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai"
+              },
+              {
+                "end_index": 490,
+                "start_index": 403,
+                "title": "Find tickets for 'spurs att' at Ticketmaster.com",
+                "type": "url_citation",
+                "url": "https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai"
+              },
+              {
+                "end_index": 875,
+                "start_index": 738,
+                "title": "Outrageous NBA Finals Spurs ticket prices spark backlash - here's how much they cost",
+                "type": "url_citation",
+                "url": "https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai"
+              }
+            ],
+            "text": "The **next NBA game** is **NBA Finals Game 1: New York Knicks at San Antonio Spurs** on **Wednesday, June 3, 2026, 7:30 PM CT / 8:30 PM ET** at **Frost Bank Center in San Antonio**. ([ticketmaster.com](https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai))\n\nYou can get tickets through:\n\n- **Ticketmaster** \u2014 the primary/official listing has \u201cFind Tickets\u201d for Game 1 at Frost Bank Center. ([ticketmaster.com](https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai))  \n- **Spurs/NBA official ticket pages** \u2014 usually route to the same primary marketplace for home games.\n- **Verified resale marketplaces** like SeatGeek, TickPick, Gametime, etc.; prices may vary, and finals tickets are reportedly very expensive. ([mysanantonio.com](https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai))\n\nTip: buy only from verified sellers and make sure the ticket can be transferred through Ticketmaster or the official team/NBA app.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780251723.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 8513,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 382,
+      "output_tokens_details": {
+        "reasoning_tokens": 158
+      },
+      "total_tokens": 8895
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "The **next NBA game** is **NBA Finals Game 1: New York Knicks at San Antonio Spurs** on **Wednesday, June 3, 2026, 7:30 PM CT / 8:30 PM ET** at **Frost Bank Center in San Antonio**. ([ticketmaster.com](https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai))\n\nYou can get tickets through:\n\n- **Ticketmaster** \u2014 the primary/official listing has \u201cFind Tickets\u201d for Game 1 at Frost Bank Center. ([ticketmaster.com](https://www.ticketmaster.com/search?q=spurs+att&utm_source=openai))  \n- **Spurs/NBA official ticket pages** \u2014 usually route to the same primary marketplace for home games.\n- **Verified resale marketplaces** like SeatGeek, TickPick, Gametime, etc.; prices may vary, and finals tickets are reportedly very expensive. ([mysanantonio.com](https://www.mysanantonio.com/sports/spurs/article/knicks-vs-spurs-tickets-nba-finals-22284771.php?utm_source=openai))\n\nTip: buy only from verified sellers and make sure the ticket can be transferred through Ticketmaster or the official team/NBA app.",
+  "usage": {
+    "input_tokens": 8513,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 382,
+    "output_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "total_tokens": 8895
+  },
+  "run_profile": "pilot"
+}

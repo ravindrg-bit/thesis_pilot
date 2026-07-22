@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b28cf85e67d23677",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:38:08.869328+00:00",
+  "query_text": "How do I make poached eggs at home?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1cd4622303e82f861915f3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Making poached eggs at home is easier than you might think! Here's a tried-and-true method based on professional techniques:\n\n## What You'll Need\n\n- Fresh eggs (the fresher, the better\u2014fresh whites hold together better)\n- A medium saucepan or wide pot\n- White vinegar (1 tablespoon)\n- A small bowl or ramekin\n- A slotted spoon\n- Paper towels\n\n## Step-by-Step Instructions\n\n### 1. Prepare the Water\nFill your saucepan with about 2-3 inches of water. Heat over medium-high heat until it reaches a **gentle simmer** (not a rolling boil). You should see small bubbles rising from the bottom, but minimal bubbling at the surface. The ideal temperature is around 160-180\u00b0F (71-82\u00b0C).\n\n### 2. Add Vinegar\nStir in about 1 tablespoon of white vinegar per quart of water. This helps the egg whites coagulate and hold their shape without affecting the taste.\n\n### 3. Prepare the Egg\nCrack a cold egg into a small bowl or ramekin. This lets you check that the yolk is intact and makes it easier to slide the egg into the water smoothly.\n\n**Pro tip:** For extra-neat poached eggs, strain the egg through a fine-mesh sieve first to remove the thin, watery part of the whites that create wispy strands.\n\n### 4. Create a Vortex (Optional but Helpful)\nUse a spoon to stir the water in a circular motion, creating a gentle whirlpool. This helps the egg white wrap around the yolk for a neater shape.\n\n### 5. Cook the Egg\nGently slide the egg from the bowl into the center of the vortex (or close to the water's surface if not swirling). \n\n- **For runny yolks:** Cook for **3 minutes**\n- **For slightly firmer yolks:** Cook for **4 minutes**\n\nTurn off the heat or reduce to low, and cover the pan if desired. Don't poke or disturb the egg while cooking.\n\n### 6. Remove and Serve\nLift the egg out with a slotted spoon, letting excess water drip off. Dab gently with a paper towel to remove moisture, then serve immediately.\n\n## Key Tips for Success\n\n| Factor | Recommendation |\n|--------|---------------|\n| **Egg freshness** | Use eggs less than 7 days old |\n| **Egg temperature** | Cold eggs straight from the fridge work best |\n| **Water temperature** | Barely simmering (not boiling) |\n| **Multiple eggs** | Use a larger pan and leave space between eggs; skip the vortex method |\n\n## Make-Ahead Option\n\nYou can poach eggs ahead of time! Cook as usual, then immediately transfer to a bowl of ice water. Refrigerate for up to 2-5 days. To reheat, submerge in hot tap water for 20-30 seconds until warmed through.\n\n## Common Mistakes to Avoid\n\n- **Boiling water** \u2013 This breaks up the whites\n- **Overcrowding the pan** \u2013 Eggs will stick together and cook unevenly\n- **Old eggs** \u2013 The whites spread too much in the water\n- **Skipping the bowl** \u2013 Cracking directly into the pan risks broken yolks and splashing\n\nPoached eggs are delicious on toast, avocado toast, salads, eggs Benedict, or simply seasoned with salt and pepper!\n\n---\n\nSources:\n1. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n2. https://preppykitchen.com/how-to-poach-an-egg/\n3. https://downshiftology.com/recipes/poached-eggs/\n4. https://spice.alibaba.com/spice-basics/how-long-to-cook-poached-eggs\n5. https://spice.alibaba.com/spice-basics/how-long-to-cook-a-poached-egg\n6. https://spice.alibaba.com/spice-basics/how-do-you-cook-poached-eggs",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780274275,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 835,
+        "prompt_tokens": 8462,
+        "total_tokens": 9297,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How do I make poached eggs at home?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1cd462841a",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"6b8a48e56a1cd4614f50a50001d92124\"},\"usage\":{\"total_tokens\":8306}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1cd462841a",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"6b8a48e56a1cd4614f50a50001d92124\"},\"usage\":{\"total_tokens\":8306}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"6b8a48e56a1cd4614f50a50001d92124\"},\"usage\":{\"total_tokens\":8306}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Making poached eggs at home is easier than you might think! Here's a tried-and-true method based on professional techniques:\n\n## What You'll Need\n\n- Fresh eggs (the fresher, the better\u2014fresh whites hold together better)\n- A medium saucepan or wide pot\n- White vinegar (1 tablespoon)\n- A small bowl or ramekin\n- A slotted spoon\n- Paper towels\n\n## Step-by-Step Instructions\n\n### 1. Prepare the Water\nFill your saucepan with about 2-3 inches of water. Heat over medium-high heat until it reaches a **gentle simmer** (not a rolling boil). You should see small bubbles rising from the bottom, but minimal bubbling at the surface. The ideal temperature is around 160-180\u00b0F (71-82\u00b0C).\n\n### 2. Add Vinegar\nStir in about 1 tablespoon of white vinegar per quart of water. This helps the egg whites coagulate and hold their shape without affecting the taste.\n\n### 3. Prepare the Egg\nCrack a cold egg into a small bowl or ramekin. This lets you check that the yolk is intact and makes it easier to slide the egg into the water smoothly.\n\n**Pro tip:** For extra-neat poached eggs, strain the egg through a fine-mesh sieve first to remove the thin, watery part of the whites that create wispy strands.\n\n### 4. Create a Vortex (Optional but Helpful)\nUse a spoon to stir the water in a circular motion, creating a gentle whirlpool. This helps the egg white wrap around the yolk for a neater shape.\n\n### 5. Cook the Egg\nGently slide the egg from the bowl into the center of the vortex (or close to the water's surface if not swirling). \n\n- **For runny yolks:** Cook for **3 minutes**\n- **For slightly firmer yolks:** Cook for **4 minutes**\n\nTurn off the heat or reduce to low, and cover the pan if desired. Don't poke or disturb the egg while cooking.\n\n### 6. Remove and Serve\nLift the egg out with a slotted spoon, letting excess water drip off. Dab gently with a paper towel to remove moisture, then serve immediately.\n\n## Key Tips for Success\n\n| Factor | Recommendation |\n|--------|---------------|\n| **Egg freshness** | Use eggs less than 7 days old |\n| **Egg temperature** | Cold eggs straight from the fridge work best |\n| **Water temperature** | Barely simmering (not boiling) |\n| **Multiple eggs** | Use a larger pan and leave space between eggs; skip the vortex method |\n\n## Make-Ahead Option\n\nYou can poach eggs ahead of time! Cook as usual, then immediately transfer to a bowl of ice water. Refrigerate for up to 2-5 days. To reheat, submerge in hot tap water for 20-30 seconds until warmed through.\n\n## Common Mistakes to Avoid\n\n- **Boiling water** \u2013 This breaks up the whites\n- **Overcrowding the pan** \u2013 Eggs will stick together and cook unevenly\n- **Old eggs** \u2013 The whites spread too much in the water\n- **Skipping the bowl** \u2013 Cracking directly into the pan risks broken yolks and splashing\n\nPoached eggs are delicious on toast, avocado toast, salads, eggs Benedict, or simply seasoned with salt and pepper!\n\n---\n\nSources:\n1. https://www.simplyrecipes.com/recipes/easy_poached_eggs/\n2. https://preppykitchen.com/how-to-poach-an-egg/\n3. https://downshiftology.com/recipes/poached-eggs/\n4. https://spice.alibaba.com/spice-basics/how-long-to-cook-poached-eggs\n5. https://spice.alibaba.com/spice-basics/how-long-to-cook-a-poached-egg\n6. https://spice.alibaba.com/spice-basics/how-do-you-cook-poached-eggs",
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 8462,
+    "total_tokens": 9297,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

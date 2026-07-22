@@ -1,0 +1,124 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "chatgpt",
+  "run_index": 4,
+  "model_requested": "gpt-5.5-2026-04-23",
+  "model_served": "gpt-5.5-2026-04-23",
+  "timestamp_utc": "2026-06-08T04:34:04.413607+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "gpt-5.5-2026-04-23",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "raw_response": {
+    "id": "resp_04591577ea93528c006a26462c1328819e9d67b14f8b447c0d",
+    "created_at": 1780893228.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.5-2026-04-23",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_04591577ea93528c006a26462cceec819eaa01358eae08813c",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Aight, listen up. **Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call him `OrderService`. He\u2019s tryin\u2019 to do business \u2014 process orders, talk to the database, send emails, all that.\n\nNow, old-school bad way? `OrderService` goes out on the street and gets his own crew:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThat\u2019s messy. Now `OrderService` is tied to `EmailSender`. If `EmailSender` changes, gets replaced, or starts actin\u2019 funny, `OrderService` is in trouble.\n\nDependency Injection says:\n\n> \u201cNah, boss. Don\u2019t go find your own people. We\u2019ll send you the right crew.\u201d\n\nSo instead, `OrderService` gets handed what it needs:\n\n```csharp\npublic interface IEmailSender\n{\n    void SendEmail(string message);\n}\n\npublic class EmailSender : IEmailSender\n{\n    public void SendEmail(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailSender _emailSender;\n\n    public OrderService(IEmailSender emailSender)\n    {\n        _emailSender = emailSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care **who** sends the email. Could be `EmailSender`, could be `FakeEmailSender`, could be `FancyCloudEmailSender3000`.\n\nIt just says:\n\n> \u201cI need somebody who knows how to send emails. Don\u2019t care who. Just handle it.\u201d\n\nThen your app\u2019s setup acts like the boss making introductions:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThat means:\n\n> \u201cYo, whenever somebody asks for `IEmailSender`, send in `EmailSender`.\u201d\n\nThen later:\n\n```csharp\nvar orderService = serviceProvider.GetRequiredService<OrderService>();\n```\n\nThe DI container sees `OrderService` needs an `IEmailSender`, so it slides one over automatically.\n\n### Why this is good\n\nDependency Injection keeps your code from being too tightly connected.\n\nWithout DI:\n\n> \u201cI only work with Tony.\u201d\n\nWith DI:\n\n> \u201cI work with anybody who implements `IEmailSender`. Tony, Vinny, CloudEmailCorp \u2014 doesn\u2019t matter.\u201d\n\n### Benefits\n\n- **Easier testing**  \n  You can inject a fake email sender instead of sending real emails.\n\n```csharp\npublic class FakeEmailSender : IEmailSender\n{\n    public void SendEmail(string message)\n    {\n        // pretend to send email\n    }\n}\n```\n\n- **Less coupling**  \n  Classes don\u2019t create their own dependencies.\n\n- **Easier swapping**  \n  Want to switch from console email to SendGrid? Just change the registration.\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, SendGridEmailSender>();\n```\n\n- **Cleaner responsibilities**  \n  `OrderService` handles orders. It doesn\u2019t go shopping for email senders.\n\n### In gangster terms\n\nDependency Injection is when your class doesn\u2019t hire its own muscle.\n\nThe boss \u2014 your DI container \u2014 says:\n\n> \u201cYou need protection? I got you. You need a driver? I got you. You need an email sender? Fuggedaboutit.\u201d\n\nYour class just does its job, and the right dependencies show up at the door.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search",
+        "filters": null,
+        "search_context_size": "medium",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        },
+        "return_token_budget": "default"
+      }
+    ],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1780893244.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "effort": "low",
+      "generate_summary": null,
+      "summary": null,
+      "context": "current_turn"
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4454,
+      "input_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "output_tokens": 753,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5207
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "moderation": null,
+    "presence_penalty": 0.0,
+    "store": true
+  },
+  "answer_text": "Aight, listen up. **Dependency Injection in C#** is like this:\n\nYou got a class, right? Let\u2019s call him `OrderService`. He\u2019s tryin\u2019 to do business \u2014 process orders, talk to the database, send emails, all that.\n\nNow, old-school bad way? `OrderService` goes out on the street and gets his own crew:\n\n```csharp\npublic class OrderService\n{\n    private EmailSender _emailSender = new EmailSender();\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nThat\u2019s messy. Now `OrderService` is tied to `EmailSender`. If `EmailSender` changes, gets replaced, or starts actin\u2019 funny, `OrderService` is in trouble.\n\nDependency Injection says:\n\n> \u201cNah, boss. Don\u2019t go find your own people. We\u2019ll send you the right crew.\u201d\n\nSo instead, `OrderService` gets handed what it needs:\n\n```csharp\npublic interface IEmailSender\n{\n    void SendEmail(string message);\n}\n\npublic class EmailSender : IEmailSender\n{\n    public void SendEmail(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class OrderService\n{\n    private readonly IEmailSender _emailSender;\n\n    public OrderService(IEmailSender emailSender)\n    {\n        _emailSender = emailSender;\n    }\n\n    public void PlaceOrder()\n    {\n        _emailSender.SendEmail(\"Order placed!\");\n    }\n}\n```\n\nNow `OrderService` don\u2019t care **who** sends the email. Could be `EmailSender`, could be `FakeEmailSender`, could be `FancyCloudEmailSender3000`.\n\nIt just says:\n\n> \u201cI need somebody who knows how to send emails. Don\u2019t care who. Just handle it.\u201d\n\nThen your app\u2019s setup acts like the boss making introductions:\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, EmailSender>();\nbuilder.Services.AddScoped<OrderService>();\n```\n\nThat means:\n\n> \u201cYo, whenever somebody asks for `IEmailSender`, send in `EmailSender`.\u201d\n\nThen later:\n\n```csharp\nvar orderService = serviceProvider.GetRequiredService<OrderService>();\n```\n\nThe DI container sees `OrderService` needs an `IEmailSender`, so it slides one over automatically.\n\n### Why this is good\n\nDependency Injection keeps your code from being too tightly connected.\n\nWithout DI:\n\n> \u201cI only work with Tony.\u201d\n\nWith DI:\n\n> \u201cI work with anybody who implements `IEmailSender`. Tony, Vinny, CloudEmailCorp \u2014 doesn\u2019t matter.\u201d\n\n### Benefits\n\n- **Easier testing**  \n  You can inject a fake email sender instead of sending real emails.\n\n```csharp\npublic class FakeEmailSender : IEmailSender\n{\n    public void SendEmail(string message)\n    {\n        // pretend to send email\n    }\n}\n```\n\n- **Less coupling**  \n  Classes don\u2019t create their own dependencies.\n\n- **Easier swapping**  \n  Want to switch from console email to SendGrid? Just change the registration.\n\n```csharp\nbuilder.Services.AddScoped<IEmailSender, SendGridEmailSender>();\n```\n\n- **Cleaner responsibilities**  \n  `OrderService` handles orders. It doesn\u2019t go shopping for email senders.\n\n### In gangster terms\n\nDependency Injection is when your class doesn\u2019t hire its own muscle.\n\nThe boss \u2014 your DI container \u2014 says:\n\n> \u201cYou need protection? I got you. You need a driver? I got you. You need an email sender? Fuggedaboutit.\u201d\n\nYour class just does its job, and the right dependencies show up at the door.",
+  "usage": {
+    "input_tokens": 4454,
+    "input_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "output_tokens": 753,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 5207
+  },
+  "run_profile": "scaleup"
+}

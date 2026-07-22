@@ -1,0 +1,123 @@
+{
+  "query_id": "gb_94c6a8dbacddf1c0",
+  "engine": "perplexity",
+  "run_index": 3,
+  "model_requested": "sonar",
+  "model_served": "sonar",
+  "timestamp_utc": "2026-06-08T10:26:27.219667+00:00",
+  "query_text": "How are computers and calculators able to so accurately determine square roots?",
+  "request_params": {
+    "model": "sonar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How are computers and calculators able to so accurately determine square roots?"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "80f6b1ed-b8cb-48ae-b5fc-ded9f67f9218",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "Computers and calculators usually compute square roots by **approximating** them with iterative numerical methods, not by \u201cknowing\u201d the exact value in one step.[1][2][4] The accuracy comes from using methods such as **Newton-Raphson / Babylonian iteration**, which repeatedly improve a guess until the error is smaller than the machine\u2019s precision.[1][4]\n\nThe key idea is this: if \\(x\\) is a guess for \\(\\sqrt{S}\\), then the next improved guess is often computed as  \n\\[\nx_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right),\n\\]\nwhich is the classic Babylonian method / Heron\u2019s method.[1] Each iteration usually gets much closer to the true answer, and the process stops when further improvement would not change the stored result at the available precision.[1][2]\n\nFor calculators and computers, this is \u201caccurate\u201d because they work with a fixed number of bits or digits, so they only need to be correct to that finite precision.[1] In practice, modern systems may also use faster approximations based on logs, tables, or polynomial approximations internally, then refine the result with iterative methods such as Newton-Raphson.[2][3]\n\nSo the short answer is: **they use fast approximation algorithms plus finite-precision arithmetic**, and those algorithms converge so quickly that the displayed result is usually correct to all shown digits.[1][2][4]",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null
+        },
+        "delta": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    ],
+    "created": 1780914387,
+    "model": "sonar",
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 307,
+      "prompt_tokens": 15,
+      "total_tokens": 322,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": null,
+      "search_context_size": "low",
+      "cost": {
+        "input_tokens_cost": 1e-05,
+        "output_tokens_cost": 0.00031,
+        "request_cost": 0.005,
+        "total_cost": 0.00532
+      }
+    },
+    "citations": [
+      "https://en.wikipedia.org/wiki/Square_root_algorithms",
+      "https://journalspress.com/LJRCST_Volume18/372_Revisiting-Square-Roots-with-a-Fast-Estimator.pdf",
+      "https://www.youtube.com/watch?v=czMc0rdXebo",
+      "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+      "https://www.youtube.com/watch?v=MXveVqBxFow"
+    ],
+    "search_results": [
+      {
+        "title": "Square root algorithms - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Square_root_algorithms",
+        "date": "2005-09-18",
+        "last_updated": "2026-05-25",
+        "snippet": "Square roots can usually only be computed to some finite precision: these algorithms typically construct a series of increasingly accurate approximations.",
+        "source": "web"
+      },
+      {
+        "title": "[PDF] Revisiting Square Roots with a Fast Estimator",
+        "url": "https://journalspress.com/LJRCST_Volume18/372_Revisiting-Square-Roots-with-a-Fast-Estimator.pdf",
+        "last_updated": "2025-09-21",
+        "snippet": "This paper proposes a new method that we derive for estimating square root with high accuracy. In particular, we show how square root of 2 can be calculated ...",
+        "source": "web"
+      },
+      {
+        "title": "How does a calculator find square roots? - YouTube",
+        "url": "https://www.youtube.com/watch?v=czMc0rdXebo",
+        "date": "2024-07-11",
+        "last_updated": "2026-05-17",
+        "snippet": "Desmos Chebyshev Polynomials: https://www.desmos.com/calculator/kmvlfsvqhm Chapters: 0:00 I'm a little autistic 1:06 Calculate square roots ...",
+        "source": "web"
+      },
+      {
+        "title": "How to Estimate Square Roots in Mental Math",
+        "url": "https://worldmentalcalculation.com/how-to-estimate-square-roots-in-mental-math/",
+        "last_updated": "2026-05-07",
+        "snippet": "This article describes an easier method for quickly estimating the value of a square root, to about 2\u20135 significant figures.",
+        "source": "web"
+      },
+      {
+        "title": "How To Calculate Any Square Root. An Ancient Method ... - YouTube",
+        "url": "https://www.youtube.com/watch?v=MXveVqBxFow",
+        "date": "2024-11-18",
+        "last_updated": "2026-06-07",
+        "snippet": "An ancient formula is astoundingly accurate. Why didn't we learn this in school? 0:00 history 2:32 calculations 7:22 sqrt 2 10:19 intuition ...",
+        "source": "web"
+      }
+    ]
+  },
+  "answer_text": "Computers and calculators usually compute square roots by **approximating** them with iterative numerical methods, not by \u201cknowing\u201d the exact value in one step.[1][2][4] The accuracy comes from using methods such as **Newton-Raphson / Babylonian iteration**, which repeatedly improve a guess until the error is smaller than the machine\u2019s precision.[1][4]\n\nThe key idea is this: if \\(x\\) is a guess for \\(\\sqrt{S}\\), then the next improved guess is often computed as  \n\\[\nx_{n+1}=\\frac{1}{2}\\left(x_n+\\frac{S}{x_n}\\right),\n\\]\nwhich is the classic Babylonian method / Heron\u2019s method.[1] Each iteration usually gets much closer to the true answer, and the process stops when further improvement would not change the stored result at the available precision.[1][2]\n\nFor calculators and computers, this is \u201caccurate\u201d because they work with a fixed number of bits or digits, so they only need to be correct to that finite precision.[1] In practice, modern systems may also use faster approximations based on logs, tables, or polynomial approximations internally, then refine the result with iterative methods such as Newton-Raphson.[2][3]\n\nSo the short answer is: **they use fast approximation algorithms plus finite-precision arithmetic**, and those algorithms converge so quickly that the displayed result is usually correct to all shown digits.[1][2][4]",
+  "usage": {
+    "completion_tokens": 307,
+    "prompt_tokens": 15,
+    "total_tokens": 322,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null,
+    "search_context_size": "low",
+    "cost": {
+      "input_tokens_cost": 1e-05,
+      "output_tokens_cost": 0.00031,
+      "request_cost": 0.005,
+      "total_cost": 0.00532
+    }
+  },
+  "run_profile": "scaleup"
+}

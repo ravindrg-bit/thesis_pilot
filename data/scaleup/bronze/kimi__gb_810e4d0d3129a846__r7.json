@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_810e4d0d3129a846",
+  "engine": "kimi",
+  "run_index": 7,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T04:50:29.890105+00:00",
+  "query_text": "Can you explain dependency injection in C# like a gangster?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a2649d7724e981642435dc6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Yo, listen up, fam. Let me break down this Dependency Injection racket for you, straight from the streets of C#.\n\n## The Hustle: What DI Really Is\n\nPicture this: You got a made man named `OrderService`. Back in the day, this wise guy was doing EVERYTHING himself \u2014 making his own `EmailService`, handling his own business, the whole nine yards. That's called **tight coupling**, and in our world, that's like doing your own dirty work. Amateur hour.\n\n```csharp\n// This is the OLD WAY \u2014 the SUCKER way\npublic class OrderService\n{\n    private EmailService _emailService;\n\n    public OrderService()\n    {\n        _emailService = new EmailService(); // Making his own muscle? Nah, fam.\n    }\n}\n```\n\nSee that `new EmailService()`? That's your boy hard-coding his own dependencies. He can't switch up his crew without rewriting his whole operation. The feds (unit tests) catch him easy 'cause he can't swap in a fake crew. He's FINISHED.\n\n## The Real Play: Constructor Injection\n\nNow check how a REAL boss moves. He don't MAKE his own muscle \u2014 he IMPORTS it. The `OrderService` says \"Yo, I need an enforcer who can handle emails. You bring me whoever fits the description.\"\n\n```csharp\n// This is how a BOSS moves\npublic class OrderService\n{\n    private readonly IEmailService _emailService;\n\n    public OrderService(IEmailService emailService)\n    {\n        _emailService = emailService; // Someone else brings the heat\n    }\n\n    public void PlaceOrder(Order order)\n    {\n        // Handle the business...\n        _emailService.SendConfirmationEmail(order); // My guy handles it\n    }\n}\n```\n\nSee that `IEmailService`? That's the **interface** \u2014 the contract. The `OrderService` don't care WHO shows up, long as they can `SendConfirmationEmail`. Could be `SmtpEmailService`, could be `SendGridEmailService`, could be `FakeEmailService` for testing. Don't matter to him. He stays **loosely coupled**, feel me?\n\n## The Three Ways to Run This Game\n\nAight, so there's three ways to get your dependencies delivered, like different drop spots:\n\n### 1. Constructor Injection \u2014 The Main Pipeline\nThis is the GO-TO move. Dependencies come through the constructor when the object gets BORN. Can't create the object without its crew. Clean, simple, bulletproof.\n\n```csharp\npublic class Client\n{\n    private readonly IService _service;\n    \n    public Client(IService service) // Right through the front door\n    {\n        _service = service;\n    }\n}\n```\n\n### 2. Property/Setter Injection \u2014 The Optional Hookup\nSometimes you got optional muscle. Maybe you don't need 'em right away, or you wanna swap crews mid-operation.\n\n```csharp\npublic class Client\n{\n    public IService Service { get; set; } // Slide it in whenever\n    \n    public void DoWork()\n    {\n        Service?.Serve(); // Only if someone's there\n    }\n}\n```\n\n### 3. Method Injection \u2014 The One-Time Drop\nJust need something for this ONE job? Pass it straight to the method.\n\n```csharp\npublic class Client\n{\n    public void ServeMethod(IService service) // Right here, right now\n    {\n        service.Serve();\n    }\n}\n```\n\n## The DI Container \u2014 The Connect\n\nNow, in the big leagues (.NET Core), you got this thing called the **DI Container**. Think of it as your fixer \u2014 the one who knows who needs what and makes the introductions. You register your crew with the container, and it hooks everyone up automatic.\n\n```csharp\n// In Program.cs or Startup.cs \u2014 this is where you make the introductions\nvar builder = WebApplication.CreateBuilder(args);\n\nbuilder.Services.AddScoped<IEmailService, SendGridEmailService>(); // \"When someone needs IEmailService, you give 'em SendGrid\"\nbuilder.Services.AddTransient<OrderService>(); // \"Make a fresh OrderService every time\"\n\nvar app = builder.Build();\n```\n\nThe container handles three types of lifetimes:\n- **Transient** \u2014 New instance EVERY time (like disposable muscle)\n- **Scoped** \u2014 One per request (your crew for this one job)\n- **Singleton** \u2014 Same instance FOREVER (the OG boss, never changes)\n\n## Why This Hustle Works\n\n| Without DI | With DI |\n|-----------|---------|\n| Tightly coupled \u2014 stuck with one crew | Loosely coupled \u2014 swap crews easy |\n| Can't test without the real muscle | Mock dependencies, test in isolation |\n| Change one thing, break everything | Modular \u2014 swap parts like LEGO |\n| Hard to maintain | Clean, organized, professional |\n\n## The Bottom Line\n\nDependency Injection is about **Inversion of Control** \u2014 you don't create your own dependencies, you RECEIVE them. It's like being the don who says \"Bring me what I need\" instead of the soldier running around doing everything himself.\n\nYour code stays clean, testable, and flexible. You can swap implementations without touching your business logic. The feds (unit tests) can't touch you 'cause you inject fake dependencies. You stay winning.\n\nThat's the game, fam. Now go write some loosely coupled code before I make you sleep with the `new` keyword.\n\nSources:\n1. https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern\n2. https://dev.to/leandroveiga/mastering-dependency-injection-in-c-and-net-core-a-comprehensive-guide-with-code-examples-3817\n3. https://www.sharepointcafe.net/2018/07/understand-dependency-injection-in-csharp.html\n4. https://datatas.com/understanding-dependency-injection-in-c/\n5. https://toxigon.com/guide-to-dependency-injection-in-csharp\n6. https://dotnettutorials.net/lesson/dependency-injection-design-pattern-csharp/\n7. https://www.c-sharpcorner.com/article/dependency-injection-property-injection-in-c-sharp/\n8. https://www.simplilearn.com/tutorials/c-sharp-tutorial/c-sharp-dependency-gui\n9. https://www.webdevtutor.net/blog/c-sharp-dependency-injection\n10. https://www.codeguru.com/csharp/dependency-injection-c-sharp/\n11. https://www.c-sharpcorner.com/article/dependency-inversion-principle-vs-dependency-injection-in-c-sharp/\n12. https://www.csharp.com/blogs/dependency-injection-di-c-sharp\n13. https://www.webdevtutor.net/blog/c-sharp-wcf-service-dependency-injection",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780894167,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 1398,
+        "prompt_tokens": 8914,
+        "total_tokens": 10312,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Can you explain dependency injection in C# like a gangster?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2649d676e9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"ba69ed1c6a2649d64f50a50001efeef6\"},\"usage\":{\"total_tokens\":8756}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2649d676e9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"ba69ed1c6a2649d64f50a50001efeef6\"},\"usage\":{\"total_tokens\":8756}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"ba69ed1c6a2649d64f50a50001efeef6\"},\"usage\":{\"total_tokens\":8756}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Yo, listen up, fam. Let me break down this Dependency Injection racket for you, straight from the streets of C#.\n\n## The Hustle: What DI Really Is\n\nPicture this: You got a made man named `OrderService`. Back in the day, this wise guy was doing EVERYTHING himself \u2014 making his own `EmailService`, handling his own business, the whole nine yards. That's called **tight coupling**, and in our world, that's like doing your own dirty work. Amateur hour.\n\n```csharp\n// This is the OLD WAY \u2014 the SUCKER way\npublic class OrderService\n{\n    private EmailService _emailService;\n\n    public OrderService()\n    {\n        _emailService = new EmailService(); // Making his own muscle? Nah, fam.\n    }\n}\n```\n\nSee that `new EmailService()`? That's your boy hard-coding his own dependencies. He can't switch up his crew without rewriting his whole operation. The feds (unit tests) catch him easy 'cause he can't swap in a fake crew. He's FINISHED.\n\n## The Real Play: Constructor Injection\n\nNow check how a REAL boss moves. He don't MAKE his own muscle \u2014 he IMPORTS it. The `OrderService` says \"Yo, I need an enforcer who can handle emails. You bring me whoever fits the description.\"\n\n```csharp\n// This is how a BOSS moves\npublic class OrderService\n{\n    private readonly IEmailService _emailService;\n\n    public OrderService(IEmailService emailService)\n    {\n        _emailService = emailService; // Someone else brings the heat\n    }\n\n    public void PlaceOrder(Order order)\n    {\n        // Handle the business...\n        _emailService.SendConfirmationEmail(order); // My guy handles it\n    }\n}\n```\n\nSee that `IEmailService`? That's the **interface** \u2014 the contract. The `OrderService` don't care WHO shows up, long as they can `SendConfirmationEmail`. Could be `SmtpEmailService`, could be `SendGridEmailService`, could be `FakeEmailService` for testing. Don't matter to him. He stays **loosely coupled**, feel me?\n\n## The Three Ways to Run This Game\n\nAight, so there's three ways to get your dependencies delivered, like different drop spots:\n\n### 1. Constructor Injection \u2014 The Main Pipeline\nThis is the GO-TO move. Dependencies come through the constructor when the object gets BORN. Can't create the object without its crew. Clean, simple, bulletproof.\n\n```csharp\npublic class Client\n{\n    private readonly IService _service;\n    \n    public Client(IService service) // Right through the front door\n    {\n        _service = service;\n    }\n}\n```\n\n### 2. Property/Setter Injection \u2014 The Optional Hookup\nSometimes you got optional muscle. Maybe you don't need 'em right away, or you wanna swap crews mid-operation.\n\n```csharp\npublic class Client\n{\n    public IService Service { get; set; } // Slide it in whenever\n    \n    public void DoWork()\n    {\n        Service?.Serve(); // Only if someone's there\n    }\n}\n```\n\n### 3. Method Injection \u2014 The One-Time Drop\nJust need something for this ONE job? Pass it straight to the method.\n\n```csharp\npublic class Client\n{\n    public void ServeMethod(IService service) // Right here, right now\n    {\n        service.Serve();\n    }\n}\n```\n\n## The DI Container \u2014 The Connect\n\nNow, in the big leagues (.NET Core), you got this thing called the **DI Container**. Think of it as your fixer \u2014 the one who knows who needs what and makes the introductions. You register your crew with the container, and it hooks everyone up automatic.\n\n```csharp\n// In Program.cs or Startup.cs \u2014 this is where you make the introductions\nvar builder = WebApplication.CreateBuilder(args);\n\nbuilder.Services.AddScoped<IEmailService, SendGridEmailService>(); // \"When someone needs IEmailService, you give 'em SendGrid\"\nbuilder.Services.AddTransient<OrderService>(); // \"Make a fresh OrderService every time\"\n\nvar app = builder.Build();\n```\n\nThe container handles three types of lifetimes:\n- **Transient** \u2014 New instance EVERY time (like disposable muscle)\n- **Scoped** \u2014 One per request (your crew for this one job)\n- **Singleton** \u2014 Same instance FOREVER (the OG boss, never changes)\n\n## Why This Hustle Works\n\n| Without DI | With DI |\n|-----------|---------|\n| Tightly coupled \u2014 stuck with one crew | Loosely coupled \u2014 swap crews easy |\n| Can't test without the real muscle | Mock dependencies, test in isolation |\n| Change one thing, break everything | Modular \u2014 swap parts like LEGO |\n| Hard to maintain | Clean, organized, professional |\n\n## The Bottom Line\n\nDependency Injection is about **Inversion of Control** \u2014 you don't create your own dependencies, you RECEIVE them. It's like being the don who says \"Bring me what I need\" instead of the soldier running around doing everything himself.\n\nYour code stays clean, testable, and flexible. You can swap implementations without touching your business logic. The feds (unit tests) can't touch you 'cause you inject fake dependencies. You stay winning.\n\nThat's the game, fam. Now go write some loosely coupled code before I make you sleep with the `new` keyword.\n\nSources:\n1. https://www.scholarhat.com/tutorial/designpatterns/implementation-of-dependency-injection-pattern\n2. https://dev.to/leandroveiga/mastering-dependency-injection-in-c-and-net-core-a-comprehensive-guide-with-code-examples-3817\n3. https://www.sharepointcafe.net/2018/07/understand-dependency-injection-in-csharp.html\n4. https://datatas.com/understanding-dependency-injection-in-c/\n5. https://toxigon.com/guide-to-dependency-injection-in-csharp\n6. https://dotnettutorials.net/lesson/dependency-injection-design-pattern-csharp/\n7. https://www.c-sharpcorner.com/article/dependency-injection-property-injection-in-c-sharp/\n8. https://www.simplilearn.com/tutorials/c-sharp-tutorial/c-sharp-dependency-gui\n9. https://www.webdevtutor.net/blog/c-sharp-dependency-injection\n10. https://www.codeguru.com/csharp/dependency-injection-c-sharp/\n11. https://www.c-sharpcorner.com/article/dependency-inversion-principle-vs-dependency-injection-in-c-sharp/\n12. https://www.csharp.com/blogs/dependency-injection-di-c-sharp\n13. https://www.webdevtutor.net/blog/c-sharp-wcf-service-dependency-injection",
+  "usage": {
+    "completion_tokens": 1398,
+    "prompt_tokens": 8914,
+    "total_tokens": 10312,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

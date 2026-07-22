@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_dc7ef1dbbd81090d",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:09:36.555084+00:00",
+  "query_text": "How is cheese made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccdb7eeebc8f70f111c91",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how cheese is made:\n\n## The Basic Process of Cheese Making\n\nCheese making is the process of transforming milk into cheese by removing a major part of the water while retaining most of the solids. It's essentially a form of food preservation through milk fermentation.\n\n### Four Basic Ingredients\nAll cheeses start with:\n1. **Milk** (from cows, goats, sheep, or other animals)\n2. **Microorganisms** (starter cultures/bacteria)\n3. **Rennet** (a coagulant/enzyme)\n4. **Salt**\n\n### Key Steps in Cheese Production\n\n**1. Milk Preparation**\n- Milk is collected and undergoes strict quality testing\n- It's often pasteurized to eliminate harmful bacteria and extend shelf life\n- The milk may be standardized to adjust fat-to-protein ratios\n\n**2. Inoculation and Curdling**\n- Starter cultures (good bacteria) are added to ferment lactose into lactic acid\n- Rennet is added, which causes the milk protein (casein) to coagulate\n- The milk thickens into a gel-like consistency, separating into **curds** (solids) and **whey** (liquid)\n\n**3. Cutting and Cooking the Curd**\n- The curd is cut into small cubes with wire knives\n- The curds are gently heated and stirred, causing them to shrink and release more whey\n- The size of the curd pieces matters: smaller curds create drier, firmer cheeses; larger curds retain more moisture for softer cheeses\n\n**4. Draining and Pressing**\n- Whey is drained off (and can be used for other products like ricotta)\n- Curds are placed into molds and pressed to expel remaining whey\n- This gives the cheese its shape and final texture\n\n**5. Salting**\n- Salt is added before pressing (as with Cheddar) or after (as with Mozzarella)\n- Salt enhances flavor, preserves the cheese, and affects texture\n\n**6. Aging/Ripening (Affinage)**\n- Most cheeses are aged under carefully controlled temperature and humidity conditions\n- During aging, enzymes break down proteins and fats, developing complex flavors and textures\n- Aging can range from a few weeks to several years\n\n### How Different Cheeses Get Their Unique Characteristics\n\n| Cheese Type | Special Feature |\n|-------------|---------------|\n| **Swiss** | *Propionibacterium* bacteria produce CO\u2082, creating holes/eyes |\n| **Brie/Camembert** | *Penicillium camemberti* mold forms a soft, white bloomy rind |\n| **Blue Cheese** | *Penicillium roqueforti* is injected, creating blue veins |\n| **Cheddar** | \"Cheddaring\" process involves stacking and flipping curd slabs; aged for varying lengths to develop sharpness |\n\n### Fresh vs. Aged Cheeses\n\nNot all cheeses are aged. **Fresh cheeses** like cottage cheese, cream cheese, ricotta, and most mozzarella are ready to eat immediately after production. These have mild, delicate flavors and high moisture content.\n\n**Aged cheeses** develop increasingly complex flavors over time\u2014becoming sharper, nuttier, crumblier, or more aromatic depending on the variety and aging conditions.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.usdairy.com/news-articles/how-does-cheese-age\n4. https://bougiescheeseshop.com/the-art-of-aging-how-cheese-matures-and-develops-flavor/\n5. https://www.savorysuitcase.com/the-aging-process-of-cheddar-cheese/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272568,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 791,
+        "prompt_tokens": 8820,
+        "total_tokens": 9611,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is cheese made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccdb6bfd7",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"856f0b826a1ccdb64f50a50001d90a71\"},\"usage\":{\"total_tokens\":8670}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccdb6bfd7",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"856f0b826a1ccdb64f50a50001d90a71\"},\"usage\":{\"total_tokens\":8670}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"856f0b826a1ccdb64f50a50001d90a71\"},\"usage\":{\"total_tokens\":8670}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how cheese is made:\n\n## The Basic Process of Cheese Making\n\nCheese making is the process of transforming milk into cheese by removing a major part of the water while retaining most of the solids. It's essentially a form of food preservation through milk fermentation.\n\n### Four Basic Ingredients\nAll cheeses start with:\n1. **Milk** (from cows, goats, sheep, or other animals)\n2. **Microorganisms** (starter cultures/bacteria)\n3. **Rennet** (a coagulant/enzyme)\n4. **Salt**\n\n### Key Steps in Cheese Production\n\n**1. Milk Preparation**\n- Milk is collected and undergoes strict quality testing\n- It's often pasteurized to eliminate harmful bacteria and extend shelf life\n- The milk may be standardized to adjust fat-to-protein ratios\n\n**2. Inoculation and Curdling**\n- Starter cultures (good bacteria) are added to ferment lactose into lactic acid\n- Rennet is added, which causes the milk protein (casein) to coagulate\n- The milk thickens into a gel-like consistency, separating into **curds** (solids) and **whey** (liquid)\n\n**3. Cutting and Cooking the Curd**\n- The curd is cut into small cubes with wire knives\n- The curds are gently heated and stirred, causing them to shrink and release more whey\n- The size of the curd pieces matters: smaller curds create drier, firmer cheeses; larger curds retain more moisture for softer cheeses\n\n**4. Draining and Pressing**\n- Whey is drained off (and can be used for other products like ricotta)\n- Curds are placed into molds and pressed to expel remaining whey\n- This gives the cheese its shape and final texture\n\n**5. Salting**\n- Salt is added before pressing (as with Cheddar) or after (as with Mozzarella)\n- Salt enhances flavor, preserves the cheese, and affects texture\n\n**6. Aging/Ripening (Affinage)**\n- Most cheeses are aged under carefully controlled temperature and humidity conditions\n- During aging, enzymes break down proteins and fats, developing complex flavors and textures\n- Aging can range from a few weeks to several years\n\n### How Different Cheeses Get Their Unique Characteristics\n\n| Cheese Type | Special Feature |\n|-------------|---------------|\n| **Swiss** | *Propionibacterium* bacteria produce CO\u2082, creating holes/eyes |\n| **Brie/Camembert** | *Penicillium camemberti* mold forms a soft, white bloomy rind |\n| **Blue Cheese** | *Penicillium roqueforti* is injected, creating blue veins |\n| **Cheddar** | \"Cheddaring\" process involves stacking and flipping curd slabs; aged for varying lengths to develop sharpness |\n\n### Fresh vs. Aged Cheeses\n\nNot all cheeses are aged. **Fresh cheeses** like cottage cheese, cream cheese, ricotta, and most mozzarella are ready to eat immediately after production. These have mild, delicate flavors and high moisture content.\n\n**Aged cheeses** develop increasingly complex flavors over time\u2014becoming sharper, nuttier, crumblier, or more aromatic depending on the variety and aging conditions.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.usdairy.com/news-articles/how-does-cheese-age\n4. https://bougiescheeseshop.com/the-art-of-aging-how-cheese-matures-and-develops-flavor/\n5. https://www.savorysuitcase.com/the-aging-process-of-cheddar-cheese/",
+  "usage": {
+    "completion_tokens": 791,
+    "prompt_tokens": 8820,
+    "total_tokens": 9611,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

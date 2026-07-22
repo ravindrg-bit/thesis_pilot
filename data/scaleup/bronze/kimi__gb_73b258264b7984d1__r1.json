@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_73b258264b7984d1",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T19:01:15.711673+00:00",
+  "query_text": "Sign up for a photography course at the community center",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a271176f05a5f054dd9cc6c",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I found information about photography courses at community centers and similar institutions. Here's how you can sign up:\n\n## General Steps to Sign Up for a Photography Course at a Community Center\n\n1. **Find your local community center's website** - Search for your city or neighborhood community center online\n\n2. **Browse their course catalog** - Look for photography classes under continuing education, arts, or recreation programs\n\n3. **Check registration requirements** - Some centers require:\n   - Creating an account on their registration platform\n   - Membership or residency in the community\n   - Specific equipment prerequisites (especially for DSLR/mirrorless camera courses)\n\n4. **Register online or in-person** - Most community centers offer:\n   - Online registration through their website\n   - Phone registration\n   - In-person registration at the front desk\n\n## Examples from Real Community Centers\n\n### Tulsa Community College (Continuing Education)\nOffers various photography courses including:\n- Photography Level I, II, III\n- Nature Photography\n- Night Photography\n- Smartphone Photography\n- Adobe Lightroom\n- Sports Photography\n\n**How to register:** Visit their online catalog at the link below and search for photography courses.\n\n### Phoenix Center for the Arts\n- Click the \"Sign Up\" button on class descriptions\n- Requires a **Mindbody account** to register\n- Must digitally sign a Student Agreement before attending in-person classes\n- Contact: (602) 254-3100 or frontdesk@phoenixcenterforthearts.org\n\n### Los Angeles Center of Photography (LACP)\n- Non-profit photography community center\n- Offers workshops, classes, and intensives\n- Visit their website and click \"Sign Up Here!\" for courses\n\n## Tips for Registration\n\n- **Register early** - Popular classes fill up quickly\n- **Check prerequisites** - Some advanced courses require completion of beginner levels\n- **Note equipment requirements** - Many courses require DSLR or mirrorless cameras with manual capability\n- **Verify location** - Some courses are online, others are in-person at specific campuses\n- **Check cancellation policies** - Registration often ends 1-2 days before class starts\n\nSince I don't know your specific location, I recommend searching for \"[Your City] community center photography classes\" or \"[Your City] parks and recreation photography courses\" to find options near you.\n\nSources:\n1. https://us-elevate.elluciancloud.com/app/tulsacc/f?p=WEB_CATALOGUE:HOME::::RP,1:P1_SEARCH_VALUE:ZPHO\n2. https://phoenixcenterforthearts.org/class/photography/\n3. https://lacphoto.org/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780945271,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 542,
+        "prompt_tokens": 3951,
+        "total_tokens": 4493,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Sign up for a photography course at the community center"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2711769964",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bc4a65516a2711764f50a50001f1cc3f\"},\"usage\":{\"total_tokens\":3796}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2711769964",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bc4a65516a2711764f50a50001f1cc3f\"},\"usage\":{\"total_tokens\":3796}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bc4a65516a2711764f50a50001f1cc3f\"},\"usage\":{\"total_tokens\":3796}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I found information about photography courses at community centers and similar institutions. Here's how you can sign up:\n\n## General Steps to Sign Up for a Photography Course at a Community Center\n\n1. **Find your local community center's website** - Search for your city or neighborhood community center online\n\n2. **Browse their course catalog** - Look for photography classes under continuing education, arts, or recreation programs\n\n3. **Check registration requirements** - Some centers require:\n   - Creating an account on their registration platform\n   - Membership or residency in the community\n   - Specific equipment prerequisites (especially for DSLR/mirrorless camera courses)\n\n4. **Register online or in-person** - Most community centers offer:\n   - Online registration through their website\n   - Phone registration\n   - In-person registration at the front desk\n\n## Examples from Real Community Centers\n\n### Tulsa Community College (Continuing Education)\nOffers various photography courses including:\n- Photography Level I, II, III\n- Nature Photography\n- Night Photography\n- Smartphone Photography\n- Adobe Lightroom\n- Sports Photography\n\n**How to register:** Visit their online catalog at the link below and search for photography courses.\n\n### Phoenix Center for the Arts\n- Click the \"Sign Up\" button on class descriptions\n- Requires a **Mindbody account** to register\n- Must digitally sign a Student Agreement before attending in-person classes\n- Contact: (602) 254-3100 or frontdesk@phoenixcenterforthearts.org\n\n### Los Angeles Center of Photography (LACP)\n- Non-profit photography community center\n- Offers workshops, classes, and intensives\n- Visit their website and click \"Sign Up Here!\" for courses\n\n## Tips for Registration\n\n- **Register early** - Popular classes fill up quickly\n- **Check prerequisites** - Some advanced courses require completion of beginner levels\n- **Note equipment requirements** - Many courses require DSLR or mirrorless cameras with manual capability\n- **Verify location** - Some courses are online, others are in-person at specific campuses\n- **Check cancellation policies** - Registration often ends 1-2 days before class starts\n\nSince I don't know your specific location, I recommend searching for \"[Your City] community center photography classes\" or \"[Your City] parks and recreation photography courses\" to find options near you.\n\nSources:\n1. https://us-elevate.elluciancloud.com/app/tulsacc/f?p=WEB_CATALOGUE:HOME::::RP,1:P1_SEARCH_VALUE:ZPHO\n2. https://phoenixcenterforthearts.org/class/photography/\n3. https://lacphoto.org/",
+  "usage": {
+    "completion_tokens": 542,
+    "prompt_tokens": 3951,
+    "total_tokens": 4493,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_dc7ef1dbbd81090d",
+  "engine": "kimi",
+  "run_index": 2,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:09:53.962257+00:00",
+  "query_text": "How is cheese made?",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccdc82303e82f86191235",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Cheese is made through a process that transforms liquid milk into solid cheese by removing most of the water while retaining the milk solids. Here's a step-by-step overview of how cheese is made:\n\n## Basic Ingredients\n\nThe four essential ingredients for cheese making are:\n- **Milk** (from cows, goats, sheep, or other animals)\n- **Microorganisms** (starter cultures of bacteria)\n- **Rennet** (enzymes that cause coagulation)\n- **Salt**\n\n## The Cheese-Making Process\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It may be pasteurized to kill harmful bacteria, though some cheeses use raw milk. The milk is often standardized to adjust the fat-to-protein ratio for consistency.\n\n### 2. Inoculation and Acidification\n\"Starter cultures\" of beneficial bacteria are added to the milk. These bacteria ferment lactose (milk sugar) into lactic acid, which helps develop flavor and prepares the milk for coagulation.\n\n### 3. Coagulation (Curdling)\nRennet is added to the acidified milk. Rennet contains enzymes (primarily chymosin) that cause the milk protein **casein** to clump together and precipitate out of solution. This forms a solid, gel-like mass called **curd**, which traps fat, bacteria, calcium, and other particles. The remaining liquid is called **whey**.\n\nSome cheeses, like cottage cheese and cream cheese, are made by acid coagulation alone without rennet.\n\n### 4. Cutting and Cooking the Curd\nThe curd is cut into small cubes using wire \"knives.\" The size of the curd pieces affects the final moisture content\u2014smaller curds create drier, firmer cheeses (like Parmesan), while larger curds retain more moisture for softer cheeses (like Brie). The curds are gently heated and stirred, causing them to shrink and release more whey.\n\n### 5. Draining the Whey\nThe whey is drained off, leaving the solid curds behind. The whey may be further processed to make products like ricotta or whey protein.\n\n### 6. Salting and Pressing\nThe curds are salted, either before or after being placed in molds. They are then pressed to expel remaining whey and give the cheese its shape and characteristic texture.\n\n### 7. Ripening (Aging)\nMost cheeses are aged for varying periods under controlled temperature and humidity conditions. During ripening, enzymes from three sources\u2014rennet, microorganisms, and the milk itself\u2014break down proteins and fats, developing the cheese's distinctive flavors, aromas, and textures.\n\n- **Fresh cheeses** (like mozzarella) are ready to eat immediately\n- **Soft-ripened cheeses** (like Brie) may age for weeks\n- **Hard cheeses** (like cheddar or Parmesan) can age for months or even years\n\n## Special Types of Cheese\n\nDifferent cheeses have unique characteristics based on specific bacteria or molds used:\n\n- **Swiss cheese**: Uses *Propionibacterium* bacteria that produce carbon dioxide gas, creating the characteristic holes (\"eyes\")\n- **Blue cheese**: Contains *Penicillium roqueforti* mold spores that create blue veins; air is introduced through needle holes to activate the mold\n- **Brie/Camembert**: Rely on *Penicillium camemberti* mold that forms a soft, white surface rind\n\n## Processed Cheese\n\nSome natural cheese is made into pasteurized process cheese, where grinding, mixing with emulsifiers and other ingredients, and heating to at least 65.5\u00b0C (150\u00b0F) creates a product with uniform melting properties and extended shelf life.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.mdpi.com/2304-8158/15/3/428\n4. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n5. https://cheeseforthought.com/advanced-curd-cutting-techniques/\n6. https://thekitchencommunity.org/the-role-of-coagulation-in-cheddar-cheese-making/\n7. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n8. https://www.researchgate.net/publication/281800209_Implementation_of_ricotta_cheese_production_process_in_Tunisia",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780272585,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 944,
+        "prompt_tokens": 8624,
+        "total_tokens": 9568,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How is cheese made?"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccdc73ae9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"a94069b76a1ccdc74f50a50001d90a95\"},\"usage\":{\"total_tokens\":8474}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccdc73ae9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"a94069b76a1ccdc74f50a50001d90a95\"},\"usage\":{\"total_tokens\":8474}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"a94069b76a1ccdc74f50a50001d90a95\"},\"usage\":{\"total_tokens\":8474}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Cheese is made through a process that transforms liquid milk into solid cheese by removing most of the water while retaining the milk solids. Here's a step-by-step overview of how cheese is made:\n\n## Basic Ingredients\n\nThe four essential ingredients for cheese making are:\n- **Milk** (from cows, goats, sheep, or other animals)\n- **Microorganisms** (starter cultures of bacteria)\n- **Rennet** (enzymes that cause coagulation)\n- **Salt**\n\n## The Cheese-Making Process\n\n### 1. Milk Preparation\nMilk is collected and undergoes quality testing. It may be pasteurized to kill harmful bacteria, though some cheeses use raw milk. The milk is often standardized to adjust the fat-to-protein ratio for consistency.\n\n### 2. Inoculation and Acidification\n\"Starter cultures\" of beneficial bacteria are added to the milk. These bacteria ferment lactose (milk sugar) into lactic acid, which helps develop flavor and prepares the milk for coagulation.\n\n### 3. Coagulation (Curdling)\nRennet is added to the acidified milk. Rennet contains enzymes (primarily chymosin) that cause the milk protein **casein** to clump together and precipitate out of solution. This forms a solid, gel-like mass called **curd**, which traps fat, bacteria, calcium, and other particles. The remaining liquid is called **whey**.\n\nSome cheeses, like cottage cheese and cream cheese, are made by acid coagulation alone without rennet.\n\n### 4. Cutting and Cooking the Curd\nThe curd is cut into small cubes using wire \"knives.\" The size of the curd pieces affects the final moisture content\u2014smaller curds create drier, firmer cheeses (like Parmesan), while larger curds retain more moisture for softer cheeses (like Brie). The curds are gently heated and stirred, causing them to shrink and release more whey.\n\n### 5. Draining the Whey\nThe whey is drained off, leaving the solid curds behind. The whey may be further processed to make products like ricotta or whey protein.\n\n### 6. Salting and Pressing\nThe curds are salted, either before or after being placed in molds. They are then pressed to expel remaining whey and give the cheese its shape and characteristic texture.\n\n### 7. Ripening (Aging)\nMost cheeses are aged for varying periods under controlled temperature and humidity conditions. During ripening, enzymes from three sources\u2014rennet, microorganisms, and the milk itself\u2014break down proteins and fats, developing the cheese's distinctive flavors, aromas, and textures.\n\n- **Fresh cheeses** (like mozzarella) are ready to eat immediately\n- **Soft-ripened cheeses** (like Brie) may age for weeks\n- **Hard cheeses** (like cheddar or Parmesan) can age for months or even years\n\n## Special Types of Cheese\n\nDifferent cheeses have unique characteristics based on specific bacteria or molds used:\n\n- **Swiss cheese**: Uses *Propionibacterium* bacteria that produce carbon dioxide gas, creating the characteristic holes (\"eyes\")\n- **Blue cheese**: Contains *Penicillium roqueforti* mold spores that create blue veins; air is introduced through needle holes to activate the mold\n- **Brie/Camembert**: Rely on *Penicillium camemberti* mold that forms a soft, white surface rind\n\n## Processed Cheese\n\nSome natural cheese is made into pasteurized process cheese, where grinding, mixing with emulsifiers and other ingredients, and heating to at least 65.5\u00b0C (150\u00b0F) creates a product with uniform melting properties and extended shelf life.\n\nSources:\n1. https://www.britannica.com/topic/cheese-making\n2. https://www.usdairy.com/news-articles/how-is-cheese-made\n3. https://www.mdpi.com/2304-8158/15/3/428\n4. https://rheolution.com/application-notes/at-line-testing-of-coagulation-to-stabilize-cheese-yield/\n5. https://cheeseforthought.com/advanced-curd-cutting-techniques/\n6. https://thekitchencommunity.org/the-role-of-coagulation-in-cheddar-cheese-making/\n7. https://cheesemaking.com/pages/cream-cheese-recipe-instructions\n8. https://www.researchgate.net/publication/281800209_Implementation_of_ricotta_cheese_production_process_in_Tunisia",
+  "usage": {
+    "completion_tokens": 944,
+    "prompt_tokens": 8624,
+    "total_tokens": 9568,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

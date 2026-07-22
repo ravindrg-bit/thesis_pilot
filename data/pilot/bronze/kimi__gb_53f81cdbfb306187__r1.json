@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_53f81cdbfb306187",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-01T00:17:48.912168+00:00",
+  "query_text": "what are opioids derived from",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a1ccfa4383a8d3394114cf6",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, I can provide you with comprehensive information about what opioids are derived from.\n\n## Natural Source: The Opium Poppy (Papaver somniferum)\n\nOpioids are primarily derived from the **opium poppy plant** (*Papaver somniferum*), a flowering plant belonging to the Papaveraceae family. Specifically, natural opioids are found in the **milky latex (sap)** that is present in the plant's stem, leaves, and seed pods.\n\n## Key Natural Opioids (Opiates) from the Poppy Plant\n\nThe main naturally occurring opioids extracted directly from the opium poppy include:\n\n| Opioid | Description |\n|--------|-------------|\n| **Morphine** | The primary active alkaloid in opium; first isolated in the early 19th century from poppy seed juice |\n| **Codeine** | A milder analgesic; can be extracted directly from opium or made from morphine |\n| **Opium** | The dried milky latex/resin harvested directly from the poppy's seed pods |\n| **Thebaine** | A stimulant alkaloid (rather than sedative); used as a starting material for semi-synthetic opioids |\n| **Noscapine** | A non-addictive cough suppressant with potential anticancer properties |\n| **Papaverine** | Used medically as a vasodilator |\n\n## How Natural Opioids Are Harvested\n\nThe traditional harvesting process involves:\n1. Making incisions in the green seed pods of the opium poppy\n2. Collecting the white latex that oozes out\n3. Allowing it to dry and turn brown upon air exposure\n4. Processing this dried resin into opium, which contains at least 10% morphine by weight\n\nModern methods also use the **poppy straw process**, which involves extracting alkaloids from dried and crushed poppy plants.\n\n## Semi-Synthetic and Synthetic Opioids\n\nIt's important to note that not all opioids come directly from the poppy plant:\n\n- **Semi-synthetic opioids**: These are created by chemically modifying natural opium alkaloids. Examples include:\n  - **Heroin** (diacetylmorphine) \u2013 made from morphine through acetylation\n  - **Oxycodone** \u2013 derived from thebaine\n  - **Hydrocodone** \u2013 derived from codeine\n  - **Hydromorphone** \u2013 derived from morphine\n  - **Buprenorphine** \u2013 derived from thebaine\n\n- **Synthetic opioids**: These are entirely human-made in laboratories using chemicals, without any natural poppy-derived starting materials. Examples include:\n  - **Fentanyl**\n  - **Methadone**\n  - **Tramadol**\n  - **Meperidine**\n\n## Endogenous Opioids\n\nInterestingly, the human body also produces its own natural opioids called **endogenous opioid peptides** (such as endorphins and enkephalins), which act on the same opioid receptors in the brain to relieve pain.\n\n---\n\nSources:\n1. https://nida.nih.gov/publications/drugfacts/prescription-opioids\n2. https://www.ncbi.nlm.nih.gov/books/NBK470415/\n3. https://www.jneuropsychiatry.org/peer-review/the-mind-based-and-most-controversial-plant-papaver-somniferum-the-opium-poppy-a-plant-with-many-faces-and-roles-in-human-history-18080.html\n4. https://www.medicalnewstoday.com/articles/natural-opioids\n5. https://www.britannica.com/science/opioid\n6. https://pmc.ncbi.nlm.nih.gov/articles/PMC10154933/\n7. https://www.healthline.com/health/natural-opioids\n8. https://yorkspace.library.yorku.ca/bitstreams/3a8225eb-c13b-40a1-b7bb-8cf750b8b9a9/download",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780273061,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 851,
+        "prompt_tokens": 8350,
+        "total_tokens": 9201,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what are opioids derived from"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a1ccfa35e07",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"bb9f61cc6a1ccfa34f50a50001d90ecf\"},\"usage\":{\"total_tokens\":8200}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a1ccfa35e07",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"bb9f61cc6a1ccfa34f50a50001d90ecf\"},\"usage\":{\"total_tokens\":8200}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"bb9f61cc6a1ccfa34f50a50001d90ecf\"},\"usage\":{\"total_tokens\":8200}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, I can provide you with comprehensive information about what opioids are derived from.\n\n## Natural Source: The Opium Poppy (Papaver somniferum)\n\nOpioids are primarily derived from the **opium poppy plant** (*Papaver somniferum*), a flowering plant belonging to the Papaveraceae family. Specifically, natural opioids are found in the **milky latex (sap)** that is present in the plant's stem, leaves, and seed pods.\n\n## Key Natural Opioids (Opiates) from the Poppy Plant\n\nThe main naturally occurring opioids extracted directly from the opium poppy include:\n\n| Opioid | Description |\n|--------|-------------|\n| **Morphine** | The primary active alkaloid in opium; first isolated in the early 19th century from poppy seed juice |\n| **Codeine** | A milder analgesic; can be extracted directly from opium or made from morphine |\n| **Opium** | The dried milky latex/resin harvested directly from the poppy's seed pods |\n| **Thebaine** | A stimulant alkaloid (rather than sedative); used as a starting material for semi-synthetic opioids |\n| **Noscapine** | A non-addictive cough suppressant with potential anticancer properties |\n| **Papaverine** | Used medically as a vasodilator |\n\n## How Natural Opioids Are Harvested\n\nThe traditional harvesting process involves:\n1. Making incisions in the green seed pods of the opium poppy\n2. Collecting the white latex that oozes out\n3. Allowing it to dry and turn brown upon air exposure\n4. Processing this dried resin into opium, which contains at least 10% morphine by weight\n\nModern methods also use the **poppy straw process**, which involves extracting alkaloids from dried and crushed poppy plants.\n\n## Semi-Synthetic and Synthetic Opioids\n\nIt's important to note that not all opioids come directly from the poppy plant:\n\n- **Semi-synthetic opioids**: These are created by chemically modifying natural opium alkaloids. Examples include:\n  - **Heroin** (diacetylmorphine) \u2013 made from morphine through acetylation\n  - **Oxycodone** \u2013 derived from thebaine\n  - **Hydrocodone** \u2013 derived from codeine\n  - **Hydromorphone** \u2013 derived from morphine\n  - **Buprenorphine** \u2013 derived from thebaine\n\n- **Synthetic opioids**: These are entirely human-made in laboratories using chemicals, without any natural poppy-derived starting materials. Examples include:\n  - **Fentanyl**\n  - **Methadone**\n  - **Tramadol**\n  - **Meperidine**\n\n## Endogenous Opioids\n\nInterestingly, the human body also produces its own natural opioids called **endogenous opioid peptides** (such as endorphins and enkephalins), which act on the same opioid receptors in the brain to relieve pain.\n\n---\n\nSources:\n1. https://nida.nih.gov/publications/drugfacts/prescription-opioids\n2. https://www.ncbi.nlm.nih.gov/books/NBK470415/\n3. https://www.jneuropsychiatry.org/peer-review/the-mind-based-and-most-controversial-plant-papaver-somniferum-the-opium-poppy-a-plant-with-many-faces-and-roles-in-human-history-18080.html\n4. https://www.medicalnewstoday.com/articles/natural-opioids\n5. https://www.britannica.com/science/opioid\n6. https://pmc.ncbi.nlm.nih.gov/articles/PMC10154933/\n7. https://www.healthline.com/health/natural-opioids\n8. https://yorkspace.library.yorku.ca/bitstreams/3a8225eb-c13b-40a1-b7bb-8cf750b8b9a9/download",
+  "usage": {
+    "completion_tokens": 851,
+    "prompt_tokens": 8350,
+    "total_tokens": 9201,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "pilot"
+}

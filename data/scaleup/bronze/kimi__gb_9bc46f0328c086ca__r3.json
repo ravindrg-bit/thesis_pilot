@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_9bc46f0328c086ca",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T23:35:13.178836+00:00",
+  "query_text": "How TV stations air shows and commercials",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a24ae99ae402713d537d950",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's how TV stations air shows and commercials:\n\n## Overview of TV Broadcast Scheduling\n\nTV stations and networks operate on a **linear scheduling model**, meaning they program a continuous flow of back-to-back content\u2014including pre-recorded shows, live programs, commercials, promos, and public service announcements\u2014that viewers watch at scheduled times.\n\n## How the Scheduling Process Works\n\n### 1. Building the Program Log\n\nThe **traffic department** (a broadcast term unrelated to transportation) builds a detailed log of all content for a day, week, or longer period. This log includes:\n- Pre-recorded programs\n- Commercials\n- Promos (promotional content for upcoming shows)\n- Public service announcements (PSAs)\n- Live programs such as newscasts and sporting events\n\n### 2. Automation and Playout\n\nThe program log is handed off to an **automation system**, which executes the schedule by playing back content from video playout servers. A **master control operator** oversees this process, ensuring:\n- Content plays out as scheduled\n- Weather bugs, logos, and graphics are inserted\n- Signal quality is maintained\n- Breaking news cut-ins and live programs are handled manually when needed\n\n## Commercial Scheduling\n\n### Sales and Contracts\n\nTelevision networks sell advertising slots to clients **by the show** on which the commercials will air. The terms of a sales contract typically include:\n- Total cost of the advertising package\n- Total Nielsen ratings points promised for the campaign\n- A detailed list of commercials to be aired by show and airdate\n\n### Positioning Within Shows\n\nThe **exact location** where a commercial airs within a show is determined later, usually close to the airdate. Key considerations include:\n\n- **Prime positions**: The **first and last slots** in a commercial break get higher audience ratings and are more desirable to advertisers\n- **Rotation promises**: Networks typically promise clients an equitable rotation of commercials among positions within a break\n- **Product conflict avoidance**: No two commercials promoting competing products (e.g., Coca-Cola and Pepsi) can air in the same break\n\n### Day Parts\n\nBroadcast time is divided into **day parts**, with **prime time** (8:00\u201311:00 p.m. Eastern/Pacific, or 7:00\u201310:00 p.m. Central/Mountain) being the most prestigious and expensive period when networks air their most expensive programs and charge advertisers the most money.\n\n## Historical Context\n\nThe modern advertising model evolved from earlier practices. In television's early days, advertisers **sponsored entire programs**. NBC's Sylvester \"Pat\" Weaver introduced the **\"magazine concept\"** in the early 1950s, where advertisers paid to have their ads placed *within* programs\u2014similar to magazine advertising. This shifted power to the networks, allowing them more control over programming.\n\n## Modern Technology\n\nToday, cloud-based scheduling and playout systems allow media organizations to:\n- Upload and organize content in the cloud\n- Create schedules by dragging media files into calendars\n- Use templates for recurring programming\n- Insert SCTE markers to trigger ad playout from third-party servers at precise times\n\nSources:\n1. https://pubsonline.informs.org/doi/pdf/10.1287/opre.1030.0083\n2. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n3. https://www.worldradiohistory.com/BOOKSHELF-ARH/Encyclopedias/Archive-Encyclopedia-of-Television/Encyclopedia-of-Television-Vol-2-1st-Edition.pdf\n4. https://edumedu.am/wp-content/uploads/2023/03/Copy-of-Joseph-Turow-Media-Today_-Mass-Communication-in-a-Converging-World-Routledge-2016.pdf",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780788890,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 790,
+        "prompt_tokens": 8575,
+        "total_tokens": 9365,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "How TV stations air shows and commercials"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24ae987898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"870d55556a24ae98680f160001eb5e96\"},\"usage\":{\"total_tokens\":8426}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24ae987898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"870d55556a24ae98680f160001eb5e96\"},\"usage\":{\"total_tokens\":8426}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"870d55556a24ae98680f160001eb5e96\"},\"usage\":{\"total_tokens\":8426}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's how TV stations air shows and commercials:\n\n## Overview of TV Broadcast Scheduling\n\nTV stations and networks operate on a **linear scheduling model**, meaning they program a continuous flow of back-to-back content\u2014including pre-recorded shows, live programs, commercials, promos, and public service announcements\u2014that viewers watch at scheduled times.\n\n## How the Scheduling Process Works\n\n### 1. Building the Program Log\n\nThe **traffic department** (a broadcast term unrelated to transportation) builds a detailed log of all content for a day, week, or longer period. This log includes:\n- Pre-recorded programs\n- Commercials\n- Promos (promotional content for upcoming shows)\n- Public service announcements (PSAs)\n- Live programs such as newscasts and sporting events\n\n### 2. Automation and Playout\n\nThe program log is handed off to an **automation system**, which executes the schedule by playing back content from video playout servers. A **master control operator** oversees this process, ensuring:\n- Content plays out as scheduled\n- Weather bugs, logos, and graphics are inserted\n- Signal quality is maintained\n- Breaking news cut-ins and live programs are handled manually when needed\n\n## Commercial Scheduling\n\n### Sales and Contracts\n\nTelevision networks sell advertising slots to clients **by the show** on which the commercials will air. The terms of a sales contract typically include:\n- Total cost of the advertising package\n- Total Nielsen ratings points promised for the campaign\n- A detailed list of commercials to be aired by show and airdate\n\n### Positioning Within Shows\n\nThe **exact location** where a commercial airs within a show is determined later, usually close to the airdate. Key considerations include:\n\n- **Prime positions**: The **first and last slots** in a commercial break get higher audience ratings and are more desirable to advertisers\n- **Rotation promises**: Networks typically promise clients an equitable rotation of commercials among positions within a break\n- **Product conflict avoidance**: No two commercials promoting competing products (e.g., Coca-Cola and Pepsi) can air in the same break\n\n### Day Parts\n\nBroadcast time is divided into **day parts**, with **prime time** (8:00\u201311:00 p.m. Eastern/Pacific, or 7:00\u201310:00 p.m. Central/Mountain) being the most prestigious and expensive period when networks air their most expensive programs and charge advertisers the most money.\n\n## Historical Context\n\nThe modern advertising model evolved from earlier practices. In television's early days, advertisers **sponsored entire programs**. NBC's Sylvester \"Pat\" Weaver introduced the **\"magazine concept\"** in the early 1950s, where advertisers paid to have their ads placed *within* programs\u2014similar to magazine advertising. This shifted power to the networks, allowing them more control over programming.\n\n## Modern Technology\n\nToday, cloud-based scheduling and playout systems allow media organizations to:\n- Upload and organize content in the cloud\n- Create schedules by dragging media files into calendars\n- Use templates for recurring programming\n- Insert SCTE markers to trigger ad playout from third-party servers at precise times\n\nSources:\n1. https://pubsonline.informs.org/doi/pdf/10.1287/opre.1030.0083\n2. https://www.tvunetworks.com/guides/broadcast-scheduling-solution-for-media-and-broadcast/\n3. https://www.worldradiohistory.com/BOOKSHELF-ARH/Encyclopedias/Archive-Encyclopedia-of-Television/Encyclopedia-of-Television-Vol-2-1st-Edition.pdf\n4. https://edumedu.am/wp-content/uploads/2023/03/Copy-of-Joseph-Turow-Media-Today_-Mass-Communication-in-a-Converging-World-Routledge-2016.pdf",
+  "usage": {
+    "completion_tokens": 790,
+    "prompt_tokens": 8575,
+    "total_tokens": 9365,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

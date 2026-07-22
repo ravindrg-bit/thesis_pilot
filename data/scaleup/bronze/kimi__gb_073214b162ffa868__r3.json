@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_073214b162ffa868",
+  "engine": "kimi",
+  "run_index": 3,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T21:44:44.314766+00:00",
+  "query_text": "what's the Mom Test",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a25e645def40df019634677",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "The **Mom Test** is a customer interview methodology created by entrepreneur **Rob Fitzpatrick** and published in his 2019 book *\"The Mom Test: How to Talk to Customers & Learn If Your Business Is a Good Idea When Everyone Is Lying to You.\"*\n\n## Core Concept\n\nThe Mom Test is designed to get **honest, actionable feedback** from potential customers\u2014even from people who care about you and want to protect your feelings (like your mom). The central insight is that **people will lie to be nice**, especially when you're visibly passionate about your idea. This creates \"false positives\" where people say they like your idea but would never actually use or pay for it.\n\n## The Three Rules\n\nThe Mom Test follows three simple principles for asking questions:\n\n1. **Talk about their life, not your idea** \u2014 Instead of pitching or asking \"Do you like my idea?\", ask about how they currently solve the problem. Example: \"How do you track your time spent on projects?\"\n\n2. **Ask about specifics in the past, not hypotheticals about the future** \u2014 Past behavior is the best predictor of future behavior. Example: Instead of \"Would you pay for this?\", ask \"Have you ever paid for a similar tool? How much?\"\n\n3. **Talk less, listen more** \u2014 Your job is to learn, not convince. Great interviewers spend about 80% of the time listening.\n\n## Why It Matters\n\nMost startups fail because they build products nobody wants. The Mom Test helps founders validate whether a problem is actually worth solving before investing time and money. It eliminates biased feedback by focusing on **concrete facts about customers' lives** rather than opinions, compliments, or hypothetical promises.\n\n## Key Techniques\n\n- **Avoid pitching your solution** \u2014 If you reveal your idea, people will try to please you\n- **Dig for past behavior** \u2014 Look for workarounds, hacks, and current solutions people already use\n- **Listen for emotional signals** \u2014 Sighs, frustration, or excitement reveal real pain points\n- **Seek commitment, not compliments** \u2014 A meeting with a stakeholder or a letter of intent means more than \"sounds great!\"\n\n---\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n3. https://blog.uxtweak.com/the-mom-test/\n4. https://readingraphics.com/book-summary-the-mom-test/\n5. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n6. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n7. https://hellopm.co/word/moms-test/\n8. https://www.momtestbook.com/\n9. https://www.maxmednik.com/blog/notes-on-the-mom-test-by-rob-fitzpatrick\n10. https://www.linkedin.com/pulse/most-important-ideas-from-mom-test-shabda-raaj",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780868678,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 647,
+        "prompt_tokens": 8550,
+        "total_tokens": 9197,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "what's the Mom Test"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a25e645fc09",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"64584a386a25e6454f50a50001eec0c6\"},\"usage\":{\"total_tokens\":8401}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a25e645fc09",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"64584a386a25e6454f50a50001eec0c6\"},\"usage\":{\"total_tokens\":8401}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"64584a386a25e6454f50a50001eec0c6\"},\"usage\":{\"total_tokens\":8401}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "The **Mom Test** is a customer interview methodology created by entrepreneur **Rob Fitzpatrick** and published in his 2019 book *\"The Mom Test: How to Talk to Customers & Learn If Your Business Is a Good Idea When Everyone Is Lying to You.\"*\n\n## Core Concept\n\nThe Mom Test is designed to get **honest, actionable feedback** from potential customers\u2014even from people who care about you and want to protect your feelings (like your mom). The central insight is that **people will lie to be nice**, especially when you're visibly passionate about your idea. This creates \"false positives\" where people say they like your idea but would never actually use or pay for it.\n\n## The Three Rules\n\nThe Mom Test follows three simple principles for asking questions:\n\n1. **Talk about their life, not your idea** \u2014 Instead of pitching or asking \"Do you like my idea?\", ask about how they currently solve the problem. Example: \"How do you track your time spent on projects?\"\n\n2. **Ask about specifics in the past, not hypotheticals about the future** \u2014 Past behavior is the best predictor of future behavior. Example: Instead of \"Would you pay for this?\", ask \"Have you ever paid for a similar tool? How much?\"\n\n3. **Talk less, listen more** \u2014 Your job is to learn, not convince. Great interviewers spend about 80% of the time listening.\n\n## Why It Matters\n\nMost startups fail because they build products nobody wants. The Mom Test helps founders validate whether a problem is actually worth solving before investing time and money. It eliminates biased feedback by focusing on **concrete facts about customers' lives** rather than opinions, compliments, or hypothetical promises.\n\n## Key Techniques\n\n- **Avoid pitching your solution** \u2014 If you reveal your idea, people will try to please you\n- **Dig for past behavior** \u2014 Look for workarounds, hacks, and current solutions people already use\n- **Listen for emotional signals** \u2014 Sighs, frustration, or excitement reveal real pain points\n- **Seek commitment, not compliments** \u2014 A meeting with a stakeholder or a letter of intent means more than \"sounds great!\"\n\n---\n\nSources:\n1. https://tldv.io/blog/the-mom-test/\n2. https://calmops.com/indie-hackers/mom-test-customer-interview-examples/\n3. https://blog.uxtweak.com/the-mom-test/\n4. https://readingraphics.com/book-summary-the-mom-test/\n5. https://sciencepark.se/en/article/the-mom-test-how-to-get-others-to-share-what-they-really-think-about-your-idea/\n6. https://nightingaledesignresearch.com/insights/book-review-the-mom-test-by-rob-fitzpatrick/\n7. https://hellopm.co/word/moms-test/\n8. https://www.momtestbook.com/\n9. https://www.maxmednik.com/blog/notes-on-the-mom-test-by-rob-fitzpatrick\n10. https://www.linkedin.com/pulse/most-important-ideas-from-mom-test-shabda-raaj",
+  "usage": {
+    "completion_tokens": 647,
+    "prompt_tokens": 8550,
+    "total_tokens": 9197,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

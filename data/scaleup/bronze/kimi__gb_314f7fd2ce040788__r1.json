@@ -1,0 +1,100 @@
+{
+  "query_id": "gb_314f7fd2ce040788",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-06T20:31:17.823401+00:00",
+  "query_text": "who played the oldest brother in 7th heaven",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a248390570a8d6bf1e9bca3",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on the search results, **Barry Watson** played the oldest brother Matt Camden in *7th Heaven*. He portrayed the eldest son of Reverend Eric and Annie Camden from 1996 to 2002 (seasons 1-6), and later made guest appearances in subsequent seasons. Watson left the show in 2001 after being diagnosed with Hodgkin's Lymphoma, though he had actually decided to leave months before the diagnosis.\n\nSources:\n1. https://7thheaven.fandom.com/wiki/Matt_Camden\n2. https://people.com/7th-heaven-cast-where-are-they-now-11702984\n3. https://www.mamamia.com.au/7th-heaven-cast-where-are-they-now/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null,
+            "reasoning_content": ""
+          }
+        }
+      ],
+      "created": 1780777873,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 166,
+        "prompt_tokens": 7202,
+        "total_tokens": 7368,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "who played the oldest brother in 7th heaven"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a24838f7898",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"c9e78d1e6a24838f680f160001eb3ae2\"},\"usage\":{\"total_tokens\":7046}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a24838f7898",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"c9e78d1e6a24838f680f160001eb3ae2\"},\"usage\":{\"total_tokens\":7046}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"c9e78d1e6a24838f680f160001eb3ae2\"},\"usage\":{\"total_tokens\":7046}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on the search results, **Barry Watson** played the oldest brother Matt Camden in *7th Heaven*. He portrayed the eldest son of Reverend Eric and Annie Camden from 1996 to 2002 (seasons 1-6), and later made guest appearances in subsequent seasons. Watson left the show in 2001 after being diagnosed with Hodgkin's Lymphoma, though he had actually decided to leave months before the diagnosis.\n\nSources:\n1. https://7thheaven.fandom.com/wiki/Matt_Camden\n2. https://people.com/7th-heaven-cast-where-are-they-now-11702984\n3. https://www.mamamia.com.au/7th-heaven-cast-where-are-they-now/",
+  "usage": {
+    "completion_tokens": 166,
+    "prompt_tokens": 7202,
+    "total_tokens": 7368,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

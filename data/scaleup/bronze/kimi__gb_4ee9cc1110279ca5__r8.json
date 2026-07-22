@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_4ee9cc1110279ca5",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-07T12:57:43.692342+00:00",
+  "query_text": "prelicensetraining login",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a256ac1e0d430e248207464",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my search, here is the login information for PreLicenseTraining:\n\n## Main Student Login Portal\n\nThe primary login page for students is:\n**https://prelicensetraining.com/login**\n\nTo log in:\n- Enter your **login name** (which may be your email address unless you specified otherwise)\n- Enter your **password**\n\n---\n\n## Other Login Portals\n\nDepending on your account type, there are different login pages:\n\n| Account Type | Login URL |\n|-------------|-----------|\n| **Students (main)** | https://prelicensetraining.com/login |\n| **Mentors / Recruiters / Companies** | https://prelicensetraining.com/mentor/login |\n| **PSI Online Mentors** | https://psionline.prelicensetraining.com/mentor/login |\n| **Infinity Schools Mentors** | https://infinityschools.prelicensetraining.com/mentor/login |\n\n---\n\n## Additional Options\n\n- **Forgot Password?** You can find password recovery options through the login pages\n- **Need to Register?** Visit https://prelicensetraining.com/register to create a new account\n- **Already have an account?** Click \"Login!\" on the registration page\n\n---\n\n## About PreLicenseTraining.com\n\nPreLicenseTraining.com provides online insurance pre-licensing and continuing education with:\n- Streaming video instruction\n- Online textbook materials\n- Practice examination questions with rationales\n- StudyHall virtual practice testing center\n- 24/7 access from any location\n\nIf you're having trouble logging in, make sure you're using the correct portal for your account type (student vs. mentor/recruiter).\n\n---\n\nSources:\n1. https://prelicensetraining.com/login\n2. https://psionline.prelicensetraining.com/mentor/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://prelicensetraining.com/register\n5. https://prelicensetraining.com/mentor/login\n6. https://psionline.prelicensetraining.com/mentor/forgotPassword",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780837057,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 440,
+        "prompt_tokens": 1111,
+        "total_tokens": 1551,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "prelicensetraining login"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a256ac076e9",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"edf03d716a256ac04f50a50001ee0d87\"},\"usage\":{\"total_tokens\":963}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a256ac076e9",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"edf03d716a256ac04f50a50001ee0d87\"},\"usage\":{\"total_tokens\":963}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"edf03d716a256ac04f50a50001ee0d87\"},\"usage\":{\"total_tokens\":963}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my search, here is the login information for PreLicenseTraining:\n\n## Main Student Login Portal\n\nThe primary login page for students is:\n**https://prelicensetraining.com/login**\n\nTo log in:\n- Enter your **login name** (which may be your email address unless you specified otherwise)\n- Enter your **password**\n\n---\n\n## Other Login Portals\n\nDepending on your account type, there are different login pages:\n\n| Account Type | Login URL |\n|-------------|-----------|\n| **Students (main)** | https://prelicensetraining.com/login |\n| **Mentors / Recruiters / Companies** | https://prelicensetraining.com/mentor/login |\n| **PSI Online Mentors** | https://psionline.prelicensetraining.com/mentor/login |\n| **Infinity Schools Mentors** | https://infinityschools.prelicensetraining.com/mentor/login |\n\n---\n\n## Additional Options\n\n- **Forgot Password?** You can find password recovery options through the login pages\n- **Need to Register?** Visit https://prelicensetraining.com/register to create a new account\n- **Already have an account?** Click \"Login!\" on the registration page\n\n---\n\n## About PreLicenseTraining.com\n\nPreLicenseTraining.com provides online insurance pre-licensing and continuing education with:\n- Streaming video instruction\n- Online textbook materials\n- Practice examination questions with rationales\n- StudyHall virtual practice testing center\n- 24/7 access from any location\n\nIf you're having trouble logging in, make sure you're using the correct portal for your account type (student vs. mentor/recruiter).\n\n---\n\nSources:\n1. https://prelicensetraining.com/login\n2. https://psionline.prelicensetraining.com/mentor/login\n3. https://infinityschools.prelicensetraining.com/mentor/login\n4. https://prelicensetraining.com/register\n5. https://prelicensetraining.com/mentor/login\n6. https://psionline.prelicensetraining.com/mentor/forgotPassword",
+  "usage": {
+    "completion_tokens": 440,
+    "prompt_tokens": 1111,
+    "total_tokens": 1551,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

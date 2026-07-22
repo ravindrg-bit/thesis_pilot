@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_b99af0c2c38c09a0",
+  "engine": "kimi",
+  "run_index": 8,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T20:05:20.172056+00:00",
+  "query_text": "Book a taxi for a pickup at the airport",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a272072e0d430e248218a4a",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "I can't actually book a taxi for you directly, but I can guide you on how to book an airport taxi pickup based on the information I found. Here are the main options:\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms (Recommended for Pre-Booking)**\n\nSeveral websites allow you to book airport transfers in advance:\n\n- **Kiwitaxi** (https://kiwitaxi.com) - Offers fixed-price transfers in 422+ routes with meet & greet service. Book at least 16-24 hours in advance for standard vehicles.\n- **Taxi2Airport** (https://www.taxi2airport.com/en/) - Global platform where you enter pickup/drop-off details, choose vehicle type, and pay securely online.\n- **Hoppa** (https://www.hoppa.com/en) - Compares 70,000+ partners across 182 countries with fixed prices and driver ratings.\n- **GetTransfer/Taxiyo** - For private transfers with guaranteed fixed pricing and door-to-door pickup.\n\n**Typical booking process:**\n1. Enter your pickup location (airport) and destination\n2. Select date, time, and number of passengers/luggage\n3. Choose vehicle type (sedan, minivan, luxury, etc.)\n4. Add extras (baby seat, meet & greet with name sign)\n5. Enter contact details and pay online\n6. Receive confirmation voucher with driver details\n\n### 2. **Local Airport Taxi Services**\n\nMany airports have official taxi services:\n- **Official airport taxis** - Usually available 24/7 outside arrivals terminals\n- **Pre-booked private transfers** - Driver meets you with a name sign at arrivals\n\n### 3. **Ride-Hailing Apps**\n\n- **Uber, Careem, Bolt** - Available at most major airports\n- Pickup at designated zones shown in the app after booking\n\n## What Information You'll Need\n\nWhen booking, have ready:\n- Flight number and arrival time\n- Airport terminal (if applicable)\n- Destination address\n- Number of passengers and luggage amount\n- Contact phone number\n\n## Benefits of Pre-Booking\n\n- \u2705 **Fixed price** - No surprises from traffic or route changes\n- \u2705 **Flight monitoring** - Driver adjusts for delays at no extra cost\n- \u2705 **Meet & greet** - Driver waits with name sign at arrivals\n- \u2705 **Guaranteed availability** - Especially important for early/late flights\n- \u2705 **Free cancellation** - Most services allow changes with advance notice\n\n---\n\n**To proceed with booking, please let me know:**\n- Which airport are you arriving at?\n- What is your destination?\n- Date and time of pickup?\n- How many passengers and luggage?\n\nWith this information, I can point you to the most suitable service for your specific location.\n\n---\n\nSources:\n1. https://kiwitaxi.com/en/china\n2. https://www.booktaxiistanbul.com/book-online\n3. https://thetaxi.lk/things-to-do/katunayake-airport-taxi-service\n4. https://taxiserviceinvaranasi.com/airport-taxi/\n5. https://airporttaxitorontoflatrate.com/\n6. https://www.booktaxisevilla.com/book-online\n7. https://umrahpathtaxi.com/jeddah-to-madinah/\n8. https://www.hoppa.com/en\n9. https://www.taxi2airport.com/en/\n10. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n11. https://ktaxi.net/\n12. https://taksi.ch/en/blog/flughafen-zuerich-taxi/\n13. https://www.asiacarservice.com/locations/hong-kong/airport-taxi/\n14. https://blog.gettransfer.com/phnom-penh-airport-to-sihanoukville-airport-taxi-private-transfers-and-airport-pickup-in-cambodia/",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780949107,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 835,
+        "prompt_tokens": 8460,
+        "total_tokens": 9295,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "Book a taxi for a pickup at the airport"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a2720717ed2",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"0b650c456a2720714f50a50001f1d26b\"},\"usage\":{\"total_tokens\":8306}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a2720717ed2",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"0b650c456a2720714f50a50001f1d26b\"},\"usage\":{\"total_tokens\":8306}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"0b650c456a2720714f50a50001f1d26b\"},\"usage\":{\"total_tokens\":8306}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "I can't actually book a taxi for you directly, but I can guide you on how to book an airport taxi pickup based on the information I found. Here are the main options:\n\n## How to Book an Airport Taxi Pickup\n\n### 1. **Online Booking Platforms (Recommended for Pre-Booking)**\n\nSeveral websites allow you to book airport transfers in advance:\n\n- **Kiwitaxi** (https://kiwitaxi.com) - Offers fixed-price transfers in 422+ routes with meet & greet service. Book at least 16-24 hours in advance for standard vehicles.\n- **Taxi2Airport** (https://www.taxi2airport.com/en/) - Global platform where you enter pickup/drop-off details, choose vehicle type, and pay securely online.\n- **Hoppa** (https://www.hoppa.com/en) - Compares 70,000+ partners across 182 countries with fixed prices and driver ratings.\n- **GetTransfer/Taxiyo** - For private transfers with guaranteed fixed pricing and door-to-door pickup.\n\n**Typical booking process:**\n1. Enter your pickup location (airport) and destination\n2. Select date, time, and number of passengers/luggage\n3. Choose vehicle type (sedan, minivan, luxury, etc.)\n4. Add extras (baby seat, meet & greet with name sign)\n5. Enter contact details and pay online\n6. Receive confirmation voucher with driver details\n\n### 2. **Local Airport Taxi Services**\n\nMany airports have official taxi services:\n- **Official airport taxis** - Usually available 24/7 outside arrivals terminals\n- **Pre-booked private transfers** - Driver meets you with a name sign at arrivals\n\n### 3. **Ride-Hailing Apps**\n\n- **Uber, Careem, Bolt** - Available at most major airports\n- Pickup at designated zones shown in the app after booking\n\n## What Information You'll Need\n\nWhen booking, have ready:\n- Flight number and arrival time\n- Airport terminal (if applicable)\n- Destination address\n- Number of passengers and luggage amount\n- Contact phone number\n\n## Benefits of Pre-Booking\n\n- \u2705 **Fixed price** - No surprises from traffic or route changes\n- \u2705 **Flight monitoring** - Driver adjusts for delays at no extra cost\n- \u2705 **Meet & greet** - Driver waits with name sign at arrivals\n- \u2705 **Guaranteed availability** - Especially important for early/late flights\n- \u2705 **Free cancellation** - Most services allow changes with advance notice\n\n---\n\n**To proceed with booking, please let me know:**\n- Which airport are you arriving at?\n- What is your destination?\n- Date and time of pickup?\n- How many passengers and luggage?\n\nWith this information, I can point you to the most suitable service for your specific location.\n\n---\n\nSources:\n1. https://kiwitaxi.com/en/china\n2. https://www.booktaxiistanbul.com/book-online\n3. https://thetaxi.lk/things-to-do/katunayake-airport-taxi-service\n4. https://taxiserviceinvaranasi.com/airport-taxi/\n5. https://airporttaxitorontoflatrate.com/\n6. https://www.booktaxisevilla.com/book-online\n7. https://umrahpathtaxi.com/jeddah-to-madinah/\n8. https://www.hoppa.com/en\n9. https://www.taxi2airport.com/en/\n10. https://harmainviptaxi.com/taxi-pickup-at-jeddah-airport-jed-everything-you-need-to-know/\n11. https://ktaxi.net/\n12. https://taksi.ch/en/blog/flughafen-zuerich-taxi/\n13. https://www.asiacarservice.com/locations/hong-kong/airport-taxi/\n14. https://blog.gettransfer.com/phnom-penh-airport-to-sihanoukville-airport-taxi-private-transfers-and-airport-pickup-in-cambodia/",
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 8460,
+    "total_tokens": 9295,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}

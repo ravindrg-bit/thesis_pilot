@@ -1,0 +1,99 @@
+{
+  "query_id": "gb_8aeba1c619e5bff5",
+  "engine": "kimi",
+  "run_index": 1,
+  "model_requested": "kimi-k2.6",
+  "model_served": "kimi-k2.6",
+  "timestamp_utc": "2026-06-08T16:09:51.991957+00:00",
+  "query_text": "how much % do mutual fund managers make",
+  "request_params": {
+    "model": "kimi-k2.6",
+    "tools": [
+      "$web_search"
+    ],
+    "thinking": "disabled",
+    "citation_mode": "prompt_elicited",
+    "system_prompt": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear.",
+    "max_tool_rounds": 5
+  },
+  "raw_response": {
+    "final_response": {
+      "id": "chatcmpl-6a26e9416eb2ee75600cc2ea",
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "content": "Based on my research, here's what mutual fund managers make:\n\n## Compensation Overview\n\nMutual fund manager compensation varies dramatically depending on experience, fund size, performance, and location. The pay structure typically includes:\n\n### Base Salary\n- **Entry-level/assistant managers**: $100,000\u2013$150,000 annually\n- **Experienced managers**: $200,000\u2013$400,000+ base salary\n- **Senior managers at major firms**: Upper six figures\n\n### Total Compensation (Including Bonuses and Incentives)\n\nAccording to research using U.S. Census Bureau administrative data covering 2,300 mutual fund portfolio managers from 1991 to 2020:\n- **Average compensation**: **$1.76 million** (inflation-adjusted, 2020 dollars)\n- Some sources cite approximately **$2.04 million** as a typical figure\n\nHowever, there's **enormous dispersion** in pay:\n- The **top 14% of managers** account for about **66% of total compensation**\n- Standard deviation of $3.26 million indicates very wide variation\n\n### Performance-Linked Pay\n\nResearch shows mutual fund managers have significant **pay-for-performance sensitivity**:\n- A **1% increase in abnormal return** over past 3/5/10 years increases pay by **5.3% / 7.8% / 10.3%** respectively\n\n### Bonus Structures\n- Bonuses often range from **50% to 100%+ of base salary**\n- Some firms offer **profit-sharing** of **0.1% to 0.5%** of fund profits\n- Tournament-style compensation: top quartile performers might get **100% of base salary as bonus**, second quartile **50%**, below median **zero**\n\n### Regional Variations\n- **United States average**: ~$68,500\u2013$89,800 (broader estimates including lower-level positions)\n- **United Kingdom**: ~\u00a343,400\u2013\u00a3178,800\n- **India**: \u20b9650,000 average (up to \u20b91.5 million for experienced managers)\n\n### Key Factors Affecting Pay\n1. **Assets Under Management (AUM)**: Larger funds = higher compensation\n2. **Performance relative to benchmarks**\n3. **Fund type and complexity** (quantitative, sector-specific funds pay more)\n4. **Firm size and prestige**\n\n### Important Distinction\nUnlike hedge funds (which typically charge \"2 and 20\" \u2014 2% management fee + 20% of profits), mutual fund managers are generally **not** paid directly as a percentage of AUM. The fund management company receives fees (typically **0.25% to 0.60%** of AUM), and manager compensation comes from that revenue pool.\n\nSources:\n1. https://accountinginsights.org/how-much-is-the-average-mutual-fund-manager-salary/\n2. https://www.zippia.com/salaries/mutual-fund-manager/\n3. https://www.investopedia.com/articles/financial-advisors/121515/how-much-mutual-fund-managers-make.asp\n4. https://www.strategy-business.com/article/15206\n5. https://www.ziprecruiter.com/Salaries/Mutual-Fund-Manager-Salary\n6. https://www.acem.sjtu.edu.cn/academic/82096.html\n7. https://www.linkedin.com/posts/srishti-gosavi-8a860ba7_mint-mutualfunds-salary-activity-7206591913834065921-Feur\n8. https://in.talent.com/salary?job=mutual fund manager\n9. https://uk.indeed.com/career-advice/pay-salary/how-much-does-mutual-fund-manager-make\n10. https://www.shmoop.com/careers/mutual-fund-manager/salary.html\n11. https://www.glassdoor.ca/Salaries/mutual-funds-manager-salary-SRCH_KO0,20.htm\n12. https://www.glassdoor.co.uk/Salaries/mutual-fund-manager-salary-SRCH_KO0,19.htm",
+            "refusal": null,
+            "role": "assistant",
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "tool_calls": null
+          }
+        }
+      ],
+      "created": 1780934978,
+      "model": "kimi-k2.6",
+      "object": "chat.completion",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 877,
+        "prompt_tokens": 8570,
+        "total_tokens": 9447,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    "conversation": [
+      {
+        "role": "system",
+        "content": "You have a web search tool. Answer the user's question using it, then end your reply with a section headed exactly 'Sources:' that lists every source you used as a numbered list. For each source, give its COMPLETE URL beginning with https:// - never just the site name or a bracketed number. If you used a source, its full URL must appear."
+      },
+      {
+        "role": "user",
+        "content": "how much % do mutual fund managers make"
+      },
+      {
+        "content": "",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "t-web_search-6a26e9404405",
+            "function": {
+              "arguments": "{\"search_result\":{\"search_id\":\"034c56166a26e940680f160001eff073\"},\"usage\":{\"total_tokens\":8422}}",
+              "name": "$web_search"
+            },
+            "type": "builtin_function"
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "t-web_search-6a26e9404405",
+        "name": "$web_search",
+        "content": "{\"search_result\":{\"search_id\":\"034c56166a26e940680f160001eff073\"},\"usage\":{\"total_tokens\":8422}}"
+      }
+    ],
+    "search_calls": [
+      "{\"search_result\":{\"search_id\":\"034c56166a26e940680f160001eff073\"},\"usage\":{\"total_tokens\":8422}}"
+    ],
+    "n_search_rounds": 1
+  },
+  "answer_text": "Based on my research, here's what mutual fund managers make:\n\n## Compensation Overview\n\nMutual fund manager compensation varies dramatically depending on experience, fund size, performance, and location. The pay structure typically includes:\n\n### Base Salary\n- **Entry-level/assistant managers**: $100,000\u2013$150,000 annually\n- **Experienced managers**: $200,000\u2013$400,000+ base salary\n- **Senior managers at major firms**: Upper six figures\n\n### Total Compensation (Including Bonuses and Incentives)\n\nAccording to research using U.S. Census Bureau administrative data covering 2,300 mutual fund portfolio managers from 1991 to 2020:\n- **Average compensation**: **$1.76 million** (inflation-adjusted, 2020 dollars)\n- Some sources cite approximately **$2.04 million** as a typical figure\n\nHowever, there's **enormous dispersion** in pay:\n- The **top 14% of managers** account for about **66% of total compensation**\n- Standard deviation of $3.26 million indicates very wide variation\n\n### Performance-Linked Pay\n\nResearch shows mutual fund managers have significant **pay-for-performance sensitivity**:\n- A **1% increase in abnormal return** over past 3/5/10 years increases pay by **5.3% / 7.8% / 10.3%** respectively\n\n### Bonus Structures\n- Bonuses often range from **50% to 100%+ of base salary**\n- Some firms offer **profit-sharing** of **0.1% to 0.5%** of fund profits\n- Tournament-style compensation: top quartile performers might get **100% of base salary as bonus**, second quartile **50%**, below median **zero**\n\n### Regional Variations\n- **United States average**: ~$68,500\u2013$89,800 (broader estimates including lower-level positions)\n- **United Kingdom**: ~\u00a343,400\u2013\u00a3178,800\n- **India**: \u20b9650,000 average (up to \u20b91.5 million for experienced managers)\n\n### Key Factors Affecting Pay\n1. **Assets Under Management (AUM)**: Larger funds = higher compensation\n2. **Performance relative to benchmarks**\n3. **Fund type and complexity** (quantitative, sector-specific funds pay more)\n4. **Firm size and prestige**\n\n### Important Distinction\nUnlike hedge funds (which typically charge \"2 and 20\" \u2014 2% management fee + 20% of profits), mutual fund managers are generally **not** paid directly as a percentage of AUM. The fund management company receives fees (typically **0.25% to 0.60%** of AUM), and manager compensation comes from that revenue pool.\n\nSources:\n1. https://accountinginsights.org/how-much-is-the-average-mutual-fund-manager-salary/\n2. https://www.zippia.com/salaries/mutual-fund-manager/\n3. https://www.investopedia.com/articles/financial-advisors/121515/how-much-mutual-fund-managers-make.asp\n4. https://www.strategy-business.com/article/15206\n5. https://www.ziprecruiter.com/Salaries/Mutual-Fund-Manager-Salary\n6. https://www.acem.sjtu.edu.cn/academic/82096.html\n7. https://www.linkedin.com/posts/srishti-gosavi-8a860ba7_mint-mutualfunds-salary-activity-7206591913834065921-Feur\n8. https://in.talent.com/salary?job=mutual fund manager\n9. https://uk.indeed.com/career-advice/pay-salary/how-much-does-mutual-fund-manager-make\n10. https://www.shmoop.com/careers/mutual-fund-manager/salary.html\n11. https://www.glassdoor.ca/Salaries/mutual-funds-manager-salary-SRCH_KO0,20.htm\n12. https://www.glassdoor.co.uk/Salaries/mutual-fund-manager-salary-SRCH_KO0,19.htm",
+  "usage": {
+    "completion_tokens": 877,
+    "prompt_tokens": 8570,
+    "total_tokens": 9447,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "run_profile": "scaleup"
+}
