@@ -68,20 +68,29 @@ The research workflow moves from an established query benchmark to verified, agg
 ## Repository Structure
 
 ```
-├── thesis_config.py      Single source of truth for run constants and profiles
-├── requirements.txt      Dependencies (requirements.lock pins exact versions)
-├── data/                 Bronze → silver → gold data trees, organised by run profile
-├── src/                  Library code: schema, per-engine adapters, builders, metrics
-├── scripts/              Runnable entry points for collection, transformation, and NLI scoring
-├── notebooks/            Analysis notebooks producing the dissertation figures
-├── figures/              Generated figures (PDF and PNG), by run profile
-└── docs/                 Methodology notes and dated decision logs
+├── thesis_config.py                 Single source of truth for run constants and profiles
+├── requirements.txt                 Dependencies (requirements.lock pins exact versions)
+├── .env.example                     Template for the engine API keys (copy to .env)
+├── run_runpod_nli_pilot.command     Launcher: GPU NLI scoring on RunPod (pilot)
+├── run_runpod_nli_scaleup.command   Launcher: GPU NLI scoring on RunPod (scaleup)
+├── insights.ipynb                   Cross-cutting narrative figures
+├── validation.ipynb                 Instrument-validation figures (Chapter 3)
+├── pawc_method_comparison.ipynb     PAWC method comparison
+├── RQ analysis                      Per-research-question figure-planning notes
+├── Visual_Style_Guide.md            Figure style guide (palette, typography, layout)
+├── LICENSE                          MIT licence
+├── data/                            Bronze → silver → gold data trees, organised by run profile
+├── src/                             Library code: schema, per-engine adapters, builders, metrics
+├── scripts/                         Runnable entry points for collection, transformation, and NLI scoring
+├── notebooks/                       Per-research-question analysis notebooks (pilot and scaleup)
+├── figures/                         Generated figures (PDF and PNG), by run profile
+└── docs/                            Methodology notes and dated decision logs
 ```
 
 - `data/` holds the raw captures, canonical tables, and metric marts for each run profile (pilot and scaleup).
 - `src/` contains the shared library: the canonical record schema, one adapter per engine, and the metric implementations.
 - `scripts/` are the pipeline entry points, from API collection through NLI attribution.
-- `notebooks/` reproduce every figure and table in the dissertation from the gold-layer data.
+- `notebooks/` holds the per-research-question analysis notebooks (`pilot/`, `scaleup/`); several cross-cutting notebooks (`insights.ipynb`, `validation.ipynb`, `pawc_method_comparison.ipynb`) sit at the repository root. Together they reproduce every figure and table in the dissertation from the gold-layer data.
 - `figures/` stores the rendered outputs referenced in the text.
 - `docs/` records methodological decisions with dates and rationale.
 
