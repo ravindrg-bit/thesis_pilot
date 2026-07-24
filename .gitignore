@@ -22,6 +22,13 @@
 !/data/*/queries/**
 !/data/*/bronze/
 !/data/*/bronze/**
+# ...and (c) the scaleup GOLD flat tables (star-schema consumption layer, <20 MB each) so the
+# analysis notebooks run from a fresh clone. Other gold/silver derived outputs stay ignored.
+!/data/scaleup/gold/
+!/data/scaleup/gold/flat_table1_responses.parquet
+!/data/scaleup/gold/flat_table2_sentences.parquet
+!/data/scaleup/gold/flat_table3_citations.parquet
+!/data/scaleup/gold/flat_table4_entailment_scores.parquet
 # sources parquets are 100s of MB — transfer via scp/rsync, never commit
 /data/*/silver/sources_*.parquet
 /data/*/silver/sources_bronze/
